@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="Joomla! - Open Source Content Management" -->
+<feed xmlns="http://www.w3.org/2005/Atom"  xml:lang="pt-br">
+	<title type="text">CakePHP 3 - RibaFS Portal</title>
+	<subtitle type="text">Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros.</subtitle>
+	<link rel="alternate" type="text/html" href="http://backup"/>
+	<id>http://backup/portal/frameworks/cakephp-3.feed</id>
+	<updated>2019-09-07T18:58:06-03:00</updated>
+	<author>
+		<name>RibaFS Portal</name>
+	</author>
+	<generator uri="https://www.joomla.org">Joomla! - Open Source Content Management</generator>
+	<link rel="self" type="application/atom+xml" href="http://backup/portal/frameworks/cakephp-3.feed?type=atom"/>
+</feed>

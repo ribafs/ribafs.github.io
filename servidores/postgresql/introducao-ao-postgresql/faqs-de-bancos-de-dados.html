@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br" dir="ltr">
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+                <!-- head -->
+        <base href="" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Ribamar FS" />
+	<meta name="description" content="Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros." />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>FAQs de Bancos de Dados - RibaFS Portal</title>
+	<link href="http://ribafs.org/portal/servidores/postgresql/introducao-ao-postgresql/faqs-de-bancos-de-dados.html" rel="canonical" />
+	<link href="../../../templates/shaper_helix3/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../../../favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,300italic,regular,italic,600,600italic,700,700italic,800,800italic&amp;subset=latin" rel="stylesheet" type="text/css" />
+	<link href="http://fonts.googleapis.com/css?family=Amarante:regular&amp;subset=latin-ext" rel="stylesheet" type="text/css" />
+	<link href="../../../cache/com_templates/templates/shaper_helix3/89f5542569bc2d8a7bb4667857dd5775.css" rel="stylesheet" type="text/css" />
+	<style type="text/css">
+body{font-family:Open Sans, sans-serif; font-size:16px; font-weight:normal; }h1{font-family:Open Sans, sans-serif; font-weight:800; }h2{font-family:Open Sans, sans-serif; font-weight:600; }h3{font-family:Open Sans, sans-serif; font-weight:normal; }h4{font-family:Open Sans, sans-serif; font-weight:normal; }h5{font-family:Open Sans, sans-serif; font-weight:600; }h6{font-family:Open Sans, sans-serif; font-weight:600; }.sp-megamenu-parent{font-family:Amarante, sans-serif; font-size:16px; font-weight:normal; }.sp-megamenu-parent > li.active > a, 
+.sp-megamenu-parent .sp-dropdown li.sp-menu-item.active > a { color: red; }
+#offcanvas-toggler > i { color: red !important; }
+#sp-top-bar{ background-color:#093d09;color:#999999; }#sp-top-bar a{color:#ceebe9;}#sp-header{ background-color:#54a859; }#sp-header a{color:#022e05;}#sp-page-title a{color:#e8f7f7;}#sp-main-body{ background-color:#fefffa; }
+	</style>
+	<script type="application/json" class="joomla-script-options new">{"csrf.token":"796296c0a9019553ed4bbba150ad5a40","system.paths":{"root":"\/portal","base":"\/portal"},"joomla.jtext":{"COM_COMMENT_PLEASE_FILL_IN_ALL_REQUIRED_FIELDS":"Favor preencher todos os campos obrigat\u00f3rios.","COM_COMMENT_ANONYMOUS":"An\u00f4nimo","JLIB_FORM_FIELD_INVALID":"Campo inv\u00e1lido:&#160;"},"system.keepalive":{"interval":840000,"uri":"\/portal\/component\/ajax\/?format=json"}}</script>
+	<script src="../../../cache/com_templates/templates/shaper_helix3/b74bfabf7739a9fadfbbda80f713414b.js" type="text/javascript"></script>
+	<script type="text/javascript">
+jQuery(function($){ initTooltips(); $("body").on("subform-row-add", initTooltips); function initTooltips (event, container) { container = container || document;$(container).find(".hasTooltip").tooltip({"html": true,"container": "body"});} });jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+var sp_preloader = '0';
+
+var sp_gotop = '1';
+
+var sp_offanimation = 'default';
+
+	</script>
+	<meta property="og:url" content="http://backup/portal/servidores/postgresql/introducao-ao-postgresql/faqs-de-bancos-de-dados.html" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="FAQs de Bancos de Dados" />
+	<meta property="og:description" content="Database FAQs O que é um banco de dados? O que é um banco de dados relacional? O que é uma lima plana? O que é SQL? O que é um banco de dados transacionais..." />
+
+            </head>
+
+    <body class="site com-content view-article no-layout no-task itemid-232 pt-br ltr  sticky-header layout-fluid off-canvas-menu-init">
+
+        <div class="body-wrapper">
+            <div class="body-innerwrapper">
+                <section id="sp-top-bar"><div class="container"><div class="row"><div id="sp-top1" class="col-sm-12 col-md-12"><div class="sp-column "><div class="sp-module "><div class="sp-module-content"><!-- https://www.clubedohardware.com.br/artigos/redes/colocando-um-mecanismo-de-busca-em-seu-site-r34327/ -->
+<FORM class="form-inline" method="GET" action="http://www.google.com/search">
+<div class="form-group">
+<input type="hidden" name="sitesearch" value="ribafs.github.io">
+<input style="height:20px" class="form-control" type="text" name="q" size="20" placeholder="Pesquisar...">
+</div>
+</FORM>
+
+</div></div><ul class="sp-contact-info"><li class="sp-contact-email"><i class="fa fa-envelope" aria-hidden="true"></i> <a href="mailto:ribafs@gmail.com">ribafs@gmail.com</a></li></ul></div></div></div></div></section><section id="sp-section-2"><div class="container"><div class="row"><div id="sp-top2" class="col-sm-12 col-md-12"><div class="sp-column "><div class="sp-module "><div class="sp-module-content">
+
+<div class="custom"  >
+	<p style="text-align: center;"><b>Don't you speak portuguese? Translate this site with <a href="https://translate.google.com/translate?hl=pt-BR&amp;sl=pt&amp;tl=en&amp;u=https://ribafs.org/portal" target="_blank" rel="noopener noreferrer">Google Translator </a></b></p></div>
+</div></div></div></div></div></div></section><header id="sp-header"><div class="container"><div class="row"><div id="sp-logo" class="col-xs-8 col-sm-2 col-md-2"><div class="sp-column "><h1 class="logo"> <a href="../../../index.html">RibaFS Portal</a></h1></div></div><div id="sp-menu" class="col-xs-4 col-sm-10 col-md-10"><div class="sp-column ">			<div class='sp-megamenu-wrapper'>
+				<a id="offcanvas-toggler" class="visible-sm visible-xs" aria-label="Helix Megamenu Options" href="faqs-de-bancos-de-dados.html#"><i class="fa fa-bars" aria-hidden="true" title="Helix Megamenu Options"></i></a>
+				<ul class="sp-megamenu-parent menu-fade hidden-sm hidden-xs"><li class="sp-menu-item"><a  href="../../../index.html"  >Início</a></li><li class="sp-menu-item sp-has-child"><a  href="../../../basicos.html"  >Básicos</a><div class="sp-dropdown sp-dropdown-main sp-menu-right" style="width: 240px;"><div class="sp-dropdown-inner"><ul class="sp-dropdown-items"><li class="sp-menu-item"><a  href="../../../basicos/html.html"  >HTML</a></li><li class="sp-menu-item"><a  href="../../../basicos/javascript.html"  >JavaScript</a></li><li class="sp-menu-item"><a  href="../../../basicos/css.html"  >CSS</a></li><li class="sp-menu-item"><a  href="../../../basicos/jquery.html"  >jQuery</a></li><li class="sp-menu-item"><a  href="../../../basicos/bootstrap.html"  >Bootstrap</a></li><li class="sp-menu-item"><a  href="../../../basicos/php.html"  >PHP</a></li><li class="sp-menu-item"><a  href="../../../basicos/phpoo.html"  >PHPOO</a></li><li class="sp-menu-item"><a  href="../../../basicos/pdo.html"  >PDO</a></li><li class="sp-menu-item"><a  href="../../../basicos/ferramentas.html"  >Ferramentas</a></li><li class="sp-menu-item"><a  href="../../../basicos/outros.html"  >Outros</a></li></ul></div></div></li><li class="sp-menu-item sp-has-child active"><a  href="../../../servidores.html"  >Servidores</a><div class="sp-dropdown sp-dropdown-main sp-menu-right" style="width: 240px;"><div class="sp-dropdown-inner"><ul class="sp-dropdown-items"><li class="sp-menu-item"><a  href="../../desktop.html"  >Desktop</a></li><li class="sp-menu-item"><a  href="../../ubuntu-server.html"  >Ubuntu Server</a></li><li class="sp-menu-item"><a  href="../../shell-scripts.html"  >Shell Scripts</a></li><li class="sp-menu-item"><a  href="../../servidor-web.html"  >Servidor Web</a></li><li class="sp-menu-item"><a  href="../../servidor-sgbd.html"  >Servidor SGBD</a></li><li class="sp-menu-item sp-has-child active"><a  href="../../postgresql.html"  >PostgreSQL</a><div class="sp-dropdown sp-dropdown-sub sp-menu-right" style="width: 240px;"><div class="sp-dropdown-inner"><ul class="sp-dropdown-items"><li class="sp-menu-item current-item active"><a  href="../introducao-ao-postgresql.html"  >Introdução</a></li><li class="sp-menu-item"><a  href="../projeto.html"  >Projeto</a></li><li class="sp-menu-item"><a  href="../dimensionamento.html"  >Dimensionamento</a></li></ul></div></div></li></ul></div></div></li><li class="sp-menu-item sp-has-child"><a  href="../../../joomla-3.html"  >Joomla 3</a><div class="sp-dropdown sp-dropdown-main sp-menu-right" style="width: 240px;"><div class="sp-dropdown-inner"><ul class="sp-dropdown-items"><li class="sp-menu-item"><a  href="../../../joomla-3/introducao.html"  >Introdução</a></li><li class="sp-menu-item"><a  href="../../../joomla-3/seguranca.html"  >Segurança</a></li><li class="sp-menu-item"><a  href="../../../joomla-3/instalacao.html"  >Instalação do Joomla</a></li><li class="sp-menu-item"><a  href="../../../joomla-3/administracao.html"  >Administração</a></li><li class="sp-menu-item"><a  href="../../../joomla-3/extensoes.html"  >Extensões</a></li><li class="sp-menu-item"><a  href="../../../joomla-3/loja-simples.html"  >Loja Simples</a></li><li class="sp-menu-item"><a  href="../../../joomla-3/dicas.html"  >Dicas</a></li></ul></div></div></li><li class="sp-menu-item sp-has-child"><a  href="javascript:void(0);"  >Frameworks</a><div class="sp-dropdown sp-dropdown-main sp-dropdown-mega sp-menu-right" style="width: 600px;"><div class="sp-dropdown-inner"><div class="row"><div class="col-sm-6"><ul class="sp-mega-group"><li class="sp-menu-item sp-has-child"><a class="sp-group-title" href="../../../frameworks/cakephp-3.html"  >CakePHP 3</a><ul class="sp-mega-group-child sp-dropdown-items"><li class="sp-menu-item"><a  href="../../../frameworks/cakephp-3/introducao.html"  >Introdução</a></li><li class="sp-menu-item"><a  href="../../../frameworks/cakephp-3/instalacao.html"  >Instalação</a></li><li class="sp-menu-item"><a  href="../../../frameworks/cakephp-3/configuracoes.html"  >Configurações</a></li><li class="sp-menu-item"><a  href="../../../frameworks/cakephp-3/convencoes.html"  >Convenções</a></li><li class="sp-menu-item"><a  href="../../../frameworks/cakephp-3/tutoriais.html"  >Tutoriais</a></li><li class="sp-menu-item"><a  href="../../../frameworks/cakephp-3/dicas.html"  >Dicas</a></li><li class="sp-menu-item"><a  href="../../../frameworks/cakephp-3/seguranca.html"  >Segurança</a></li><li class="sp-menu-item"><a  href="../../../frameworks/cakephp-3/mvc-no-cakephp-3.html"  >MVC no CakePHP 3</a></li></ul></li></ul></div><div class="col-sm-6"><ul class="sp-mega-group"><li class="sp-menu-item sp-has-child"><a class="sp-group-title" href="../../../frameworks/laravel-5.html"  >Laravel 5</a><ul class="sp-mega-group-child sp-dropdown-items"><li class="sp-menu-item"><a  href="../../../frameworks/laravel-5/introducao.html"  >Introdução</a></li><li class="sp-menu-item"><a  href="../../../frameworks/laravel-5/instalacao.html"  >Instalação</a></li><li class="sp-menu-item"><a  href="../../../frameworks/laravel-5/configuracoes.html"  >Configurações</a></li><li class="sp-menu-item"><a  href="../../../frameworks/laravel-5/routes.html"  >Routes</a></li><li class="sp-menu-item"><a  href="../../../frameworks/laravel-5/dicas.html"  >Dicas</a></li><li class="sp-menu-item"><a  href="../../../frameworks/laravel-5/tutoriais.html"  >Tutoriais</a></li></ul></li></ul></div></div></div></div></li><li class="sp-menu-item sp-has-child"><a  href="../../../mobile.html"  >Mobile</a><div class="sp-dropdown sp-dropdown-main sp-menu-right" style="width: 240px;"><div class="sp-dropdown-inner"><ul class="sp-dropdown-items"><li class="sp-menu-item"><a  href="../../../mobile/introducao.html"  >Introdução</a></li><li class="sp-menu-item"><a  href="../../../mobile/ambiente.html"  >Ambiente</a></li><li class="sp-menu-item"><a  href="../../../mobile/phaser.html"  >Phaser</a></li><li class="sp-menu-item"><a  href="../../../mobile/monaca.html"  >Monaca</a></li><li class="sp-menu-item"><a  href="../../../mobile/phonegap.html"  >PhoneGap</a></li><li class="sp-menu-item"><a  href="../../../mobile/app-inventor.html"  >App Inventor</a></li><li class="sp-menu-item"><a  href="../../../mobile/unity-3d.html"  >Unity 3D</a></li><li class="sp-menu-item"><a  href="../../../mobile/intel-xdk.html"  >Intel XDK</a></li><li class="sp-menu-item"><a  href="../../../mobile/outros.html"  >Outros</a></li><li class="sp-menu-item"><a  href="../../../mobile/dicas.html"  >Dicas</a></li></ul></div></div></li><li class="sp-menu-item sp-has-child"><a  href="../../../blog.html"  >Blog</a><div class="sp-dropdown sp-dropdown-main sp-menu-right" style="width: 240px;"><div class="sp-dropdown-inner"><ul class="sp-dropdown-items"><li class="sp-menu-item"><a  href="../../../blog/reflexoes.html"  >Reflexões</a></li><li class="sp-menu-item"><a  href="../../../blog/saude.html"  >Saúde</a></li><li class="sp-menu-item"><a  href="../../../blog/diversos.html"  >Diversos</a></li><li class="sp-menu-item"><a  href="../../../blog/estudos.html"  >Estudos</a></li></ul></div></div></li><li class="sp-menu-item sp-has-child"><a  href="../../../curriculo.html"  >Sobre</a><div class="sp-dropdown sp-dropdown-main sp-menu-right" style="width: 240px;"><div class="sp-dropdown-inner"><ul class="sp-dropdown-items"><li class="sp-menu-item"><a  href="https://github.com/ribafs?tab=repositories" rel="noopener noreferrer" target="_blank" >Projetos</a></li><li class="sp-menu-item"><a  href="../../../curriculo/livros.html"  >Livros</a></li><li class="sp-menu-item"><a  href="../../../curriculo/curriculo.html"  >Currículo</a></li><li class="sp-menu-item"><a  href="../../../curriculo/contato.html"  >Contato</a></li><li class="sp-menu-item"><a  href="../../../curriculo/mapa-do-site.html"  >Mapa</a></li></ul></div></div></li></ul>			</div>
+		</div></div></div></div></header><section id="sp-page-title"><div class="row"><div id="sp-title" class="col-sm-12 col-md-12"><div class="sp-column "></div></div></div></section><section id="sp-main-body"><div class="container"><div class="row"><div id="sp-left" class="col-sm-3 col-md-3"><div class="sp-column custom-class"><div class="sp-module "><h3 class="sp-module-title">Novidades</h3><div class="sp-module-content"><div class="latestnews">
+	<div itemscope itemtype="http://schema.org/Article">
+		<a href="../../../blog/diversos/traducao-de-sites-de-forma-muito-simples.html" itemprop="url">
+			<span itemprop="name">
+				Tradução de sites de forma muito simples			</span>
+		</a>
+		<small>29 Agosto 2019</small>
+	</div>
+	<div itemscope itemtype="http://schema.org/Article">
+		<a href="../../desktop/recuperar-senha-do-root.html" itemprop="url">
+			<span itemprop="name">
+				Recuperar senha do root			</span>
+		</a>
+		<small>23 Agosto 2019</small>
+	</div>
+	<div itemscope itemtype="http://schema.org/Article">
+		<a href="../../../blog/reflexoes/quer-ficar-rico.html" itemprop="url">
+			<span itemprop="name">
+				Quer ficar rico?			</span>
+		</a>
+		<small>19 Agosto 2019</small>
+	</div>
+	<div itemscope itemtype="http://schema.org/Article">
+		<a href="../../../basicos/php/cuidado-com-floats-em-linguagens.html" itemprop="url">
+			<span itemprop="name">
+				Cuidado com floats em Linguagens			</span>
+		</a>
+		<small>19 Julho 2019</small>
+	</div>
+	<div itemscope itemtype="http://schema.org/Article">
+		<a href="../../servidor-web/setando-permissoes.html" itemprop="url">
+			<span itemprop="name">
+				Setando Permissões			</span>
+		</a>
+		<small>12 Julho 2019</small>
+	</div>
+</div>
+</div></div><div class="sp-module "><h3 class="sp-module-title">Pensamento do Dia</h3><div class="sp-module-content"><div>Navegar é preciso. Viver não é preciso. (Fernando Pessoa)
+</div>
+</div></div></div></div><div id="sp-component" class="col-sm-6 col-md-6"><div class="sp-column "><div id="system-message-container">
+	</div>
+
+
+<article class="item item-page" itemscope itemtype="http://schema.org/Article">
+	<meta itemprop="inLanguage" content="pt-BR" />
+	
+	
+
+	<div class="entry-header has-post-format">
+		<span class="post-format"><i class="fa fa-thumb-tack"></i></span>
+						<dl class="article-info">
+
+		
+			<dt class="article-info-term"></dt>	
+				
+							<dd class="createdby" itemprop="author" itemscope itemtype="http://schema.org/Person">
+	<i class="fa fa-user"></i>
+					<span itemprop="name" data-toggle="tooltip" title="Escrito por ">Ribamar FS</span>	</dd>			
+			
+							<dd class="category-name">
+	<i class="fa fa-folder-open-o"></i>
+				<a href="../introducao-ao-postgresql.html" itemprop="genre" data-toggle="tooltip" title="Categoria do Artigo">Introdução</a>	</dd>			
+			
+							<dd class="published">
+	<i class="fa fa-calendar-o"></i>
+	<time datetime="2017-08-29T18:43:55-03:00" itemprop="datePublished" data-toggle="tooltip" title="Data de Publicação">
+		29 Agosto 2017	</time>
+</dd>			
+		
+					
+			
+							<dd class="hits">
+	<span class="fa fa-eye"></span>
+	<meta itemprop="interactionCount" content="UserPageVisits:669" />
+	Acessos: 669</dd>					
+		
+
+	</dl>
+		
+					<h2 itemprop="name">
+									FAQs de Bancos de Dados							</h2>
+												</div>
+
+						
+<div class="icons">
+	
+					<div class="btn-group pull-right">
+				<button class="btn dropdown-toggle" type="button" id="dropdownMenuButton-215" aria-label="Ferramentas de usuário"
+				data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					<span class="icon-cog" aria-hidden="true"></span>
+					<span class="caret" aria-hidden="true"></span>
+				</button>
+								<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton-215">
+											<li class="print-icon"> <a href="faqs-de-bancos-de-dados.html@tmpl=component&amp;print=1&amp;layout=default.html" title="Imprimir o artigo < FAQs de Bancos de Dados >" onclick="window.open(this.href,'win2','status=no,toolbar=no,scrollbars=yes,titlebar=no,menubar=no,resizable=yes,width=640,height=480,directories=no,location=no'); return false;" rel="nofollow">			<span class="icon-print" aria-hidden="true"></span>
+		Imprimir	</a> </li>
+																<li class="email-icon"> <a href="../../../component/mailto/index.html@tmpl=component&amp;template=shaper_helix3&amp;link=5aa5c2e2a8d6dfd0a5b0ce009650bb31c3c081ce.html" title="Envie este link a um amigo" onclick="window.open(this.href,'win2','width=400,height=450,menubar=yes,resizable=yes'); return false;" rel="nofollow">			<span class="icon-envelope" aria-hidden="true"></span>
+		Email	</a> </li>
+														</ul>
+			</div>
+		
+	</div>
+				
+	
+	
+				
+	
+			<div itemprop="articleBody">
+		<h4 style="text-align: justify;">Database FAQs</h4>
+
+<p style="text-align: justify;">O que é um banco de dados? <br />O que é um banco de dados relacional? <br />O que é uma lima plana? <br />O que é SQL? <br />O que é um banco de dados transacionais? <br />O que é um procedimento armazenado? <br />O que é um banco de dados acionar? <br />O que é a replicação de dados? <br />O que é um dicionário de dados? <br />O que é o banco de dados normalização? <br />O que é um BLOB? <br />O que é software livre banco de dados? <br />O que é ODBC? <br />O que é um DSN? <br />Onde posso obter um driver ODBC manager? <br />Onde posso obter um driver ODBC? <br />Onde posso obter um driver ODBC MySQL? <br />Onde posso obter um driver ODBC Oracle? <br />O que é JDBC? <br />Quais são as bases de dados Java? <br />O que é um armazém de dados? <br />O que é a mineração de dados? <br />O que é a gestão dos dados? <br />O que é um banco de dados multimídia? <br /><br /><a href="http://www.tech-faq.com/lang/pt/database.shtml&amp;usg=ALkJrhhJgATlV9zW_BYqDU9bRQySuDafFw">http://www.tech-faq.com/lang/pt/database.shtml&amp;usg=ALkJrhhJgATlV9zW_BYqDU9bRQySuDafFw</a>  <br /><strong>Obs.</strong>: este conteúdo não mais é encontrado no site acima, por conta disso o mantenho aqui.<br /><br /><strong>O que é um Banco de Dados?</strong> <br />Um dos termos tecnologia que a maioria das pessoas se acostumaram a ouvir, quer no trabalho ou ao mesmo tempo a navegar na Internet é o banco de dados. A base de dados a ser utilizada uma técnica extremamente prazo, porém com o surgimento de sistemas de computadores e de tecnologia da informação em toda a nossa cultura, a base de dados tornou-se um agregado familiar prazo. <br /><br />A definição de uma base de dados é uma colecção de registos estruturados ou dados que são armazenados em um sistema de computador. Para que um banco de dados para ser verdadeiramente funcional, não deve apenas armazenar grandes quantidades de registros bem, mas ser acessadas com facilidade. Além disso, novas informações e mudanças também devem ser bastante fácil de entrada. A fim de ter um sistema de base de dados altamente eficiente, é necessário incorporar um programa que gere as consultas e as informações armazenadas no sistema. Isto é normalmente referido como SGBD ou de um Sistema de Gestão de Dados. Além destas características, que são criados todos os bancos de dados deve ser construído com alta integridade dos dados ea capacidade de recuperar os dados se hardware falhar. <br /><br /><strong>Tipos de Bancos de dados</strong> <br />Existem vários tipos comuns de bancos de dados, cada tipo de base de dados tem o seu próprio modelo dados (como os dados são estruturados). Eles incluem: Modelo Flat, modelo hierárquico, modelo relacional e Rede Modelo. <br /><br /><strong>O apartamento modelo de dados</strong> <br />Em um apartamento modelo banco de dados, existe uma bidimensional (plana estrutura) array de dados. Por exemplo, há uma coluna de informações e dentro desta coluna presume-se que cada item serão dados relacionados com os outros. Por exemplo, um apartamento modelo de dados inclui apenas o código postal. Dentro do banco de dados, haverá apenas uma coluna e cada nova linha dentro de uma coluna que será um novo CEP. <br /><br /><strong>O modelo hierárquico de dados</strong> <br />O modelo hierárquico de dados assemelha uma árvore como estrutura, tais como Microsoft Windows forma como organiza pastas e arquivos. Em um modelo hierárquico banco de dados, cada ligação ascendente está aninhada, a fim de manter os dados organizados em uma ordem específica em um mesmo nível lista. Por exemplo, um banco de dados de vendas hierarchal, maio lista cada dia de vendas como um processo separado. Dentro deste arquivo estão todos encaixados das vendas (mesmos tipos de dados) para o dia. <br /><br /><strong>O modelo de rede</strong> <br />Em um modelo de rede, que é a característica que define um registro é armazenado em um link para outros registros - em efeito rede. Estas redes (ou por vezes referido como ponteiros) pode ser uma variedade de diferentes tipos de informações, tais como números de nó ou até mesmo um disco endereço. <br /><br /><strong>O modelo relacional</strong> <br />O modelo relacional é o mais popular tipo de banco de dados e uma ferramenta extremamente poderosa, não só para armazenar informações, mas para acessá-lo também. Bancos de dados relacionais são organizadas as tabelas. A beleza de uma mesa é a de que a informação pode ser acessada ou adicionados sem reorganizar as tabelas. Uma tabela pode ter muitos registros e cada registro pode ter muitos domínios. <br /><br />Os quadros são muitas vezes chamado de relação. Por exemplo, uma empresa pode ter um banco de dados chamado encomendas dos clientes, dentro desta base de dados será várias tabelas ou relações relativos a todas as encomendas dos clientes. Os quadros podem incluir informação sobre os clientes (nome, morada, contactos, informações, o cliente número, etc) e de outras tabelas (relações), tais como ordens que o cliente comprou anteriormente (isto pode incluir o item de número, item descrição, quantidade pagamento, método de pagamento, etc ). Note-se que cada registro (grupo de campos) em um banco de dados relacional tem a sua própria chave primária. Uma chave primária é a única área que facilita a identificação de um registro. <br /><br />Bancos de dados relacionais usar um programa chamado interface SQL ou Standard Query Language. SQL é actualmente utilizado em praticamente todos os bancos de dados relacionais. Bancos de dados relacionais são extremamente fácil de personalizar a caber quase qualquer tipo de armazenamento de dados. Você pode facilmente criar relações de itens que você vende, os empregados que trabalham para a sua empresa, etc <br /><br /><strong>Acessando informações utilizando um banco de dados</strong> <br />Enquanto armazenamento de dados é uma grande característica das bases de dados, para muitos usuários de dados a característica mais importante é rápido e simples recuperação da informação. Em uma base de dados relacional, que é extremamente fácil de puxar os esclarecimentos relativos a um empregado, bancos de dados relacionais, mas também acrescentar o poder de executar consultas. Consultas são pedidos para puxar tipos específicos de informação e mostrar-lhes, quer no seu estado natural ou criar um relatório utilizando os dados. Por exemplo, se você tivesse um banco de dados de empregados e que incluiu tabelas salariais e de trabalho, como a descrição, você pode facilmente executar uma consulta de empregos que pagam mais de uma determinada quantia. Não importa qual é o tipo de informação que guarda no seu banco de dados, consultas podem ser criados usando SQL para ajudar a responder perguntas importantes. <br /><br /><strong>Conservação de um Banco de Dados</strong> <br />Bancos de dados podem ser muito pequenas (menos de 1 MB) ou extremamente grandes e complexos (como em muitos terabytes governo bases de dados), porém todos os bancos de dados são normalmente armazenados e localizados no disco rígido ou outros tipos de dispositivos de armazenamento e são acessadas via computador. Grandes bases de dados podem exigir servidores separados e locais, no entanto muitas pequenas bases de dados pode caber facilmente como arquivos localizados no disco rígido do seu computador. <br /><br /><strong>Garantir um Banco de Dados</strong> <br />Obviamente, muitas bases de dados confidenciais e armazenar informações importantes que não devem ser facilmente acessado apenas por alguém. Muitas bases de dados exigem senhas e outros recursos de segurança, a fim de aceder à informação. Embora alguns dados podem ser acessados através da Internet através de uma rede, outras bases de dados são sistemas fechados e só pode ser acessado no local. <br /><br /><strong>O que é um banco de dados relacional?</strong> <br />Um banco de dados relacional armazena dados em tabelas separadas em vez de colocar todos os dados em uma grande mesa. <br /><br />Um banco de dados relacional permite então do administrador do banco de dados (DBA's) para definir as relações entre essas tabelas. <br />Estas relações permitem DBA's para combinar dados de várias tabelas de consulta e de apresentação de relatórios. <br />Isso é realizado através da utilização de chaves, que são campos de dados utilizada para o identificar registros em uma tabela específica. <br />Banco de dados relacional tecnologia permite bases de dados para ser maior, mais rápido e mais eficiente. <br /><br />O conceito de um banco de dados relacional foi inicialmente desenvolvido pelo Dr. F. Edger (Ted) Codd em um Modelo Relacional de Dados para Grandes Bancos de dados partilhada, em 1970. <br /><br />Dr. Codd definiu treze normas que devem ser satisfeitas antes de uma base de dados pode ser considerado como um banco de dados relacional: <br />0. Um SGBD relacional deve ser capaz de gerir bases de dados relacionais inteiramente através das suas capacidades. <br />1. Informações regra - Todas as informações em um banco de dados relacional (incluindo nomes tabela e coluna) é representado explicitamente como valores nas tabelas. <br />2. O acesso garantido - Cada valor em um banco de dados relacional é garantida a ser acessível por meio de uma combinação do nome da tabela, chave primária valor, e coluna de nome. <br />3. Sistemática valor nulo apoio - O SGBD fornece apoio sistemático para o tratamento de valores nulos (desconhecido ou inaplicável dados), distinta dos valores padrão, e independente de qualquer domínio. <br />4. Ativo, relacionais catálogo on-line - A descrição da base de dados eo seu conteúdo é representada no nível lógico como quadros e pode, portanto, ser consultada a base de dados usando linguagem. <br />5. Dados abrangentes sublanguage - Pelo menos uma língua deve ter apoiado uma sintaxe bem definida e ser abrangente. Deve apoiar dados definição, manipulação, a integridade regras de autorização, e as transacções. <br />6. Ver actualização regra - Todas as opiniões que são teoricamente actualizada pode ser atualizado através do sistema. <br />7. Ajuste de nível de inserção, atualização e cancelamento - O SGBD não só apoia setlevel recuperações, mas também definir a nível de inserções, atualizações e exclusões. <br />8. Dados físicos independência - programas de aplicação e programas ad hoc são logicamente inalterados quando o acesso físico métodos ou estruturas de armazenagem são alteradas. <br />9. Lógico dados independência - programas de aplicação e programas ad hoc são logicamente inalteradas, na medida do possível, quando forem efectuadas alterações ao quadro estruturas. <br />10. Integridade independência - A base de dados língua deve ser capaz de definir regras integridade. Eles devem ser armazenados no catálogo on-line, e eles não podem ser contornados. <br />11. Distribuição independência - Aplicação programas ad hoc e os pedidos são logicamente inalterados quando os dados são distribuídos primeiro ou quando é redistribuído. <br />12. Nonsubversion - não deve ser possível para contornar as regras definidas através da integridade do banco de dados usando a linguagem de nível mais baixo línguas. <br />Alternativas para o banco de dados relacional modelo incluem o modelo hierárquicas, o modelo de rede, e ao objeto modelo. <br /><br /><strong>O que é um Flat File?</strong><br />Um computador, na sua definição mais simplificada, é nada mais que um dispositivo que armazena, processos, comunica, e manipula dados. Os dados estão no cerne de cada programa de computador, cada site, e ainda todos os vídeo games. <br /><br />O computador tem revolucionou a vida moderna, permitindo um nível de velocidade e precisão para tratamento da informação que até ao momento nunca foi possível. Computadores conseguir isto, pura e simplesmente a seguir um conjunto de instruções denominado código. <br /><br />Um flat arquivo é um documento estático, planilha eletrônica, ou textual registro que contém dados que normalmente não é estruturalmente relacionadas. Flat arquivos são chamados assim porque há pouco que pode ser feito com as informações neles contidas, com excepção ler, armazenar, e de envio. <br /><br />Flat arquivos são tipicamente conjuntos de dados básicos que são utilizados para a configuração de armazenamento de dados para aplicações e programas. A média computador usuário não irá normalmente vê-los muito. Não há lista de endereços básicos-como exemplos de um flat arquivo que pode ser usado, mas os usuários modernos tipicamente um desejo mais robusto e sofisticado método de chamar a sua informação do que a confiar na capacidade limitada de uma estrutura plana arquivo.<br /> <br />Flat arquivos são comumente usadas por encontrada na base de dados e sistemas de gestão, normalmente pertencentes a lima plana e organizados em bases de dados. Um arquivo de dados é realmente plana nada mais do que uma organização critério atribuído a uma amostra conjunto de arquivos plana. <br /><br />Programadores provavelmente usar arquivos plana e plana arquivo de dados muito mais freqüência do que a média de computador quando construir aplicações em sistemas de gerenciamento de banco de dados como o MySQL, um popular DBS que suporta múltiplas linguagens de programação. <br /><br />Flat arquivos também são comumente utilizados pelos desenvolvedores site para utilização no interior eles utilizam linguagens como PHP ou ASP. <br />Verificou-se que fixa ficheiros, uma vez que são simples arquivos de dados, ocupam muito menos espaço do que arquivos estruturados. No entanto, o utilitário leitura plana arquivos devem ser bastante sofisticado, na medida em que terá de saber o que fazer com o arquivo plana depois de ter sido acessado. <br /><br /><br /><strong>O que é SQL?</strong> <br />SQL (Structured Query Language) é a língua mais comum usada para acessar padronizado bases de dados. <br /><br />O SQL foi originalmente desenvolvido pela IBM na década de 1970 para a sua DB2 RDBMS. <br />SQL versão 3 é oficialmente definida pela American National Standards Instititute (ANSI) em ANSI SQL: 1999 standard. <br />A maior parte dos SGBD's existentes atualmente estão em conformidade com a norma anterior ANSI SQL92. <br />SQL é uma linguagem nonprocedural. Oracle processuais produz uma versão do SQL que designa PL / SQL. <br />SQL é suportado por todas as grandes sistema de base de dados em uso hoje em dia, incluindo o MySQL, PostgreSQL, Berkeley DB, Oracle, DB2, Sybase, Informix, e Microsoft SQL. <br />SQL é muitas vezes pronunciado "sequela". <br /><br /><strong>O que é um banco de dados transacionais?</strong> <br />Um banco de dados transacionais é um SGBD onde escrever sobre operações do banco de dados são capazes de ser retirada caso não sejam preenchidos corretamente. <br /><br />Se um sistema de base de dados transacionais perde energia elétrica a meio caminho através de uma operação, parcialmente concluída a operação irá ser retirada e banco de dados será restaurado para o estado em que foi iniciada antes da operação. <br /><br />Imagine que um front-end aplicação está enviando um cliente para um sistema de base de dados. O front-end aplicação envia o pedido ao produto para o cliente e subtrair o produto a partir de inventário. O front-end de aplicação é de cerca de enviar o pedido para a criação de uma factura para o cliente e, de repente o front-end aplicação travamentos. <br /><br />Um banco de dados transacionais pode então voltar a operação concluída parcialmente. <br />Uma alternativa para usar um banco de dados transacionais é a utilização operações atômicas. <br /><br /><strong>O que é um procedimento armazenado?</strong> <br />Uma stored procedure é um conjunto de comandos SQL que tem sido compilados e armazenados no servidor de banco de dados. <br /><br />Depois que o processo tenha sido armazenado "armazenadas", aplicações cliente pode executar o procedimento armazenado, uma e outra vez sem enviá-lo ao servidor de banco de dados novamente, e sem a compilá-lo novamente. <br />Procedimentos armazenados melhorar o desempenho, reduzindo o tráfego de rede e CPU load. <br /><br /><br /><strong>O que é um banco de dados acionar?</strong> <br />Uma base de dados é desencadear um procedimento armazenado que é invocado automaticamente quando um evento ocorre predefinidos. <br />Database triggers permitir DBA's (base de dados Administradores) para criar outros relacionamentos entre distintas bases de dados. <br />Por exemplo, a modificação de um registro em um banco de dados podem acionar a modificação de um registro em uma segunda base de dados. <br /><br /><strong>O que é a replicação de dados?</strong> <br />Replicação de dados é a criação e manutenção de várias cópias da mesma base de dados. <br /><br />Na maioria das implementações replicação de dados, mantém um banco de dados do servidor master cópia do banco de dados e servidores de banco de dados adicionais slave manter cópias da base de dados. <br /><br />Escreve dados são enviados para o servidor e banco de dados master são então replicada pelo escravo servidores de banco de dados. <br />Database lê são divididas entre todos os servidores de base de dados, o que resulta em uma grande vantagem desempenho devido a partilha de carga. <br /><br /><strong>O que é um dicionário de dados?</strong> <br />Um dicionário de dados é reservado um espaço dentro de uma base de dados que é usado para armazenar informações sobre a base de dados própria. <br /><br />Um dicionário de dados podem conter informações como: <br />Database design informação <br />SQL procedimentos armazenados <br />Usuário permissões <br />Usuário estatísticas <br />Database processar informação <br />Dados estatísticos do crescimento <br />Dados estatísticos desempenho <br /><br /><strong>O que é o banco de dados normalização?</strong> <br />Database normalização é o processo de organização de dados em conjuntos distintos e exclusivos. <br />Os efeitos de normalização são os seguintes: <br />Reduzir ou eliminar a duplicação de armazenamento de dados <br />Organize os dados em uma estrutura lógica e eficaz <br />O processo de normalização envolve determinar quais dados devem ser armazenados em banco de dados cada tabela. <br />Por tradição, o processo de normalização através do trabalho envolve etapas bem definidas, chamadas formas normais. <br /><br />Na Primeira forma normal (1NF) você eliminar a duplicação de colunas da mesma tabela, criar quadros separados para cada grupo de dados relacionados, e identificará cada linha com uma única coluna ou conjunto de colunas (as chaves primárias). <br /><br />Na Segunda forma normal (2NF) você remover subconjuntos de dados que se aplicam a várias linhas de uma tabela, colocá-los em quadros separados, e criam relações entre estes novos quadros e os quadros originais através da utilização de chaves estrangeiras. <br />Na Terceira forma normal (3NF) você remover colunas que não estão dependentes da chave primária. <br />Adicional formas normais foram definidos, mas geralmente são menos utilizados. Estes incluem formas avançadas normal Quarta Forma Normal (4NF), Quinta Forma Normal (5NF), Boyce Codd Normal Form (BCNF), e Domain-Key Normal Form (DK / NF). <br /><br /><strong>O que é um BLOB?</strong> <br />Um BLOB (Binary Large Object) é um grande pedaço de dados que são armazenados em um banco de dados. <br /><br />Um BLOB difere de dados no banco de dados regulares que não é forçada em uma determinada estrutura. Um campo de dados normais poderia ser estruturado para ser 14 caracteres e apenas aceitar letras minúsculas. Um campo BLOB não é normalmente restrito no tipo de conteúdo e de conteúdo podem ser vários gigabytes de tamanho. Normal campos de dados espaciais têm afectado por eles, eles são utilizados ou não. BLOB campos são apenas atribuídos espaço quando são utilizados. <br />BLOB campos são normalmente utilizados para armazenar gráficos, áudio, vídeo ou documentos. <br /><br />BLOB campos podem ser adicionados, mudou, e excluído. No entanto, eles não podem ser pesquisados e manipulados com banco de dados padrão comandos. <br /><br /><strong>O que é software livre banco de dados?</strong> <br />MySQL<br />O MySQL banco de dados é mais popular do mundo banco de dados open-source. Mais de seis milhões de instalações usar o banco de dados MySQL a potência de alto volume e de outros web sites sistemas de missão crítica das empresas-incluindo líderes da indústria como NASA, Yahoo, The Associated Press (AP), Suzuki, e Sabre Holdings. <br /><br />MySQL é uma alternativa atraente ao alto custo, mais complexa base tecnológica. O premiado a sua fiabilidade, escalabilidade e velocidade tornam a escolha certa para uma ampla gama de serviços TI corporativos, desenvolvedores web e vendedores de software. <br />MySQL oferece várias vantagens-chave: <br /><br />Confiabilidade e desempenho. MySQL AB faz todas as versões iniciais da sua base de dados disponível para o servidor software de fonte aberta para a comunidade a fim de permitir vários meses de "batalha teste" antes que eles considerem prontos para uso em produção. <br /><br />Facilidade de uso e instalação. O MySQL arquitetura torna extremamente rápido e simples para personalizar. A única multi-motor de arquitetura de armazenamento corporativo MySQL dá a flexibilidade de que necessitam os clientes com um SGBD incomparável na estabilidade, velocidade, compacidade, e facilidade de implantação. <br />Liberdade de Plataforma Lock-in. Ao proporcionar pronto acesso ao código-fonte, a abordagem do MySQL AB garante liberdade, impedindo assim lock-nos a um único fornecedor ou plataforma. <br />Suporte multi-plataforma. MySQL está disponível em mais de vinte diferentes plataformas, incluindo todas as principais distribuições Linux, Unix, Microsoft Windows e Mac OS X. <br />Milhões de desenvolvedores treinados e certificados. MySQL é mais popular do mundo open source banco de dados. Isso faz com que seja fácil de encontrar e knowledgable DBA's e desenvolvedores experientes. <br /><br /><strong>PostgreSQL</strong> <br />PostgreSQL é extremamente escalável, SQL compliant, open-Fonte SGBD objeto-relacional. Com mais de 15 anos de desenvolvimento histórico, PostgreSQL está rapidamente se tornando a base de dados para empresa de facto nível soluções de fonte aberta. <br /><br />PostgreSQL é um objeto-sistema de gerenciamento de banco de dados relacional (ORDBMS) com base em postgres, versão 4,2, desenvolvido na Universidade da Califórnia em Berkeley Computer Science Department. Postgres foi pioneira em muitos conceitos que só ficou disponível em sistemas de comunicações de dados muito mais tarde. <br />PostgreSQL é um descendente de fonte aberta do presente código original Berkeley. Suporta SQL92 e SQL99 e oferece muitas características modernas: <br />Complexo queries <br />Chaves estrangeiras <br />Aciona <br />Exibições <br />Transacional integridade <br />Multiversion concurrency controle <br /><br /><strong>BerkeleyDB</strong> <br />Berkeley DB é uma das mais amplamente utilizada desenvolvedor bases de dados em todo o mundo, é de código aberto e roda em todos os principais sistemas operacionais, incluindo Linux embutido, Linux, Unix, Microsoft Windows, Mac OS X, VxWorks e QNX. <br /><br />Berkeley DB fornece os dados básicos de gestão funcionalidade, escalabilidade, potência e flexibilidade da empresa bancos de dados relacionais, mas sem o overhead de uma consulta camada de transformação. Combinado com a estabilidade e menor custo de suporte de código fonte aberto, Berkeley DB oferece muitas vantagens, incluindo: <br /><br />Administração custo zero elimina a necessidade de um DBA <br />Dimensões menores (menos de 500 KB) <br />A simplicidade de integração em um aplicativo <br />Mais velocidade e melhor desempenho <br />Menor complexidade e mais confiabilidade <br /><br /><br /><strong>Firebird</strong> <br />Firebird é um banco de dados relacional com muitos recursos ANSI SQL-99 que roda em Windows, Linux e uma variedade de plataformas Unix. Firebird oferece excelente concurrency, de alta performance, poderoso e idioma de suporte para database triggers e procedimentos armazenados. Firebird tem sido utilizado em sistemas de produção, ao abrigo de uma variedade de nomes, desde 1981. <br /><br />Firebird é um projeto comercialmente independente de C / C + + programadores, assessores técnicos e suporte desenvolvendo e melhorando um banco de dados relacional multi-plataforma do sistema de gestão baseado no código fonte liberado pela Borland Software Corp sobre July25th, 2000 sob o InterBase Public License. <br />Firebird é completamente livre de qualquer registro, licenciamento ou implantação taxas. Firebird podem ser implantados livremente para uso com qualquer software de terceiros, independentemente de serem ou não comerciais. <br /><br /><strong>O que é ODBC?</strong> <br />ODBC (Open Data Base Connectivity) é uma função que proporciona uma biblioteca comum API (Application Programming Interface) para sistemas de gerenciamento de banco de dados ODBC compatíveis. <br /><br />ODBC SQL foi desenvolvido pelo Grupo de Acesso 1992. <br />ODBC funciona como um padrão de "shim" entre as aplicações que utilizam bases de dados e as bases de dados próprios. <br />Se um pedido for desenvolvido usando ODBC, o pedido será capaz de armazenar dados em qualquer sistema de gerenciamento de banco de dados que está equipado com um driver ODBC. <br /><br />Drivers ODBC são muitas vezes desenvolvidas em sub-componentes: <br />Um driver ODBC Manager <br />ODBC Drivers <br />O pedido alega ODBC chamadas para o driver ODBC gerente. <br />O gerente escolhe o driver ODBC driver ODBC apropriado, que carrega condutor, ler ou escrever e enviar os pedidos que utilizam condutor. <br />Os processos ODBC driver ODBC a função exige, sustenta a solicitar ao banco de dados SQL, e retorna os resultados para a aplicação. <br /><br /><strong>O que é um DSN?</strong> <br />Uma DSN (Data Source Name) é um identificador que define uma fonte de dados para um driver ODBC. <br />Um DSN consiste de informações, tais como: <br />Database nome <br />Diretório <br />Database condutor <br />ID do usuário <br />Senha <br />Sob Unix, DSN configuração é geralmente armazenada em / etc / odbc.ini. <br />Ao abrigo do Microsoft Windows, DSN configuração é normalmente armazenado no registro, embora possa também ser armazenados em arquivos de configuração em um arquivo. DSN extensão. <br /><br /><strong>Onde posso obter um driver ODBC manager?</strong> <br />Os dois principais gestores driver ODBC para Unix são iODBC e unixODBC. <br /><br />iODBC (Independent Open DataBase Connectivity) é uma plataforma independente Open Source execução de ambos os ODBC e X / Open caderno de encargos. iODBC proporciona tanto um gerente e um driver ODBC SDK que facilita o desenvolvimento da base de dados independente de aplicativos. iODBC inclui uma administração baseada em GTK a ferramenta. <br /><br />iODBC tem sido portado para diversas plataformas, incluindo: Linux (x86, Itanium, Alpha, Mips, e StrongArm), Solaris (Sparc e X86), AIX, HP-UX (PA-RISC e Itanium), Digital UNIX, Dynix, Generic 5,4 UNIX, FreeBSD, MacOS 9, MacOS X, DG-UX e OpenVMS. <br /><br />unixODBC prevê Unix com as mesmas aplicações ODBC 3,51 API e instalações disponíveis ao abrigo do Windows. unixODBC Manager fornece um driver que suporta a totalidade do ODBC e executa a API ODBC ODBC 3 a 2 com traduções para UNICODE ANSI conversão. unixODBC também inclui um conjunto de utilitários gráficos que permitem aos usuários especificar conexões para DBMSes para ser utilizado por aplicações, uma coleção de drivers ODBC, incluindo um texto simples baseado condutor, um NNTP condutor, um motorista Postgres e outros, e uma selecção de modelos e bibliotecas que a ajuda na construção de drivers ODBC. unixODBC funciona com o MySQL, Postgres, StarOffice / OpenOffice, Applixware, iHTML, PHP, Perl DBD:: ODBC, e muitas outras aplicações e motoristas. Connection pooling também é fornecida para aumentar a performance em aplicações como o PHP. unixODBC QT inclui uma base de administração GUI. <br /><br /><strong>Onde posso encontrar um driver ODBC MySQL?</strong> <br />MySQL Connector / ODBC está o funcionário MySQL ODBC driver. <br />OpenLink Software oferece tanto Single-Tier e Multi-Tier MySQL ODBC drivers. <br /><br /><strong>Onde posso obter um driver ODBC Oracle?</strong> <br />A Oracle ODBC Drivers Dowload Page é a fonte oficial Oracle para os drivers ODBC. <br /><br />A Easysoft ODBC Driver Oracle melhora na bolsa Oracle ODBC motoristas, prevendo um melhor desempenho e mais fácil manutenção. <br />OpenLink Software oferece tanto Single-Tier e Multi-Tier Oracle ODBC drivers. <br /><br />DataDirect Connect para ODBC é uma substituição Oracle ODBC driver que oferece melhor desempenho e mais fácil manutenção. <br />Attunity fornece uma base de dados que inclui um adaptador Oracle ODBC driver. <br /><br /><br /><strong>O que é JDBC?</strong> <br />JDBC (Java Data Base Connectivity) é uma API (Application Programming Interface) para a ligação a bases de dados a partir do ambiente Java. <br /><br />JDBC é uma alternativa ao ODBC. JDBC da interface Java é mais confortável do que para programadores Java da linguagem C ODBC interface. <br />JDBC é incluído em ambas as J2SE e J2EE. <br />Se nenhum driver JDBC está disponível para as suas necessidades, uma ponte JDBC-ODBC pode ser usado para se conectar a um driver ODBC através do JDBC API. Java 2 inclui uma ponte JDBC-ODBC para Microsoft Windows e Solaris. <br /><br /><strong>Quais são as bases de dados Java?</strong> <br />HSQLDB <br />HSQLDB é o principal mecanismo de banco de dados relacional SQL escrito em Java. HSQLDB tem um driver JDBC e suporta um subconjunto dos ricos ANSI-92 SQL (formato árvore BNF), acrescido SQL 99 e 2003 acessórios. HSQLDB oferece um pequeno (menos de 100k, em uma versão), fast motor de banco de dados que oferece tanto na memória e disco-com base em tabelas. Embutidos e servidor modos estão disponíveis. Além disso, inclui ferramentas como um servidor web mínimo, em memória de consulta e instrumentos de gestão (pode ser executado como applets) e uma série de exemplos demonstração. <br /><br />O produto está sendo usada como uma base de dados e persistência motor Open Source Software, em muitos projetos e até mesmo em projectos comerciais e de produtos. Na versão atual é que é extremamente estável e fiável. HSQLDB é conhecida por seu pequeno tamanho, a capacidade de executar completamente na memória ea sua velocidade. <br />Esta característica-embalada software é totalmente gratuito sob nossas licenças, com base na norma licença BSD. Sim, isso mesmo, completamente livre de custos ou restrições onerosas e totalmente compatível com todas as principais licenças de código-fonte aberto. Java código fonte e documentação extensiva sempre incluído. <br /><br /><strong>Berkeley DB Java Edition</strong> <br />JE Berkeley DB é um desempenho elevado, mecanismo de armazenamento transacional totalmente escrito em Java. Tal como o Berkeley DB produto altamente bem sucedido, Berkeley DB JE executa no endereço espaço da candidatura, sem o overhead de cliente / servidor comunicação. Ele armazena dados na aplicação do formato nativo, de forma nenhuma tradução runtime dados é necessária. JE Berkeley DB suporta transações ACID completo e valorização. Ele fornece uma maneira fácil de utilizar interface, que permite aos programadores armazenar e recuperar informação rápida, simples e fiável. <br /><br />Berkeley DB JE foi desenvolvido desde o início em Java. Ela tira o máximo partido do ambiente Java. O Berkeley DB API JE fornece uma interface Java Coleções de estilo, assim como uma interface programática semelhante à da Berkeley DB API. A arquitetura do Berkeley DB JE apoia alto desempenho e para os dois concorrentes de grande intensidade de ler e escrever com uso intensivo de cargas de trabalho. <br /><br />JE Berkeley DB é diferente de todas as outras bases de dados Java disponível hoje. JE Berkeley DB não é um motor relacional construído em Java. É um estilo embutido Berkeley DB-loja, com uma interface concebido para programadores, e não DBAs. JE da arquitectura do Berkeley DB emprega um registro de base, nenhum sistema de armazenamento de sobrescrever, permitindo concurrency alta velocidade e ao mesmo tempo que fornece transações ACID e registro de nível de bloqueio. Berkeley DB JE caches mais comumente usado de forma eficiente os dados na memória, sem exceder aplicação de limites especificados. Desta forma Berkeley DB JE trabalha com um pedido para utilizar recursos disponíveis JVM mesmo tempo que proporciona o acesso a muito grandes conjuntos de dados. <br /><br />O Berkeley DB JE arquitetura fornece uma camada subjacente de armazenamento para qualquer aplicação Java que exigem alto desempenho, integridade transacional e valorização. <br /><br /><strong>IBM Cloudscape</strong> <br />IBM Cloudscape é um puro, de código aberto baseado em Java sistema de gerenciamento de banco de dados relacional que pode ser embutido em Java e programas utilizados para a operação de transformação on-line (OLTP). Um independente de plataforma, pequeno-pegada (2MB) base de dados, Cloudscape integra estreitamente com qualquer solução baseada em Java. <br /><br /><strong>O que é um Data Warehouse?</strong> <br />Um armazém de dados é um lugar onde os dados são armazenados para fins de arquivo, de análise e de fins de segurança fins. Normalmente um armazém de dados é tanto um único computador ou vários computadores (servidores) amarrados juntos para criar um gigantesco sistema informático. <br /><br />Os dados podem consistir de dados brutos ou dados e pode ser formatado em vários tipos de tópicos, incluindo um de vendas da organização, salários, dados operacionais, incluindo dados de resumos de relatórios, cópias dos dados, os dados dos recursos humanos, inventário de dados, para fornecer dados externos e simulações análise, etc <br />Além de ser uma casa para armazenar grandes quantidades de dados, eles devem possuir sistemas em vigor que tornam mais fácil o acesso a dados e utilizá-lo no dia-a-dia das operações. Um armazém de dados é, por vezes, disse a ser uma parte importante em um sistema de apoio à decisão. Um caminho para uma organização de utilizar os dados a apresentar factos, tendências ou relações que possam ajudá-los a tomar decisões efetivas ou criar estratégias eficazes para realizar seus objetivos. <br />Há muitos modelos diferentes de dados incluindo Online Transaction Processing armazéns que é um armazém construído para a velocidade e facilidade de uso. Outro tipo de armazém de dados é chamado Online Analytical Processing, este tipo de armazém é mais difícil de usar e acrescenta mais um passo no âmbito da análise dos dados. Normalmente ela exige mais passos que atrasa o processo para baixo e muito mais dados, a fim de analisar determinadas questões.<br /><br />Além deste modelo, um dos mais comuns armazém de dados modelos incluem um armazém de dados que está sujeito orientado, variante tempo, não volátil e integrada. Assunto orientado significa que os dados estão ligados entre si e é organizado pelas relações. <br /><br />Tempo variante que significa que todos os dados que forem alterados no armazém de dados pode ser monitorado. Normalmente todas as alterações aos dados estão carimbados com data e uma hora antes e depois com um valor, de modo que você possa mostrar as mudanças através de um período de tempo. <br /><br />Não volátil significa que os dados nunca é excluída ou apagadas. Esta é uma ótima maneira de proteger seus dados mais cruciais. Como esses dados são retidos, você pode continuar a usá-lo em uma posterior análise. Por último, os dados são integrados, o que significa que um armazém de dados que utiliza os dados organizacionais é amplo, em vez de apenas a partir de um departamento. <br /><br />Além do termo armazém de dados, um termo que freqüentemente é utilizada é uma dados Mart, dados marts são menores e menos integrados dados cárteres. Eles poderiam ser apenas um banco de dados sobre recursos humanos registros ou dados sobre as vendas apenas uma divisão. <br /><br />Com a melhoria das tecnologias, bem como as inovações na utilização de técnicas data warehousing, armazéns foram alterados a partir de dados off-line Operacional Bancos de dados on-line para incluir um armazém de dados integrada. <br /><br />Offline dados operacionais Armazéns armazéns onde os dados são dados normalmente é copiado e colado em tempo real a partir de dados em redes um sistema off-line onde pode ser utilizado. Normalmente é a mais simples e menos técnico tipo de armazém de dados. <br /><br />Os dados são dados off-line Armazéns armazéns que são atualizados com freqüência, quer diárias, semanais ou mensais e que os dados estão armazenados em uma estrutura integrada, em que outros possam acessá-lo e executar relatórios. <br /><br />Tempo Real Dados Armazéns armazéns onde são dados que é atualizado a cada momento o afluxo de novos dados. Por exemplo, um Real Time Data Warehouse possa incorporar dados de um Ponto de Venda sistema e é atualizado a cada venda que é feita. <br /><br />Integrado de Dados Armazéns armazéns são dados que podem ser utilizados para outros sistemas de acesso a eles para os sistemas operacionais. Alguns dados integrados Armazéns são utilizados por outros dados armazéns, permitindo-lhes o acesso a eles relatórios de processos, bem como verificar a dados actuais. <br />Então, por que você ou sua organização deve utilizar um Data Warehouse? Aqui estão alguns dos prós e contras da utilização deste tipo de estrutura de dados. <br />O número um motivo pelo qual você deve implementar um armazém de dados é de tal modo que os trabalhadores e os usuários finais podem acessar o armazém de dados e utilizar os dados para a elaboração de relatórios, análises e tomada de decisão. Utilizando os dados em um armazém pode ajudá-lo a localizar as tendências, incidem sobre relacionamentos e ajudá-lo a compreender mais sobre o ambiente que a sua empresa opera Pol. <br /><br />Dados armazéns também aumentar a consistência dos dados e lhe permite ser verificada ao longo e mais pertinentes para determinar o modo como ela é. Porque a maioria dos armazéns dados são integrados, pode puxar os dados de diversas áreas da sua empresa, por exemplo, recursos humanos, finanças, TI, contabilidade, etc <br />Enquanto há muitas razões pelas quais você deve ter um armazém de dados, deve notar-se que existem algumas desvantagens de ter um armazém de dados, incluindo o fato de que ela é morosa para criar e manter em funcionamento. <br /><br />Você também poderá ter um problema com os sistemas actuais a ser incompatível com os seus dados. Também é importante considerar futuros upgrades de software e equipamentos; estes também têm que ser compatíveis com você dados. <br /><br />Por último, a segurança pode ser uma enorme preocupação, especialmente se os seus dados são acessíveis através de uma rede aberta como a internet. Você não quer que seus dados sejam vistos por seu concorrente ou pior cortado e destruídos. <br /><br /><strong>O que é Data Mining?</strong> <br />Mineração de dados é normalmente definido como pesquisar, analisar e lidar com grandes quantidades de dados para encontrar relações, padrões, ou qualquer correlação estatística significativa. Com o advento dos computadores, as grandes bases de dados e de internet, é mais fácil do que nunca para coletar milhões, bilhões e até mesmo trilhões de pedaços de dados que pode então ser sistematicamente analisados para ajudar a olhar para os relacionamentos e de procurar soluções para problemas difíceis. Além usos governamentais, muitos comerciantes utilizar mineração de dados para encontrar fortes padrões de consumo e de relacionamentos. As grandes organizações e instituições educativas também dados mina para encontrar correlações significativas que podem melhorar a nossa sociedade. <br /><br />Embora a mineração de dados é amoral no facto de que só olha para a forte correlação estatística ou relacionamentos, ele pode ser usado para bons ou não tão bons propósitos. Por exemplo, muitas organizações governamentais dependem de mineração de dados para ajudá-los a criar soluções para muitos problemas sociais. Marqueteiros utilizar mineração de dados para ajudá-los a pino ponto e centrar a sua atenção em certos segmentos do mercado de vender a, e, em alguns casos, os hackers podem usar chapéu preto mineração de dados e de esquema fraudulento de roubar milhares de pessoas. <br /><br />Como a mineração de dados funciona? Pois bem a resposta mais simples é a de que grandes quantidades de dados sejam recolhidos. Normalmente mais entidades que realizam mineração de dados são grandes corporações e agências governamentais. Eles foram coleta de dados por décadas e que têm lotes de dados a filtrarem. Se você é um novo negócio bastante ou individuais, você pode comprar determinados tipos de dados, a fim de mina para seus próprios fins. Além disso, os dados também podem ser roubados por hackers a partir de grandes depositários hacking por seu caminho em um grande banco de dados ou simplesmente roubar laptops que estão mal protegidos. <br />Se você estiver interessado em um pequeno estudo de caso sobre o modo como mineração de dados são coletados, usados e fora de lucrou, você pode olhar para o seu supermercado local. O seu supermercado normalmente é extremamente magra e organizou uma entidade que assenta na mineração de dados para se certificar de que é rentável. Normalmente o seu supermercado emprega um POS (Point Of Sale) sistema que recolhe os dados de cada item que for adquirido. O sistema POS recolhe dados sobre o item nome de marca, categoria, tamanho, data e hora da compra e o preço pelo qual o item foi comprado em. Além disso, o supermercado tem normalmente um cliente recompensas programa, que também está na contribuição para o sistema POS. Esta informação pode ligar diretamente os produtos adquiridos com um indivíduo. Todos estes dados para cada compra feita durante anos e anos é armazenado em um banco de dados em um computador com o supermercado. <br /><br />Agora que você tem um banco de dados com milhões e milhões de campos de dados e registos aquilo que você vai fazer com ele? Pois bem, você dados mina-la. O conhecimento é poder e com tantos dados é possível detectar tendências, correlações estatística, relações e padrões que podem ajudar a sua empresa se tornar mais eficiente, eficaz e racionalizada. <br /><br />O supermercado já pode descobrir que comercializam a mais, que hora do dia, semana, mês ou ano é o mais activo, fazer aquilo que os consumidores compram produtos com certos itens. Por exemplo, se uma pessoa adquire o pão branco, o que seria outro item que estará inclinado a comprar? Geralmente nós podemos encontrar o seu amendoim e geléia. Há muito boa informação de que um supermercado pode usar apenas a mineração de dados dos seus próprios dados que tenham recolhido. <br /><br /><strong>O que é Gerenciamento de dados?</strong> <br />Gerenciamento de Dados é um amplo campo de estudo, mas basicamente é o processo de gerenciamento de dados como um recurso valioso para que seja uma organização ou empresa. Uma das maiores organizações que lidam com dados de gestão, Dama (Data Management Association), afirma que os dados de gestão é o processo de desenvolvimento de arquitecturas dados, práticas e procedimentos lidar com os dados e, em seguida, executar esses aspectos em uma base regular. <br /><br />São muitos os temas no âmbito da gestão dos dados, alguns dos temas mais populares incluem dados modelagem, data warehousing, dados circulação, administração de dados e mineração de dados. <br /><br /><strong>Modelagem de dados</strong> <br />Modelagem de dados é, primeiramente, criar uma estrutura para os dados que você coletar e utilizar esses dados e, em seguida, organizar de uma forma que seja facilmente acessível e eficiente para armazenar e puxar os dados para a elaboração de relatórios e análise. A fim de criar uma estrutura de dados, tem que ser chamada apropriadamente e mostrar uma relação com outros dados. Também deve caber adequadamente em uma classe. Por exemplo, se você tiver uma base de dados dos meios de comunicação social, você pode ter um hierarchal estrutura de objetos que incluem fotografias, vídeos e ficheiros de áudio. Dentro de cada categoria, você pode classificar objetos em conformidade. <br /><br /><strong>Data Warehousing</strong> <br />Data Warehousing é armazenar dados de maneira eficaz para que possa ser acessada e utilizada de forma eficiente. Diferentes organizações recolher diferentes tipos de dados, mas muitas organizações utilizam os seus dados da mesma forma, de modo a criar relatórios e analisar seus dados para fazer qualidade decisões de negócios. Data Warehousing é normalmente um vasto repositório de dados organizacionais, no entanto, por muito grandes corporações nos pode abranger apenas um escritório ou um departamento. <br /><br /><strong>Dados Movimento</strong> <br />Dados movimento é a capacidade de se mover dados de um local para outro. Por exemplo, os dados têm de ser transferido a partir de onde é recolhida a um banco de dados e, depois, para um usuário final, mas este processo demora um bocado de logística insight. Não só todos os hardwares, aplicações e dados recolhidos devem ser compatíveis com um outro, eles também devem poder ser classificados, armazenados e acessados com facilidade dentro de uma organização. Movendo dados pode ser muito caro e pode exigir lotes de recursos para se certificar de que os dados são movidos de forma eficiente, que os dados estão seguros no trânsito e que, uma vez que ele chegue ao usuário final que possa ser utilizado eficazmente, quer a ser impressa em papel como um relatório, salvou em um computador ou enviados como anexo de e-mail. </p>
+
+<p style="text-align: justify;"><strong>Database Administration</strong> <br />Database administração é extremamente importante na gestão de dados. Cada organização ou empresa necessita de dados que são responsáveis pelos administradores do banco de dados ambientais. Administradores de dados são normalmente dada a autoridade para fazer as seguintes tarefas que incluem valorização, integridade, segurança, disponibilidade, performance e de desenvolvimento e teste apoio. <br /><br />Recuperabilidade é geralmente definida como uma maneira de armazenar dados como um back-up e, depois, voltar a testar novas empresas para se certificar de que eles são válidos. A tarefa de integridade significa que os dados que é puxado para determinados registros ou arquivos são, de facto, válidos e ter alta integridade dos dados. Integridade dos dados é extremamente importante especialmente quando da criação de relatórios ou quando os dados forem utilizados para a análise. Se você possui dados que são considerados inválidos, os seus resultados serão inúteis. <br /><br />Banco de dados de segurança é uma tarefa essencial para administradores de dados. Por exemplo, administradores de dados que têm a cargo do apuramento e dando acesso a certas bases de dados ou de árvores em uma organização. Outra tarefa importante é disponibilidade. Disponibilidade é definida como tendo a certeza de uma base de dados está instalado e funcionando. Quanto mais o tempo, normalmente o mais elevado nível de produtividade. Desempenho é relacionada à disponibilidade, considera-se tirar o máximo partido do hardware, aplicações e dados que possível. Desempenho é, normalmente, em relação a um orçamento organizações, equipamentos e recursos físicos.<br /><br />Por último, administrador um banco de dados é normalmente envolvidos no desenvolvimento e teste de dados apoio. Database administradores estão sempre a tentar empurrar o envelope, tentando obter mais fora de uso dos dados e adicionar um melhor desempenho e mais poderosas aplicações, hardware e recursos para estruturar a base de dados. Uma base de dados que é administrado corretamente não é apenas um sinal de administrador competente banco de dados, mas também significa que todos os usuários finais têm um enorme recurso a dados em que se encontra disponível. Isto torna mais fácil a criação de relatórios, análises e fazer comportamento de alta qualidade decisões baseadas em dados que são recolhidos e utilizados no seio da organização. <br /><br /><strong>Data Mining</strong> <br />Outro tema importante em matéria da gestão dos dados é mineração de dados. Mineração de dados é um processo em que grandes quantidades de dados são crivada através de mostrar tendências, relações e padrões. Mineração de dados é uma componente essencial à gestão de dados, uma vez que expõe informações interessantes sobre os dados estão sendo coletados. É importante notar que os dados são recolhidos principalmente para que ela possa ser utilizada para encontrar esses padrões, relações e tendências que podem ajudar a criar um negócio crescer ou lucro. <br />Embora haja muitos temas no âmbito da gestão dos dados, todos eles trabalham em conjunto desde o início quando os dados são recolhidos para o fim do processo em que é através do crivo; analisados e formatados onde especialistas podem então fazer decisões qualidade baseados no mesmo. <br /><br /><br /><strong>O que é um Multimedia Database?</strong> <br />Uma base de dados é uma base de dados multimédia que hospeda um ou mais tipos de arquivos de mídia primária como. Txt (documentos),. Jpg (imagens),. Swf (vídeos),. Mp3 (áudio), etc E vagamente se dividem em três categorias principais : <br /><br /><strong>Mídia estática (tempo-independente, ou seja, imagens e caligrafia)</strong> <br />Dynamic comunicação social (tempo-dependente, isto é, vídeo e som bytes) <br />Dimensional comunicação social (ou seja, jogos 3D ou assistida por computador elaboração de programas de CAD) <br />Todas as principais mídias são armazenados em arquivos binários seqüências de zeros e uns, e são codificados de acordo com o tipo de arquivo. <br />O termo "dados" é tipicamente referenciado a partir do computador ponto de vista, enquanto que o termo "multimedia" é referenciado a partir do ponto de vista de usuário. <br /><br /><strong>Tipos de bases de dados multimédia</strong> <br />Existem numerosos tipos diferentes de bases de dados multimedia, incluindo: <br />A autenticação de dados multimédia (também conhecida como uma verificação de dados multimédia, ou seja, a varredura retina), é uma comparação 1:1 dados <br />A identificação de dados multimédia é uma comparação dos dados de um-para-muitos (isto é, senhas e números de identificação pessoal <br />Um recém-emergentes do tipo de dados multimédia, é a Biometria de dados multimédia; que é especializada em humanos verificação automática baseados em algoritmos de o seu perfil comportamental ou fisiológica. <br /><br />Este método de identificação é superior aos métodos tradicionais de dados multimédia exigindo a típica entrada de números de identificação pessoal e senhas - <br />Devido ao facto de a pessoa ser identificada, não necessita de estar fisicamente presentes, onde a identificação verifique se está a passar. <br />Isso elimina a necessidade de que a pessoa seja digitalizado para lembrar um PIN ou senha. Fingerprint identificação tecnologia também é com base neste tipo de banco de dados multimédia. <br /><br /><strong>Dificuldades envolvidas com bases de dados multimédia</strong> <br />A dificuldade de tornar estes diferentes tipos de bases de dados multimédia facilmente acessível aos seres humanos é: <br />A tremenda quantidade de largura de banda que consomem; <br />Criando-Globalmente aceites dados de tratamento de plataformas, tais como o Joomla, e as considerações especiais que estas novas estruturas de dados multimédia exigem.<br /><br />Globalmente, aceitou criar um sistema operacional, incluindo armazenamento e gestão de recursos aplicável programas necessidade de acomodar a vasta informação multimédia Global fome. <br /><br />Multimedia bases necessidade de ter em acomodar várias interfaces humanas de manipular objetos 3D-interativo, em uma lógica de forma perceptível (ie SecondLife.com). <br />Acomodar os vastos recursos necessários para utilizar a inteligência artificial é potencialidades de computador, incluindo métodos de análise imagem e som. <br />A histórica bancos de dados relacionais (ou seja, a Objetos binários grandes - BLOBs-desenvolvidos para bases de dados SQL para armazenar dados multimídia) não apoiar convenientemente conteúdo baseado em pesquisas de conteúdos multimédia. <br /><br />Isto é devido ao banco de dados relacional não ser capaz de reconhecer a estrutura interna de uma Binary Large Object interno e, por isso, dados multimídia componentes que não podem ser recuperadas ... <br /><br />Basicamente, um banco de dados relacional é um "tudo ou nada"-estrutura recuperada e armazenados em arquivos como um todo, o que faz um banco de dados relacional para tornar completamente ineficaz multimédia dados facilmente acessíveis aos seres humanos. <br /><br />A fim de acomodar eficazmente dados multimídia, um banco de dados do sistema de gestão, tais como um Object Oriented Database (OODB) ou Objeto Relacional Database Management System (ORDBMS). <br />Exemplos de Objeto Relacional Database Management Systems incluir Odaptor (HP): UniSQL, ODB-II, e Illustra. <br />O flip-lado da moeda, é que contrariamente não-multimídia dados armazenados em bancos de dados relacionais, multimédia dados não podem ser facilmente indexados, recuperados ou classificadas, exceto por meio de social bookmarking ranking de classificação e, por seres humanos reais. <br /><br />Isto é possível graças metadados recuperação métodos, vulgarmente designado por tags, e de codificação. É por isso que você pode procurar por cães, como exemplo, e uma imagem surge com base em seu texto o termo pesquisado. <br />Isto também é referido um modo esquemático. Considerando que fazer uma pesquisa com uma imagem de um cão para localizar outras imagens cão é referida como modo paradigmático. <br /><br />No entanto, metadados recuperação, pesquisa, e identificar métodos de falta grave em ser capaz de definir adequadamente o espaço ea textura uniforme descrições, tais como as relações espaciais entre objetos 3D, etc <br />A Content-Based Retrieval método de pesquisa de dados multimédia (CBR), no entanto, é precisamente à base desses tipos de pesquisas. Em outras palavras, se você procura uma imagem ou sub-imagem, você seria então mostrado outras imagens ou sub-imagens que, de alguma forma relacionados com a sua particular a pesquisa, por meio de cores padrão ou ratio, etc</p> 	</div>
+
+	
+	
+	<ul class="pager pagenav">
+	<li class="previous">
+		<a class="hasTooltip" title="Conceitos Importantes no PostgreSQL" aria-label="Artigo anterior: Conceitos Importantes no PostgreSQL" href="conceitos-postgresql.html" rel="prev">
+			<span class="icon-chevron-left" aria-hidden="true"></span> <span aria-hidden="true">Ant</span>		</a>
+	</li>
+	<li class="next">
+		<a class="hasTooltip" title="Introdução ao PostgreSQL" aria-label="Próximo artigo: Introdução ao PostgreSQL" href="introducao-ao-postgresql.html" rel="next">
+			<span aria-hidden="true">Próximo</span> <span class="icon-chevron-right" aria-hidden="true"></span>		</a>
+	</li>
+</ul>
+				
+	
+	<script type="text/x-template" id="ccomment-pagination">
+	<nav class="pagination text-center" v-if="pagination.last_page > 0">
+		<ul >
+			<li v-if="showPrevious()" :class="{ 'disabled' : pagination.current_page <= 1 }">
+				<span v-if="pagination.current_page <= 1">
+					<span aria-hidden="true">Ant</span>
+				</span>
+				<a href="faqs-de-bancos-de-dados.html#" v-if="pagination.current_page > 1 " :aria-label="config.ariaPrevioius"
+				   @click.prevent="changePage(pagination.current_page - 1)">
+					<span aria-hidden="true">Ant</span>
+				</a>
+			</li>
+			<li v-for="num in array" :class="{ 'active': num === pagination.current_page }">
+				<a href="faqs-de-bancos-de-dados.html#" @click.prevent="changePage(num)">{{ num }}</a>
+			</li>
+			<li v-if="showNext()"
+			    :class="{ 'disabled' : pagination.current_page === pagination.last_page || pagination.last_page === 0 }">
+				<span v-if="pagination.current_page === pagination.last_page || pagination.last_page === 0">
+					<span aria-hidden="true">Próximo</span>
+				</span>
+				<a href="faqs-de-bancos-de-dados.html#" v-if="pagination.current_page < pagination.last_page" :aria-label="config.ariaNext"
+				   @click.prevent="changePage(pagination.current_page + 1)">
+					<span aria-hidden="true">Próximo</span>
+				</a>
+			</li>
+		</ul>
+	</nav>
+</script>
+	<script type="text/x-template" id="ccomment-avatar">
+		<div class="ccomment-avatar">
+			<a v-if="profileLink" v-bind:href="profileLink">
+				<img v-bind:src="avatar"/>
+			</a>
+			<img v-else v-bind:src="avatar"/>
+		</div>
+	</script>
+
+	<script type="text/x-template" id="ccomment-user-name">
+		<a v-if="profileLink" :href="profileLink">
+			<span class="ccomment-author">{{name}}</span>
+		</a>
+		<span v-else class="ccomment-author">{{name}}</span>
+	</script>
+
+	<script type="text/x-template" id="ccomment-created">
+		<a :href="'#!/ccomment-comment=' + id" class="muted ccomment-created">
+			{{date}}
+		</a>
+	</script>
+
+	<div id="ccomment-token" style="display:none;">
+		<input type="hidden" name="796296c0a9019553ed4bbba150ad5a40" value="1" />	</div>
+
+	
+<script type="text/x-template" id="ccomment-customfields">
+	<div class="ccomment-customfields" v-if="customfields">
+		<strong>Campos personalizados</strong>
+		<dl class="dl-horizontal">
+			<template v-for="customfield in customfields">
+				<dt>{{customfield.title}}</dt>
+				<dd>{{customfield.value}}</dd>
+			</template>
+		</dl>
+	</div>
+</script>
+
+<script type="text/x-template" id="ccomment-template">
+	<li v-bind:class="model.class+' ccomment-level-'+model.level">
+		<div class="ccomment-comment-content" v-bind:id="'ccomment-comment-'+model.id">
+			<div class="ccomment-data">
+									<ccomment-avatar
+							v-bind:avatar="model.avatar"
+							v-bind:profileLink="model.profileLink"/>
+								<div class="ccomment-content">
+					<div class="ccomment-meta">
+						<ccomment-user-name v-bind:name="model.name" v-bind:profileLink="model.profileLink"></ccomment-user-name>
+						<ccomment-created v-bind:date="model.date" v-bind:id="model.id"></ccomment-created>
+					</div>
+
+					<div v-html="model.comment">
+					</div>
+
+
+					<div v-if="model.galleria" class="js-ccomment-galleria galleria ccomment-galleria"></div>
+
+					<ccomment-customfields v-bind:customfields="model.customfields"></ccomment-customfields>
+					<div class="ccomment-actions">
+													<span class="muted">
+					{{model.votes}}
+					<i class="ccomment-thumbs-up ccomment-voting" v-on:click="vote(+1, model.id)"></i>
+					<i class="ccomment-thumbs-down ccomment-voting" v-on:click="vote(-1, model.id)"></i>
+				</span>
+						
+													<button class="btn btn-small ccomment-quote btn-link" v-on:click="quote(model.id)">
+								Citar							</button>
+						
+						
+						<div class="pull-right ccomment-moderation">
+							<button v-if="model.commentModerator" class="btn btn-mini btn-ccomment-edit" v-on:click="edit(model.id)">
+								Editar							</button>
+
+													</div>
+					</div>
+				</div>
+			</div>
+
+
+			<keep-alive>
+				<ccomment-form v-if="reply" :ref="'form-'+model.id" v-bind:focus="true">
+					<input slot="parent-id" name="jform[parentid]" type="hidden" v-bind:value="model.id"/>
+				</ccomment-form>
+			</keep-alive>
+		</div>
+
+		<ul v-if="hasChildren">
+			<ccomment-comment class="item" v-for="model in getChild()" v-bind:key="model.id" v-bind:model="model">
+			</ccomment-comment>
+		</ul>
+	</li>
+
+</script>
+	
+	
+
+		<script type="text/x-template" id="ccomment-form">
+			<form class="ccomment-form" v-on:submit.prevent="onSubmit">
+				<div class="ccomment-error-form row-fluid  margin-bottom" v-if="error">
+					<div class="alert alert-error">
+						{{errorMessage}}
+					</div>
+				</div>
+				<div class="ccomment-info-form row-fluid  margin-bottom" v-if="info">
+					<div class="alert alert-info">
+						{{infoMessage}}
+					</div>
+				</div>
+				<div class="row-fluid margin-bottom">
+											<div class="span1 hidden-phone">
+							<ccomment-avatar v-bind:avatar="getAvatar"></ccomment-avatar>
+						</div>
+					
+					<div class="span11">
+						<textarea v-on:focus="toggle"
+								  name="jform[comment]"
+								  class='js-ccomment-textarea ccomment-textarea span12 required'
+								  placeholder="Deixe um comentário"
+						></textarea>
+
+						<div v-show="uploadImage">
+							
+<div class="fileupload">
+	<!-- The fileupload-buttonbar contains buttons to add/delete files and start/cancel the upload -->
+	<div class="row fileupload-buttonbar">
+		<input type="file" name="files[]" class="js-ccomment-file-upload-real ccomment-file-upload-real" multiple/>
+		<div class="">
+			<!-- The global file processing state -->
+			<span class="fileupload-process"><span class="fa fa-spinner fa-pulse"></span></span>
+			Attach images by dragging & dropping or <span type="button" class="js-file-upload-fake ccomment-file-upload-fake btn-link"> by selecting them.</span>			<br/>
+			<small class="muted">The maximum file size for uploads is <strong>MB</strong>.				Only <strong></strong> files are allowed.</small>
+
+			<!-- The global progress state -->
+			<div class="fileupload-progress fade hide">
+				<!-- The global progress bar -->
+				<div class="progress progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+					<div class="progress-bar progress-bar-success" style="width:0%;"></div>
+				</div>
+				<!-- The extended global progress state -->
+				<div class="progress-extended">&nbsp;</div>
+			</div>
+			<div class="ccomment-file-list">
+				<div class="alert alert-error hide compojoom-max-number-files">
+					The maximum number of 3 allowed files to upload has been reached. If you want to upload more files you have to delete one of the existing uploaded files first.				</div>
+				<table role="presentation" class="table table-striped">
+					<thead></thead>
+					<tbody class="files"></tbody>
+				</table>
+				<div class="alert alert-error hide compojoom-max-number-files">
+					The maximum number of 3 allowed files to upload has been reached. If you want to upload more files you have to delete one of the existing uploaded files first.				</div>
+			</div>
+		</div>
+	</div>
+</div>
+						</div>
+
+						<div v-show="active">
+							<div class="span4 muted small">
+								Postando como																	<button type="button"
+											v-on:click="display = !display"
+											class="btn-link btn-small ccomment-posting-as">{{getDefaultName}}
+									</button>
+															</div>
+															<label class="checkbox pull-right small ccomment-notify">
+									<input type="checkbox" value="1" name="jform[notify]ƒ"
+										   v-on:click="notify = !notify"/>
+									<span class="muted">
+										Notificar-me de futuros comentários via e-mail									</span>
+								</label>
+							
+
+						</div>
+					</div>
+											<div v-show="display"
+							 class="row-fluid ccomment-user-info offset1					span11">
+							<div class="span6">
+								<input name="jform[name]"
+									   class="ccomment-name span12 no-margin "
+									   type='text'
+									   v-bind:value="getName"
+									   v-on:input="updateDefaultName"
+																			   placeholder="Informe seu nome"
+									   tabindex="2"
+																	/>
+								<span class="help-block pull-right small muted">
+								Exibido ao lado de seus comentários.							</span>
+							</div>
+
+															<div class="span6">
+									<input name='jform[email]'
+										   class="ccomment-email span12 no-margin "
+										   type='text'
+										   v-bind:value='getEmail'
+										   v-on:input="updateUserEmail"
+										   placeholder="Informe seu email"
+																				   tabindex="3"
+																			/>
+									<p class="help-block small pull-right muted">
+										Não exibido publicamente.																					<span class='gravatar'>
+											<a href='http://gravatar.com' target='_blank'>Gravatar</a> habilitado										</span>
+																			</p>
+								</div>
+													</div>
+					
+
+					
+					
+
+					<div class="row-fluid ccomment-actions" v-show="active">
+													<div class="pull-left muted small ccomment-undergo-moderation offset1">
+								Comentários serão submetidos a moderação antes de serem publicados.							</div>
+												<div class="pull-right">
+							<button v-on:click="reset()"
+									type="button"
+									class="btn ccomment-cancel">
+								Cancelar</button>
+							<button type="submit" class='btn btn-primary ccomment-send'
+									tabindex="7"
+									name='bsend'>
+								<span v-if="isSending">
+									Salvando...								</span>
+								<span v-else>
+									Enviar								</span>
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<input type="hidden" name="jform[contentid]" v-bind:value="itemConfig.contentid"/>
+				<input type="hidden" name="jform[component]" v-bind:value="itemConfig.component"/>
+				<input type="hidden" name="jform[page]" v-bind:value="page"/>
+				<slot name="parent-id"></slot>
+			</form>
+		</script>
+
+	
+
+
+
+
+<!-- The template to display files available for upload -->
+<script id="template-upload" type="text/x-tmpl">
+{% for (var i=0, file; file=o.files[i]; i++) { %}
+    <tr class="template-upload fade">
+        <td>
+            <span class="preview"></span>
+        </td>
+        <td>
+         <span class="name"><i>{%=file.name%}</i></span>
+            <div class="compojoom-single-file-progress">
+	            <div class="progress progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+	                <div class="progress-bar progress-bar-success" style="width:0%;"></div>
+	            </div>
+	           <small><strong class="size">Processing...</strong></small>
+			</div>
+        </td>
+        <td>
+            {% if (!i && !o.options.autoUpload) { %}
+                <button class="btn btn-default btn-xs start" disabled>
+                    <i class="fa fa-upload"></i>
+                    <span>Start</span>
+                </button>
+            {% } %}
+            {% if (!i) { %}
+                <button class="btn btn-default btn-xs btn-xs cancel pull-left">
+                    <i class="fa fa-stop"></i>
+                    <span>Cancel</span>
+                </button>
+            {% } %}
+        </td>
+    </tr>
+{% } %}
+</script>
+
+<!-- The template to display files available for download -->
+<script id="template-download" type="text/x-tmpl">
+{% for (var i=0, file; file=o.files[i]; i++) { %}
+    <tr class="template-download fade">
+        <td style="">
+        {% if (file.thumbnailUrl) { %}
+            <span class="preview">
+                {% if (file.url) { %}
+					<a href="http://backup/portal/{%=file.url%}" title="{%=file.name%}" download="{%=file.name%}" data-gallery>
+						<img src='http://backup/portal/servidores/postgresql/introducao-ao-postgresql/{%=file.thumbnailUrl%}'>
+					</a>
+				{% } else { %}
+					<img src='http://backup/portal/servidores/postgresql/introducao-ao-postgresql/{%=file.thumbnailUrl%}'>
+				{% } %}
+            </span>
+		{% } %}
+        </td>
+        <td>
+        {% if (!file.error) { %}
+	        <div class="file-meta">
+			    <div class="row">
+			        <div class="col-lg-4">
+			           <input type="text" class="form-control"
+			                placeholder="Title"
+							name="jform[picture_data][{%=file.name%}][title]"
+					        value="{%=file.title%}" />
+			        </div>
+			        <div class="col-lg-8">
+			            <input type="text" placeholder="Description" class="form-control"
+					                name="jform[picture_data][{%=file.name%}][description]"
+
+					                value="{%=file.description%}" />
+			        </div>
+			    </div>
+	        </div>
+		 {% } %}
+        {% if (file.error) { %}
+            <div><span class="label label-danger">Error</span> {%=file.error%}</div>
+        {% } %}
+        </td>
+        <td style="text-align: center">
+            {% if (file.deleteUrl) { %}
+                            {% } else { %}
+                 <button class="btn btn-default btn-xs btn-xs cancel">
+                    <i class="fa fa-stop"></i>
+                    <span>Cancel</span>
+                </button>
+            {% }%}
+            {% if (!file.error) { %}
+            <input type="hidden" name="jform[picture][]" value="{%=file.name%}" />
+            {% } %}
+        </td>
+    </tr>
+{% } %}
+</script>
+	
+<script type="text/x-template" id="ccomment-menu">
+	<div class="row-fluid ccomment-menu">
+		<h4 class="pull-left">
+			Comentários			(<span class="ccomment-comment-counter">{{pagination.total_with_children}}</span>)
+		</h4>
+		<div class="pull-right">
+							<button
+						v-on:click="newComment"
+						class="ccomment-add-new btn btn-mini" title='Adicionar Novo'>
+					Adicionar Novo				</button>
+														</div>
+	</div>
+</script>
+
+	<!-- the ccomment root element -->
+	<div class="ccomment" id="ccomment">
+
+		<ccomment-menu></ccomment-menu>
+
+		
+		
+		<ul class="ccomment-comments-list">
+			<ccomment-comment v-for="item in comments"
+							  v-if="item.parentid === -1"
+							  class="item"
+							  v-bind:key="item.id"
+							  v-bind:model="item">
+			</ccomment-comment>
+		</ul>
+
+					<pagination v-if="pagination.last_page > 1" :pagination="pagination" :callback="loadData" :options="paginationOptions"></pagination>
+		
+					<ccomment-form></ccomment-form>
+		
+			<div class="row-fluid small muted ccomment-powered">
+		<p class="text-center">
+			Comments fornecido por <a href='https://compojoom.com' rel='nofollow' target='_blank'>CComment</a>		</p>
+	</div>
+	</div>
+
+	<script type="text/javascript">
+		window.compojoom = compojoom = window.compojoom || {};
+		compojoom.ccomment = {
+			user: {"loggedin":false,"avatar":"http:\/\/backup\/portal\/media\/com_comment\/images\/noavatar.png"},
+			item: {"contentid":215,"component":"com_content","count":0},
+			config: {"comments_per_page":0,"sort":0,"tree":0,"use_name":0,"tree_depth":5,"form_position":0,"voting":1,"copyright":1,"pagination_position":0,"avatars":0,"gravatar":1,"support_ubb":1,"support_emoticons":0,"support_picture":0,"name_required":0,"email_required":0,"baseUrl":"http:\/\/backup\/portal\/","langCode":null,"file_upload":{"url":"http:\/\/backup\/portal\/index.php?option=com_comment&amp;task=multimedia.doIt","formControl":"jform","fieldName":"picture","maxNumberOfFiles":3,"fileTypes":null,"maxSize":null,"component":"com_comment","imageSize":{"x":"2400","y":"1800"}}}		};
+	</script>
+
+<script data-inline type="text/javascript" src="../../../media/com_comment/cache/8e12eb270706cd6b2c8483104bf89b54.min.js"></script>
+			<div class="article-footer-wrap">
+			<div class="article-footer-top">
+									<div class="helix-social-share">
+		<div class="helix-social-share-icon">
+			<ul>
+				
+				<li>
+					<div class="facebook" data-toggle="tooltip" data-placement="top" title="Share On Facebook">
+
+						<a class="facebook" onClick="window.open('http://www.facebook.com/sharer.php?u=http://backup/portal/servidores/postgresql/introducao-ao-postgresql/faqs-de-bancos-de-dados.html','Facebook','width=600,height=300,left='+(screen.availWidth/2-300)+',top='+(screen.availHeight/2-150)+''); return false;" href="http://www.facebook.com/sharer.php?u=http://backup/portal/servidores/postgresql/introducao-ao-postgresql/faqs-de-bancos-de-dados.html">
+
+							<i class="fa fa-facebook"></i>
+						</a>
+
+					</div>
+				</li>
+				<li>
+					<div class="twitter"  data-toggle="tooltip" data-placement="top" title="Share On Twitter">
+						
+						<a class="twitter" onClick="window.open('http://twitter.com/share?url=http://backup/portal/servidores/postgresql/introducao-ao-postgresql/faqs-de-bancos-de-dados.html&amp;text=FAQs%20de%20Bancos%20de%20Dados','Twitter share','width=600,height=300,left='+(screen.availWidth/2-300)+',top='+(screen.availHeight/2-150)+''); return false;" href="http://twitter.com/share?url=http://backup/portal/servidores/postgresql/introducao-ao-postgresql/faqs-de-bancos-de-dados.html&amp;text=FAQs%20de%20Bancos%20de%20Dados">
+							<i class="fa fa-twitter"></i>
+						</a>
+
+					</div>
+				</li>
+				<li>
+					<div class="google-plus">
+						<a class="gplus" data-toggle="tooltip" data-placement="top" title="Share On Google Plus" onClick="window.open('https://plus.google.com/share?url=http://backup/portal/servidores/postgresql/introducao-ao-postgresql/faqs-de-bancos-de-dados.html','Google plus','width=585,height=666,left='+(screen.availWidth/2-292)+',top='+(screen.availHeight/2-333)+''); return false;" href="https://plus.google.com/share?url=http://backup/portal/servidores/postgresql/introducao-ao-postgresql/faqs-de-bancos-de-dados.html" >
+						<i class="fa fa-google-plus"></i></a>
+					</div>
+				</li>
+				
+				<li>
+					<div class="linkedin">
+						<a class="linkedin" data-toggle="tooltip" data-placement="top" title="Share On Linkedin" onClick="window.open('http://www.linkedin.com/shareArticle?mini=true&url=http://backup/portal/servidores/postgresql/introducao-ao-postgresql/faqs-de-bancos-de-dados.html','Linkedin','width=585,height=666,left='+(screen.availWidth/2-292)+',top='+(screen.availHeight/2-333)+''); return false;" href="http://www.linkedin.com/shareArticle?mini=true&url=http://backup/portal/servidores/postgresql/introducao-ao-postgresql/faqs-de-bancos-de-dados.html" >
+							
+						<i class="fa fa-linkedin-square"></i></a>
+					</div>
+				</li>
+			</ul>
+		</div>		
+	</div> <!-- /.helix-social-share -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			</div>
+					</div>
+	
+</article>
+</div></div><div id="sp-right" class="col-sm-3 col-md-3"><div class="sp-column class2"><div class="sp-module pop"><h3 class="sp-module-title">Populares</h3><div class="sp-module-content"><ul class="mostreadpop mod-list">
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="http://backup/portal/mobile/phaser/atualizar-o-node-js.html" itemprop="url">
+			<span itemprop="name">
+				Atualizar o Node.JS			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../../../joomla-3/dicas/melhorando-a-velocidade-do-site.html" itemprop="url">
+			<span itemprop="name">
+				Melhorando a velocidade do site			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="http://backup/portal/servidores/postgresql/introducao-ao-postgresql/boas-vindas.html" itemprop="url">
+			<span itemprop="name">
+				Boas Vindas!			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../../../joomla-3/instalacao.html" itemprop="url">
+			<span itemprop="name">
+				Instalação do Joomla			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../../../blog/diversos/e-possivel-viver-sem-o-google.html" itemprop="url">
+			<span itemprop="name">
+				É possível viver sem o Google?			</span>
+		</a>
+	</li>
+</ul>
+</div></div><div class="sp-module "><h3 class="sp-module-title">Novo Testamento</h3><div class="sp-module-content">E, subindo Pedro a Jerusalém, disputavam com ele os que eram da circuncisão,
+
+<br>(At, 11:2) 
+</div></div><div class="sp-module "><h3 class="sp-module-title">Rotas no Mapa do Google</h3><div class="sp-module-content"><a href="https://www.google.com/maps/dir///@-3.7294526,-38.5422647,15z" target="_blank">Abrir o Mapa</a>
+</div></div></div></div></div></div></section><footer id="sp-footer"><div class="container"><div class="row"><div id="sp-footer1" class="col-sm-12 col-md-12"><div class="sp-column "><span class="sp-copyright">© 2015 Ribamar FS. All Rights Reserved. Designed By JoomShaper</span></div></div></div></div></footer>            </div> <!-- /.body-innerwrapper -->
+        </div> <!-- /.body-innerwrapper -->
+
+        <!-- Off Canvas Menu -->
+        <div class="offcanvas-menu">
+            <a href="faqs-de-bancos-de-dados.html#" class="close-offcanvas" aria-label="Close"><i class="fa fa-remove" aria-hidden="true" title="HELIX_CLOSE_MENU"></i></a>
+            <div class="offcanvas-inner">
+                                  <div class="sp-module _menu"><h3 class="sp-module-title">Menu Principal</h3><div class="sp-module-content"><ul class="nav menu">
+<li class="item-101"><a href="../../../index.html" > Início</a></li><li class="item-107  deeper parent"><a href="../../../basicos.html" > Básicos</a><span class="offcanvas-menu-toggler collapsed" data-toggle="collapse" data-target="#collapse-menu-107"><i class="open-icon fa fa-angle-down"></i><i class="close-icon fa fa-angle-up"></i></span><ul class="collapse" id="collapse-menu-107"><li class="item-112"><a href="../../../basicos/html.html" > HTML</a></li><li class="item-113"><a href="../../../basicos/javascript.html" > JavaScript</a></li><li class="item-114"><a href="../../../basicos/css.html" > CSS</a></li><li class="item-116"><a href="../../../basicos/jquery.html" > jQuery</a></li><li class="item-117"><a href="../../../basicos/bootstrap.html" > Bootstrap</a></li><li class="item-118"><a href="../../../basicos/php.html" > PHP</a></li><li class="item-119"><a href="../../../basicos/phpoo.html" > PHPOO</a></li><li class="item-120"><a href="../../../basicos/pdo.html" > PDO</a></li><li class="item-157"><a href="../../../basicos/ferramentas.html" > Ferramentas</a></li><li class="item-287"><a href="../../../basicos/outros.html" > Outros</a></li></ul></li><li class="item-108  active deeper parent"><a href="../../../servidores.html" > Servidores</a><span class="offcanvas-menu-toggler collapsed" data-toggle="collapse" data-target="#collapse-menu-108"><i class="open-icon fa fa-angle-down"></i><i class="close-icon fa fa-angle-up"></i></span><ul class="collapse" id="collapse-menu-108"><li class="item-121"><a href="../../desktop.html" > Desktop</a></li><li class="item-122"><a href="../../ubuntu-server.html" > Ubuntu Server</a></li><li class="item-123"><a href="../../shell-scripts.html" > Shell Scripts</a></li><li class="item-124"><a href="../../servidor-web.html" > Servidor Web</a></li><li class="item-156"><a href="../../servidor-sgbd.html" > Servidor SGBD</a></li><li class="item-193  active deeper parent"><a href="../../postgresql.html" > PostgreSQL</a><span class="offcanvas-menu-toggler collapsed" data-toggle="collapse" data-target="#collapse-menu-193"><i class="open-icon fa fa-angle-down"></i><i class="close-icon fa fa-angle-up"></i></span><ul class="collapse" id="collapse-menu-193"><li class="item-232  current active"><a href="../introducao-ao-postgresql.html" > Introdução</a></li><li class="item-233"><a href="../projeto.html" > Projeto</a></li><li class="item-234"><a href="../dimensionamento.html" > Dimensionamento</a></li></ul></li></ul></li><li class="item-148  deeper parent"><a href="../../../joomla-3.html" > Joomla 3</a><span class="offcanvas-menu-toggler collapsed" data-toggle="collapse" data-target="#collapse-menu-148"><i class="open-icon fa fa-angle-down"></i><i class="close-icon fa fa-angle-up"></i></span><ul class="collapse" id="collapse-menu-148"><li class="item-149"><a href="../../../joomla-3/introducao.html" > Introdução</a></li><li class="item-231"><a href="../../../joomla-3/seguranca.html" > Segurança</a></li><li class="item-199"><a href="../../../joomla-3/instalacao.html" > Instalação do Joomla</a></li><li class="item-152"><a href="../../../joomla-3/administracao.html" > Administração</a></li><li class="item-153"><a href="../../../joomla-3/extensoes.html" > Extensões</a></li><li class="item-154"><a href="../../../joomla-3/loja-simples.html" > Loja Simples</a></li><li class="item-155"><a href="../../../joomla-3/dicas.html" > Dicas</a></li></ul></li><li class="item-310  divider deeper parent"><a class="separator ">Frameworks</a>
+<span class="offcanvas-menu-toggler collapsed" data-toggle="collapse" data-target="#collapse-menu-310"><i class="open-icon fa fa-angle-down"></i><i class="close-icon fa fa-angle-up"></i></span><ul class="collapse" id="collapse-menu-310"><li class="item-138  deeper parent"><a href="../../../frameworks/cakephp-3.html" > CakePHP 3</a><span class="offcanvas-menu-toggler collapsed" data-toggle="collapse" data-target="#collapse-menu-138"><i class="open-icon fa fa-angle-down"></i><i class="close-icon fa fa-angle-up"></i></span><ul class="collapse" id="collapse-menu-138"><li class="item-139"><a href="../../../frameworks/cakephp-3/introducao.html" > Introdução</a></li><li class="item-140"><a href="../../../frameworks/cakephp-3/instalacao.html" > Instalação</a></li><li class="item-172"><a href="../../../frameworks/cakephp-3/configuracoes.html" > Configurações</a></li><li class="item-141"><a href="../../../frameworks/cakephp-3/convencoes.html" > Convenções</a></li><li class="item-142"><a href="../../../frameworks/cakephp-3/tutoriais.html" > Tutoriais</a></li><li class="item-144"><a href="../../../frameworks/cakephp-3/dicas.html" > Dicas</a></li><li class="item-145"><a href="../../../frameworks/cakephp-3/seguranca.html" > Segurança</a></li><li class="item-147"><a href="../../../frameworks/cakephp-3/mvc-no-cakephp-3.html" > MVC no CakePHP 3</a></li></ul></li><li class="item-171  deeper parent"><a href="../../../frameworks/laravel-5.html" > Laravel 5</a><span class="offcanvas-menu-toggler collapsed" data-toggle="collapse" data-target="#collapse-menu-171"><i class="open-icon fa fa-angle-down"></i><i class="close-icon fa fa-angle-up"></i></span><ul class="collapse" id="collapse-menu-171"><li class="item-173"><a href="../../../frameworks/laravel-5/introducao.html" > Introdução</a></li><li class="item-174"><a href="../../../frameworks/laravel-5/instalacao.html" > Instalação</a></li><li class="item-175"><a href="../../../frameworks/laravel-5/configuracoes.html" > Configurações</a></li><li class="item-176"><a href="../../../frameworks/laravel-5/routes.html" > Routes</a></li><li class="item-178"><a href="../../../frameworks/laravel-5/dicas.html" > Dicas</a></li><li class="item-177"><a href="../../../frameworks/laravel-5/tutoriais.html" > Tutoriais</a></li></ul></li></ul></li><li class="item-158  deeper parent"><a href="../../../mobile.html" > Mobile</a><span class="offcanvas-menu-toggler collapsed" data-toggle="collapse" data-target="#collapse-menu-158"><i class="open-icon fa fa-angle-down"></i><i class="close-icon fa fa-angle-up"></i></span><ul class="collapse" id="collapse-menu-158"><li class="item-179"><a href="../../../mobile/introducao.html" > Introdução</a></li><li class="item-180"><a href="../../../mobile/ambiente.html" > Ambiente</a></li><li class="item-188"><a href="../../../mobile/phaser.html" > Phaser</a></li><li class="item-187"><a href="../../../mobile/monaca.html" > Monaca</a></li><li class="item-181"><a href="../../../mobile/phonegap.html" > PhoneGap</a></li><li class="item-182"><a href="../../../mobile/app-inventor.html" > App Inventor</a></li><li class="item-159"><a href="../../../mobile/unity-3d.html" > Unity 3D</a></li><li class="item-160"><a href="../../../mobile/intel-xdk.html" > Intel XDK</a></li><li class="item-161"><a href="../../../mobile/outros.html" > Outros</a></li><li class="item-163"><a href="../../../mobile/dicas.html" > Dicas</a></li></ul></li><li class="item-168  deeper parent"><a href="../../../blog.html" > Blog</a><span class="offcanvas-menu-toggler collapsed" data-toggle="collapse" data-target="#collapse-menu-168"><i class="open-icon fa fa-angle-down"></i><i class="close-icon fa fa-angle-up"></i></span><ul class="collapse" id="collapse-menu-168"><li class="item-196"><a href="../../../blog/reflexoes.html" > Reflexões</a></li><li class="item-197"><a href="../../../blog/saude.html" > Saúde</a></li><li class="item-238"><a href="../../../blog/diversos.html" > Diversos</a></li><li class="item-271"><a href="../../../blog/estudos.html" > Estudos</a></li></ul></li><li class="item-215  deeper parent"><a href="../../../curriculo.html" > Sobre</a><span class="offcanvas-menu-toggler collapsed" data-toggle="collapse" data-target="#collapse-menu-215"><i class="open-icon fa fa-angle-down"></i><i class="close-icon fa fa-angle-up"></i></span><ul class="collapse" id="collapse-menu-215"><li class="item-167">		<a href="https://github.com/ribafs?tab=repositories" rel="noopener noreferrer" target="_blank" > Projetos</a></li><li class="item-164"><a href="../../../curriculo/livros.html" > Livros</a></li><li class="item-257"><a href="../../../curriculo/curriculo.html" > Currículo</a></li><li class="item-110"><a href="../../../curriculo/contato.html" > Contato</a></li><li class="item-251"><a href="../../../curriculo/mapa-do-site.html" > Mapa</a></li></ul></li></ul>
+</div></div>
+                            </div> <!-- /.offcanvas-inner -->
+        </div> <!-- /.offcanvas-menu -->
+
+        
+        
+        
+        <!-- Preloader -->
+        
+
+        <!-- Go to top -->
+                    <a href="javascript:void(0)" class="scrollup" aria-label="Go To Top">&nbsp;</a>
+        
+    </body>
+</html>

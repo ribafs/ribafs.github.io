@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br" dir="ltr">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <base href="" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Ribamar FS" />
+	<meta name="robots" content="noindex, nofollow" />
+	<meta name="description" content="Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros." />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>Ainda CSS - RibaFS Portal</title>
+	<link href="http://ribafs.org/portal/basicos/css/ainda-css.html?tmpl=component&amp;print=1&amp;layout=default" rel="canonical" />
+	<link href="../../templates/shaper_helix3/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../../favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="http://backup/portal/media/plg_content_prismsyntaxhighlighter/css/prism-okaidia.css" rel="stylesheet" type="text/css" />
+	<link href="http://backup/portal/media/plg_content_prismsyntaxhighlighter/css/prism-linenumbers.css" rel="stylesheet" type="text/css" />
+	<script src="http://backup/portal/media/plg_content_prismsyntaxhighlighter/js/prism-tinymce.js" type="text/javascript"></script>
+	<script src="../../media/jui/js/jquery.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../media/jui/js/jquery-noconflict.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../media/jui/js/jquery-migrate.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="http://backup/portal/media/system/js/caption.js?d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script type="text/javascript">
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+	</script>
+	<meta property="og:url" content="http://backup/portal/basicos/css/ainda-css.html" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Ainda CSS" />
+	<meta property="og:description" content="Introdução ao CSS Índice 1 – Introdução ao CSS 2 – Usando CSS em Scripts internos 4 - Usando CSS nas Tags HTML 5 - Usando CSS em Scripts externos 6 - Cores..." />
+
+   	<link rel="stylesheet" href="../../media/jui/css/bootstrap.min.css" type="text/css" />
+	<link rel="stylesheet" href="../../templates/shaper_helix3/css/frontend-edit.css" type="text/css" />
+    <link rel="stylesheet" href="../../templates/shaper_helix3/css/template.css" type="text/css" />
+</head>
+<body class="contentpane">
+	<div id="system-message-container">
+	</div>
+
+	
+
+<article class="item item-page" itemscope itemtype="http://schema.org/Article">
+	<meta itemprop="inLanguage" content="pt-BR" />
+	
+	
+
+	<div class="entry-header">
+		<span class="post-format"><i class="fa fa-thumb-tack"></i></span>
+		
+					<h2 itemprop="name">
+									Ainda CSS							</h2>
+												</div>
+
+						<div id="pop-print" class="btn hidden-print">
+				<a href="ainda-css.html#" onclick="window.print();return false;">			<span class="icon-print" aria-hidden="true"></span>
+		Imprimir	</a>			</div>
+				
+	
+	
+				
+	
+			<div itemprop="articleBody">
+		<p style="margin-bottom: 0cm; text-align: justify;" align="center"><span style="font-size: large;"><b>Introdução ao CSS</b></span></p>
+<p style="margin-bottom: 0cm; text-align: justify;" align="center"><b>Índice</b></p>
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+<p style="margin-bottom: 0cm; text-align: justify;">1 – Introdução ao CSS</p>
+<p style="margin-bottom: 0cm; text-align: justify;">2 – Usando CSS em Scripts internos</p>
+<p style="margin-bottom: 0cm; text-align: justify;">4 - Usando CSS nas Tags HTML</p>
+<p style="margin-bottom: 0cm; text-align: justify;">5 - Usando CSS em Scripts externos</p>
+<p style="margin-bottom: 0cm; text-align: justify;">6 - Cores</p>
+<p style="margin-bottom: 0cm; text-align: justify;">7 - Como Trocar o Cursor do Mouse com CSS</p>
+<p style="margin-bottom: 0cm; text-align: justify;">8 - Comentários em CSS</p>
+<p style="margin-bottom: 0cm; text-align: justify;">9 - Dicas úteis para CSS</p>
+<p style="margin-bottom: 0cm; text-align: justify;">10 - Recomendações para HTML, JavaScript e CSS</p>
+<p style="margin-bottom: 0cm; text-align: justify;">11 - Funções em PHP que retornam CSS</p>
+<p style="margin-bottom: 0cm; text-align: justify;">12 – Referências</p>
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+<p style="margin-bottom: 0cm; page-break-before: always; text-align: justify;" align="center"><span style="font-size: large;"><b>1 - Introdução ao CSS </b></span></p>
+<p style="margin-bottom: 0cm; text-align: justify;" align="center"> </p>
+<p style="margin-bottom: 0cm; text-align: justify;"><a class="western" href="http://www.w3schools.com/css/default.asp">http://www.w3schools.com/css/default.asp</a></p>
+<p style="margin-bottom: 0cm; text-align: justify;"><a class="western" href="http://www.w3schools.com/css/tryit.asp?filename=trycss_ex">http://www.w3schools.com/css/tryit.asp?filename=trycss_ex</a></p>
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+<p style="margin-bottom: 0cm; text-align: justify;"><b>O que é CSS?</b></p>
+<p style="text-align: justify;">Talvez você já tenha ouvido falar em CSS, mas não saiba o que significa exatamente. Nesta lição você saberá o que é e para que serve CSS.</p>
+<p style="text-align: justify;">CSS é a abreviatura para <b>C</b>ascading <b>S</b>tyle <b>S</b>heets. — Folha de Estilos em Cascata</p>
+<p style="text-align: justify;"> </p>
+<p style="text-align: justify;"><b>O que eu posso fazer com CSS?</b></p>
+<p style="text-align: justify;">CSS é uma linguagem para estilos que define o layout de documentos HTML. Por exemplo, CSS controla fontes, cores, margens, linhas, alturas, larguras, imagens de fundo, posicionamentos e muito mais. Aguarde e você verá!</p>
+<p style="text-align: justify;">HTML pode ser (in)devidamente usado para definir o layout de websites. Contudo CSS proporciona mais opções e é mais preciso e sofisticado. CSS é suportado por todos os navegadores atuais.</p>
+<p style="text-align: justify;">Depois de estudar algumas poucas lições deste tutorial, você estará em condições de projetar uma folha de estilos, usando CSS para dar um grande visual ao seu website.</p>
+<p style="text-align: justify;"> </p>
+<p style="text-align: justify;"><b>Qual é a diferença entre CSS e HTML?</b></p>
+<p style="text-align: justify;">HTML é usado para estruturar conteúdo. CSS é usado para formatar conteúdo estruturado.</p>
+<p style="text-align: justify;">OK, isto soa um tanto técnico e confuso. Mas, por favor continue lendo. Tudo fará sentido em breve.</p>
+<p style="text-align: justify;">Em tempos passados quando a Madonna era virgem e um sujeito chamado Tim Berners Lee inventou a World Wide Web, a linguagem HTML era usada somente para estruturar textos. Um autor podia marcar seus textos definindo "isto é um cabeçalho " ou "isto é um parágrafo" usando tags HTML tais como <code>&lt;h1&gt;</code> e <code>&lt;p&gt;</code>.</p>
+<p style="text-align: justify;">À medida que a Web ganhava popularidade, os designers começavam a sentir a necessidade de encontrar meios de construir layout para os documentos online. Para suprir estas necessidades os fabricantes de navegadores (àquela época a Netscape e a Microsoft) inventaram novas tags HTML tais como, por exemplo a tag <code>&lt;font&gt;</code> que se diferenciava das tags originais do HTML pelo fato de destinar-se à layout — e não à estrutura.</p>
+<p style="text-align: justify;">Isto adicionalmente teve o efeito de disvirtuar o emprego de tags inicialmente projetadas para estrutura como por exemplo a tag &lt;table&gt; que passaram a ser empregadas para layout. Muitas destas novas tags para layout como a tag &lt;blink&gt; eram suportadas somente por um determinado tipo de navegador. A frase "Você precisa do navegador X para visualizar esta página" tornou-se comum nos websites.</p>
+<p style="text-align: justify;">CSS foi inventada para solucionar esta situação, colocando à disposição dos web designers meios sofisticados de projetar layouts suportados por todos os navegadores. E ao mesmo tempo a separação dos estilos de apresentação da marcação dos conteúdos torna a manutenção dos sites bem mais fácil.</p>
+<p style="page-break-before: always; text-align: justify;"><b>Quais são os benefícios do uso de CSS?</b></p>
+<p style="text-align: justify;">CSS é uma revolução no mundo do web design. Os benefícios concretos do uso de CSS incluem:</p>
+<p style="margin-bottom: 0cm; text-align: justify;">controle do layout de vários documentos a partir de uma simples folha de estilos;</p>
+<p style="margin-bottom: 0cm; text-align: justify;">maior precisão no controle do layout;</p>
+<p style="margin-bottom: 0cm; text-align: justify;">aplicação de diferentes layouts para servir diferentes mídias (tela, impressora, etc.);</p>
+<p style="text-align: justify;">emprego de variadas, sofisticadas e avançadas técnicas de desenvolvimento.</p>
+<p style="margin-bottom: 0cm; text-align: justify;">Fonte: <a class="western" href="http://www.pt-br.html.net/tutorials/css/lesson1.asp">http://www.pt-br.html.net/tutorials/css/lesson1.asp</a></p>
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Sintaxe:</b></p>
+<p style="margin-bottom: 0cm; text-align: justify;">seletor {propriedade: valor;}</p>
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+<p style="margin-bottom: 0cm; text-align: justify;">Exemplo:</p>
+<p style="margin-bottom: 0cm; text-align: justify;">body {color:black;}</p>
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+<p style="margin-bottom: 0cm; text-align: justify;">Mudará a cor do texto do body para preto.</p>
+<p style="margin-bottom: 0cm; text-align: justify;">O que mostra que quando aplicamos CSS ao HTML, o CSS mudará (sobrescreverá) o comportamento do HTML.</p>
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+<p style="margin-bottom: 0cm; text-align: justify;">Existem as classes e os IDs. Veja como os criamos:</p>
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+<p style="margin-bottom: 0cm; text-align: justify;">.nome_classe {</p>
+<p style="margin-bottom: 0cm; text-align: justify;">margin-left: 1.0in;</p>
+<p style="margin-bottom: 0cm; text-align: justify;">}</p>
+<p style="margin-bottom: 0cm; text-align: justify;">#nome_id {</p>
+<p style="margin-bottom: 0cm; text-align: justify;">margin-left: 1.0in;</p>
+<p style="margin-bottom: 0cm; text-align: justify;">}</p>
+<p style="margin-bottom: 0cm; text-align: justify;">Classe inicia com ponto (.).</p>
+<p style="margin-bottom: 0cm; text-align: justify;">ID inicia com cerquilha (#).</p>
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Separando em Camadas com CSS</b></p>
+<p style="margin-bottom: 0cm; text-align: justify;">Uma das funções importantes do CSS é permitir que separemos em camadas o conteúdo do site (HTML) da formatação (CSS) e também o JavaScript em outra camada.</p>
+<p style="margin-bottom: 0cm; text-align: justify;">Cada camada em arquivo separado:</p>
+<p style="margin-bottom: 0cm; text-align: justify;">conteúdo - .html</p>
+<p style="margin-bottom: 0cm; text-align: justify;">formatação - .css</p>
+<p style="margin-bottom: 0cm; text-align: justify;">JavaScript - .js</p>
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Suprindo Deficiências do HTML</b></p>
+<p style="margin-bottom: 0cm; text-align: justify;">Outra função muito importante do CSS é suprir algumas deficiências do HTML. Por exemplo, o HTML com seus recursos não permite mudar a cor de fundo de uma caixa de texto de um input de formulário e o CSS consegue. Assim vários outros recursos permitidos pelo CSS, como mudar a cor de fundo de uma textarea, de um botão, cor das bordas de uma caixa de texto, cor ao mover o mouse, etc.</p>
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Exemplo de CSS que altera o comportamento do input e do select e também quando perde o foco:</b></p>
+<pre class="language-css"><code>input {
+
+background-color: #6D5B52;
+
+border-style: 1px solid;
+
+border-color: black gray gray black;
+
+color: white;
+
+font-family: Verdana, Arial, Helvetica, sans-serif;
+
+font-size: 11px;
+
+}
+
+input:focus {
+
+background-color: #6D5B52;
+
+border-style: 1px solid;
+
+border-color: red red red red;
+
+color: white;
+
+font-family: Verdana, Arial, Helvetica, sans-serif;
+
+font-size: 11px;
+
+}
+
+select {
+
+background-color: #6D5B52;
+
+font:12px verdana, arial, helvetica, sans-serif;
+
+color:white;
+
+}
+
+select:focus {
+
+background-color: #3C1103;
+
+font:12px verdana, arial, helvetica, sans-serif;
+
+color:white;
+
+}</code></pre>
+<p style="margin-bottom: 0cm; text-align: justify;">Quando no CSS usamos o nome de controles de formulários, o seu comportamento e formatação será substituído pelo comportamento adicionado no CSS (que prevalecerá).</p>
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+<p style="margin-bottom: 0cm; page-break-before: always; text-align: justify;" align="center"><span style="font-size: large;"><b>2 - Script interno </b></span></p>
+<p style="margin-bottom: 0cm; text-align: justify;">Este tipo permite criar CSS dentro da página HTML.</p>
+<pre><code>&lt;html&gt;</code> <code>&lt;head&gt;</code> <code>&lt;title&gt;Exemplo&lt;/title&gt;</code> <strong>&lt;style type="text/css"&gt;</strong> <strong>body {background-color: #FF0000;}</strong> <strong>&lt;/style&gt;</strong> <code>&lt;/head&gt;</code> <code>&lt;body&gt;</code> <code>&lt;p&gt;Esta é uma página com fundo vermelho&lt;/p&gt;</code> <code>&lt;/body&gt;</code> <code>&lt;/html&gt;</code></pre>
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Uso nas tags do HTML </b></p>
+<p style="margin-bottom: 0cm; text-align: justify;">Aqui criamos dentro das tags HTML.</p>
+<pre><code>&lt;html&gt;</code> <code>&lt;head&gt;</code> <code>&lt;title&gt;Exemplo&lt;/title&gt;</code> <code>&lt;/head&gt;</code> <strong>&lt;body style="background-color: #FF0000;"&gt;</strong> <code>&lt;p&gt;Esta é uma página com fundo vermelho&lt;/p&gt;</code> <code>&lt;/body&gt;</code> <code>&lt;/html&gt;</code></pre>
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Script externo </b></p>
+<p style="margin-bottom: 0cm; text-align: justify;">Este deixa o código CSS num outro arquivo e é o mais indicado para quando temos grandes códigos CSS.</p>
+<pre>&lt;html&gt; &lt;head&gt; &lt;title&gt;Meu documento&lt;/title&gt; &lt;link rel="stylesheet" type="text/css" href="/portal/style/style.css" /&gt; &lt;/head&gt; &lt;body&gt;</pre>
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+<p style="margin-bottom: 0cm; page-break-before: always; text-align: justify;" align="center"><span style="font-size: large;"><b>4 - Uso do CSS nas Tags HTML</b></span></p>
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;">Assim como o JavaScript podemos usar o CSS nas tags HTML, como no exemplo abaixo:</p>
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;">Código &lt;input type="text" name="codigo" value="&lt;?php print $codigo;?&gt;" READONLY style="background-color:gray;"&gt;</p>
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;">O CSS foi usado para deixar o fundo da caixa de texto com cor cinza, simulando desabilitado, coisa que não se consegue com HTML.</p>
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;">Ouro exemplo:</p>
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;">&lt;h1style="color:red;"&gt;Título em cor vermelha&lt;/h1&gt;</p>
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;"> </p>
+<p style="margin-bottom: 0cm; text-align: justify;" align="center"><span style="font-size: large;"><b>5 - Uso do CSS em Arquivos Externos</b></span></p>
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;">Este é o uso recomendado do CSS, em arquivos externos, para separas as camadas, ficando no arquivo CSS tudo que diz respeito à formatação e ao posicionamento e no HTML o conteúdo.</p>
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;">Assim, se quisermos alterar o conteúdo não haverá problema com a formatação e posicionamento e vice-versa.</p>
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;">Para criar um arquivo externo em CSS, não devemos adicionar as tags &lt;style&gt; ... &lt;/style&gt;, apenas o conteúdo como no exemplo seguinte.</p>
+<p style="margin-bottom: 0cm; text-align: justify;"><b>style.css</b></p>
+<pre class="language-markup"><code>body {
+
+margin: 0;
+
+font-family: verdana, arial, helvetica, sans-serif;
+
+color: #F9E8E5;
+
+/* background-color: #C5F5BF; */
+
+background-image: url("../../images/bg_brown.jpg");
+
+border-top: 15px #082A08 solid; /* Barra acima do Título */
+
+font-size: 14px;
+
+}
+
+#main-title {
+
+margin-bottom: 10px;
+
+margin-left: 0;
+
+margin-right: 0;
+
+padding-top:5px; /* Corrigir no original, que era 15 */
+
+padding-bottom: 8px;
+
+padding-left: 25px;
+
+padding-right: 0;
+
+background-color: #571B07;
+
+border-top: 1px black solid;
+
+border-bottom: 1px black solid;
+
+color: white;
+
+font-weight: bold;
+
+font-size: 18px;
+
+font-family: Verdana, Helvetica, Arial, sans-serif;
+
+}
+
+Para usar este arquivo em um HTML efetuamos o "include" entre as tags &lt;head&gt; e &lt;/head&gt;, assim:
+
+&lt;head&gt;
+
+&lt;title&gt;Título da Página&lt;/title&gt;
+
+&lt;link rel="stylesheet" type="text/css" href="/portal/style.css" /&gt;
+
+&lt;/head&gt;</code></pre>
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;"> </p>
+<p style="margin-bottom: 0cm; text-align: justify;" align="center"><span style="font-size: large;"><b>6 - Cores</b></span></p>
+<p style="text-align: justify;">Nesta lição você aprenderá como aplicar cores de primeiro plano e cores de fundo no seu website. Abordaremos ainda os métodos avançados de controle e posicionamento de imagens de fundo. Serão explicadas as seguintes propriedades CSS:</p>
+<p style="margin-bottom: 0cm; text-align: justify;"><a class="western" href="http://www.pt-br.html.net/tutorials/css/lesson3.asp#s1">color</a></p>
+<p style="margin-bottom: 0cm; text-align: justify;"><a class="western" href="http://www.pt-br.html.net/tutorials/css/lesson3.asp#s2">background-color</a></p>
+<p style="margin-bottom: 0cm; text-align: justify;"><a class="western" href="http://www.pt-br.html.net/tutorials/css/lesson3.asp#s3">background-image</a></p>
+<p style="margin-bottom: 0cm; text-align: justify;"><a class="western" href="http://www.pt-br.html.net/tutorials/css/lesson3.asp#s4">background-repeat</a></p>
+<p style="margin-bottom: 0cm; text-align: justify;"><a class="western" href="http://www.pt-br.html.net/tutorials/css/lesson3.asp#s5">background-attachment</a></p>
+<p style="margin-bottom: 0cm; text-align: justify;"><a class="western" href="http://www.pt-br.html.net/tutorials/css/lesson3.asp#s6">background-position</a></p>
+<p style="text-align: justify;"><a class="western" href="http://www.pt-br.html.net/tutorials/css/lesson3.asp#s7">background</a></p>
+<p style="text-align: justify;"> </p>
+<p style="text-align: justify;"><a name="s1"></a><b>Cor do primeiro plano: a propriedade 'color'</b></p>
+<p style="text-align: justify;">A propriedade <code>color</code> define a cor do primeiro plano de um elemento.</p>
+<p style="text-align: justify;">Considere, por exemplo, que desejamos que todos os cabeçalhos de primeiro nível no documento sejam na cor vermelha. O elemento HTML que marca tais cabeçalhos é o elemento <code>&lt;h1&gt;</code>. O código a seguir define todos os <code>&lt;h1&gt;</code> na cor vermelha.</p>
+<pre><code>h1 {</code> <code>        </code><strong>color: #ff0000;</strong> <code>}</code></pre>
+<p style="text-align: justify;"><a class="western" href="http://www.pt-br.html.net/tutorials/css/lesson3_ex1.asp">Ver exemplo </a></p>
+<p style="text-align: justify;">As cores podem ser definidas pelo seu valor hexadecimal como no exemplo acima (#ff0000), com uso do nome da cor ("red") ou ainda pelo seu valor rgb (rgb(255,0,0)).</p>
+<p style="text-align: justify;"><a name="s2"></a><b>A propriedade 'background-color'</b></p>
+<p style="text-align: justify;">A propriedade <code>background-color</code> define a cor do fundo de um elemento.</p>
+<p style="text-align: justify;">O elemento <code>&lt;body&gt;</code> contém todo o conteúdo de um documento HTML. Assim, para mudar a cor de fundo da página, devemos aplicar a propriedade <code>background-color</code> ao elemento <code>&lt;body&gt;</code>.</p>
+<p style="text-align: justify;">Você pode aplicar cores de fundo para outros elementos, inclusive para cabeçalhos e textos. No exemplo abaixo foram aplicadas diferentes cores de fundo para os elementos <code>&lt;body&gt;</code> e <code>&lt;h1&gt;</code>.</p>
+<pre><code>body {</code> <code>        </code><strong>background-color: #FFCC66;</strong> <code>}</code> <code>h1 {</code> <code>        color: #990000;</code> <code>        </code><strong>background-color: #FC9804;</strong> <code>}</code></pre>
+<p style="text-align: justify;">Notar que foram aplicadas duas propriedades ao elemento <code>&lt;h1&gt;</code> separadas por um ponto e vírgula.</p>
+<p style="text-align: justify;"><a name="s3"></a><b>Images de fundo [background-image]</b></p>
+<p style="text-align: justify;"><img src="../../images/css1.png" alt="" /></p>
+<p style="text-align: justify;">A propriedade CSS <code>background-image</code> é usada para definir uma imagem de</p>
+<p style="text-align: justify;">fundo.</p>
+<p style="text-align: justify;">Usaremos a imagem de uma borboleta para exemplificar a aplicação de imagens de</p>
+<p style="text-align: justify;">fundo. Você pode fazer o download da imagem mostrada abaixo e usá-la nos seus</p>
+<p style="text-align: justify;">experimentos (clique com o botão direito do mouse sobre a imagem e escolha "salvar</p>
+<p style="text-align: justify;">imagem como") ou você poderá usar uma outra imagem qualquer ao seu gosto.</p>
+<p style="text-align: justify;"> </p>
+<p style="text-align: justify;">Para inserir uma imagem de fundo na página basta aplicar a propriedade <code>background-image</code> ao elemento <code>&lt;body&gt;</code> e especificar o caminho para onde está gravada a imagem.</p>
+<pre><code></code></pre>
+<div style="color: #d4d4d4; background-color: #1e1e1e; font-family: 'Fira Code','Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'; font-weight: normal; font-size: 14px; line-height: 19px; white-space: pre;">
+<div><span style="color: #d7ba7d;">body</span><span style="color: #d4d4d4;"> {</span></div>
+<div><span style="color: #9cdcfe;">background-color</span><span style="color: #d4d4d4;">: </span><span style="color: #ce9178;">#FFCC66</span><span style="color: #d4d4d4;">;</span></div>
+<div><span style="color: #9cdcfe;">background-image</span><span style="color: #d4d4d4;">: </span><span style="color: #dcdcaa;">url</span><span style="color: #d4d4d4;">(</span><span style="color: #ce9178;">"butterfly.gif"</span><span style="color: #d4d4d4;">);</span></div>
+<div><span style="color: #d4d4d4;">}</span></div>
+<br />
+<div><span style="color: #d7ba7d;">h1</span><span style="color: #d4d4d4;"> {</span></div>
+<div><span style="color: #9cdcfe;">color</span><span style="color: #d4d4d4;">: </span><span style="color: #ce9178;">#990000</span><span style="color: #d4d4d4;">;</span></div>
+<div><span style="color: #9cdcfe;">background-color</span><span style="color: #d4d4d4;">: </span><span style="color: #ce9178;">#FC9804</span><span style="color: #d4d4d4;">;</span></div>
+<div><span style="color: #d4d4d4;">}</span></div>
+</div>
+<pre><code><br /></code><code></code></pre>
+<p style="text-align: justify;">NB: Notar como foi especificado o caminho para a imagem usando <strong>url("butterfly.gif")</strong>. Isto significa que a imagem está localizada no mesmo diretório da folha de estilos. Pode ser escolhido um outro diretório para gravar as imagens e o caminho seria <strong>url("../images/butterfly.gif")</strong> ou até mesmo hospedá-la na Internet: <strong>url("http://www.html.net/butterfly.gif")</strong>.</p>
+<p style="text-align: justify;"> </p>
+<p style="page-break-before: always; text-align: justify;"><a name="s4"></a><b>Imagem de fundo repetida [background-repeat]</b></p>
+<p style="text-align: justify;">No exemplo anterior você observou que a imagem da borboleta repetiu tanto na vertical como na horizontal cobrindo toda a tela? A propriedade <code>background-repeat</code> controla o comportamento de repetição da imagem de fundo.</p>
+<p style="text-align: justify;">A tabela a seguir mostra os quatro diferentes valores para <code>background-repeat</code>.</p>
+<table width="706" cellspacing="3" cellpadding="2">
+<tbody>
+<tr>
+<th style="border-top: 2.60pt double #808080; border-bottom: 2.60pt double #808080; border-left: 2.60pt double #808080; border-right: none; padding: 0.05cm 0cm 0.05cm 0.05cm;" width="255">
+<p>Value</p>
+</th>
+<th style="border-top: 2.60pt double #808080; border-bottom: 2.60pt double #808080; border-left: 2.60pt double #808080; border-right: none; padding: 0.05cm 0cm 0.05cm 0.05cm;" width="345">
+<p>Description</p>
+</th>
+<th style="border: 2.60pt double #808080; padding: 0.05cm;" width="80">
+<p>Example</p>
+</th>
+</tr>
+<tr>
+<td style="border-top: none; border-bottom: 2.60pt double #808080; border-left: 2.60pt double #808080; border-right: none; padding: 0cm 0cm 0.05cm 0.05cm;" width="255">
+<p><code>Background-repeat: repeat-x</code></p>
+</td>
+<td style="border-top: none; border-bottom: 2.60pt double #808080; border-left: 2.60pt double #808080; border-right: none; padding: 0cm 0cm 0.05cm 0.05cm;" width="345">
+<p>A imagem se repete na horizontal</p>
+</td>
+<td style="border-top: none; border-bottom: 2.60pt double #808080; border-left: 2.60pt double #808080; border-right: 2.60pt double #808080; padding: 0cm 0.05cm 0.05cm 0.05cm;" width="80">
+<p><a class="western" href="http://www.pt-br.html.net/tutorials/css/lesson3_ex4.asp">Ver exemplo</a></p>
+</td>
+</tr>
+<tr>
+<td style="border-top: none; border-bottom: 2.60pt double #808080; border-left: 2.60pt double #808080; border-right: none; padding: 0cm 0cm 0.05cm 0.05cm;" width="255">
+<p><code>background-repeat: repeat-y</code></p>
+</td>
+<td style="border-top: none; border-bottom: 2.60pt double #808080; border-left: 2.60pt double #808080; border-right: none; padding: 0cm 0cm 0.05cm 0.05cm;" width="345">
+<p>A imagem se repete na vertical</p>
+</td>
+<td style="border-top: none; border-bottom: 2.60pt double #808080; border-left: 2.60pt double #808080; border-right: 2.60pt double #808080; padding: 0cm 0.05cm 0.05cm 0.05cm;" width="80">
+<p><a class="western" href="http://www.pt-br.html.net/tutorials/css/lesson3_ex5.asp">Ver exemplo</a></p>
+</td>
+</tr>
+<tr>
+<td style="border-top: none; border-bottom: 2.60pt double #808080; border-left: 2.60pt double #808080; border-right: none; padding: 0cm 0cm 0.05cm 0.05cm;" width="255">
+<p><code>background-repeat: repeat</code></p>
+</td>
+<td style="border-top: none; border-bottom: 2.60pt double #808080; border-left: 2.60pt double #808080; border-right: none; padding: 0cm 0cm 0.05cm 0.05cm;" width="345">
+<p>A imagem se repete na tanto na horizontal como na vertical</p>
+</td>
+<td style="border-top: none; border-bottom: 2.60pt double #808080; border-left: 2.60pt double #808080; border-right: 2.60pt double #808080; padding: 0cm 0.05cm 0.05cm 0.05cm;" width="80">
+<p><a class="western" href="http://www.pt-br.html.net/tutorials/css/lesson3_ex6.asp">Ver exemplo</a></p>
+</td>
+</tr>
+<tr>
+<td style="border-top: none; border-bottom: 2.60pt double #808080; border-left: 2.60pt double #808080; border-right: none; padding: 0cm 0cm 0.05cm 0.05cm;" width="255">
+<p><code>background-repeat: no-repeat</code></p>
+</td>
+<td style="border-top: none; border-bottom: 2.60pt double #808080; border-left: 2.60pt double #808080; border-right: none; padding: 0cm 0cm 0.05cm 0.05cm;" width="345">
+<p>A imagem não se repete</p>
+</td>
+<td style="border-top: none; border-bottom: 2.60pt double #808080; border-left: 2.60pt double #808080; border-right: 2.60pt double #808080; padding: 0cm 0.05cm 0.05cm 0.05cm;" width="80">
+<p><a class="western" href="http://www.pt-br.html.net/tutorials/css/lesson3_ex7.asp">Ver exemplo</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: justify;">Por exemplo, o código mostrado a seguir é para que a imagem não se repita na tela:</p>
+<pre><code>body {</code> <code>        background-color: #FFCC66;</code> <code>        background-image: url("butterfly.gif");</code> <code>        </code><strong>background-repeat: no-repeat;</strong> <code>}</code> <code>h1 {</code> <code>        color: #990000;</code> <code>        background-color: #FC9804;</code> <code>}</code></pre>
+<p style="text-align: justify;"><a name="s5"></a><b>Image de fundo fixa [background-attachment]</b></p>
+<p style="text-align: justify;">A propriedade <code>background-attachment</code> define se a imagem será fixa ou se irá rolar juntamente com o elemento que a contém.</p>
+<p style="text-align: justify;">Uma imagem de fundo fixa permanece no mesmo lugar e não rola com a tela ao contrário da imagem que não é fixa e rola acompanhando o conteúdo da tela.</p>
+<p style="text-align: justify;">A tabela a seguir mostra os quatro diferentes valores para <code>background-attachment</code>. Veja os exemplos para constatar a diferença entre imagem fixa e imegem que rola.</p>
+<table width="577" cellspacing="3" cellpadding="2">
+<tbody>
+<tr>
+<th style="border-top: 2.60pt double #808080; border-bottom: 2.60pt double #808080; border-left: 2.60pt double #808080; border-right: none; padding: 0.05cm 0cm 0.05cm 0.05cm;" width="282">
+<p>Value</p>
+</th>
+<th style="border-top: 2.60pt double #808080; border-bottom: 2.60pt double #808080; border-left: 2.60pt double #808080; border-right: none; padding: 0.05cm 0cm 0.05cm 0.05cm;" width="187">
+<p>Description</p>
+</th>
+<th style="border: 2.60pt double #808080; padding: 0.05cm;" width="82"> </th>
+</tr>
+<tr>
+<td style="border-top: none; border-bottom: 2.60pt double #808080; border-left: 2.60pt double #808080; border-right: none; padding: 0cm 0cm 0.05cm 0.05cm;" width="282">
+<p><code>Background-attachment: scroll</code></p>
+</td>
+<td style="border-top: none; border-bottom: 2.60pt double #808080; border-left: 2.60pt double #808080; border-right: none; padding: 0cm 0cm 0.05cm 0.05cm;" width="187">
+<p>A imagem rola com a página</p>
+</td>
+<td style="border-top: none; border-bottom: 2.60pt double #808080; border-left: 2.60pt double #808080; border-right: 2.60pt double #808080; padding: 0cm 0.05cm 0.05cm 0.05cm;" width="82"> </td>
+</tr>
+<tr>
+<td style="border-top: none; border-bottom: 2.60pt double #808080; border-left: 2.60pt double #808080; border-right: none; padding: 0cm 0cm 0.05cm 0.05cm;" width="282">
+<p><code>Background-attachment: fixed</code></p>
+</td>
+<td style="border-top: none; border-bottom: 2.60pt double #808080; border-left: 2.60pt double #808080; border-right: none; padding: 0cm 0cm 0.05cm 0.05cm;" width="187">
+<p>A imagem é fixa</p>
+</td>
+<td style="border-top: none; border-bottom: 2.60pt double #808080; border-left: 2.60pt double #808080; border-right: 2.60pt double #808080; padding: 0cm 0.05cm 0.05cm 0.05cm;" width="82"> </td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: justify;"> </p>
+<p style="text-align: justify;">Por exemplo, o código abaixo fixa a imagem na tela.</p>
+<pre><code>body {</code> <code>        background-color: #FFCC66;</code> <code>        background-image: url("butterfly.gif");</code> <code>        background-repeat: no-repeat;</code> <code>        </code><strong>background-attachment: fixed;</strong> <code>}</code> <code>h1 {</code> <code>        color: #990000;</code> <code>        background-color: #FC9804;</code> <code>}</code></pre>
+<p style="text-align: justify;"><a name="s6"></a><b>Posição da imagem de fundo [background-position]</b></p>
+<p style="text-align: justify;">Por padrão uma imagem de fundo é posicionada no canto superior esquerdo da tela. A propriedade <code>background-position</code> permite alterar este posicionamento padrão e colocar a imagem em qualquer lugar na tela.</p>
+<p style="text-align: justify;">Existem várias maneiras de definir o posicionamento da imagem na tela definindo valores para <code>background-position</code>. Todas elas se utilizam de um sistema de coordenadas. Por exemplo, os valores '100px 200px' posiciona a imagem a 100px do topo e a 200px do lado esquerdo da janela do navegador.</p>
+<p style="text-align: justify;">As coordenadas podem ser expressas em percentagem da largura da janeja, em unidades fixas (pixels, centímetros, etc.) ou pode-se usar as palavras top, bottom, center, left e right. A figura a seguir ilustra o modelo de coordenadas:</p>
+<p style="text-align: justify;"><img src="../../images/css2.png" alt="" /></p>
+<p style="text-align: justify;"> </p>
+<p style="page-break-before: always; text-align: justify;">Na tabela a seguir são mostrados alguns exemplos .</p>
+<table width="706" cellspacing="3" cellpadding="2">
+<tbody>
+<tr>
+<th style="border-top: 2.60pt double #808080; border-bottom: 2.60pt double #808080; border-left: 2.60pt double #808080; border-right: none; padding: 0.05cm 0cm 0.05cm 0.05cm;" width="236">
+<p>Value</p>
+</th>
+<th style="border-top: 2.60pt double #808080; border-bottom: 2.60pt double #808080; border-left: 2.60pt double #808080; border-right: none; padding: 0.05cm 0cm 0.05cm 0.05cm;" width="367">
+<p>Description</p>
+</th>
+<th style="border: 2.60pt double #808080; padding: 0.05cm;" width="76"> </th>
+</tr>
+<tr>
+<td style="border-top: none; border-bottom: 2.60pt double #808080; border-left: 2.60pt double #808080; border-right: none; padding: 0cm 0cm 0.05cm 0.05cm;" width="236">
+<p><code>background-position: 2cm 2cm</code></p>
+</td>
+<td style="border-top: none; border-bottom: 2.60pt double #808080; border-left: 2.60pt double #808080; border-right: none; padding: 0cm 0cm 0.05cm 0.05cm;" width="367">
+<p>A imagem é posicionada a 2 cm da esquerda e 2 cm para baixo na página</p>
+</td>
+<td style="border-top: none; border-bottom: 2.60pt double #808080; border-left: 2.60pt double #808080; border-right: 2.60pt double #808080; padding: 0cm 0.05cm 0.05cm 0.05cm;" width="76"> </td>
+</tr>
+<tr>
+<td style="border-top: none; border-bottom: 2.60pt double #808080; border-left: 2.60pt double #808080; border-right: none; padding: 0cm 0cm 0.05cm 0.05cm;" width="236">
+<p><code>background-position: 50% 25%</code></p>
+</td>
+<td style="border-top: none; border-bottom: 2.60pt double #808080; border-left: 2.60pt double #808080; border-right: none; padding: 0cm 0cm 0.05cm 0.05cm;" width="367">
+<p>A imagem é centrada na horizontal e a um quarto (25%) para baixo na página</p>
+</td>
+<td style="border-top: none; border-bottom: 2.60pt double #808080; border-left: 2.60pt double #808080; border-right: 2.60pt double #808080; padding: 0cm 0.05cm 0.05cm 0.05cm;" width="76"> </td>
+</tr>
+<tr>
+<td style="border-top: none; border-bottom: 2.60pt double #808080; border-left: 2.60pt double #808080; border-right: none; padding: 0cm 0cm 0.05cm 0.05cm;" width="236">
+<p><code>background-position: top right</code></p>
+</td>
+<td style="border-top: none; border-bottom: 2.60pt double #808080; border-left: 2.60pt double #808080; border-right: none; padding: 0cm 0cm 0.05cm 0.05cm;" width="367">
+<p>A imagem é posicionada no canto superior direito da página</p>
+</td>
+<td style="border-top: none; border-bottom: 2.60pt double #808080; border-left: 2.60pt double #808080; border-right: 2.60pt double #808080; padding: 0cm 0.05cm 0.05cm 0.05cm;" width="76"> </td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: justify;"> </p>
+<p style="text-align: justify;">No exemplo de código a seguir a imagem é posicionada no canto inferior direito da página:</p>
+<pre><code></code></pre>
+<div style="color: #d4d4d4; background-color: #1e1e1e; font-family: 'Fira Code','Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'; font-weight: normal; font-size: 14px; line-height: 19px; white-space: pre;">
+<div><span style="color: #d7ba7d;">body</span><span style="color: #d4d4d4;"> {</span></div>
+<div><span style="color: #9cdcfe;">background-color</span><span style="color: #d4d4d4;">: </span><span style="color: #ce9178;">#FFCC66</span><span style="color: #d4d4d4;">;</span></div>
+<div><span style="color: #9cdcfe;">background-image</span><span style="color: #d4d4d4;">: </span><span style="color: #dcdcaa;">url</span><span style="color: #d4d4d4;">(</span><span style="color: #ce9178;">"butterfly.gif"</span><span style="color: #d4d4d4;">);</span></div>
+<div><span style="color: #9cdcfe;">background-repeat</span><span style="color: #d4d4d4;">: </span><span style="color: #ce9178;">no-repeat</span><span style="color: #d4d4d4;">;</span></div>
+<div><span style="color: #9cdcfe;">background-attachment</span><span style="color: #d4d4d4;">: </span><span style="color: #ce9178;">fixed</span><span style="color: #d4d4d4;">;</span></div>
+<div><span style="color: #9cdcfe;">background-position</span><span style="color: #d4d4d4;">: </span><span style="color: #ce9178;">right</span> <span style="color: #ce9178;">bottom</span><span style="color: #d4d4d4;">;</span></div>
+<div><span style="color: #d4d4d4;">}</span></div>
+<br />
+<div><span style="color: #d7ba7d;">h1</span><span style="color: #d4d4d4;"> {</span></div>
+<div><span style="color: #9cdcfe;">color</span><span style="color: #d4d4d4;">: </span><span style="color: #ce9178;">#990000</span><span style="color: #d4d4d4;">;</span></div>
+<div><span style="color: #9cdcfe;">background-color</span><span style="color: #d4d4d4;">: </span><span style="color: #ce9178;">#FC9804</span><span style="color: #d4d4d4;">;</span></div>
+<div><span style="color: #d4d4d4;">}</span></div>
+</div>
+<pre><code></code> </pre>
+<p style="text-align: justify;"><b>Compilando [background]</b></p>
+<p style="text-align: justify;">A propriedade <code>background</code> é uma abreviação para todas as propriedades listadas anteriormente.</p>
+<p style="text-align: justify;">Com <code>background</code> você declara várias propriedades de modo abreviado, economizando digitação e alguns bites, além de tornar a folha de estilo mais fácil de se ler e entender.</p>
+<p style="text-align: justify;">Por exemplo, observe as cinco linhas a seguir:</p>
+<pre><code></code></pre>
+<div style="color: #d4d4d4; background-color: #1e1e1e; font-family: 'Fira Code','Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'; font-weight: normal; font-size: 14px; line-height: 19px; white-space: pre;">
+<div><span style="color: #569cd6;">background-color</span><span style="color: #d4d4d4;">: </span><span style="color: #f44747;">#FFCC66;</span></div>
+<div><span style="color: #569cd6;">background-image</span><span style="color: #d4d4d4;">: url("/portal/butterfly.gif");</span></div>
+<div><span style="color: #569cd6;">background-repeat</span><span style="color: #d4d4d4;">: </span><span style="color: #569cd6;">no-repeat</span><span style="color: #d4d4d4;">;</span></div>
+<div><span style="color: #569cd6;">background-attachment</span><span style="color: #d4d4d4;">: fixed;</span></div>
+<div><span style="color: #569cd6;">background-position</span><span style="color: #d4d4d4;">: right bottom;</span></div>
+</div>
+<pre><code><br /></code><code></code></pre>
+<p style="text-align: justify;">Usando <code>background</code> você consegue o mesmo resultado, abreviando como mostrado abaixo:</p>
+<pre><code></code></pre>
+<div style="color: #d4d4d4; background-color: #1e1e1e; font-family: 'Fira Code','Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'; font-weight: normal; font-size: 14px; line-height: 19px; white-space: pre;">
+<div><span style="color: #d4d4d4;">background: </span><span style="color: #d7ba7d;">#FFCC66</span><span style="color: #d4d4d4;"> url("butterfly.gif") </span><span style="color: #569cd6;">no-repeat</span><span style="color: #d4d4d4;"> fixed right bottom;</span></div>
+</div>
+<pre><code> </code></pre>
+<p style="text-align: justify;">A declaração abreviada deve seguir a seguinte ordem:</p>
+<p style="text-align: justify;"><code></code></p>
+<div style="color: #d4d4d4; background-color: #1e1e1e; font-family: 'Fira Code','Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'; font-weight: normal; font-size: 14px; line-height: 19px; white-space: pre;">
+<div><span style="color: #d4d4d4;">[</span><span style="color: #9cdcfe;">background-color</span><span style="color: #d4d4d4;">] | [</span><span style="color: #9cdcfe;">background-image</span><span style="color: #d4d4d4;">] | [</span><span style="color: #9cdcfe;">background-repeat</span><span style="color: #d4d4d4;">] | [</span><span style="color: #9cdcfe;">background-attachment</span><span style="color: #d4d4d4;">] | [</span><span style="color: #9cdcfe;">background-position</span><span style="color: #d4d4d4;">]</span></div>
+</div>
+<p style="text-align: justify;">Se uma das propriedades não for declarada ela assume automaticamente o seu valor default. Por exemplo, a propriedade <code>background-attachment</code> e <code>background-position</code> não foram declaradas no código mostrado a seguir:</p>
+<pre><code></code></pre>
+<div style="color: #d4d4d4; background-color: #1e1e1e; font-family: 'Fira Code','Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'; font-weight: normal; font-size: 14px; line-height: 19px; white-space: pre;">
+<div><span style="color: #d4d4d4;">background: </span><span style="color: #d7ba7d;">#FFCC66</span><span style="color: #d4d4d4;"> url("butterfly.gif") </span><span style="color: #569cd6;">no-repeat</span><span style="color: #d4d4d4;">;</span></div>
+</div>
+<pre><code> </code></pre>
+<p style="text-align: justify;">Exemplo:</p>
+<div style="color: #d4d4d4; background-color: #1e1e1e; font-family: 'Fira Code','Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'; font-weight: normal; font-size: 14px; line-height: 19px; white-space: pre;">
+<div><span style="color: #d4d4d4;">&lt;!DOCTYPE </span><span style="color: #d7ba7d;">html</span><span style="color: #d4d4d4;"> PUBLIC "-//W3C//DTD </span><span style="color: #d7ba7d;">HTML</span><span style="color: #d4d4d4;"> 4.01//EN"</span><span style="color: #d4d4d4;">&gt;</span></div>
+<div><span style="color: #d4d4d4;">&lt;</span><span style="color: #d7ba7d;">html</span><span style="color: #d4d4d4;">&gt;</span></div>
+<div><span style="color: #d4d4d4;">&lt;</span><span style="color: #d7ba7d;">head</span><span style="color: #d4d4d4;">&gt;</span></div>
+<div><span style="color: #d4d4d4;"> &lt;</span><span style="color: #d7ba7d;">title</span><span style="color: #d4d4d4;">&gt;</span><span style="color: #d4d4d4;">My first styled page&lt;/</span><span style="color: #d7ba7d;">title</span><span style="color: #d4d4d4;">&gt;</span></div>
+<div><span style="color: #d4d4d4;"> &lt;</span><span style="color: #d7ba7d;">style</span><span style="color: #d4d4d4;"> type="text/css"</span><span style="color: #d4d4d4;">&gt;</span></div>
+<div><span style="color: #d7ba7d;">body</span><span style="color: #d4d4d4;"> {</span></div>
+<div><span style="color: #9cdcfe;">font-family</span><span style="color: #d4d4d4;">: </span><span style="color: #ce9178;">Georgia</span><span style="color: #d4d4d4;">, </span><span style="color: #ce9178;">"Times New Roman"</span><span style="color: #d4d4d4;">,</span></div>
+<div><span style="color: #ce9178;">Times</span><span style="color: #d4d4d4;">, </span><span style="color: #ce9178;">serif</span><span style="color: #d4d4d4;">;</span></div>
+<div><span style="color: #9cdcfe;">color</span><span style="color: #d4d4d4;">: </span><span style="color: #ce9178;">purple</span><span style="color: #d4d4d4;">;</span></div>
+<div><span style="color: #9cdcfe;">background-color</span><span style="color: #d4d4d4;">: </span><span style="color: #ce9178;">#d8da3d</span><span style="color: #d4d4d4;"> }</span></div>
+<div><span style="color: #d7ba7d;">h1</span><span style="color: #d4d4d4;"> {</span></div>
+<div><span style="color: #9cdcfe;">font-family</span><span style="color: #d4d4d4;">: </span><span style="color: #ce9178;">Helvetica</span><span style="color: #d4d4d4;">, Geneva, </span><span style="color: #ce9178;">Arial</span><span style="color: #d4d4d4;">,</span></div>
+<div><span style="color: #d4d4d4;"> SunSans-Regular, </span><span style="color: #ce9178;">sans-serif</span><span style="color: #d4d4d4;"> }</span></div>
+<div><span style="color: #d4d4d4;"> &lt;/</span><span style="color: #d7ba7d;">style</span><span style="color: #d4d4d4;">&gt;</span></div>
+<div><span style="color: #d4d4d4;">&lt;/</span><span style="color: #d7ba7d;">head</span><span style="color: #d4d4d4;">&gt;</span></div>
+<br />
+<div><span style="color: #d4d4d4;">&lt;</span><span style="color: #d7ba7d;">body</span><span style="color: #d4d4d4;">&gt;</span></div>
+</div>
+<p style="text-align: justify;" align="center"> </p>
+<p style="text-align: justify;" align="center"><span style="font-size: large;"><b>7 - Como Trocar o Cursor do Mouse com CSS</b></span></p>
+<p style="text-align: justify;"><a class="western" href="http://networking.mydesigntool.com/viewtopic.php?tid=466&amp;id=31">http://networking.mydesigntool.com/viewtopic.php?tid=466&amp;id=31</a></p>
+<p style="text-align: justify;"><b>cursor:default</b></p>
+<p style="text-align: justify;"><b>cursor:pointer</b></p>
+<p style="text-align: justify;"><b>Melhorando o estilo de tabelas com CSS </b></p>
+<p style="text-align: justify;"><a class="western" href="http://networking.mydesigntool.com/viewtopic.php?tid=468&amp;id=31">http://networking.mydesigntool.com/viewtopic.php?tid=468&amp;id=31</a></p>
+<p style="text-align: justify;">As duas propriedades não declaradas assumirão o valor default que como você já sabe são: a imagem rola na tela e será posicionada no canto superior esquerdo (que são os valores default para as propriedades não declaradas).</p>
+<p style="text-align: justify;">Sumário</p>
+<p style="margin-bottom: 0cm; text-align: justify;">Nesta lição você aprendeu técnicas que não são possíveis com uso de HTML. A brincadeira continua na <a class="western" href="http://www.pt-br.html.net/tutorials/css/lesson4.asp">próxima lição</a> onde examinaremos as possibilidades de estilização das fontes.</p>
+<p style="margin-bottom: 0cm; text-align: justify;">Bom tutorial em: <a class="western" href="http://www.pt-br.html.net/tutorials/css/">http://www.pt-br.html.net/tutorials/css/</a></p>
+<p style="margin-bottom: 0cm; text-align: justify;"><a class="western" href="http://maujor.com/tutorial/css3-modulo-template-layout.php">http://maujor.com/tutorial/css3-modulo-template-layout.php</a></p>
+<p style="margin-bottom: 0cm; text-align: justify;"><a class="western" href="http://www.echoecho.com/css.htm">http://www.echoecho.com/css.htm</a></p>
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Uso de sprites com CSS:</b></p>
+<p style="margin-bottom: 0cm; text-align: justify;"><a class="western" href="http://backup/portal/colaboracoes/1-ribamar-fs/123-sprites-em-css">http://ribafs.org/portal/colaboracoes/1-ribamar-fs/123-sprites-em-css</a></p>
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Templates com CSS</b></p>
+<p style="margin-bottom: 0cm; text-align: justify;"><a class="western" href="http://backup/portal/projetos-opensource/84-utilitarios-em-php/143-templates-usando-css">http://ribafs.org/portal/projetos-opensource/84-utilitarios-em-php/143-templates-usando-css</a></p>
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+<p style="margin-bottom: 0cm; text-align: justify;" align="center"><span style="font-size: large;"><b>8 - Comentários em CSS</b></span></p>
+<p style="margin-bottom: 0cm; text-align: justify;">Para comentar código em CSS devemos usar somente o comentário tipo C:</p>
+<p style="margin-bottom: 0cm; text-align: justify;">/*</p>
+<p style="margin-bottom: 0cm; text-align: justify;">Estas linhas não serão interpretadas</p>
+<p style="margin-bottom: 0cm; text-align: justify;">pelo navegador.</p>
+<p style="margin-bottom: 0cm; text-align: justify;">*/</p>
+<p style="margin-bottom: 0cm; text-align: justify;">A intenção aqui foi apenas de mostrar uma pequena porção dos recursos do CSS, que são muitos.</p>
+<p style="margin-bottom: 0cm; text-align: justify;">Para mais detalhes consulte os sites citados ou outros bons tutoriais existentes na Internet.</p>
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+<p style="margin-bottom: 0cm; text-align: justify;" align="center"><span style="font-size: large;"><b>9 - Dicas úteis para CSS</b></span></p>
+<div style="color: #d4d4d4; background-color: #1e1e1e; font-family: 'Fira Code','Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'; font-weight: normal; font-size: 14px; line-height: 19px; white-space: pre;">
+<div><span style="color: #569cd6;">*</span><span style="color: #d4d4d4;">{</span></div>
+<br />
+<div><span style="color: #9cdcfe;">margin</span><span style="color: #d4d4d4;">: </span><span style="color: #b5cea8;">0</span><span style="color: #d4d4d4;">; </span><span style="color: #9cdcfe;">padding</span><span style="color: #d4d4d4;">: </span><span style="color: #b5cea8;">0</span><span style="color: #d4d4d4;">;</span></div>
+<br />
+<div><span style="color: #d4d4d4;">}</span></div>
+<br />
+<div><span style="color: #d7ba7d;">body</span><span style="color: #d4d4d4;"> {</span></div>
+<br />
+<div><span style="color: #9cdcfe;">font</span><span style="color: #d4d4d4;">: </span><span style="color: #b5cea8;">12px</span> <span style="color: #ce9178;">"Lucida Grande"</span><span style="color: #d4d4d4;">, </span><span style="color: #ce9178;">Sans-Serif</span><span style="color: #d4d4d4;">;</span></div>
+<br />
+<div><span style="color: #9cdcfe;">background</span><span style="color: #d4d4d4;">: </span><span style="color: #ce9178;">#ccc</span><span style="color: #d4d4d4;">;</span></div>
+<br />
+<div><span style="color: #d4d4d4;">}</span></div>
+<br />
+<div><span style="color: #d7ba7d;">h1</span><span style="color: #d4d4d4;">, </span><span style="color: #d7ba7d;">h2</span><span style="color: #d4d4d4;">, </span><span style="color: #d7ba7d;">h3</span><span style="color: #d4d4d4;"> {</span></div>
+<br />
+<div><span style="color: #9cdcfe;">font</span><span style="color: #d4d4d4;">: </span><span style="color: #b5cea8;">28px</span> <span style="color: #ce9178;">Georgia</span><span style="color: #d4d4d4;">, </span><span style="color: #ce9178;">Serif</span><span style="color: #d4d4d4;">;</span></div>
+<br />
+<div><span style="color: #9cdcfe;">border-bottom</span><span style="color: #d4d4d4;">: </span><span style="color: #b5cea8;">1px</span> <span style="color: #ce9178;">dotted</span> <span style="color: #ce9178;">#ccc</span><span style="color: #d4d4d4;">;</span></div>
+<br />
+<div><span style="color: #9cdcfe;">margin</span><span style="color: #d4d4d4;">: </span><span style="color: #b5cea8;">0</span> <span style="color: #b5cea8;">0</span> <span style="color: #b5cea8;">10px</span> <span style="color: #b5cea8;">0</span><span style="color: #d4d4d4;">;</span></div>
+<br />
+<div><span style="color: #d4d4d4;">}</span></div>
+<br />
+<div><span style="color: #d7ba7d;">input</span><span style="color: #d4d4d4;">[</span><span style="color: #9cdcfe;">type</span><span style="color: #d4d4d4;">=</span><span style="color: #ce9178;">"text"</span><span style="color: #d4d4d4;">] {</span></div>
+<br />
+<div><span style="color: #9cdcfe;">padding</span><span style="color: #d4d4d4;">: </span><span style="color: #b5cea8;">3px</span><span style="color: #d4d4d4;">;</span></div>
+<br />
+<div><span style="color: #9cdcfe;">border</span><span style="color: #d4d4d4;">: </span><span style="color: #b5cea8;">1px</span> <span style="color: #ce9178;">solid</span> <span style="color: #ce9178;">#666</span><span style="color: #d4d4d4;">;</span></div>
+<br />
+<div><span style="color: #9cdcfe;">width</span><span style="color: #d4d4d4;">: </span><span style="color: #b5cea8;">350px</span><span style="color: #d4d4d4;">;</span></div>
+<br />
+<div><span style="color: #9cdcfe;">margin</span><span style="color: #d4d4d4;">: </span><span style="color: #b5cea8;">0</span> <span style="color: #b5cea8;">0</span> <span style="color: #b5cea8;">15px</span> <span style="color: #b5cea8;">0</span><span style="color: #d4d4d4;">;</span></div>
+<br />
+<div><span style="color: #d4d4d4;">}</span></div>
+</div>
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;"> </p>
+<p style="margin-bottom: 0cm; text-align: justify;" align="center"><b><span style="font-size: large;">10 - Recomendações para HTML, JavaScript e CSS</span></b></p>
+<p style="margin-bottom: 0cm; text-align: justify;">Deixe o código fácil de ser lido</p>
+<p style="margin-bottom: 0cm; text-align: justify;">Mantenha-o consistente</p>
+<p style="margin-bottom: 0cm; text-align: justify;">Organize bem o código</p>
+<p style="margin-bottom: 0cm; text-align: justify;">Use bem a indentação em funções, classes, ids, trechos de código</p>
+<p style="margin-bottom: 0cm; text-align: justify;">Crie o HTML antes</p>
+<p style="margin-bottom: 0cm; text-align: justify;">Não crie classes grandes, mas várias pequenas</p>
+<p style="margin-bottom: 0cm; text-align: justify;">Use o correto doctypy: <a class="western" href="http://www.alistapart.com/articles/doctype/">http://www.alistapart.com/articles/doctype/</a></p>
+<p style="margin-bottom: 0cm; text-align: justify;">Comente seu código</p>
+<p style="margin-bottom: 0cm; text-align: justify;">No CSS use</p>
+<p style="margin-bottom: 0cm; text-align: justify;">margin: 0 auto; // top, bottom e left, right valores, respectivamente. para centrar divs, parágrafos ou outros elementos em seu layout.</p>
+<p style="margin-bottom: 0cm; text-align: justify;">Use a extensão do Firefox, o Firebug para ganhar produtividade</p>
+<p style="margin-bottom: 0cm; text-align: justify;">Use no CSS: text-transform: lowercase;</p>
+<p style="margin-bottom: 0cm; text-align: justify;">Valide seu HTML (<a class="western" href="http://validator.w3.org/">http://validator.w3.org/</a>) e seu CSS (<a class="western" href="http://jigsaw.w3.org/css-validator/">http://jigsaw.w3.org/css-validator/</a>)</p>
+<p style="margin-bottom: 0cm; text-align: justify;">Para tamanho da página use pixel e para tamanho de fontes use ems.</p>
+<p style="margin-bottom: 0cm; text-align: justify;">Use bastante as listas</p>
+<p style="margin-bottom: 0cm; text-align: justify;">Maior compatibilidade entre os navegadores. Inicie o CSS com: * {margin:0;padding:0;}</p>
+<p style="margin-bottom: 0cm; text-align: justify;">Use um reset CSS: <a class="western" href="http://meyerweb.com/eric/thoughts/2007/05/01/reset-reloaded/">http://meyerweb.com/eric/thoughts/2007/05/01/reset-reloaded/</a></p>
+<p style="margin-bottom: 0cm; text-align: justify;"><a class="western" href="http://www.webdesignerdepot.com/2009/08/250-resources-to-help-you-become-a-css-expert/">http://www.webdesignerdepot.com/2009/08/250-resources-to-help-you-become-a-css-expert/</a></p>
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+<p style="margin-bottom: 0cm; text-align: justify;"><span style="font-size: large;"><b>11 - Funções em PHP que retornam CSS</b></span></p>
+<div style="color: #d4d4d4; background-color: #1e1e1e; font-family: 'Fira Code','Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'; font-weight: normal; font-size: 14px; line-height: 19px; white-space: pre;">
+<div><span style="color: #569cd6;">&lt;?php</span></div>
+<br />
+<div><span style="color: #6a9955;">// Funções em PHP que retornam CSS</span></div>
+<br />
+<div><span style="color: #6a9955;">/* Cores</span></div>
+<br />
+<div><span style="color: #6a9955;">RGB = "rgb(255,255,0)"</span></div>
+<br />
+<div><span style="color: #6a9955;">HEXADECIMAL = "#FFFF00"</span></div>
+<br />
+<div><span style="color: #6a9955;">NOME = "yellow"</span></div>
+<br />
+<div><span style="color: #6a9955;">*/</span></div>
+<br />
+<div><span style="color: #569cd6;">function</span> <span style="color: #dcdcaa;">cor_fundo</span><span style="color: #d4d4d4;">(</span><span style="color: #9cdcfe;">$cor</span><span style="color: #d4d4d4;">){</span></div>
+<br />
+<div><span style="color: #c586c0;">return</span> <span style="color: #9cdcfe;">$fundo</span><span style="color: #d4d4d4;"> = </span><span style="color: #ce9178;">"style=</span><span style="color: #d7ba7d;">\"</span><span style="color: #ce9178;">background-color:</span><span style="color: #9cdcfe;">$cor</span><span style="color: #d7ba7d;">\"</span><span style="color: #ce9178;">"</span><span style="color: #d4d4d4;">;</span></div>
+<br />
+<div><span style="color: #d4d4d4;">}</span></div>
+<br />
+<div><span style="color: #569cd6;">function</span> <span style="color: #dcdcaa;">cor_fonte</span><span style="color: #d4d4d4;">(</span><span style="color: #9cdcfe;">$cor</span><span style="color: #d4d4d4;">){</span></div>
+<br />
+<div><span style="color: #c586c0;">return</span> <span style="color: #ce9178;">"style=</span><span style="color: #d7ba7d;">\"</span><span style="color: #ce9178;">color:</span><span style="color: #9cdcfe;">$cor</span><span style="color: #d7ba7d;">\"</span><span style="color: #ce9178;">"</span><span style="color: #d4d4d4;">;</span></div>
+<br />
+<div><span style="color: #d4d4d4;">}</span></div>
+<br />
+<div><span style="color: #dcdcaa;">print</span> <span style="color: #ce9178;">"&lt;table&gt;&lt;tr "</span><span style="color: #d4d4d4;">.</span> <span style="color: #dcdcaa;">cor_fundo</span><span style="color: #d4d4d4;">(</span><span style="color: #ce9178;">'black'</span><span style="color: #d4d4d4;">) </span><span style="color: #d4d4d4;">.</span><span style="color: #ce9178;">"&gt;&lt;td "</span><span style="color: #d4d4d4;">.</span> <span style="color: #dcdcaa;">cor_fonte</span><span style="color: #d4d4d4;">(</span><span style="color: #ce9178;">'white'</span><span style="color: #d4d4d4;">)</span><span style="color: #d4d4d4;">.</span><span style="color: #ce9178;">"&gt;TESTE&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;"</span><span style="color: #d4d4d4;">;</span></div>
+<br />
+<div><span style="color: #569cd6;">function</span> <span style="color: #dcdcaa;">imagem_fundo</span><span style="color: #d4d4d4;">(</span><span style="color: #9cdcfe;">$imagem</span><span style="color: #d4d4d4;">){</span></div>
+<br />
+<div><span style="color: #c586c0;">return</span> <span style="color: #ce9178;">"background-image: url(</span><span style="color: #d7ba7d;">\"</span><span style="color: #9cdcfe;">$imagem</span><span style="color: #d7ba7d;">\"</span><span style="color: #ce9178;">)"</span><span style="color: #d4d4d4;">;</span></div>
+<br />
+<div><span style="color: #d4d4d4;">}</span></div>
+<br />
+<div><span style="color: #569cd6;">function</span> <span style="color: #dcdcaa;">imagem_fundo</span><span style="color: #d4d4d4;">(</span><span style="color: #9cdcfe;">$imagem</span><span style="color: #d4d4d4;">){</span></div>
+<br />
+<div><span style="color: #c586c0;">return</span> <span style="color: #ce9178;">"style=</span><span style="color: #d7ba7d;">\"</span><span style="color: #ce9178;">background-image: url('</span><span style="color: #9cdcfe;">$imagem</span><span style="color: #ce9178;">')</span><span style="color: #d7ba7d;">\"</span><span style="color: #ce9178;">"</span><span style="color: #d4d4d4;">;</span></div>
+<br />
+<div><span style="color: #d4d4d4;">}</span></div>
+<br />
+<div><span style="color: #dcdcaa;">print</span> <span style="color: #ce9178;">"&lt;body "</span><span style="color: #d4d4d4;">.</span><span style="color: #dcdcaa;">imagem_fundo</span><span style="color: #d4d4d4;">(</span><span style="color: #ce9178;">'/dnocs.jpg'</span><span style="color: #d4d4d4;">)</span><span style="color: #d4d4d4;">.</span><span style="color: #ce9178;">"&gt;"</span><span style="color: #d4d4d4;">; </span><span style="color: #6a9955;">// Esta imagem deve estar num diretório disponível ao apache</span></div>
+<br />
+<div><span style="color: #569cd6;">function</span> <span style="color: #dcdcaa;">random_color</span><span style="color: #d4d4d4;">()</span></div>
+<br />
+<div><span style="color: #d4d4d4;">{</span></div>
+<br />
+<div><span style="color: #9cdcfe;">$chars</span><span style="color: #d4d4d4;"> = </span><span style="color: #ce9178;">"abcdef0123456789"</span><span style="color: #d4d4d4;">;</span></div>
+<br />
+<div><span style="color: #dcdcaa;">srand</span><span style="color: #d4d4d4;">((</span><span style="color: #569cd6;">double</span><span style="color: #d4d4d4;">)</span><span style="color: #dcdcaa;">microtime</span><span style="color: #d4d4d4;">() * </span><span style="color: #b5cea8;">1000000</span><span style="color: #d4d4d4;">);</span></div>
+<br />
+<div><span style="color: #9cdcfe;">$color</span><span style="color: #d4d4d4;"> = </span><span style="color: #ce9178;">''</span><span style="color: #d4d4d4;">;</span></div>
+<br />
+<div><span style="color: #c586c0;">for</span><span style="color: #d4d4d4;"> (</span><span style="color: #9cdcfe;">$i</span><span style="color: #d4d4d4;">=</span><span style="color: #b5cea8;">0</span><span style="color: #d4d4d4;">; </span><span style="color: #9cdcfe;">$i</span><span style="color: #d4d4d4;">&lt;</span><span style="color: #b5cea8;">6</span><span style="color: #d4d4d4;">; </span><span style="color: #9cdcfe;">$i</span><span style="color: #d4d4d4;">++)</span></div>
+<br />
+<div><span style="color: #d4d4d4;">{</span></div>
+<br />
+<div><span style="color: #9cdcfe;">$num</span><span style="color: #d4d4d4;"> = </span><span style="color: #dcdcaa;">rand</span><span style="color: #d4d4d4;">(</span><span style="color: #b5cea8;">0</span><span style="color: #d4d4d4;">, </span><span style="color: #b5cea8;">15</span><span style="color: #d4d4d4;">);</span></div>
+<br />
+<div><span style="color: #9cdcfe;">$tmp</span><span style="color: #d4d4d4;"> = </span><span style="color: #dcdcaa;">substr</span><span style="color: #d4d4d4;">(</span><span style="color: #9cdcfe;">$chars</span><span style="color: #d4d4d4;">, </span><span style="color: #9cdcfe;">$num</span><span style="color: #d4d4d4;">, </span><span style="color: #b5cea8;">1</span><span style="color: #d4d4d4;">);</span></div>
+<br />
+<div><span style="color: #9cdcfe;">$color</span> <span style="color: #d4d4d4;">.=</span> <span style="color: #9cdcfe;">$tmp</span><span style="color: #d4d4d4;">;</span></div>
+<br />
+<div><span style="color: #d4d4d4;">}</span></div>
+<br />
+<div><span style="color: #c586c0;">return</span> <span style="color: #ce9178;">"#"</span> <span style="color: #d4d4d4;">.</span> <span style="color: #9cdcfe;">$color</span><span style="color: #d4d4d4;">;</span></div>
+<br />
+<div><span style="color: #d4d4d4;">}</span></div>
+<br />
+<div><span style="color: #6a9955;">//print random_color();</span></div>
+</div>
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Referências</b></p>
+<p style="margin-bottom: 0cm; text-align: justify;">Mastering CSS, Part 1: Styling Design Elements</p>
+<p style="margin-bottom: 0cm; text-align: justify;"><a class="western" href="http://www.smashingmagazine.com/2009/08/03/mastering-css-styling-design-elements/">http://www.smashingmagazine.com/2009/08/03/mastering-css-styling-design-elements/</a></p>
+<p style="margin-bottom: 0cm; text-align: justify;"><a class="western" href="http://www.smashingmagazine.com/2009/08/10/mastering-css-advanced-techniques-and-tools/">http://www.smashingmagazine.com/2009/08/10/mastering-css-advanced-techniques-and-tools/</a></p>
+<h2 class="western" style="text-align: justify;"><a class="western" href="http://socialcmsbuzz.com/40-css-web-form-style-tutorials-for-web-developers-14082008/"><span style="font-size: medium;"><span style="font-weight: normal;">40 CSS Web Form Style Tutorials For Web Developers</span></span></a></h2>
+<p style="margin-bottom: 0cm; text-align: justify;"><a class="western" href="http://www.websiteoptimization.com/speed/tweak/forms/css.html">http://www.websiteoptimization.com/speed/tweak/forms/css.html</a></p>
+<p style="margin-bottom: 0cm; text-align: justify;"><a name="title"></a>Fancy Form Design Using CSS de Cameron Adams na sitepoint (<a class="western" href="http://sitepoint.com/">http://sitepoint.com</a>)</p>
+<p style="margin-bottom: 0cm; text-align: justify;">pForm - <a class="western" href="http://www.phpform.org/">http://www.phpform.org/</a></p>
+<p style="margin-bottom: 0cm; text-align: justify;"><a class="western" href="http://nidahas.com/2006/12/06/forms-markup-and-css-revisited/">http://nidahas.com/2006/12/06/forms-markup-and-css-revisited/</a></p>
+<p style="margin-bottom: 0cm; text-align: justify;"><a class="western" href="http://www.alistapart.com/articles/prettyaccessibleforms/">http://www.alistapart.com/articles/prettyaccessibleforms/</a></p>
+<p style="margin-bottom: 0cm; text-align: justify;">Layouts e Templates CSS Free - <a class="western" href="http://www.smashingmagazine.com/2007/01/12/free-css-layouts-and-templates/">http://www.smashingmagazine.com/2007/01/12/free-css-layouts-and-templates/</a></p>
+<p style="margin-bottom: 0cm; text-align: justify;">Layouts CSS - <a class="western" href="http://www.dynamicdrive.com/style/layouts/category/C11/">http://www.dynamicdrive.com/style/layouts/category/C11/</a></p>
+<p style="margin-bottom: 0cm; text-align: justify;">CSS Reference - <a class="western" href="http://xhtml.com/en/css/reference/">http://xhtml.com/en/css/reference/</a></p>
+<p style="margin-bottom: 0cm; text-align: justify;">CSS Reference - <a class="western" href="http://www.w3schools.com/CSS/CSS_reference.asp">http://www.w3schools.com/CSS/CSS_reference.asp</a></p>
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+<p style="margin-bottom: 0cm; page-break-before: always; text-align: justify;"><img src="../../images/css3.png" alt="" /></p>
+<p style="margin-bottom: 0cm; text-align: justify;"> </p> 	</div>
+
+	
+	
+				
+	
+	
+	
+</article>
+
+</body>
+</html>

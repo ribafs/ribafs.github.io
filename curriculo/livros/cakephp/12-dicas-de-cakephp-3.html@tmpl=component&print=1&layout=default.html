@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br" dir="ltr">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <base href="" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Ribamar FS" />
+	<meta name="robots" content="noindex, nofollow" />
+	<meta name="description" content="Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros." />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>12 - Dicas de CakePHP 3 - RibaFS Portal</title>
+	<link href="http://ribafs.org/portal/curriculo/livros/cakephp/12-dicas-de-cakephp-3.html?tmpl=component&amp;print=1&amp;layout=default" rel="canonical" />
+	<link href="../../../templates/shaper_helix3/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../../../favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="http://backup/portal/media/plg_content_prismsyntaxhighlighter/css/prism-okaidia.css" rel="stylesheet" type="text/css" />
+	<link href="http://backup/portal/media/plg_content_prismsyntaxhighlighter/css/prism-linenumbers.css" rel="stylesheet" type="text/css" />
+	<script src="http://backup/portal/media/plg_content_prismsyntaxhighlighter/js/prism-tinymce.js" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery-noconflict.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery-migrate.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="http://backup/portal/media/system/js/caption.js?d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script type="text/javascript">
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+	</script>
+	<meta property="og:url" content="http://backup/portal/curriculo/livros/cakephp/12-dicas-de-cakephp-3.html" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="12 - Dicas de CakePHP 3" />
+	<meta property="og:description" content="12 - Dicas de CakePHP 3 Não importa se seu sonho vai se realizar hoje ou amanhã, mas sim que você trabalhe para o alcançar todos os dias. Foco com HTML5 Fo..." />
+
+   	<link rel="stylesheet" href="../../../media/jui/css/bootstrap.min.css" type="text/css" />
+	<link rel="stylesheet" href="../../../templates/shaper_helix3/css/frontend-edit.css" type="text/css" />
+    <link rel="stylesheet" href="../../../templates/shaper_helix3/css/template.css" type="text/css" />
+</head>
+<body class="contentpane">
+	<div id="system-message-container">
+	</div>
+
+	
+
+<article class="item item-page" itemscope itemtype="http://schema.org/Article">
+	<meta itemprop="inLanguage" content="pt-BR" />
+	
+	
+
+	<div class="entry-header">
+		<span class="post-format"><i class="fa fa-thumb-tack"></i></span>
+		
+					<h2 itemprop="name">
+									12 - Dicas de CakePHP 3							</h2>
+												</div>
+
+						<div id="pop-print" class="btn hidden-print">
+				<a href="12-dicas-de-cakephp-3.html#" onclick="window.print();return false;">			<span class="icon-print" aria-hidden="true"></span>
+		Imprimir	</a>			</div>
+				
+	
+	
+				
+	
+			<div itemprop="articleBody">
+		<h3>12 - Dicas de CakePHP 3</h3>
+<p align="left"> </p>
+<p align="right"><em><strong>Não importa se seu sonho vai se realizar hoje ou amanhã, mas sim que você trabalhe para o alcançar todos os dias.</strong></em></p>
+<p align="right"> </p>
+<p><strong>Foco com HTML5</strong></p>
+<p>Foco automático em um campo</p>
+<p>echo $this-&gt;Form-&gt;input('grupo',['style'=&gt;'width: 100px', 'type'=&gt;'text', 'autofocus']);</p>
+<p align="left"> </p>
+<p><strong>Passando argumentos pela URL</strong></p>
+<p>Adicionar a linha ao routes.php:</p>
+<p>$routes-&gt;connect('tests/:arg1/:arg2', ['controller' =&gt; 'Tests', 'action' =&gt;'index'],['pass' =&gt; ['arg1', 'arg2']]);</p>
+<p> </p>
+<p>Visite:</p>
+<p>http:/localhost/exemplos/tests/value1/value2</p>
+<p align="left"> </p>
+<p><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><b>Customizando a </b><b>Paginação </b><b>no Controller </b><b>Customers</b></span></span></p>
+<pre class="language-php"><code>class CustomersController extends AppController
+{
+    public $paginate = [
+        'fields' =&gt; ['Customers.id', 'Customers.name','Customers.birthday','Customers.cpf', 'Customers.created','Customers.modified'],
+        'limit' =&gt; 12,
+        'order' =&gt; [
+            'Customers.id' =&gt; 'asc'
+        ]
+    ];
+
+    public function index()
+    {
+        $customers = $this-&gt;paginate($this-&gt;Customers);
+
+        $this-&gt;set(compact('customers'));
+    }
+
+action index resumido
+
+public function index()
+{
+	$this-&gt;set('customers', $this-&gt;paginate($this-&gt;Posts));
+}
+
+ou
+$this-&gt;set('customers', $this-&gt;Despesas-&gt;find('all'));
+
+action view
+public function view($id = null)
+{
+	$post = $this-&gt;Posts-&gt;get($id);
+	$this-&gt;set('posts', $posts);
+}
+
+action add
+
+    function add() {
+        if (!empty($this-&gt;data)) {
+            if ($this-&gt;Category-&gt;save($this-&gt;data)) {
+                $this-&gt;Session-&gt;setFlash('Your category has been saved.');
+                $this-&gt;redirect(array('action' =&gt; 'index'));
+            }
+        }
+    }
+</code></pre>
+<p><strong>Implementação do displayField()</strong></p>
+<p>Tenho duas tabelas relacionadas: users e clientes.</p>
+<p>Clientes tem um campo user_id</p>
+<p>Em</p>
+<p>src/Model/Table/UsersTable.php</p>
+<p> </p>
+<p><strong>Mude o displayField para mostrar não o id mas o username</strong></p>
+<p>$this-&gt;displayField('username');</p>
+<p> </p>
+<p><strong>Aproveite e torne requerido o campo user_id em clientes</strong></p>
+<p>src/Model/Table/ClientesTable.php</p>
+<p>Adicione</p>
+<p>$validator-&gt;notBlank('user_id');</p>
+<p>No Clientes/index.ctp no valor do user_id:</p>
+<p>&lt;td&gt;&lt;?= $cliente-&gt;has('user') ? $this-&gt;Html-&gt;link($cliente-&gt;user-&gt;id, ['controller' =&gt; 'Users', 'action' =&gt; 'view', $cliente-&gt;user-&gt;id]) : '' ?&gt;&lt;/td&gt;</p>
+<p align="left"> </p>
+<p><strong>Atualização de Aplicativo</strong></p>
+<p>Após instalar um aplicativo podemos atualizar o cake e algum plugin com:</p>
+<p>Acessar o diretório e executar:</p>
+<p>composer update</p>
+<p> </p>
+<p><strong>Implementando Busca com paginação em Forms do CakePHP 3</strong></p>
+<p>Adaptação de:</p>
+<p><a href="http://www.tayron.com.br/blog/121/criando-um-formulario-de-pesquisa-com-cakephp3">http://www.tayron.com.br/blog/121/criando-um-formulario-de-pesquisa-com-cakephp3</a></p>
+<p>O exemplo aqui apresentado foi com um aplicativo criado através do bake.</p>
+<p>Apenas duas tabelas:</p>
+<pre class="language-php"><code>CREATE TABLE IF NOT EXISTS `groups` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) NOT NULL,
+  `created` datetime DEFAULT NULL,
+  `modified` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+);
+
+CREATE TABLE IF NOT EXISTS `users` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(255) NOT NULL,
+  `password` char(255) NOT NULL,
+  `group_id` int(11) NOT NULL,
+  `created` datetime DEFAULT NULL,
+  `modified` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `username` (`username`)
+);</code></pre>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;">Banco - busca</span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;">Diretório - busca</span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"> </p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;">Os dados do formulário deve ser enviado via query string (get).</span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;">E a action do formulário deve sempre apontas para o método index, exemplo: </span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><a href="http://www.site.com.br/users/index">www.site.com.br/users/index</a>. </span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"> </p>
+<p style="margin-bottom: 0cm; line-height: 100%; page-break-before: always;"><span style="font-family: Times New Roman, serif;"><b>View Users/index.ctp</b></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;">Entendidas as duas regras acima vamos criar nosso formulário na nossa view</span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;">antes da tag &lt;table&gt;:</span></p>
+<pre class="language-php"><code>&lt;?php
+    echo $this-&gt;Form-&gt;create(null, ['type' =&gt; 'get']);
+   
+    echo $this-&gt;Form-&gt;input('search', 
+	['class' =&gt; 'form-control', 'label' =&gt; false, 
+	'placeholder' =&gt; 'Digite o username', 
+	'value' =&gt; $this-&gt;request-&gt;query('search')]);
+	    
+    echo $this-&gt;Form-&gt;button('Pesquisar');
+    echo $this-&gt;Form-&gt;end();
+?&gt;
+&lt;hr /&gt;
+
+Substitua o método index() existente do Controller/UserController.php por:
+
+public function index()
+{
+    $this-&gt;paginate = [
+        'contain' =&gt; ['Groups'],
+        'conditions' =&gt; ['and' =&gt; [
+            //'Users.people like' =&gt; '%' . $this-&gt;request-&gt;query('search') . '%',
+            'Users.username like' =&gt; '%' . $this-&gt;request-&gt;query('search') . '%'
+        ]],
+        'order' =&gt; ['Users.id' =&gt; 'DESC' ]
+    ];
+        
+    $this-&gt;set('users', $this-&gt;paginate($this-&gt;Users));
+    $this-&gt;set('_serialize', ['users']);
+}
+
+&lt;?php
+namespace App\Model\Table;
+
+use Cake\ORM\Query;
+use Cake\ORM\RulesChecker;
+use Cake\ORM\Table;
+use Cake\Validation\Validator;
+
+class UsersTable extends Table
+{
+    public function initialize(array $config)
+    {
+        parent::initialize($config);
+
+        $this-&gt;table('users'); // Name of the table in the database, if absent convention assumes lowercase version of file prefix
+        $this-&gt;displayField('full_name'); // field or virtual field used for default display in associated models, if absent 'id' is assumed
+        $this-&gt;primaryKey('id'); // Primary key field(s) in table, if absent convention assumes 'id' field
+
+        $this-&gt;addBehavior('Timestamp'); // Allows your model to timestamp records on creation/modification
+    }
+}</code></pre>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><b>Resumo do CakePHP</b></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;">Geralmente controller são usados para gerenciar a lógica de um único model.</span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;">Controllers são classes que estendem a classe AppController. AppController deve conter métodos que são compartilhados entre todos os controllers de sua aplicação.</span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;">Os controllers fornecem uma série de métodos que lidam com requisições. Estes são chamados de actions.</span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"> </p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;">Components - são a melhor alternativa sobre código usado por muitos controllers.</span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;">Os controllers e componentes contam com um método initilize() que é invocado ao final do construtor do controller.</span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"> </p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;">Qualquer trecho de código ou componente:</span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;">- No AppController fica acessível por todos os controllers.</span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;">- Num certo controller fica acessível somente para este</span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"> </p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><b>Deployment/Implantação</b></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><a href="https://book.cakephp.org/3.0/pt/deployment.html">https://book.cakephp.org/3.0/pt/deployment.html</a> </span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;">Antes de implantar um aplicativo em produção faça as seguintes verificações/alterações:</span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;">- Atualizar o arquivo config/core.php</span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;">debug = false;</span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"> </p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;">Ao desabilitar o debug altera o seguinte:</span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;">Mensagens de depuração criadas com pr() e debug() serão desabilitadas.</span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;">O cache interno do CakePHP será descartado após 999 dias ao invés de ser a cada 10 segundos como em desenvolvimento.</span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"> </p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;">Views de erros serão menos informativas, retornando mensagens de erros genéricas.</span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;">Erros do PHP não serão mostrados.</span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;">O rastreamento de stack traces (conjunto de exceções) será desabilitado.</span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><b>- Checar a segurança:</b></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;">Observe que atualmente (3.7.7) o Cake já traz o componente security no AppController:</span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;">No método initialize()</span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;">// $this-&gt;loadComponent('Security');</span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;">Para ter seus recursos disponíveis no nosso aplicativo basta descomentar e usar o formHelper para criar os formulários. Isso pode prevenir diversos tipos de adulteração de formulários e reduzir a possibilidade de overdose de requisições.</span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"> </p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;">Certifique-se que seus models possuem as regras de validação habilitadas.</span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;">Verifique se apenas o seu diretório webroot é visível publicamente, e que seus segredos (como seu app salt, e qualquer chave de segurança) são privados e únicos também.</span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;">- Aprimorar a performance do aplicativo</span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;">Execute</span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;">composer dumpautoload -o</span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;" align="left"> </p>
+<p style="margin-bottom: 0cm; line-height: 100%;" align="left"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><b>Corrigir error no código com composer</b></span></span></p>
+<pre class="western" style="font-weight: normal; text-align: left;"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><code class="western">composer cs-fix<br /><br /></code></span></span></pre> 	</div>
+
+	
+	
+				
+	
+	
+	
+</article>
+
+</body>
+</html>

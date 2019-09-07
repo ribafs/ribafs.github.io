@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br" dir="ltr">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <base href="" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Ribamar FS" />
+	<meta name="robots" content="noindex, nofollow" />
+	<meta name="description" content="Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros." />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>Ambiente - RibaFS Portal</title>
+	<link href="http://ribafs.org/portal/mobile/ambiente.html?tmpl=component&amp;print=1&amp;layout=default" rel="canonical" />
+	<link href="../templates/shaper_helix3/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<script src="../media/jui/js/jquery.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../media/jui/js/jquery-noconflict.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../media/jui/js/jquery-migrate.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="http://backup/portal/media/system/js/caption.js?d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script type="text/javascript">
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+	</script>
+	<meta property="og:url" content="http://backup/portal/mobile/ambiente.html" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Ambiente" />
+	<meta property="og:description" content="Ambiente para Programação Mobile com Android Um ambiente completo para programação mobile Android requer: - Java - Android - Apache Ant O IntelXDK , como o..." />
+
+   	<link rel="stylesheet" href="../media/jui/css/bootstrap.min.css" type="text/css" />
+	<link rel="stylesheet" href="../templates/shaper_helix3/css/frontend-edit.css" type="text/css" />
+    <link rel="stylesheet" href="../templates/shaper_helix3/css/template.css" type="text/css" />
+</head>
+<body class="contentpane">
+	<div id="system-message-container">
+	</div>
+
+	
+
+<article class="item item-page" itemscope itemtype="http://schema.org/Article">
+	<meta itemprop="inLanguage" content="pt-BR" />
+	
+	
+
+	<div class="entry-header">
+		<span class="post-format"><i class="fa fa-thumb-tack"></i></span>
+		
+					<h2 itemprop="name">
+									Ambiente							</h2>
+												</div>
+
+						<div id="pop-print" class="btn hidden-print">
+				<a href="ambiente.html#" onclick="window.print();return false;">			<span class="icon-print" aria-hidden="true"></span>
+		Imprimir	</a>			</div>
+				
+	
+	
+				
+	
+			<div itemprop="articleBody">
+		<p><strong>Ambiente para Programação Mobile com Android</strong><br /><br />Um ambiente completo para programação mobile Android requer:<br />- Java<br />- Android<br />- Apache Ant<br /><br />O <strong>IntelXDK</strong>, como o instalador é um executável, já vem com todos os requisitos e o build, que requer java e android, é feito na nuvem.<br /><br />O <strong>PhoneGap</strong>, como efetua o build na nuvem, não requer java ou android, apenas o nodejs, pois é instalado como um módulo deste.<br /><br />Algumas ferrametnas, como o Ionic, requerem todo o ambiente instalado e configurado localmente, pois efetuam o build localmente.<br /><br /><br /><strong>Instalação e Configuração do Ambiente no Windows</strong><br /><br /><strong>Instalação</strong><br />NodeJS - <a href="https://nodejs.org/en/">https://nodejs.org/en/</a> <br /><br />Java JDK - <a href="http://www.oracle.com/technetwork/pt/java/javase/downloads/index.html">http://www.oracle.com/technetwork/pt/java/javase/downloads/index.html</a>  (Java SE)<br /><br />Android Studio - <a href="https://developer.android.com/studio/index.html">https://developer.android.com/studio/index.html</a> <br /><br />Apache Ant - <a href="http://ant.apache.org/bindownload.cgi">http://ant.apache.org/bindownload.cgi</a> <br /><br /><strong>Criando as variáveis de ambiente e configurando o PATH</strong><br /><br />A instalação padrão do Android Studio no Windows cria duas pastas:<br />C:\Program Files\Android\Android Studio<br />C:\Users\familia\AppData\Local\Android\sdk<br />Obs: melhor é instalar no c:\android<br /><br /><br /><strong>Configuração do Ambiente no Windows</strong><br /><br />Acessar o painel de controle<br />Na caixa de busca digite<br />    ambiente<br />    <br />Clique em <br />Editar as variáveis de ambiente do sistema<br /><br />Propriedades do Sistema - Avançado<br /><br />Variáveis de Ambiente<br /><br />Faça tudo abaixo em Variáveis do sistema<br /><br />Clicando em Novo para adicionar as variáveis<br />E em PATH - Editar para adicionar as mesmas ao path<br /><br />JAVA_HOME -&gt; C:\Program Files\Java\jdk1.8.0_131<br /><br />ANT_HOME -&gt; C:\Ant<br /><br />ANDROID_HOME -&gt; C:\Users\familia\AppData\Local\Android\sdk (mais prático é instalar, por exemplo, no c:\Android)<br /><br />Editar o PATH e adicionar ao final:<br />;%JAVA_HOME%/bin;%ANT_HOME%/bin;%ANDROID_HOME%/platform-tools;%ANDROID_HOME%/tools;<br /><br />Estando tudo configurado corretamente, podemos testar abrindo o prompt e digitando:<br /><br />javac -version<br />ant<br />android<br />android avd<br /><br /><br /><strong>Instalação e Configuração do Ambiente no Linux Ubuntu ou derivada</strong><br /><br />O Ant já vem instalado e configurado<br />O Java JSK, ao ser instalado já configura o ambiente<br />Portanto somente precisaremos configurar ANDROID_HOME<br /><br /><strong>Instalação do NodeJS</strong><br /><br />Atualmente instalar a versão 6:<br />curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -<br />sudo apt-get install -y nodejs<br /><br /><strong>Instalar Java 8 no Ubuntu e derivadas</strong><br />sudo apt update<br />sudo apt-get remove openjdk*<br />sudo apt install python-software-properties<br />sudo add-apt-repository ppa:webupd8team/java<br />sudo apt install oracle-java8-installer<br />sudo apt install oracle-java8-set-default<br /><br /><strong>Instalar Android Studio</strong><br /><br />Dos repositórios<br />sudo add-apt-repository ppa:paolorotolo/android-studio  <br />sudo apt-get update  <br />sudo apt-get install android-studio<br /><br />Download Android Studio Pack do site oficial<br /><a href="https://developer.android.com/studio/index.html">https://developer.android.com/studio/index.html</a> <br /><br /><strong>Adicionar variáveis de ambiente ao bashrc</strong><br />cd<br />nano .bashrc<br />export ANDROID_HOME=/home/ribafs/Android/Sdk<br />export PATH=${PATH}:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin</p>
+
+
+<p>Referências</p>
+
+
+<p>Curso gratuito de PhoneGap</p>
+
+
+<p><a href="http://loiane.training/curso/phonegap-apache-cordova/">http://loiane.training/curso/phonegap-apache-cordova/</a> </p> 	</div>
+
+	
+	
+				
+	
+	
+	
+</article>
+
+</body>
+</html>

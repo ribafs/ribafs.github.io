@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="Joomla! - Open Source Content Management" -->
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Dicas - RibaFS Portal</title>
+		<description><![CDATA[Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros.]]></description>
+		<link>http://backup/portal/joomla-3/dicas.html</link>
+		<lastBuildDate>Sat, 07 Sep 2019 18:57:10 -0300</lastBuildDate>
+		<generator>Joomla! - Open Source Content Management</generator>
+		<atom:link rel="self" type="application/rss+xml" href="http://backup/portal/joomla-3/dicas.feed?type=rss"/>
+		<language>pt-br</language>
+		<item>
+			<title>Restore de Site em Joomla</title>
+			<link>http://backup/portal/joomla-3/dicas/restore-de-site-em-joomla.html</link>
+			<guid isPermaLink="true">http://backup/portal/joomla-3/dicas/restore-de-site-em-joomla.html</guid>
+			<description><![CDATA[<h2>Após o Backup do Site</h2>
+
+<p>Após efetuar o backup do site usando o SimpleBackup (<a href="https://github.com/ribafs/com_simplebackup">https://github.com/ribafs/com_simplebackup</a>), efetue o restore assim:<br />Após efetuar o backup full do site com o SimpleBackup temos dois arquivos, um com o script completo do banco e outro com o pacote zip com todos os arquivos do site.<br /><br />É prudente efetuar uma instalação do site logo após backup do mesmo.<br /><br />Vamos supor que iremos instalar o site localmente.<br /><br />Para isso precisamos seguir os passos:<br /><br />- Criar o banco usando um cliente do MySQL<br /><br />- Importar o script sql gerado pelo backup no banco acima<br /><br />- Criar uma pasta no diretório web. Exemplo "joomla"<br /><br />- Descompactar o arquivo zip gerado pelo backup na pasta acima<br /><br />- Editar o scripr configuration.php e ajustar as configurações:<br />    public $host = 'localhost';<br />    public $user = 'root';<br />    public $password = '';<br />    public $db = 'joomla';<br /><br />e<br />    public $log_path = '/var/www/html/joomla/administrator/logs';<br />    public $tmp_path = '/var/www/html/joomla/tmp';<br />    <br />Com isso o site está pronto para uso.<br /><br />http://localhost/joomla/administrator<br /><br />Use a mesma senha e login que usava no servidor.<br /><br /></p>]]></description>
+			<category>Dicas</category>
+			<pubDate>Thu, 21 Sep 2017 16:41:51 -0300</pubDate>
+		</item>
+		<item>
+			<title>Antes de se publicar um novo site</title>
+			<link>http://backup/portal/joomla-3/dicas/verificacoes-antes-publicar-site.html</link>
+			<guid isPermaLink="true">http://backup/portal/joomla-3/dicas/verificacoes-antes-publicar-site.html</guid>
+			<description><![CDATA[<h2>Verificações a serem feitas antes de se publicar um novo site</h2>
+
+<p><br /><strong>1 - Favicon</strong><br />Uma boa personalização para o site é adicionar um favicon bem representativo.<br />Para sites pessoais podemos adicionar a foto do dono do site ou blog.<br /><br />No site abaixo entramos com uma foto e ele retorna o favicon.ico:<br /><a href="http://www.degraeve.com/favicon/">http://www.degraeve.com/favicon/</a> ou então desenhe o seu favicon.<br /><br />No caso de sites com Joomla que já tenham um favicon no template, basta sobrescrever o existente.<br /><br />Para sites que ainda não tenham, adicione entre as tags &lt;head&gt;:<br />&lt;link rel="icon" type="image/x-icon" href="http://backup/portal//favicon.ico" /&gt;<br /><br /><strong>2 - Título e Metadados</strong><br />O título do site é um elemento importante em termos de SEO (Search Engine Otimization).<br />&lt;title&gt;RibaFS Portal&lt;/title&gt;<br /><br />Como também tags de descrição do site:<br />&lt;meta name="description" content="Este é um site pessoal dedicado ao desenvolvimento web em PHP. Os focos são o CMS Joomla e PostgreSQL. Sobre o Joomla encontram-se<br />tutoriais, dicas, cursos, módulos e componentes. Sobre o PostgreSQL tutoriais, dicas e cursos." /&gt;<br /><br /><strong>3 - Checagem do site em vários navegadores</strong><br />Como nosso site geralmente será visualizado por diversos navegadores é importante que ele seja visualizado corretamente pelo menos nos mais populares.<br /><br />Checagem do ACID2 - <a href="http://www.webstandards.org/files/acid2/test.html">http://www.webstandards.org/files/acid2/test.html</a> <br /><br />Checagem do CSS3 - <a href="http://www.css3.info/selectors-test/test.html">http://www.css3.info/selectors-test/test.html</a> <br /><br />Download dos 8 navegadores mais populares - <a href="http://www.xenocode.com/browsers/">http://www.xenocode.com/browsers/</a> <br /><br />IETester - <a href="http://www.my-debugbar.com/wiki/IETester/HomePage">http://www.my-debugbar.com/wiki/IETester/HomePage</a> <br /><br />Testar o site em vários navegadores de vários sistemas operacionais - <a href="http://browsershots.org/">http://browsershots.org/</a>. Entre com o site e aguarde a geração dos screenshots, que ao<br />final poderá fazer download.<br /><br /><strong>4 - Leitura completa e mais atenta</strong><br />Leia com bastante atenção e procurando erros de grafia e concordância.<br /><br /><strong>5 - Links</strong><br />Clique em cada link para testar se estão corretos.<br />Certifique-se de que sua logomarca tem um link para seu próprio site (convenção comun).<br />Não sublinhe texto que não é link pois isso confunde.<br />Site que checa por links - <a href="http://validator.w3.org/checklink">http://validator.w3.org/checklink</a> <br /><br /><strong>6 - Checar funcionalidade</strong><br />Caso tenha um form de contato, teste se está funcionando.<br />Peça colegas de grupos para testar seu site e não somente parentes e amigos.<br />Áreas importantes para testar são: contato, login, busca, etc.<br /><br /><strong>7 - Desabilitando recursos</strong><br />Caso seu site possa funcionar sem JavaScript desabilite o JavaScript e teste como fica o<br />seu site.<br /><br /><strong>8 - Validações</strong><br />Verifique as validações se funcionam adequadamente. Valide o CSS e XHTML.<br /><br />Veja este artigo: 10 razões por que seu código não valida e como corrigir isso:<br /><a href="http://net.tutsplus.com/articles/web-roundups/10-reasons-why-your-code-wont-validate-and-how-to-fix-it/">http://net.tutsplus.com/articles/web-roundups/10-reasons-why-your-code-wont-validate-and-how-to-fix-it/</a> <br /><br />Validação online - <a href="http://validator.w3.org/">http://validator.w3.org/</a> e <a href="http://jigsaw.w3.org/css-validator/">http://jigsaw.w3.org/css-validator/</a> <br /><br /><strong>9 - Link para RSS e Redes Sociais</strong><br />Este recurso é muito importante para quem visita o site e para atrair visitantes.<br />Através do RSS o visitante pode voltar ao site.<br /><br /><strong>10 - Mapa do Site</strong><br />Adicione ou verifique o mapa do site. Quando o visitante não encontrar um recurso do site o mapa o ajudará.<br /><br /><strong>11 - Design defensivo</strong><br />Crie bonitas e eficientes páginas para o erro 404, quando o usuário solicitar uma página e não encontrar.<br />Nessa página personalizada deve ter um pedido de desculpa, seu e-mail e a orientação de verificar se o link está correto.<br /><br /><strong>12 - Otimize</strong><br />Aproveite para melhorar a performance do seu site, eliminando recursos desnecessários e melhorando outros:<br />imagens, flash, javascript, etc. Veja o artigo:<br /><br /><strong>13 - Backup</strong><br />Lembre que o backup é muito importante para garantir as informações do seu site.<br />Faça regularmente backup dos arquivos e do banco de dados.<br /><br /><strong>14 - CSS para Impressão</strong><br />Caso seu site não tenha procure adicionar recurso para que o visitante possa ter uma página de impressão para cada página que queira imprimir.<br /><br /><strong>15 - Estatísticas</strong><br />Caso queira estatísticas sobre os visitantes do site - <a href="http://www.google.com/analytics/">http://www.google.com/analytics/</a> <br /><br /><strong>CheckList:</strong><br />Aqui encontrará um PDF para que possa imprimir e realizar um controle mais preciso:<br /><a href="http://www.boxuk.com/upload/website_launch_checklist_v1.pdf">http://www.boxuk.com/upload/website_launch_checklist_v1.pdf</a> <br /><br />Original em inglês:<br /><a href="http://www.smashingmagazine.com/2009/04/07/15-essential-checks-before-launching-your-website/">http://www.smashingmagazine.com/2009/04/07/15-essential-checks-before-launching-your-website/</a> </p>]]></description>
+			<category>Dicas</category>
+			<pubDate>Thu, 21 Sep 2017 16:02:21 -0300</pubDate>
+		</item>
+		<item>
+			<title>Melhores práticas para um site mais rápido</title>
+			<link>http://backup/portal/joomla-3/dicas/site-mais-rapido.html</link>
+			<guid isPermaLink="true">http://backup/portal/joomla-3/dicas/site-mais-rapido.html</guid>
+			<description><![CDATA[<p>Um pequeno resumo da documentação da extensão YSlow para o Firefox, encontrado em inglês em: http://developer.yahoo.com/performance/rules.html<br /><br />A extensão, que mede o desempenho de sites no Firefox, pode ser encontrada em: https://addons.mozilla.org/pt-BR/firefox/addon/5369<br /><br />Obs.: o original é bem mais detalhado e com muito mais informações, aqui trago apenas o que achei mais interessante ou importante.<br /><br />80% do tempo gasto pelo visitante para baixar uma página é gasto no front-end (cliente) e somente 20 no back-end (servidor). Desses 80% a maioria é gasto baixando componentes: images, CSS, script JS, Flash, etc.<br /><br />Reduzindo o número de componentes do site reduzirá as requisições HTTP para renderizar a página no cliente. Esta é a chave de páginas rápidas.<br /><br />Simplificar o design das páginas reduzirá o número de componentes.<br /><br />Abaixo algumas técnicas para reduzir o número de requisições e ao mesmo tempo manter um design rico.<br /><br />Usar CSS sprites reduz o número de requisições de imagens, ao invés de requisitar várias requisita-se somente uma e o CSS mapeia usando o background-image e background-position. Exemplo em: http://ribafs.org/portal/colaboracoes/1-ribamar-fs/123-sprites-em-css Combinar, quando possível todo o CSS em um único arquivo externo.<br /><br />Mova o CSS para o topo da página, entre as tags &lt; head&gt; e &lt;/head&gt; que a página será carregada mais rapidamente.<br /><br />Já os scripts em JavaScript devem ser movidos para o final da página, para que a carga seja otimizada. É verdade que em algumas situações não dá para mover para o final da página, mas sempre que possível devemos fazê-lo.<br /><br />O IE suporta expressões em CSS e para melhor desempenho evite estas expressões.<br /><br />Sempre que possível tenha o CSS e o JavaScript em arquivos externos para melhor desempenho.<br /><br />Otimize para reduzir o código do CSS e do JavaScript. Remova caracteres desnecessários, linhas e trechos duplicados e otimize ao máximo seu código. Isso vale também para toda a construção do site, evitar tudo que seja desnecessário e otimizar o necessário.<br /><br />Evite redirecionamentos. Não tenha mais que 3 redirecionamentos na página. Exemplo: temos 3 banners cujas imagens vem de outras URLs. No caso o site só abrirá quando pegar as imagens dos outros sites. Estando tudo normal ele terá que fazer a requisição aos outros sites e imagine quando um deles está lento.<br /><br />Use GET para as requisições de AJAX. São mais rápidas que usando POST.<br /><br />Otimize ao máximo a página inicial, reduzindo a carga para que o visitante chegue. Nas demais páginas poderá adicionar componentes que colocaria na inicial.<br /><br /><strong>Minimizar o número de iframes.</strong><br /><br />Evite erro 404 (páginas não encontradas). Use o serviço do servidor para redirecionar o usuário para uma página personalizada quando acontecer um erro 404.<br /><br />Reduza o tamanho dos cookies.<br /><br />Minimize acessos DOM.<br /><br />Desenvolva manipuladores de eventos inteligentes. Acontece de um evento somente ser disparado quando um outro o for e isso pode complicar. Mais detalhes no documento original.<br /><br />Ao fazer link dos arquivos externos prefira &lt; link...&gt; ao invés de @import.<br /><br /><strong>Evite filtros no CSS.</strong><br /><br />Otimize as imagens. Sempre antes de enviar as imagens para o servidor, reduza seu tamanho, como também reduza a quantidade de cores sempre que razoável. Alguns serviços online que ajudam na otimização de imagens: <a href="http://tools.dynamicdrive.com/imageoptimizer/">http://tools.dynamicdrive.com/imageoptimizer/</a>  <a href="http://www.imageoptimizer.net/Pages/Home.aspx">http://www.imageoptimizer.net/Pages/Home.aspx</a>  <a href="http://webresizer.com/resizer/">http://webresizer.com/resizer/</a> <br /><br />Otimize os sprites CSS As imagens ficando na horizontal ao invés da vertical carregam mais rapidamente.<br /><br />Não altere as dimensões de imagens somente no HTML. Isso altera somente a visualização, mas seu tamanho permanece o mesmo. Altere seu tamanho offline e envie para o servidor ao invés.<br /><br /><strong>Reduza o tamanho dos favicon.ico.</strong><br /><br />Mantenha o tamanho dos componentes sempre inferior a 25KB. Lembre que ese valor é para o arquivo descompactado.<br /><br />Mais informações no documento original em inglês: <br /><a href="http://developer.yahoo.com/performance/rules.html">http://developer.yahoo.com/performance/rules.html</a> </p>]]></description>
+			<category>Dicas</category>
+			<pubDate>Thu, 21 Sep 2017 15:58:37 -0300</pubDate>
+		</item>
+		<item>
+			<title>Guia de Otimização de Sites</title>
+			<link>http://backup/portal/joomla-3/dicas/guia-de-otimizacao-de-sites.html</link>
+			<guid isPermaLink="true">http://backup/portal/joomla-3/dicas/guia-de-otimizacao-de-sites.html</guid>
+			<description><![CDATA[<h2>Com Foco em Joomla mas não somente</h2>
+
+<p>De acordo com HubSpot, 80% do tráfego de um site começa com uma busca. É por isso que a otimização de sites (trabalhar com SEO) é tão importante.<br /><br />Você examina de perto o desempenho geral do site, em seguida, define e implementa novas metas com base no seu exame.<br /><br /><strong>Otimizar seções do Site</strong><br /><a href="https://www.quicksprout.com/">https://www.quicksprout.com/</a> <br /><br /><strong>Sugestões do QuicksProut:</strong><br /><br />- Refazer o título do site para que o tamanho fique entre 15 e 65 caracteres: Canto do cake, laravel, joomla, postgresql, servidores, etc. <br />- Incluir pelo menos uma das palavras chaves do conteúdo do site: cakephp, joomla, laravel, postgresql, etc.<br />- Sidebar: refazer o h2 do sidebar com 15-65 para conter pelo menos uma das palavras chaves do conteúdo: Aqui encontrará cakephp, laravel, joomla, servidores, etc<br />- Refazer o H2 do artigo Boas Vindas para que contenha de 15-65 pelo menos uma das palavras chaves do conteúdo:<br /> Boas Vindas ao Cantinho do Cake, Joomla, PostgreSQL, Laravel, etc.<br />Assim proceder com o H3 de: Novidades, Populares, Pensamento do Dia<br /><br /><strong>Usar apenas um único H1 por página.</strong><br /><br /><strong>Básicos:</strong><br />- Contratar um bom serviço de hospedagem, de preferência com discos SSD para que seja mais rápido.<br />- Evite serviços limitados, com limitada taxa de transferência, que pode chegar a deixar o visitante sem acesso ao site<br />- Entre outras boas características de uma boa hospedagem.<br /><br />Um dos maiores desafios que blogueiros e profissionais de marketing de conteúdo encaram é escrever conteúdo que é otimizado para os mecanismos de busca, e que seja também atrativo para as pessoas.<br /><br />Seu conteúdo precisa ser acompanhado de dois objetivos: primeiro, ter apelo para o usuário final (consumidores, clientes, prospects, leitores, etc.) e segundo, resolver um problema em particular.<br /><br />SEO é um método de otimizar (melhorar a efetividade de) seu conteúdo para os mecanismos de busca de maneira a ajudá-lo a ter uma classificação mais elevada do que o conteúdo dos outros sites que tem como alvo os mesmos termos de busca.<br /><br />Google exibe páginas da web em seus resultados de pesquisa com base na autoridade e relevância da página. E como medir autoridade e relevância?<br /><br />O Google determina a relevância da sua página analisando seu conteúdo com base em vários fatores, incluindo onde e quantas vezes você usa certas palavras e em que parte do conteúdo.<br /><br />O Google mede autoridade pelo número de links que apontam para aquela página e quão confiável esses links são.<br /><br />Quem ajuda a conduzir o usuário a tomar alguma decisão? Um redator (copywriter) o faz. Um redator é um profissional habilidoso que escreve textos para publicidade, promoções e textos que se conectam com o consumidor. No mundo do marketing, eles frequentemente são chamados de “criativos.”<br /><br />Um redator é alguém que entende as pessoas, sabe o que sua audiência gosta, e escolhe as palavras que trarão apelo a eles. O título, palavras, frases, sentenças e parágrafos usados no conteúdo tem que persuadir e influenciar os leitores a tomarem alguma decisão.<br /><br />As tags de título são elementos importantes de SEO (otimização de sites) e devem ser criadas corretamente. São básicas e compatíveis com os padrões HTML, razão pela qual o Google espera vê-las no seu site.<br /><br />Se você quer construir um negócio online próspero e sobreviver nesse mundo de SEO em constante mudança, seu trabalho é criar conteúdo útil que seja interessante, persuasivo, e bem otimizado para os mecanismos de busca — e você tem que fazer isso de maneira consistente.<br /><br />Alguns elementos de conteúdo valioso, como utilizar um visual interessante, são marcas de um bom copywriting.<br /><br /><strong>Velocidade do site</strong><br />Um estudo da Akamai revelou estas estatísticas:<br /><br />    40% das pessoas irão abandonar a página se ela demorar mais do que 3 segundos para carregar completamente.<br />    47% dos usuários finais esperam que a página carregue em até dois segundos ou menos.<br /><br />Se o carregamento da sua página está com mais de 2 segundos, que é o padrão de carregamento para sites, então você deveria fazer algumas coisas para melhorar.<br /><br /><strong>Medir a Velocidade do Site: (1,61s)</strong><br /><a href="https://tools.pingdom.com/">https://tools.pingdom.com/</a> <br /><br /><strong>Título</strong><br /><br />Seu conteúdo precisa ser valioso, mas se seu título é medíocre, sua taxa de cliques será baixa.<br />As pessoas leem os títulos cinco vezes mais do que o conteúdo.<br />No SEO copywriting, seu título deveria atrair a atenção das pessoas e então impulsioná-las a clicarem e lerem mais.<br />Via de regra escreva seu título antes de ir para o corpo do artigo ou post do blog.<br />Títulos com números são sempre mais vencedores.<br /><br />Se você quer que seu título inteiro seja visível nos mecanismos de busca, mantenha-o abaixo de 72 caracteres. Isso também fará com que seu CTR (click-through rates) aumente.<br /><br /><strong>Conteúdo</strong><br />A razão principal que faz as pessoas pesquisarem por algo no Google e nos outros mecanismos de busca é que elas estão procurando por conteúdo de qualidade. Mecanismos de busca também se alimentam de novos conteúdos, e é por isso que você deve atualizar seu site constantemente.<br /><br />Se você quer escrever o melhor conteúdo que irá ter uma boa classificação no Google, você tem que usar as palavras-chave corretas. Evite usar palavras-chave em excesso (stuffing keywords) e exagerar na otimização (over-optimization). Coloque a palavra-chave em seu título, mas se certifique-se que a frase fique suave para os leitores.<br /><br />A atualização do Google Panda 4.1 foi desenhada para penalizar conteúdos “magros” (thin contents) ou superficiais, mantendo-os fora da classificação mais alta do Google. Um post de um blog ou artigo deveria ter pelo menos 1.000 palavras.<br /><br />Cada parte do conteúdo que você escreve precisa de uma introdução convidativa. A introdução é a parte que vem depois do título (e sub-título se você usa em seu conteúdo). Sua introdução deveria conter pelo menos uma das suas palavras-chave direcionadas.<br /><br /><strong>MetaTags do Artigo</strong><br /><br />Antes de escrever seu conteúdo e publicá-lo, use a meta descrição para te ajudar nos mecanismos de busca. Meta descrição ajuda os mecanismos de busca e os usuários a entenderem qual é o assunto e por que suas palavras-chave e frases continuam aparecendo durante o conteúdo. Nos artigos do Joomla ficam na aba Opções de Publicação<br /><br />Google usa a meta descrição na sua página como um resumo quando as pessoas pesquisam por palavras-chave que sejam relevantes para sua página. Este resumo do texto é o que vai determinar se você vai conseguir cliques ou não, não importa o quanto você esteja bem classificado nos resultados de busca.<br /><br />Para o propósito de SEO copywriting, a meta descrição deveria ter entre 150 – 160 caracteres.<br /><br /><strong>Sua meta descrição tem que ser relevante e atrativa para eles.</strong><br /><br /><strong>Links nas Páginas</strong><br />Links nas páginas dizem ao Google que você é conectado e sociável, e que você está usando conteúdo útil que as pessoas podem acessar de algum lugar. Esse conteúdo poderia ser próprio, ou de algum outro site.<br /><br /><strong>Recomendações:</strong><br />    Usar link interno e externo para lugares relevantes na sua introdução<br />    Ter links para mais conteúdos aprofundados no assunto, tanto em sua página como em outras<br />    Usar link com um texto âncora apropriado, que flua naturalmente dentro do conteúdo<br /><br />Moz diz que o formato ideal para seu título é: Palavra-chave Primária – Palavra-chave Secundária | Marca<br /><br />Se você puder colocar a história da sua marca dentro de um post no blog, artigo, ou vídeo, você vai atrair mais atenção.<br /><br /><strong>Humor</strong>: Uma das razões por que você deveria escrever com humor é manter o leitor/audiência engajados. Você pode também usar o humor para simplificar um assunto que seja desconfortável ou controverso.<br /><br /><strong>Criar confiança na marca através de avaliações dos clientes</strong><br /><br />Antes de escrever posts ou artigos, Vivian Giang recomenda uma lista de 3 or 4 benefícios fortes que você precisa oferecer. Isso é muito importante, e te ajuda a criar um cabeçalho e parágrafos poderosos.<br /><br />Tenha um propósito claro: Ser claro com seu texto, post e mensagem é muito importante.<br /><br />Pesquise dados precisos que sejam relevantes para seu assunto.<br /><br /><strong>SEO</strong><br />nem todo site bom para usuário é bom para SEO, mas a maioria dos sites bons para SEO também é boa para o usuário. Só se faz bem SEO pensando bem no usuário.<br /><br />SEO consiste em colocar-se no lugar de um buscador e compreender quais critérios ele usa para avaliar e como avalia de fato um site/página e assim criar o site.<br /><br /><strong>Conteúdo</strong><br />O Google gosta mesmo de conteúdo em texto, bem explicado, bem desenvolvido.<br /><br /><strong>Links/Referências</strong><br />Outra coisa muito curiosa, e que está no coração do Google, é a maneira de avaliar a qualidade de um site ou página em relação aos links recebidos. Mais uma vez, no mundo acadêmico a relevância de um autor é medida geralmente por quantas vezes suas teses, monografias e papers são citados. Uau, a mesma coisa que faz um site ficar bem posicionado!<br /><br /><strong>Otimizar o Site</strong><br /><br />Por que otimizar nossos Sites é tão importante? Simplesmente porque nenhum usuário gosta de perder tempo esperando o carregamento das páginas. É extremamente irritante. E isso tem graves consequências, como mostram esses estudos:<br /><br />O Yahoo! descobriu que, para cada 400ms de melhora na performance, seu tráfego aumenta em 9% (fonte). <br />Ao cortar 2,2s da landing page do Firefox, a Mozilla aumentou o número de downloads em 15%, totalizando um ganho de mais de 60 milhões de cópias por ano (fonte). <br /><br />A Amazon concluiu que apenas 100ms de melhora aumentam 1% seu faturamento (fonte). <br />Em um de seus vários experimentos, o Google aumentou o número de resultados por página de 10 para 30. Isso aumentou o tempo de carregamento de 0.4s para 0.9s, o que diminuiu em 20% o tráfego das buscas (fonte). <br /><br />A Microsoft mostrou que 2s a mais de latência no Bing diminuíam o faturamento em 4,3% (fonte). <br />Em um experimento, a Caelum subiu o tamanho de sua página de 100kb para 300kb, aumentando o número de requests de 12 para 42, o que resultou em um crescimento no tempo de carregamento de 2s para 6s. Os impactos foram queda de 21% no tempo que os usuários ficam no Site, menos 28% pageviews e uma queda de 18% no conversion rate. <br /><br />Há diversos outros experimentos publicados, incluindo um estudo que mostra uma relação entre sites lentos e queda da pressão arterial (fonte). <br /><br />Minificar CSS e JS<br />Otimizar imagens<br />Habilitar gzip<br />Comprimir HTML<br />Reduzir cookies e headers<br />Fundir arquivos JS<br />Fundir arquivos CSS<br />Usar sprites de imagens<br />Especifique o tamanho das imagens<br />Use o JS no final da página<br />Use o CSS no topo<br />Use ferramentas de diagnóstico<br />Escreva código eficiente<br /><br /><br />Usar web analitics para medir o impacto das otimizações<br /><br /><strong>Instalar a extensão SEO Doctor</strong><br /><br /><strong>Conteúdo de Artigos:</strong><br /><br />Título (H1, automático pelo template)<br />Subtítulo (H2). Este não deve repetir o título, mas complementá-lo<br />Conteúdo do artigo<br /><br />Seus usuários ideais de um produto ou serviço dão um feedback, que então determina que tipo de novo conteúdo você irá criar para melhor atendê-los.<br /><br />As opiniões dos seus usuários contam. O público determina quais ideias, artigos, produtos ou conceitos serão investidos ou compartilhados.<br /><br /><strong>Pesquisa de mercado:</strong><br /><a href="https://www.quora.com/">https://www.quora.com/</a> <br /><a href="https://ubersuggest.io/">https://ubersuggest.io/</a> <br /><a href="https://ahrefs.com/">https://ahrefs.com/</a> <br /><br /><strong>Estatísticas de Sites</strong><br /><a href="http://www.webpagetest.org/">http://www.webpagetest.org/</a> <br /><br /><strong>Analisar os assuntos mais populares do site</strong><br /><br />Enquanto você responder a perguntas dos usuários com o seu conteúdo, seu tráfego de busca irá melhorar e também sua taxa de conversão.<br /><br />Criação de landing pages (páginas de promoção de um conteúdo/produto/serviço):<br />O conteúdo deve ter mais de 2000 palavras, porque isso é o que é preciso para provar ao Google que sua página é valiosa e merece uma boa classificação nas buscas.<br /><br />O conteúdo da sua landing page tem que  ser útil. Escreva para persuadir as pessoas a dar o próximo passo, porque esse é o objetivo número 1 de todo texto de vendas convincente: levá-lo a ler a frase seguinte.<br /><br />O <strong>“Design é o rei“</strong>, diz Derek Halpern. Se o seu conteúdo é útil, mas seu design é uma porcaria, você provavelmente vai falhar.<br /><br />Links ainda são um grande fator de ranking do Google no que diz respeito à otimização de sites. Sem links de qualidade, a página pode não classificar bem nos rankings, mesmo se você tiver um texto excelente.<br /><br /><strong>Faça seu Site Responsivo e Otimizado para Dispositivos Móveis</strong><br />Você pode aumentar seu tráfego de pesquisa, visando usuários móveis. Nos últimos dois anos, as consultas de busca móvel tiveram uma taxa de crescimento de 5x.<br /><br />Mais pessoas agora usam seus dispositivos móveis para acessar a web. Quatro em cada cinco consumidores usam smartphones para fazer compras.<br /><br />Os usuários de dispositivos móveis são compradores ardentes, talvez porque eles podem fazer compras em qualquer lugar.<br /><br />Outra razão para realizar a otimização de sites para dispositivos móveis, é que o Google penaliza sites que não são responsivos.<br /><br />Há muito potencial num infográfico na otimização de sites. Quando você cria informações visuais de alta qualidade, você aumenta o seu tráfego web.<br /><br />Por que os usuários de busca e consumidores preferem infográficos na hora de realizar a otimização de sites?<br /><br />É porque o cérebro humano processa dados visuais 60.000 vezes mais rápido do que texto. Além disso, 65% dos usuários são aprendizes visuais. E também, 90% da informação transmitida ao cérebro humano é visual.<br /><br /><strong>Criação de infográficos:</strong><br /><a href="https://visual.ly/">https://visual.ly/</a> <br /><a href="http://www.hongkiat.com/blog/infographic-tools/">http://www.hongkiat.com/blog/infographic-tools/</a> <br /><a href="http://www.modernmarketingpartners.com/top-20-free-infographic-directories-and-submission-tips/">http://www.modernmarketingpartners.com/top-20-free-infographic-directories-and-submission-tips/</a> <br /><br />Pegue dados do seu infográfico e transforme-o em um artigo detalhado para acompanhar o gráfico.<br /><br />Um dos fatores que o Google considera ao classificar páginas da web é a Indexação semântica latente (LSI).<br /><br />LSI é uma técnica de indexação e recuperação (otimização de sites) que usa uma fórmula matemática para identificar padrões num determinado parágrafo de texto.<br /><br />O objetivo do uso LSI na otimização de sites é para dizer ao rastreador do Google para indexar seu conteúdo com base em sua intenção. LSI na otimização de sites irá essencialmente deixar seus rankings à prova de balas e entregar resultados significativos para você.<br /><br />Google espera que você mencione Bill Gates quando você está escrevendo sobre Microsoft Windows, ou “mídia social” quando você menciona Facebook e Twitter.<br /><br />Excesso de palavras-chave é quando você insere uma enorme quantidade de palavras-chave e frases que se relacionam com a palavra-chave principal. É uma má prática de SEO que você deve evitar a todo custo.<br /><br />Crie uma apresentação sobre um assunto no SlideShare e mostre ao final ou em cada seção que couber, links para seu site.<br /><br />Não deixe que suas páginas de arquivos fiquem esquecidas. Comece identificando as melhores páginas de arquivos e a criar melhores conteúdos, com base em tendências e desenvolvimentos recentes. Seu tráfego de busca irá aumentar dramaticamente.<br /><br />Escreva um título compartilhável: O passo mais crítico de todos é escrever um título que irá inspirar as pessoas a compartilharem o seu post.<br /><br />Um blog é uma poderosa ferramenta de marketing para sua marca. De acordo com Search Engine People, blogs estão entre as cinco fontes de informações mais confiáveis online. E 82% dos consumidores gostam de ler conteúdos relevantes de marcas.<br /><br />Talvez seja porque, pela sua própria natureza, blogs fornecem um toque pessoal não encontrado em outro lugar.<br /><br /><strong>Referências:</strong><br /><a href="https://neilpatel.com/br/blog/10-tecnicas-avancadas-de-seo-que-vao-dobrar-seu-trafego-de-busca/">https://neilpatel.com/br/blog/10-tecnicas-avancadas-de-seo-que-vao-dobrar-seu-trafego-de-busca/</a> <br /><a href="https://neilpatel.com/br/blog/seo-copywriting-como-escrever-conteudo-para-as-pessoas-e-otimizar-para-o-google/">https://neilpatel.com/br/blog/seo-copywriting-como-escrever-conteudo-para-as-pessoas-e-otimizar-para-o-google/</a> <br /><a href="https://www.quicksprout.com/university/how-to-use-heading-tags-to-get-more-search-engine-traffic/">https://www.quicksprout.com/university/how-to-use-heading-tags-to-get-more-search-engine-traffic/</a> <br /><a href="http://www.searchenginejournal.com/14-best-paid-search-seo-tools/118689/">http://www.searchenginejournal.com/14-best-paid-search-seo-tools/118689/</a> <br /><a href="https://www.quicksprout.com/2013/12/02/how-to-grow-your-blog-to-100000-visits-a-month-in-18-months/">https://www.quicksprout.com/2013/12/02/how-to-grow-your-blog-to-100000-visits-a-month-in-18-months/</a> <br /><a href="http://youzign.com/blog/how-to-increase-blog-traffic-using-infographics/">http://youzign.com/blog/how-to-increase-blog-traffic-using-infographics/</a> <br /><a href="http://neilpatel.com/wp-content/uploads/2015/07/SEO-Copywriting.pdf">http://neilpatel.com/wp-content/uploads/2015/07/SEO-Copywriting.pdf</a> <br /><a href="https://moz.com/beginners-guide-to-seo">https://moz.com/beginners-guide-to-seo</a> <br /><a href="https://www.quicksprout.com/the-advanced-guide-to-seo/">https://www.quicksprout.com/the-advanced-guide-to-seo/</a> <br /><a href="https://www.madfishdigital.com/blog/case-study-usability-study-audit-results-30-increase-job-application-interest/">https://www.madfishdigital.com/blog/case-study-usability-study-audit-results-30-increase-job-application-interest/</a> <br /><a href="https://moz.com/blog/visual-guide-to-keyword-targeting-onpage-optimization">https://moz.com/blog/visual-guide-to-keyword-targeting-onpage-optimization</a> <br /><a href="https://www.crazyegg.com/blog/speed-up-your-website/">https://www.crazyegg.com/blog/speed-up-your-website/</a> <br /><a href="http://conversionxl.com/11-low-hanging-fruits-for-increasing-website-speed-and-conversions/">http://conversionxl.com/11-low-hanging-fruits-for-increasing-website-speed-and-conversions/</a> <br /><a href="http://backlinko.com/google-ranking-factors">http://backlinko.com/google-ranking-factors</a> <br /><a href="https://www.conversion.com.br/otimizacao-de-sites-seo/">https://www.conversion.com.br/otimizacao-de-sites-seo/</a> <br /><a href="https://www.conversion.com.br/blog/o-que-page-layout-muda-em-seo/">https://www.conversion.com.br/blog/o-que-page-layout-muda-em-seo/</a> <br /><a href="http://blog.caelum.com.br/por-uma-web-mais-rapida-26-tecnicas-de-otimizacao-de-sites/">http://blog.caelum.com.br/por-uma-web-mais-rapida-26-tecnicas-de-otimizacao-de-sites/</a> </p>
+
+<p> </p>]]></description>
+			<category>Dicas</category>
+			<pubDate>Thu, 21 Sep 2017 15:56:37 -0300</pubDate>
+		</item>
+		<item>
+			<title>Atualizar Site em Joomla para outra Versão</title>
+			<link>http://backup/portal/joomla-3/dicas/atualizar-site-joomla.html</link>
+			<guid isPermaLink="true">http://backup/portal/joomla-3/dicas/atualizar-site-joomla.html</guid>
+			<description><![CDATA[<h2>Atualização de site com Joomla 1.5 para Joomla 3.x</h2>
+
+<p><br /><strong>Faremos em três etapas:</strong><br />- Do 1.5 para o 2.5<br />- Do 2.5 para o 3.5.1<br />- Finalmente do 3.5.1 para o 3.7.5 ou superior<br /><br />Isso será feito em um servidor local antes de ser feito no servidor em produção.<br /><br />Assegure-se de que o seu servidor local tem requisitos para o Joomla 3.x:<br /><a href="https://downloads.joomla.org/technical-requirements">https://downloads.joomla.org/technical-requirements</a> <br /><br />Antes de atualizar para o 2.5 atualize o 1.5 para a última versão estável, que é a 1.5.26, que pode ser baixada daqui:<br /><a href="https://downloads.joomla.org/cms/joomla15/1-5-26">https://downloads.joomla.org/cms/joomla15/1-5-26</a> <br /><br />Veja detalhes na página abaixo:<br /><a href="https://docs.joomla.org/S:MyLanguage/Joomla_1.5_to_3.x_Step_by_Step_Migration">https://docs.joomla.org/S:MyLanguage/Joomla_1.5_to_3.x_Step_by_Step_Migration</a> </p>
+
+<p><br /><strong>Atualizar site com Joomla 2.5 para Joomla 3.x</strong><br /><br />As novas funcionalidades do Joomla 3 são ótimas, mas isso também acarreta um trabalho extra para atualizar os sites existentes, para desfrutarem das novas funcionalidades e também para os tornar seguros.<br /><br /><strong>As principais diferenças entre o Joomla 2.5 e o 3.5 são:</strong><br /><br />Joomla 3.5                                                         Joomla 2.5<br />- Joomla 3.5 usa Bootstrap.                            Joomla 2.5 não usa Bootstrap<br />O Bootstrap torna seu site em Joomla responsive, ficando legal em dispositivos como desktop, tablets e celulares, etc.      <br />- Joomla 3.5 usa jQuery                                  Joomla 2.5 não usa jQuery<br />- Joomla 3.5 requer PHP 7                             Joomla 2.5 funcionará com PHP 5.2.4+. <br />- Joomla 3.5 requer MYSQL 5.5.3+              Joomla 2.5 funcionará com MYSQL 5.0.4+<br />- Joomla 3.5 permite que adicione módulos para artigos.    Joomla 2.5 não permite que adicione módulos para artigos<br /><br /><strong>Precisamos tomar alguns cuidados ao efetuar o upgrade do Jomla:</strong><br /><br />- Efetuar todo o processo em computador local e ao final efetuar backup para exportar para o servidor<br />- Efetuar um backup completo do site, arquivos e banco de dados (sugestão: <a href="https://github.com/ribafs/com_simplebackup">https://github.com/ribafs/com_simplebackup</a>)<br />- Verificar a existência de compatibilidades das extensões usadas com a nova versão do Joomla antes de efetuar o upgrade<br />- Verificar a compatibilidade do template do 2.5 com o novo 3.5 ou superior<br /><br /><strong>Realmente existe a necessidade de atualizar o site com 2.5 ou 1.5?</strong><br /><br />Alguns motivos para atualizar:<br />- Criar novas funcionalidades para o site<br />- Alterar o design e a navegação<br />- Tornar o site fácil de usar em mobiles<br />- Tornar o site amigável em termos de SEO<br />- Melhorar a segurança do site<br />- Para usar as melhorias de algumas extensões de terceiros, pois algumas somente suportam as últimas versões<br /><br /><strong>Boas características do Joomla 3.5:</strong><br /><br />- Joomla 3.5 suporta PHP7 e o PHP 7 executa duas vezes mais rápido que o 5.6, melhorando a performance das aplicações.<br />- O suporte a drag and drop de imagens do Joomla 3.5<br />- Possibilidade de inserir módulos em artigos do 3.5<br /><br /><strong>Passos para atualizar o site com Joomla 2.5 para o Joomla 3.x</strong><br /><br />- Backup completo do site, banco e arquivos e guarde bem guardado, de preferência mais de uma cópia.<br />- Logo em seguida faça o restore em micro local para se certificar que não houve problema no backup.<br />- Primeiro atualize para a última 2.5, que é a 2.5.28 (baixe sempre do site oficial do Joomla)<br />- Com a 2.5.28 atualizar para a 3.5.1, assim:<br />    - Componentes - Joomla! Update<br />    - Options<br />    - Update Server - Short Term Support<br />    - Salve e feche<br />- Clique em Instalar e atualizar - atualizará em duas etapas, primeiro para a versão 3.5.1 e depois para a última (3.7.5 agora)<br /><br /><strong>Extensões - Gerenciamento - Atualização - Limpar o Cache</strong><br /><br />Após o processo, caso haja necessidade verifique erros no banco de dados:<br />Extensões - Gerenciamento - Banco de dados - Corrigir erros<br /><br /><strong>Agora instale a última versão, que hoje é a 3.7.5</strong><br /><br />Testando aqui em uma instalação limpa do Joomla 2.5.28 ele atualizou sem problema para o 3.5.1 e depois deste para o 3.7.5.<br /><br />Após a atualização do Joomla para a última versão então experimente todas as extensões de terceiros instaladas, inclusive o template.<br />Caso haja necessidade, geralmente haverá, então atualize cada uma das extensões que precisem de atualização.<br /><br /><strong>Referências:</strong><br /><a href="https://www.joomdev.com/blog/entry/how-to-upgrade-joomla-2-5-to-3-x">https://www.joomdev.com/blog/entry/how-to-upgrade-joomla-2-5-to-3-x</a> <br /><a href="https://docs.joomla.org/Joomla_2.5_to_3.x_Step_by_Step_Migration/pt-br">https://docs.joomla.org/Joomla_2.5_to_3.x_Step_by_Step_Migration/pt-br</a> <br /><a href="https://www.cloudaccess.net/joomla-knowledgebase/108-joomla-3-1/maintenance/1107-upgrading-from-joomla-2-5-to-3.html">https://www.cloudaccess.net/joomla-knowledgebase/108-joomla-3-1/maintenance/1107-upgrading-from-joomla-2-5-to-3.html</a> </p>
+
+<p><strong>Como Importar Artigos do Joomla</strong></p>
+
+<p>Caso queira importar apenas os artigos, veja o artigo abaixo:<br /><a href="http://wmonline.com.br/artigos/cms/joomla/como_importar_artigos_do_joomla/26-1-0-44">http://wmonline.com.br/artigos/cms/joomla/como_importar_artigos_do_joomla/26-1-0-44</a></p>
+
+<p> </p>]]></description>
+			<category>Dicas</category>
+			<pubDate>Thu, 21 Sep 2017 15:47:22 -0300</pubDate>
+		</item>
+		<item>
+			<title>Vídeos do JOOMLADAY BRASIL</title>
+			<link>http://backup/portal/joomla-3/dicas/videos-do-joomladay-brasil.html</link>
+			<guid isPermaLink="true">http://backup/portal/joomla-3/dicas/videos-do-joomladay-brasil.html</guid>
+			<description><![CDATA[<h4>Vídeos do JOOMLADAY™ BRASIL</h4>
+
+<p>Boas informações nestes vídeos.</p>
+
+<p><br />JOOMLADAY™ BRASIL é um encontro anual sobre o CMS Joomla, subordinado ao JOOMLADAY™ internacional.<br /><br /><a href="https://www.youtube.com/user/joomladaybrasilorg">https://www.youtube.com/user/joomladaybrasilorg</a> <br /><a href="https://www.youtube.com/watch?v=lzKqirAXEMI">https://www.youtube.com/watch?v=lzKqirAXEMI</a> <br /><br />2009<br /><a href="https://www.youtube.com/watch?v=tu4Vft2laew">https://www.youtube.com/watch?v=tu4Vft2laew</a> <br /><br />2010<br /><a href="https://www.youtube.com/watch?v=e1IqKbudUKg">https://www.youtube.com/watch?v=e1IqKbudUKg</a> <br /><br />2011<br /><a href="https://www.youtube.com/watch?v=gJg7Mb3FnVM">https://www.youtube.com/watch?v=gJg7Mb3FnVM</a> <br /><br />2014<br /><a href="https://www.youtube.com/watch?v=dgNbdlndziA">https://www.youtube.com/watch?v=dgNbdlndziA</a> <br /><a href="https://www.youtube.com/watch?v=ZxGdf1Uw-LY">https://www.youtube.com/watch?v=ZxGdf1Uw-LY</a> <br /><br />2015<br /><a href="https://www.youtube.com/watch?v=AUXj17jx1Qg&amp;list=PLCQ77-EE5VTxGp2P19LHo8gYwcyn6hPbw">https://www.youtube.com/watch?v=AUXj17jx1Qg&amp;list=PLCQ77-EE5VTxGp2P19LHo8gYwcyn6hPbw</a> <br /><br />Portal Padrão<br /><a href="https://www.youtube.com/watch?v=qN8_zypqAPw">https://www.youtube.com/watch?v=qN8_zypqAPw</a> </p>
+
+<p> </p>]]></description>
+			<category>Dicas</category>
+			<pubDate>Mon, 28 Aug 2017 17:47:08 -0300</pubDate>
+		</item>
+		<item>
+			<title>Ajustes na Tradução do Joomla</title>
+			<link>http://backup/portal/joomla-3/dicas/ajustes-na-traducao-do-joomla.html</link>
+			<guid isPermaLink="true">http://backup/portal/joomla-3/dicas/ajustes-na-traducao-do-joomla.html</guid>
+			<description><![CDATA[<h4>Ajustes na Tradução do Joomla</h4>
+
+<p>Não gosto de alguns temos da tradução do Joomla como:<br /><br /><strong>Ant</strong> - quando deveria ser Anterior<br /><strong>Tema</strong> - quando gostaria que fosse Template<br /><br />Então edito os arquivos<br /><br />language/pt-BR/pt-BR.ini<br /><br />E troco <br /><br />JPREV="Anterior"<br /><br />administrator\language/pt-BR/pt-BR.com_modules.ini<br /><br />Trocar as duas ocorrências de Tema para Template<br /><br />Existem também em outros arquivos.<br /><br /></p>]]></description>
+			<category>Dicas</category>
+			<pubDate>Mon, 28 Aug 2017 17:40:30 -0300</pubDate>
+		</item>
+		<item>
+			<title>Adicionando Sufixo de Classe do Módulo Joomla</title>
+			<link>http://backup/portal/joomla-3/dicas/sufixo-classe-modulo-joomla.html</link>
+			<guid isPermaLink="true">http://backup/portal/joomla-3/dicas/sufixo-classe-modulo-joomla.html</guid>
+			<description><![CDATA[<h4>Adicionando Sufixo de Classe do Módulo</h4>
+
+<p><br />Adicionar a classe .ocultar-busca no<br /><br />Criar o arquivo (caso ainda não exista)<br />templates/purity_iii/css/custom.css<br /><br /><br />Adicionar:<br /><br />.ocultar-busca{<br />    display: none;<br />}<br /><br />Editar o módulo de busca e adicionar o Sufixo de Classe do Módulo na aba Avançado:<br /><br /> ocultar-busca<br /><br />Com um espaço em branco à esquerda.<br /><br />Alterei o<br />html/mod_footer/default.php para:<br /><br />&lt;div class="module"&gt;<br />  &lt;small&gt;&lt;?php echo $lineone; ?&gt; - &lt;a href="http://ribafs.org"&gt;http://ribafs.org&lt;/a&gt;&lt;/small&gt;<br />&lt;/div&gt;<br /><br />Tive que mudar também a linha1 do language para:<br /><br />MOD_FOOTER_LINE1="Copyright &amp;#169; %date% %sitename%. Todos os direitos reservados.&lt;a href="http://backup/portal/_QQ_"http://ribafs.org"_QQ_"&gt;http://ribafs.org&lt;/a&gt;"<br /><br />E remover as duas abaixo<br /><br /><strong>Tipografia recomendada:</strong><br /><a href="https://pearsonified.com/typography/">https://pearsonified.com/typography/</a> </p>]]></description>
+			<category>Dicas</category>
+			<pubDate>Mon, 28 Aug 2017 17:34:59 -0300</pubDate>
+		</item>
+		<item>
+			<title>Desativando Controle de Versão dos artigos do Joomla 3</title>
+			<link>http://backup/portal/joomla-3/dicas/desativar-controle-versao-joomla.html</link>
+			<guid isPermaLink="true">http://backup/portal/joomla-3/dicas/desativar-controle-versao-joomla.html</guid>
+			<description><![CDATA[<h4>Desativando Controle de Versão dos artigos do Joomla 3</h4>
+
+<p>Caso queira desabilitar o controle de versão de artigos do Joomla<br /><br />Como faço backup com frequência, desabilito.<br /><br />Então resolvi desabilitar o controle de versão jo Joomla:<br /><br />Conteúdo - Artigos - Opções<br />Clicar na aba Layout de Edição<br />Habilitar Versões - Não<br /><br /></p>]]></description>
+			<category>Dicas</category>
+			<pubDate>Mon, 28 Aug 2017 14:21:24 -0300</pubDate>
+		</item>
+		<item>
+			<title>Mostrar Error no PHP</title>
+			<link>http://backup/portal/joomla-3/dicas/mostrar-error-no-php.html</link>
+			<guid isPermaLink="true">http://backup/portal/joomla-3/dicas/mostrar-error-no-php.html</guid>
+			<description><![CDATA[<h4>Mostrar Error no PHP</h4>
+
+<p>Adicionar isso ao início do seu script para que mostre mensagens de erro.</p>
+
+<p>// Adicionar ao início do arquivo<br />ini_set('display_errors', true);<br />error_reporting(E_ALL);<br /><br />No caso de site em Joomla adicionar as linhas acima ao configuration.php, logo abaixo de &lt;?php<br /><br /></p>]]></description>
+			<category>Dicas</category>
+			<pubDate>Mon, 28 Aug 2017 14:14:00 -0300</pubDate>
+		</item>
+		<item>
+			<title>Criação de Página de erro (404) para Joomla</title>
+			<link>http://backup/portal/joomla-3/dicas/pagina-erro-404-joomla.html</link>
+			<guid isPermaLink="true">http://backup/portal/joomla-3/dicas/pagina-erro-404-joomla.html</guid>
+			<description><![CDATA[<h4>Criação de Página de erro (404) para Joomla</h4>
+
+<p><br />Para o caso de o visitante procurar uma página que não existe, então tratemos isso com uma mensagem adequada<br /><br /><strong>Criar um artigo contendo um texto para o visitante que se depara com uma página 404</strong><br /><br />Título - Página não encotnrada - 404 (outro outro título desejado)<br />Alias - 404<br />Categoria - Uncategorized<br />Opções de Metadados - No index, no follow<br /><br /><br /><strong>Criar um menu oculto</strong><br /><br />Título - Página não encontrada<br />Nome único - hiddenmenu<br />Alias - 404<br />Opções de Metadados - No index, no follow</p>
+
+<p><strong>Adicionar item de menu para o artigo criado no início</strong><br /><br /><strong>Criar arquivo error.php</strong><br /><br />templates/seutempalte/error.php<br /><br />Contendo:<br /><br /> defined( '_JEXEC' ) or die( 'Restricted access');<br /><br />if ($this-&gt;error-&gt;getCode() == '404') {<br />     header("HTTP/1.0 404 Not Found");<br />     echo file_get_contents(JURI::root().'404');<br />     exit;<br />}<br /><br /><strong>Referências:</strong><br /><a href="https://www.ostraining.com/blog/joomla/custom-404/">https://www.ostraining.com/blog/joomla/custom-404/</a> <br /><a href="https://www.ostraining.com/blog/joomla/404-pages/">https://www.ostraining.com/blog/joomla/404-pages/</a> <br /><br /></p>]]></description>
+			<category>Dicas</category>
+			<pubDate>Mon, 28 Aug 2017 14:01:48 -0300</pubDate>
+		</item>
+		<item>
+			<title>Aumentando o tamanho dos uploads no php.ini</title>
+			<link>http://backup/portal/joomla-3/dicas/aumentar-upload.html</link>
+			<guid isPermaLink="true">http://backup/portal/joomla-3/dicas/aumentar-upload.html</guid>
+			<description><![CDATA[<h4>Aumentando o tamanho dos uploads no php.ini</h4>
+
+<p><br />Caso use um site ou aplicativo em PHP e tente fazer upload de algum arquivo e receba erro e tenha como alterar o php.ini no servidor, então veja como fazer.<br /><br />Recebi o erro abaixo ao tentar instalar o componente PhocaGallery no Joomla.<br /><br />"Erro<br />Houve um erro ao carregar este arquivo para o servidor.<br />Tamanho máximo de envio de arquivo PHP é muito pequeno: isso é definido no php.ini nas configurações upload_max_filesize e post_max_size suas do PHP (localizado nos arquivos php.ini e/ou .htaccess)<br />Não foi possível encontrar o pacote de instalação"<br /><br />Alguns servidores de hospedagem oferecem a possibilidade de alterar o tamanho dos arquivos no php.ini, outros requerem solicitação de suporte.<br />Alguns oferecem a possibilidade de se criar um php.ini no raiz do site ou em qualquer dos diretórios.<br /><br />Se você tiver acesso ao servidor poderá efetuar como descrito abaixo:<br /><br />Abrir o php.ini, que no Linux Ubuntu com php 7 fica em:<br /><br />sudo nano /etc/php/7.0/apache2/php.ini<br /><br />Ou seguindo as regras do seu servidor<br /><br />Procure por upload_max_filesize (F6 no nano) e altere o valor existente para 8, assim:<br />upload_max_filesize = 8M<br /><br />Se 8 não for suficiente aumente mais. Cuidado para não exagerar pois isso compromete a segurança do servidor.<br />Se for em servidor local não requer muito cuidado, mas é melhor aumentar somente para o necessário.<br /><br />Aumentar também o post_max_size. Este mantive com 8M.<br />post_max_size = 8M<br /><br />Restartar o apache<br />sudo service apache2 restart<br /><br />Com isso foi suficiente para instalar o PhocaGallery.</p>
+
+<p> </p>]]></description>
+			<category>Dicas</category>
+			<pubDate>Mon, 28 Aug 2017 13:31:53 -0300</pubDate>
+		</item>
+		<item>
+			<title>Upgrade do Joomla</title>
+			<link>http://backup/portal/joomla-3/dicas/upgrade-do-joomla.html</link>
+			<guid isPermaLink="true">http://backup/portal/joomla-3/dicas/upgrade-do-joomla.html</guid>
+			<description><![CDATA[<h4>Upgrade do Joomla 1.5 ou 2.5 para o 3.x</h4>
+
+<p>A equipe do Joomla liberou tutoriais de upgrade do Joomla.</p>
+
+<p><strong>Do Joomla 1.5 para o 3.x</strong><br /><a href="https://docs.joomla.org/Special:MyLanguage/Joomla_1.5_to_3.x_Step_by_Step_Migration">https://docs.joomla.org/Special:MyLanguage/Joomla_1.5_to_3.x_Step_by_Step_Migration<br /></a>Em pt-br - <a href="https://docs.joomla.org/Joomla_1.5_to_3.x_Step_by_Step_Migration/pt-br">https://docs.joomla.org/Joomla_1.5_to_3.x_Step_by_Step_Migration/pt-br</a></p>
+
+<p><strong>E do Joomla 2.5 para o 3.x</strong><br /><a href="https://docs.joomla.org/Special:MyLanguage/Joomla_2.5_to_3.x_Step_by_Step_Migration">https://docs.joomla.org/Special:MyLanguage/Joomla_2.5_to_3.x_Step_by_Step_Migration<br /></a>Em pt-br - <a href="https://docs.joomla.org/Joomla_2.5_to_3.x_Step_by_Step_Migration/pt-br">https://docs.joomla.org/Joomla_2.5_to_3.x_Step_by_Step_Migration/pt-br</a></p>
+
+<p> </p>
+
+<p> </p>]]></description>
+			<category>Dicas</category>
+			<pubDate>Thu, 17 Aug 2017 13:41:02 -0300</pubDate>
+		</item>
+		<item>
+			<title>Melhorando a velocidade do site</title>
+			<link>http://backup/portal/joomla-3/dicas/melhorando-a-velocidade-do-site.html</link>
+			<guid isPermaLink="true">http://backup/portal/joomla-3/dicas/melhorando-a-velocidade-do-site.html</guid>
+			<description><![CDATA[<h4>Melhorando a velocidade do site</h4>
+
+
+<p> </p>
+
+
+<p>Desempenho é algo realmente importante.</p>
+
+
+<p>Ficar esperando o site abrir é bem chato.</p>
+
+
+<p>Veja algumas dicas sobre o assunto:</p>
+
+
+<p><a href="https://blog.hostgator.com.br/site-lento-como-resolver/" target="_blank" rel="noopener noreferrer">https://blog.hostgator.com.br/site-lento-como-resolver/</a><a href="http://www.conversion.com.br/blog/7-dicas-velocidade-wordpress/" target="_blank" rel="noopener noreferrer"><br /></a><a title="http://www.conversion.com.br/blog/7-dicas-velocidade-wordpress/" href="http://www.conversion.com.br/blog/7-dicas-velocidade-wordpress/" target="_blank" rel="noopener noreferrer">http://www.conversion.com.br/blog/7-dicas-velocidade-wordpress/</a><br /><a href="https://www.wptotal.com/como-optimizar-site-aumentar-velocidade-carregamento/" target="_blank" rel="noopener noreferrer">https://www.wptotal.com/como-optimizar-site-aumentar-velocidade-carregamento/</a><a href="http://k2comunicacao.com.br/blogs/como-melhorar-a-velocidade-de-carregamento-do-seu-site/"><br /></a><a title="http://k2comunicacao.com.br/blogs/como-melhorar-a-velocidade-de-carregamento-do-seu-site/" href="http://k2comunicacao.com.br/blogs/como-melhorar-a-velocidade-de-carregamento-do-seu-site/" target="_blank" rel="noopener noreferrer">http://k2comunicacao.com.br/blogs/como-melhorar-a-velocidade-de-carregamento-do-seu-site/</a><br /><a href="http://rotinadigital.net/como-aumentar-a-velocidade-de-sites-e-blogs-em-200-facilmente/" target="_blank" rel="noopener noreferrer">http://rotinadigital.net/como-aumentar-a-velocidade-de-sites-e-blogs-em-200-facilmente/</a><br /><a href="http://www.superix.com.br/blog/70-saiba-como-melhorar-a-velocidade-e-a-performance-de-seu-site" target="_blank" rel="noopener noreferrer">http://www.superix.com.br/blog/70-saiba-como-melhorar-a-velocidade-e-a-performance-de-seu-site</a> <br /><br />Ative o cache nos sites com Joomla.</p>
+
+
+<p>Evite guardar imagens no banco de dados.</p>]]></description>
+			<category>Dicas</category>
+			<pubDate>Mon, 24 Jul 2017 11:30:38 -0300</pubDate>
+		</item>
+		<item>
+			<title>Como importar banco grande com MySQL</title>
+			<link>http://backup/portal/joomla-3/dicas/importar-bancos-grandes-mysql.html</link>
+			<guid isPermaLink="true">http://backup/portal/joomla-3/dicas/importar-bancos-grandes-mysql.html</guid>
+			<description><![CDATA[<h4 style="text-align: justify;">Como importar banco grande com MySQL</h4>
+
+<p style="text-align: justify;"><br />O banco de dados deste site (Joomla com MySQL), no qual inseri várias imagens e que está com 46MB.<br /><br />Então ao importar seu script para restaurar localmente ele importava somente algumas tabelas e apresentava o erro<br />Mysql Server has gone away</p>
+
+<p style="text-align: justify;">Importei pela linha de comando (baixei o script, criei o banco):</p>
+
+<p style="text-align: justify;">mysql -uroot -p ribafs &lt; portal.sql<br /><br />Uma rápida busca encontrei a resposta neste site:<br /><a href="https://piwik.org/faq/troubleshooting/faq_183/">https://piwik.org/faq/troubleshooting/faq_183/</a> <br /><br />Apenas editei o arquivo abaixo:<br />sudo nano /etc/mysql/mysql.conf.d/mysqld.cnf<br /><br />Aumentei o valor do parâmetro:<br />max_allowed_packet     para 128<br /><br />E reiniciei o serviço do mysql.<br /><br />Beleza. Consegui importar.</p>
+
+<p style="text-align: justify;"> </p>]]></description>
+			<category>Dicas</category>
+			<pubDate>Sun, 23 Jul 2017 21:34:10 -0300</pubDate>
+		</item>
+		<item>
+			<title>Evite armazenar imagens no banco de dados</title>
+			<link>http://backup/portal/joomla-3/dicas/imagens-banco.html</link>
+			<guid isPermaLink="true">http://backup/portal/joomla-3/dicas/imagens-banco.html</guid>
+			<description><![CDATA[<h4 style="text-align: justify;">Evite armazenar imagens no banco de dados</h4>
+
+<p style="text-align: justify;"><br />O Joomla nos oferece muitas facilidades. Para inserir uma imagem em um artigo podemos enviar o arquivo da imagem para o site e fazer referência ao mesmo no artigo. Desta forma a imagem ficará guardada junto aos arquivos do site e apenas seu caminho vai para o banco de dados.</p>
+
+<p style="text-align: justify;">Também podemos ter um documento do Word ou Libre Office Writer contendo texto e imagens. Basta copiar todo o documento e colar no artigo do Joomla que todo o conteúdo irá para o artigo, texto e imagens. Desta forma tanto o exto quanto as imagens irão para o banco de dados. Sendo um pequeno artigo, com poucas imagens pequenas não haverá problema, mas se criarmos vários artigos, cada um contendo várias imagens desta forma, que irão para o banco de dados, então poderemos ter problemas.</p>
+
+<p style="text-align: justify;">Tive problemas com este site, por enviar vários artigos assim. O banco cresce muito e alguns artigos chegam a nem abrir no site. O navegador fica tentanto, tentando e não abre.</p>
+
+<p style="text-align: justify;">Também cheguei a receber uma mensagem de erro em um que tinha muitas imagens:</p>
+
+<p style="text-align: justify;"><strong>limit reached (pcre.backtrack_limit)</strong></p>
+
+<p style="text-align: justify;">Bastou remover as imagens do banco de dados e inserir como arquivos que tudo foi resolvido.</p>
+
+<p style="text-align: justify;"> </p>]]></description>
+			<category>Dicas</category>
+			<pubDate>Sun, 23 Jul 2017 00:55:22 -0300</pubDate>
+		</item>
+		<item>
+			<title>Hospedagem Free para Joomla</title>
+			<link>http://backup/portal/joomla-3/dicas/hospedagem-free-para-joomla.html</link>
+			<guid isPermaLink="true">http://backup/portal/joomla-3/dicas/hospedagem-free-para-joomla.html</guid>
+			<description><![CDATA[<h4><strong>Hospedagem Grátis para PHP e MySQL</strong></h4>
+
+
+<p>Como é uma hospedagem para php e mysql, então pode ser usada para a criação de sites com Joomla, Wordpress, Drupal, CakePHP, Laravel ou qualquer outro software que use PHP.</p>
+
+
+<p>O que me chamou a atenção nesta hoepedagem foi o software de gerenciamento de arquivos, que me permitiu enviar o zip do Joomla de uma única vez.</p>
+
+
+<p>Geralmente as hospedagens free não permitem enviar um arquivo além de 5MB.</p>
+
+
+<p>Estou fazendo isso por conhecer as dificuldades de se encontrar uma boa hospedagem free.</p>
+
+
+<p>Esta permite que utilizemos nosso domínio ou que usemos um subdomínio.</p>
+
+
+<p><strong>Hospedagem</strong></p>
+
+
+<p><a href="https://www.000webhost.com/">https://www.000webhost.com/</a></p>
+
+
+<p><strong>Principais características:</strong></p>
+
+
+<p>- 1GB de espaço em disco<br />- 2 bancos do MySQL<br />- 5 e-mails<br />- Hospedagem de domínio ou subdomínio</p>
+
+
+<p><br /><strong>SSL no Administrator</strong></p>
+
+
+<p>Como vi que o subdomínio roda com HTTPS, suspeitei de que meu domínio poderia usar também HTTPS. Como só me interessa isso no administrator, experimentei e funcionou. Agora meu administrator usa HTTPS.<br />Isso valoriza ainda mais esta hospedagem.</p>
+
+
+<p><strong>Problema</strong></p>
+
+
+<p>Quando criei meu site para lá e mudei meu domínio tive um problema: não conseguia mais acessar com ribafs.org, somente com <a href="http://www.ribafs.org">www.ribafs.org</a>.</p>
+
+
+<p>Depois de uma rápida pesquisa encontrei a solução e agora acessa com apenas ribafs.org:</p>
+
+
+<p>Adicionar ao .htaccess do raiz do site:<br /><br />RewriteEngine On<br />RewriteCond %{HTTP_HOST} ^www\.ribafs\.org$ [NC]<br />RewriteRule ^(.*)$ http://ribafs.org/$1 [R=301,L]<br /><br />Crédito:<br /><a href="https://julianoaugusto.com/noticias/33-programe-seu-site-para-nao-usar-www">https://julianoaugusto.com/noticias/33-programe-seu-site-para-nao-usar-www</a></p>
+
+
+<p><strong>Alerta</strong>: não é uma hospedagem para sites com muito tráfego. Este site estava no 000webhost e travava algumas vezes. Então resolvi pagar uma hospedagem e tirar meu site dele.</p>
+
+
+<p> </p>]]></description>
+			<category>Dicas</category>
+			<pubDate>Thu, 13 Jul 2017 11:42:12 -0300</pubDate>
+		</item>
+		<item>
+			<title>Inserindo código em Artigos</title>
+			<link>http://backup/portal/joomla-3/dicas/inserindo-codigo-em-artigos.html</link>
+			<guid isPermaLink="true">http://backup/portal/joomla-3/dicas/inserindo-codigo-em-artigos.html</guid>
+			<description><![CDATA[<p><strong>Inserindo Código em Artigos</strong></p>
+
+
+<p> </p>
+
+
+<p>A forma mais simples de inserir trechos de código (programação em várias linguagens) em artigos do Joomla é usando o botão <strong>{;} (Inserir/Editar Código de Exemplo) </strong>do editor padrão, TinyMCE.</p>
+
+
+<p> </p>]]></description>
+			<category>Dicas</category>
+			<pubDate>Wed, 12 Jul 2017 09:57:44 -0300</pubDate>
+		</item>
+		<item>
+			<title>Joomla - Referências</title>
+			<link>http://backup/portal/joomla-3/dicas/joomla-referencias.html</link>
+			<guid isPermaLink="true">http://backup/portal/joomla-3/dicas/joomla-referencias.html</guid>
+			<description><![CDATA[<p><strong>Joomla - Referências</strong></p>
+
+
+<p>Alguns bons e ótimos sites com informações sobre o Joomla:</p>
+
+
+<p>Joomla Tutorial - <a href="https://www.tutorialspoint.com/joomla/index.htm">https://www.tutorialspoint.com/joomla/index.htm</a></p>
+
+
+<p><a href="https://www.siteground.com/tutorials/joomla/">https://www.siteground.com/tutorials/joomla/</a></p>
+
+
+<p><a href="https://www.hostnet.com.br/wiki/index.php/Tutorial_Joomla">https://www.hostnet.com.br/wiki/index.php/Tutorial_Joomla</a></p>
+
+
+<p><a href="https://www.joomlatutorials.com/">https://www.joomlatutorials.com/</a></p>
+
+
+<p><a href="http://www.joomlablogger.net/joomla-tutorials">http://www.joomlablogger.net/joomla-tutorials</a></p>
+
+
+<p> </p>]]></description>
+			<category>Dicas</category>
+			<pubDate>Mon, 26 Jun 2017 14:08:06 -0300</pubDate>
+		</item>
+	</channel>
+</rss>

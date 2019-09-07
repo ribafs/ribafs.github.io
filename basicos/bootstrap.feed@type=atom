@@ -1,0 +1,748 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="Joomla! - Open Source Content Management" -->
+<feed xmlns="http://www.w3.org/2005/Atom"  xml:lang="pt-br">
+	<title type="text">Bootstrap - RibaFS Portal</title>
+	<subtitle type="text">Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros.</subtitle>
+	<link rel="alternate" type="text/html" href="http://backup"/>
+	<id>http://backup/portal/basicos/bootstrap.feed</id>
+	<updated>2019-09-07T18:49:54-03:00</updated>
+	<author>
+		<name>RibaFS Portal</name>
+	</author>
+	<generator uri="https://www.joomla.org">Joomla! - Open Source Content Management</generator>
+	<link rel="self" type="application/atom+xml" href="http://backup/portal/basicos/bootstrap.feed?type=atom"/>
+	<entry>
+		<title>Introdução ao BootStrap</title>
+		<link rel="alternate" type="text/html" href="http://backup/portal/basicos/bootstrap/introducao-ao-bootstrap.html"/>
+		<published>2017-06-23T10:40:21-03:00</published>
+		<updated>2017-06-23T10:40:21-03:00</updated>
+		<id>http://backup/portal/basicos/bootstrap/introducao-ao-bootstrap.html</id>
+		<author>
+			<name>Ribamar FS</name>
+		</author>
+		<summary type="html">&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Framework Bootstrap&lt;br /&gt;&lt;br /&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;O framework Bootstrap foi criado pela equipe do Twitter e liberado como open source para a comunidade. É muito popular atualmente e facilita o trabalho do web designer, pois lida muito bem com o CSS e o JavaScript.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Seus recursos e facilidades o lavaram à popularidade atual.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Download&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;a href=&quot;http://getbootstrap.com/getting-started/#download&quot; target=&quot;_blank&quot; rel=&quot;alternate noopener noreferrer&quot;&gt;http://getbootstrap.com/getting-started/#download&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Veja agora duas páginas, uma sem e outra com o CSS via Bootstrap&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Com o Bootstrap&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;img src=&quot;http://backup/portal/images/bs1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt; &lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Agora sem&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;img src=&quot;http://backup/portal/images/bs2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</summary>
+		<content type="html">&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Framework Bootstrap&lt;br /&gt;&lt;br /&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;O framework Bootstrap foi criado pela equipe do Twitter e liberado como open source para a comunidade. É muito popular atualmente e facilita o trabalho do web designer, pois lida muito bem com o CSS e o JavaScript.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Seus recursos e facilidades o lavaram à popularidade atual.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Download&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;a href=&quot;http://getbootstrap.com/getting-started/#download&quot; target=&quot;_blank&quot; rel=&quot;alternate noopener noreferrer&quot;&gt;http://getbootstrap.com/getting-started/#download&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Veja agora duas páginas, uma sem e outra com o CSS via Bootstrap&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Com o Bootstrap&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;img src=&quot;http://backup/portal/images/bs1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt; &lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Agora sem&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;img src=&quot;http://backup/portal/images/bs2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content>
+		<category term="Bootstrap" />
+	</entry>
+	<entry>
+		<title>Usando o Bootstrap</title>
+		<link rel="alternate" type="text/html" href="http://backup/portal/basicos/bootstrap/usando-o-bootstrap.html"/>
+		<published>2017-06-23T10:40:21-03:00</published>
+		<updated>2017-06-23T10:40:21-03:00</updated>
+		<id>http://backup/portal/basicos/bootstrap/usando-o-bootstrap.html</id>
+		<author>
+			<name>Ribamar FS</name>
+		</author>
+		<summary type="html">&lt;pre class=&quot;language-markup&quot;&gt;&lt;code&gt;Classes básicas para aplicação do Bootstrap
+
+
+
+O simples fato de adicionar o CSS no template já altera vários aspectos
+
+
+
+Acessar - http://getbootstrap.com/getting-started/#download e copiar o código CDN
+
+
+
+&amp;lt;!doctype html&amp;gt;
+
+&amp;lt;html lang=&quot;en&quot;&amp;gt;
+
+&amp;lt;head&amp;gt;
+
+&amp;lt;meta charset=&quot;UTF-8&quot;&amp;gt;
+
+    &amp;lt;title&amp;gt;Produtos&amp;lt;/title&amp;gt;
+
+        &amp;lt;link rel=&quot;stylesheet&quot; href=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css&quot; integrity=&quot;sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u&quot; crossorigin=&quot;anonymous&quot;&amp;gt;
+
+
+
+Uma ótima ideia é usar os Glyphicons do bootstrap.
+
+
+
+&amp;lt;/head&amp;gt;
+
+
+
+Tabela
+
+ &amp;lt;table class=&quot;table table-striped table-bordered table-hover&quot;&amp;gt;
+
+
+
+Botões
+
+class=&quot;btn btn-primary&quot;
+
+class=&quot;btn btn-warning&quot;
+
+
+
+Form
+
+default - width: 100%;
+
+Em label usar form-group
+
+  &amp;lt;div class=&quot;form-group&quot;&amp;gt;
+
+    &amp;lt;label for=&quot;Password&quot;&amp;gt;Password&amp;lt;/label&amp;gt;
+
+    &amp;lt;input type=&quot;password&quot; class=&quot;form-control&quot; id=&quot;Password&quot; placeholder=&quot;Password&quot;&amp;gt;
+
+  &amp;lt;/div&amp;gt;
+
+
+
+Tamanho de campos com as classes, sem form-control
+
+input-sm
+
+input-lg
+
+input
+
+
+
+/* Set widths on the form inputs since otherwise they're 100% wide */
+
+input[type=&quot;text&quot;],
+
+input[type=&quot;password&quot;],
+
+input[type=&quot;email&quot;],
+
+input[type=&quot;tel&quot;],
+
+input[type=&quot;select&quot;] {
+
+    max-width: 280px;
+
+}
+
+
+
+Horizontal form
+
+&amp;lt;form class=&quot;form-horizontal&quot;&amp;gt;
+
+
+
+Em Cada campo
+
+class=&quot;form-control&quot;
+
+
+
+&amp;lt;textarea class=&quot;form-control&quot; rows=&quot;3&quot;&amp;gt;&amp;lt;/textarea&amp;gt;
+
+
+
+Checkbox e radio
+
+
+
+&amp;lt;div class=&quot;checkbox&quot;&amp;gt;
+
+  &amp;lt;label&amp;gt;
+
+    &amp;lt;input type=&quot;checkbox&quot; value=&quot;&quot;&amp;gt;
+
+    Option one is this and that&amp;amp;mdash;be sure to include why it's great
+
+  &amp;lt;/label&amp;gt;
+
+&amp;lt;/div&amp;gt;
+
+&amp;lt;div class=&quot;checkbox disabled&quot;&amp;gt;
+
+  &amp;lt;label&amp;gt;
+
+    &amp;lt;input type=&quot;checkbox&quot; value=&quot;&quot; disabled&amp;gt;
+
+    Option two is disabled
+
+  &amp;lt;/label&amp;gt;
+
+&amp;lt;/div&amp;gt;
+
+
+
+&amp;lt;div class=&quot;radio&quot;&amp;gt;
+
+  &amp;lt;label&amp;gt;
+
+    &amp;lt;input type=&quot;radio&quot; name=&quot;optionsRadios&quot; id=&quot;optionsRadios1&quot; value=&quot;option1&quot; checked&amp;gt;
+
+    Option one is this and that&amp;amp;mdash;be sure to include why it's great
+
+  &amp;lt;/label&amp;gt;
+
+&amp;lt;/div&amp;gt;
+
+&amp;lt;div class=&quot;radio&quot;&amp;gt;
+
+  &amp;lt;label&amp;gt;
+
+    &amp;lt;input type=&quot;radio&quot; name=&quot;optionsRadios&quot; id=&quot;optionsRadios2&quot; value=&quot;option2&quot;&amp;gt;
+
+    Option two can be something else and selecting it will deselect option one
+
+  &amp;lt;/label&amp;gt;
+
+&amp;lt;/div&amp;gt;
+
+&amp;lt;div class=&quot;radio disabled&quot;&amp;gt;
+
+  &amp;lt;label&amp;gt;
+
+    &amp;lt;input type=&quot;radio&quot; name=&quot;optionsRadios&quot; id=&quot;optionsRadios3&quot; value=&quot;option3&quot; disabled&amp;gt;
+
+    Option three is disabled
+
+  &amp;lt;/label&amp;gt;
+
+&amp;lt;/div&amp;gt;
+
+
+
+Linha da Grid
+
+class=&quot;row&quot;
+
+
+
+Grid - 3 colunas
+
+class=&quot;col-sm-3&quot;
+
+
+
+Propaganda
+
+id=&quot;advertisement&quot;
+
+
+
+Exemplo de Uso
+
+
+
+Adaptado de uma view de aplicativo Laravel
+
+
+
+    &amp;lt;div class=&quot;container&quot;&amp;gt;
+
+        &amp;lt;div class=&quot;row&quot;&amp;gt;
+
+ 
+
+            &amp;lt;div class=&quot;col-md-9&quot;&amp;gt;
+
+                &amp;lt;div class=&quot;panel panel-default&quot;&amp;gt;
+
+                    &amp;lt;div class=&quot;panel-heading&quot;&amp;gt;Clientes&amp;lt;/div&amp;gt;
+
+                    &amp;lt;div class=&quot;panel-body&quot;&amp;gt;
+
+                        &amp;lt;a href=&quot;http://backup/portal//clientes/create&quot; class=&quot;btn btn-success btn-sm&quot; title=&quot;Add New Cliente&quot;&amp;gt;
+
+                            &amp;lt;i class=&quot;fa fa-plus&quot; aria-hidden=&quot;true&quot;&amp;gt;&amp;lt;/i&amp;gt; Add New
+
+                        &amp;lt;/a&amp;gt;&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp;
+
+                        &amp;lt;a href=&quot;http://backup/portal//&quot; class=&quot;btn btn-success btn-sm&quot; title=&quot;Menu Principal&quot;&amp;gt;
+
+                            &amp;lt;i class=&quot;fa fa-bars&quot; aria-hidden=&quot;true&quot;&amp;gt;&amp;lt;/i&amp;gt; Menu Principal
+
+                        &amp;lt;/a&amp;gt;
+
+ 
+
+                        &amp;lt;form action=&quot;/clientes&quot; class= &quot;navbar-form navbar-right&quot;&amp;gt;
+
+                        &amp;lt;div class=&quot;input-group&quot;&amp;gt;
+
+                            &amp;lt;input type=&quot;text&quot; class=&quot;form-control&quot; name=&quot;search&quot; placeholder=&quot;Search...&quot;&amp;gt;
+
+                            &amp;lt;span class=&quot;input-group-btn&quot;&amp;gt;
+
+                                &amp;lt;button class=&quot;btn btn-default&quot; type=&quot;submit&quot;&amp;gt;
+
+                                    &amp;lt;i class=&quot;fa fa-search&quot;&amp;gt;&amp;lt;/i&amp;gt;
+
+                                &amp;lt;/button&amp;gt;
+
+                            &amp;lt;/span&amp;gt;
+
+                        &amp;lt;/div&amp;gt;
+
+                        &amp;lt;/form&amp;gt;
+
+ 
+
+                        &amp;lt;br/&amp;gt;
+
+                        &amp;lt;br/&amp;gt;
+
+                        &amp;lt;div class=&quot;table-responsive&quot;&amp;gt;
+
+                            &amp;lt;table class=&quot;table table-borderless&quot;&amp;gt;
+
+                                &amp;lt;thead&amp;gt;
+
+                                    &amp;lt;tr&amp;gt;
+
+                                        &amp;lt;th&amp;gt;ID&amp;lt;/th&amp;gt;&amp;lt;th&amp;gt;Nome&amp;lt;/th&amp;gt;&amp;lt;th&amp;gt;Cpf&amp;lt;/th&amp;gt;&amp;lt;th&amp;gt;Nascimento&amp;lt;/th&amp;gt;&amp;lt;th&amp;gt;Actions&amp;lt;/th&amp;gt;
+
+                                    &amp;lt;/tr&amp;gt;
+
+                                &amp;lt;/thead&amp;gt;
+
+                                &amp;lt;tbody&amp;gt;
+
+                                &amp;lt;?php foreach($clientes as $item){
+
+                                    &amp;lt;tr&amp;gt;
+
+                                        &amp;lt;td&amp;gt;{{ $item-&amp;gt;id }}&amp;lt;/td&amp;gt;
+
+                                        &amp;lt;td&amp;gt;{{ $item-&amp;gt;nome }}&amp;lt;/td&amp;gt;&amp;lt;td&amp;gt;{{ $item-&amp;gt;cpf }}&amp;lt;/td&amp;gt;&amp;lt;td&amp;gt;{{ $item-&amp;gt;nascimento }}&amp;lt;/td&amp;gt;
+
+                                        &amp;lt;td&amp;gt;
+
+                                            &amp;lt;a href=&quot;http://backup/portal/{{ url('/clientes/' . $item-&amp;gt;id) }}&quot; title=&quot;View Cliente&quot;&amp;gt;&amp;lt;button class=&quot;btn btn-info btn-xs&quot;&amp;gt;&amp;lt;i class=&quot;glyphicon glyphicon-eye-open&quot;&amp;gt;&amp;lt;/i&amp;gt; View&amp;lt;/button&amp;gt;&amp;lt;/a&amp;gt;
+
+                                            &amp;lt;a href=&quot;http://backup/portal/{{ url('/clientes/' . $item-&amp;gt;id . '/edit') }}&quot; title=&quot;Edit Cliente&quot;&amp;gt;&amp;lt;button class=&quot;btn btn-primary btn-xs&quot;&amp;gt;&amp;lt;i class=&quot;glyphicon glyphicon-edit&quot;&amp;gt;&amp;lt;/i&amp;gt; Edit&amp;lt;/button&amp;gt;&amp;lt;/a&amp;gt;
+
+
+
+                                            &amp;lt;form
+
+                                                method ='DELETE',
+
+                                                action = &quot;'/clientes', $item-&amp;gt;id&quot;
+
+                                                style = 'display:inline'
+
+                                            &amp;gt;
+
+                                                &amp;lt;button&amp;gt; &amp;lt;i class=&quot;glyphicon glyphicon-trash&quot;&amp;gt;&amp;lt;/i&amp;gt; Delete'
+
+                                                        type = 'submit'
+
+                                                        class = 'btn btn-danger btn-xs'
+
+                                                        title = 'Delete Cliente'
+
+                                                        onclick ='return confirm(&quot;Confirm delete?&quot;)'
+
+                                                &amp;lt;/button&amp;gt;
+
+                                            &amp;lt;/form&amp;gt;
+
+                                        &amp;lt;/td&amp;gt;
+
+                                    &amp;lt;/tr&amp;gt;
+
+                                }?&amp;gt;
+
+                                &amp;lt;/tbody&amp;gt;
+
+                            &amp;lt;/table&amp;gt;
+
+                        &amp;lt;/div&amp;gt;
+
+ 
+
+                    &amp;lt;/div&amp;gt;
+
+                &amp;lt;/div&amp;gt;
+
+            &amp;lt;/div&amp;gt;
+
+        &amp;lt;/div&amp;gt;
+
+    &amp;lt;/div&amp;gt;&lt;/code&gt;&lt;/pre&gt;</summary>
+		<content type="html">&lt;pre class=&quot;language-markup&quot;&gt;&lt;code&gt;Classes básicas para aplicação do Bootstrap
+
+
+
+O simples fato de adicionar o CSS no template já altera vários aspectos
+
+
+
+Acessar - http://getbootstrap.com/getting-started/#download e copiar o código CDN
+
+
+
+&amp;lt;!doctype html&amp;gt;
+
+&amp;lt;html lang=&quot;en&quot;&amp;gt;
+
+&amp;lt;head&amp;gt;
+
+&amp;lt;meta charset=&quot;UTF-8&quot;&amp;gt;
+
+    &amp;lt;title&amp;gt;Produtos&amp;lt;/title&amp;gt;
+
+        &amp;lt;link rel=&quot;stylesheet&quot; href=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css&quot; integrity=&quot;sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u&quot; crossorigin=&quot;anonymous&quot;&amp;gt;
+
+
+
+Uma ótima ideia é usar os Glyphicons do bootstrap.
+
+
+
+&amp;lt;/head&amp;gt;
+
+
+
+Tabela
+
+ &amp;lt;table class=&quot;table table-striped table-bordered table-hover&quot;&amp;gt;
+
+
+
+Botões
+
+class=&quot;btn btn-primary&quot;
+
+class=&quot;btn btn-warning&quot;
+
+
+
+Form
+
+default - width: 100%;
+
+Em label usar form-group
+
+  &amp;lt;div class=&quot;form-group&quot;&amp;gt;
+
+    &amp;lt;label for=&quot;Password&quot;&amp;gt;Password&amp;lt;/label&amp;gt;
+
+    &amp;lt;input type=&quot;password&quot; class=&quot;form-control&quot; id=&quot;Password&quot; placeholder=&quot;Password&quot;&amp;gt;
+
+  &amp;lt;/div&amp;gt;
+
+
+
+Tamanho de campos com as classes, sem form-control
+
+input-sm
+
+input-lg
+
+input
+
+
+
+/* Set widths on the form inputs since otherwise they're 100% wide */
+
+input[type=&quot;text&quot;],
+
+input[type=&quot;password&quot;],
+
+input[type=&quot;email&quot;],
+
+input[type=&quot;tel&quot;],
+
+input[type=&quot;select&quot;] {
+
+    max-width: 280px;
+
+}
+
+
+
+Horizontal form
+
+&amp;lt;form class=&quot;form-horizontal&quot;&amp;gt;
+
+
+
+Em Cada campo
+
+class=&quot;form-control&quot;
+
+
+
+&amp;lt;textarea class=&quot;form-control&quot; rows=&quot;3&quot;&amp;gt;&amp;lt;/textarea&amp;gt;
+
+
+
+Checkbox e radio
+
+
+
+&amp;lt;div class=&quot;checkbox&quot;&amp;gt;
+
+  &amp;lt;label&amp;gt;
+
+    &amp;lt;input type=&quot;checkbox&quot; value=&quot;&quot;&amp;gt;
+
+    Option one is this and that&amp;amp;mdash;be sure to include why it's great
+
+  &amp;lt;/label&amp;gt;
+
+&amp;lt;/div&amp;gt;
+
+&amp;lt;div class=&quot;checkbox disabled&quot;&amp;gt;
+
+  &amp;lt;label&amp;gt;
+
+    &amp;lt;input type=&quot;checkbox&quot; value=&quot;&quot; disabled&amp;gt;
+
+    Option two is disabled
+
+  &amp;lt;/label&amp;gt;
+
+&amp;lt;/div&amp;gt;
+
+
+
+&amp;lt;div class=&quot;radio&quot;&amp;gt;
+
+  &amp;lt;label&amp;gt;
+
+    &amp;lt;input type=&quot;radio&quot; name=&quot;optionsRadios&quot; id=&quot;optionsRadios1&quot; value=&quot;option1&quot; checked&amp;gt;
+
+    Option one is this and that&amp;amp;mdash;be sure to include why it's great
+
+  &amp;lt;/label&amp;gt;
+
+&amp;lt;/div&amp;gt;
+
+&amp;lt;div class=&quot;radio&quot;&amp;gt;
+
+  &amp;lt;label&amp;gt;
+
+    &amp;lt;input type=&quot;radio&quot; name=&quot;optionsRadios&quot; id=&quot;optionsRadios2&quot; value=&quot;option2&quot;&amp;gt;
+
+    Option two can be something else and selecting it will deselect option one
+
+  &amp;lt;/label&amp;gt;
+
+&amp;lt;/div&amp;gt;
+
+&amp;lt;div class=&quot;radio disabled&quot;&amp;gt;
+
+  &amp;lt;label&amp;gt;
+
+    &amp;lt;input type=&quot;radio&quot; name=&quot;optionsRadios&quot; id=&quot;optionsRadios3&quot; value=&quot;option3&quot; disabled&amp;gt;
+
+    Option three is disabled
+
+  &amp;lt;/label&amp;gt;
+
+&amp;lt;/div&amp;gt;
+
+
+
+Linha da Grid
+
+class=&quot;row&quot;
+
+
+
+Grid - 3 colunas
+
+class=&quot;col-sm-3&quot;
+
+
+
+Propaganda
+
+id=&quot;advertisement&quot;
+
+
+
+Exemplo de Uso
+
+
+
+Adaptado de uma view de aplicativo Laravel
+
+
+
+    &amp;lt;div class=&quot;container&quot;&amp;gt;
+
+        &amp;lt;div class=&quot;row&quot;&amp;gt;
+
+ 
+
+            &amp;lt;div class=&quot;col-md-9&quot;&amp;gt;
+
+                &amp;lt;div class=&quot;panel panel-default&quot;&amp;gt;
+
+                    &amp;lt;div class=&quot;panel-heading&quot;&amp;gt;Clientes&amp;lt;/div&amp;gt;
+
+                    &amp;lt;div class=&quot;panel-body&quot;&amp;gt;
+
+                        &amp;lt;a href=&quot;http://backup/portal//clientes/create&quot; class=&quot;btn btn-success btn-sm&quot; title=&quot;Add New Cliente&quot;&amp;gt;
+
+                            &amp;lt;i class=&quot;fa fa-plus&quot; aria-hidden=&quot;true&quot;&amp;gt;&amp;lt;/i&amp;gt; Add New
+
+                        &amp;lt;/a&amp;gt;&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp;
+
+                        &amp;lt;a href=&quot;http://backup/portal//&quot; class=&quot;btn btn-success btn-sm&quot; title=&quot;Menu Principal&quot;&amp;gt;
+
+                            &amp;lt;i class=&quot;fa fa-bars&quot; aria-hidden=&quot;true&quot;&amp;gt;&amp;lt;/i&amp;gt; Menu Principal
+
+                        &amp;lt;/a&amp;gt;
+
+ 
+
+                        &amp;lt;form action=&quot;/clientes&quot; class= &quot;navbar-form navbar-right&quot;&amp;gt;
+
+                        &amp;lt;div class=&quot;input-group&quot;&amp;gt;
+
+                            &amp;lt;input type=&quot;text&quot; class=&quot;form-control&quot; name=&quot;search&quot; placeholder=&quot;Search...&quot;&amp;gt;
+
+                            &amp;lt;span class=&quot;input-group-btn&quot;&amp;gt;
+
+                                &amp;lt;button class=&quot;btn btn-default&quot; type=&quot;submit&quot;&amp;gt;
+
+                                    &amp;lt;i class=&quot;fa fa-search&quot;&amp;gt;&amp;lt;/i&amp;gt;
+
+                                &amp;lt;/button&amp;gt;
+
+                            &amp;lt;/span&amp;gt;
+
+                        &amp;lt;/div&amp;gt;
+
+                        &amp;lt;/form&amp;gt;
+
+ 
+
+                        &amp;lt;br/&amp;gt;
+
+                        &amp;lt;br/&amp;gt;
+
+                        &amp;lt;div class=&quot;table-responsive&quot;&amp;gt;
+
+                            &amp;lt;table class=&quot;table table-borderless&quot;&amp;gt;
+
+                                &amp;lt;thead&amp;gt;
+
+                                    &amp;lt;tr&amp;gt;
+
+                                        &amp;lt;th&amp;gt;ID&amp;lt;/th&amp;gt;&amp;lt;th&amp;gt;Nome&amp;lt;/th&amp;gt;&amp;lt;th&amp;gt;Cpf&amp;lt;/th&amp;gt;&amp;lt;th&amp;gt;Nascimento&amp;lt;/th&amp;gt;&amp;lt;th&amp;gt;Actions&amp;lt;/th&amp;gt;
+
+                                    &amp;lt;/tr&amp;gt;
+
+                                &amp;lt;/thead&amp;gt;
+
+                                &amp;lt;tbody&amp;gt;
+
+                                &amp;lt;?php foreach($clientes as $item){
+
+                                    &amp;lt;tr&amp;gt;
+
+                                        &amp;lt;td&amp;gt;{{ $item-&amp;gt;id }}&amp;lt;/td&amp;gt;
+
+                                        &amp;lt;td&amp;gt;{{ $item-&amp;gt;nome }}&amp;lt;/td&amp;gt;&amp;lt;td&amp;gt;{{ $item-&amp;gt;cpf }}&amp;lt;/td&amp;gt;&amp;lt;td&amp;gt;{{ $item-&amp;gt;nascimento }}&amp;lt;/td&amp;gt;
+
+                                        &amp;lt;td&amp;gt;
+
+                                            &amp;lt;a href=&quot;http://backup/portal/{{ url('/clientes/' . $item-&amp;gt;id) }}&quot; title=&quot;View Cliente&quot;&amp;gt;&amp;lt;button class=&quot;btn btn-info btn-xs&quot;&amp;gt;&amp;lt;i class=&quot;glyphicon glyphicon-eye-open&quot;&amp;gt;&amp;lt;/i&amp;gt; View&amp;lt;/button&amp;gt;&amp;lt;/a&amp;gt;
+
+                                            &amp;lt;a href=&quot;http://backup/portal/{{ url('/clientes/' . $item-&amp;gt;id . '/edit') }}&quot; title=&quot;Edit Cliente&quot;&amp;gt;&amp;lt;button class=&quot;btn btn-primary btn-xs&quot;&amp;gt;&amp;lt;i class=&quot;glyphicon glyphicon-edit&quot;&amp;gt;&amp;lt;/i&amp;gt; Edit&amp;lt;/button&amp;gt;&amp;lt;/a&amp;gt;
+
+
+
+                                            &amp;lt;form
+
+                                                method ='DELETE',
+
+                                                action = &quot;'/clientes', $item-&amp;gt;id&quot;
+
+                                                style = 'display:inline'
+
+                                            &amp;gt;
+
+                                                &amp;lt;button&amp;gt; &amp;lt;i class=&quot;glyphicon glyphicon-trash&quot;&amp;gt;&amp;lt;/i&amp;gt; Delete'
+
+                                                        type = 'submit'
+
+                                                        class = 'btn btn-danger btn-xs'
+
+                                                        title = 'Delete Cliente'
+
+                                                        onclick ='return confirm(&quot;Confirm delete?&quot;)'
+
+                                                &amp;lt;/button&amp;gt;
+
+                                            &amp;lt;/form&amp;gt;
+
+                                        &amp;lt;/td&amp;gt;
+
+                                    &amp;lt;/tr&amp;gt;
+
+                                }?&amp;gt;
+
+                                &amp;lt;/tbody&amp;gt;
+
+                            &amp;lt;/table&amp;gt;
+
+                        &amp;lt;/div&amp;gt;
+
+ 
+
+                    &amp;lt;/div&amp;gt;
+
+                &amp;lt;/div&amp;gt;
+
+            &amp;lt;/div&amp;gt;
+
+        &amp;lt;/div&amp;gt;
+
+    &amp;lt;/div&amp;gt;&lt;/code&gt;&lt;/pre&gt;</content>
+		<category term="Bootstrap" />
+	</entry>
+</feed>

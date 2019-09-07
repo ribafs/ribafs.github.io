@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br" dir="ltr">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <base href="" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Ribamar FS" />
+	<meta name="robots" content="noindex, nofollow" />
+	<meta name="description" content="Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros." />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>13.2 – Aplicativo Blog - RibaFS Portal</title>
+	<link href="http://ribafs.org/portal/curriculo/livros/cakephp/13-2-aplicativo-blog.html?tmpl=component&amp;print=1&amp;layout=default" rel="canonical" />
+	<link href="../../../templates/shaper_helix3/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../../../favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="http://backup/portal/media/plg_content_prismsyntaxhighlighter/css/prism-okaidia.css" rel="stylesheet" type="text/css" />
+	<link href="http://backup/portal/media/plg_content_prismsyntaxhighlighter/css/prism-linenumbers.css" rel="stylesheet" type="text/css" />
+	<script src="http://backup/portal/media/plg_content_prismsyntaxhighlighter/js/prism-tinymce.js" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery-noconflict.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery-migrate.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="http://backup/portal/media/system/js/caption.js?d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script type="text/javascript">
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+	</script>
+	<meta property="og:url" content="http://backup/portal/curriculo/livros/cakephp/13-2-aplicativo-blog.html" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="13.2 – Aplicativo Blog" />
+	<meta property="og:description" content="13.2 – Aplicativo Blog Só fracassa quem desiste de lutar, quem para de tentar, por isso quando cair lembre-se que reerguer-se já é uma vitória. Criando um..." />
+
+   	<link rel="stylesheet" href="../../../media/jui/css/bootstrap.min.css" type="text/css" />
+	<link rel="stylesheet" href="../../../templates/shaper_helix3/css/frontend-edit.css" type="text/css" />
+    <link rel="stylesheet" href="../../../templates/shaper_helix3/css/template.css" type="text/css" />
+</head>
+<body class="contentpane">
+	<div id="system-message-container">
+	</div>
+
+	
+
+<article class="item item-page" itemscope itemtype="http://schema.org/Article">
+	<meta itemprop="inLanguage" content="pt-BR" />
+	
+	
+
+	<div class="entry-header">
+		<span class="post-format"><i class="fa fa-thumb-tack"></i></span>
+		
+					<h2 itemprop="name">
+									13.2 – Aplicativo Blog							</h2>
+												</div>
+
+						<div id="pop-print" class="btn hidden-print">
+				<a href="13-2-aplicativo-blog.html#" onclick="window.print();return false;">			<span class="icon-print" aria-hidden="true"></span>
+		Imprimir	</a>			</div>
+				
+	
+	
+				
+	
+			<div itemprop="articleBody">
+		<h3>13.2 – Aplicativo Blog</h3>
+<p> </p>
+<p align="right"><em><strong>Só fracassa quem desiste de lutar, quem para de tentar, por isso quando cair lembre-se que reerguer-se já é uma vitória.</strong></em></p>
+<p> </p>
+<p><strong>Criando um Blog Simples em CakePHP 3</strong></p>
+<p><strong>Pré-Requisitos</strong></p>
+<p>PHP 5.5.9 com pdo_mysql, intl e mbstring (no terminal digite php -v)</p>
+<p>Apache 2</p>
+<p>MySQL 5</p>
+<p> </p>
+<p><strong>Caso tenha o cRUL instalado use:</strong></p>
+<p>curl -s https://getcomposer.org/installer | php</p>
+<p>sudo mv composer.phar /usr/local/bin/composer</p>
+<p> </p>
+<p><strong>Instalar no Windows</strong></p>
+<p><a href="http://book.cakephp.org/3.0/en/installation.html">http://book.cakephp.org/3.0/en/installation.html</a></p>
+<p> </p>
+<p><strong>Criar uma nova aplicação do Cake:</strong></p>
+<p><em>composer create-project --prefer-dist cakephp/app cakeblog</em></p>
+<p> </p>
+<p>O comando acima criou a estrutura de arquivos e diretórios básicos de um aplicativo chamado cakeblog.</p>
+<p>Criar o banco cake_blog</p>
+<p>Configurar o banco em config/app.php</p>
+<p>Configure seu Apache para que tenha suporte ao mod_rewrite.</p>
+<p><strong>Model</strong></p>
+<p>Após criar um model (modelo) no CakePHP, nós teremos a base necessária para interagirmos com o banco de dados e executar operações.</p>
+<p>Os arquivos de classes, correspondentes aos models, no CakePHP estão divididos entre os objetos Table e Entity. Objetos Table provêm acesso à coleção de entidades armazenada em uma tabela e são alocados em src/Model/Table. Entity em src/Model/Entity.</p>
+<p> </p>
+<p><strong>Configurando rotas:</strong></p>
+<p>config/routes.php</p>
+<p>$routes-&gt;connect('/', ['controller' =&gt; 'Articles', 'action' =&gt; 'index']);</p>
+<p> </p>
+<p><strong>Gerando código com bake:</strong></p>
+<p>bin/cake bake all Articles</p>
+<p> </p>
+<p><strong>Executar para criar um arquivo de migração:</strong></p>
+<p>bin/cake bake migration CreateArticles title:string body:text category_id:integer created modified</p>
+<p> </p>
+<p><strong>Criar uma tabela de categorias:</strong></p>
+<p>bin/cake bake migration CreateCategories parent_id:integer lft:integer[10] rght:integer[10] name:string[100] description:string created modified</p>
+<p> </p>
+<p><strong>Criar as tabelas</strong></p>
+<p>bin/cake migrations migrate</p>
+<p> </p>
+<p>Abra o arquivo src/Model/Table/ArticlesTable.php e adicione o seguinte:</p>
+<pre class="language-php"><code>// src/Model/Table/ArticlesTable.php
+namespace App\Model\Table;
+use Cake\ORM\Table;
+
+class ArticlesTable extends Table
+{
+    public function initialize(array $config)
+    {
+        $this-&gt;addBehavior('Timestamp');
+        // ADICIONE AS 3 LINHAS ABAIXO PARA RELACIONAR AS DUAS TABELAS
+        $this-&gt;belongsTo('Categories', [
+            'foreignKey' =&gt; 'category_id',
+        ]);
+    }
+}
+
+</code></pre>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><b>Para Gerar código</b></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;">bin/cake bake all Categories</span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"> </p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;">Acesse</span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><a href="http://localhost/cakeblog">http://localhost/cakeblog</a></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"> </p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;">Adicione alguns registros e veja como funciona.</span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><strong><span style="font-family: Times New Roman, serif;">Acesse</span></strong></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><a href="http://localhost/cakeblog/categories">http://localhost/cakeblog/categories</a> </span></p> 	</div>
+
+	
+	
+				
+	
+	
+	
+</article>
+
+</body>
+</html>

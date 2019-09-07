@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br" dir="ltr">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <base href="" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Ribamar FS" />
+	<meta name="robots" content="noindex, nofollow" />
+	<meta name="description" content="Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros." />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>8.4 - Table Objects - RibaFS Portal</title>
+	<link href="http://ribafs.org/portal/curriculo/livros/cakephp/8-4-table-objects.html?tmpl=component&amp;print=1&amp;layout=default" rel="canonical" />
+	<link href="../../../templates/shaper_helix3/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../../../favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<script src="../../../media/jui/js/jquery.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery-noconflict.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery-migrate.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="http://backup/portal/media/system/js/caption.js?d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script type="text/javascript">
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+	</script>
+	<meta property="og:url" content="http://backup/portal/curriculo/livros/cakephp/8-4-table-objects.html" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="8.4 - Table Objects" />
+	<meta property="og:description" content="8.4 - Table Objects Tente uma, duas, três vezes e se possível tente a quarta, a quinta e quantas vezes for necessário. Só não desista nas primeiras tentati..." />
+
+   	<link rel="stylesheet" href="../../../media/jui/css/bootstrap.min.css" type="text/css" />
+	<link rel="stylesheet" href="../../../templates/shaper_helix3/css/frontend-edit.css" type="text/css" />
+    <link rel="stylesheet" href="../../../templates/shaper_helix3/css/template.css" type="text/css" />
+</head>
+<body class="contentpane">
+	<div id="system-message-container">
+	</div>
+
+	
+
+<article class="item item-page" itemscope itemtype="http://schema.org/Article">
+	<meta itemprop="inLanguage" content="pt-BR" />
+	
+	
+
+	<div class="entry-header">
+		<span class="post-format"><i class="fa fa-thumb-tack"></i></span>
+		
+					<h2 itemprop="name">
+									8.4 - Table Objects							</h2>
+												</div>
+
+						<div id="pop-print" class="btn hidden-print">
+				<a href="8-4-table-objects.html#" onclick="window.print();return false;">			<span class="icon-print" aria-hidden="true"></span>
+		Imprimir	</a>			</div>
+				
+	
+	
+				
+	
+			<div itemprop="articleBody">
+		<h3>8.4 - Table Objects</h3>
+<p> </p>
+<p align="right"><em><strong>Tente uma, duas, três vezes e se possível tente a quarta, a quinta e quantas vezes for necessário. Só não desista nas primeiras tentativas, a persistência é amiga da conquista. Se você quer chegar onde a maioria não chega, faça o que a maioria não faz.</strong></em></p>
+<p align="right">Bill Gates</p>
+<p align="left">Provê acesso para a coleção de entities/registros armazenados em uma tabela específica. Para cada tabela de um aplicativo em CakePHP devemos ter uma classe Table associada a ela que é usada para interagir com a referida tabela.</p>
+<p align="left">Antes de começar a usar Table Objects precisa garantir que tem configurada uma conexão com o banco de dados.</p>
+<p align="left">A classe Table fica em src/Model/Table.</p>
+<p align="left"> </p>
+<p align="left">Por convenção objetos Table devem usar uma tabela que é idêntica a versão em minúsculas do nome da Table. Exemplos:</p>
+<p align="left">ArticlesTable - artigos</p>
+<p align="left">BlogPostsTable - blog_posts</p>
+<p align="left"> </p>
+<p align="left"><strong>Caso queira usar um nome de tabela que não segue esta convenção deve setar seu nome no método setTable() no método initialize() da classe Table:</strong></p>
+<p align="left">$this-&gt;setTable('nomeTabela');</p>
+<p align="left"> </p>
+<p align="left">O ORM também espera que cada tabela tenha uma chave primária e que seu nome seja 'id'.<strong> Caso queira usar uma PK com nome diferente de “id” use o método setPrimaryKey() também no initialize() da Table.</strong></p>
+<p align="left">$this-&gt;setPrimaryKey('cpf');</p>
+<p align="left"> </p>
+<p align="left"><strong>Classes Entity usadas em classe Table.</strong></p>
+<p align="left">Por default table objects usam uma classe Entity baseada na convenção de nomes. Por exemplo, se uma Table tem nome ClientesTable então a entity respectiva será chamada de Cliente, no singular, visto que liga com apenas um registro por vez. Caso precise mudar esta convenção use o método setEntityClass() no initialize da Table:</p>
+<p align="left"> </p>
+<p align="left"><strong>Para Cake com versão anterior a 3.4.0:</strong></p>
+<p align="left">$this-&gt;entityClass('App\Model\Entity\PO');</p>
+<p align="left"> </p>
+<p align="left"><strong>Superior a 3.4.0:</strong></p>
+<p align="left">$this-&gt;setEntityClass('App\Model\Entity\PO');</p>
+<p align="left"> </p>
+<p align="left"><strong>Instância de uma Table:</strong></p>
+<p align="left">Antes de começar a consultar uma tabela precisamos ter uma instância da mesma. Podemos fazer isso usando a classe TableRegistry:</p>
+<p align="left"> </p>
+<p align="left">// Em um método de controller ou de uma table adicione a linha</p>
+<p align="left">use Cake\ORM\TableRegistry;</p>
+<p align="left"> </p>
+<p align="left"><strong>Lifecycle Callbacks/Eventos</strong></p>
+<p align="left">Os eventos são úteis se você deseja conectar-se ao ORM e adicionar lógica sem subclassificar ou substituir métodos. Ouvintes de eventos podem ser definidos em Tables ou classes de Behavior. Você também pode usar o gerenciador de eventos de uma tabela para vincular os ouvintes. São semelhantes aos eventos dos controllers e componentes.</p>
+<p align="left"> </p>
+<p align="left"><strong>Lista de eventos</strong></p>
+<p align="left">Model.initialize</p>
+<p align="left">Model.beforeMarshal</p>
+<p align="left">Model.beforeFind</p>
+<p align="left">Model.buildValidator</p>
+<p align="left">Model.buildRules</p>
+<p align="left">Model.beforeRules</p>
+<p align="left">Model.afterRules</p>
+<p align="left">Model.beforeSave</p>
+<p align="left">Model.afterSave</p>
+<p align="left">Model.afterSaveCommit</p>
+<p align="left">Model.beforeDelete</p>
+<p align="left">Model.afterDelete</p>
+<p align="left">Model.afterDeleteCommit</p>
+<p align="left"> </p>
+<p align="left"><strong>Alguns eventos</strong></p>
+<p align="left">initialize()</p>
+<p align="left">Cake\ORM\Table::initialize(Event $event, ArrayObject $data, ArrayObject $options)</p>
+<p align="left">O evento Model.initialize é disparado após o método construtor.</p>
+<p align="left"> </p>
+<p align="left"><strong>beforeFind</strong></p>
+<p align="left">Cake\ORM\Table::beforeFind(Event $event, Query $query, ArrayObject $options, $primary)</p>
+<p align="left">The Model.beforeFind event is fired before each find operation. By stopping the event and supplying a return value you can bypass the find operation entirely.</p>
+<p align="left"> </p>
+<p align="left"><strong>buildValidator</strong></p>
+<p align="left">Cake\ORM\Table::buildValidator(Event $event, Validator $validator, $name)</p>
+<p align="left">O evento Model.buildValidator é disparado quando o $name validator é criado.</p>
+<p align="left"> </p>
+<p align="left"><strong>buildRules</strong></p>
+<p align="left">Cake\ORM\Table::buildRules(Event $event, RulesChecker $rules)</p>
+<p align="left">O evento Model.buildRules é disparado após uma instância de rules ser criada e após o método buildRules da Table ser chamado.</p>
+<p align="left"> </p>
+<p align="left"><strong>beforeRules</strong></p>
+<p align="left">Cake\ORM\Table::beforeRules(Event $event, EntityInterface $entity, ArrayObject $options, $operation)</p>
+<p align="left">O evento Model.beforeRules é disparado entes de uma entity ter a rules aplicada.</p>
+<p align="left"> </p>
+<p align="left"><strong>afterRules</strong></p>
+<p align="left">Cake\ORM\Table::afterRules(Event $event, EntityInterface $entity, ArrayObject $options, $result, $operation)</p>
+<p align="left">O evento Model.afterRules é disparado após uma entity ter a rules rules aplicada.</p>
+<p align="left"> </p>
+<p align="left"><strong>beforeSave</strong></p>
+<p align="left">Cake\ORM\Table::beforeSave(Event $event, EntityInterface $entity, ArrayObject $options)</p>
+<p align="left">O evento Model.beforeSave é disparado antes de cada entity ser salva.</p>
+<p align="left"> </p>
+<p align="left"><strong>afterSave</strong></p>
+<p align="left">Cake\ORM\Table::afterSave(Event $event, EntityInterface $entity, ArrayObject $options)</p>
+<p align="left">O evento Model.afterSave é disparado após uma entity ser salva.</p>
+<p align="left"> </p>
+<p align="left"><strong>afterSaveCommit</strong></p>
+<p align="left">Cake\ORM\Table::afterSaveCommit(Event $event, EntityInterface $entity, ArrayObject $options)</p>
+<p align="left">O evento Model.afterSaveCommit é disparado após a transação em que a operação save é embutida ser committed.</p>
+<p align="left"> </p>
+<p align="left"><strong>beforeDelete</strong></p>
+<p align="left">Cake\ORM\Table::beforeDelete(Event $event, EntityInterface $entity, ArrayObject $options)</p>
+<p align="left">O evento Model.beforeDelete é disparado antes que uma entity seja deletada.</p>
+<p align="left"> </p>
+<p align="left"><strong>afterDelete</strong></p>
+<p align="left">Cake\ORM\Table::afterDelete(Event $event, EntityInterface $entity, ArrayObject $options)</p>
+<p align="left">O evento Model.afterDelete é disparado após uma entity ser deletada.</p>
+<p align="left"> </p>
+<p align="left"><strong>afterDeleteCommit</strong></p>
+<p align="left">Cake\ORM\Table::afterDeleteCommit(Event $event, EntityInterface $entity, ArrayObject $options)</p>
+<p align="left">O evento Model.afterDeleteCommit é disparado após a transação em que a operação delete está embutida for committed.</p>
+<p align="left"> </p>
+<p align="left"><strong>Prioridades nos callbacks</strong></p>
+<p align="left">Ao usar eventos em suas Tables e Behaviors, esteja ciente da prioridade a que os ouvintes de pedidos estão conectados. Eventos de Behaviors são anexados antes dos eventos da Tabela. Com as prioridades padrão, isso significa que retornos de chamada de Behavior são acionados antes do evento de Table com o mesmo nome.</p>
+<p align="left">Por exemplo, se sua tabela estiver usando TreeBehavior, o método TreeBehavior::beforeDelete() será chamado antes do método beforeDelete() da sua Table, e você não poderá trabalhar com os nós filhos do registro que estão sendo excluídos no método da sua Table.</p>
+<p align="left">Podemos gerenciar eventos de prioridades de uma das duas maneiras:</p>
+<p align="left">Mude a prioridade de Behavior listeners usando a opção priority. Isto irá modificar a prioridade de todos os métodos callback no Behavior:</p>
+<p align="left">// In a Table initialize() method</p>
+<p align="left">$this-&gt;addBehavior('Tree', [</p>
+<p align="left">// Default value is 10 and listeners are dispatched from the</p>
+<p align="left">// lowest to highest priority.</p>
+<p align="left">'priority' =&gt; 2,</p>
+<p align="left">]);</p>
+<p align="left"> </p>
+<p align="left">Modifique a prioridade em sua classe Table usando o método Model.implementedEvents(). Isso permite que você atribua uma prioridade diferente por método callback:</p>
+<p align="left">// In a Table class.</p>
+<p align="left">public function implementedEvents()</p>
+<p align="left">{</p>
+<p align="left">$events = parent::implementedEvents();</p>
+<p align="left">$events['Model.beforeDelete'] = [</p>
+<p align="left">'callable' =&gt; 'beforeDelete',</p>
+<p align="left">'priority' =&gt; 3</p>
+<p align="left">];</p>
+<p align="left">return $events;</p>
+<p align="left">}</p>
+<p align="left"> </p>
+<p align="left"><strong>Sistema de Eventos</strong></p>
+<p align="left">Criar aplicativos manuteníveis é uma ciência e uma arte. É bem conhecido que uma chave para ter um código de boa qualidade é tornar seus objetos fracamente acoplados e fortemente coesos ao mesmo tempo. Coesão significa que todos os métodos e propriedades de uma classe estão fortemente relacionados à própria classe e não está tentando fazer o trabalho que outros objetos deveriam estar fazendo, enquanto o acoplamento frouxo é a medida de quão pequena uma classe é conectada a objetos externos. e quanto essa classe depende deles.</p>
+<p align="left"><strong>Mais detalhes em:</strong></p>
+<p align="left"><a href="https://book.cakephp.org/3.0/en/core-libraries/events.html">https://book.cakephp.org/3.0/en/core-libraries/events.html</a></p>
+<p align="left"><a href="https://book.cakephp.org/3.0/en/orm/table-objects.html">https://book.cakephp.org/3.0/en/orm/table-objects.html</a></p>
+<p align="left"> </p>
+<p align="left"> </p> 	</div>
+
+	
+	
+				
+	
+	
+	
+</article>
+
+</body>
+</html>

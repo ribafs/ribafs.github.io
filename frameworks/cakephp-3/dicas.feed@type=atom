@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="Joomla! - Open Source Content Management" -->
+<feed xmlns="http://www.w3.org/2005/Atom"  xml:lang="pt-br">
+	<title type="text">Dicas - RibaFS Portal</title>
+	<subtitle type="text">Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros.</subtitle>
+	<link rel="alternate" type="text/html" href="http://backup"/>
+	<id>http://backup/portal/frameworks/cakephp-3/dicas.feed</id>
+	<updated>2019-09-07T18:58:54-03:00</updated>
+	<author>
+		<name>RibaFS Portal</name>
+	</author>
+	<generator uri="https://www.joomla.org">Joomla! - Open Source Content Management</generator>
+	<link rel="self" type="application/atom+xml" href="http://backup/portal/frameworks/cakephp-3/dicas.feed?type=atom"/>
+	<entry>
+		<title>Customizando a Paginação</title>
+		<link rel="alternate" type="text/html" href="http://backup/portal/frameworks/cakephp-3/dicas/controlando-a-paginacao.html"/>
+		<published>2017-06-25T20:11:23-03:00</published>
+		<updated>2017-06-25T20:11:23-03:00</updated>
+		<id>http://backup/portal/frameworks/cakephp-3/dicas/controlando-a-paginacao.html</id>
+		<author>
+			<name>Ribamar FS</name>
+		</author>
+		<summary type="html">&lt;p&gt;&lt;strong&gt;Customizando a Paginação&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Alterando a Paginação para 15 registros por página&lt;br /&gt; &lt;br /&gt;    public $paginate = [ &lt;br /&gt;       'limit' =&amp;gt; 15, &lt;br /&gt;       'order' =&amp;gt; ['Clientes.id' =&amp;gt; 'asc'] &lt;br /&gt;    ];&lt;/p&gt;</summary>
+		<content type="html">&lt;p&gt;&lt;strong&gt;Customizando a Paginação&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Alterando a Paginação para 15 registros por página&lt;br /&gt; &lt;br /&gt;    public $paginate = [ &lt;br /&gt;       'limit' =&amp;gt; 15, &lt;br /&gt;       'order' =&amp;gt; ['Clientes.id' =&amp;gt; 'asc'] &lt;br /&gt;    ];&lt;/p&gt;</content>
+		<category term="Dicas" />
+	</entry>
+	<entry>
+		<title>Código Padrão</title>
+		<link rel="alternate" type="text/html" href="http://backup/portal/frameworks/cakephp-3/dicas/codigo-padrao.html"/>
+		<published>2017-06-25T20:11:23-03:00</published>
+		<updated>2017-06-25T20:11:23-03:00</updated>
+		<id>http://backup/portal/frameworks/cakephp-3/dicas/codigo-padrao.html</id>
+		<author>
+			<name>Ribamar FS</name>
+		</author>
+		<summary type="html">&lt;p&gt;&lt;strong&gt;Código padrão de aplicativo do CakePHP 3&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Controller&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;pre class=&quot;language-php&quot;&gt;&lt;code&gt;&amp;lt;?php
+class ArticlesController extends AppController
+{
+
+    public function initialize()
+    {
+        parent::initialize();
+        // Requerido
+        $this-&amp;gt;loadComponent('Flash'); // Include the FlashComponent
+    }
+
+    public function index()
+    {
+        $articles = $this-&amp;gt;Articles-&amp;gt;find('all');
+        $this-&amp;gt;set(compact('articles'));
+    }
+
+    public function view($id = null)
+    {
+        $article = $this-&amp;gt;Articles-&amp;gt;get($id);
+        $this-&amp;gt;set(compact('article'));
+    }
+
+    public function add()
+    {
+        $article = $this-&amp;gt;Articles-&amp;gt;newEntity();
+        if ($this-&amp;gt;request-&amp;gt;is('post')) {
+            $article = $this-&amp;gt;Articles-&amp;gt;patchEntity($article, $this-&amp;gt;request-&amp;gt;data);
+            if ($this-&amp;gt;Articles-&amp;gt;save($article)) {
+                $this-&amp;gt;Flash-&amp;gt;success(__('Your article has been saved.'));
+                return $this-&amp;gt;redirect(['action' =&amp;gt; 'index']);
+            }
+            $this-&amp;gt;Flash-&amp;gt;error(__('Unable to add your article.'));
+        }
+        $this-&amp;gt;set('article', $article);
+    }
+
+    public function edit($id = null)
+    {
+        $article = $this-&amp;gt;Articles-&amp;gt;get($id);
+        if ($this-&amp;gt;request-&amp;gt;is(['post', 'put'])) {
+            $this-&amp;gt;Articles-&amp;gt;patchEntity($article, $this-&amp;gt;request-&amp;gt;data);
+            if ($this-&amp;gt;Articles-&amp;gt;save($article)) {
+                $this-&amp;gt;Flash-&amp;gt;success(__('Your article has been updated.'));
+                return $this-&amp;gt;redirect(['action' =&amp;gt; 'index']);
+            }
+            $this-&amp;gt;Flash-&amp;gt;error(__('Unable to update your article.'));
+        }
+
+        $this-&amp;gt;set('article', $article);
+    }
+
+    public function delete($id)
+    {
+        $this-&amp;gt;request-&amp;gt;allowMethod(['post', 'delete']);
+
+        $article = $this-&amp;gt;Articles-&amp;gt;get($id);
+        if ($this-&amp;gt;Articles-&amp;gt;delete($article)) {
+            $this-&amp;gt;Flash-&amp;gt;success(__('The article with id: {0} has been deleted.', h($id)));
+            return $this-&amp;gt;redirect(['action' =&amp;gt; 'index']);
+        }
+    }
+}
+
+Template/view index.ctp
+
+&amp;lt;!-- File: src/Template/Articles/index.ctp  (edit links added) --&amp;gt;
+
+&amp;lt;h1&amp;gt;Blog articles&amp;lt;/h1&amp;gt;
+&amp;lt;p&amp;gt;&amp;lt;?= $this-&amp;gt;Html-&amp;gt;link(&quot;Add Article&quot;, ['action' =&amp;gt; 'add']) ?&amp;gt;&amp;lt;/p&amp;gt;
+&amp;lt;table&amp;gt;
+
+    &amp;lt;tr&amp;gt;
+
+        &amp;lt;th&amp;gt;Id&amp;lt;/th&amp;gt;
+
+        &amp;lt;th&amp;gt;Title&amp;lt;/th&amp;gt;
+
+        &amp;lt;th&amp;gt;Created&amp;lt;/th&amp;gt;
+
+        &amp;lt;th&amp;gt;Action&amp;lt;/th&amp;gt;
+
+    &amp;lt;/tr&amp;gt;
+
+
+
+&amp;lt;!-- Here's where we iterate through our $articles query object, printing out article info --&amp;gt;
+
+
+
+&amp;lt;?php foreach ($articles as $article): ?&amp;gt;
+
+    &amp;lt;tr&amp;gt;
+
+        &amp;lt;td&amp;gt;&amp;lt;?= $article-&amp;gt;id ?&amp;gt;&amp;lt;/td&amp;gt;
+
+        &amp;lt;td&amp;gt;
+
+            &amp;lt;?= $this-&amp;gt;Html-&amp;gt;link($article-&amp;gt;title, ['action' =&amp;gt; 'view', $article-&amp;gt;id]) ?&amp;gt;
+
+        &amp;lt;/td&amp;gt;
+
+        &amp;lt;td&amp;gt;
+
+            &amp;lt;?= $article-&amp;gt;created-&amp;gt;format(DATE_RFC850) ?&amp;gt;
+
+        &amp;lt;/td&amp;gt;
+
+        &amp;lt;td&amp;gt;
+
+            &amp;lt;?= $this-&amp;gt;Html-&amp;gt;link('Edit', ['action' =&amp;gt; 'edit', $article-&amp;gt;id]) ?&amp;gt;
+
+        &amp;lt;/td&amp;gt;
+
+        &amp;lt;td&amp;gt;
+
+            &amp;lt;?= $this-&amp;gt;Form-&amp;gt;postLink(
+
+                'Delete',
+
+                ['action' =&amp;gt; 'delete', $article-&amp;gt;id],
+
+                ['confirm' =&amp;gt; 'Are you sure?'])
+
+            ?&amp;gt;
+
+            &amp;lt;?= $this-&amp;gt;Html-&amp;gt;link('Edit', ['action' =&amp;gt; 'edit', $article-&amp;gt;id]) ?&amp;gt;
+
+        &amp;lt;/td&amp;gt;
+
+    &amp;lt;/tr&amp;gt;
+
+&amp;lt;?php endforeach; ?&amp;gt;
+
+
+
+&amp;lt;/table&amp;gt;
+
+
+
+&amp;lt;!-- File: src/Template/Articles/view.ctp --&amp;gt;
+
+
+
+&amp;lt;h1&amp;gt;&amp;lt;?= h($article-&amp;gt;title) ?&amp;gt;&amp;lt;/h1&amp;gt;
+
+&amp;lt;p&amp;gt;&amp;lt;?= h($article-&amp;gt;body) ?&amp;gt;&amp;lt;/p&amp;gt;
+
+&amp;lt;p&amp;gt;&amp;lt;small&amp;gt;Created: &amp;lt;?= $article-&amp;gt;created-&amp;gt;format(DATE_RFC850) ?&amp;gt;&amp;lt;/small&amp;gt;&amp;lt;/p&amp;gt;
+
+
+
+&amp;lt;!-- File: src/Template/Articles/add.ctp --&amp;gt;
+
+
+
+&amp;lt;h1&amp;gt;Add Article&amp;lt;/h1&amp;gt;
+
+&amp;lt;?php
+
+    echo $this-&amp;gt;Form-&amp;gt;create($article);
+
+    echo $this-&amp;gt;Form-&amp;gt;input('title');
+
+    echo $this-&amp;gt;Form-&amp;gt;input('body', ['rows' =&amp;gt; '3']);
+
+    echo $this-&amp;gt;Form-&amp;gt;button(__('Save Article'));
+
+    echo $this-&amp;gt;Form-&amp;gt;end();
+
+?&amp;gt;
+
+
+
+&amp;lt;!-- File: src/Template/Articles/edit.ctp --&amp;gt;
+
+
+
+&amp;lt;h1&amp;gt;Edit Article&amp;lt;/h1&amp;gt;
+
+&amp;lt;?php
+
+    echo $this-&amp;gt;Form-&amp;gt;create($article);
+
+    echo $this-&amp;gt;Form-&amp;gt;input('title');
+
+    echo $this-&amp;gt;Form-&amp;gt;input('body', ['rows' =&amp;gt; '3']);
+
+    echo $this-&amp;gt;Form-&amp;gt;button(__('Save Article'));
+
+    echo $this-&amp;gt;Form-&amp;gt;end();
+
+?&amp;gt;
+
+    &amp;lt;?= $this-&amp;gt;Form-&amp;gt;create($articles, [
+
+          'url'   =&amp;gt; [
+
+               'controller' =&amp;gt; 'Articles','action' =&amp;gt; 'busca'
+
+           ],
+
+          'id'    =&amp;gt; 'web-form',
+
+          'class' =&amp;gt;'panel-body wrapper-lg'
+
+       ]
+
+    ) 
+
+?&amp;gt;&lt;/code&gt;&lt;/pre&gt;</summary>
+		<content type="html">&lt;p&gt;&lt;strong&gt;Código padrão de aplicativo do CakePHP 3&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Controller&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;pre class=&quot;language-php&quot;&gt;&lt;code&gt;&amp;lt;?php
+class ArticlesController extends AppController
+{
+
+    public function initialize()
+    {
+        parent::initialize();
+        // Requerido
+        $this-&amp;gt;loadComponent('Flash'); // Include the FlashComponent
+    }
+
+    public function index()
+    {
+        $articles = $this-&amp;gt;Articles-&amp;gt;find('all');
+        $this-&amp;gt;set(compact('articles'));
+    }
+
+    public function view($id = null)
+    {
+        $article = $this-&amp;gt;Articles-&amp;gt;get($id);
+        $this-&amp;gt;set(compact('article'));
+    }
+
+    public function add()
+    {
+        $article = $this-&amp;gt;Articles-&amp;gt;newEntity();
+        if ($this-&amp;gt;request-&amp;gt;is('post')) {
+            $article = $this-&amp;gt;Articles-&amp;gt;patchEntity($article, $this-&amp;gt;request-&amp;gt;data);
+            if ($this-&amp;gt;Articles-&amp;gt;save($article)) {
+                $this-&amp;gt;Flash-&amp;gt;success(__('Your article has been saved.'));
+                return $this-&amp;gt;redirect(['action' =&amp;gt; 'index']);
+            }
+            $this-&amp;gt;Flash-&amp;gt;error(__('Unable to add your article.'));
+        }
+        $this-&amp;gt;set('article', $article);
+    }
+
+    public function edit($id = null)
+    {
+        $article = $this-&amp;gt;Articles-&amp;gt;get($id);
+        if ($this-&amp;gt;request-&amp;gt;is(['post', 'put'])) {
+            $this-&amp;gt;Articles-&amp;gt;patchEntity($article, $this-&amp;gt;request-&amp;gt;data);
+            if ($this-&amp;gt;Articles-&amp;gt;save($article)) {
+                $this-&amp;gt;Flash-&amp;gt;success(__('Your article has been updated.'));
+                return $this-&amp;gt;redirect(['action' =&amp;gt; 'index']);
+            }
+            $this-&amp;gt;Flash-&amp;gt;error(__('Unable to update your article.'));
+        }
+
+        $this-&amp;gt;set('article', $article);
+    }
+
+    public function delete($id)
+    {
+        $this-&amp;gt;request-&amp;gt;allowMethod(['post', 'delete']);
+
+        $article = $this-&amp;gt;Articles-&amp;gt;get($id);
+        if ($this-&amp;gt;Articles-&amp;gt;delete($article)) {
+            $this-&amp;gt;Flash-&amp;gt;success(__('The article with id: {0} has been deleted.', h($id)));
+            return $this-&amp;gt;redirect(['action' =&amp;gt; 'index']);
+        }
+    }
+}
+
+Template/view index.ctp
+
+&amp;lt;!-- File: src/Template/Articles/index.ctp  (edit links added) --&amp;gt;
+
+&amp;lt;h1&amp;gt;Blog articles&amp;lt;/h1&amp;gt;
+&amp;lt;p&amp;gt;&amp;lt;?= $this-&amp;gt;Html-&amp;gt;link(&quot;Add Article&quot;, ['action' =&amp;gt; 'add']) ?&amp;gt;&amp;lt;/p&amp;gt;
+&amp;lt;table&amp;gt;
+
+    &amp;lt;tr&amp;gt;
+
+        &amp;lt;th&amp;gt;Id&amp;lt;/th&amp;gt;
+
+        &amp;lt;th&amp;gt;Title&amp;lt;/th&amp;gt;
+
+        &amp;lt;th&amp;gt;Created&amp;lt;/th&amp;gt;
+
+        &amp;lt;th&amp;gt;Action&amp;lt;/th&amp;gt;
+
+    &amp;lt;/tr&amp;gt;
+
+
+
+&amp;lt;!-- Here's where we iterate through our $articles query object, printing out article info --&amp;gt;
+
+
+
+&amp;lt;?php foreach ($articles as $article): ?&amp;gt;
+
+    &amp;lt;tr&amp;gt;
+
+        &amp;lt;td&amp;gt;&amp;lt;?= $article-&amp;gt;id ?&amp;gt;&amp;lt;/td&amp;gt;
+
+        &amp;lt;td&amp;gt;
+
+            &amp;lt;?= $this-&amp;gt;Html-&amp;gt;link($article-&amp;gt;title, ['action' =&amp;gt; 'view', $article-&amp;gt;id]) ?&amp;gt;
+
+        &amp;lt;/td&amp;gt;
+
+        &amp;lt;td&amp;gt;
+
+            &amp;lt;?= $article-&amp;gt;created-&amp;gt;format(DATE_RFC850) ?&amp;gt;
+
+        &amp;lt;/td&amp;gt;
+
+        &amp;lt;td&amp;gt;
+
+            &amp;lt;?= $this-&amp;gt;Html-&amp;gt;link('Edit', ['action' =&amp;gt; 'edit', $article-&amp;gt;id]) ?&amp;gt;
+
+        &amp;lt;/td&amp;gt;
+
+        &amp;lt;td&amp;gt;
+
+            &amp;lt;?= $this-&amp;gt;Form-&amp;gt;postLink(
+
+                'Delete',
+
+                ['action' =&amp;gt; 'delete', $article-&amp;gt;id],
+
+                ['confirm' =&amp;gt; 'Are you sure?'])
+
+            ?&amp;gt;
+
+            &amp;lt;?= $this-&amp;gt;Html-&amp;gt;link('Edit', ['action' =&amp;gt; 'edit', $article-&amp;gt;id]) ?&amp;gt;
+
+        &amp;lt;/td&amp;gt;
+
+    &amp;lt;/tr&amp;gt;
+
+&amp;lt;?php endforeach; ?&amp;gt;
+
+
+
+&amp;lt;/table&amp;gt;
+
+
+
+&amp;lt;!-- File: src/Template/Articles/view.ctp --&amp;gt;
+
+
+
+&amp;lt;h1&amp;gt;&amp;lt;?= h($article-&amp;gt;title) ?&amp;gt;&amp;lt;/h1&amp;gt;
+
+&amp;lt;p&amp;gt;&amp;lt;?= h($article-&amp;gt;body) ?&amp;gt;&amp;lt;/p&amp;gt;
+
+&amp;lt;p&amp;gt;&amp;lt;small&amp;gt;Created: &amp;lt;?= $article-&amp;gt;created-&amp;gt;format(DATE_RFC850) ?&amp;gt;&amp;lt;/small&amp;gt;&amp;lt;/p&amp;gt;
+
+
+
+&amp;lt;!-- File: src/Template/Articles/add.ctp --&amp;gt;
+
+
+
+&amp;lt;h1&amp;gt;Add Article&amp;lt;/h1&amp;gt;
+
+&amp;lt;?php
+
+    echo $this-&amp;gt;Form-&amp;gt;create($article);
+
+    echo $this-&amp;gt;Form-&amp;gt;input('title');
+
+    echo $this-&amp;gt;Form-&amp;gt;input('body', ['rows' =&amp;gt; '3']);
+
+    echo $this-&amp;gt;Form-&amp;gt;button(__('Save Article'));
+
+    echo $this-&amp;gt;Form-&amp;gt;end();
+
+?&amp;gt;
+
+
+
+&amp;lt;!-- File: src/Template/Articles/edit.ctp --&amp;gt;
+
+
+
+&amp;lt;h1&amp;gt;Edit Article&amp;lt;/h1&amp;gt;
+
+&amp;lt;?php
+
+    echo $this-&amp;gt;Form-&amp;gt;create($article);
+
+    echo $this-&amp;gt;Form-&amp;gt;input('title');
+
+    echo $this-&amp;gt;Form-&amp;gt;input('body', ['rows' =&amp;gt; '3']);
+
+    echo $this-&amp;gt;Form-&amp;gt;button(__('Save Article'));
+
+    echo $this-&amp;gt;Form-&amp;gt;end();
+
+?&amp;gt;
+
+    &amp;lt;?= $this-&amp;gt;Form-&amp;gt;create($articles, [
+
+          'url'   =&amp;gt; [
+
+               'controller' =&amp;gt; 'Articles','action' =&amp;gt; 'busca'
+
+           ],
+
+          'id'    =&amp;gt; 'web-form',
+
+          'class' =&amp;gt;'panel-body wrapper-lg'
+
+       ]
+
+    ) 
+
+?&amp;gt;&lt;/code&gt;&lt;/pre&gt;</content>
+		<category term="Dicas" />
+	</entry>
+	<entry>
+		<title>Dicas Diversas</title>
+		<link rel="alternate" type="text/html" href="http://backup/portal/frameworks/cakephp-3/dicas/dicas-diversas.html"/>
+		<published>2017-06-25T20:11:23-03:00</published>
+		<updated>2017-06-25T20:11:23-03:00</updated>
+		<id>http://backup/portal/frameworks/cakephp-3/dicas/dicas-diversas.html</id>
+		<author>
+			<name>Ribamar FS</name>
+		</author>
+		<summary type="html">&lt;p&gt;&lt;strong&gt;Dicas diversas do CakePHP3&lt;/strong&gt; &lt;br /&gt; &lt;br /&gt;&lt;strong&gt;Capturar nome do action atual:&lt;/strong&gt; &lt;br /&gt;$this-&amp;gt;request-&amp;gt;action &lt;br /&gt; &lt;br /&gt;&lt;strong&gt;Capturar nome do controller:&lt;/strong&gt; &lt;br /&gt;$this-&amp;gt;request-&amp;gt;controller &lt;br /&gt; &lt;br /&gt;&lt;strong&gt;Usando o MessageHelper para exibir:&lt;/strong&gt; &lt;br /&gt;&amp;lt;?=$this-&amp;gt;Message-&amp;gt;msg($this-&amp;gt;request-&amp;gt;controller) ?&amp;gt; &lt;br /&gt; &lt;br /&gt;&lt;strong&gt;Criando link com o HtmlHelper:&lt;/strong&gt; &lt;br /&gt;&amp;lt;?= $this-&amp;gt;Html-&amp;gt;link(__('Lista de Usuário'), ['action' =&amp;gt; 'index']) ?&amp;gt; &lt;br /&gt; &lt;br /&gt;&lt;strong&gt;Criando formulário com o FormHelper&lt;/strong&gt; &lt;br /&gt;    &amp;lt;?= $this-&amp;gt;Form-&amp;gt;create($user) ?&amp;gt; &lt;br /&gt;        &amp;lt;legend&amp;gt;&amp;lt;?= __('Editar Usuário') ?&amp;gt;&amp;lt;/legend&amp;gt; &lt;br /&gt;        &amp;lt;?php &lt;br /&gt;            echo $this-&amp;gt;Form-&amp;gt;input('username'); &lt;br /&gt;            echo $this-&amp;gt;Form-&amp;gt;input('password'); &lt;br /&gt;            echo $this-&amp;gt;Form-&amp;gt;input('role', ['admin'=&amp;gt;'Administrador','user'=&amp;gt;'Usuário']); &lt;br /&gt;        ?&amp;gt; &lt;br /&gt;    &amp;lt;?= $this-&amp;gt;Form-&amp;gt;button(__('Submit')) ?&amp;gt; &lt;br /&gt;    &amp;lt;?= $this-&amp;gt;Form-&amp;gt;end() ?&amp;gt; &lt;br /&gt; &lt;br /&gt; &lt;br /&gt;&lt;strong&gt;Campo input simular select em FormHelper e mudando o label:&lt;/strong&gt; &lt;br /&gt; &lt;br /&gt;echo $this-&amp;gt;Form-&amp;gt;label('Tipo');  // Criando o Label &lt;br /&gt;echo $this-&amp;gt;Form-&amp;gt;select('role', ['user'=&amp;gt;'Usuário','admin'=&amp;gt;'Administrador'], ['default' =&amp;gt; 'admin']); &lt;/p&gt;</summary>
+		<content type="html">&lt;p&gt;&lt;strong&gt;Dicas diversas do CakePHP3&lt;/strong&gt; &lt;br /&gt; &lt;br /&gt;&lt;strong&gt;Capturar nome do action atual:&lt;/strong&gt; &lt;br /&gt;$this-&amp;gt;request-&amp;gt;action &lt;br /&gt; &lt;br /&gt;&lt;strong&gt;Capturar nome do controller:&lt;/strong&gt; &lt;br /&gt;$this-&amp;gt;request-&amp;gt;controller &lt;br /&gt; &lt;br /&gt;&lt;strong&gt;Usando o MessageHelper para exibir:&lt;/strong&gt; &lt;br /&gt;&amp;lt;?=$this-&amp;gt;Message-&amp;gt;msg($this-&amp;gt;request-&amp;gt;controller) ?&amp;gt; &lt;br /&gt; &lt;br /&gt;&lt;strong&gt;Criando link com o HtmlHelper:&lt;/strong&gt; &lt;br /&gt;&amp;lt;?= $this-&amp;gt;Html-&amp;gt;link(__('Lista de Usuário'), ['action' =&amp;gt; 'index']) ?&amp;gt; &lt;br /&gt; &lt;br /&gt;&lt;strong&gt;Criando formulário com o FormHelper&lt;/strong&gt; &lt;br /&gt;    &amp;lt;?= $this-&amp;gt;Form-&amp;gt;create($user) ?&amp;gt; &lt;br /&gt;        &amp;lt;legend&amp;gt;&amp;lt;?= __('Editar Usuário') ?&amp;gt;&amp;lt;/legend&amp;gt; &lt;br /&gt;        &amp;lt;?php &lt;br /&gt;            echo $this-&amp;gt;Form-&amp;gt;input('username'); &lt;br /&gt;            echo $this-&amp;gt;Form-&amp;gt;input('password'); &lt;br /&gt;            echo $this-&amp;gt;Form-&amp;gt;input('role', ['admin'=&amp;gt;'Administrador','user'=&amp;gt;'Usuário']); &lt;br /&gt;        ?&amp;gt; &lt;br /&gt;    &amp;lt;?= $this-&amp;gt;Form-&amp;gt;button(__('Submit')) ?&amp;gt; &lt;br /&gt;    &amp;lt;?= $this-&amp;gt;Form-&amp;gt;end() ?&amp;gt; &lt;br /&gt; &lt;br /&gt; &lt;br /&gt;&lt;strong&gt;Campo input simular select em FormHelper e mudando o label:&lt;/strong&gt; &lt;br /&gt; &lt;br /&gt;echo $this-&amp;gt;Form-&amp;gt;label('Tipo');  // Criando o Label &lt;br /&gt;echo $this-&amp;gt;Form-&amp;gt;select('role', ['user'=&amp;gt;'Usuário','admin'=&amp;gt;'Administrador'], ['default' =&amp;gt; 'admin']); &lt;/p&gt;</content>
+		<category term="Dicas" />
+	</entry>
+	<entry>
+		<title>Acesso a Bancos de Dados</title>
+		<link rel="alternate" type="text/html" href="http://backup/portal/frameworks/cakephp-3/dicas/acesso-a-bancos-de-dados.html"/>
+		<published>2017-06-25T20:11:23-03:00</published>
+		<updated>2017-06-25T20:11:23-03:00</updated>
+		<id>http://backup/portal/frameworks/cakephp-3/dicas/acesso-a-bancos-de-dados.html</id>
+		<author>
+			<name>Ribamar FS</name>
+		</author>
+		<summary type="html">&lt;p&gt;&lt;strong&gt;Acesso a Bancos de Dados no CakePHP 3&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;use Cake\Datasource\ConnectionManager;&lt;/p&gt;
+
+
+&lt;p&gt;&lt;strong&gt;Conexão&lt;/strong&gt;&lt;br /&gt;$connection = ConnectionManager::get('default');&lt;/p&gt;
+
+
+&lt;p&gt;&lt;strong&gt;Select&lt;/strong&gt;&lt;br /&gt;$results = $connection-&amp;gt;execute('SELECT * FROM articles')-&amp;gt;fetchAll('assoc');&lt;br /&gt;&lt;br /&gt;ou&lt;br /&gt;$results = $connection-&amp;gt;execute('SELECT * FROM articles WHERE id = :id', ['id' =&amp;gt; 1])-&amp;gt;fetchAll('assoc');&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Insert&lt;/strong&gt;&lt;br /&gt;use Cake\Datasource\ConnectionManager;&lt;br /&gt;&lt;br /&gt;$connection = ConnectionManager::get('default');&lt;br /&gt;$connection-&amp;gt;insert('articles', [&lt;br /&gt;    'title' =&amp;gt; 'A New Article',&lt;br /&gt;    'created' =&amp;gt; new DateTime('now')&lt;br /&gt;], ['created' =&amp;gt; 'datetime']);&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Update&lt;/strong&gt;&lt;br /&gt;use Cake\Datasource\ConnectionManager;&lt;br /&gt;$connection = ConnectionManager::get('default');&lt;br /&gt;$connection-&amp;gt;update('articles', ['title' =&amp;gt; 'New title'], ['id' =&amp;gt; 10]);&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Delete&lt;/strong&gt;&lt;br /&gt;use Cake\Datasource\ConnectionManager;&lt;br /&gt;$connection = ConnectionManager::get('default');&lt;br /&gt;$connection-&amp;gt;delete('articles', ['id' =&amp;gt; 10]);&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;$stmt = $conn-&amp;gt;query('UPDATE posts SET published = 1 WHERE id = 2');&lt;br /&gt;&lt;br /&gt;The query() method does not allow for additional parameters. If you need additional parameters you should use the execute() method, which allows for placeholders to be used:&lt;br /&gt;&lt;br /&gt;$stmt = $conn-&amp;gt;execute(&lt;br /&gt;    'UPDATE posts SET published = ? WHERE id = ?',&lt;br /&gt;    [1, 2]&lt;br /&gt;);&lt;br /&gt;&lt;br /&gt;$stmt = $conn-&amp;gt;execute(&lt;br /&gt;    'UPDATE posts SET published_date = ? WHERE id = ?',&lt;br /&gt;    [new DateTime('now'), 2],&lt;br /&gt;    ['date', 'integer']&lt;br /&gt;);&lt;br /&gt;&lt;br /&gt;$stmt-&amp;gt;execute();&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Ler um registro&lt;/strong&gt;&lt;br /&gt;$row = $stmt-&amp;gt;fetch('assoc');&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Ler todos os registros&lt;/strong&gt;&lt;br /&gt;$rows = $stmt-&amp;gt;fetchAll('assoc');&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Ler registros interagindo&lt;/strong&gt;&lt;br /&gt;foreach ($rows as $row) {&lt;br /&gt;    // Do work&lt;br /&gt;}&lt;br /&gt;&lt;br /&gt;$rowCount = count($stmt);&lt;br /&gt;$rowCount = $stmt-&amp;gt;rowCount();&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Insert&lt;/strong&gt;&lt;br /&gt;$query = $articles-&amp;gt;query();&lt;br /&gt;$query-&amp;gt;insert(['title', 'body'])&lt;br /&gt;    -&amp;gt;values([&lt;br /&gt;        'title' =&amp;gt; 'First post',&lt;br /&gt;        'body' =&amp;gt; 'Some body text'&lt;br /&gt;    ])&lt;br /&gt;    -&amp;gt;execute();&lt;br /&gt;&lt;br /&gt;$select = $articles-&amp;gt;find()&lt;br /&gt;    -&amp;gt;select(['title', 'body', 'published'])&lt;br /&gt;    -&amp;gt;where(['id' =&amp;gt; 3]);&lt;br /&gt;&lt;br /&gt;$query = $articles-&amp;gt;query()&lt;br /&gt;    -&amp;gt;insert(['title', 'body', 'published'])&lt;br /&gt;    -&amp;gt;values($select)&lt;br /&gt;    -&amp;gt;execute()&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Update&lt;/strong&gt;&lt;br /&gt;$query = $articles-&amp;gt;query();&lt;br /&gt;$query-&amp;gt;update()&lt;br /&gt;    -&amp;gt;set(['published' =&amp;gt; true])&lt;br /&gt;    -&amp;gt;where(['id' =&amp;gt; $id])&lt;br /&gt;    -&amp;gt;execute();&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Delete&lt;/strong&gt;&lt;br /&gt;$query = $articles-&amp;gt;query();&lt;br /&gt;$query-&amp;gt;delete()&lt;br /&gt;    -&amp;gt;where(['id' =&amp;gt; $id])&lt;br /&gt;    -&amp;gt;execute();&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Outras&lt;/strong&gt;&lt;br /&gt;$matchingComment = $articles-&amp;gt;association('Comments')-&amp;gt;find()&lt;br /&gt;    -&amp;gt;select(['article_id'])&lt;br /&gt;    -&amp;gt;distinct()&lt;br /&gt;    -&amp;gt;where(['comment LIKE' =&amp;gt; '%CakePHP%']);&lt;br /&gt;&lt;br /&gt;$query = $articles-&amp;gt;find()&lt;br /&gt;    -&amp;gt;where(['id' =&amp;gt; $matchingComment]);&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;</summary>
+		<content type="html">&lt;p&gt;&lt;strong&gt;Acesso a Bancos de Dados no CakePHP 3&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;use Cake\Datasource\ConnectionManager;&lt;/p&gt;
+
+
+&lt;p&gt;&lt;strong&gt;Conexão&lt;/strong&gt;&lt;br /&gt;$connection = ConnectionManager::get('default');&lt;/p&gt;
+
+
+&lt;p&gt;&lt;strong&gt;Select&lt;/strong&gt;&lt;br /&gt;$results = $connection-&amp;gt;execute('SELECT * FROM articles')-&amp;gt;fetchAll('assoc');&lt;br /&gt;&lt;br /&gt;ou&lt;br /&gt;$results = $connection-&amp;gt;execute('SELECT * FROM articles WHERE id = :id', ['id' =&amp;gt; 1])-&amp;gt;fetchAll('assoc');&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Insert&lt;/strong&gt;&lt;br /&gt;use Cake\Datasource\ConnectionManager;&lt;br /&gt;&lt;br /&gt;$connection = ConnectionManager::get('default');&lt;br /&gt;$connection-&amp;gt;insert('articles', [&lt;br /&gt;    'title' =&amp;gt; 'A New Article',&lt;br /&gt;    'created' =&amp;gt; new DateTime('now')&lt;br /&gt;], ['created' =&amp;gt; 'datetime']);&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Update&lt;/strong&gt;&lt;br /&gt;use Cake\Datasource\ConnectionManager;&lt;br /&gt;$connection = ConnectionManager::get('default');&lt;br /&gt;$connection-&amp;gt;update('articles', ['title' =&amp;gt; 'New title'], ['id' =&amp;gt; 10]);&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Delete&lt;/strong&gt;&lt;br /&gt;use Cake\Datasource\ConnectionManager;&lt;br /&gt;$connection = ConnectionManager::get('default');&lt;br /&gt;$connection-&amp;gt;delete('articles', ['id' =&amp;gt; 10]);&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;$stmt = $conn-&amp;gt;query('UPDATE posts SET published = 1 WHERE id = 2');&lt;br /&gt;&lt;br /&gt;The query() method does not allow for additional parameters. If you need additional parameters you should use the execute() method, which allows for placeholders to be used:&lt;br /&gt;&lt;br /&gt;$stmt = $conn-&amp;gt;execute(&lt;br /&gt;    'UPDATE posts SET published = ? WHERE id = ?',&lt;br /&gt;    [1, 2]&lt;br /&gt;);&lt;br /&gt;&lt;br /&gt;$stmt = $conn-&amp;gt;execute(&lt;br /&gt;    'UPDATE posts SET published_date = ? WHERE id = ?',&lt;br /&gt;    [new DateTime('now'), 2],&lt;br /&gt;    ['date', 'integer']&lt;br /&gt;);&lt;br /&gt;&lt;br /&gt;$stmt-&amp;gt;execute();&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Ler um registro&lt;/strong&gt;&lt;br /&gt;$row = $stmt-&amp;gt;fetch('assoc');&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Ler todos os registros&lt;/strong&gt;&lt;br /&gt;$rows = $stmt-&amp;gt;fetchAll('assoc');&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Ler registros interagindo&lt;/strong&gt;&lt;br /&gt;foreach ($rows as $row) {&lt;br /&gt;    // Do work&lt;br /&gt;}&lt;br /&gt;&lt;br /&gt;$rowCount = count($stmt);&lt;br /&gt;$rowCount = $stmt-&amp;gt;rowCount();&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Insert&lt;/strong&gt;&lt;br /&gt;$query = $articles-&amp;gt;query();&lt;br /&gt;$query-&amp;gt;insert(['title', 'body'])&lt;br /&gt;    -&amp;gt;values([&lt;br /&gt;        'title' =&amp;gt; 'First post',&lt;br /&gt;        'body' =&amp;gt; 'Some body text'&lt;br /&gt;    ])&lt;br /&gt;    -&amp;gt;execute();&lt;br /&gt;&lt;br /&gt;$select = $articles-&amp;gt;find()&lt;br /&gt;    -&amp;gt;select(['title', 'body', 'published'])&lt;br /&gt;    -&amp;gt;where(['id' =&amp;gt; 3]);&lt;br /&gt;&lt;br /&gt;$query = $articles-&amp;gt;query()&lt;br /&gt;    -&amp;gt;insert(['title', 'body', 'published'])&lt;br /&gt;    -&amp;gt;values($select)&lt;br /&gt;    -&amp;gt;execute()&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Update&lt;/strong&gt;&lt;br /&gt;$query = $articles-&amp;gt;query();&lt;br /&gt;$query-&amp;gt;update()&lt;br /&gt;    -&amp;gt;set(['published' =&amp;gt; true])&lt;br /&gt;    -&amp;gt;where(['id' =&amp;gt; $id])&lt;br /&gt;    -&amp;gt;execute();&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Delete&lt;/strong&gt;&lt;br /&gt;$query = $articles-&amp;gt;query();&lt;br /&gt;$query-&amp;gt;delete()&lt;br /&gt;    -&amp;gt;where(['id' =&amp;gt; $id])&lt;br /&gt;    -&amp;gt;execute();&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Outras&lt;/strong&gt;&lt;br /&gt;$matchingComment = $articles-&amp;gt;association('Comments')-&amp;gt;find()&lt;br /&gt;    -&amp;gt;select(['article_id'])&lt;br /&gt;    -&amp;gt;distinct()&lt;br /&gt;    -&amp;gt;where(['comment LIKE' =&amp;gt; '%CakePHP%']);&lt;br /&gt;&lt;br /&gt;$query = $articles-&amp;gt;find()&lt;br /&gt;    -&amp;gt;where(['id' =&amp;gt; $matchingComment]);&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;</content>
+		<category term="Dicas" />
+	</entry>
+	<entry>
+		<title>Layout no CakePHP 3</title>
+		<link rel="alternate" type="text/html" href="http://backup/portal/frameworks/cakephp-3/dicas/layout-no-cakephp-3.html"/>
+		<published>2017-06-25T20:11:23-03:00</published>
+		<updated>2017-06-25T20:11:23-03:00</updated>
+		<id>http://backup/portal/frameworks/cakephp-3/dicas/layout-no-cakephp-3.html</id>
+		<author>
+			<name>Ribamar FS</name>
+		</author>
+		<summary type="html">&lt;p&gt;&lt;strong&gt;Layouts no CakePHP 3&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;Os layouts são camadas de software que organizam o espaço nas páginas.&lt;br /&gt;Definem o que fica no cabeçalho, menus, conteúdo, rodapé, etc.&lt;br /&gt;O que fica na região de conteúdo.&lt;br /&gt;Na região de cabeçalho.&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;br /&gt;&amp;lt;html lang=&quot;en&quot;&amp;gt;&lt;br /&gt;&amp;lt;head&amp;gt;&lt;br /&gt;&amp;lt;title&amp;gt;&amp;lt;?= h($this-&amp;gt;fetch('title')) ?&amp;gt;&amp;lt;/title&amp;gt;&lt;br /&gt;&amp;lt;link rel=&quot;shortcut icon&quot; href=&quot;http://backup/portal/favicon.ico&quot; type=&quot;image/x-icon&quot;&amp;gt;&lt;br /&gt;&amp;lt;!-- Include external files and scripts here (See HTML helper for more info.) --&amp;gt;&lt;br /&gt;&amp;lt;?php&lt;br /&gt;echo $this-&amp;gt;fetch('meta');&lt;br /&gt;echo $this-&amp;gt;fetch('css');&lt;br /&gt;echo $this-&amp;gt;fetch('script');&lt;br /&gt;?&amp;gt;&lt;br /&gt;&amp;lt;/head&amp;gt;&lt;br /&gt;&amp;lt;body&amp;gt;&lt;br /&gt;&lt;br /&gt;&amp;lt;!-- If you'd like some sort of menu to&lt;br /&gt;show up on all of your views, include it here --&amp;gt;&lt;br /&gt;&amp;lt;div id=&quot;header&quot;&amp;gt;&lt;br /&gt;    &amp;lt;div id=&quot;menu&quot;&amp;gt;...&amp;lt;/div&amp;gt;&lt;br /&gt;&amp;lt;/div&amp;gt;&lt;br /&gt;&lt;br /&gt;&amp;lt;!-- Here's where I want my views to be displayed --&amp;gt;&lt;br /&gt;&amp;lt;?= $this-&amp;gt;fetch('content') ?&amp;gt;&lt;br /&gt;&lt;br /&gt;&amp;lt;!-- Add a footer to each displayed page --&amp;gt;&lt;br /&gt;&amp;lt;div id=&quot;footer&quot;&amp;gt;...&amp;lt;/div&amp;gt;&lt;br /&gt;&lt;br /&gt;&amp;lt;/body&amp;gt;&lt;br /&gt;&amp;lt;/html&amp;gt;&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Podemos definir vários layouts para nosso aplicativo.&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Os layouts devem ficar no diretório&lt;/strong&gt;&lt;br /&gt;src/Template/Layout&lt;br /&gt;&lt;br /&gt;O CakePHP já vem com um layout default.ctp.&lt;br /&gt;&lt;br /&gt;Atribuindo título para o aplicativo e definindo um layout no AppController:&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;class UsersController extends AppController&lt;br /&gt;{&lt;br /&gt;    public function view_active()&lt;br /&gt;    {&lt;br /&gt;        $this-&amp;gt;set('title', 'View Active Users');&lt;br /&gt;        $this-&amp;gt;viewBuilder()-&amp;gt;layout('default_small_ad');&lt;br /&gt;   }&lt;br /&gt;&lt;br /&gt;    public function view_image()&lt;br /&gt;    {&lt;br /&gt;        $this-&amp;gt;viewBuilder()-&amp;gt;layout('image');&lt;br /&gt;    }&lt;br /&gt;}&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;</summary>
+		<content type="html">&lt;p&gt;&lt;strong&gt;Layouts no CakePHP 3&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;Os layouts são camadas de software que organizam o espaço nas páginas.&lt;br /&gt;Definem o que fica no cabeçalho, menus, conteúdo, rodapé, etc.&lt;br /&gt;O que fica na região de conteúdo.&lt;br /&gt;Na região de cabeçalho.&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;br /&gt;&amp;lt;html lang=&quot;en&quot;&amp;gt;&lt;br /&gt;&amp;lt;head&amp;gt;&lt;br /&gt;&amp;lt;title&amp;gt;&amp;lt;?= h($this-&amp;gt;fetch('title')) ?&amp;gt;&amp;lt;/title&amp;gt;&lt;br /&gt;&amp;lt;link rel=&quot;shortcut icon&quot; href=&quot;http://backup/portal/favicon.ico&quot; type=&quot;image/x-icon&quot;&amp;gt;&lt;br /&gt;&amp;lt;!-- Include external files and scripts here (See HTML helper for more info.) --&amp;gt;&lt;br /&gt;&amp;lt;?php&lt;br /&gt;echo $this-&amp;gt;fetch('meta');&lt;br /&gt;echo $this-&amp;gt;fetch('css');&lt;br /&gt;echo $this-&amp;gt;fetch('script');&lt;br /&gt;?&amp;gt;&lt;br /&gt;&amp;lt;/head&amp;gt;&lt;br /&gt;&amp;lt;body&amp;gt;&lt;br /&gt;&lt;br /&gt;&amp;lt;!-- If you'd like some sort of menu to&lt;br /&gt;show up on all of your views, include it here --&amp;gt;&lt;br /&gt;&amp;lt;div id=&quot;header&quot;&amp;gt;&lt;br /&gt;    &amp;lt;div id=&quot;menu&quot;&amp;gt;...&amp;lt;/div&amp;gt;&lt;br /&gt;&amp;lt;/div&amp;gt;&lt;br /&gt;&lt;br /&gt;&amp;lt;!-- Here's where I want my views to be displayed --&amp;gt;&lt;br /&gt;&amp;lt;?= $this-&amp;gt;fetch('content') ?&amp;gt;&lt;br /&gt;&lt;br /&gt;&amp;lt;!-- Add a footer to each displayed page --&amp;gt;&lt;br /&gt;&amp;lt;div id=&quot;footer&quot;&amp;gt;...&amp;lt;/div&amp;gt;&lt;br /&gt;&lt;br /&gt;&amp;lt;/body&amp;gt;&lt;br /&gt;&amp;lt;/html&amp;gt;&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Podemos definir vários layouts para nosso aplicativo.&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Os layouts devem ficar no diretório&lt;/strong&gt;&lt;br /&gt;src/Template/Layout&lt;br /&gt;&lt;br /&gt;O CakePHP já vem com um layout default.ctp.&lt;br /&gt;&lt;br /&gt;Atribuindo título para o aplicativo e definindo um layout no AppController:&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;class UsersController extends AppController&lt;br /&gt;{&lt;br /&gt;    public function view_active()&lt;br /&gt;    {&lt;br /&gt;        $this-&amp;gt;set('title', 'View Active Users');&lt;br /&gt;        $this-&amp;gt;viewBuilder()-&amp;gt;layout('default_small_ad');&lt;br /&gt;   }&lt;br /&gt;&lt;br /&gt;    public function view_image()&lt;br /&gt;    {&lt;br /&gt;        $this-&amp;gt;viewBuilder()-&amp;gt;layout('image');&lt;br /&gt;    }&lt;br /&gt;}&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;</content>
+		<category term="Dicas" />
+	</entry>
+</feed>

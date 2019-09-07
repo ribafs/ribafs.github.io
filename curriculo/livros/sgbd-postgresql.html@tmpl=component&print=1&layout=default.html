@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br" dir="ltr">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <base href="" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Ribamar FS" />
+	<meta name="robots" content="noindex, nofollow" />
+	<meta name="description" content="Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros." />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>SGBD PostgreSQL - RibaFS Portal</title>
+	<link href="http://ribafs.org/portal/curriculo/livros/sgbd-postgresql.html?tmpl=component&amp;print=1&amp;layout=default" rel="canonical" />
+	<link href="../../templates/shaper_helix3/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../../favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<script src="../../media/jui/js/jquery.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../media/jui/js/jquery-noconflict.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../media/jui/js/jquery-migrate.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="http://backup/portal/media/system/js/caption.js?d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script type="text/javascript">
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+	</script>
+	<meta property="og:url" content="http://backup/portal/curriculo/livros/sgbd-postgresql.html" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="SGBD PostgreSQL" />
+	<meta property="og:description" content="SGBD PostgreSQL Muito material. Quase 1000 páginas. Em sua maioria material da comunidade, mas material que selecionei por vários anos. 1 - Conceitos Impor..." />
+
+   	<link rel="stylesheet" href="../../media/jui/css/bootstrap.min.css" type="text/css" />
+	<link rel="stylesheet" href="../../templates/shaper_helix3/css/frontend-edit.css" type="text/css" />
+    <link rel="stylesheet" href="../../templates/shaper_helix3/css/template.css" type="text/css" />
+</head>
+<body class="contentpane">
+	<div id="system-message-container">
+	</div>
+
+	
+
+<article class="item item-page" itemscope itemtype="http://schema.org/Article">
+	<meta itemprop="inLanguage" content="pt-BR" />
+	
+	
+
+	<div class="entry-header">
+		<span class="post-format"><i class="fa fa-thumb-tack"></i></span>
+		
+					<h2 itemprop="name">
+									SGBD PostgreSQL							</h2>
+												</div>
+
+						<div id="pop-print" class="btn hidden-print">
+				<a href="sgbd-postgresql.html#" onclick="window.print();return false;">			<span class="icon-print" aria-hidden="true"></span>
+		Imprimir	</a>			</div>
+				
+	
+	
+				
+	
+			<div itemprop="articleBody">
+		<p>SGBD PostgreSQL</p>
+<p>Muito material. Quase 1000 páginas. Em sua maioria material da comunidade, mas material que selecionei por vários anos.</p>
+<p>1 - Conceitos Importantes no PostgreSQL    6<br />Introdução ao PostgreSQL    7<br />1.1 - Resumo da História do PostgreSQL    7<br />1.2 - Características Avançadas do PostgreSQL    8<br />1.3 - Limites atuais do PostgreSQL    9<br />1.4 - Licença    9<br />1.5 - Quem oferece Suporte ao PostgreSQL no Brasil e quem o usa    9<br />2 - Database FAQs    11<br />3 - Um panorama das novidades previstas para o PostgreSQL 10    41<br />Novidades sobre o Postgresql    42<br />Replicação em cascata    47<br />Novos tipos de dados    48<br />Index-only scans    48<br />Novo utilitário: “pg_receivexlog”    49<br />Melhorias na contrib “pg_stat_statements”    50<br />Background Checkpointer    50<br />Melhor escalabilidade vertical    51<br />4 - Projeto, Administração e Programação    54<br />Dimensionamento de Hardware    72<br />5 - Ferramentas    80<br />Expressões Regulares para uso em Modelagem de Bancos de Dados    103<br />6 - Instalação do PostgreSQL 8.3 no Windows    113<br />Instalação do PostgreSQL no Linux    125<br />Definições    126<br />Entendendo as constraints e a integridade referencial    132<br />Funções com Data e Hora    141<br />7 - Relacionamentos entre tabelas    142<br />Entendendo a Herança de tabelas    146<br />8 - Tipos de Dados no PostgreSQL    150<br />9 - Agrupando Registros    160<br />10 - EXPRESSÃO CASE    161<br />CASTS - Conversão explícita de tipos    163<br />11 - Trabalhando com Conjuntos de Dados    163<br />12 - Trabalhando com SQL    165<br />13 - Utilizando SQL para selecionar, filtrar e agrupar registros    180<br />DDL - Linguagem de Definição de Dados    181<br />DCL - Linguagem de Controle de Dados    182<br />DTL - Linguagem de Transação de Dados    182<br />DQL - Linguagem de Consulta de Dados    183<br />Cláusula DISTINCT    189<br />14 - Desvendando o SELECT    195<br />15 - Entendendo e Utilizando sub-consultas    197<br />16 - Reuso de Código: Utilizando Funções    205<br />17 - Consultanto dados em múltiplas tabelas    220<br />Cláusula JOIN    223<br />18 - Visões (views)    231<br />19 - Junção entre tabelas no PostgreSQL - Daniel Oslei    237<br />20 - Transações    241<br />Isolamento serializável versus verdadeira serialidade    247<br />Trabalhando com Nulos    251<br />Utilizando Operadores    263<br />21 - Catálogo do Sistema    285<br />22 - Tipos Geométricos    315<br />23 - Polígonos    316<br />Chapter: Geometric Data Types    320<br />Using Geometric Data Types    321<br />Figure 16.12. Dynamic polygons.    326<br />24 - PostgreSQL Dicas    335<br />COALESCE: Trate decisões envolvendo campos nulos!    335<br />explain.depesz: Encontre a Causa da Lentidão em suas Consultas!    337<br />Simples e Útil: Visões Materializadas no PostgreSQL!    337<br />Beltrano: Base de Dados em Português para o PostgreSQL    339<br />Faça Você Mesmo: Diagramas de Classe com as Tabelas do Catálogo do PostgreSQL    340<br />Você REALMENTE Sabe Lidar com Valores Nulos no PostgreSQL?    348<br />Formatação de Data e Hora com as funções TO_CHAR e TO_DATE    354<br />DtSQL: Ferramenta Front-End para Banco de Dados    357<br />Edição de SQL e Funções no PSQL    362<br />Produza Sequências Com a Função Generate_Series()!    364<br />Visão Geral da Arquitetura do PostgreSQL!    369<br />PGTUNE: Otimize a configuração do PostgreSQL!    369<br />Range Types: Novo recurso do Postgresql 9.2!    372<br />Tratamento de Parâmetros de Funções com Pl/PgSQL    377<br />Desenvolva suas Aplicações de Bancos Postgres com Wavemaker    381<br />Unlogged Tables: Funcionalidade para Aumento de Desempenho!    385<br />25 - PostgreSQL Cheat Sheet    393<br />26 - Prepared Statements    393<br />27 - Exercícios    395<br />Entendendo e Trabalhando com Clusters    395<br />Esquemas    397<br />Otimizador de Consultas    400<br />Restaurando um Template1 Corrrompido usando o Template0    402<br />28 - Exemplo de Modelagem de Banco de Dados    403<br />29 - Normalização de uma tabela de CEP sem mesmo chave primária.    404<br />Modelagem do Banco de Dados Pessoa    408<br />30 - Segurança    418<br />Segurança de Dados    418<br />Inundação    419<br />Desafios da Segurança de Informação    436<br />31 - Linguagens do Lado do Servidor    443<br />Funções no PostgreSQL:    443<br />RETURN NEXT    506<br />EXIT    509<br />WHILE    510<br /> FOR (variação inteira)    511<br />Laço através do resultado da consulta    511<br />Captura de erros    515<br />Declaração de variável cursor    517<br />Abertura de cursor    518<br /> OPEN FOR SELECT    518<br />OPEN FOR EXECUTE    518<br />Abertura de cursor ligado    518<br />Utilização de cursores    519<br />FETCH    519<br />CLOSE    519<br />Retornar cursor    520<br />Validação de CPF com Pl/ PgSQL    540<br />32 - Gatilhos    542<br />33 - Rules    570<br />Triggers (Gatilhos)    574<br />RULES    579<br />34 - Exemplos de Funções em SQL no PostgreSQL    582<br />35 - Expressões Regulares para uso em Modelagem de Bancos de Dados    616<br />36 - Tipos e Domínios    625<br />37 - Fases de um Projeto de Banco de Dados    628<br />38 - Ferramentas    632<br />Validação e Geração de IE em JavaScript    632<br />Links Úteis para Modelagem    632<br />39 - Modelagem de Bancos de Dados    634<br />40 - Modelando um Banco Pessoa    640<br />Integridade Referencial    659<br />Algumas Demonstrações sobre Normalização    662<br />Normalizando Tabelas com Leandro Dutra    664<br />Modelo Relacional segundo C. J. Date    665<br />Fases de um Projeto de Banco de Dados    666<br />Tipos e Domínios    668<br />41 - Melhorando a Performance do PostgreSQL    670<br />Cinco Princípios de Hardware para Configurar o seu Servidor PostgreSQL    676<br />Conexão    678<br />Memória    678<br />Disco e WAL    680<br />Planejador de Consultas    680<br />Logging    681<br />Autovacuum e você    681<br />Usando o Vacuum e Analyze    703<br />42 - Gerenciando Bancos de Dados no PostgreSQL    708<br />43 - Administrando o PostgreSQL pela linha de comando (psql)    715<br />44 - Administração com o cliente web Adminer    717<br />45 - Instalação do PostgreSQL através dos Fontes    718<br />Contribs    725<br />Instalando PostgreSQL no Slackware Linux    728<br />Instalação do PostgreSQL no CentOS    730<br />Instalação do PostgreSQL no OpenBSD    732<br />Testes de regressão    732<br />46 - Backup lógico e físico do postgresql    739<br />Sintaxe dos comandos para backup    767<br />Criar banco limpo, tendo como base o template0:    774<br />Script para backup do PostgreSQL    775<br />Usando o Comando Copy    776<br />Migração de um banco de dados no 8.3 para o PostgreSQL 9.5    777<br />IMPORTAR SCRIPTS TIPO CSV E SQL PARA O POSTGRESQL    781<br />47 - Configurações do PostgreSQL    783<br />48 - Entendendo e trabalhando com CLUSTERS no PostgreSQL    803<br />49 - Trabalhando com Esquemas no PostgreSQL    812<br /> Schemas ou Databases?    818<br />50 - Manutenção do PostgreSQL    821<br />Tudo que você sempre quis saber sobre discos em servidores PostgreSQL e tinha vergonha de perguntar    825<br />RAID    825<br />Discos    828<br />Controladoras de discos    830<br />Tipos de arquivos    831<br />Particionamento    835<br />Como distribuir as partições nos discos existentes    836<br />Discos no PostgreSQL    837<br />51 - Monitorando as Atividades do Servidor do PostgreSQL    840<br />Explain    864<br />Ver as estatísticas coletadas    866<br />Características de um bom hardware para servidor    869<br />52 - TableSpaces    870<br />Trabalhando com Tablespace no PostgreSQL    877<br />53 - Criação de grupos de usuários no PostgreSQL 9.6.3    883<br />Exemplo de Uso de Usuários e Privilégios    898<br />54 - Conectividade    901<br />Openoffice2 Base    914<br />55 - Informações Introdutórias sobre Redes de Computadores    916<br />Referência rápida de máscara de redes    919<br />Endereços reservados para uso em uma rede Privada    920</p>
+<p><a title="https://github.com/ribafs/livros/raw/master/SGBDPostgreSQL.pdf" href="https://github.com/ribafs/livros/raw/master/SGBDPostgreSQL.pdf">Download</a></p>
+<p> </p> 	</div>
+
+	
+	
+				
+	
+	
+	
+</article>
+
+</body>
+</html>

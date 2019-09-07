@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br" dir="ltr">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <base href="" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Ribamar FS" />
+	<meta name="robots" content="noindex, nofollow" />
+	<meta name="description" content="Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros." />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>Introdução ao MVC - RibaFS Portal</title>
+	<link href="http://ribafs.org/portal/basicos/phpoo/introducao-ao-mvc.html?tmpl=component&amp;print=1&amp;layout=default" rel="canonical" />
+	<link href="../../templates/shaper_helix3/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../../favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<script src="../../media/jui/js/jquery.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../media/jui/js/jquery-noconflict.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../media/jui/js/jquery-migrate.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="http://backup/portal/media/system/js/caption.js?d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script type="text/javascript">
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+	</script>
+	<meta property="og:url" content="http://backup/portal/basicos/phpoo/introducao-ao-mvc.html" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Introdução ao MVC" />
+	<meta property="og:description" content="MVC - Model, View e Controller. É uma forma de programar dividindo o código em 3 camadas, para melhor organizar. Um exemplo bem organizado de uso do MVC é..." />
+
+   	<link rel="stylesheet" href="../../media/jui/css/bootstrap.min.css" type="text/css" />
+	<link rel="stylesheet" href="../../templates/shaper_helix3/css/frontend-edit.css" type="text/css" />
+    <link rel="stylesheet" href="../../templates/shaper_helix3/css/template.css" type="text/css" />
+</head>
+<body class="contentpane">
+	<div id="system-message-container">
+	</div>
+
+	
+
+<article class="item item-page" itemscope itemtype="http://schema.org/Article">
+	<meta itemprop="inLanguage" content="pt-BR" />
+	
+	
+
+	<div class="entry-header">
+		<span class="post-format"><i class="fa fa-thumb-tack"></i></span>
+		
+					<h2 itemprop="name">
+									Introdução ao MVC							</h2>
+												</div>
+
+						<div id="pop-print" class="btn hidden-print">
+				<a href="introducao-ao-mvc.html#" onclick="window.print();return false;">			<span class="icon-print" aria-hidden="true"></span>
+		Imprimir	</a>			</div>
+				
+	
+	
+				
+	
+			<div itemprop="articleBody">
+		<p style="text-align: justify;"><strong>MVC - Model, View e Controller. É uma forma de programar dividindo o código em 3 camadas, para melhor organizar.</strong><br /> <br />Um exemplo bem organizado de uso do MVC é o a Framework CakePKP, que traz as 3 camadas bem definidas e organizadas. <br /> <br /><strong>Model</strong> - representa os dados. A parte do código que manipula os dados para ler e escrever no banco. <br /><strong>View</strong> - representa a visualização dos dados. A parte do código que mostra os dados para o usuário. <br /><strong>Controller</strong> - manipula e roteia as requisições dos usuários. A parte do código que recebe as requisições do usuário através de um site (exemplo), processa, roteia e envia para o model, se for o caso. Também é responsável por receber dados do banco e devolver para a View. <br /> <br /><strong>De forma mais completa o fluxo acontece assim no CakePHP:</strong> <br />- O usuário clica num link para editar um registro <br />- O dispatcher (expedidor) verifica a URL requisitada (/cakes/comprar) e redireciona ao controller correto; <br />- O controller executa a lógica específica da aplicação. Por exemplo, verifica se o Ricardo está logado e tem acesso ao site; <br />- O controller também usa os models para acessar os dados da sua aplicação. Muitas vezes, os models representam as tabelas do banco de dados, mas podem representar registros LDAP, feeds de RSS ou até mesmo arquivos do sistema.  <br />- Neste exemplo, o controller usa o model para trazer ao usuário as últimas compras do banco de dados; <br />- Depois que o controller fez sua mágica sobre os dados, ele repassa para a view. A view faz com que os dados fiquem prontos para a representação do usuário; <br />- Uma vez que a view tenha usado os dados provenientes do controller para construir a página, o conteúdo é retornado ao browser do usuário. <br /> <br /> <br /><strong>Benefícios</strong> <br /> <br />Por que usar MVC? Porque é um verdadeiro padrão de projeto (design pattern) e torna fácil a manutenção da sua aplicação, com pacotes modulares de rápido desenvolvimento. Elaborar tarefas divididas entre models, views e controllers faz com que sua aplicação fique leve e independente. Novas funcionalidades são facilmente adicionadas e pode-se dar nova cara nas características antigas num piscar de olhos. O design modular e separado também permite aos desenvolvedores e designers trabalharem simultaneamente, incluindo a habilidade de se construir um rápido protótipo. A separação também permite que os desenvolvedores alterem uma parte da aplicação sem afetar outras. <br /> <br />Se você nunca desenvolveu uma aplicação neste sentido, isso vai lhe agradar muito, mas estamos confiantes que depois de construir sua primeira aplicação em CakePHP, você não vai querer voltar atrás.</p> 	</div>
+
+	
+	
+				
+	
+	
+	
+</article>
+
+</body>
+</html>

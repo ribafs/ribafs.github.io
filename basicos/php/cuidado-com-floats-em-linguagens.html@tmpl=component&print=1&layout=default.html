@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br" dir="ltr">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <base href="" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Ribamar FS" />
+	<meta name="robots" content="noindex, nofollow" />
+	<meta name="description" content="Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros." />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>Cuidado com floats em Linguagens - RibaFS Portal</title>
+	<link href="http://ribafs.org/portal/basicos/php/cuidado-com-floats-em-linguagens.html?tmpl=component&amp;print=1&amp;layout=default" rel="canonical" />
+	<link href="../../templates/shaper_helix3/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../../favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<script src="../../media/jui/js/jquery.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../media/jui/js/jquery-noconflict.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../media/jui/js/jquery-migrate.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="http://backup/portal/media/system/js/caption.js?d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script type="text/javascript">
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+	</script>
+	<meta property="og:url" content="http://backup/portal/basicos/php/cuidado-com-floats-em-linguagens.html" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Cuidado com floats em Linguagens" />
+	<meta property="og:description" content="Cuidado com floats em Linguagens de Programação Muito Cuidado ao trabalhar com Números em Ponto Flutuante em várias linguagens de programação e em dois SGB..." />
+	<meta property="og:image" content="http://backup/portal/images/float.png" />
+	<meta property="og:image:width" content="600" />
+	<meta property="og:image:height" content="315" />
+
+   	<link rel="stylesheet" href="../../media/jui/css/bootstrap.min.css" type="text/css" />
+	<link rel="stylesheet" href="../../templates/shaper_helix3/css/frontend-edit.css" type="text/css" />
+    <link rel="stylesheet" href="../../templates/shaper_helix3/css/template.css" type="text/css" />
+</head>
+<body class="contentpane">
+	<div id="system-message-container">
+	</div>
+
+	
+
+<article class="item item-page" itemscope itemtype="http://schema.org/Article">
+	<meta itemprop="inLanguage" content="pt-BR" />
+	
+	
+		<div class="pull-left entry-image full-image">
+		<img
+			 src="../../images/float.png" alt="" itemprop="image"/>
+	</div>
+
+	<div class="entry-header">
+		<span class="post-format"><i class="fa fa-thumb-tack"></i></span>
+		
+					<h2 itemprop="name">
+									Cuidado com floats em Linguagens							</h2>
+												</div>
+
+						<div id="pop-print" class="btn hidden-print">
+				<a href="cuidado-com-floats-em-linguagens.html#" onclick="window.print();return false;">			<span class="icon-print" aria-hidden="true"></span>
+		Imprimir	</a>			</div>
+				
+	
+	
+				
+	
+			<div itemprop="articleBody">
+		<h3>Cuidado com floats em Linguagens de Programação</h3>
+<p><br />Muito Cuidado ao trabalhar com Números em Ponto Flutuante em várias linguagens de programação e em dois SGBDs.<br />Se estiver trabalhando e precise de extrema precisão use float com muita cautela e melhor ainda é não usar float quando for efetuar operações matemáticas que exijam precisão. Neste caso prefira outros formatos ou um SGBD como MySQL ou PostgreSQL.<br /><br /><strong>Veja os exemplos com detalhes abaixo:</strong><br /><br />PHP<br />Java<br />JavaScript<br />Ruby<br />Python<br />MySQL<br />PostgreSQL<br /><br /><strong>Teste em PHP</strong><br /><br />&lt;?php<br />echo (int) ((0.1 + 0.7 ) * 10);<br />?&gt;<br /><br /><strong>Agora teste isso:</strong><br /><br />echo (int) ((0.2 + 0.7 ) * 10);<br /><br />Não conclua muito apressadamente que é deficiência do PHP, veja abaixo com outras linguagens.<br />Neste momento devemos ter conhecimento de como se comportam os números, especialmente os floats, que são normalizados pelo IEEE.<br /><br /><br /><strong>Teste em Java</strong><br /><br />nano teste.java<br /><br />class teste {<br />    public static void main(String[] args) {<br />        System.out.println((int) ((0.1 + 0.7 ) * 10)); //Display the string.<br />    }<br />}<br /><br />javac teste.java<br />java teste<br /><br /><strong>Agora veja as recomendações do manual do PHP</strong><br />O tamanho de um float depende também da plataforma e é de 64bits no formato IEEE(*). Nunca compare números em ponto flutuante em igualdades, sob pena de cometer erros.<br /><br /><strong>Agora com JavaScript</strong><br /><br />&lt;script&gt;<br />alert((0.1 + 0.7)*10);<br />&lt;/script&gt;<br /><br />Resultado razoável: 7.999999999999999<br /><br /><br /><strong>Com MySQL</strong><br /><br />SELECT (0.1 + 0.7)*10<br /><br />Resultado correto: 8.0<br /><br /><br /><strong>Teste com PostgreSQL</strong><br /><br />SELECT CAST((0.1 + 0.7)*10 AS INTEGER);<br /><br />Resultado correto: 8<br /><br />Os SGBDs retornam o valor esperado.<br /><br /><br /><strong>Java e PHP:</strong><br /><br />System.out.println(1.95 - 1.03); <br /><br />Retorna 0.9199999999999999<br /><br />Em PHP <br />print (1.95 - 1.03);<br /><br />Retorna 0.92.<br /><br /><br /><strong>Em Ruby</strong><br /><br />Execute em:<br />https://repl.it/languages/ruby<br /><br />(1.8+0.1)==(1.9)<br /><br />Retorna false<br /><br /><br /><strong>Em Phyton.</strong><br />https://repl.it/languages/python3<br /><br />print (1.8+0.1)<br /><br />Resultado razoável: 1.9000000000000001<br /><br /><strong>Conclusão</strong><br />Ou seja, fique atento quando precisar realizar operações matemáticas com floats em linguagens de programação.<br />O MySQL e o PostgreSQL trabalham bem, pelo menos com os rápidos testes que fiz.</p> 	</div>
+
+	
+	
+				
+	
+	
+	
+</article>
+
+</body>
+</html>

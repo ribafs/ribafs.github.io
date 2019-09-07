@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br" dir="ltr">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <base href="" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Ribamar FS" />
+	<meta name="robots" content="noindex, nofollow" />
+	<meta name="description" content="Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros." />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>14.2 - Conhecendo o CSS default do CakePHP 3 - RibaFS Portal</title>
+	<link href="http://ribafs.org/portal/curriculo/livros/cakephp/14-2-conhecendo-o-css-default-do-cakephp-3.html?tmpl=component&amp;print=1&amp;layout=default" rel="canonical" />
+	<link href="../../../templates/shaper_helix3/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../../../favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="http://backup/portal/media/plg_content_prismsyntaxhighlighter/css/prism-okaidia.css" rel="stylesheet" type="text/css" />
+	<link href="http://backup/portal/media/plg_content_prismsyntaxhighlighter/css/prism-linenumbers.css" rel="stylesheet" type="text/css" />
+	<script src="http://backup/portal/media/plg_content_prismsyntaxhighlighter/js/prism-tinymce.js" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery-noconflict.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery-migrate.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="http://backup/portal/media/system/js/caption.js?d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script type="text/javascript">
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+	</script>
+	<meta property="og:url" content="http://backup/portal/curriculo/livros/cakephp/14-2-conhecendo-o-css-default-do-cakephp-3.html" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="14.2 - Conhecendo o CSS default do CakePHP 3" />
+	<meta property="og:description" content="14.2 - Conhecendo o CSS default do CakePHP 3 A lógica pode levar de um ponto A a um ponto B. A imaginação pode levar a qualquer lugar. (Albert Einstein) A..." />
+
+   	<link rel="stylesheet" href="../../../media/jui/css/bootstrap.min.css" type="text/css" />
+	<link rel="stylesheet" href="../../../templates/shaper_helix3/css/frontend-edit.css" type="text/css" />
+    <link rel="stylesheet" href="../../../templates/shaper_helix3/css/template.css" type="text/css" />
+</head>
+<body class="contentpane">
+	<div id="system-message-container">
+	</div>
+
+	
+
+<article class="item item-page" itemscope itemtype="http://schema.org/Article">
+	<meta itemprop="inLanguage" content="pt-BR" />
+	
+	
+
+	<div class="entry-header">
+		<span class="post-format"><i class="fa fa-thumb-tack"></i></span>
+		
+					<h2 itemprop="name">
+									14.2 - Conhecendo o CSS default do CakePHP 3							</h2>
+												</div>
+
+						<div id="pop-print" class="btn hidden-print">
+				<a href="14-2-conhecendo-o-css-default-do-cakephp-3.html#" onclick="window.print();return false;">			<span class="icon-print" aria-hidden="true"></span>
+		Imprimir	</a>			</div>
+				
+	
+	
+				
+	
+			<div itemprop="articleBody">
+		<h3>14.2 - Conhecendo o CSS default do CakePHP 3</h3>
+<p style="text-align: right;"><br /><br /><em><strong>A lógica pode levar de um ponto A a um ponto B. A imaginação pode levar a qualquer lugar.</strong></em> (Albert Einstein)</p>
+<p><br />A tela principal do aplicativo Customers mostrando a view index.ctp</p>
+<p><img src="../../../images/livrocake1.png" alt="" /></p>
+<p> </p>
+<p>Agora mostrarei par cada região da tela, o respectivo código e mais abaixo as classes usadas no CSS default do CakePHP 3 para estas regiões.<br /><br />No layout default.ctp<br /><br />Quase todas as classes das 4 views defaults criadas pelo bake e do layout.ctp estão abaixo<br /><br />layout.ctp (as imagens abaixo do código):<br /><br />&lt;nav class="top-bar expanded" data-topbar role="navigation"&gt;</p>
+<p><img src="../../../images/livrocake2.png" alt="" /></p>
+<p>        &lt;ul class="title-area large-3 medium-4 columns"&gt;<br />            &lt;li class="name"&gt;<br />                &lt;h1&gt;&lt;a href="/portal/"&gt;&lt;?= $this-&gt;fetch('title') ?&gt;&lt;/a&gt;&lt;/h1&gt;<br />            &lt;/li&gt;<br />        &lt;/ul&gt;</p>
+<p><img src="../../../images/livrocake3.png" alt="" /></p>
+<p>        &lt;div class="top-bar-section"&gt;<br />            &lt;ul class="right"&gt;<br />                &lt;li&gt;&lt;a target="_blank" href="https://book.cakephp.org/3.0/"&gt;Documentation&lt;/a&gt;&lt;/li&gt;<br />                &lt;li&gt;&lt;a target="_blank" href="https://api.cakephp.org/3.0/"&gt;API&lt;/a&gt;&lt;/li&gt;<br />            &lt;/ul&gt;<br />        &lt;/div&gt;</p>
+<p><img src="../../../images/livrocake4.png" alt="" /></p>
+<p>Aqui embaixo o Cake joga o conteúdo da view/template atual:<br /><br />    &lt;div class="container clearfix"&gt;<br />        &lt;?= $this-&gt;fetch('content') ?&gt; &lt;!-- Aqui ficará o código da view atual --&gt;<br />    &lt;/div&gt;<br /><br />index.ctp:<br /><br />&lt;nav class="large-3 medium-4 columns" id="actions-sidebar"&gt;</p>
+<p><img src="../../../images/livrocake5.png" alt="" /></p>
+<p>    &lt;ul class=<strong>"side-nav</strong>"&gt;<br />        &lt;li class="<strong>heading</strong>"&gt;&lt;?= __('Actions') ?&gt;&lt;/li&gt;</p>
+<p><img src="../../../images/livrocake6.png" alt="" /></p>
+<p style="margin-bottom: 0cm; line-height: 100%;">&lt;li&gt;&lt;?= $this-&gt;Html-&gt;link(__('New Customer'), ['action' =&gt; 'add']) ?&gt;&lt;/li&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%;">&lt;/ul&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><img src="../../../images/livrocake7.png" alt="" /></p>
+<p style="margin-bottom: 0cm; line-height: 100%;">&lt;/nav&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%;">&lt;div class="<b>customers index large-9 medium-8 columns content</b>"&gt;</p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><img src="../../../images/livrocake8.png" alt="" /></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><b>As classes em negrito acima estão no style.css ou no base.css citadas abaixo:</b></p>
+<pre class="language-css"><code>.disabled a,
+a.disabled {
+    pointer-events: none;
+}
+.top-bar-section {
+    margin-top: 2.8125rem;
+    z-index: 98
+}
+.right {
+    float: right !important
+}
+
+.top-bar {
+    background: #333;
+    height: 2.8125rem;
+    line-height: 2.8125rem;
+    margin-bottom: 0;
+    overflow: hidden;
+    position: relative
+}
+
+top-bar e title-area
+.top-bar.expanded .title-area {
+    background: #01545b;
+}
+
+.top-bar.expanded, .top-bar,.top-bar-section ul li,.top-bar-section li:not(.has-form) a:not(.button) {
+    background: #116d76;
+}
+
+div.message {
+    text-align: center;
+    cursor: pointer;
+    display: block;
+    font-weight: normal;
+    padding: 0 1.5rem 0 1.5rem;
+    transition: height 300ms ease-out 0s;
+    background-color: #a0d3e8;
+    color: #626262;
+    top: 15px;
+    right: 15px;
+    z-index: 999;
+    overflow: hidden;
+    height: 50px;
+    line-height: 2.5em;
+}
+div.message.error {
+    background-color: #C3232D;
+    color: #FFF;
+}
+.content {
+    padding: 2rem;
+}
+
+.container {
+    overflow: hidden;
+    min-height: 92%; /* full height almost always */
+}
+.column,
+.columns {
+    position: relative;
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    float: left
+}
+...
+.large-3 {
+    width: 25%
+}
+...
+.large-9 {
+    width: 75%
+}
+...
+#actions-sidebar {
+    background: #fafafa;
+}
+.side-nav {
+    display: block;
+    font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+    list-style-position: outside;
+    list-style-type: none;
+    margin: 0;
+    padding: 0.875rem 0
+}
+
+.side-nav li {
+    font-size: 0.875rem;
+    font-weight: normal;
+    margin: 0 0 0.4375rem 0
+}
+
+.side-nav li.heading {
+    color: #008CBA;
+    font-size: 0.875rem;
+    font-weight: bold;
+    text-transform: uppercase
+}</code></pre>
+<p>A finalidade deste trabalho é oferecer informações que ajudem a trocar o template default do Cake para um framework como o BootStrap, o foundation, o Materialize ou outro e mesmo para um criado com o CSS puro.<br /><br /><br /><strong>Implementando BootStrap 3 em aplicativos do CakePHP 3</strong><br /><br />Uma forma bem simples de implementar o BootStrap 3 em aplicativos do CakePHP 3 é criar um aplicativo com o CakePHP 3 atual, instalar e habilitar o plugin admin-br atual e então gerar o código com o bake usando o plugin admin-br.<br /><br /><strong>O código gerado tem o BootStrap 3 implementado.</strong><br /><br />Basta então ver o código gerado no src/Template para qualquer das tabelas e adaptar para seu aplicativo.<br /><br /><strong>Informação recebida do Admad no fórum oficial do CakePHP:</strong><br />O css default usado no CakePHP é um subconjunto do framework Foundation v5.</p> 	</div>
+
+	
+	
+				
+	
+	
+	
+</article>
+
+</body>
+</html>

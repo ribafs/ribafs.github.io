@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br" dir="ltr">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <base href="" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Ribamar FS" />
+	<meta name="robots" content="noindex, nofollow" />
+	<meta name="description" content="Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros." />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>13 - Aplicativos de Exemplo - RibaFS Portal</title>
+	<link href="http://ribafs.org/portal/curriculo/livros/cakephp/13-aplicativos-de-exemplo.html?tmpl=component&amp;print=1&amp;layout=default" rel="canonical" />
+	<link href="../../../templates/shaper_helix3/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../../../favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="http://backup/portal/media/plg_content_prismsyntaxhighlighter/css/prism-okaidia.css" rel="stylesheet" type="text/css" />
+	<link href="http://backup/portal/media/plg_content_prismsyntaxhighlighter/css/prism-linenumbers.css" rel="stylesheet" type="text/css" />
+	<script src="http://backup/portal/media/plg_content_prismsyntaxhighlighter/js/prism-tinymce.js" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery-noconflict.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery-migrate.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="http://backup/portal/media/system/js/caption.js?d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script type="text/javascript">
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+	</script>
+	<meta property="og:url" content="http://backup/portal/curriculo/livros/cakephp/13-aplicativos-de-exemplo.html" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="13 - Aplicativos de Exemplo" />
+	<meta property="og:description" content="13 - Aplicativos de Exemplo Às vezes desistir parece a saída mais fácil, mas é a alternativa mais dolorosa de todas as tentativas de superação! 13.1 - Cake..." />
+
+   	<link rel="stylesheet" href="../../../media/jui/css/bootstrap.min.css" type="text/css" />
+	<link rel="stylesheet" href="../../../templates/shaper_helix3/css/frontend-edit.css" type="text/css" />
+    <link rel="stylesheet" href="../../../templates/shaper_helix3/css/template.css" type="text/css" />
+</head>
+<body class="contentpane">
+	<div id="system-message-container">
+	</div>
+
+	
+
+<article class="item item-page" itemscope itemtype="http://schema.org/Article">
+	<meta itemprop="inLanguage" content="pt-BR" />
+	
+	
+
+	<div class="entry-header">
+		<span class="post-format"><i class="fa fa-thumb-tack"></i></span>
+		
+					<h2 itemprop="name">
+									13 - Aplicativos de Exemplo							</h2>
+												</div>
+
+						<div id="pop-print" class="btn hidden-print">
+				<a href="13-aplicativos-de-exemplo.html#" onclick="window.print();return false;">			<span class="icon-print" aria-hidden="true"></span>
+		Imprimir	</a>			</div>
+				
+	
+	
+				
+	
+			<div itemprop="articleBody">
+		<h3>13 - Aplicativos de Exemplo</h3>
+<p> </p>
+<p align="right"><em><strong>Às vezes desistir parece a saída mais fácil, mas é a alternativa mais dolorosa de todas as tentativas de superação!</strong></em></p>
+<p> </p>
+<h4><a name="__RefHeading___Toc38942_2227385112"></a><strong><span style="font-family: Times New Roman, serif;">13.1 - CakePHP Hello World</span></strong></h4>
+<p style="margin-bottom: 0cm; line-height: 100%;"> </p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;">Instalação e Teste de Aplicativo Mínimo no CakePHP 3.1.6</span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;">Criar a estrutura básica do aplicativo (de dentro do diretório web)</span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;">cd /backup/www/cake</span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;">composer create-project --prefer-dist cakephp/app ola</span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"> </p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;">Obs.: dessa forma, com o composer, é mais prático para a criação da estrutura básica.</span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;">Ainda mais prático que fazendo o download manual e descompactando no diretório web.</span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;">Chamar pelo navegador</span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;">http://localhost/cake/ola</span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"> </p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><b>Classes customizadas:</b></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;">Controller</span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;">Ola</span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;">src/Controller/OlaController.php:</span></p>
+<pre class="language-php"><code>    $routes-&gt;connect('/', ['controller' =&gt; 'Ola', 'action' =&gt; 'index']);
+
+&lt;?php
+namespace App\Controller;
+use App\Controller\AppController;
+
+class OlaController extends AppController
+{
+    public function index()
+    {
+
+    }
+}</code></pre>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><b>View</b></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;">Template/OlaController/index.ctp:</span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><i>&lt;h1&gt;Olá Mundo do Cake&lt;/h1&gt;</i></span></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"> </p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><b>Configurações</b></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;">config/routes.php Ajustar o controller inicial para:</span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><i>$routes-&gt;connect('/', ['controller' =&gt; 'OlasController', 'action' =&gt; 'index']);</i></span></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"> </p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;">Este action diz que quando o usuário chamar o aplicativo pelo raiz o action index do OlasController será chamado.</span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;">config/app.php</span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"> </p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><b>Customizando as views</b></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;">Mudando o CSS</span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;">Edite o base.css ou cake.css em webroot/css inserindo no início:</span></p>
+<pre class="language-css"><code>#menu-box{
+	width:150px;
+	float:left;
+	border-right:1px solid #CCCCCC;
+}
+#content-box{
+	margin-left:10px;
+	width:700px;
+	float:left;
+	border:1px solid #CCCCCC;
+	padding:10px;
+	background-color:#F3F3F3;
+}
+</code></pre>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;">Na view troque as classes pelo nosso id, assim:</span></p>
+<pre class="language-php"><code>&lt;div id="menu-box"&gt;
+    &lt;ul class="side-nav"&gt;
+        &lt;li class="heading"&gt;&lt;?= __('Actions') ?&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;?= $this-&gt;Html-&gt;link(__('New Cliente'), ['action' =&gt; 'add']) ?&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;?= $this-&gt;Html-&gt;link(__('List Pedidos'), ['controller' =&gt; 'Pedidos', 'action' =&gt; 'index']) ?&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;?= $this-&gt;Html-&gt;link(__('New Pedido'), ['controller' =&gt; 'Pedidos', 'action' =&gt; 'add']) ?&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+<p> </p> 	</div>
+
+	
+	
+				
+	
+	
+	
+</article>
+
+</body>
+</html>

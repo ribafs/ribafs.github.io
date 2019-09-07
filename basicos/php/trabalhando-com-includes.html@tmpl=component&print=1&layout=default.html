@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br" dir="ltr">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <base href="" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Ribamar FS" />
+	<meta name="robots" content="noindex, nofollow" />
+	<meta name="description" content="Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros." />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>Trabalhando com Includes - RibaFS Portal</title>
+	<link href="http://ribafs.org/portal/basicos/php/trabalhando-com-includes.html?tmpl=component&amp;print=1&amp;layout=default" rel="canonical" />
+	<link href="../../templates/shaper_helix3/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../../favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="http://backup/portal/media/plg_content_prismsyntaxhighlighter/css/prism-okaidia.css" rel="stylesheet" type="text/css" />
+	<link href="http://backup/portal/media/plg_content_prismsyntaxhighlighter/css/prism-linenumbers.css" rel="stylesheet" type="text/css" />
+	<script src="http://backup/portal/media/plg_content_prismsyntaxhighlighter/js/prism-tinymce.js" type="text/javascript"></script>
+	<script src="../../media/jui/js/jquery.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../media/jui/js/jquery-noconflict.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../media/jui/js/jquery-migrate.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="http://backup/portal/media/system/js/caption.js?d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script type="text/javascript">
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+	</script>
+	<meta property="og:url" content="http://backup/portal/basicos/php/trabalhando-com-includes.html" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Trabalhando com Includes" />
+	<meta property="og:description" content="TRABALHANDO COM INCLUDES E REQUIRES NO PHP INCLUDE - inclue e avalia o conteúdo do arquivo. REQUIRE - também inclue e avalia o conteúdo do arquivo incluído..." />
+
+   	<link rel="stylesheet" href="../../media/jui/css/bootstrap.min.css" type="text/css" />
+	<link rel="stylesheet" href="../../templates/shaper_helix3/css/frontend-edit.css" type="text/css" />
+    <link rel="stylesheet" href="../../templates/shaper_helix3/css/template.css" type="text/css" />
+</head>
+<body class="contentpane">
+	<div id="system-message-container">
+	</div>
+
+	
+
+<article class="item item-page" itemscope itemtype="http://schema.org/Article">
+	<meta itemprop="inLanguage" content="pt-BR" />
+	
+	
+
+	<div class="entry-header">
+		<span class="post-format"><i class="fa fa-thumb-tack"></i></span>
+		
+					<h2 itemprop="name">
+									Trabalhando com Includes							</h2>
+												</div>
+
+						<div id="pop-print" class="btn hidden-print">
+				<a href="trabalhando-com-includes.html#" onclick="window.print();return false;">			<span class="icon-print" aria-hidden="true"></span>
+		Imprimir	</a>			</div>
+				
+	
+	
+				
+	
+			<div itemprop="articleBody">
+		<p><strong>TRABALHANDO COM INCLUDES E REQUIRES NO PHP</strong><br /><br /><strong>INCLUDE</strong> - inclue e avalia o conteúdo do arquivo.<br /><strong>REQUIRE</strong> - também inclue e avalia o conteúdo do arquivo incluído.<br />A diferença entre ambos é que o include ao encontrar um erro, lança um warning apenas, <br />enquanto que o require lança um Fatal Error, que pára o processamento.<br /><br />Uso do require: para códigos que requerem maior segurança.<br /><br /><strong>INCLUDE_ONCE e REQUIRE_ONCE</strong> - são semelhantes ao include e require, sendo que estes incluem um arquivo somente uma única vez.<br /><br />Mostrando uso do require_once:<br /><br />echo.php<br />&lt;?php<br />echo "Hello";<br />?&gt;<br /><br />teste.php</p>
+<p>&lt;?php<br />require('echo.php');<br />require_once('echo.php');<br />?&gt;<br /><br />Executar teste.php </p>
+<p>saída: "Hello".<br /><br />Agora teste2.php:</p>
+<p>&lt;?php<br />require('echo.php');<br />require('echo.php');<br />?&gt;<br /><br />Executar teste2.php </p>
+<p>saída: "HelloHello".<br /><br />Agora teste3.php:<br />&lt;?php<br />require_once('echo.php');<br />require('echo.php');<br />?&gt;<br /><br />Executar teste3.php <br />saída: "HelloHello".<br /><br />Ou seja, ao encontrar require_once, ele verifica se o arquivo já foi incluído, e somente o incluirá novamente se ele ainda não tiver sido incluído.<br /><br /><br /></p>
+<pre class="language-php"><code>&lt;?php
+// Isto está errado e não funcionará como desejado
+if ($condition)
+    include $arquivo;
+else
+    include $outro;
+
+
+// E este está correto
+if ($condition) {
+    include $arquivo;
+} else {
+    include $outro;
+}
+
+?&gt;
+
+&lt;?php
+$path = "/full/path/to/script/";
+if (getdomain($path) == 'yourdomain') {
+    include($path . 'somefile.php');
+}
+?&gt;
+
+"variables.php"
+&lt;?php
+$includer = basename($_SERVER['SCRIPT_NAME']);
+
+switch ($includer) {
+    case 'a.php':
+        $this_variable = 'included by script a.php';
+        break;
+
+    case 'b.php':
+        $this_variable = 'included by script b.php';
+        break;
+
+    default:
+        $this_variable = 'included by unkown script';
+}
+echo $this_variable;
+?&gt;</code></pre>
+<p><br />Test with 3 different files "a.php", "b.php", "c.php", all with the same content:</p>
+<p><br />&lt;?php<br />include 'variables.php';<br />?&gt;</p> 	</div>
+
+	
+	
+				
+	
+	
+	
+</article>
+
+</body>
+</html>

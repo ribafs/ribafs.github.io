@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br" dir="ltr">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <base href="" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Ribamar FS" />
+	<meta name="robots" content="noindex, nofollow" />
+	<meta name="description" content="Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros." />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>Phaser - Tutorial - RibaFS Portal</title>
+	<link href="http://ribafs.org/portal/mobile/phaser/phaser-tutorial.html?tmpl=component&amp;print=1&amp;layout=default" rel="canonical" />
+	<link href="../../templates/shaper_helix3/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../../favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="http://backup/portal/media/plg_content_prismsyntaxhighlighter/css/prism-okaidia.css" rel="stylesheet" type="text/css" />
+	<link href="http://backup/portal/media/plg_content_prismsyntaxhighlighter/css/prism-linenumbers.css" rel="stylesheet" type="text/css" />
+	<script src="http://backup/portal/media/plg_content_prismsyntaxhighlighter/js/prism-tinymce.js" type="text/javascript"></script>
+	<script src="../../media/jui/js/jquery.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../media/jui/js/jquery-noconflict.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../media/jui/js/jquery-migrate.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="http://backup/portal/media/system/js/caption.js?d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script type="text/javascript">
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+	</script>
+	<meta property="og:url" content="http://backup/portal/mobile/phaser/phaser-tutorial.html" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Phaser - Tutorial" />
+	<meta property="og:description" content="Phaser - Tutorial Algo que agrada quando começamos a estudar o framework Phaser é a quantidade de material encontrada em seu site e na internet em geral. T..." />
+
+   	<link rel="stylesheet" href="../../media/jui/css/bootstrap.min.css" type="text/css" />
+	<link rel="stylesheet" href="../../templates/shaper_helix3/css/frontend-edit.css" type="text/css" />
+    <link rel="stylesheet" href="../../templates/shaper_helix3/css/template.css" type="text/css" />
+</head>
+<body class="contentpane">
+	<div id="system-message-container">
+	</div>
+
+	
+
+<article class="item item-page" itemscope itemtype="http://schema.org/Article">
+	<meta itemprop="inLanguage" content="pt-BR" />
+	
+	
+
+	<div class="entry-header">
+		<span class="post-format"><i class="fa fa-thumb-tack"></i></span>
+		
+					<h2 itemprop="name">
+									Phaser - Tutorial							</h2>
+												</div>
+
+						<div id="pop-print" class="btn hidden-print">
+				<a href="phaser-tutorial.html#" onclick="window.print();return false;">			<span class="icon-print" aria-hidden="true"></span>
+		Imprimir	</a>			</div>
+				
+	
+	
+				
+	
+			<div itemprop="articleBody">
+		<h4 style="text-align: justify;">Phaser - Tutorial</h4>
+<p style="text-align: justify;">Algo que agrada quando começamos a estudar o framework Phaser é a quantidade de material encontrada em seu site e na internet em geral. Tem muito material e xemplos disponível e isso facilita o aprendizado.</p>
+<p style="text-align: justify;"><strong>Detalhando separadamente cada recurso</strong></p>
+<p style="text-align: justify;">A maior parte foi adaptada de<br /><a href="https://end3r.github.io/Gamedev-Phaser-Content-Kit/tutorial">https://end3r.github.io/Gamedev-Phaser-Content-Kit/tutorial</a> <br />e de <a href="https://end3r.github.io/Gamedev-Phaser-Content-Kit/demos/">https://end3r.github.io/Gamedev-Phaser-Content-Kit/demos/</a> <br /><br /><strong>Site oficial</strong><br /><a href="http://phaser.io">http://phaser.io</a> <br /><br /><strong>Download</strong><br /><a href="http://phaser.io/download/stable">http://phaser.io/download/stable</a> <br /><br /><strong>Servidor Web</strong><br />Para que os nossos exemplos/testes funcionem localmente, precisamos ter um servidor web local funcionando.<br /><br /><strong>Inicialização - include do js e criação do objeto game</strong></p>
+<pre class="language-markup"><code>&lt;head&gt;
+&lt;meta charset="utf-8" /&gt;
+&lt;title&gt;Gamedev Phaser Workshop - lesson 02: Scaling&lt;/title&gt;
+&lt;style&gt;* { padding: 0; margin: 0; }&lt;/style&gt;
+&lt;script src="/portal/js/phaser282.min.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;script&gt;
+var game = new Phaser.Game(480, 320, Phaser.AUTO, null, {preload: preload, create: create, update: update});</code></pre>
+<p style="text-align: justify;"><br /><br />Ou assim:<br />var game = new Phaser.Game(480, 320, Phaser.AUTO, null, {<br /> preload: preload, create: create, update: update<br />});<br /><br />A linha acima cria uma região/canvas na tela com 480x320<br /><br />function preload() {}<br />function create() {}<br />function update() {}<br /><br />preload - carrega na memória inicialmente todo o seu conteúdo (imagens, sons, vídeos, etc) para a memória RAM<br />create - quando o preload() finaliza seu trabalho então o create será executado, mas somente uma única vez<br />update - após o create finalizar sua execução então o update executa seu código a cada frame (em loop) durante toda a fase/state do jogo</p>
+<p style="text-align: justify;">state - no fase, cada parte do jogo é um state. Quando o jogo tem mais de um state, ao final de cada state ele chama o próximo state com:<br /> this.state.start('nomeProxState');</p>
+<p style="text-align: justify;">CDN<br />&lt;script src="//cdn.jsdelivr.net/phaser/2.2.2/phaser.min.js"&gt;&lt;/script&gt;<br />&lt;script src="//cdn.jsdelivr.net/phaser/2.6.2/phaser.min.js"&gt;&lt;/script&gt;<br />&lt;script src="//cdn.jsdelivr.net/phaser/latest/phaser.min.js"&gt;&lt;/script&gt;<br /><br /><br /><strong>Cor de fundo do canvas</strong><br /> game.stage.backgroundColor = '#eee';<br /><br /><br /><strong>Mudando a Escala do Canvas</strong><br />function preload() {<br /> game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;<br /> game.scale.pageAlignHorizontally = true;<br /> game.scale.pageAlignVertically = true;<br />}<br /><br />Tipos de escala:<br /><br /> NO_SCALE<br /> EXACT_FIT<br /> SHOW_ALL<br /> RESIZE<br /> USER_SCALE<br />Detalhes sobre cada um- <a href="https://end3r.github.io/Gamedev-Phaser-Content-Kit/tutorial/article02.html">https://end3r.github.io/Gamedev-Phaser-Content-Kit/tutorial/article02.html</a> <br /><br /><br /><strong>Mostrar um sprite na tela</strong><br /><br />Criar a variável/objeto<br /><br />var ball;// Acima do método preload()<br /><br />Adicionar o sprite no método preload():<br /> game.load.image('ball', 'img/ball.png');<br /><br /> ball - nome dado ao sprite, que será a referência para o mesmo no código<br /> img/ball.png - caminho do sprite<br /><br />Adicionar ao método create()<br /> image = game.add.sprite(50, 50, 'ball');<br /><br /> 50, 50 - coordenadas do sprite no canvas<br /> ball - nome do sprite<br /><br /><br /><strong>Mover objeto usando a física</strong><br /><br />function create() {<br /> // Habilitar física ao canvas<br /> game.physics.startSystem(Phaser.Physics.ARCADE);<br /> // Posicionar o sprite 'ball' no ponto 50, 50<br /> ball = game.add.sprite(50, 50, 'ball');<br /> // Habilitar física para o objeto 'ball'<br /> game.physics.enable(ball, Phaser.Physics.ARCADE);<br /> // Setar a velocidade para o objeto<br /> ball.body.velocity.set(150, 150);<br />}<br /><br /><br /><strong>Movimento simples, sem física</strong><br /><br />function update() {<br /> ball.x += 1;<br /> ball.y += 1;<br />}<br /><br />Adiciona 1 para as coordenadas x e y da ball<br /><br /><br /><strong>Bola rebatendo nas bordas com física</strong><br /><br />function create() {<br /> // Habilitar física ao canvas<br /> game.physics.startSystem(Phaser.Physics.ARCADE);<br /><br /> // Posicionar o sprite 'ball' no ponto 50, 50<br /> ball = game.add.sprite(50, 50, 'ball');<br /><br /> // Habilitar física para o objeto 'ball'<br /> game.physics.enable(ball, Phaser.Physics.ARCADE);<br /><br /> // Setar a velocidade para o objeto<br /> ball.body.velocity.set(150, 150);<br /><br /> // Rebater nas bordas<br /> ball.body.collideWorldBounds = true;<br /><br /> // Fazer a bola parar ao bater<br /> ball.body.bounce.set(1);<br />}<br /><br /><br /><strong>Adicionar jogador/paddle (raquete)</strong><br />Que será movida ao mover o mouse<br /><br />var paddle;<br /><br />function preload() {<br /> game.load.image('paddle', 'img/paddle.png');<br />}<br /><br />function create(){<br /> // Posicionando a raquete/paddle<br /> paddle = game.add.sprite(game.world.width*0.5, game.world.height-5, 'paddle');<br />}<br /><br /><br /><strong>Centralizar paddle e outros recursos</strong><br /><br /></p>
+<pre class="language-javascript"><code>No create()
+paddle.anchor.set(0.5,1);
+
+Colidir com a ball, habilitar a física
+game.physics.enable(paddle, Phaser.Physics.ARCADE);
+
+Checar a detecção de colisão no update()
+game.physics.arcade.collide(ball, paddle);
+
+Tornar o paddle fixo:
+paddle.body.immovable = true;
+
+Adicionar ao update para poder mover o paddle ao mover o mouse:
+paddle.x = game.input.x || game.world.width*0.5;
+
+Código completo:
+&lt;script&gt;
+var game = new Phaser.Game(480, 320, Phaser.AUTO, null, {preload: preload, create: create, update: update});
+
+var ball;
+var paddle;
+
+function preload() {
+// Escala
+game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
+game.scale.pageAlignHorizontally = true;
+game.scale.pageAlignVertically = true;
+
+// Cor de fundo
+game.stage.backgroundColor = '#eee';
+
+// Carregar Sprites
+game.load.image('ball', 'img/ball.png');
+game.load.image('paddle', 'img/paddle.png');
+}
+function create() {
+//Física
+game.physics.startSystem(Phaser.Physics.ARCADE);
+ball = game.add.sprite(game.world.width*0.5, game.world.height-25, 'ball');
+ball.anchor.set(0.5);
+game.physics.enable(ball, Phaser.Physics.ARCADE);
+
+// Velocidade
+ball.body.velocity.set(150, -150);
+
+// Colisão
+ball.body.collideWorldBounds = true;
+
+// Para quando bater
+ball.body.bounce.set(1);
+
+paddle = game.add.sprite(game.world.width*0.5, game.world.height-5, 'paddle');
+paddle.anchor.set(0.5,1);
+
+// Habilitar física ao paddle
+game.physics.enable(paddle, Phaser.Physics.ARCADE);
+
+// Deixá-lo imobilizado
+paddle.body.immovable = true;
+}
+function update() {
+game.physics.arcade.collide(ball, paddle);
+paddle.x = game.input.x || game.world.width*0.5;
+}
+&lt;/script&gt;</code></pre>
+<p style="text-align: justify;"><br /><br /><strong>Posicionando os tijolos/bricks</strong><br /><br />Criar as variáveis<br />var bricks;<br />var newBrick;<br />var brickInfo;<br /><br />Adicionar ao preload():<br />game.load.image('brick', 'img/brick.png');<br /><br />Adicionar ao create():<br />initBricks();<br /><br />Criar uma nova função nno final do script:</p>
+<pre class="language-javascript"><code>function initBricks() {
+    brickInfo = {
+    width: 50,
+    height: 20,
+    count: {
+    row: 3,
+    col: 7
+    },
+    offset: {
+        top: 50,
+        left: 60
+    },
+    padding: 10
+    }
+    bricks = game.add.group();
+    for(c=0; c&lt;brickInfo.count.col; c++) {
+        for(r=0; r&lt;brickInfo.count.row; r++) {
+            var brickX = (c*(brickInfo.width+brickInfo.padding))+brickInfo.offset.left;
+            var brickY = (r*(brickInfo.height+brickInfo.padding))+brickInfo.offset.top;
+            newBrick = game.add.sprite(brickX, brickY, 'brick');
+            game.physics.enable(newBrick, Phaser.Physics.ARCADE);
+            newBrick.body.immovable = true;
+            newBrick.anchor.set(0.5);
+            bricks.add(newBrick);
+        }
+    }
+}</code></pre>
+<p style="text-align: justify;">Os dois for acima são os responsáveis principais pelo posicionamento de cada tijolo.<br />Ao final teremos 3 linhas por 7 colunas de tijolos na tela.<br /><br /><br /><strong>Detectando a colisão entre a bola e os tijolos e eliminar tijolos</strong><br /><br />Adicionar ao update():<br /> game.physics.arcade.collide(ball, bricks, ballHitBrick);<br /> paddle.x = game.input.x || game.world.width*0.5;<br /><br />Criar esta função no final do script:<br />function ballHitBrick(ball, brick) {<br /> brick.kill();<br />}<br /><br />Veja mais detalhes em:<br /><a href="https://end3r.github.io/Gamedev-Phaser-Content-Kit/tutorial/">https://end3r.github.io/Gamedev-Phaser-Content-Kit/tutorial/</a> <br /><a href="http://phaser.io/examples">http://phaser.io/examples</a> <br /><br />Podemos baixar todos os exemplos do Phaser:<br /><a href="https://github.com/photonstorm/phaser-examples">https://github.com/photonstorm/phaser-examples</a> <br /><br />Para testes offline. Basta criar um arquivo html na pasta examples, apontando para o respectivo exemplo e para um phaser.js local.<br /><br /><br /><strong>States</strong><br />Um state representa uma parte do jogo, um menu, o jogo, o game-over, etc.<br />Cada state no Phaser tem os métodos preload, create, update e o render.<br /><br />Dica: quando criar o jogo e se referir aos assets, o faça de forma relativa (sem a barra inicial), mas apenas relativa, para que funcione em quanquer servidor, inclusive localmente.<br /> /assets/teste.png - absoluto<br /> assets/teste.png - relativo<br /><br /><br /><strong>Controlar jogador pelas setas/teclado</strong><br /><br />Criar a variável<br />var cursors;<br /><br />Adicionar ao preload():<br />cursors = game.input.keyboard.createCursorKeys();<br /><br />Isto popula o objeto cursors com 4 propriedades: up, down, left, right, que são todas elas instências do objeto Phaser.Key. Então tudo que precisamos fazer é adicionar isso ao loop update(): <br /><br /></p>
+<pre class="language-javascript"><code> // Reset the players velocity (movement)
+player.body.velocity.x = 0;
+
+if (cursors.left.isDown)
+{
+// Move to the left
+player.body.velocity.x = -150;
+
+player.animations.play('left');
+}
+else if (cursors.right.isDown)
+{
+// Move to the right
+player.body.velocity.x = 150;
+
+player.animations.play('right');
+}
+else
+{
+// Stand still
+player.animations.stop();
+
+player.frame = 4;
+}
+
+// Allow the player to jump if they are touching the ground. Permitir que o jogador salte caso esteja tocando o solo
+if (cursors.up.isDown &amp;&amp; player.body.touching.down)
+{
+player.body.velocity.y = -350;
+}
+</code></pre>
+<p style="text-align: justify;"><br /><br /><strong>Sistema de Pontos/Score</strong><br /><br />Criar as variáveis<br />var scoreText;<br />var score = 0;<br /><br />Adicionar para o create():<br />scoreText = game.add.text(5, 5, 'Points: 0', { font: '18px Arial', fill: '#0095DD' });<br /><br />Adicionar ao update():<br />game.physics.arcade.collide(ball, bricks, ballHitBrick);<br /><br />Adicionar ao final do script:<br />function ballHitBrick(ball, brick) {<br /> brick.kill();// Destroi tijolo que a bola toca<br /> score += 10;<br /> scoreText.setText('Points: '+score);<br />}<br /><br /><br /><strong>Sistema de Vidas/Lives</strong><br /><br />Adicionar as variáveis na área de variáveis globais:</p>
+<pre class="language-javascript"><code>var lives = 3;
+var livesText;
+var lifeLostText;
+
+Adicionar ao create():
+textStyle = { font: '18px Arial', fill: '#0095DD' };
+scoreText = game.add.text(5, 5, 'Pontos: 0', textStyle);
+livesText = game.add.text(game.world.width-5, 5, 'Vidas: '+lives, textStyle);
+livesText.anchor.set(1,0);
+lifeLostText = game.add.text(game.world.width*0.5, game.world.height*0.5, 'Você perdeu uma vida. Clique para continuar', textStyle);
+lifeLostText.anchor.set(0.5);
+lifeLostText.visible = false;
+ball.events.onOutOfBounds.add(ballLeaveScreen, this);
+
+Adicionar ao final do script:
+function ballLeaveScreen() {
+lives--;
+if(lives) {
+livesText.setText('Vidas: '+lives);
+lifeLostText.visible = true;
+ball.reset(game.world.width*0.5, game.world.height-25);
+paddle.reset(game.world.width*0.5, game.world.height-5);
+game.input.onDown.addOnce(function(){
+lifeLostText.visible = false;
+ball.body.velocity.set(150, -150);
+}, this);
+}
+else {
+alert('Você perdeu, game over!');
+location.reload();
+}
+}</code></pre>
+<p style="text-align: justify;"><br /><br /><strong>Game Over</strong><br /><br />Adicionar ao create():<br />game.physics.arcade.checkCollision.down = false;<br />ball.checkWorldBounds = true;<br />ball.events.onOutOfBounds.add(function(){<br /> alert('Game over!');<br /> location.reload();<br />}, this);<br /><br /><br /><strong>Jogo Finalizado/Win the Game</strong><br /><br />Adicionar ao update():<br />game.physics.arcade.collide(ball, bricks, ballHitBrick);<br /><br /><br />adicionar ao final do script:</p>
+<p style="text-align: justify;"><br />function ballHitBrick(ball, brick) {<br /> brick.kill();<br /> score += 10;<br /> scoreText.setText('Points: '+score);<br /> if(score === brickInfo.count.row*brickInfo.count.col*10) {<br /> alert('You won the game, congratulations!');<br /> location.reload();<br /> }<br />}<br /><br /><strong>Mais dicas e recursos:</strong><br /><a href="https://end3r.github.io/Gamedev-Phaser-Content-Kit/tutorial/">https://end3r.github.io/Gamedev-Phaser-Content-Kit/tutorial/</a> <br /><br /></p>
+<p style="text-align: justify;"><strong>Se quizer consultar a API com detalhes:</strong><br /><a href="http://phaser.io/docs/2.6.2/index">http://phaser.io/docs/2.6.2/index</a></p>
+<p style="text-align: justify;"><br /><strong>Exemplos com rotinas simples para testes deste tutorial</strong><br /><a title="phaser_exs.zip" href="../../down/mobile/phaser/phaser_exs.zip">phaser_exs</a><br /><a title="phaser_exs2.zip" href="../../down/mobile/phaser/phaser_exs2.zip">phaser_exs2</a></p>
+<p style="text-align: justify;"> </p> 	</div>
+
+	
+	
+				
+	
+	
+	
+</article>
+
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br" dir="ltr">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <base href="" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Ribamar FS" />
+	<meta name="robots" content="noindex, nofollow" />
+	<meta name="description" content="Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros." />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>9.2 - Layout - RibaFS Portal</title>
+	<link href="http://ribafs.org/portal/curriculo/livros/cakephp/9-2-layout.html?tmpl=component&amp;print=1&amp;layout=default" rel="canonical" />
+	<link href="../../../templates/shaper_helix3/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../../../favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="http://backup/portal/media/plg_content_prismsyntaxhighlighter/css/prism-okaidia.css" rel="stylesheet" type="text/css" />
+	<link href="http://backup/portal/media/plg_content_prismsyntaxhighlighter/css/prism-linenumbers.css" rel="stylesheet" type="text/css" />
+	<script src="http://backup/portal/media/plg_content_prismsyntaxhighlighter/js/prism-tinymce.js" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery-noconflict.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery-migrate.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="http://backup/portal/media/system/js/caption.js?d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script type="text/javascript">
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+	</script>
+	<meta property="og:url" content="http://backup/portal/curriculo/livros/cakephp/9-2-layout.html" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="9.2 - Layout" />
+	<meta property="og:description" content="9.2 – Layout A grande glória da vida não está em nunca cair, mas em se levantar a cada vez que cair. Nelson Mandela Layout contém código de apresentação qu..." />
+
+   	<link rel="stylesheet" href="../../../media/jui/css/bootstrap.min.css" type="text/css" />
+	<link rel="stylesheet" href="../../../templates/shaper_helix3/css/frontend-edit.css" type="text/css" />
+    <link rel="stylesheet" href="../../../templates/shaper_helix3/css/template.css" type="text/css" />
+</head>
+<body class="contentpane">
+	<div id="system-message-container">
+	</div>
+
+	
+
+<article class="item item-page" itemscope itemtype="http://schema.org/Article">
+	<meta itemprop="inLanguage" content="pt-BR" />
+	
+	
+
+	<div class="entry-header">
+		<span class="post-format"><i class="fa fa-thumb-tack"></i></span>
+		
+					<h2 itemprop="name">
+									9.2 - Layout							</h2>
+												</div>
+
+						<div id="pop-print" class="btn hidden-print">
+				<a href="9-2-layout.html#" onclick="window.print();return false;">			<span class="icon-print" aria-hidden="true"></span>
+		Imprimir	</a>			</div>
+				
+	
+	
+				
+	
+			<div itemprop="articleBody">
+		<h3>9.2 – Layout</h3>
+<p align="right"><em><strong>A grande glória da vida não está em nunca cair, mas em se levantar a cada vez que cair.</strong></em></p>
+<p align="right">Nelson Mandela</p>
+<p align="justify">Layout contém código de apresentação que é incorporado na view. Qualquer coisa que você deseje ver em todas as suas views deve ser colocada em um layout.</p>
+<p>No CakePHP 3 o arquivo default de layout fica em</p>
+<p>src\Template\Layout\default.ctp</p>
+<p align="justify">Se você deseja mudar a aparência da sua aplicação (cores, fontes e posições, imagens, etc) então o layout é o lugar para mexer.</p>
+<p>Outros arquivos de layout devem ser criados em</p>
+<p>src\Template\Layout\</p>
+<p>Aqui está o layout default.ctp do CakePKP 3.8.0 com leves modificações:</p>
+<pre class="language-php"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;?= $this-&gt;Html-&gt;charset() ?&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;
+        &lt;?= $this-&gt;fetch('title') ?&gt;
+    &lt;/title&gt;
+    &lt;?= $this-&gt;Html-&gt;meta('icon') ?&gt;
+
+    &lt;?= $this-&gt;Html-&gt;css('base.css') ?&gt;
+    &lt;?= $this-&gt;Html-&gt;css('style.css') ?&gt;
+
+    &lt;?= $this-&gt;fetch('meta') ?&gt;
+    &lt;?= $this-&gt;fetch('css') ?&gt;
+    &lt;?= $this-&gt;fetch('script') ?&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;nav class="top-bar expanded" data-topbar role="navigation"&gt;
+        &lt;ul class="title-area large-3 medium-4 columns"&gt;
+            &lt;li class="name"&gt;
+                &lt;h1&gt;&lt;a href="/portal/"&gt;&lt;?= $this-&gt;fetch('title') ?&gt;&lt;/a&gt;&lt;/h1&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/nav&gt;
+    &lt;?= $this-&gt;Flash-&gt;render() ?&gt;
+    &lt;div class="container clearfix"&gt;
+        &lt;?= $this-&gt;fetch('content') ?&gt;
+    &lt;/div&gt;
+    &lt;footer&gt;
+    &lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p>Podemos criar tantos layouts quantos desejarmos. Apenas os crie em:</p>
+<p>src\Template\Layout\</p>
+<p> </p>
+<p>E chame no action respectivo com:</p>
+<p>$this-&gt;viewBuilder()-&gt;layout('admin');</p>
+<p> </p>
+<p>Na view use:</p>
+<p>$this-&gt;layout = 'loggedin';</p>
+<p> </p>
+<p>Veja no plugin <a href="https://github.com/ribafs/admin-br">admin-br</a> o uso de dois layouts e sua chamada no AppController.</p>
+<p><strong>Carregando num controller</strong></p>
+<p>public function initialize()</p>
+<p>{</p>
+<p>$this-viewBuilder()-&gt;setLayout('admin');</p>
+<p>}</p>
+<p> </p>
+<p>Ou</p>
+<p>if($loguser == 'user' || $loguser == 'manager'){</p>
+<p>$this-&gt;viewBuilder()-&gt;setLayout('CakeAclBr.default');</p>
+<p>}else{</p>
+<p>$this-&gt;viewBuilder()-&gt;setLayout('CakeAclBr.admin');</p>
+<p>}</p>
+<p>Layout - contém código de apresentação da view. Tudo que vemos nas views está incorporado num layout.</p>
+<p> </p>
+<p>Estão em src/Template/Layout</p>
+<p>O cake já vem com um layout padrão, que é o default.ctp.</p>
+<p>Como setar outro layout no controller. Exemplo admin.ctp:</p>
+<p>public function initialize()</p>
+<p>{</p>
+<p>$this-viewBuilder()-setLayout('admin');</p>
+<p>// Para plugin</p>
+<p>// $this-viewBuilder()-setLayout('AdminBr.admin');</p>
+<p>}</p>
+<p><strong>Detalhes</strong></p>
+<p><a href="https://book.cakephp.org/3.0/en/views.html#layouts">https://book.cakephp.org/3.0/en/views.html#layouts</a></p> 	</div>
+
+	
+	
+				
+	
+	
+	
+</article>
+
+</body>
+</html>

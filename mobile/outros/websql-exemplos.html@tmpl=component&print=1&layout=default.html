@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br" dir="ltr">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <base href="" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Ribamar FS" />
+	<meta name="robots" content="noindex, nofollow" />
+	<meta name="description" content="Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros." />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>WebSQL - Exemplos - RibaFS Portal</title>
+	<link href="http://ribafs.org/portal/mobile/outros/websql-exemplos.html?tmpl=component&amp;print=1&amp;layout=default" rel="canonical" />
+	<link href="../../templates/shaper_helix3/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../../favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="http://backup/portal/media/plg_content_prismsyntaxhighlighter/css/prism-okaidia.css" rel="stylesheet" type="text/css" />
+	<link href="http://backup/portal/media/plg_content_prismsyntaxhighlighter/css/prism-linenumbers.css" rel="stylesheet" type="text/css" />
+	<script src="http://backup/portal/media/plg_content_prismsyntaxhighlighter/js/prism-tinymce.js" type="text/javascript"></script>
+	<script src="../../media/jui/js/jquery.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../media/jui/js/jquery-noconflict.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../media/jui/js/jquery-migrate.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="http://backup/portal/media/system/js/caption.js?d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script type="text/javascript">
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+	</script>
+	<meta property="og:url" content="http://backup/portal/mobile/outros/websql-exemplos.html" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="WebSQL - Exemplos" />
+	<meta property="og:description" content="WebSQL - Exemplos agenda.zip agenda2.zip websql_ex.zip crud-offline - três exemplos usando o WebSQL <html> <head> <title>Look at WebSQL</title> <script> //..." />
+
+   	<link rel="stylesheet" href="../../media/jui/css/bootstrap.min.css" type="text/css" />
+	<link rel="stylesheet" href="../../templates/shaper_helix3/css/frontend-edit.css" type="text/css" />
+    <link rel="stylesheet" href="../../templates/shaper_helix3/css/template.css" type="text/css" />
+</head>
+<body class="contentpane">
+	<div id="system-message-container">
+	</div>
+
+	
+
+<article class="item item-page" itemscope itemtype="http://schema.org/Article">
+	<meta itemprop="inLanguage" content="pt-BR" />
+	
+	
+
+	<div class="entry-header">
+		<span class="post-format"><i class="fa fa-thumb-tack"></i></span>
+		
+					<h2 itemprop="name">
+									WebSQL - Exemplos							</h2>
+												</div>
+
+						<div id="pop-print" class="btn hidden-print">
+				<a href="websql-exemplos.html#" onclick="window.print();return false;">			<span class="icon-print" aria-hidden="true"></span>
+		Imprimir	</a>			</div>
+				
+	
+	
+				
+	
+			<div itemprop="articleBody">
+		<p><strong>WebSQL</strong> - <strong>Exemplos</strong></p>
+<p><a title="agenda.zip" href="http://backup/down/mobile/websql/agenda.zip">agenda.zip</a></p>
+<p><a title="agenda2.zip" href="http://backup/down/mobile/websql/agenda2.zip">agenda2.zip</a></p>
+<p><a title="websql_ex.zip" href="http://backup/down/mobile/websql/websql_ex.zip">websql_ex.zip</a></p>
+<p><a title="crud-offline" href="https://github.com/cesarjr/crud-offline" target="_blank" rel="noopener noreferrer">crud-offline</a> - três exemplos usando o WebSQL</p>
+<pre class="language-markup"><code>&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Look at WebSQL&lt;/title&gt;
+&lt;script&gt;
+//https://gist.github.com/andyj/1599544
+	// Through the code below remember essentialy there are just 3 core methods we tend to use
+	// openDatabase
+	// transaction
+	// executeSql
+	// Opening a connection 
+	// window.openDatabase( database name , version , database description, estimated size );
+	// The size is flexible but some browsers put a restriction of 5mb so know your environment
+	var db = window.openDatabase("myDatabase", "1.0", "My WebSQL test database", 5*1024*1024);
+	if(!db) {
+		// Test your DB was created
+		alert('Your DB was not created this time');
+		return false
+	}
+		
+	// Prepare you statement 
+	// With your DB working we can add tables and run queries via the transaction function
+	// db.transactions( transaction, error callback, ready callback )
+	db.transaction(
+		function(tx){
+			// Execute the SQL via a usually anonymous function 
+			// tx.executeSql( SQL string, arrary of arguments, success callback function, failure callback function)
+			// To keep it simple I've added to functions below called onSuccessExecuteSql() and onFailureExecuteSql()
+			// to be used in the callbacks
+			tx.executeSql(
+				"CREATE TABLE IF NOT EXISTS fightclub (id INTEGER PRIMARY KEY AUTOINCREMENT, rules TEXT)",
+				[],
+				onSuccessExecuteSql,
+				onError
+			)
+		},
+		onError,
+		onReadyTransaction
+	)
+	// At this point you now know everything to continue. All I'm am going to do now is add
+	// a single record to our table
+	db.transaction(
+		function(tx){
+			tx.executeSql( "INSERT INTO fightclub(rules) VALUES(?)",
+			['You do not talk about Fight Club'],
+			onSuccessExecuteSql,
+			onError )
+		},
+		onError,
+		onReadyTransaction
+	)
+		
+	// All thats left is to get the results on the page
+	// There where clause below is weak, but its just an example of preparing your statement
+	db.transaction(
+		function(tx){
+			tx.executeSql( "SELECT * FROM fightclub WHERE id &gt; ?",
+			['0'],
+			displayResults,
+			onError )
+		},
+		onError,
+		onReadyTransaction
+	)
+		
+	function onReadyTransaction( ){
+		console.log( 'Transaction completed' )
+	}
+	function onSuccessExecuteSql( tx, results ){
+		console.log( 'Execute SQL completed' )
+	}
+	function onError( err ){
+		console.log( err )
+	}
+	function displayResults( tx, results ){
+		
+		if(results.rows.length == 0) {
+			alert("No records found");
+			return false;
+		}
+		
+		var row = "";
+		for(var i=0; i&lt;results.rows.length; i++) {
+			row += results.rows.item(i).rules + "&lt;br/&gt;";
+		}
+		document.body.innerHTML = row
+	}
+&lt;/script&gt;
+
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre> 	</div>
+
+	
+	
+				
+	
+	
+	
+</article>
+
+</body>
+</html>

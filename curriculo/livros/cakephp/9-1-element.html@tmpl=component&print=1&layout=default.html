@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br" dir="ltr">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <base href="" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Ribamar FS" />
+	<meta name="robots" content="noindex, nofollow" />
+	<meta name="description" content="Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros." />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>9.1 - Element - RibaFS Portal</title>
+	<link href="http://ribafs.org/portal/curriculo/livros/cakephp/9-1-element.html?tmpl=component&amp;print=1&amp;layout=default" rel="canonical" />
+	<link href="../../../templates/shaper_helix3/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../../../favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<script src="../../../media/jui/js/jquery.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery-noconflict.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery-migrate.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="http://backup/portal/media/system/js/caption.js?d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script type="text/javascript">
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+	</script>
+	<meta property="og:url" content="http://backup/portal/curriculo/livros/cakephp/9-1-element.html" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="9.1 - Element" />
+	<meta property="og:description" content="9.1 - Element Creio muito na sorte. Quanto mais trabalho, mais sorte pareço ter. Coleman Cox Cake\View\View::element (string $elementPath, array $data, arr..." />
+
+   	<link rel="stylesheet" href="../../../media/jui/css/bootstrap.min.css" type="text/css" />
+	<link rel="stylesheet" href="../../../templates/shaper_helix3/css/frontend-edit.css" type="text/css" />
+    <link rel="stylesheet" href="../../../templates/shaper_helix3/css/template.css" type="text/css" />
+</head>
+<body class="contentpane">
+	<div id="system-message-container">
+	</div>
+
+	
+
+<article class="item item-page" itemscope itemtype="http://schema.org/Article">
+	<meta itemprop="inLanguage" content="pt-BR" />
+	
+	
+
+	<div class="entry-header">
+		<span class="post-format"><i class="fa fa-thumb-tack"></i></span>
+		
+					<h2 itemprop="name">
+									9.1 - Element							</h2>
+												</div>
+
+						<div id="pop-print" class="btn hidden-print">
+				<a href="9-1-element.html#" onclick="window.print();return false;">			<span class="icon-print" aria-hidden="true"></span>
+		Imprimir	</a>			</div>
+				
+	
+	
+				
+	
+			<div itemprop="articleBody">
+		<h3>9.1 - Element</h3>
+<p align="right"><em><strong>Creio muito na sorte. Quanto mais trabalho, mais sorte pareço ter.</strong></em></p>
+<p align="right"><tt>Coleman Cox</tt></p>
+<p><tt>Cake\View\View::element</tt>(string $elementPath, array $data, array $options =[])</p>
+<p align="justify">Alguns aplicativos tem pequenos blocos de código de apresentação que se repetem de página para página, algumas vezes em diferentes lugares do layout. O CakePHP pode ajudar você a repetir partes do seu site que precisam ser reutilizadas. Estas partes reusáveis são chamadas de Elements. Ads, help boxes, navigational controls, extra menus, login forms e callouts são implementados em CakePHP como elements.</p>
+<p align="justify"><a name="result_box5"></a> <span style="font-family: Times New Roman, serif;"><span lang="pt-PT">Um element é basicamente uma mini-view que pode ser incluída em outros pontos d</span><span lang="pt-PT">a</span><span lang="pt-PT"> vi</span><span lang="pt-PT">ew</span><span lang="pt-PT">, em layouts, e até mesmo dentro de outros elements. Os elements podem ser usados para fazer uma vi</span><span lang="pt-PT">ew</span><span lang="pt-PT"> mais legível, colocando a prestação de elements repetidos em seu próprio arquivo. Eles também podem ajudá-lo a reutilizar fragmentos de conteúdo em sua aplicação.</span> </span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"> </p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><strong><span style="font-family: Times New Roman, serif;">Elements ficam na pasta</span></strong></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;">src\Template\Element </span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><strong><span style="font-family: Times New Roman, serif;">E tem extensão .ctp</span></strong></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"> </p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><strong><span style="font-family: Times New Roman, serif;">Mostrando com o método element da view:</span></strong></p>
+<pre class="western"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><i>echo $this-&gt;element('helpbox');</i></span></span>
+</pre>
+<p style="margin-bottom: 0cm; line-height: 100%;"> </p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><b>Criando seu </b><b>Próprio Element</b><br /> </span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;">Criaremos um pequeno Element que adicionará um menu para a região &lt;nav&gt; do layout.</span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"> </p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><b>Criar o arquivo</b></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;">src\Template\Element\topmenu.ctp</span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;">Contendo:</span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><i>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;</i></span></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><i>&lt;?php</i></span></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><i> echo $this-&gt;Html-&gt;link(__('Customers'), array('plugin'=&gt;null,'controller'=&gt;'Customers','action'=&gt;'index', 'class'=&gt;'a menu'));</i></span></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><i> echo '&amp;nbsp;'.$this-&gt;Html-&gt;link(__('Grupos'), array('plugin'=&gt;null,'controller'=&gt;'Groups','action'=&gt;'index'));</i></span></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><i> echo '&amp;nbsp;'.$this-&gt;Html-&gt;link(__('Usuários'), array('plugin'=&gt;null,'controller'=&gt;'Users','action'=&gt;'index'));</i></span></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><i>?&gt;</i></span></span></p>
+<p style="margin-bottom: 0cm; font-style: normal; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;">Customizando o css para exibir melhor nosso menu:</span></span></p>
+<p style="margin-bottom: 0cm; font-style: normal; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;">Mude a linha com a para:</span></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><i>a {</i></span></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><i>color: black;</i></span></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><i>}</i></span></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"> </p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><b>Usando</b></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;">Para usar adicione a linha no src/Template/Layout/default.ctp, como indicado abaixo:</span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"> </p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><i>&lt;body&gt;</i></span></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><i>&lt;nav class="top-bar expanded" data-topbar role="navigation"&gt; </i></span></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><i> &lt;?php echo $this-&gt;element('topmenu');?&gt;</i></span></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"> </p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;">Veja que é um element bem simples mas pode usar o conhecimento e criatividade para fazer algo melhor. Também pode ver um exemplo mais interessante no plugin admin-br.</span></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"> </p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><b>Dicas sobre Element no Cake</b></span></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"> </p>
+<p align="justify">Muitas aplicações possuem pequenos blocos de código de apresentação que precisam ser repetidos a cada página, às vezes em diferentes lugares no layout. O CakePHP ajuda você a repetir partes do seu website que precisam ser reutilizados. Estas partes reutilizáveis são chamadas de Elements (ou Elementos). Propagandas, caixas de ajuda, controles de navegação, menus extras, formulários de login e chamadas geralmente são implementadas como elements. Um element é basicamente uma mini-view que pode ser incluída em outras views, layouts e até mesmo em outros elements. Elements podem ser usados para criar uma view mais legível, colocando o processamento de elementos repetidos em seu próprio arquivo. Eles também podem ajudá-lo a reusar conteúdos fragmentados pela sua aplicação.</p>
+<p style="margin-bottom: 0cm; line-height: 100%;"> </p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><b>Element</b> - são pequenos trechos de código que podem ser usados nas views para qualquer utilidade. </span></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"> </p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;">Um element pode ser acessado por qualquer view.</span></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;">No local da view onde queremos que apareça o código do elemento inserimos: </span></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;">echo $this-&gt;element('espacos'); </span></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"> </p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;">Podemos passar informações para um element através do seu segundo parâmetro: </span></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><i>echo $this-&gt;element(’helpbox’, array( </i></span></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><i>"textoajuda" =&gt; "Oh, this text is very helpful." </i></span></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><i>)); </i></span></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><i>echo $textoajuda; </i></span></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"> </p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;">São blocos de código tipo view reutilizáveis que criamos uma vez usamos várias vezes e em qualquer lugar do site (geralmente aplicados no layout)</span></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"> </p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><b>Detalhes</b></span></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><a href="https://book.cakephp.org/3.0/en/views.html#elements">https://book.cakephp.org/3.0/en/views.html#elements</a> </span></span></p> 	</div>
+
+	
+	
+				
+	
+	
+	
+</article>
+
+</body>
+</html>

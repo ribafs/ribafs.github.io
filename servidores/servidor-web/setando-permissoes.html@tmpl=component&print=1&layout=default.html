@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br" dir="ltr">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <base href="" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Ribamar FS" />
+	<meta name="robots" content="noindex, nofollow" />
+	<meta name="description" content="Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros." />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>Setando Permissões - RibaFS Portal</title>
+	<link href="http://ribafs.org/portal/servidores/servidor-web/setando-permissoes.html?tmpl=component&amp;print=1&amp;layout=default" rel="canonical" />
+	<link href="../../templates/shaper_helix3/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../../favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="http://backup/portal/media/plg_content_prismsyntaxhighlighter/css/prism-okaidia.css" rel="stylesheet" type="text/css" />
+	<link href="http://backup/portal/media/plg_content_prismsyntaxhighlighter/css/prism-linenumbers.css" rel="stylesheet" type="text/css" />
+	<script src="http://backup/portal/media/plg_content_prismsyntaxhighlighter/js/prism-tinymce.js" type="text/javascript"></script>
+	<script src="../../media/jui/js/jquery.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../media/jui/js/jquery-noconflict.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../media/jui/js/jquery-migrate.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="http://backup/portal/media/system/js/caption.js?d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script type="text/javascript">
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+	</script>
+	<meta property="og:url" content="http://backup/portal/servidores/servidor-web/setando-permissoes.html" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Setando Permissões" />
+	<meta property="og:description" content="Setando Permissões num Servidor Web com Linux Algumas vezes já aconteceu comigo de enviar os arquivos de um site para a hospedagem e após configurar e tent..." />
+	<meta property="og:image" content="http://backup/portal/images/perms.png" />
+	<meta property="og:image:width" content="600" />
+	<meta property="og:image:height" content="315" />
+
+   	<link rel="stylesheet" href="../../media/jui/css/bootstrap.min.css" type="text/css" />
+	<link rel="stylesheet" href="../../templates/shaper_helix3/css/frontend-edit.css" type="text/css" />
+    <link rel="stylesheet" href="../../templates/shaper_helix3/css/template.css" type="text/css" />
+</head>
+<body class="contentpane">
+	<div id="system-message-container">
+	</div>
+
+	
+
+<article class="item item-page" itemscope itemtype="http://schema.org/Article">
+	<meta itemprop="inLanguage" content="pt-BR" />
+	
+	
+		<div class="pull-left entry-image full-image">
+		<img
+			 src="../../images/perms.png" alt="" itemprop="image"/>
+	</div>
+
+	<div class="entry-header">
+		<span class="post-format"><i class="fa fa-thumb-tack"></i></span>
+		
+					<h2 itemprop="name">
+									Setando Permissões							</h2>
+												</div>
+
+						<div id="pop-print" class="btn hidden-print">
+				<a href="setando-permissoes.html#" onclick="window.print();return false;">			<span class="icon-print" aria-hidden="true"></span>
+		Imprimir	</a>			</div>
+				
+	
+	
+				
+	
+			<div itemprop="articleBody">
+		<h3>Setando Permissões num Servidor Web com Linux</h3>
+<p>Algumas vezes já aconteceu comigo de enviar os arquivos de um site para a hospedagem e após configurar e tentar acessar receber o erro:</p>
+<h1>500 Internal Server Error</h1>
+<p>Uma das principais causas e que sempre resolveu comigo é mudar as permissões de todos os arquivos da pasta como segue. Também já vi colegas reclamando do mesmo erro em hospedagens compartilhadas.</p>
+<p>Criei na minha pasta home um arquivo chamado</p>
+<p><em><strong>perms.sh</strong></em></p>
+<p>Contendo:</p>
+<pre class="language-php"><code># Correção do erro 500 na hospedagem
+# Detalhes em: https://www.weblink.com.br/blog/artigos/o-que-e-e-como-corrigir-o-erro-500/
+# Sintaxe:
+# sh perms.sh diretorioOUarquivo
+find $1 -type d -exec chmod 755 {} \;
+find $1 -type f -exec chmod 644 {} \;</code></pre>
+<p> </p>
+<p><strong>Mais detalhes sobre este erro:</strong></p>
+<p><a href="https://www.weblink.com.br/blog/artigos/o-que-e-e-como-corrigir-o-erro-500/">https://www.weblink.com.br/blog/artigos/o-que-e-e-como-corrigir-o-erro-500/</a></p>
+<p> </p>
+<p>E executei:</p>
+<p><strong><em>sh perms.sh site</em></strong></p>
+<p>Supondo que a pasta seja site.</p>
+<p>Quando terminar de configurar as permissões, compacto novamente e mando para o servidor.</p>
+<p>Agora o site funciona legal.</p>
+<p> </p>
+<p>Sugestão para os colegas que usam Windows: criem uma máquina virtual com o VirtualBox (meu preferido) ou outro, de um linux, sugiro o Linux Mint última versão (agora o 19.1. Este quase não tem diferença em relação ao Windows) para esta tarefa e outras e ir se acostumando com o Linux, que é o sistema operacional usado na maioria dos servidores.</p>
+<p> </p> 	</div>
+
+	
+	
+				
+	
+	
+	
+</article>
+
+</body>
+</html>

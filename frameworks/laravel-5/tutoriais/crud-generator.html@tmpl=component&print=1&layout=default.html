@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br" dir="ltr">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <base href="" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Ribamar FS" />
+	<meta name="robots" content="noindex, nofollow" />
+	<meta name="description" content="Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros." />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>Crud-generator - RibaFS Portal</title>
+	<link href="http://ribafs.org/portal/frameworks/laravel-5/tutoriais/crud-generator.html?tmpl=component&amp;print=1&amp;layout=default" rel="canonical" />
+	<link href="../../../templates/shaper_helix3/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../../../favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<script src="../../../media/jui/js/jquery.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery-noconflict.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery-migrate.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="http://backup/portal/media/system/js/caption.js?d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script type="text/javascript">
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+	</script>
+	<meta property="og:url" content="http://backup/portal/frameworks/laravel-5/tutoriais/crud-generator.html" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Crud-generator" />
+	<meta property="og:description" content="Gerador de Cruds para o Laravel 5 Depois de muito procurar e testar pacotes para geração de crud, encontrei este, que funciona bem e ajuda muito na criação..." />
+
+   	<link rel="stylesheet" href="../../../media/jui/css/bootstrap.min.css" type="text/css" />
+	<link rel="stylesheet" href="../../../templates/shaper_helix3/css/frontend-edit.css" type="text/css" />
+    <link rel="stylesheet" href="../../../templates/shaper_helix3/css/template.css" type="text/css" />
+</head>
+<body class="contentpane">
+	<div id="system-message-container">
+	</div>
+
+	
+
+<article class="item item-page" itemscope itemtype="http://schema.org/Article">
+	<meta itemprop="inLanguage" content="pt-BR" />
+	
+	
+
+	<div class="entry-header">
+		<span class="post-format"><i class="fa fa-thumb-tack"></i></span>
+		
+					<h2 itemprop="name">
+									Crud-generator							</h2>
+												</div>
+
+						<div id="pop-print" class="btn hidden-print">
+				<a href="crud-generator.html#" onclick="window.print();return false;">			<span class="icon-print" aria-hidden="true"></span>
+		Imprimir	</a>			</div>
+				
+	
+	
+				
+	
+			<div itemprop="articleBody">
+		<p style="text-align: justify;"><strong>Gerador de Cruds para o Laravel 5</strong></p>
+
+<p style="text-align: justify;">Depois de muito procurar e testar pacotes para geração de crud, encontrei este, que funciona bem e ajuda muito na criação de CRUDs básicos, já com o Bootstrap, paginação e busca.</p>
+
+<p style="text-align: justify;"><a href="https://github.com/appzcoder/crud-generator">https://github.com/appzcoder/crud-generator</a></p>
+
+<p style="text-align: justify;"><strong>Passos para a instalação</strong><br /><br />composer require appzcoder/crud-generator --dev<br /><br />Em app/Providers/AppServiceProvider.php:<br /><br />public function register()<br />{<br />    if ($this-&gt;app-&gt;environment() == 'local') {<br />        $this-&gt;app-&gt;register('Appzcoder\CrudGenerator\CrudGeneratorServiceProvider');<br />    }<br />}<br /><br />composer require laravelcollective/html<br /><br />Add Provider config/app.php<br /><br />        Collective\Html\HtmlServiceProvider::class,<br /><br />Aliases<br /><br />        'Form' =&gt; Collective\Html\FormFacade::class,<br />        'HTML' =&gt; Collective\Html\HtmlFacade::class,<br /><br />composer dump-autoload<br /><br />Publicar o pacote do vendor:<br />php artisan vendor:publish --provider="Appzcoder\CrudGenerator\CrudGeneratorServiceProvider"</p>
+
+<p style="text-align: justify;">Está instalado e pronto para usar.</p>
+
+<p style="text-align: justify;"><br /><strong>Exemplos de uso:</strong></p>
+
+<p style="text-align: justify;">Posts<br />php artisan crud:generate Posts --fields="user_id#integer; title#string; description#text;" --view-path="" --controller-namespace="" --route-group=""<br /><br />Noticias<br />php artisan crud:generate Noticias --fields="usuario_id#integer; titulo#string; descricao#text;" --view-path="" --controller-namespace="" --route-group=""<br /><br />Posts<br />php artisan crud:generate Posts --fields="title#string; content#text; category#select#options=technology,tips,health" --view-path=admin --controller-namespace=Admin --route-group=admin</p>
+
+<p style="text-align: justify;">Comments<br />php artisan crud:generate Comments --fields="post_id#integer; content#text;" --view-path="" --controller-namespace="" --route-group=""<br /><br />Criar banco e configurar no .env<br />php artisan migrate<br /><br />Clientes<br />php artisan crud:generate Clientes --fields="nome#string; email#string;" --view-path=admin --controller-namespace=Admin --route-group=admin<br /><br />php artisan migrate<br /><br />Funcionarios<br />php artisan crud:generate Funcionarios --fields="nome#string; email#string;" --view-path="admin" --controller-namespace=Funcionarios --route-group=admin<br />Master a rota funcionarios/funcionarios, caso contrário não encontra<br /><br />php artisan migrate</p>
+
+<p style="text-align: justify;">Produtos<br />php artisan crud:generate Produtos --fields="nome#string; descricao#string; preco#float" --view-path="site" --controller-namespace=Produtos --route-group=site<br /><br />Criar no raiz (fora de site ou admin)<br />php artisan crud:generate Pedidos --fields="produto#string; quantidade#integer;" --view-path="" --controller-namespace=Pedidos --route-group=""<br /><br />Editar a migration, para limitar o tamanho dos campos e outras características como nullable()<br /><br />Outros comandos (opcionais):<br />php artisan crud:controller PostsController --crud-name=posts --model-name=Post --view-path="directory" --route-group=admin<br /><br />For model:<br />php artisan crud:model Post --fillable="['title', 'body']"<br /><br />For migration:<br />php artisan crud:migration posts --schema="title#string; body#text"<br /><br />For view:<br />php artisan crud:view posts --fields="title#string; body#text" --view-path="directory" --route-group=admin<br /><br />php artisan migrate<br /><br />Adicionando uma rota<br />Route::resource('posts', 'PostsController');<br /><br />Supported Field Types<br /><br />These fields are supported for migration and view's form:<br />Form Field Types:<br /><br />    text<br />    textarea<br />    password<br />    email<br />    number<br />    date<br />    datetime<br />    time<br />    radio<br />    select<br />    file<br /><br />Migration Field Types:<br /><br />    string<br />    char<br />    varchar<br />    date<br />    datetime<br />    time<br />    timestamp<br />    text<br />    mediumtext<br />    longtext<br />    json<br />    jsonb<br />    binary<br />    integer<br />    bigint<br />    mediumint<br />    tinyint<br />    smallint<br />    boolean<br />    decimal<br />    double<br />    float<br />    enum<br /><br />php artisan crud:generate Posts --fields="user_id#integer; title#string; description#text;" --view-path="" --controller-namespace="" --route-group=""<br /><br /><br />            $table-&gt;string('name')-&gt;unique();<br />            $table-&gt;string('slug')-&gt;unique();<br />            $table-&gt;text('description')-&gt;nullable();<br /><br /><br />        Schema::create('posts', function (Blueprint $table) {<br />            $table-&gt;increments('id');<br /><br />            $table-&gt;integer('user_id')-&gt;unsigned();<br />            $table-&gt;foreign('user_id')-&gt;references('id')-&gt;on('users')-&gt;onDelete('cascade');<br /><br />            $table-&gt;string('title');<br />            $table-&gt;text('description');<br /><br />            $table-&gt;timestamps();<br /><br />        });<br /><br />Model<br />php artisan crud:model Post --fillable="['title', 'body']"<br /><br />Migration<br />php artisan crud:migration posts --schema="title#string; body#text"<br /><br />View<br />php artisan crud:view posts --fields="title#string; body#text" --view-path="directory" --route-group=admin<br /><br /></p> 	</div>
+
+	
+	
+				
+	
+	
+	
+</article>
+
+</body>
+</html>

@@ -1,0 +1,1140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="Joomla! - Open Source Content Management" -->
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Outros - RibaFS Portal</title>
+		<description><![CDATA[Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros.]]></description>
+		<link>http://backup/portal/mobile/outros.html</link>
+		<lastBuildDate>Sat, 07 Sep 2019 19:03:37 -0300</lastBuildDate>
+		<generator>Joomla! - Open Source Content Management</generator>
+		<atom:link rel="self" type="application/rss+xml" href="http://backup/portal/mobile/outros.feed?type=rss"/>
+		<language>pt-br</language>
+		<item>
+			<title>Engine Game Maker</title>
+			<link>http://backup/portal/mobile/outros/engine-game-maker.html</link>
+			<guid isPermaLink="true">http://backup/portal/mobile/outros/engine-game-maker.html</guid>
+			<description><![CDATA[<h4 style="text-align: justify;">Game Maker -Uma Game Engine Fácil de Usar</h4>
+
+<p style="text-align: justify;"><a href="https://www.yoyogames.com/get">https://www.yoyogames.com/get</a></p>
+
+<p style="text-align: justify;">Escolha a versão 1.4 ou a 2.<br /><br />Elas já vem com tudo que você precisa para lidar com fontes, texturas, sons e músicas, assim como qualquer outra coisa que você possa precisar para o desenvolvimentos dos seus jogos.<br /><br />Tudo isso com um sistema de "arraste-e-solte" para agilizar e tornar ainda mais intuitivo sua interação com a ferramenta. Com o Game Maker: Studio você poderá criar jogos digitais de qualidade mesmo sem ter conhecimento de programação.<br /><br />Para te ajudar a deixar seu jogo livre de erros, o Game Maker conta com uma opção chamada debugging mode. Quando operando em debugging mode, o Game Maker lhe dá acesso a uma série de funções para debugging que mostram mensagens para ajudar a identificar os possíveis erros.<br /><br />O Game maker lhe permite testar seus jogos diretamente na plataforma alvo (celulares ou tablets, por exemplo) sem precisar criar um arquivo executável ou mesmo instalar o jogo no dispositivo: basta escolher a plataforma alvo e o Game Maker cuidará do resto para você.<br /><br /><a href="http://producaodejogos.com/fazendo-jogos-com-gamemaker/">http://producaodejogos.com/fazendo-jogos-com-gamemaker/</a></p>]]></description>
+			<category>Outros</category>
+			<pubDate>Tue, 01 Aug 2017 15:26:04 -0300</pubDate>
+		</item>
+		<item>
+			<title>Framework Ionic</title>
+			<link>http://backup/portal/mobile/outros/framework-ionic.html</link>
+			<guid isPermaLink="true">http://backup/portal/mobile/outros/framework-ionic.html</guid>
+			<description><![CDATA[<p style="text-align: justify;"><strong>Ionic Framework</strong></p>
+
+<p style="text-align: justify;">Mais um dentre a quantidade enorme de ferramentas para criação de aplicativos móveis. Mas o Ionic não é apenas mais um, ele se destaca entre os demais, pois tem como base o Cordova e oferece uma grande quantidade de componentes prontos e recursos em seu site.</p>
+
+<p style="text-align: justify;"><a href="https://ionicframework.com/">https://ionicframework.com/</a> <br /><a href="http://creator.ionic">http://creator.ionic</a>  - uma ferramenta online com interface drag-&amp;-drop para você criar protótipos de aplicativos<br /><a href="https://apps.ionic.io/apps/">https://apps.ionic.io/apps/</a> <br /><a href="https://ionic.io/products/creator">https://ionic.io/products/creator</a> <br /><a href="https://docs.ionic.io/services/package/.io">https://docs.ionic.io/services/package/.io</a> <br /><a href="http://view.ionic.io">http://view.ionic.io</a> <br /><a href="http://ngcordova.com">http://ngcordova.com</a> <br /><a href="http://play.ionic.io">http://play.ionic.io</a> <br /><a href="https://apps.ionic.io/">https://apps.ionic.io/</a> <br /><a href="http://ionicframework.com/docs/v1/guide/">http://ionicframework.com/docs/v1/guide/</a> <br /><a href="http://showcase.ionicframework.com/apps/top">http://showcase.ionicframework.com/apps/top</a> <br /><a href="https://market.ionic.io/">https://market.ionic.io/</a>  - um lugar onde você pode encontrar plugins, templates e exemplo de aplicativos.<br /><a href="http://lab.ionic.io/">http://lab.ionic.io/</a>  - uma IDE para você desenvolver seu aplicativo. (Não é obrigatório, você pode utilzar qualquer IDE de sua preferência)<br /><a href="https://github.com/IonicBrazil">https://github.com/IonicBrazil</a> <br />Slack - <a href="http://ionicworldwide.herokuapp.com/">http://ionicworldwide.herokuapp.com/</a> <br /><a href="https://github.com/ionic-team/ionic">https://github.com/ionic-team/ionic</a> <br /><br /><strong>Criar app Ionic e build</strong><br /><br />ionic start ola tabs<br />ionic serve<br />ionic login email senha<br />ionic link (indicar a app da nuvem ou criar uma nova e depois linkar)<br />ionic package build android --prod (release)<br />ionic cordova build android<br />ionic cordova resources android - cria os ícones e splashscreens<br />Requer ícone em resources/icon.png com pelo menos 1024x1024px e resources/splash.png com 2732x2732px. Se usamos ionic start já existem reources default. Este comando atualizará a apsta resources e o config.xml<br />ionic upload<br /><br /><strong>Mais comandos com detalhes</strong><br /><br />ionic start appname template - cria um app do ionic<br />ionic start agenda sidemenu<br />cd agenda<br />ionic serve -  - inicia servidor logal. Mostrará IP:porta<br />ionic login - login com https://apps.ionic.io. Ou: ionic login email password<br />ionic link<br />ionic upload - compacta o app local e envia para a nuvem<br />ionic cordova build android - prepara e compila uma app para uma certa plataforma<br />ionic cordova compile android<br />ionic cordova emulate android<br />ionic cordova plugin &lt;acoes&gt;&lt;plugin&gt;<br />ionic cordova plugin ls<br />ionic cordova resources android - cria os ícones e splashscreens<br />Requer ícone em resources/icon.png com pelo menos 1024x1024px e resources/splash.png com 2732x2732px. Se usamos ionic start já existem reources default. Este comando atualizará a apsta resources e o config.xml<br />ionic cordova run - executa app em dispositivos reais<br />ionic info - mostra informações do ambiente<br />ionic link &lt;app&gt; - conecta app com ionic build - caso tenha um app em https://apps.ionic.io este poderá ser linkado para a app local<br />ionic package lisk - lista apps das nuvens<br /><br /><br /><strong>Configurar ambiente no Windows</strong><br /><a href="http://matheuslao.github.io/2015/06/09/ambiente-desenvolvimento-ionic-framework-ubuntu-vagrant">http://matheuslao.github.io/2015/06/09/ambiente-desenvolvimento-ionic-framework-ubuntu-vagrant</a> <br /><br />curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -<br />sudo apt-get install -y nodejs<br /><br />sudo npm install -g cordova ionic<br /><br />node -v - 6.11<br />npm -v - 3.10.10<br /><br />Criar app myApp tendo tabs como template<br />ionic start {appname} {template}<br /><br />Criar app usando template<br /><br />ionic start nomeApp tempalte<br />ionic start myApp tabs<br /><br />Com template blank<br />ionic start myApp blank<br /><br />Com sidemenu<br />ionic start myApp sidemenu<br /><br />Geradores: blank, tabs (default), sidemenu, super e tutorial<br /><br /><strong>Aplicativo simples</strong><br /><a href="https://www.sitepoint.com/building-simple-app-using-ionic-advanced-html5-mobile-app-framework/">https://www.sitepoint.com/building-simple-app-using-ionic-advanced-html5-mobile-app-framework/</a> <br /><a href="https://scotch.io/tutorials/create-your-first-mobile-app-with-angularjs-and-ionic">https://scotch.io/tutorials/create-your-first-mobile-app-with-angularjs-and-ionic</a> <br /><br /><a href="https://ionicframework.com/docs/intro/deploying/">https://ionicframework.com/docs/intro/deploying/</a> <br /><a href="https://tableless.com.br/tutorial-ionic-meu-primeiro-app/">https://tableless.com.br/tutorial-ionic-meu-primeiro-app/</a> <br /><br /><a href="https://developer.android.com/studio/index.html">https://developer.android.com/studio/index.html</a> <br /><br />Extrair para a pasta "android-studio"<br />Acessar o terminal<br />cd android-studio/bin <br />./studio.sh<br /><br /><strong>Instalar Gradle</strong><br />sudo apt-get install gradle<br /><br /><br /><strong>Habilitar a licensa do Android</strong><br />sdkmanager --licenses<br />Concordar sempre com y<br /><br /><strong>Listar versões do Cordova Android instalados</strong><br />cordova platform ls<br /><br />Rodando a app em emulador de android<br /><br />git config --global user.email "you@example.com"<br />git config --global user.name "Your Name"<br /><br />sudo npm install -g ionic@latest<br /><br />ionic start myApp2 tutorial<br />npm link cordova<br />npm link ionic<br /><br />ionic cordova run android --device<br />ionic cordova build android<br /><br /><a href="https://ionicframework.com/docs/cli/cordova/build/">https://ionicframework.com/docs/cli/cordova/build/</a> <br /><br />adb kill-server<br />adb start-server<br /><br />Upload<br />cd app<br />ionic upload (envia para view.ionic.io)<br /><br />adb devices<br /><br /><strong>Após tudo instalado e configurado</strong><br />cordova run --emulator<br /><br />avdmanager list avd<br />touch ~/.android/repositories.cfg<br />../android update sdk -u --filter platform-tools,android-26 --use-sdk-wrapper<br />../android list target<br /><br /><strong>Criar imagem</strong><br />sdkmanager "system-images;android-25;google_apis;x86"<br /><br /><strong>Criar AVD</strong><br />avdmanager create avd -n test -k "system-images;android-25;google_apis;x86" -b x86 -c 100M -d 7 -f<br /><br /><strong>Criar Exemplos do Ionic partindo da documentsção Componentes</strong><br /><a href="https://ionicframework.com/docs/components/">https://ionicframework.com/docs/components/</a> <br /><br /><strong>Criar um app e aplicar o código nela</strong><br /><br />ionic start componentes tabs<br /><br />cd componentes<br />ionic serve<br /><br />cordova build android<br /><br />ionic cordova --run emulate android<br /><br />cordova run --emulator (erro: falta imagem AVD)<br /><br /><strong>No celular</strong><br />cordova run android -- --gradleArg=-PcdvMinSdkVersion=20<br /><br /><strong>Assinando uma app</strong><br />cordova run android --release -- --keystore=../AgendaChave.keystore --storePassword=password --alias=agenda_chave --password=password<br /><br /><strong>Outra Lista de comandos do ionic:</strong><br /><br />docs     Open the Ionic documentation website<br />generate     Generate pipes, components, pages, directives, providers, and tabs (ionic-angular &gt;= 3.0.0)<br />info     Print system/environment info<br />link     Connect your local app to Ionic<br />login     Login with your Ionic ID<br />serve     Start a local dev server for app dev/testing<br />signup     Create an Ionic account<br />start     Create a new project<br />telemetry     Opt in and out of telemetry<br />upload     Upload a new snapshot of your app<br />cordova build     Build (prepare + compile) an Ionic project for a given platform<br />cordova compile     Compile native platform code<br />cordova emulate     Emulate an Ionic project on a simulator or emulator<br />cordova platform     Manage Cordova platform targets<br />cordova plugin     Manage Cordova plugins<br />cordova prepare     Transform metadata to platform manifests and copies assets to Cordova platforms<br />cordova resources     Automatically create icon and splash screen resources<br />cordova run     Run an Ionic project on a connected device<br />package build     Start a package build<br />package download     Download your packaged app<br />package info     Get info about a build<br />package list     List your cloud builds<br /><br /><br /><strong>Exemplo completo de criação de app</strong><br /><br />Criar app<br />ionic start exemplos tabs (ionic start CalculoIMC blank --appname "Cálculo de IMC")<br /><br />Executar app no navegador<br />ionic serve<br /><br />Executar app<br />ionic platform android<br /><br />Build - gerar executável<br /><br />Instalando plugin<br />npm install --save-dev --save-exact @ionic/clip-plugin-cordova@latest<br /><br />cordova platform add --save android<br /><br />ionic cordova build android<br />Cria em     /home/ribafs/exemplos/platforms/android/build/outputs/apk/android-debug.apk<br />https://ionicframework.com/docs/cli/cordova/build/<br /><br />ionic cordova emulate android<br />https://ionicframework.com/docs/cli/cordova/emulate/<br /><br />Rodar no celular<br />ionic run android<br /><br />Ícone e Splash Screen<br /><br /><strong>Ícone</strong><br /><br />Inclua um arquivo icon.png, icon.psd ou icon.ai na pasta resources do projeto. Certifique que o tamanho mínimo da imagem seja 192px x 192px e que não tenha cantos arredondados. Com isso basta rodar o comando abaixo que o Ionic gera todos os tamanhos possíveis para cada plataforma.<br />    <br />ionic resources --icon<br /><br /><strong>Splash Screen</strong><br /><br />Inclua um arquivo splash.png, splash.psd ou splash.ai na pasta resources do projeto. Certifique que o tamanho mínimo da imagem seja 2208px x 2208px. Com isso basta rodar o comando abaixo que o Ionic gera todos os tamanhos possíveis para cada plataforma.<br /><br />ionic resources --splash<br /><br />Criar Aplicativos com Ionic<br /><a href="https://www.youtube.com/watch?v=yoCvd-ksu6w">https://www.youtube.com/watch?v=yoCvd-ksu6w</a></p>
+
+<p style="text-align: justify;"> </p>
+
+<p style="text-align: justify;"><strong>Tutorial Abrangente</strong></p>
+
+<p style="text-align: justify;"><a href="https://hollyschinsky.github.io/ConferenceTracker/install-ionic.html">https://hollyschinsky.github.io/ConferenceTracker/install-ionic.html</a></p>
+
+<p style="text-align: justify;"> Outro</p>
+
+<p style="text-align: justify;"><strong>Ionic Framework tutorial</strong></p>
+
+<p style="text-align: justify;"><a href="http://ccoenraets.github.io/ionic-tutorial/install-ionic.html">http://ccoenraets.github.io/ionic-tutorial/install-ionic.html</a></p>
+
+<p style="text-align: justify;"> </p>]]></description>
+			<category>Outros</category>
+			<pubDate>Wed, 12 Jul 2017 10:22:18 -0300</pubDate>
+		</item>
+		<item>
+			<title>Ionic - Dicas</title>
+			<link>http://backup/portal/mobile/outros/ionic-dicas.html</link>
+			<guid isPermaLink="true">http://backup/portal/mobile/outros/ionic-dicas.html</guid>
+			<description><![CDATA[<p><strong>Ionic - Dicas<br /></strong></p>
+
+
+<p><strong>Bons Tutoriais</strong></p>
+
+
+<p>Understanding Ionic 2 Components (Tutorial)<br /><a href="https://coursetro.com/posts/code/37/Understanding-Ionic-2-Components-(Tutorial)">https://coursetro.com/posts/code/37/Understanding-Ionic-2-Components-(Tutorial)</a></p>
+
+
+<p>Getting Started with Ionic 2 for Beginners<br /><a href="https://coursetro.com/courses/11/Getting-Started-with-Ionic-2-for-Beginners">https://coursetro.com/courses/11/Getting-Started-with-Ionic-2-for-Beginners</a></p>
+
+
+<p>Ionic Quick Guide<br /><a href="http://www.tutorialspoint.com/ionic/">http://www.tutorialspoint.com/ionic/</a></p>
+
+
+<p>Getting Started With Ionic: Introduction<br /><a href="https://code.tutsplus.com/tutorials/getting-started-with-ionic-introduction--cms-25919">https://code.tutsplus.com/tutorials/getting-started-with-ionic-introduction--cms-25919</a></p>
+
+
+<p>Getting Started With Ionic: JavaScript Components<br /><a href="https://code.tutsplus.com/tutorials/getting-started-with-ionic-javascript-components--cms-26168">https://code.tutsplus.com/tutorials/getting-started-with-ionic-javascript-components--cms-26168</a></p>
+
+
+<p>Getting Started With Ionic: Services<br /><a href="https://code.tutsplus.com/tutorials/getting-started-with-ionic-services--cms-26278">https://code.tutsplus.com/tutorials/getting-started-with-ionic-services--cms-26278</a></p>
+
+
+<p> </p>
+
+
+<p> </p>]]></description>
+			<category>Outros</category>
+			<pubDate>Wed, 12 Jul 2017 10:22:18 -0300</pubDate>
+		</item>
+		<item>
+			<title>WebSQL para Mobile</title>
+			<link>http://backup/portal/mobile/outros/websql-para-mobile.html</link>
+			<guid isPermaLink="true">http://backup/portal/mobile/outros/websql-para-mobile.html</guid>
+			<description><![CDATA[<p><strong>WebSQL</strong> é uma tecnologia do HTML5 que usa SQL do lado do cliente para armazenar dados.</p>
+
+
+<p>Para quem está acostumado com bancos de dados SQL fica bem confortável.</p>
+
+
+<p>Diferente do localStorage e do IndexedDb, que não usam SQL e com isso ficam um pouco mais trabalhosos.</p>
+
+
+<p>O WebSQL foi descontinuado pelo consórcio W3C e por alguns navegadores, mas continua sendo suportado pelas últimas versões do Google Chrome, Opera, Safari e Android e iOS. É o preferido por boa parte dos desenvolvedores.</p>
+
+
+<p> </p>
+
+
+<p><strong>Algumas referências sobre o WebSQL e seu uso</strong></p>
+
+
+<p><a href="https://www.turbosite.com.br/blog/sql-do-lado-do-cliente-web-sql-database-com-html5/">https://www.turbosite.com.br/blog/sql-do-lado-do-cliente-web-sql-database-com-html5/</a> <br /><a href="https://www.w3.org/TR/webdatabase/Â">https://www.w3.org/TR/webdatabase/ </a> <br /><a href="http://codigofonte.uol.com.br/artigos/trabalhando-com-o-web-sql-database-do-html5">http://codigofonte.uol.com.br/artigos/trabalhando-com-o-web-sql-database-do-html5</a> <br /><a href="http://html5doctor.com/introducing-web-sql-databases/">http://html5doctor.com/introducing-web-sql-databases/</a> <br /><a href="https://html5demos.com/">https://html5demos.com/</a> <br /><a href="https://www.tutorialspoint.com/html5/html5_web_sql.htm">https://www.tutorialspoint.com/html5/html5_web_sql.htm</a> <br /><a href="http://caniuse.com/#feat=sql-storage">http://caniuse.com/#feat=sql-storage</a> <br /><a href="http://caniuse.com/#feat=indexeddbÂ">http://caniuse.com/#feat=indexeddb </a> <br /><br /><strong>Discussão sobre a depreciação do WebSQL</strong><br /><a href="https://softwareengineering.stackexchange.com/questions/220254/why-is-web-sql-database-deprecated">https://softwareengineering.stackexchange.com/questions/220254/why-is-web-sql-database-deprecated</a> <br /><a href="https://www.html5rocks.com/en/tutorials/webdatabase/websql-indexeddb/Â">https://www.html5rocks.com/en/tutorials/webdatabase/websql-indexeddb/ </a> <br /><br /><strong>Extensão para Firefox suportar WebSQL</strong><br /><a href="https://addons.mozilla.org/pt-br/firefox/addon/html5-websql-for-firefox/">https://addons.mozilla.org/pt-br/firefox/addon/html5-websql-for-firefox/</a> <br />IndexedDb, WebSQL e localStorage <br /><a href="https://github.com/yathit/ydn-db">https://github.com/yathit/ydn-db</a> <br /><a href="https://www.npmjs.com/package/lib-websql">https://www.npmjs.com/package/lib-websql</a> <br /><a href="http://html5sql.com/">http://html5sql.com/</a> <br /><a href="http://alasql.org/">http://alasql.org/</a> <br /><a href="https://github.com/localForage/localForage">https://github.com/localForage/localForage</a> <br /><a href="http://blog.teamtreehouse.com/using-localforage-offline-data-storage">http://blog.teamtreehouse.com/using-localforage-offline-data-storage</a> <br /><a href="https://github.com/matthew-andrews/ft-style-offline-web-app-part-2">https://github.com/matthew-andrews/ft-style-offline-web-app-part-2</a> <br /><a href="https://labs.ft.com/2012/09/ft-style-web-app-on-firefox-and-ie6-to-ie10/?mhq5j=e3">https://labs.ft.com/2012/09/ft-style-web-app-on-firefox-and-ie6-to-ie10/?mhq5j=e3</a> <br /><a href="https://github.com/cesarjr/crud-offline">https://github.com/cesarjr/crud-offline</a></p>
+
+
+<p> </p>]]></description>
+			<category>Outros</category>
+			<pubDate>Tue, 11 Jul 2017 20:51:28 -0300</pubDate>
+		</item>
+		<item>
+			<title>WebSQL - Exemplos</title>
+			<link>http://backup/portal/mobile/outros/websql-exemplos.html</link>
+			<guid isPermaLink="true">http://backup/portal/mobile/outros/websql-exemplos.html</guid>
+			<description><![CDATA[<p><strong>WebSQL</strong> - <strong>Exemplos</strong></p>
+<p><a title="agenda.zip" href="http://backup/portal/../down/mobile/websql/agenda.zip">agenda.zip</a></p>
+<p><a title="agenda2.zip" href="http://backup/portal/../down/mobile/websql/agenda2.zip">agenda2.zip</a></p>
+<p><a title="websql_ex.zip" href="http://backup/portal/../down/mobile/websql/websql_ex.zip">websql_ex.zip</a></p>
+<p><a title="crud-offline" href="https://github.com/cesarjr/crud-offline" target="_blank" rel="noopener noreferrer">crud-offline</a> - três exemplos usando o WebSQL</p>
+<pre class="language-markup"><code>&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Look at WebSQL&lt;/title&gt;
+&lt;script&gt;
+//https://gist.github.com/andyj/1599544
+	// Through the code below remember essentialy there are just 3 core methods we tend to use
+	// openDatabase
+	// transaction
+	// executeSql
+	// Opening a connection 
+	// window.openDatabase( database name , version , database description, estimated size );
+	// The size is flexible but some browsers put a restriction of 5mb so know your environment
+	var db = window.openDatabase("myDatabase", "1.0", "My WebSQL test database", 5*1024*1024);
+	if(!db) {
+		// Test your DB was created
+		alert('Your DB was not created this time');
+		return false
+	}
+		
+	// Prepare you statement 
+	// With your DB working we can add tables and run queries via the transaction function
+	// db.transactions( transaction, error callback, ready callback )
+	db.transaction(
+		function(tx){
+			// Execute the SQL via a usually anonymous function 
+			// tx.executeSql( SQL string, arrary of arguments, success callback function, failure callback function)
+			// To keep it simple I've added to functions below called onSuccessExecuteSql() and onFailureExecuteSql()
+			// to be used in the callbacks
+			tx.executeSql(
+				"CREATE TABLE IF NOT EXISTS fightclub (id INTEGER PRIMARY KEY AUTOINCREMENT, rules TEXT)",
+				[],
+				onSuccessExecuteSql,
+				onError
+			)
+		},
+		onError,
+		onReadyTransaction
+	)
+	// At this point you now know everything to continue. All I'm am going to do now is add
+	// a single record to our table
+	db.transaction(
+		function(tx){
+			tx.executeSql( "INSERT INTO fightclub(rules) VALUES(?)",
+			['You do not talk about Fight Club'],
+			onSuccessExecuteSql,
+			onError )
+		},
+		onError,
+		onReadyTransaction
+	)
+		
+	// All thats left is to get the results on the page
+	// There where clause below is weak, but its just an example of preparing your statement
+	db.transaction(
+		function(tx){
+			tx.executeSql( "SELECT * FROM fightclub WHERE id &gt; ?",
+			['0'],
+			displayResults,
+			onError )
+		},
+		onError,
+		onReadyTransaction
+	)
+		
+	function onReadyTransaction( ){
+		console.log( 'Transaction completed' )
+	}
+	function onSuccessExecuteSql( tx, results ){
+		console.log( 'Execute SQL completed' )
+	}
+	function onError( err ){
+		console.log( err )
+	}
+	function displayResults( tx, results ){
+		
+		if(results.rows.length == 0) {
+			alert("No records found");
+			return false;
+		}
+		
+		var row = "";
+		for(var i=0; i&lt;results.rows.length; i++) {
+			row += results.rows.item(i).rules + "&lt;br/&gt;";
+		}
+		document.body.innerHTML = row
+	}
+&lt;/script&gt;
+
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>]]></description>
+			<category>Outros</category>
+			<pubDate>Tue, 11 Jul 2017 20:51:28 -0300</pubDate>
+		</item>
+		<item>
+			<title>IndexedDb para Mobile</title>
+			<link>http://backup/portal/mobile/outros/indexeddb-para-mobile.html</link>
+			<guid isPermaLink="true">http://backup/portal/mobile/outros/indexeddb-para-mobile.html</guid>
+			<description><![CDATA[<p><strong>IndexedDb</strong></p>
+
+
+<p>O indexedDb é uma forma de persistência local do HTML 5. Ele é suportado pela maioria dos navegadores.</p>
+
+
+<p>O WebSQL é mais popular entre os desenvolvedores por ser SQL, mas o WebSQL foi rejeitado pelo W3 Consórcio e por alguns navegadores.</p>
+
+
+<p><strong>Alguns exemplos de uso do IndexedDb:</strong></p>
+
+
+<p><a title="AgendaSimples.zip" href="http://backup/portal/../down/mobile/indexeddb/AgendaSimples.zip">AgendaSimples.zip</a></p>
+
+
+<p><a title="BuscaSimples.zip" href="http://backup/portal/../down/mobile/indexeddb/BuscaSimples.zip">BuscaSimples.zip</a></p>
+
+
+<p><a title="BuscaSimplesJQM.zip" href="http://backup/portal/../down/mobile/indexeddb/BuscaSimplesJQM.zip">BuscaSimplesJQM.zip</a></p>
+
+
+<p><a title="indexeddb-part-two.zip" href="http://backup/portal/../down/mobile/indexeddb/indexeddb-part-two.zip">indexeddb-part-two.zip</a></p>
+
+
+<p><a title="indexedDB_sample.zip" href="http://backup/portal/../down/mobile/indexeddb/indexedDB_sample.zip">indexedDB_sample.zip</a></p>
+
+
+<p><a title="todo-list-indexeddb.zip" href="http://backup/portal/../down/mobile/indexeddb/todo-list-indexeddb.zip">todo-list-indexeddb.zip</a></p>
+
+
+<p> </p>]]></description>
+			<category>Outros</category>
+			<pubDate>Tue, 11 Jul 2017 16:32:44 -0300</pubDate>
+		</item>
+		<item>
+			<title>Jogos Web</title>
+			<link>http://backup/portal/mobile/outros/jogos-web.html</link>
+			<guid isPermaLink="true">http://backup/portal/mobile/outros/jogos-web.html</guid>
+			<description><![CDATA[<p><strong>Alguns bons jogos Web</strong>, que podem ser convertidos em mobile.</p>
+
+
+<p> </p>
+
+
+<p><a title="cron-naves.zip" href="http://backup/portal/../down/mobile/jogos/cron-naves.zip">cron-naves.zip - </a>Original em  <a href="https://github.com/BlackScorp/cron">https://github.com/BlackScorp/cron</a></p>
+
+
+<p>pacman-master.zip - Original em <a href="https://github.com/daleharvey/pacman">https://github.com/daleharvey/pacman</a></p>
+
+
+<p> </p>]]></description>
+			<category>Outros</category>
+			<pubDate>Tue, 11 Jul 2017 16:32:44 -0300</pubDate>
+		</item>
+		<item>
+			<title>Introdução à jQueryMobile</title>
+			<link>http://backup/portal/mobile/outros/introducao-a-jquerymobile.html</link>
+			<guid isPermaLink="true">http://backup/portal/mobile/outros/introducao-a-jquerymobile.html</guid>
+			<description><![CDATA[<p style="text-align: justify;"><strong>jQueryMobile</strong></p>
+<p style="text-align: justify;">Mesmo que tenha jquery em seu nome, jQueryMobile encoraja uma forma inteiramente diferente da que temos visto com jQuery. <br /> <br />É um framework para desenvolver aplicativos mobile responsives e com ele geralmente não usamos CSS nem JavaScript, apenas indicamos suas classes e IDs que ele faz o resto. <br /> <br />Para conhecer mais sobre o jQueryMobile veja seus demos na pasta completa do download. <br /> <br />Algo interessante do jQueryMobile é que ele cria opaginas lógicas em apenas um arquivo html, que funcional como se fossem vários arquivos. <br /> <br />Para criar uma página lógica precisamos de uma div contendo um ID e um data-role="page", assim: <br /> <br />&lt;section id="Pagina1" data-role="page"&gt; <br /> <br />Para chamar esta página acima usamos: <br />&lt;a href="http://backup/portal/#pagina1"&gt;Página 1&lt;/a&gt; <br /> <br />No pacote baixado a jQueryMobile já traz uns 50 ícones. <br /> <br /><strong>Primeira página a ser aberta</strong> <br />Lembrando que a pripeira das páginas lógicas a ser aberta é a primeira na ordem de criação. <br /> <br />Exemplo: <br /> </p>
+<pre class="language-markup"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;jQuery Mobile&lt;/title&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+&lt;meta charset="UTF-8"/&gt;
+&lt;link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.css" /&gt;
+&lt;script src="http://code.jquery.com/jquery-1.7.1.min.js"&gt;&lt;/script&gt;
+&lt;script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+&lt;div data-role="page" id="pag1"&gt;
+&lt;div data-role="header"&gt;
+&lt;h1&gt;Título 1&lt;/h1&gt;
+&lt;/div&gt;
+
+&lt;div data-role="content"&gt;
+&lt;h3&gt;Esta é a página 1&lt;/h3&gt;
+&lt;a href="http://backup/portal/#pag2"&gt;Página 1...&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;div data-role="footer"&gt;
+&lt;h1&gt;Rodapé 1&lt;/h1&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div data-role="page" id="pag2"&gt;
+&lt;div data-role="header"&gt;
+&lt;h1&gt;Título 2&lt;/h1&gt;
+&lt;/div&gt;
+
+&lt;div data-role="content"&gt;
+&lt;h3&gt;Esta é a página 2&lt;/h3&gt;
+&lt;a href="http://backup/portal/#pag1"&gt;... Página 1&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;div data-role="footer"&gt;
+&lt;h1&gt;Rodapé 2&lt;/h1&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div data-role="page" id="pag3"&gt;
+&lt;div data-role="header"&gt;
+&lt;h1&gt;Título 3&lt;/h1&gt;
+&lt;/div&gt;
+
+&lt;div data-role="content"&gt;
+&lt;h3&gt;Esta é a página 3&lt;/h3&gt;
+&lt;a href="http://backup/portal/#pag2"&gt;... Página 2&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;div data-role="footer"&gt;
+&lt;h1&gt;Rodapé 3&lt;/h1&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt; </code></pre>
+<p style="text-align: justify;"><br /> <br />Read more: <a href="http://www.linhadecodigo.com.br/artigo/3514/jquery-mobile-estrutura-da-pagina.aspx#ixzz45SlI2MaU">http://www.linhadecodigo.com.br/artigo/3514/jquery-mobile-estrutura-da-pagina.aspx#ixzz45SlI2MaU</a> <br /> <br /><strong>Plataformas</strong> <br />Algo importante de um framework como o jQueryMobile é que ele suporta plataformas distintas como iOS e Android. O programador não precisa se preocupar com as diferenças entre as plataformas e seu código será compatível com ambas.</p>
+<p style="text-align: justify;"> </p>
+<p style="text-align: justify;"><strong>Usando como mobile</strong></p>
+<p style="text-align: justify;">Podemos criar um site web normal, mas que use jQueryMobile e fornecer sua URL para o cliente para que acesse em seu celular.</p>
+<p style="text-align: justify;"> </p>]]></description>
+			<category>Outros</category>
+			<pubDate>Tue, 11 Jul 2017 16:32:44 -0300</pubDate>
+		</item>
+		<item>
+			<title>jQueryMobile - Exemplos</title>
+			<link>http://backup/portal/mobile/outros/jquerymobile-exemplos.html</link>
+			<guid isPermaLink="true">http://backup/portal/mobile/outros/jquerymobile-exemplos.html</guid>
+			<description><![CDATA[<p><strong>jQueryMobile Exemplos<br /></strong></p>
+
+
+<p> </p>
+
+
+<p><a title="jq_paginas_logicas.html" href="http://backup/portal/../down/mobile/jquerymobile/jq_paginas_logicas.html" target="_blank" rel="noopener noreferrer">jq_paginas_logicas.html</a></p>
+
+
+<p><a title="Pizzas.zip" href="http://backup/portal/../down/mobile/jquerymobile/Pizzas.zip">Pizzas.zip</a></p>
+
+
+<p> </p>]]></description>
+			<category>Outros</category>
+			<pubDate>Tue, 11 Jul 2017 16:32:44 -0300</pubDate>
+		</item>
+		<item>
+			<title>jQueryMobile - Resumo</title>
+			<link>http://backup/portal/mobile/outros/jquerymobile-resumo.html</link>
+			<guid isPermaLink="true">http://backup/portal/mobile/outros/jquerymobile-resumo.html</guid>
+			<description><![CDATA[<p style="text-align: justify;"><strong>jQueryMobile - Resumo<br /></strong></p>
+<p style="text-align: justify;"><a href="http://jquerymobile.com">http://jquerymobile.com</a> <br /><br /><strong>CDN</strong><br />&lt;link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" /&gt;<br />&lt;script src="http://code.jquery.com/jquery-1.11.1.min.js"&gt;&lt;/script&gt;<br />&lt;script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"&gt;&lt;/script&gt;<br /><br />É um framework para a interface do usuário, que é criada usando o core da jQuery e da jQuery UI.<br />É usada para desenvolver aplicativos mobile e sites web responsives.<br />Criado pela equipe da jQuery em 2010.<br /><br /><strong>Características:</strong><br />- Usada da mesma forma em dispositivos mobile, tablets e desktop.<br />- Compatível com os frameworks Ionic, Phonegap, Whitelight, etc<br />- Traz um conjunto de inputs de forms touch-friendly e widgets UI<br />- É open source e cross plataforma e cross browser<br />- É escrito em JavaScript e usa recursos da jQuery e jQuery UI para criar sites mobile-friendly<br />- Ele integra HTML5, CSS3 jQuery e jQuery UI em um único framework para a criação de páginas com o mínimo de scripts.<br />- Inclue o sistema de navegação com Ajax que usa animação nas mudanças de página<br /><br /><strong>Vantagens</strong><br /><br />- Fácil de aprender e desenvolver aplicações para quem conhece HTML e CSS.<br />- Podemos criar o tema personalizado usando ThemeRoller sem escrever nenhuma linha de código. Suporta todos os HTML5 navegadores.<br />- Escreva o mesmo código para mobile e desktop<br /><br /><strong>Exemplo Simples:</strong></p>
+<pre class="language-markup"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;meta name="viewport" content="width = device-width, initial-scale = 1"&gt;
+    &lt;link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"&gt;
+    &lt;script src="https://code.jquery.com/jquery-1.11.3.min.js"&gt;&lt;/script&gt;
+    &lt;script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;div data-role="page" id="pageone"&gt;
+        &lt;div data-role="header"&gt;
+            &lt;h1&gt;Header Text&lt;/h1&gt;
+        &lt;/div&gt;
+        &lt;div data-role="main" class="ui-content"&gt;
+            &lt;h2&gt;Welcome to TutorialsPoint&lt;/h2&gt;
+        &lt;/div&gt;
+        &lt;div data-role="footer"&gt;
+            &lt;h1&gt;Footer Text&lt;/h1&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;</code></pre>
+<p style="text-align: justify;"><br /><br /><strong>Demos</strong><br /><a href="http://demos.jquerymobile.com/1.4.5/">http://demos.jquerymobile.com/1.4.5/</a> <br /><br /><strong>Diálogos</strong><br /><br />&lt;a href="http://backup/portal/dialog.html" class="ui-shadow ui-btn ui-corner-all ui-btn-inline" data-transition="pop"&gt;Open dialog&lt;/a&gt; <br /><br />&lt;a href="http://backup/portal/dialog.html" role="button" class="ui-shadow ui-btn ui-corner-all ui-btn-inline" data-transition="slidedown"&gt;data-transition="slidedown"&lt;/a&gt; <br />http://demos.jquerymobile.com/1.4.0/pages-dialog/<br />https://api.jquerymobile.com/dialog/<br /><br /><strong>Botões</strong><br /><br /><a href="http://demos.jquerymobile.com/1.4.5/button-markup/">http://demos.jquerymobile.com/1.4.5/button-markup/</a> <br /> </p>
+<pre class="language-markup"><code>&lt;a href="http://backup/portal/#" class="ui-btn"&gt;Anchor&lt;/a&gt;
+&lt;button class="ui-btn"&gt;Button&lt;/button&gt;
+
+&lt;a href="http://backup/portal/#" class="ui-btn ui-icon-delete ui-btn-icon-notext ui-corner-all"&gt;No text&lt;/a&gt;
+&lt;div id="custom-border-radius"&gt;
+&lt;a href="http://backup/portal/#" class="ui-btn ui-icon-delete ui-btn-icon-notext ui-corner-all"&gt;No text&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;a href="http://backup/portal/#" class="ui-btn ui-btn-inline"&gt;Anchor&lt;/a&gt;
+&lt;button class="ui-btn ui-btn-inline"&gt;Button&lt;/button&gt;
+
+&lt;a href="http://backup/portal/#" class="ui-btn"&gt;Anchor - Inherit&lt;/a&gt;
+&lt;a href="http://backup/portal/#" class="ui-btn ui-btn-a"&gt;Anchor - Theme swatch A&lt;/a&gt;
+&lt;a href="http://backup/portal/#" class="ui-btn ui-btn-b"&gt;Anchor - Theme swatch B&lt;/a&gt;
+&lt;button class="ui-btn"&gt;Button - Inherit&lt;/button&gt;
+&lt;button class="ui-btn ui-btn-a"&gt;Button - Theme swatch A&lt;/button&gt;
+&lt;button class="ui-btn ui-btn-b"&gt;Button - Theme swatch B&lt;/button&gt;</code></pre>
+<p style="text-align: justify;"><br /><br /><strong>PopUps</strong><br /> <br />&lt;a href="http://backup/portal/#popupBasic" data-rel="popup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline" data-transition="pop"&gt;Basic Popup&lt;/a&gt;<br />&lt;div data-role="popup" id="popupBasic"&gt;<br />&lt;p&gt;This is a completely basic popup, no options set.&lt;/p&gt;<br />&lt;/div&gt;<br /><br /><strong>ToolTip</strong><br />&lt;p&gt;A paragraph with a tooltip. &lt;a href="http://backup/portal/#popupInfo" data-rel="popup" data-transition="pop" class="my-tooltip-btn ui-btn ui-alt-icon ui-nodisc-icon ui-btn-inline ui-icon-info ui-btn-icon-notext" title="Learn more"&gt;Learn more&lt;/a&gt;&lt;/p&gt;<br />&lt;div data-role="popup" id="popupInfo" class="ui-content" data-theme="a" style="max-width:350px;"&gt;<br /> &lt;p&gt;Here is a &lt;strong&gt;tiny popup&lt;/strong&gt; being used like a tooltip. The text will wrap to multiple lines as needed.&lt;/p&gt;<br />&lt;/div&gt;<br /><br /><strong>Menu</strong></p>
+<pre class="language-markup"><code>&lt;a href="http://backup/portal/#popupMenu" data-rel="popup" data-transition="slideup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-gear ui-btn-icon-left ui-btn-a"&gt;Actions...&lt;/a&gt;
+&lt;div data-role="popup" id="popupMenu" data-theme="b"&gt;
+&lt;ul data-role="listview" data-inset="true" style="min-width:210px;"&gt;
+&lt;li data-role="list-divider"&gt;Choose an action&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://backup/portal/#"&gt;View details&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://backup/portal/#"&gt;Edit&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://backup/portal/#"&gt;Disable&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://backup/portal/#"&gt;Delete&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+<p style="text-align: justify;"><br /><br /><strong>Formulários</strong></p>
+<pre class="language-markup"><code>&lt;a href="http://backup/portal/#popupLogin" data-rel="popup" data-position-to="window" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-check ui-btn-icon-left ui-btn-a" data-transition="pop"&gt;Sign in&lt;/a&gt;
+&lt;div data-role="popup" id="popupLogin" data-theme="a" class="ui-corner-all"&gt;
+&lt;form&gt;
+&lt;div style="padding:10px 20px;"&gt;
+&lt;h3&gt;Please sign in&lt;/h3&gt;
+&lt;label for="un" class="ui-hidden-accessible"&gt;Username:&lt;/label&gt;
+&lt;input name="user" id="un" value="" placeholder="username" data-theme="a" type="text"&gt;
+&lt;label for="pw" class="ui-hidden-accessible"&gt;Password:&lt;/label&gt;
+&lt;input name="pass" id="pw" value="" placeholder="password" data-theme="a" type="password"&gt;
+&lt;button type="submit" class="ui-btn ui-corner-all ui-shadow ui-btn-b ui-btn-icon-left ui-icon-check"&gt;Sign in&lt;/button&gt;
+&lt;/div&gt;
+&lt;/form&gt;
+&lt;/div&gt;</code></pre>
+<p style="text-align: justify;"><br /><br /><strong>Diálogos</strong></p>
+<pre class="language-markup"><code>&lt;a href="http://backup/portal/#popupDialog" data-rel="popup" data-position-to="window" data-transition="pop" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-delete ui-btn-icon-left ui-btn-b"&gt;Delete page...&lt;/a&gt;
+&lt;div data-role="popup" id="popupDialog" data-overlay-theme="b" data-theme="b" data-dismissible="false" style="max-width:400px;"&gt;
+&lt;div data-role="header" data-theme="a"&gt;
+&lt;h1&gt;Delete Page?&lt;/h1&gt;
+&lt;/div&gt;
+&lt;div role="main" class="ui-content"&gt;
+&lt;h3 class="ui-title"&gt;Are you sure you want to delete this page?&lt;/h3&gt;
+&lt;p&gt;This action cannot be undone.&lt;/p&gt;
+&lt;a href="http://backup/portal/#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back"&gt;Cancel&lt;/a&gt;
+&lt;a href="http://backup/portal/#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back" data-transition="flow"&gt;Delete&lt;/a&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<p style="text-align: justify;"><br /><br /><strong>ToolBar</strong></p>
+<pre class="language-markup"><code>&lt;div data-role="header"&gt;
+&lt;a href="http://backup/portal/#" class="ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-delete"&gt;Cancel&lt;/a&gt;
+&lt;h1&gt;My App&lt;/h1&gt;
+&lt;button class="ui-btn-right ui-btn ui-btn-b ui-btn-inline ui-mini ui-corner-all ui-btn-icon-right ui-icon-check"&gt;Save&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;div data-role="header"&gt;
+&lt;div data-role="controlgroup" data-type="horizontal" class="ui-mini ui-btn-left"&gt;
+&lt;a href="http://backup/portal/#" class="ui-btn ui-btn-icon-right ui-icon-plus"&gt;Add&lt;/a&gt;
+&lt;a href="http://backup/portal/#" class="ui-btn ui-btn-icon-right ui-icon-arrow-u"&gt;Up&lt;/a&gt;
+&lt;a href="http://backup/portal/#" class="ui-btn ui-btn-icon-right ui-icon-arrow-d"&gt;Down&lt;/a&gt;
+&lt;/div&gt;
+&lt;h6&gt;My header&lt;/h6&gt;
+&lt;/div&gt;</code></pre>
+<p style="text-align: justify;"><br /><br /><strong>Select</strong></p>
+<pre class="language-markup"><code>&lt;form&gt;
+&lt;div class="ui-field-contain"&gt;
+&lt;label for="select-native-1"&gt;Basic:&lt;/label&gt;
+&lt;select name="select-native-1" id="select-native-1"&gt;
+&lt;option value="1"&gt;The 1st Option&lt;/option&gt;
+&lt;option value="2"&gt;The 2nd Option&lt;/option&gt;
+&lt;option value="3"&gt;The 3rd Option&lt;/option&gt;
+&lt;option value="4"&gt;The 4th Option&lt;/option&gt;
+&lt;/select&gt;
+&lt;/div&gt;
+&lt;/form&gt;</code></pre>
+<p style="text-align: justify;"><br /><br /></p>
+<p style="text-align: justify;"><strong>Exemplos</strong></p>
+<p style="text-align: justify;"><strong>Two Pages</strong></p>
+<pre class="language-markup"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta name = "viewport" content = "width = device-width, initial-scale = 1"&gt;
+&lt;link rel = "stylesheet" href = "https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"&gt;
+&lt;script src = "https://code.jquery.com/jquery-1.11.3.min.js"&gt;&lt;/script&gt;
+&lt;script src = "https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+&lt;div data-role = "page" id = "page1"&gt;
+&lt;div data-role = "header"&gt;
+&lt;h2&gt;Header&lt;/h2&gt;
+&lt;/div&gt;
+
+&lt;div role = "main" class = "ui-content"&gt;
+&lt;p&gt;Lorem Ipsum is simply dummy text of the printing and typesetting industry.&lt;/p&gt;
+&lt;p&gt; For more information &lt;a href = "#page2"&gt;click here&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div data-role = "footer"&gt;
+&lt;h4&gt;Footer&lt;/h4&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div data-role = "page" id = "page2"&gt;
+&lt;div data-role = "header"&gt;
+&lt;h1&gt;Header Text&lt;/h1&gt;
+&lt;/div&gt;
+
+&lt;div role = "main" class = "ui-content"&gt;
+&lt;p&gt;Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+Lorem Ipsum has been the industry's standard dummy text ever since the
+1500s.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href = "#page1"&gt;Back to previous page&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div data-role = "footer"&gt;
+&lt;h4&gt;Footer Text&lt;/h4&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p style="text-align: justify;"><strong>Grid 3 Colunas</strong></p>
+<pre class="language-markup"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta name = "viewport" content = "width = device-width, initial-scale = 1"&gt;
+&lt;link rel = "stylesheet" href = "https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"&gt;
+&lt;script src = "https://code.jquery.com/jquery-1.11.3.min.js"&gt;&lt;/script&gt;
+&lt;script src = "https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+&lt;h2&gt;Three Column Grid Example&lt;/h2&gt;
+&lt;div class = "ui-grid-b"&gt;
+&lt;div class = "ui-block-a"&gt;
+&lt;div class = "ui-bar ui-bar-a"&gt;First Block&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class = "ui-block-b"&gt;
+&lt;div class = "ui-bar ui-bar-b"&gt;Second Block&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class = "ui-block-c"&gt;
+&lt;div class = "ui-bar ui-bar-a"&gt;Third Block&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h2&gt;Three Column Grid button Example&lt;/h2&gt;
+&lt;fieldset class = "ui-grid-b"&gt;
+&lt;div class = "ui-block-a"&gt;
+&lt;a class = "ui-btn ui-corner-all ui-shadow ui-btn-b"&gt;Button 1&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;div class = "ui-block-b"&gt;
+&lt;a class = "ui-btn ui-corner-all ui-shadow ui-btn-a"&gt;Button 2&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;div class = "ui-block-c"&gt;
+&lt;a class = "ui-btn ui-corner-all ui-shadow ui-btn-b"&gt;Button 3&lt;/a&gt;
+&lt;/div&gt;
+&lt;/fieldset&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p style="text-align: justify;"> </p>
+<p style="text-align: justify;"><strong>Ícones</strong></p>
+<pre class="language-markup"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta name = "viewport" content = "width = device-width, initial-scale = 1"&gt;
+&lt;link rel = "stylesheet" href = "https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"&gt;
+&lt;script src = "https://code.jquery.com/jquery-1.11.3.min.js"&gt;&lt;/script&gt;
+&lt;script src = "https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+&lt;div data-role = "main" class = "ui-content"&gt;
+&lt;a href = "#" class = "ui-btn ui-btn-icon-left ui-icon-grid"&gt;Grid Button&lt;/a&gt;
+&lt;button class = "ui-btn ui-btn-icon-left ui-icon-arrow-d-r"&gt;arrow-d-r&lt;/button&gt;
+&lt;button class = "ui-btn ui-btn-icon-left ui-icon-arrow-l"&gt;arrow-l&lt;/button&gt;
+&lt;button class = "ui-btn ui-btn-icon-left ui-icon-arrow-r"&gt;arrow-r&lt;/button&gt;
+&lt;button class = "ui-btn ui-btn-icon-left ui-icon-arrow-u"&gt;arrow-u&lt;/button&gt;
+&lt;button class = "ui-btn ui-btn-icon-left ui-icon-arrow-u-l"&gt;arrow-u-l&lt;/button&gt;
+&lt;button class = "ui-btn ui-btn-icon-left ui-icon-arrow-u-r"&gt;arrow-u-r&lt;/button&gt;
+&lt;button class = "ui-btn ui-btn-icon-left ui-icon-audio"&gt;audio&lt;/button&gt;
+&lt;button class = "ui-btn ui-btn-icon-left ui-icon-calendar"&gt;calendar&lt;/button&gt;
+&lt;button class = "ui-btn ui-btn-icon-left ui-icon-camera"&gt;camera&lt;/button&gt;
+&lt;button class = "ui-btn ui-btn-icon-left ui-icon-carat-l"&gt;carat-l&lt;/button&gt;
+&lt;button class = "ui-btn ui-btn-icon-left ui-icon-carat-r"&gt;carat-r&lt;/button&gt;
+&lt;button class = "ui-btn ui-shadow ui-corner-all ui-btn-icon-left
+ui-icon-check"&gt;check&lt;/button&gt;
+&lt;button class = "ui-btn ui-shadow ui-corner-all ui-btn-icon-left
+ui-icon-clock"&gt;clock&lt;/button&gt;
+&lt;button class = "ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-eye"&gt;
+eye&lt;/button&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p style="text-align: justify;"> </p>
+<p style="text-align: justify;"><strong>Posicionamento de Ícones</strong></p>
+<pre class="language-markup"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Icon Setting&lt;/title&gt;
+&lt;meta name = "viewport" content = "width = device-width, initial-scale = 1"&gt;
+&lt;link rel = "stylesheet" href = "https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"&gt;
+&lt;script src = "https://code.jquery.com/jquery-1.11.3.min.js"&gt;&lt;/script&gt;
+&lt;script src = "https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+&lt;div data-role = "main" class = "ui-content"&gt;
+&lt;a href = "" class = "ui-btn ui-icon-home ui-btn-icon-left"&gt;Left&lt;/a&gt;
+&lt;a href = "" class = "ui-btn ui-icon-home ui-btn-icon-right"&gt;Right&lt;/a&gt;
+&lt;a href = "" class = "ui-btn ui-icon-home ui-btn-icon-top"&gt;Top&lt;/a&gt;
+&lt;a href = "" class = "ui-btn ui-icon-home ui-btn-icon-bottom"&gt;Bottom&lt;/a&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p style="text-align: justify;"><strong>Referência</strong></p>
+<p style="text-align: justify;"><a href="https://www.tutorialspoint.com/jquery_mobile/index.htm">https://www.tutorialspoint.com/jquery_mobile/index.htm</a></p>
+<p style="text-align: justify;"> </p>]]></description>
+			<category>Outros</category>
+			<pubDate>Tue, 11 Jul 2017 16:32:44 -0300</pubDate>
+		</item>
+		<item>
+			<title>BootStrap - Resumo</title>
+			<link>http://backup/portal/mobile/outros/bootstrap-resumo.html</link>
+			<guid isPermaLink="true">http://backup/portal/mobile/outros/bootstrap-resumo.html</guid>
+			<description><![CDATA[<p style="text-align: justify;"><strong>BootStrap - Resumo</strong><br /><br />O Bootstrap é um projeto criado pela equipe do Twitter e tendo seu código fonte aberto para a comunidade.<br />Hoje é o framework front end mais popular atualmente. Usado na web e para mobile.<br /><br /><a href="http://getbootstrap.com/">http://getbootstrap.com/</a> <br /><br /><strong>Download</strong><br /><a href="http://getbootstrap.com/getting-started/#download">http://getbootstrap.com/getting-started/#download</a> <br /><br /><strong>Em Pt-br</strong><br /><a href="http://getbootstrap.com.br/">http://getbootstrap.com.br/</a> <br /><br />No <strong>GitHub</strong><br /><a href="https://github.com/twbs/bootstrap">https://github.com/twbs/bootstrap</a> <br /><br />Suporta todos os navegadores populares: safari, FF, opera, chrome e IE<br /><br /><strong>Responsive -</strong> <br /> &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;<br /> &lt;link href="http://backup/portal/assets/css/bootstrap-responsive.css" rel="stylesheet"&gt;<br /><strong>Este exemplo era para a versão 2 do BS. Na versão 3 o bootstrap-responsive.css agora faz parte do bootstrap.css.</strong><br /><br /><strong>Template simples do Bootstrap 3</strong></p>
+<pre class="language-markup"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+&lt;title&gt;Bootstrap 101 Template&lt;/title&gt;
+&lt;meta name = "viewport" content = "width = device-width, initial-scale = 1.0"&gt;
+&lt;!-- Bootstrap --&gt;
+&lt;link href = "css/bootstrap.min.css" rel = "stylesheet"&gt;
+&lt;!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries --&gt;
+&lt;!-- WARNING: Respond.js doesn't work if you view the page via file:// --&gt;
+&lt;!--[if lt IE 9]&gt;
+&lt;script src = "https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"&gt;&lt;/script&gt;
+&lt;script src = "https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"&gt;&lt;/script&gt;
+&lt;![endif]--&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt;Hello, world!&lt;/h1&gt;
+
+&lt;!-- jQuery (necessary for Bootstrap's JavaScript plugins) --&gt;
+&lt;script src = "https://code.jquery.com/jquery.js"&gt;&lt;/script&gt;
+&lt;!-- Include all compiled plugins (below), or include individual files as needed --&gt;
+&lt;script src = "js/bootstrap.min.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p style="text-align: justify;"><br /><br />Como o bootstrap usa o jquery, então sempre precisamos incluir o jquery antes do bootstrap, como no exemplo acima.<br /><br /><br /><strong>Sistema de Grid</strong><br />Uma grid é uma grade com linhas e colunas.<br /><br />Uma grid deve vir contida na classe .container para adequado alinhamento e padding<br />Uma linha pode ter até 12 colunas e a linha é criada com a classe row, com grupos de colunas e somente colunas nas rows.<br />Colunas com as classes como .col-xs-4<br /><br />Media Queries<br />/* Extra small devices (phones, less than 768px) */<br />/* No media query since this is the default in Bootstrap */<br /><br />/* Small devices (tablets, 768px and up) */<br />@media (min-width: @screen-sm-min) { ... }<br /><br />/* Medium devices (desktops, 992px and up) */<br />@media (min-width: @screen-md-min) { ... }<br /><br />/* Large devices (large desktops, 1200px and up) */<br />@media (min-width: @screen-lg-min) { ... }<br /><br />Occasionally these are expanded to include a max-width to limit CSS to a narrower set of devices.<br /><br />@media (max-width: @screen-xs-max) { ... }<br />@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) { ... }<br />@media (min-width: @screen-md-min) and (max-width: @screen-md-max) { ... }<br />@media (min-width: @screen-lg-min) { ... }<br /><br /><strong>Opções de grid</strong><br /> Extra small devices Phones (&lt;768px) Small devices Tablets (≥768px) Medium devices Desktops (≥992px) Large devices Desktops (≥1200px)<br />Grid behavior Horizontal at all times Collapsed to start, horizontal above breakpoints<br />Container width None (auto) 750px 970px 1170px<br />Class prefix .col-xs- .col-sm- .col-md- .col-lg-<br /># of columns 12<br />Column width Auto ~62px ~81px ~97px<br />Gutter width 30px (15px on each side of a column)<br />Nestable Yes<br />Offsets Yes<br />Column ordering Yes<br /><br /><strong>Grid Básico</strong><br />&lt;div class = "container"&gt;<br /> &lt;div class = "row"&gt;<br /> &lt;div class = "col-*-*"&gt;&lt;/div&gt;<br /> &lt;div class = "col-*-*"&gt;&lt;/div&gt;<br /> &lt;/div&gt;<br /> &lt;div class = "row"&gt;...&lt;/div&gt;<br />&lt;/div&gt;<br /><br />&lt;div class = "container"&gt;<br />....<br />&lt;/div&gt;</p>
+<p style="text-align: justify;"><strong>Exemplo completo</strong></p>
+<pre class="language-markup"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta name = "viewport" content = "width = device-width, initial-scale = 1.0, maximum-scale = 1.0, user-scalable = no"&gt;
+&lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"&gt;
+
+&lt;style&gt;
+.fundo{
+background-color: #dedef8;
+box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+
+&lt;div class = "container"&gt;
+&lt;h1&gt;Olá Bootstrap Grid!&lt;/h1&gt;
+
+&lt;div class="row"&gt;
+&lt;div class="col-md-1 fundo"&gt;.col-md-1&lt;/div&gt;
+&lt;div class="col-md-1 fundo"&gt;.col-md-1&lt;/div&gt;
+&lt;div class="col-md-1 fundo"&gt;.col-md-1&lt;/div&gt;
+&lt;div class="col-md-1 fundo"&gt;.col-md-1&lt;/div&gt;
+&lt;div class="col-md-1"&gt;.col-md-1&lt;/div&gt;
+&lt;div class="col-md-1"&gt;.col-md-1&lt;/div&gt;
+&lt;div class="col-md-1"&gt;.col-md-1&lt;/div&gt;
+&lt;div class="col-md-1"&gt;.col-md-1&lt;/div&gt;
+&lt;div class="col-md-1"&gt;.col-md-1&lt;/div&gt;
+&lt;div class="col-md-1"&gt;.col-md-1&lt;/div&gt;
+&lt;div class="col-md-1"&gt;.col-md-1&lt;/div&gt;
+&lt;div class="col-md-1 fundo"&gt;.col-md-1&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="row"&gt;
+&lt;div class="col-md-8 fundo"&gt;.col-md-8&lt;/div&gt;
+&lt;div class="col-md-4 fundo"&gt;.col-md-4&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="row"&gt;
+&lt;div class="col-md-4 fundo"&gt;.col-md-4&lt;/div&gt;
+&lt;div class="col-md-4 fundo"&gt;.col-md-4&lt;/div&gt;
+&lt;div class="col-md-4 fundo"&gt;.col-md-4&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="row"&gt;
+&lt;div class="col-md-6 fundo"&gt;.col-md-6&lt;/div&gt;
+&lt;div class="col-md-6 fundo"&gt;.col-md-6&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<p style="text-align: justify;"><br /><br /><br /><strong>Offsetting Column</strong><br />Para deixar um espaço de 4 colunas em branco entre duas colunas colunas use:<br />.col-md-offset-4<br /><br /><strong>Exemplo:</strong></p>
+<pre class="language-markup"><code>&lt;div class="row"&gt;
+&lt;div class="col-md-4"&gt;.col-md-4&lt;/div&gt;
+&lt;div class="col-md-4 col-md-offset-4"&gt;.col-md-4 .col-md-offset-4&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="row"&gt;
+&lt;div class="col-md-3 col-md-offset-3"&gt;.col-md-3 .col-md-offset-3&lt;/div&gt;
+&lt;div class="col-md-3 col-md-offset-3"&gt;.col-md-3 .col-md-offset-3&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="row"&gt;
+&lt;div class="col-md-6 col-md-offset-3"&gt;.col-md-6 .col-md-offset-3&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<p style="text-align: justify;"><br /><br /><strong>Tabelas</strong></p>
+<p style="text-align: justify;">O Bootstrap trabalha com as seguintes tags:</p>
+<p style="text-align: justify;">&lt;table&gt;<br />&lt;thead&gt;<br />&lt;tbody&gt;<br />&lt;tr&gt;<br />&lt;td&gt;<br /><br />&lt;table class="table table-stripped"&gt;<br />.table-bordered<br />.table-hover<br /><br /><strong>Colorindo células ou a tabela inteira:</strong><br /><br />.active Applies the hover color to a particular row or cell<br />.success Indicates a successful or positive action<br />.info Indicates a neutral informative change or action<br />.warning Indicates a warning that might need attention<br />.danger Indicates a dangerous or potentially negative action<br /><br /></p>
+<pre class="language-markup"><code>&lt;!-- On rows --&gt;
+&lt;tr class="active"&gt;...&lt;/tr&gt;
+&lt;tr class="success"&gt;...&lt;/tr&gt;
+&lt;tr class="warning"&gt;...&lt;/tr&gt;
+&lt;tr class="danger"&gt;...&lt;/tr&gt;
+&lt;tr class="info"&gt;...&lt;/tr&gt;
+
+&lt;!-- On cells (`td` or `th`) --&gt;
+&lt;tr&gt;
+&lt;td class="active"&gt;...&lt;/td&gt;
+&lt;td class="success"&gt;...&lt;/td&gt;
+&lt;td class="warning"&gt;...&lt;/td&gt;
+&lt;td class="danger"&gt;...&lt;/td&gt;
+&lt;td class="info"&gt;...&lt;/td&gt;
+&lt;/tr&gt;
+
+.table-responsive
+
+&lt;div class="table-responsive"&gt;
+&lt;table class="table"&gt;
+...
+&lt;/table&gt;
+&lt;/div&gt;</code></pre>
+<p style="text-align: justify;"><br /><br /><strong>Formulários</strong></p>
+<pre class="language-markup"><code>&lt;form&gt;
+&lt;div class="form-group"&gt;
+&lt;label for="exampleInputEmail1"&gt;Email address&lt;/label&gt;
+&lt;input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email"&gt;
+&lt;/div&gt;
+&lt;div class="form-group"&gt;
+&lt;label for="exampleInputPassword1"&gt;Password&lt;/label&gt;
+&lt;input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"&gt;
+&lt;/div&gt;
+&lt;div class="form-group"&gt;
+&lt;label for="exampleInputFile"&gt;File input&lt;/label&gt;
+&lt;input type="file" id="exampleInputFile"&gt;
+&lt;p class="help-block"&gt;Example block-level help text here.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="checkbox"&gt;
+&lt;label&gt;
+&lt;input type="checkbox"&gt; Check me out
+&lt;/label&gt;
+&lt;/div&gt;
+&lt;button type="submit" class="btn btn-default"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+<p style="text-align: justify;"><br /><br /><strong>Form em linha:</strong></p>
+<pre class="language-markup"><code>&lt;form class="form-inline"&gt;
+&lt;div class="form-group"&gt;
+&lt;label for="exampleInputName2"&gt;Name&lt;/label&gt;
+&lt;input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe"&gt;
+&lt;/div&gt;
+&lt;div class="form-group"&gt;
+&lt;label for="exampleInputEmail2"&gt;Email&lt;/label&gt;
+&lt;input type="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com"&gt;
+&lt;/div&gt;
+&lt;button type="submit" class="btn btn-default"&gt;Send invitation&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+<p style="text-align: justify;"><br /><br /><strong>Validação de forms</strong></p>
+<pre class="language-markup"><code>&lt;div class="form-group has-success"&gt;
+&lt;label class="control-label" for="inputSuccess1"&gt;Input with success&lt;/label&gt;
+&lt;input type="text" class="form-control" id="inputSuccess1" aria-describedby="helpBlock2"&gt;
+&lt;span id="helpBlock2" class="help-block"&gt;A block of help text that breaks onto a new line and may extend beyond one line.&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="form-group has-warning"&gt;
+&lt;label class="control-label" for="inputWarning1"&gt;Input with warning&lt;/label&gt;
+&lt;input type="text" class="form-control" id="inputWarning1"&gt;
+&lt;/div&gt;
+&lt;div class="form-group has-error"&gt;
+&lt;label class="control-label" for="inputError1"&gt;Input with error&lt;/label&gt;
+&lt;input type="text" class="form-control" id="inputError1"&gt;
+&lt;/div&gt;
+&lt;div class="has-success"&gt;
+&lt;div class="checkbox"&gt;
+&lt;label&gt;
+&lt;input type="checkbox" id="checkboxSuccess" value="option1"&gt;
+Checkbox with success
+&lt;/label&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="has-warning"&gt;
+&lt;div class="checkbox"&gt;
+&lt;label&gt;
+&lt;input type="checkbox" id="checkboxWarning" value="option1"&gt;
+Checkbox with warning
+&lt;/label&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="has-error"&gt;
+&lt;div class="checkbox"&gt;
+&lt;label&gt;
+&lt;input type="checkbox" id="checkboxError" value="option1"&gt;
+Checkbox with error
+&lt;/label&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<p style="text-align: justify;"><br /><br /><strong>Com íconeso pcionais:</strong></p>
+<pre class="language-markup"><code>&lt;div class="form-group has-success has-feedback"&gt;
+&lt;label class="control-label" for="inputSuccess2"&gt;Input with success&lt;/label&gt;
+&lt;input type="text" class="form-control" id="inputSuccess2" aria-describedby="inputSuccess2Status"&gt;
+&lt;span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"&gt;&lt;/span&gt;
+&lt;span id="inputSuccess2Status" class="sr-only"&gt;(success)&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="form-group has-warning has-feedback"&gt;
+&lt;label class="control-label" for="inputWarning2"&gt;Input with warning&lt;/label&gt;
+&lt;input type="text" class="form-control" id="inputWarning2" aria-describedby="inputWarning2Status"&gt;
+&lt;span class="glyphicon glyphicon-warning-sign form-control-feedback" aria-hidden="true"&gt;&lt;/span&gt;
+&lt;span id="inputWarning2Status" class="sr-only"&gt;(warning)&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="form-group has-error has-feedback"&gt;
+&lt;label class="control-label" for="inputError2"&gt;Input with error&lt;/label&gt;
+&lt;input type="text" class="form-control" id="inputError2" aria-describedby="inputError2Status"&gt;
+&lt;span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"&gt;&lt;/span&gt;
+&lt;span id="inputError2Status" class="sr-only"&gt;(error)&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="form-group has-success has-feedback"&gt;
+&lt;label class="control-label" for="inputGroupSuccess1"&gt;Input group with success&lt;/label&gt;
+&lt;div class="input-group"&gt;
+&lt;span class="input-group-addon"&gt;@&lt;/span&gt;
+&lt;input type="text" class="form-control" id="inputGroupSuccess1" aria-describedby="inputGroupSuccess1Status"&gt;
+&lt;/div&gt;
+&lt;span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"&gt;&lt;/span&gt;
+&lt;span id="inputGroupSuccess1Status" class="sr-only"&gt;(success)&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+<p style="text-align: justify;"><br /><br /><strong>Largura da coluna dos campos</strong></p>
+<pre class="language-markup"><code>&lt;div class="row"&gt;
+&lt;div class="col-xs-2"&gt;
+&lt;input type="text" class="form-control" placeholder=".col-xs-2"&gt;
+&lt;/div&gt;
+&lt;div class="col-xs-3"&gt;
+&lt;input type="text" class="form-control" placeholder=".col-xs-3"&gt;
+&lt;/div&gt;
+&lt;div class="col-xs-4"&gt;
+&lt;input type="text" class="form-control" placeholder=".col-xs-4"&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<p style="text-align: justify;"><br /><br /><strong>Botões</strong></p>
+<pre class="language-markup"><code>&lt;a class="btn btn-default" href="http://backup/portal/#" role="button"&gt;Link&lt;/a&gt;
+&lt;button class="btn btn-default" type="submit"&gt;Button&lt;/button&gt;
+&lt;input class="btn btn-default" type="button" value="Input"&gt;
+&lt;input class="btn btn-default" type="submit" value="Submit"&gt;
+
+&lt;!-- Standard button --&gt;
+&lt;button type="button" class="btn btn-default"&gt;Default&lt;/button&gt;
+
+&lt;!-- Provides extra visual weight and identifies the primary action in a set of buttons --&gt;
+&lt;button type="button" class="btn btn-primary"&gt;Primary&lt;/button&gt;
+
+&lt;!-- Indicates a successful or positive action --&gt;
+&lt;button type="button" class="btn btn-success"&gt;Success&lt;/button&gt;
+
+&lt;!-- Contextual button for informational alert messages --&gt;
+&lt;button type="button" class="btn btn-info"&gt;Info&lt;/button&gt;
+
+&lt;!-- Indicates caution should be taken with this action --&gt;
+&lt;button type="button" class="btn btn-warning"&gt;Warning&lt;/button&gt;
+
+&lt;!-- Indicates a dangerous or potentially negative action --&gt;
+&lt;button type="button" class="btn btn-danger"&gt;Danger&lt;/button&gt;
+
+&lt;!-- Deemphasize a button by making it look like a link while maintaining button behavior --&gt;
+&lt;button type="button" class="btn btn-link"&gt;Link&lt;/button&gt;</code></pre>
+<p style="text-align: justify;"><br /><br /><strong>Tamanho dos botões:</strong></p>
+<pre class="language-markup"><code>&lt;p&gt;
+&lt;button type="button" class="btn btn-primary btn-lg"&gt;Large button&lt;/button&gt;
+&lt;button type="button" class="btn btn-default btn-lg"&gt;Large button&lt;/button&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;button type="button" class="btn btn-primary"&gt;Default button&lt;/button&gt;
+&lt;button type="button" class="btn btn-default"&gt;Default button&lt;/button&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;button type="button" class="btn btn-primary btn-sm"&gt;Small button&lt;/button&gt;
+&lt;button type="button" class="btn btn-default btn-sm"&gt;Small button&lt;/button&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;button type="button" class="btn btn-primary btn-xs"&gt;Extra small button&lt;/button&gt;
+&lt;button type="button" class="btn btn-default btn-xs"&gt;Extra small button&lt;/button&gt;
+&lt;/p&gt;</code></pre>
+<p style="text-align: justify;"><br /><strong>Glyphicons</strong><br /><br />Lista no site - <a href="http://getbootstrap.com/components/#glyphicons">http://getbootstrap.com/components/#glyphicons</a></p>
+<p style="text-align: justify;"><strong>Usando</strong></p>
+<pre class="language-markup"><code>&lt;button type="button" class="btn btn-default" aria-label="Left Align"&gt;
+&lt;span class="glyphicon glyphicon-align-left" aria-hidden="true"&gt;&lt;/span&gt;
+&lt;/button&gt;
+
+&lt;button type="button" class="btn btn-default btn-lg"&gt;
+&lt;span class="glyphicon glyphicon-star" aria-hidden="true"&gt;&lt;/span&gt; Star
+&lt;/button&gt;
+
+&lt;div class="alert alert-danger" role="alert"&gt;
+&lt;span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"&gt;&lt;/span&gt;
+&lt;span class="sr-only"&gt;Error:&lt;/span&gt;
+Enter a valid email address
+&lt;/div&gt;</code></pre>
+<p style="text-align: justify;"><br /><br /><strong>Barras de Navegação</strong><br /><br /></p>
+<pre class="language-markup"><code>&lt;ul class="nav nav-tabs"&gt;
+&lt;li role="presentation" class="active"&gt;&lt;a href="http://backup/portal/#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+&lt;li role="presentation"&gt;&lt;a href="http://backup/portal/#"&gt;Profile&lt;/a&gt;&lt;/li&gt;
+&lt;li role="presentation"&gt;&lt;a href="http://backup/portal/#"&gt;Messages&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ul class="nav nav-pills"&gt;
+&lt;li role="presentation" class="active"&gt;&lt;a href="http://backup/portal/#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+&lt;li role="presentation"&gt;&lt;a href="http://backup/portal/#"&gt;Profile&lt;/a&gt;&lt;/li&gt;
+&lt;li role="presentation"&gt;&lt;a href="http://backup/portal/#"&gt;Messages&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+<p style="text-align: justify;"><br /><br /><strong>Link desabilitado</strong><br />&lt;li role="presentation" class="disabled"&gt;&lt;a href="http://backup/portal/#"&gt;Disabled link&lt;/a&gt;&lt;/li&gt;<br /><br /><strong>DropDown</strong></p>
+<pre class="language-markup"><code>&lt;ul class="nav nav-tabs"&gt;
+...
+&lt;li role="presentation" class="dropdown"&gt;
+&lt;a class="dropdown-toggle" data-toggle="dropdown" href="http://backup/portal/#" role="button" aria-haspopup="true" aria-expanded="false"&gt;
+Dropdown &lt;span class="caret"&gt;&lt;/span&gt;
+&lt;/a&gt;
+&lt;ul class="dropdown-menu"&gt;
+...
+&lt;/ul&gt;
+&lt;/li&gt;
+...
+&lt;/ul&gt;</code></pre>
+<p style="text-align: justify;"><br /><br /><strong>Exemplo de Barra de Navegação</strong></p>
+<pre class="language-markup"><code>&lt;nav class="navbar navbar-default"&gt;
+&lt;div class="container-fluid"&gt;
+&lt;!-- Brand and toggle get grouped for better mobile display --&gt;
+&lt;div class="navbar-header"&gt;
+&lt;button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"&gt;
+&lt;span class="sr-only"&gt;Toggle navigation&lt;/span&gt;
+&lt;span class="icon-bar"&gt;&lt;/span&gt;
+&lt;span class="icon-bar"&gt;&lt;/span&gt;
+&lt;span class="icon-bar"&gt;&lt;/span&gt;
+&lt;/button&gt;
+&lt;a class="navbar-brand" href="http://backup/portal/#"&gt;Brand&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;!-- Collect the nav links, forms, and other content for toggling --&gt;
+&lt;div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"&gt;
+&lt;ul class="nav navbar-nav"&gt;
+&lt;li class="active"&gt;&lt;a href="http://backup/portal/#"&gt;Link &lt;span class="sr-only"&gt;(current)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://backup/portal/#"&gt;Link&lt;/a&gt;&lt;/li&gt;
+&lt;li class="dropdown"&gt;
+&lt;a href="http://backup/portal/#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"&gt;Dropdown &lt;span class="caret"&gt;&lt;/span&gt;&lt;/a&gt;
+&lt;ul class="dropdown-menu"&gt;
+&lt;li&gt;&lt;a href="http://backup/portal/#"&gt;Action&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://backup/portal/#"&gt;Another action&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://backup/portal/#"&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+&lt;li role="separator" class="divider"&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://backup/portal/#"&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+&lt;li role="separator" class="divider"&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://backup/portal/#"&gt;One more separated link&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;form class="navbar-form navbar-left"&gt;
+&lt;div class="form-group"&gt;
+&lt;input type="text" class="form-control" placeholder="Search"&gt;
+&lt;/div&gt;
+&lt;button type="submit" class="btn btn-default"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;
+&lt;ul class="nav navbar-nav navbar-right"&gt;
+&lt;li&gt;&lt;a href="http://backup/portal/#"&gt;Link&lt;/a&gt;&lt;/li&gt;
+&lt;li class="dropdown"&gt;
+&lt;a href="http://backup/portal/#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"&gt;Dropdown &lt;span class="caret"&gt;&lt;/span&gt;&lt;/a&gt;
+&lt;ul class="dropdown-menu"&gt;
+&lt;li&gt;&lt;a href="http://backup/portal/#"&gt;Action&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://backup/portal/#"&gt;Another action&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://backup/portal/#"&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+&lt;li role="separator" class="divider"&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://backup/portal/#"&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;&lt;!-- /.navbar-collapse --&gt;
+&lt;/div&gt;&lt;!-- /.container-fluid --&gt;
+&lt;/nav&gt;
+
+&lt;nav class="navbar navbar-inverse"&gt;</code></pre>
+<p style="text-align: justify;"><br /><br /><strong>Rótulos/Labels</strong></p>
+<pre class="language-markup"><code>&lt;span class="label label-default"&gt;Default&lt;/span&gt;
+&lt;span class="label label-primary"&gt;Primary&lt;/span&gt;
+&lt;span class="label label-success"&gt;Success&lt;/span&gt;
+&lt;span class="label label-info"&gt;Info&lt;/span&gt;
+&lt;span class="label label-warning"&gt;Warning&lt;/span&gt;
+&lt;span class="label label-danger"&gt;Danger&lt;/span&gt;</code></pre>
+<p style="text-align: justify;"><br /><br /><strong>Jumbotron</strong></p>
+<pre class="language-markup"><code>&lt;div class="jumbotron"&gt;
+&lt;h1&gt;Hello, world!&lt;/h1&gt;
+&lt;p&gt;...&lt;/p&gt;
+&lt;p&gt;&lt;a class="btn btn-primary btn-lg" href="http://backup/portal/#" role="button"&gt;Learn more&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+<p style="text-align: justify;"><br /><br /><strong>Cabeçalho de Página</strong></p>
+<pre class="language-markup"><code>&lt;div class="page-header"&gt;
+&lt;h1&gt;Example page header &lt;small&gt;Subtext for header&lt;/small&gt;&lt;/h1&gt;
+&lt;/div&gt;</code></pre>
+<p style="text-align: justify;"><br /><br /><strong>Alerts</strong></p>
+<pre class="language-markup"><code>&lt;div class="alert alert-success" role="alert"&gt;...&lt;/div&gt;
+&lt;div class="alert alert-info" role="alert"&gt;...&lt;/div&gt;
+&lt;div class="alert alert-warning" role="alert"&gt;...&lt;/div&gt;
+&lt;div class="alert alert-danger" role="alert"&gt;...&lt;/div&gt;</code></pre>
+<p style="text-align: justify;"><br /><br />Obs.: Os alerts são plugins que requerem o plugin alert do JavaScript<br /><br /></p>
+<pre class="language-markup"><code>&lt;div class="alert alert-warning alert-dismissible" role="alert"&gt;
+&lt;button type="button" class="close" data-dismiss="alert" aria-label="Close"&gt;&lt;span aria-hidden="true"&gt;&amp;times;&lt;/span&gt;&lt;/button&gt;
+&lt;strong&gt;Warning!&lt;/strong&gt; Better check yourself, you're not looking too good.
+&lt;/div&gt;</code></pre>
+<p style="text-align: justify;"><br /><br /><strong>Links em Alerts</strong></p>
+<pre class="language-markup"><code>&lt;div class="alert alert-success" role="alert"&gt;
+&lt;a href="http://backup/portal/#" class="alert-link"&gt;...&lt;/a&gt;
+&lt;/div&gt;
+&lt;div class="alert alert-info" role="alert"&gt;
+&lt;a href="http://backup/portal/#" class="alert-link"&gt;...&lt;/a&gt;
+&lt;/div&gt;
+&lt;div class="alert alert-warning" role="alert"&gt;
+&lt;a href="http://backup/portal/#" class="alert-link"&gt;...&lt;/a&gt;
+&lt;/div&gt;
+&lt;div class="alert alert-danger" role="alert"&gt;
+&lt;a href="http://backup/portal/#" class="alert-link"&gt;...&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+<p style="text-align: justify;"><br /><br /><strong>Paineis</strong></p>
+<pre class="language-markup"><code>&lt;div class="panel panel-default"&gt;
+&lt;div class="panel-body"&gt;
+Basic panel example
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="panel panel-default"&gt;
+&lt;div class="panel-heading"&gt;Panel heading without title&lt;/div&gt;
+&lt;div class="panel-body"&gt;
+Panel content
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="panel panel-default"&gt;
+&lt;div class="panel-heading"&gt;
+&lt;h3 class="panel-title"&gt;Panel title&lt;/h3&gt;
+&lt;/div&gt;
+&lt;div class="panel-body"&gt;
+Panel content
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="panel panel-default"&gt;
+&lt;div class="panel-body"&gt;
+Panel content
+&lt;/div&gt;
+&lt;div class="panel-footer"&gt;Panel footer&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<p style="text-align: justify;"><br /><br /><strong>Alinhamento em navbars</strong></p>
+<pre class="language-markup"><code>&lt;!--Left Align--&gt;
+&lt;ul class = "nav navbar-nav navbar-left"&gt;
+...
+&lt;/ul&gt;
+
+&lt;!--Right Align--&gt;
+&lt;ul class = "nav navbar-nav navbar-right"&gt;
+...
+&lt;/ul&gt;
+
+&lt;nav class = "navbar navbar-default navbar-fixed-top" role = "navigation"&gt;
+...
+&lt;/nav&gt;
+
+&lt;nav class = "navbar navbar-default navbar-fixed-bottom" role = "navigation"&gt;
+...
+&lt;/nav&gt;</code></pre>
+<p style="text-align: justify;"><br /><br /><strong>Plugins - os plugins do Bootstrap usam o jQuery.</strong><br />São 12<br /><br />Para usá-los precisamos incluir os arquivos .js do bootstrap, tanto o bootstrap.js quanto o jquery.js.<br />Lembre de inserir o jquery antes.<br />http://getbootstrap.com.br/javascript/<br /><br /><strong>Exemplo - janela modal</strong></p>
+<pre class="language-markup"><code>&lt;div class="modal fade" tabindex="-1" role="dialog"&gt;
+&lt;div class="modal-dialog" role="document"&gt;
+&lt;div class="modal-content"&gt;
+&lt;div class="modal-header"&gt;
+&lt;button type="button" class="close" data-dismiss="modal" aria-label="Close"&gt;&lt;span aria-hidden="true"&gt;&amp;times;&lt;/span&gt;&lt;/button&gt;
+&lt;h4 class="modal-title"&gt;Título do modal&lt;/h4&gt;
+&lt;/div&gt;
+&lt;div class="modal-body"&gt;
+&lt;p&gt;One fine body&amp;hellip;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="modal-footer"&gt;
+&lt;button type="button" class="btn btn-default" data-dismiss="modal"&gt;Fechar&lt;/button&gt;
+&lt;button type="button" class="btn btn-primary"&gt;Salvar mudanças&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;!-- /.modal-content --&gt;
+&lt;/div&gt;&lt;!-- /.modal-dialog --&gt;
+&lt;/div&gt;&lt;!-- /.modal --&gt;</code></pre>
+<p style="text-align: justify;"><br /><br /><strong>Modal larga e estreita</strong></p>
+<pre class="language-markup"><code>&lt;!-- Large modal --&gt;
+&lt;button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg"&gt;Large modal&lt;/button&gt;
+
+&lt;div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"&gt;
+&lt;div class="modal-dialog modal-lg" role="document"&gt;
+&lt;div class="modal-content"&gt;
+...
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Small modal --&gt;
+&lt;button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm"&gt;Small modal&lt;/button&gt;
+
+&lt;div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel"&gt;
+&lt;div class="modal-dialog modal-sm" role="document"&gt;
+&lt;div class="modal-content"&gt;
+...
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<p style="text-align: justify;"><br /><br /><strong>ToolTips</strong><br />Ao mover o mouse</p>
+<pre class="language-markup"><code>&lt;button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="left" title="Tooltip on left"&gt;Tooltip on left&lt;/button&gt;
+
+&lt;button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Tooltip on top"&gt;Tooltip on top&lt;/button&gt;
+
+&lt;button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom"&gt;Tooltip on bottom&lt;/button&gt;
+
+&lt;button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="right" title="Tooltip on right"&gt;Tooltip on right&lt;/button&gt;</code></pre>
+<p style="text-align: justify;"><br /><br /><br /><strong>Recursos</strong><br /><br /><strong>Scaffolding Bootstrap 3</strong><br /><a href="https://www.bootply.com/ZSXdC6EajA">https://www.bootply.com/ZSXdC6EajA</a> <br /><br /><strong>Bootstrap 3 snippets</strong><br /><a href="https://www.bootply.com/tagged/bootstrap%203">https://www.bootply.com/tagged/bootstrap%203</a> <br /><br /><strong>Coding Groud</strong><br /><a href="http://www.tutorialspoint.com/codingground.htm">http://www.tutorialspoint.com/codingground.htm</a> <br /><a href="https://www.tutorialspoint.com/try_bootstrap_online.php">https://www.tutorialspoint.com/try_bootstrap_online.php</a> <br /><br /><strong>Texto de teste</strong><br /><a href="http://www.lipsum.com/">http://www.lipsum.com/</a> <br /><br /><strong>Tutoriais</strong><br /><a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-responsive-layout.php">https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-responsive-layout.php</a> <br /><a href="https://www.tutorialspoint.com/bootstrap/index.htm">https://www.tutorialspoint.com/bootstrap/index.htm</a></p>]]></description>
+			<category>Outros</category>
+			<pubDate>Tue, 11 Jul 2017 16:32:44 -0300</pubDate>
+		</item>
+	</channel>
+</rss>

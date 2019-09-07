@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="Joomla! - Open Source Content Management" -->
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Segurança - RibaFS Portal</title>
+		<description><![CDATA[Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros.]]></description>
+		<link>http://backup/portal/frameworks/cakephp-3/seguranca.html</link>
+		<lastBuildDate>Sat, 07 Sep 2019 18:59:20 -0300</lastBuildDate>
+		<generator>Joomla! - Open Source Content Management</generator>
+		<atom:link rel="self" type="application/rss+xml" href="http://backup/portal/frameworks/cakephp-3/seguranca.feed?type=rss"/>
+		<language>pt-br</language>
+		<item>
+			<title>Segurança no CakePHP</title>
+			<link>http://backup/portal/frameworks/cakephp-3/seguranca/seguranca-no-cakephp.html</link>
+			<guid isPermaLink="true">http://backup/portal/frameworks/cakephp-3/seguranca/seguranca-no-cakephp.html</guid>
+			<description><![CDATA[<p style="text-align: justify;"><strong>Melhorando a Segurança de Aplicativos criados com o CakePHP 3</strong></p>
+
+<p style="text-align: justify;">Uma forma de melhorar a segurança no Cake é usando o componente Security.</p>
+
+<p style="text-align: justify;">Quando usando o componente Security precisamos usar o FormHelper para criar nossos formulários.</p>
+
+<p style="text-align: justify;">Precisamos checar todos os dados entrados pelos usuários.</p>
+
+<p style="text-align: justify;">Outros recursos importantes: validação de dados do banco, componentes Auth, ACL, hashes de senha, criptografia, etc.</p>
+
+<p style="text-align: justify;"><br /> Exemplo:</p>
+
+<p style="text-align: justify;"><a href="http://book.cakephp.org/3.0/en/tutorials-and-examples/blog-auth-example/auth.html">http://book.cakephp.org/3.0/en/tutorials-and-examples/blog-auth-example/auth.html</a></p>
+
+<p style="text-align: justify;">Outros recursos oferecidos pelo Cake: prevenção SQL injection, XSS, CSRF, tratamento dos inputs, etc.</p>
+
+<p style="text-align: justify;">Mais um: mover o core do CakePHP para fora do diretório web.</p>
+
+<p style="text-align: justify;">Plugin que reforça a segurança do Cake:<br /> <a href="https://github.com/nodesagency/cakephp-security" target="_blank" rel="noopener noreferrer">https://github.com/nodesagency/cakephp-security</a></p>
+
+<p style="text-align: justify;">Também o uso de validação e de sanitização ajuda.</p>
+
+<p style="text-align: justify;">Detalhes</p>
+
+<p style="text-align: justify;"><a href="http://book.cakephp.org/3.0/en/core-libraries/security.html">http://book.cakephp.org/3.0/en/core-libraries/security.html</a></p>
+
+<p style="text-align: justify;">A Validação dos dados dos formulários é importante.</p>
+
+<p style="text-align: justify;">Um deles é validar campos importantes e para o tipo adequado.<br /> <br /> Quando criamos o aplicativo usando o bake para gerar o CRUD, ele já gera uma validação apenas básica.</p>
+
+<p style="text-align: justify;"><strong>Criando validação manualmente</strong><br /> <br /> class Clientes extends AppModel{<br /> public $validate = array(<br /> 'nome' =&gt; 'notEmpty',<br /> 'email' =&gt; array('notEmpty','email'),<br /> 'rua' =&gt; 'notEmpty'<br /> );<br /> }</p>
+
+<p style="text-align: justify;"><strong>Com RegExp</strong><br /> <br /> public $validate = array(<br /> ’login’ =&gt; array(<br /> ’rule’ =&gt; ’/^[a-z0-9]{3,}$/i’,<br /> ’message’ =&gt; ’Only letters and integers, min 3 characters’<br /> )<br /> );</p>
+
+<p style="text-align: justify;"><br /> <strong>Backup</strong></p>
+
+<p style="text-align: justify;">Efetue um backup ful (de todo o diretório do aplicativo e todo o banco).<br /> <br /> Em caso de algum problema poderá colocar o aplicativo de volta rapidamente.<br /> <br /> A frequência do backup pode ser diária, semanal, mensal. Vai depender das alterações do aplicativo ou dados do banco e também da importância do aplicativo.<br /> <br /> Você tanto pode efetuar o backup manualmente quanto pode automatizar com a ajuda do crontab do servidor ou usar outro método/ferramenta.</p>
+
+<p style="text-align: justify;"><strong>Security Salt</strong><br /> <br /> O Cake define um valor padrão para as suas sessões e o define em Security.salt.<br /> <br /> Esse valor não é alterado, ou seja, todos que fazem download do Cake no site oficial tem Security.salt com o mesmo valor. Então junto com a configuração do arquivo do banco de dados devemos alterar também o valor de Security.salt para preservar a segurança das nossas sessões.<br /> <br /> Qual o valor a ser usado?<br /> <br /> Qualquer valor que você queira. Geralmente algo exclusivo para o seu site. Uma sequência aleatória de números/texto é geralmente recomendado.<br /> <br /> É utilizado como uma "semente" para os vários do hashing usados no Cake funcionar.<br /> <br /> No arquivo app/Config/core.php,<br /> <br /> Linha 197 (versão 2.3.6), terá:<br /> <br /> Configure::write('Security.salt', 'DYhG93b0qyJfIxfs2guVoUu1029jdjdiR2G0FgaC9mi');<br /> <br /> O Security Salt serve para a geração de Hashes, sempre que precisar gerar um, o cake vai pegar o valor dessa string Pode usar qualquer string, contanto que não seja facilmente adivinhada Isso eh utilizado por exemplo, na criação do hash da senhas de usuários do site.</p>
+
+<p style="text-align: justify;">Detales</p>
+
+<p style="text-align: justify;"><a href="http://book.cakephp.org/3.0/en/core-libraries/security.html">http://book.cakephp.org/3.0/en/core-libraries/security.html</a></p>
+
+<p style="text-align: justify;"><strong>Atualizando o Cake entre versões Menores</strong><br /> <br /> Sempre que sair uma nova versão é importante atualizar o core do Cake do seu aplicativo. Especialmente se a nova versão trouxer correções de falhas de segurança e seu aplicativo tiver acesso via internet.<br /> <br /> Seguindo este roteiro eu atualizei um aplicativo da versão 2.3.6 par a nova versão 2.3.7 sem problemas<br /> - Efetuar backup full, de todo o diretório da aplicação e de todo o banco<br /> - Descompactar a nova versão<br /> - Acessar o diretório lib/Cake da nova versão e copiar o lib/Cake para o mesmo diretório do aplicativo existente.<br /> <br /> Aqui eu antes removi todo o conteúdo de lib/Cake no diretório existente.<br /> <br /> - Copiar o cakephp-2.3.7/index.php para o raiz do aplicativo, sobrescrevendo o existente (pode ser que não tenha sido alterado, mas por vias das dúvidas...)<br /> - Limpe o cache do aplicativo app/tmp/cache/persistente (e models)<br /> - Mantenha sem alterações o diretório "app" do seu aplicativo<br /> <br /> Agora pode testar o aplicativo com o novo core.<br />  <br /> <strong>Saber versão atual do core do CakePHP:</strong><br /> <br /> - Abra o arquivo<br /> aplicativo/lib/Cake/VERSION.txt<br /> <br /> Hoje (07/07/2013) saiu a versão 2.3.7 do Cake e a beta 2.4.</p>
+
+<p style="text-align: justify;">Outro assunto é a Migração, no caso entre versões maiores.</p>
+
+<p style="text-align: justify;"> </p>]]></description>
+			<category>Segurança</category>
+			<pubDate>Sun, 25 Jun 2017 16:11:30 -0300</pubDate>
+		</item>
+	</channel>
+</rss>

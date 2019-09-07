@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br" dir="ltr">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <base href="" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Ribamar FS" />
+	<meta name="robots" content="noindex, nofollow" />
+	<meta name="description" content="Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros." />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>Relacionamentos - RibaFS Portal</title>
+	<link href="http://ribafs.org/portal/frameworks/laravel-5/tutoriais/relacionamentos.html?tmpl=component&amp;print=1&amp;layout=default" rel="canonical" />
+	<link href="../../../templates/shaper_helix3/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../../../favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<script src="../../../media/jui/js/jquery.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery-noconflict.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery-migrate.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="http://backup/portal/media/system/js/caption.js?d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script type="text/javascript">
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+	</script>
+	<meta property="og:url" content="http://backup/portal/frameworks/laravel-5/tutoriais/relacionamentos.html" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Relacionamentos" />
+	<meta property="og:description" content="Relacionamento entre tabelas e entre models no Laravel 5 Para relacionar tabelas usar a convenção inserir um campo chamado tabela_id int not null Relaciona..." />
+
+   	<link rel="stylesheet" href="../../../media/jui/css/bootstrap.min.css" type="text/css" />
+	<link rel="stylesheet" href="../../../templates/shaper_helix3/css/frontend-edit.css" type="text/css" />
+    <link rel="stylesheet" href="../../../templates/shaper_helix3/css/template.css" type="text/css" />
+</head>
+<body class="contentpane">
+	<div id="system-message-container">
+	</div>
+
+	
+
+<article class="item item-page" itemscope itemtype="http://schema.org/Article">
+	<meta itemprop="inLanguage" content="pt-BR" />
+	
+	
+
+	<div class="entry-header">
+		<span class="post-format"><i class="fa fa-thumb-tack"></i></span>
+		
+					<h2 itemprop="name">
+									Relacionamentos							</h2>
+												</div>
+
+						<div id="pop-print" class="btn hidden-print">
+				<a href="relacionamentos.html#" onclick="window.print();return false;">			<span class="icon-print" aria-hidden="true"></span>
+		Imprimir	</a>			</div>
+				
+	
+	
+				
+	
+			<div itemprop="articleBody">
+		<p><strong>Relacionamento entre tabelas e entre models no Laravel 5</strong></p>
+
+
+<p>Para relacionar tabelas usar a convenção<br /><br />inserir um campo chamado <br />tabela_id int not null<br /><br /><strong>Relacionar users com groups:</strong><br /><br />groups<br />id<br /><br />users<br />id<br />group_id<br /><br /><strong>Relacionar os Models Task com User</strong><br /><br />class Task extends Model {<br />    public function user()<br />    {<br />        return $this-&gt;belongsTo('User');<br />    }<br />}<br /> <br />class User extends Model {<br />    public function tasks()<br />    {<br />        return $this-&gt;hasMany('Task');<br />    }<br />}<br /><br /><br /><strong>Relacionamento entre posts e comments</strong><br />Um para muitos<br /><br />namespace App;<br /><br />use Illuminate\Database\Eloquent\Model;<br /><br />class Post extends Model<br />{<br />    /**<br />     * Get the comments for the blog post.<br />     */<br />    public function comments()<br />    {<br />        return $this-&gt;hasMany('App\Comment'); // Passamos aqui a chave estrangeira, mas somente quando diferente<br />    }<br />}<br /><br />Comments<br />&lt;?php<br /><br />namespace App;<br /><br />use Illuminate\Database\Eloquent\Model;<br /><br />class Comment extends Model<br />{<br />    /**<br />     * Get the post that owns the comment.<br />     */<br />    public function post()<br />    {<br />        return $this-&gt;belongsTo('App\Post');<br />    }<br />}<br /><br />Ou usamos App\Post<br />ou fazemos o importe no começo e usamos apenas Post<br /><br /><br /><strong>Usando o tinker para trazer um produto e suas avaliações</strong><br /><br />php artisan tinker<br /><br />use Loja\Produto;<br />$p-&gt;Prpduto::find(5);<br /><br />$p-&gt;avaliacoes;<br /><br /></p> 	</div>
+
+	
+	
+				
+	
+	
+	
+</article>
+
+</body>
+</html>

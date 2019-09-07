@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br" dir="ltr">
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+                <!-- head -->
+        <base href="" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Ribamar FS" />
+	<meta name="description" content="Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros." />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>PostgreSQL - Projeto/Arquitetura - RibaFS Portal</title>
+	<link href="http://ribafs.org/portal/servidores/postgresql/projeto/postgresql-projeto-arquitetura.html" rel="canonical" />
+	<link href="../../../templates/shaper_helix3/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../../../favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,300italic,regular,italic,600,600italic,700,700italic,800,800italic&amp;subset=latin" rel="stylesheet" type="text/css" />
+	<link href="http://fonts.googleapis.com/css?family=Amarante:regular&amp;subset=latin-ext" rel="stylesheet" type="text/css" />
+	<link href="../../../cache/com_templates/templates/shaper_helix3/89f5542569bc2d8a7bb4667857dd5775.css" rel="stylesheet" type="text/css" />
+	<style type="text/css">
+body{font-family:Open Sans, sans-serif; font-size:16px; font-weight:normal; }h1{font-family:Open Sans, sans-serif; font-weight:800; }h2{font-family:Open Sans, sans-serif; font-weight:600; }h3{font-family:Open Sans, sans-serif; font-weight:normal; }h4{font-family:Open Sans, sans-serif; font-weight:normal; }h5{font-family:Open Sans, sans-serif; font-weight:600; }h6{font-family:Open Sans, sans-serif; font-weight:600; }.sp-megamenu-parent{font-family:Amarante, sans-serif; font-size:16px; font-weight:normal; }.sp-megamenu-parent > li.active > a, 
+.sp-megamenu-parent .sp-dropdown li.sp-menu-item.active > a { color: red; }
+#offcanvas-toggler > i { color: red !important; }
+#sp-top-bar{ background-color:#093d09;color:#999999; }#sp-top-bar a{color:#ceebe9;}#sp-header{ background-color:#54a859; }#sp-header a{color:#022e05;}#sp-page-title a{color:#e8f7f7;}#sp-main-body{ background-color:#fefffa; }
+	</style>
+	<script type="application/json" class="joomla-script-options new">{"csrf.token":"796296c0a9019553ed4bbba150ad5a40","system.paths":{"root":"\/portal","base":"\/portal"},"joomla.jtext":{"COM_COMMENT_PLEASE_FILL_IN_ALL_REQUIRED_FIELDS":"Favor preencher todos os campos obrigat\u00f3rios.","COM_COMMENT_ANONYMOUS":"An\u00f4nimo","JLIB_FORM_FIELD_INVALID":"Campo inv\u00e1lido:&#160;"},"system.keepalive":{"interval":840000,"uri":"\/portal\/component\/ajax\/?format=json"}}</script>
+	<script src="../../../cache/com_templates/templates/shaper_helix3/b74bfabf7739a9fadfbbda80f713414b.js" type="text/javascript"></script>
+	<script type="text/javascript">
+jQuery(function($){ initTooltips(); $("body").on("subform-row-add", initTooltips); function initTooltips (event, container) { container = container || document;$(container).find(".hasTooltip").tooltip({"html": true,"container": "body"});} });jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+var sp_preloader = '0';
+
+var sp_gotop = '1';
+
+var sp_offanimation = 'default';
+
+	</script>
+	<meta property="og:url" content="http://backup/portal/servidores/postgresql/projeto/postgresql-projeto-arquitetura.html" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="PostgreSQL - Projeto/Arquitetura" />
+	<meta property="og:description" content="PostgreSQL - Projeto/Arquitetura 1) Conceitos 2) Modelo Entidade Relacionamento 3) Modelo Objeto Relacional 4) Normalização 5) Integridade Referencial 6) P..." />
+
+            </head>
+
+    <body class="site com-content view-article no-layout no-task itemid-233 pt-br ltr  sticky-header layout-fluid off-canvas-menu-init">
+
+        <div class="body-wrapper">
+            <div class="body-innerwrapper">
+                <section id="sp-top-bar"><div class="container"><div class="row"><div id="sp-top1" class="col-sm-12 col-md-12"><div class="sp-column "><div class="sp-module "><div class="sp-module-content"><!-- https://www.clubedohardware.com.br/artigos/redes/colocando-um-mecanismo-de-busca-em-seu-site-r34327/ -->
+<FORM class="form-inline" method="GET" action="http://www.google.com/search">
+<div class="form-group">
+<input type="hidden" name="sitesearch" value="ribafs.github.io">
+<input style="height:20px" class="form-control" type="text" name="q" size="20" placeholder="Pesquisar...">
+</div>
+</FORM>
+
+</div></div><ul class="sp-contact-info"><li class="sp-contact-email"><i class="fa fa-envelope" aria-hidden="true"></i> <a href="mailto:ribafs@gmail.com">ribafs@gmail.com</a></li></ul></div></div></div></div></section><section id="sp-section-2"><div class="container"><div class="row"><div id="sp-top2" class="col-sm-12 col-md-12"><div class="sp-column "><div class="sp-module "><div class="sp-module-content">
+
+<div class="custom"  >
+	<p style="text-align: center;"><b>Don't you speak portuguese? Translate this site with <a href="https://translate.google.com/translate?hl=pt-BR&amp;sl=pt&amp;tl=en&amp;u=https://ribafs.org/portal" target="_blank" rel="noopener noreferrer">Google Translator </a></b></p></div>
+</div></div></div></div></div></div></section><header id="sp-header"><div class="container"><div class="row"><div id="sp-logo" class="col-xs-8 col-sm-2 col-md-2"><div class="sp-column "><h1 class="logo"> <a href="../../../index.html">RibaFS Portal</a></h1></div></div><div id="sp-menu" class="col-xs-4 col-sm-10 col-md-10"><div class="sp-column ">			<div class='sp-megamenu-wrapper'>
+				<a id="offcanvas-toggler" class="visible-sm visible-xs" aria-label="Helix Megamenu Options" href="postgresql-projeto-arquitetura.html#"><i class="fa fa-bars" aria-hidden="true" title="Helix Megamenu Options"></i></a>
+				<ul class="sp-megamenu-parent menu-fade hidden-sm hidden-xs"><li class="sp-menu-item"><a  href="../../../index.html"  >Início</a></li><li class="sp-menu-item sp-has-child"><a  href="../../../basicos.html"  >Básicos</a><div class="sp-dropdown sp-dropdown-main sp-menu-right" style="width: 240px;"><div class="sp-dropdown-inner"><ul class="sp-dropdown-items"><li class="sp-menu-item"><a  href="../../../basicos/html.html"  >HTML</a></li><li class="sp-menu-item"><a  href="../../../basicos/javascript.html"  >JavaScript</a></li><li class="sp-menu-item"><a  href="../../../basicos/css.html"  >CSS</a></li><li class="sp-menu-item"><a  href="../../../basicos/jquery.html"  >jQuery</a></li><li class="sp-menu-item"><a  href="../../../basicos/bootstrap.html"  >Bootstrap</a></li><li class="sp-menu-item"><a  href="../../../basicos/php.html"  >PHP</a></li><li class="sp-menu-item"><a  href="../../../basicos/phpoo.html"  >PHPOO</a></li><li class="sp-menu-item"><a  href="../../../basicos/pdo.html"  >PDO</a></li><li class="sp-menu-item"><a  href="../../../basicos/ferramentas.html"  >Ferramentas</a></li><li class="sp-menu-item"><a  href="../../../basicos/outros.html"  >Outros</a></li></ul></div></div></li><li class="sp-menu-item sp-has-child active"><a  href="../../../servidores.html"  >Servidores</a><div class="sp-dropdown sp-dropdown-main sp-menu-right" style="width: 240px;"><div class="sp-dropdown-inner"><ul class="sp-dropdown-items"><li class="sp-menu-item"><a  href="../../desktop.html"  >Desktop</a></li><li class="sp-menu-item"><a  href="../../ubuntu-server.html"  >Ubuntu Server</a></li><li class="sp-menu-item"><a  href="../../shell-scripts.html"  >Shell Scripts</a></li><li class="sp-menu-item"><a  href="../../servidor-web.html"  >Servidor Web</a></li><li class="sp-menu-item"><a  href="../../servidor-sgbd.html"  >Servidor SGBD</a></li><li class="sp-menu-item sp-has-child active"><a  href="../../postgresql.html"  >PostgreSQL</a><div class="sp-dropdown sp-dropdown-sub sp-menu-right" style="width: 240px;"><div class="sp-dropdown-inner"><ul class="sp-dropdown-items"><li class="sp-menu-item"><a  href="../introducao-ao-postgresql.html"  >Introdução</a></li><li class="sp-menu-item current-item active"><a  href="../projeto.html"  >Projeto</a></li><li class="sp-menu-item"><a  href="../dimensionamento.html"  >Dimensionamento</a></li></ul></div></div></li></ul></div></div></li><li class="sp-menu-item sp-has-child"><a  href="../../../joomla-3.html"  >Joomla 3</a><div class="sp-dropdown sp-dropdown-main sp-menu-right" style="width: 240px;"><div class="sp-dropdown-inner"><ul class="sp-dropdown-items"><li class="sp-menu-item"><a  href="../../../joomla-3/introducao.html"  >Introdução</a></li><li class="sp-menu-item"><a  href="../../../joomla-3/seguranca.html"  >Segurança</a></li><li class="sp-menu-item"><a  href="../../../joomla-3/instalacao.html"  >Instalação do Joomla</a></li><li class="sp-menu-item"><a  href="../../../joomla-3/administracao.html"  >Administração</a></li><li class="sp-menu-item"><a  href="../../../joomla-3/extensoes.html"  >Extensões</a></li><li class="sp-menu-item"><a  href="../../../joomla-3/loja-simples.html"  >Loja Simples</a></li><li class="sp-menu-item"><a  href="../../../joomla-3/dicas.html"  >Dicas</a></li></ul></div></div></li><li class="sp-menu-item sp-has-child"><a  href="javascript:void(0);"  >Frameworks</a><div class="sp-dropdown sp-dropdown-main sp-dropdown-mega sp-menu-right" style="width: 600px;"><div class="sp-dropdown-inner"><div class="row"><div class="col-sm-6"><ul class="sp-mega-group"><li class="sp-menu-item sp-has-child"><a class="sp-group-title" href="../../../frameworks/cakephp-3.html"  >CakePHP 3</a><ul class="sp-mega-group-child sp-dropdown-items"><li class="sp-menu-item"><a  href="../../../frameworks/cakephp-3/introducao.html"  >Introdução</a></li><li class="sp-menu-item"><a  href="../../../frameworks/cakephp-3/instalacao.html"  >Instalação</a></li><li class="sp-menu-item"><a  href="../../../frameworks/cakephp-3/configuracoes.html"  >Configurações</a></li><li class="sp-menu-item"><a  href="../../../frameworks/cakephp-3/convencoes.html"  >Convenções</a></li><li class="sp-menu-item"><a  href="../../../frameworks/cakephp-3/tutoriais.html"  >Tutoriais</a></li><li class="sp-menu-item"><a  href="../../../frameworks/cakephp-3/dicas.html"  >Dicas</a></li><li class="sp-menu-item"><a  href="../../../frameworks/cakephp-3/seguranca.html"  >Segurança</a></li><li class="sp-menu-item"><a  href="../../../frameworks/cakephp-3/mvc-no-cakephp-3.html"  >MVC no CakePHP 3</a></li></ul></li></ul></div><div class="col-sm-6"><ul class="sp-mega-group"><li class="sp-menu-item sp-has-child"><a class="sp-group-title" href="../../../frameworks/laravel-5.html"  >Laravel 5</a><ul class="sp-mega-group-child sp-dropdown-items"><li class="sp-menu-item"><a  href="../../../frameworks/laravel-5/introducao.html"  >Introdução</a></li><li class="sp-menu-item"><a  href="../../../frameworks/laravel-5/instalacao.html"  >Instalação</a></li><li class="sp-menu-item"><a  href="../../../frameworks/laravel-5/configuracoes.html"  >Configurações</a></li><li class="sp-menu-item"><a  href="../../../frameworks/laravel-5/routes.html"  >Routes</a></li><li class="sp-menu-item"><a  href="../../../frameworks/laravel-5/dicas.html"  >Dicas</a></li><li class="sp-menu-item"><a  href="../../../frameworks/laravel-5/tutoriais.html"  >Tutoriais</a></li></ul></li></ul></div></div></div></div></li><li class="sp-menu-item sp-has-child"><a  href="../../../mobile.html"  >Mobile</a><div class="sp-dropdown sp-dropdown-main sp-menu-right" style="width: 240px;"><div class="sp-dropdown-inner"><ul class="sp-dropdown-items"><li class="sp-menu-item"><a  href="../../../mobile/introducao.html"  >Introdução</a></li><li class="sp-menu-item"><a  href="../../../mobile/ambiente.html"  >Ambiente</a></li><li class="sp-menu-item"><a  href="../../../mobile/phaser.html"  >Phaser</a></li><li class="sp-menu-item"><a  href="../../../mobile/monaca.html"  >Monaca</a></li><li class="sp-menu-item"><a  href="../../../mobile/phonegap.html"  >PhoneGap</a></li><li class="sp-menu-item"><a  href="../../../mobile/app-inventor.html"  >App Inventor</a></li><li class="sp-menu-item"><a  href="../../../mobile/unity-3d.html"  >Unity 3D</a></li><li class="sp-menu-item"><a  href="../../../mobile/intel-xdk.html"  >Intel XDK</a></li><li class="sp-menu-item"><a  href="../../../mobile/outros.html"  >Outros</a></li><li class="sp-menu-item"><a  href="../../../mobile/dicas.html"  >Dicas</a></li></ul></div></div></li><li class="sp-menu-item sp-has-child"><a  href="../../../blog.html"  >Blog</a><div class="sp-dropdown sp-dropdown-main sp-menu-right" style="width: 240px;"><div class="sp-dropdown-inner"><ul class="sp-dropdown-items"><li class="sp-menu-item"><a  href="../../../blog/reflexoes.html"  >Reflexões</a></li><li class="sp-menu-item"><a  href="../../../blog/saude.html"  >Saúde</a></li><li class="sp-menu-item"><a  href="../../../blog/diversos.html"  >Diversos</a></li><li class="sp-menu-item"><a  href="../../../blog/estudos.html"  >Estudos</a></li></ul></div></div></li><li class="sp-menu-item sp-has-child"><a  href="../../../curriculo.html"  >Sobre</a><div class="sp-dropdown sp-dropdown-main sp-menu-right" style="width: 240px;"><div class="sp-dropdown-inner"><ul class="sp-dropdown-items"><li class="sp-menu-item"><a  href="https://github.com/ribafs?tab=repositories" rel="noopener noreferrer" target="_blank" >Projetos</a></li><li class="sp-menu-item"><a  href="../../../curriculo/livros.html"  >Livros</a></li><li class="sp-menu-item"><a  href="../../../curriculo/curriculo.html"  >Currículo</a></li><li class="sp-menu-item"><a  href="../../../curriculo/contato.html"  >Contato</a></li><li class="sp-menu-item"><a  href="../../../curriculo/mapa-do-site.html"  >Mapa</a></li></ul></div></div></li></ul>			</div>
+		</div></div></div></div></header><section id="sp-page-title"><div class="row"><div id="sp-title" class="col-sm-12 col-md-12"><div class="sp-column "></div></div></div></section><section id="sp-main-body"><div class="container"><div class="row"><div id="sp-left" class="col-sm-3 col-md-3"><div class="sp-column custom-class"><div class="sp-module "><h3 class="sp-module-title">Novidades</h3><div class="sp-module-content"><div class="latestnews">
+	<div itemscope itemtype="http://schema.org/Article">
+		<a href="../../../blog/diversos/traducao-de-sites-de-forma-muito-simples.html" itemprop="url">
+			<span itemprop="name">
+				Tradução de sites de forma muito simples			</span>
+		</a>
+		<small>29 Agosto 2019</small>
+	</div>
+	<div itemscope itemtype="http://schema.org/Article">
+		<a href="../../desktop/recuperar-senha-do-root.html" itemprop="url">
+			<span itemprop="name">
+				Recuperar senha do root			</span>
+		</a>
+		<small>23 Agosto 2019</small>
+	</div>
+	<div itemscope itemtype="http://schema.org/Article">
+		<a href="../../../blog/reflexoes/quer-ficar-rico.html" itemprop="url">
+			<span itemprop="name">
+				Quer ficar rico?			</span>
+		</a>
+		<small>19 Agosto 2019</small>
+	</div>
+	<div itemscope itemtype="http://schema.org/Article">
+		<a href="../../../basicos/php/cuidado-com-floats-em-linguagens.html" itemprop="url">
+			<span itemprop="name">
+				Cuidado com floats em Linguagens			</span>
+		</a>
+		<small>19 Julho 2019</small>
+	</div>
+	<div itemscope itemtype="http://schema.org/Article">
+		<a href="../../servidor-web/setando-permissoes.html" itemprop="url">
+			<span itemprop="name">
+				Setando Permissões			</span>
+		</a>
+		<small>12 Julho 2019</small>
+	</div>
+</div>
+</div></div><div class="sp-module "><h3 class="sp-module-title">Pensamento do Dia</h3><div class="sp-module-content"><div>A paz é a forma de nos sentirmos verdadeiramente humanos. Einstein 
+</div>
+</div></div></div></div><div id="sp-component" class="col-sm-6 col-md-6"><div class="sp-column "><div id="system-message-container">
+	</div>
+
+
+<article class="item item-page" itemscope itemtype="http://schema.org/Article">
+	<meta itemprop="inLanguage" content="pt-BR" />
+	
+	
+
+	<div class="entry-header has-post-format">
+		<span class="post-format"><i class="fa fa-thumb-tack"></i></span>
+						<dl class="article-info">
+
+		
+			<dt class="article-info-term"></dt>	
+				
+							<dd class="createdby" itemprop="author" itemscope itemtype="http://schema.org/Person">
+	<i class="fa fa-user"></i>
+					<span itemprop="name" data-toggle="tooltip" title="Escrito por ">Ribamar FS</span>	</dd>			
+			
+							<dd class="category-name">
+	<i class="fa fa-folder-open-o"></i>
+				<a href="../projeto.html" itemprop="genre" data-toggle="tooltip" title="Categoria do Artigo">Projeto</a>	</dd>			
+			
+							<dd class="published">
+	<i class="fa fa-calendar-o"></i>
+	<time datetime="2017-08-30T08:25:51-03:00" itemprop="datePublished" data-toggle="tooltip" title="Data de Publicação">
+		30 Agosto 2017	</time>
+</dd>			
+		
+					
+			
+							<dd class="hits">
+	<span class="fa fa-eye"></span>
+	<meta itemprop="interactionCount" content="UserPageVisits:307" />
+	Acessos: 307</dd>					
+		
+
+	</dl>
+		
+					<h2 itemprop="name">
+									PostgreSQL - Projeto/Arquitetura							</h2>
+												</div>
+
+						
+<div class="icons">
+	
+					<div class="btn-group pull-right">
+				<button class="btn dropdown-toggle" type="button" id="dropdownMenuButton-221" aria-label="Ferramentas de usuário"
+				data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					<span class="icon-cog" aria-hidden="true"></span>
+					<span class="caret" aria-hidden="true"></span>
+				</button>
+								<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton-221">
+											<li class="print-icon"> <a href="postgresql-projeto-arquitetura.html@tmpl=component&amp;print=1&amp;layout=default.html" title="Imprimir o artigo < PostgreSQL - Projeto/Arquitetura >" onclick="window.open(this.href,'win2','status=no,toolbar=no,scrollbars=yes,titlebar=no,menubar=no,resizable=yes,width=640,height=480,directories=no,location=no'); return false;" rel="nofollow">			<span class="icon-print" aria-hidden="true"></span>
+		Imprimir	</a> </li>
+																<li class="email-icon"> <a href="../../../component/mailto/index.html@tmpl=component&amp;template=shaper_helix3&amp;link=8ff80068d9eb7ca24b104fe070a777ff58c83926.html" title="Envie este link a um amigo" onclick="window.open(this.href,'win2','width=400,height=450,menubar=yes,resizable=yes'); return false;" rel="nofollow">			<span class="icon-envelope" aria-hidden="true"></span>
+		Email	</a> </li>
+														</ul>
+			</div>
+		
+	</div>
+				
+	
+	
+				
+	
+			<div itemprop="articleBody">
+		<h4 style="text-align: justify;">PostgreSQL - Projeto/Arquitetura</h4>
+
+<p style="text-align: justify;"><br />1) Conceitos<br />2) Modelo Entidade Relacionamento<br />3) Modelo Objeto Relacional<br />4) Normalização <br />5) Integridade Referencial<br />6) Planejamento e Otimização<br /><br />Iniciar com os conceitos básicos: dado, informação e conhecimento.<br /><br /><strong>Dado</strong> – representação simbólica, quantificada ou quantificável. Um texto, um número e uma foto são exemplos de dados. O computador somente trabalha com dados, nada de informações e muito menos de conhecimento.<br /><br /><strong>Informação</strong> – são mensagens sob forma de dados, que são recebidas e compreendidas. Caso não seja compreendida elas são apenas dados.<br /><br />Portanto dados são entes meramente sintáticos (estruturas). <br />As informações contém semântica, ou seja, contém um significado próprio. A informação é algo objetivo e subjetivo.<br /><br /><strong>Conhecimento</strong> – enquanto a informação é um conhecimento teórico, o conhecimento é algo prático.<br /><br />Só podemos transmitir dados, jamais informações e conhecimento. Os dados podem ser transmitidos, ao serem interpretados tornam-se informações, mas somente ao serem experimentados transformam-se em conhecimento.<br /><br /><strong>Fonte</strong>: Livro Bancos de Dados de Valdemar W. Setzer e Flávio Soares Corrêa da Silva.<br /><br /><br /><strong>1) Conceitos</strong><br /><br /><strong>Modelo Relacional</strong> - A maioria dos SGBDs existentes são baseados no modelo relacional.<br /><strong>SGBD</strong> - É um sistema de computador cuja função principal é a de manter bancos de dados e fornecer informações os mesmos quando solicitados.<br /><strong>DBA</strong> - DataBase Administrator (Administrador de Bancos de Dados), é quem trabalha criando os bancos de dados, implementando controle técnico e administrativo dos dados e implementando a segurança.<br /><strong>Entidades</strong> - Ou classes, podem ser concretas ou abstratas e representam pessoas, lugares ou coisas (objetos). Entidade no projeto representa Tabela na implementação.<br /><strong>Atributos</strong> - Ou propriedades. As entidades são compostas por atributos. Atributos no projeto correspondem a campos na implementação.<br /><strong>Relacionamentos</strong> - Associação entre as entidades.<br /><strong>Projeto</strong> - Modelo, lógico e físico.<br /><strong>Implementação</strong> - Criação e administração, físico.<br /><strong>Modelo de dados</strong> - É uma definição lógica e abstrata de um banco de dados.<br /><strong>Implementação</strong> - É a aplicação física (prática) do modelo de dados em um computador.<br /><strong>Aplicação cliente</strong> - Também chamada de front-end do banco de dados. Roda sobre um SGBD.<br /><strong>DDL</strong> - Conjunto de instruções para definir ou declarar objetos do banco de dados.<br /><strong>DML</strong> - Conjunto de instruções para manipular ou processar os objetos do banco de dados.<br /><strong>Dicionário de dados</strong> - É um conjunto de tabelas do banco de dados que contém informações sobre os objetos do banco, dados sobre dados (metadados).<br /><strong>Bancos distribuídos</strong> - Banco que é logicamente centralizado e fisicamente distribuído. A distribuição pode ser em vários sites. Os sites podem estar em vários SO diferentes, redes e máquinas diferentes.<br /><strong>Projeto lógico</strong> - É a fase de identificação das entidades de interesse para a empresa e de identificação das informações a serem armazenadas nas entidades. Deve acontecer antes do projeto físico (implementação).<br /><strong>CAST</strong> - Valores podem ser convertidos de um tipo para outro através do operador CAST ou através de coerção implícita. O PostgreSQL em sua versão 8.3 está passando a usar bem mais as coerções explícitas.<br /><strong>Projeto de banco</strong> - Projetar bancos tem mais de arte que de ciência. Um projeto adequado previne perca da integridade dos dados e permite consultas adequadas e eficientes. Qualquer projeto requer uma noção exata do que o banco deverá armazenar. Temos que colher o máximo de informações junto ao cliente e ir além percebendo necessidades que ele próprio não percebe.<br /><strong>Casos de uso</strong> - São textos com formatação livre, que descrevem operações do ponto de vista de um eventual usuário interagindo com o sistema. Uma boa forma de capturar as finalidades do banco é construindo casos de uso.<br /><strong>Modelagem dos dados</strong> - Exige que reflitamos cuidadosamente sobre os diferentes conjuntos ou classes (entidades) necessárias para solucionar o problema.<br /><strong>Dados</strong> - Representação simbólica (abstrata).<br /><strong>Informação</strong> - Dados com significado. Mensagem compreendida é informação, caso contrário são apenas dados. Computadores armazenam apenas dados e não informação.<br /><strong>MER</strong> - É um modelo que não pode ser representado num computador, existindo apenas na mente de uma pessoa. Pode ser representado como texto ou em forma de diagrama gráfico (DER).<br /><strong>IDs</strong> - Caso um registro tenha todos os valores dos campos semelhantes aos valores de outro registro, com exceção do ID, então isso mostra que o ID não é adequado para chave primária da tabela.<br /><strong>Chave Primária</strong> - Formada por um campo ou mais que identifica todos os registros de uma tabela de forma única.<br /><strong>Chave Candidata</strong> - É a chave onde nenhum subconjunto de campos é também uma chave.<br /><strong>Superchave</strong> - É a chave formada por um conjunto de campos além do necessário para identificar todos os registros de forma única, ou seja, contém a chave primária mais um ou mais campos.<br /><strong>Chave alternativa</strong> - Quando uma tabela contém uma chave primária, qualquer outra chave será uma chave alternativa.<br /><strong>Projeto do Banco de Dados</strong> – Quando um atributo de uma entidade armazena valores duplicados, isso indica que devemos criar uma nova entidade para asmazenar os valores deste atributo e então relacionas as entidades através desse atributo.<br /><br />Obs.: CPF no Brasil não é uma boa escolha para chave primária em algumas entidades, pois membros de uma família podem utilizar o mesmo CPF.<br /><br /><br /><strong>Diagrama de Zelzowitz</strong><br /><br /><img src="../../../images/projeto1.jpeg" alt="" /><br /><br />Este é um diagrama usado para o desenvolvimento de software mas também podemos aplicá-lo ao projeto de bancos de dados.<br /><br /><strong>Análise</strong> – partindo do mundo real, define o problema e gera o modelo<br /><strong>Projeto</strong> – partindo do modelo gera o projeto do software (banco)<br /><strong>Implementação</strong> – partindo do projeto do software (banco) cria a aplicação.<br /><br />Partimos da situação real, que deve ser analisada gerando um modelo que será transformado em projeto e então se implementará no computador.<br /><br />Classes – objetos – atributos (propriedades e métodos)<br />Tabelas – registros – campos<br /><br /><strong>Uma boa estratégia é portar um conjunto de perguntas a serem respondidas:</strong><br /><br />1) Qual o principal objetivo do sistema?<br />2) Que dados são necessários para satisfazer este objetivo<br />3) Que informações já existem: algum sistema de computador anterior, fichas, formulários, etc.<br />4) Que entidades foram identificadas?<br />5) Quais as informações de cada entidade?<br />6) Qual o rascunho do modelo?<br />7) Que saídas são esperadas?<br /><br /><br />Ao final elaborar um primeiro diagrama de classes e vários casos de uso, que relatem no formato texto as interações do sistema.<br /><br />Anotar o que pode dar errado em cada faze do sistema.<br />História<br /><br />As três primeiras formas normais foram definidas por Ted Codd.<br /><br />O Modelo de Entidades e Relacionamentos foi introduzido por Peter Chen.<br /><br />O MR (Modelo Relacional) foi definido em 1970 por E. F. Codd.<br /><br /><strong>Modelo Relacional Normalizado</strong><br /><br />Cada tabela tem um nome distinto<br />Cada coluna tem um nome distinto<br />Não existem dois registros iguais<br />A ordem dos registros e dos campos é irrelevante<br /><br /><strong>SQL</strong> – É uma linguagem de declaração e não de programação e atualmente é a linguagem padrão dos SGBDRs e SGBDRO.<br /><br /><br /><strong>Referências:</strong><br /><br />Bancos de Dados – Aprenda o que são, Melhore seu conhecimento, Construa os seus<br />De Valdemar W. Seltzer e Flávio Soarea Corrêa da Silva<br />Beginning Database Design<br />De Clare Churcher<br />A Introduction to Database Systems<br />De C. J. Date<br /><br /><br /><strong>2) O Modelo Relacional</strong><br /><br /><strong> Todos os dados são representados como tabelas</strong><br />     Os resultados de qualquer consulta é apenas mais uma tabela!<br /> Tabelas são formadas por linhas e colunas<br /> Linhas e colunas são (oficialmente) desordenadas (isto é, a ordem com que as linhas e colunas são referenciadas não importa).<br />     Linhnas são ordenadas apenas sob solicitação. Caso contrário, a sua ordem é<br />    arbitrária e pode mudar para um banco de dados dinâmico<br />     A ordem das colunas é determinada por cada consulta<br /> Cada tabela possui uma chave primária, um identificador único constituído por uma ou mais colunas<br /> A maioria das chaves primárias é uma coluna apenas (por exemplo, TOWN_ID)<br /> Uma tabela é ligada (conectada) à outra incluindo-se a chave primária da outra tabela. Esta coluna incluída é chamada uma chave externa<br /> Chaves primárias e chaves externas são os conceitos mais importantes no projeto<br />de banco de dados. Gaste o tempo necessário para entender o que são!<br /><br /><br /><strong>Qualidades de um Bom Projeto de Banco de Dados</strong><br /> Reflete a estrutura real do problema<br /> Pode representar todo os dados esperados ao longo do tempo<br /> Evita armazenamento redundade de items de dados<br /> Fornece acesso eficiente aos dados<br /> Suporta a manutenção da integridade dos dados ao longo do tempo Limpa, consistente e fácil de entender<br /> Nota: Estes objetivos são algumas vêzes contraditórios!<br /><br /><strong>Introdução à Modelagem de Entidades - Relacionamento</strong><br /><br /> Modelagem E-R: Um método para projetar banco de dados<br /> Uma versão simplificada é apresentada aqui<br /> Representa o dado por entidades que possuem atributos.<br /> Uma entidade é uma classe de objetos ou conceitos identificáveis distintos<br /> Entidades possuem relações umas com as outras<br /> O resultado o processo é um banco de dados normalizado que facilita o acesso e evita dados duplicados<br /><br /><strong>Nota</strong>: Muito do projeto formal de banco de dados é focado em normalizar o banco de<br />dados e assegurar que o projeto adere ao nível de normalização (isto é, primeira forma<br />normal, segunda forma normal, etc.). Este nível de formalidade está além desta discussão,<br />mas deve-se saber que tais formalizações exitem.<br /><br /><br /><strong>Processo de Modelagem E-R</strong><br /> Identifique as entidades que o seu banco de dados deve representar<br /> Determine as relações de cardinalidade entre as entidades e classifique-as como<br />     Um-para-Um (por exemplo, um imóvel tem um endereço)<br />     Um-para-muitos (por exemplo, um imóvel pode ser envolvido em muitos incêndios)<br />     Muitos-para-muitosy (por exemplo, venda de imóveis: um imóvel pode ser vendido para muitos proprietários, e um proprietário individual pode vender muitos imóveis)<br /> Desenhe o diagrama entidade-relação<br /> Determine os atributos de cada entidade<br /> Defina a chave primária (única) de cada entidade<br /><br /><strong>Do modelo E-R para o Projeto de Banco de Dados</strong><br /> Entidades com relações um-para-um deve ser fundidas em uma única entidade<br /> Cada entidade restante é modelada por uma tabela com uma chave primária e atributos, alguns dos quais podem ser chaves externas<br /> Relações Um-para-muitos são modeladas por um atributo de chave externa na tabela<br />represntando a entidade do lado "muitos" da relação<br /> Relações Muitos-para-muitos entre duas entidades são modeladaspor uma terceira tabela que possui chaves externas que referem-se às entidades. Estas chaves externas devem ser incluidas na chave primária da tabela da relação, se apropriado<br /> Ferramentas disponíveis comercialmente podem autimatizar o processo de conversão de um modelo E-R para um esquema de banco de dados<br /><br /><strong>Fonte</strong>: <a href="http://www.universia.com.br/mit/11/11208/pdf/lecture5-2.pdf">http://www.universia.com.br/mit/11/11208/pdf/lecture5-2.pdf</a>  (de Thomas H. Grayson)</p>
+
+<p style="text-align: justify;"><strong>3) Modelo Objeto Relacional</strong><br /><br />A maioria dos sistemas de gerência de bancos de dados (SGBD) utlizados hoje em dia são baseados no modelo relacional, definido por E.F. Codd. Devido a grande demanda de dados complexos que devem ser armazenados (textos, imagens, som, etc), está havendo uma grande migração para sistemas que suportam esses tipos de dados. Entre as opções de sistemas, estão os bancos de dados orientados a objetos e os objeto-relacionais. Os bancos de dados objeto-relacionais estão situados entre os relacionais e os orientados a objetos. Com este resumo, queremos mostrar algumas características do modelo objecto-relacional. <br /><br /><strong>Principais características do SGBD Objeto-Relacional</strong> <br />    Devido a falta de padronização do modelo objeto-relacional, cada fabricante definiu as características do seu SGBD. Analizaremos algumas das principais características dos SGBDs objeto-relacional e daremos uma ênfase no SGBD Oracle 8.x, devido a sua grande popularidade como ORDBMS.<br />    Uma das principais características é permitir que o usuário defina tipos adicionais de dados – especificando a estrutura e a forma de operá-lo – e use estes tipos no modelo relacional. Desta forma, os dados são armazenados em sua forma natural [SAPM 98].<br />    Além dos tipos base já existentes, é permitido ao usuário criar novos tipos e trabalhar com dados complexos como imagens, som e vídeo, por exemplo.<br /><br />         Em última análise, o tipo objeto-relacional está evoluindo mais do que o orientado a objeto, tornando-se cada vez mais um novo produto, que não pode ser comparado com o orientado a objeto, pois este já é um produto maduro [MS 97]. <br /><br /><strong>Fonte</strong>: <a href="http://paginas.terra.com.br/informatica/arruda/Downloads/Artigos/artigo04/index.htm">http://paginas.terra.com.br/informatica/arruda/Downloads/Artigos/artigo04/index.htm</a>  <br /><br /><br /><br /><strong>4) Normalização</strong><br /><br /><strong>Normalização de Tabelas</strong><br /><br />Normalizar bancos tem o objetivo de tornar o banco mais eficiente, reduzindo as redundâncias, evitando retrabalho em eventuais alterações do modelo.<br /><br />Uma regra muito importante advinda da normalização ao criar tabelas é atentar para que cada tabela contenha informações sobre um único assunto, de um único tipo.<br /><br />Geralmente a aplicação das três primeiras formas normais atende à maioria dos projetos e dificilmente precisamos recorrer à quarta e/ou quinta (somente quando estritamente necessário).<br /><br />Normalização total não é obrigatório mas fortemente recomendado.<br /><br /><strong>1a Forma Normal</strong><br />Uma entidade encontra-se nesta forma quando nenhum dos atributos se repete. <br /><br />Exemplo: evitar cadastrar um produto duas vezes. Quando houver repetição devemos criar uma outra entidade com os campos repetidos e relacionar as tabelas por esse campo. <br /><br />Exemplo:<br /><br />clientes<br />cod nome  uf<br />1 – joão – CE<br />2 – pedro – CE<br />3 – manoel – MA<br /><br />Solução: Criar uma tabela para o campo UF e relacionar ambas.<br /><br />estados<br />1 – CE<br />2 - MA<br /><br />clientes<br />1 – joão – 1<br />2 – pedro – 1<br />3 – manoel - 2<br /><br /><br />Outro Exemplo:<br />Alunos: matricula, nome, data_nasc, serie, pai, mae<br /><br />Se a escola tem vários filhos de um mesmo casal haverá repetição do nome dos pais. Estão para atender à primeira regra, criamos outra tabela com os nomes dos pais e a matrícula do aluno.<br /><br /><br /><strong>2ª Forma Normal</strong><br />Quando a chave primária é composta por mais de um campo. <br /><br />Todos os campos que não fazem parte da chave devem depender da chave (de todos os seus campos).<br /><br />Caso algum campo dependa somente de parte da chave, então devemos colocar este campo em outra tabela.<br /><br /><br />Exemplo:<br />TabelaAlunos<br /><br />Chave (matricula, codigo_curso)<br /><br />avaliacao    descricao_curso<br /><br />Neste caso o campo descricao_curso depende apenas do codigo_curso, ou seja, tendo o código do curso conseguimos sua descrição. Então esta tabela não está na 2ª Forma Normal.<br /><br />Solução:<br /><br />Dividir a tabela em duas (alunos e cursos) e incorporar à chave existente:<br /><br />TabelaAlunos<br />Chave (matricula, codigo_curso)<br /><br />avaliacao<br />TabelaCursos<br />codigo_curso<br />descricao_curso<br /><br /><strong>3ª Forma Normal</strong><br />Quando um campo não é dependente diretamente da chave primária ou de parte dela, mas de outro campo da tabela que não pertence à chave primária. Quando isso ocorre esta tabela não está na terceira forma normal e a solução é dividir a tabela.<br /><br />Um atributo comun não deve depender de outro atributo comun, mas somente da PK.<br /><br />Exemplo:<br />Campo tipo total, que depende de deus fatores: quantidade e preco. <br /><br />Solução:<br />Não devemos armazenar campos calculados na tabela, pois além de gerar inconsistência são desnecessários, já que podemos consegui-lo com uma operação.<br /><br /><br /><strong>4a.Forma Normal</strong><br />Uma tabela está na 4FN, se e somente se, estiver na 3FN e não existirem dependências multivaloradas.<br /><br />Exemplo: Dados sobre livros<br /><br />Relação não normalizada: Livros(nrol, (autor), título, (assunto), editora, cid_edit, ano_public)<br /><br />1FN:        Livros(nrol, autor, assunto, título, editora, cid_edit, ano_public)<br />2FN:        Livros(nrol,título, editora, cid-edit, ano_public)<br />                AutAssLiv(nrol, autor, assunto)<br />3FN:        Livros(nrol, título, editora, ano_public)<br />                Editoras(editora, cid-edit)<br />                  AutAssLiv(nrol, autor, assunto)<br /><br />    * Redundância para representar todas as informações<br />    * Evitar todas as combinações: representação não-uniforme (repete alguns elementos ou posições nulas)<br /><br /><strong>Passagem à 4FN:</strong><br /><br />    * Geração de novas tabelas, eliminando Dependências Multivaloradas<br />    * Análise de Dependências Multivaloradas entre atributos:<br />    * autor, assunto - Dependência multivalorada de nrol<br />5a. Forma Normal<br /><br />Está ligada à noção de dependência de junção Se uma relação é decomposta em várias relações e a reconstrução não é possível pela junção das outras relações, dizemos que existe uma dependência de junção. <br />Existem tabelas na 4FN que não podem ser divididas em duas relações sem que se altere os dados originais. <br />Exemplo: Seja as relações R1(CodEmp, CodPrj) e R2(CodEmp, Papel) a decomposição da relação ProjetoRecuro(CodEmp, CodPrj, Papel).<br /><br /><br /><strong>Dica:</strong><br />Em caso de dúvida, o modelo ideal é o menos engessado, mesmo que paguem o preço de alguma redundância.<br /><br />- Ao aplicar a 3a. FN ainda persistirem redundâncias, então divide-se a tabela em duas.<br /><br /><br /><strong>Exemplos de Relacionamentos tipo N para N</strong><br /><br />Autores – Músicas<br />Alunos – Disciplinas<br />Produtos – Fornecedores<br />Produtos – Pedidos<br /><br /><br /><strong>Fases na criação de um banco de dados (aplicativo):</strong><br /><br />Análise<br />Projeto<br />Implementação<br />Testes<br />Homologação<br />Administração<br /><br /><strong>Análise</strong><br /><br />Nesta fase "enfrentamos" o mundo real para analisar e diagnosticar o problema para então passar um esboço do modelo para a fase de projeto.<br /><br />Nessa fase procedemos ao levantamento, gerenciamento e validação de informações importantes para o modelo.<br /><br />Análise  é a fase que tem contato com o mundo real, coletando informações junto ao cliente (usuário). Depois da coleta realiza a modelagem das entidades e relacionamentos e das normalizações. Ao final deve gerar um diagrama das entidades e relacionamentos DER.<br /><br /><strong>Projeto</strong> - definição das tabelas, índices, chaves (PK e FK), relacionamentos, views, etc.<br /><br /><strong>Fases do Projeto do Banco de Dados:</strong><br />• Modelagem Conceitual<br />• Projeto Lógico<br /><br /><strong>Modelo Conceitual</strong> - Define apenas quais os dados que aparecerão no banco de dados, sem se importar com a implementação do banco. Para essa fase o que mais se utiliza é o DER (Diagrama Entidade-Relacionamento).<br /><br /><strong>Modelo Lógico</strong> - Define quais as tabelas e os campos que formarão as tabelas, como também os campos-chave, mas ainda não se preocupa com detalhes como o tipo de dados dos campos, tamanho, etc.<br /><br />Não devemos misturar as tarefas de cada uma das fases. <br /><br /><strong>Implementação</strong> - criação do banco de acordo com o projeto e também criação dos usuários, grupos e privilégios.<br /><br />Análise e projeto são fases lógicas e implementação é física.<br /><br /><br /><strong>Comparando Construção de bancos de dados com edifícios:</strong><br /><br /><strong>Análise</strong> - reconhecimento do terreno e elaboração de croquis (esboço da planta).<br /><br /><strong>Projeto</strong> - Elaboração das plantas de acordo com o esboço: planta baixa, de elevação, detalhes, de situação, etc.<br /><br /><br /><strong>Implementação</strong> - Construção do edifício.<br /><br /><strong>Administração</strong> - manutenção do edifício.<br /><br /><br /><strong>5) Integridade Referencial</strong><br /><br />Tradução livre do documentação "CBT Integrity Referential":<br />http://techdocs.postgresql.org/college/002_referentialintegrity/. <br /><br />Integridade Referencial (relacionamento) é onde uma informação em uma tabela se refere à informações em outra tabela e o banco de dados reforça a integridade.<br /><br />Tabela1 ------------&gt; Tabela2<br />Onde é Utilizado?<br /><br />Onde pelo menos em uma tabela precisa se referir para informações em outra tabela e ambas precisam ter seus dados sincronizados.<br /><br /><strong>Exemplo</strong>: uma tabela com uma lista de clientes e outra tabela com uma lista dos pedidos efetuados por eles.<br />Com integridade referencial devidamente implantada nestas tabelas, o banco irá garantir que você nunca irá cadastrar um pedido na tabela pedidos de um cliente que não exista na tabela clientes.<br />O banco pode ser instruído para automaticamente atualizar ou excluir entradas nas tabelas quando necessário.<br /><br /><strong>Primary Key (Chave Primária)</strong> - é o campo de uma tabela criado para que as outras tabelas relacionadas se refiram a ela por este campo. Impede mais de um registro com valores iguais. É a combinação interna de UNIQUE e NOT NULL.<br /><br />Qualquer campo em outra tabela do banco pode se referir ao campo chave primária, desde que tenham o mesmo tipo de dados e tamanho da chave primária.<br /><br />Exemplo:<br />clientes (codigo INTEGER, nome_cliente VARCHAR(60))<br /><br />codigo     nome_cliente<br />1     PostgreSQL inc.<br />2     RedHat inc.<br /><br />pedidos (relaciona-se à Clientes pelo campo cod_cliente)<br />cod_pedido cod_cliente descricao<br /><br />Caso tentemos cadastrar um pedido com cod_cliente 2 ele será aceito.<br />Mas caso tentemos cadastrar um pedido com cod_cliente 3 ele será recusado pelo banco.<br /><br /><br /><br /><strong>Criando uma Chave Primária</strong><br />Deve ser criada quando da criação da tabela, para garantir valores exclusivos no campo.<br /><br />CREATE TABLE clientes(cod_cliente BIGINT, nome_cliente VARCHAR(60)<br />PRIMARY KEY (cod_cliente));<br /><br /><br /><strong>Criando uma Chave Estrangeira (Foreign Keys)</strong><br />É o campo de uma tabela que se relaciona (associa) com o campo Primary Key de outra.<br />O campo pedidos.cod_cliente refere-se ao campo clientes.codigo, então pedidos.cod_cliente é uma chave estrangeira, que é o campo que liga esta tabela a uma outra.<br /><br /><br />CREATE TABLE pedidos(<br />cod_pedido BIGINT, <br />cod_cliente BIGINT REFERENCES clientes, <br />descricao VARCHAR(60)<br />); <br /><br /><br />Outro exemplo:<br />FOREIGN KEY (campoa, campob)<br />REFERENCES tabela1 (campoa, campob)<br />ON UPDATE CASCADE<br />ON DELETE CASCADE);<br /><br /><br /><strong>Cuidado com exclusão em cascata.</strong> Somente utilize com certeza do que faz.<br />Dica: Caso desejemos fazer o relacionamento com um campo que não seja a chave primária, devemos passar este campo entre parênteses após o nome da tabela e o mesmo deve obrigatoriamente ser UNIQUE.<br />...<br />cod_cliente BIGINT REFERENCES clientes(nomecampo), <br />...<br /><br /><strong>Parâmetros Opcionais:</strong> <br /><br />ON UPDATE parametro e ON DELETE parametro.<br /><br /><br /><strong>ON UPDATE paramentros:</strong><br /><br /><strong>NO ACTION (RESTRICT)</strong> - quando o campo chave primária está para ser atualizado a atualização é abortada caso um registro em uma tabela referenciada tenha um valor mais antigo. Este parâmetro é o default quando esta cláusula não recebe nenhum parâmetro.<br /><br />Exemplo: ERRO Ao tentar usar "UPDATE clientes SET codigo = 5 WHERE codigo = 2. Ele vai tentar atualizar o código para 5 mas como em pedidos existem registros do cliente 2 haverá o erro.<br /><br /><br /><strong>CASCADE (Em Cascata)</strong> - Quando o campo da chave primária é atualizado, registros na tabela referenciada são atualizados.<br /><br />Exemplo: Funciona: Ao tentar usar "UPDATE clientes SET codigo = 5 WHERE codigo = 2. Ele vai tentar atualizar o código para 5 e vai atualizar esta chave também na tabela pedidos.<br /><br /><strong>SET NULL</strong> (atribuir NULL) - Quando um registro na chave primária é atualizado, todos os campos dos registros referenciados a este são setados para NULL.<br /><br />Exemplo: UPDATE clientes SET codigo = 9 WHERE codigo = 5;<br />Na clientes o codigo vai para 5 e em pedidos, todos os campos cod_cliente com valor 5 serão setados para NULL.<br /><br /><strong>SET DEFAULT</strong> (assumir o Default) - Quando um registro na chave primária é atualizado, todos os campos nos registros relacionados são setados para seu valor DEFAULT.<br /><br />Exemplo: se o valor default do codigo de clientes é 999, então <br /><br />UPDATE clientes SET codigo = 10 WHERE codigo = 2. Após esta consulta o campo código com valor 2 em clientes vai para 999 e também todos os campos cod_cliente em pedidos.<br /><br />ON DELETE parametros:<br /><br /><strong>NO ACTION (RESTRICT)</strong> - Quando um campo de chave primária está para ser deletado, a exclusão será abortada caso o valor de um registro na tabela referenciada seja mais velho. Este parâmetro é o default quando esta cláusula não recebe nenhum parâmetro.<br /><br />Exemplo: ERRO em DELETE FROM clientes WHERE codigo = 2. Não funcionará caso o cod_cliente em pedidos contenha um valor mais antigo que codigo em clientes.<br /><br /><strong>CASCADE</strong> - Quando um registro com a chave primária é excluído, todos os registros relacionados com aquela chave são excluídos.<br /><br /><strong>SET NULL</strong> - Quando um registro com a chave primária é excluído, os respectivos campos na tabela relacionada são setados para NULL.<br /><br /><strong>SET DEFAULT</strong> - Quando um registro com a chave primária é excluído, os campos respectivos da tabela relacionada são setados para seu valor DEFAULT.<br /><br /><strong>Excluindo Tabelas Relacionadas</strong><br /><br />Para excluir tabelas relacionadas, antes devemos excluir a tabela com chave estrangeira.<br />Tudo isso está na documentação sobre CREATE TABLE:<br />http://www.postgresql.org/docs/8.0/interactive/sql-createtable.html<br /><br /><strong>ALTER TABLE</strong><br /><a href="http://www.postgresql.org/docs/8.0/interactive/sql-altertable.html">http://www.postgresql.org/docs/8.0/interactive/sql-altertable.html</a> <br /><br /><br /><strong>Chave Primária Composta (dois campos)</strong><br />CREATE TABLE tabela (<br />codigo INTEGER, <br />data DATE, <br />nome VARCHAR(40),<br />PRIMARY KEY (codigo, data)<br />);<br /><br /><br /><strong>Alguns Modelos de Sistemas</strong><br /><br /><strong>Sistema de Contas a Pagar e Receber</strong><br />(Entidades e Relacionamentos)<br /><br />Endereço<br />        Tipo de Logradouro<br />        Logradouro<br />        Bairro<br />        Município<br />        UF<br />        Telefone<br /><br />Pessoa<br />    Física<br />    Jurídica<br />    CPagar<br />        Pagamento<br />    CReceber<br />    Recebimento<br /><br /><strong>Sistema Acadêmico</strong><br /><br />Cadastro do curso<br />Cadastro de disciplina<br />Cadastro de aluno<br />Cadastro de professor<br /><br />Abrir turma<br />Matrícular aluno<br />Emitir diário<br />Lançar avaliação<br />Emitir histórico<br />Consultar avaliação<br />Alocar professor<br /> <br /><br /><strong>Sistema de Biblioteca</strong><br /><br />Atores            Entidades                    Atores<br /><br />bibliotecário        Cadastrar assunto<br />            Cadastrar autor<br />            Cadastrar departamento - RH<br />            Cadastrar funcionário - RH<br />            Cadastrar obra<br />            Cadastrar editora - Setor de compras            <br />            Cadastrar exemplar<br /><br />            Cadastrar fornecedor - Setor de compras<br />funcionário        Cadastrar usuário<br />            Cadastrar requisição - Setor de compras<br />            Cadastrar motivo de manutenção - Setor de manutenção<br />            Efetuar empréstimo<br />            Efetuar devolução<br />            Registrar manutenção - Setor de manutenção<br />            Registrar reserva<br />            Consultar obras - usuário<br />            Consultar movimentação de usuários<br /><br /><br /><br /><strong>Sistema Bancário</strong><br /><br />Atores                Entidades<br /><br />cliente            Abrir conta<br />                Movimentar Conta<br />                Solicitar talão de cheques<br />                Solicitar empréstimo<br />                Solicitar cartão de crédito<br />                Comprar com cartão de crédito<br />                Pagar fatura do cartão<br />                Contratar seguro<br /><br />gerante            Cadastrar bandeira do cartão de crédito<br />                Cadastrar débito automático<br />                Cadastrar tipos de seguro<br />                Cadastrar cliente<br />                Liberar empréstimo<br /><br />adm do banco    Cadastrar estabelecimento comercial<br />                Cadastrar convênio<br />                Cadastrar gerente<br />                Cadastrar agência<br /><br /><strong>Sistema Comercial</strong><br /><br />Fornecedor        Lote        Produto<br />                    Nota Fiscal Itens<br />                    Movimento estoque<br />                    Movimento estoque<br />Nota Fiscal<br />    Nota Fiscal Itens<br />    Cliente        <br /><br />Fonte destes modelos: Revista SQL Magazine 53<br /><br /><br /><br /><strong>Um bom artigo sobre projeto de software:</strong> <br />Programação (I) - Planejamento e Otimização, de Edvaldo Silva de Almeida Júnior  no Viva o Linux:<br /><a href="http://www.vivaolinux.com.br/artigos/verArtigo.php?codigo=8057">http://www.vivaolinux.com.br/artigos/verArtigo.php?codigo=8057</a>  <br /><br /><br /><strong>Tabelas são mais conceituais e menos físicas que arquivos.</strong><br /><br /><br /><strong>Simplificando:</strong> <br />- DDL e DCL é para o DBA<br />- DML é para o programador<br /><br /><br /><strong>SGBDs</strong><br /><br />SGBDR – SGBD Relacional - tabelas são formadas por linhas e colunas (bidimensional)<br />SGBDOR - Combina os modelos OO e Relacional<br />SGBDOO - Modelo OO puro<br /><br /><strong>Características de SGBDs:</strong><br /><br />- Controle de redundância<br />- Compartilhamento de dados<br />- Controle de acesso<br />- Esquematização (relacionamentos armazenados no banco)<br />- Backups<br /><br /><strong>Objetivo do SGBD</strong> - armazenar objetos de forma a tornar ágil e segura a manipulação das informações.<br /><br /><strong>MER</strong> - Modelo Entidades e Relacionamentos - é o modelo composto de entidades e relacionamentos<br /><br /><strong>DER</strong> - Diagrama Entidades e Relacionamentos - é o resultado da fase inicial do projeto (análise)<br /><br />Exemplos de Entidades:<br /><br />- Físicas ou jurídicas - pessoas, funcionários, clientes, vendedores, fornecedores, empresas, filiais<br />- Documentos - ordens de compra, ordens de serviço, pedidos, notas fiscais<br />- Tabelas - CEPs, UF, cargos, etc<br /><br />Tupla (termo para a fase de projeto)<br />Registro (termo para a fase de implementação)<br /><br /><br /><strong>Fase de Análise</strong><br /><br />Ao definir uma entidade pergunte:<br />- Há informação relevante sobre esta entidade para a empresa?<br /><br />Faça um diagrama da entidade com alguns atributos<br /><br />Relacionamentos<br /><br />A                B<br />1 ----------- N<br /><br />Perguntar se A tem 1 ou + B<br />Perguntar se B tem somente 1 A<br /><br />Relacionamentos N - N devem ser divididos em dois 1 para N:<br /><br />1 ---------- N     e     N ----------- 1<br /><br /><br />Referência: Livro Instant SQL Programming - Joe Celko</p> 	</div>
+
+	
+	
+	<ul class="pager pagenav">
+	<li class="next">
+		<a class="hasTooltip" title="Boas Práticas com Bancos de Dados" aria-label="Próximo artigo: Boas Práticas com Bancos de Dados" href="boas-praticas-com-bancos-de-dados.html" rel="next">
+			<span aria-hidden="true">Próximo</span> <span class="icon-chevron-right" aria-hidden="true"></span>		</a>
+	</li>
+</ul>
+				
+	
+	<script type="text/x-template" id="ccomment-pagination">
+	<nav class="pagination text-center" v-if="pagination.last_page > 0">
+		<ul >
+			<li v-if="showPrevious()" :class="{ 'disabled' : pagination.current_page <= 1 }">
+				<span v-if="pagination.current_page <= 1">
+					<span aria-hidden="true">Ant</span>
+				</span>
+				<a href="postgresql-projeto-arquitetura.html#" v-if="pagination.current_page > 1 " :aria-label="config.ariaPrevioius"
+				   @click.prevent="changePage(pagination.current_page - 1)">
+					<span aria-hidden="true">Ant</span>
+				</a>
+			</li>
+			<li v-for="num in array" :class="{ 'active': num === pagination.current_page }">
+				<a href="postgresql-projeto-arquitetura.html#" @click.prevent="changePage(num)">{{ num }}</a>
+			</li>
+			<li v-if="showNext()"
+			    :class="{ 'disabled' : pagination.current_page === pagination.last_page || pagination.last_page === 0 }">
+				<span v-if="pagination.current_page === pagination.last_page || pagination.last_page === 0">
+					<span aria-hidden="true">Próximo</span>
+				</span>
+				<a href="postgresql-projeto-arquitetura.html#" v-if="pagination.current_page < pagination.last_page" :aria-label="config.ariaNext"
+				   @click.prevent="changePage(pagination.current_page + 1)">
+					<span aria-hidden="true">Próximo</span>
+				</a>
+			</li>
+		</ul>
+	</nav>
+</script>
+	<script type="text/x-template" id="ccomment-avatar">
+		<div class="ccomment-avatar">
+			<a v-if="profileLink" v-bind:href="profileLink">
+				<img v-bind:src="avatar"/>
+			</a>
+			<img v-else v-bind:src="avatar"/>
+		</div>
+	</script>
+
+	<script type="text/x-template" id="ccomment-user-name">
+		<a v-if="profileLink" :href="profileLink">
+			<span class="ccomment-author">{{name}}</span>
+		</a>
+		<span v-else class="ccomment-author">{{name}}</span>
+	</script>
+
+	<script type="text/x-template" id="ccomment-created">
+		<a :href="'#!/ccomment-comment=' + id" class="muted ccomment-created">
+			{{date}}
+		</a>
+	</script>
+
+	<div id="ccomment-token" style="display:none;">
+		<input type="hidden" name="796296c0a9019553ed4bbba150ad5a40" value="1" />	</div>
+
+	
+<script type="text/x-template" id="ccomment-customfields">
+	<div class="ccomment-customfields" v-if="customfields">
+		<strong>Campos personalizados</strong>
+		<dl class="dl-horizontal">
+			<template v-for="customfield in customfields">
+				<dt>{{customfield.title}}</dt>
+				<dd>{{customfield.value}}</dd>
+			</template>
+		</dl>
+	</div>
+</script>
+
+<script type="text/x-template" id="ccomment-template">
+	<li v-bind:class="model.class+' ccomment-level-'+model.level">
+		<div class="ccomment-comment-content" v-bind:id="'ccomment-comment-'+model.id">
+			<div class="ccomment-data">
+									<ccomment-avatar
+							v-bind:avatar="model.avatar"
+							v-bind:profileLink="model.profileLink"/>
+								<div class="ccomment-content">
+					<div class="ccomment-meta">
+						<ccomment-user-name v-bind:name="model.name" v-bind:profileLink="model.profileLink"></ccomment-user-name>
+						<ccomment-created v-bind:date="model.date" v-bind:id="model.id"></ccomment-created>
+					</div>
+
+					<div v-html="model.comment">
+					</div>
+
+
+					<div v-if="model.galleria" class="js-ccomment-galleria galleria ccomment-galleria"></div>
+
+					<ccomment-customfields v-bind:customfields="model.customfields"></ccomment-customfields>
+					<div class="ccomment-actions">
+													<span class="muted">
+					{{model.votes}}
+					<i class="ccomment-thumbs-up ccomment-voting" v-on:click="vote(+1, model.id)"></i>
+					<i class="ccomment-thumbs-down ccomment-voting" v-on:click="vote(-1, model.id)"></i>
+				</span>
+						
+													<button class="btn btn-small ccomment-quote btn-link" v-on:click="quote(model.id)">
+								Citar							</button>
+						
+						
+						<div class="pull-right ccomment-moderation">
+							<button v-if="model.commentModerator" class="btn btn-mini btn-ccomment-edit" v-on:click="edit(model.id)">
+								Editar							</button>
+
+													</div>
+					</div>
+				</div>
+			</div>
+
+
+			<keep-alive>
+				<ccomment-form v-if="reply" :ref="'form-'+model.id" v-bind:focus="true">
+					<input slot="parent-id" name="jform[parentid]" type="hidden" v-bind:value="model.id"/>
+				</ccomment-form>
+			</keep-alive>
+		</div>
+
+		<ul v-if="hasChildren">
+			<ccomment-comment class="item" v-for="model in getChild()" v-bind:key="model.id" v-bind:model="model">
+			</ccomment-comment>
+		</ul>
+	</li>
+
+</script>
+	
+	
+
+		<script type="text/x-template" id="ccomment-form">
+			<form class="ccomment-form" v-on:submit.prevent="onSubmit">
+				<div class="ccomment-error-form row-fluid  margin-bottom" v-if="error">
+					<div class="alert alert-error">
+						{{errorMessage}}
+					</div>
+				</div>
+				<div class="ccomment-info-form row-fluid  margin-bottom" v-if="info">
+					<div class="alert alert-info">
+						{{infoMessage}}
+					</div>
+				</div>
+				<div class="row-fluid margin-bottom">
+											<div class="span1 hidden-phone">
+							<ccomment-avatar v-bind:avatar="getAvatar"></ccomment-avatar>
+						</div>
+					
+					<div class="span11">
+						<textarea v-on:focus="toggle"
+								  name="jform[comment]"
+								  class='js-ccomment-textarea ccomment-textarea span12 required'
+								  placeholder="Deixe um comentário"
+						></textarea>
+
+						<div v-show="uploadImage">
+							
+<div class="fileupload">
+	<!-- The fileupload-buttonbar contains buttons to add/delete files and start/cancel the upload -->
+	<div class="row fileupload-buttonbar">
+		<input type="file" name="files[]" class="js-ccomment-file-upload-real ccomment-file-upload-real" multiple/>
+		<div class="">
+			<!-- The global file processing state -->
+			<span class="fileupload-process"><span class="fa fa-spinner fa-pulse"></span></span>
+			Attach images by dragging & dropping or <span type="button" class="js-file-upload-fake ccomment-file-upload-fake btn-link"> by selecting them.</span>			<br/>
+			<small class="muted">The maximum file size for uploads is <strong>MB</strong>.				Only <strong></strong> files are allowed.</small>
+
+			<!-- The global progress state -->
+			<div class="fileupload-progress fade hide">
+				<!-- The global progress bar -->
+				<div class="progress progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+					<div class="progress-bar progress-bar-success" style="width:0%;"></div>
+				</div>
+				<!-- The extended global progress state -->
+				<div class="progress-extended">&nbsp;</div>
+			</div>
+			<div class="ccomment-file-list">
+				<div class="alert alert-error hide compojoom-max-number-files">
+					The maximum number of 3 allowed files to upload has been reached. If you want to upload more files you have to delete one of the existing uploaded files first.				</div>
+				<table role="presentation" class="table table-striped">
+					<thead></thead>
+					<tbody class="files"></tbody>
+				</table>
+				<div class="alert alert-error hide compojoom-max-number-files">
+					The maximum number of 3 allowed files to upload has been reached. If you want to upload more files you have to delete one of the existing uploaded files first.				</div>
+			</div>
+		</div>
+	</div>
+</div>
+						</div>
+
+						<div v-show="active">
+							<div class="span4 muted small">
+								Postando como																	<button type="button"
+											v-on:click="display = !display"
+											class="btn-link btn-small ccomment-posting-as">{{getDefaultName}}
+									</button>
+															</div>
+															<label class="checkbox pull-right small ccomment-notify">
+									<input type="checkbox" value="1" name="jform[notify]ƒ"
+										   v-on:click="notify = !notify"/>
+									<span class="muted">
+										Notificar-me de futuros comentários via e-mail									</span>
+								</label>
+							
+
+						</div>
+					</div>
+											<div v-show="display"
+							 class="row-fluid ccomment-user-info offset1					span11">
+							<div class="span6">
+								<input name="jform[name]"
+									   class="ccomment-name span12 no-margin "
+									   type='text'
+									   v-bind:value="getName"
+									   v-on:input="updateDefaultName"
+																			   placeholder="Informe seu nome"
+									   tabindex="2"
+																	/>
+								<span class="help-block pull-right small muted">
+								Exibido ao lado de seus comentários.							</span>
+							</div>
+
+															<div class="span6">
+									<input name='jform[email]'
+										   class="ccomment-email span12 no-margin "
+										   type='text'
+										   v-bind:value='getEmail'
+										   v-on:input="updateUserEmail"
+										   placeholder="Informe seu email"
+																				   tabindex="3"
+																			/>
+									<p class="help-block small pull-right muted">
+										Não exibido publicamente.																					<span class='gravatar'>
+											<a href='http://gravatar.com' target='_blank'>Gravatar</a> habilitado										</span>
+																			</p>
+								</div>
+													</div>
+					
+
+					
+					
+
+					<div class="row-fluid ccomment-actions" v-show="active">
+													<div class="pull-left muted small ccomment-undergo-moderation offset1">
+								Comentários serão submetidos a moderação antes de serem publicados.							</div>
+												<div class="pull-right">
+							<button v-on:click="reset()"
+									type="button"
+									class="btn ccomment-cancel">
+								Cancelar</button>
+							<button type="submit" class='btn btn-primary ccomment-send'
+									tabindex="7"
+									name='bsend'>
+								<span v-if="isSending">
+									Salvando...								</span>
+								<span v-else>
+									Enviar								</span>
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<input type="hidden" name="jform[contentid]" v-bind:value="itemConfig.contentid"/>
+				<input type="hidden" name="jform[component]" v-bind:value="itemConfig.component"/>
+				<input type="hidden" name="jform[page]" v-bind:value="page"/>
+				<slot name="parent-id"></slot>
+			</form>
+		</script>
+
+	
+
+
+
+
+<!-- The template to display files available for upload -->
+<script id="template-upload" type="text/x-tmpl">
+{% for (var i=0, file; file=o.files[i]; i++) { %}
+    <tr class="template-upload fade">
+        <td>
+            <span class="preview"></span>
+        </td>
+        <td>
+         <span class="name"><i>{%=file.name%}</i></span>
+            <div class="compojoom-single-file-progress">
+	            <div class="progress progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+	                <div class="progress-bar progress-bar-success" style="width:0%;"></div>
+	            </div>
+	           <small><strong class="size">Processing...</strong></small>
+			</div>
+        </td>
+        <td>
+            {% if (!i && !o.options.autoUpload) { %}
+                <button class="btn btn-default btn-xs start" disabled>
+                    <i class="fa fa-upload"></i>
+                    <span>Start</span>
+                </button>
+            {% } %}
+            {% if (!i) { %}
+                <button class="btn btn-default btn-xs btn-xs cancel pull-left">
+                    <i class="fa fa-stop"></i>
+                    <span>Cancel</span>
+                </button>
+            {% } %}
+        </td>
+    </tr>
+{% } %}
+</script>
+
+<!-- The template to display files available for download -->
+<script id="template-download" type="text/x-tmpl">
+{% for (var i=0, file; file=o.files[i]; i++) { %}
+    <tr class="template-download fade">
+        <td style="">
+        {% if (file.thumbnailUrl) { %}
+            <span class="preview">
+                {% if (file.url) { %}
+					<a href="http://backup/portal/{%=file.url%}" title="{%=file.name%}" download="{%=file.name%}" data-gallery>
+						<img src='http://backup/portal/servidores/postgresql/projeto/{%=file.thumbnailUrl%}'>
+					</a>
+				{% } else { %}
+					<img src='http://backup/portal/servidores/postgresql/projeto/{%=file.thumbnailUrl%}'>
+				{% } %}
+            </span>
+		{% } %}
+        </td>
+        <td>
+        {% if (!file.error) { %}
+	        <div class="file-meta">
+			    <div class="row">
+			        <div class="col-lg-4">
+			           <input type="text" class="form-control"
+			                placeholder="Title"
+							name="jform[picture_data][{%=file.name%}][title]"
+					        value="{%=file.title%}" />
+			        </div>
+			        <div class="col-lg-8">
+			            <input type="text" placeholder="Description" class="form-control"
+					                name="jform[picture_data][{%=file.name%}][description]"
+
+					                value="{%=file.description%}" />
+			        </div>
+			    </div>
+	        </div>
+		 {% } %}
+        {% if (file.error) { %}
+            <div><span class="label label-danger">Error</span> {%=file.error%}</div>
+        {% } %}
+        </td>
+        <td style="text-align: center">
+            {% if (file.deleteUrl) { %}
+                            {% } else { %}
+                 <button class="btn btn-default btn-xs btn-xs cancel">
+                    <i class="fa fa-stop"></i>
+                    <span>Cancel</span>
+                </button>
+            {% }%}
+            {% if (!file.error) { %}
+            <input type="hidden" name="jform[picture][]" value="{%=file.name%}" />
+            {% } %}
+        </td>
+    </tr>
+{% } %}
+</script>
+	
+<script type="text/x-template" id="ccomment-menu">
+	<div class="row-fluid ccomment-menu">
+		<h4 class="pull-left">
+			Comentários			(<span class="ccomment-comment-counter">{{pagination.total_with_children}}</span>)
+		</h4>
+		<div class="pull-right">
+							<button
+						v-on:click="newComment"
+						class="ccomment-add-new btn btn-mini" title='Adicionar Novo'>
+					Adicionar Novo				</button>
+														</div>
+	</div>
+</script>
+
+	<!-- the ccomment root element -->
+	<div class="ccomment" id="ccomment">
+
+		<ccomment-menu></ccomment-menu>
+
+		
+		
+		<ul class="ccomment-comments-list">
+			<ccomment-comment v-for="item in comments"
+							  v-if="item.parentid === -1"
+							  class="item"
+							  v-bind:key="item.id"
+							  v-bind:model="item">
+			</ccomment-comment>
+		</ul>
+
+					<pagination v-if="pagination.last_page > 1" :pagination="pagination" :callback="loadData" :options="paginationOptions"></pagination>
+		
+					<ccomment-form></ccomment-form>
+		
+			<div class="row-fluid small muted ccomment-powered">
+		<p class="text-center">
+			Comments fornecido por <a href='https://compojoom.com' rel='nofollow' target='_blank'>CComment</a>		</p>
+	</div>
+	</div>
+
+	<script type="text/javascript">
+		window.compojoom = compojoom = window.compojoom || {};
+		compojoom.ccomment = {
+			user: {"loggedin":false,"avatar":"http:\/\/backup\/portal\/media\/com_comment\/images\/noavatar.png"},
+			item: {"contentid":221,"component":"com_content","count":0},
+			config: {"comments_per_page":0,"sort":0,"tree":0,"use_name":0,"tree_depth":5,"form_position":0,"voting":1,"copyright":1,"pagination_position":0,"avatars":0,"gravatar":1,"support_ubb":1,"support_emoticons":0,"support_picture":0,"name_required":0,"email_required":0,"baseUrl":"http:\/\/backup\/portal\/","langCode":null,"file_upload":{"url":"http:\/\/backup\/portal\/index.php?option=com_comment&amp;task=multimedia.doIt","formControl":"jform","fieldName":"picture","maxNumberOfFiles":3,"fileTypes":null,"maxSize":null,"component":"com_comment","imageSize":{"x":"2400","y":"1800"}}}		};
+	</script>
+
+<script data-inline type="text/javascript" src="../../../media/com_comment/cache/8e12eb270706cd6b2c8483104bf89b54.min.js"></script>
+			<div class="article-footer-wrap">
+			<div class="article-footer-top">
+									<div class="helix-social-share">
+		<div class="helix-social-share-icon">
+			<ul>
+				
+				<li>
+					<div class="facebook" data-toggle="tooltip" data-placement="top" title="Share On Facebook">
+
+						<a class="facebook" onClick="window.open('http://www.facebook.com/sharer.php?u=http://backup/portal/servidores/postgresql/projeto/postgresql-projeto-arquitetura.html','Facebook','width=600,height=300,left='+(screen.availWidth/2-300)+',top='+(screen.availHeight/2-150)+''); return false;" href="http://www.facebook.com/sharer.php?u=http://backup/portal/servidores/postgresql/projeto/postgresql-projeto-arquitetura.html">
+
+							<i class="fa fa-facebook"></i>
+						</a>
+
+					</div>
+				</li>
+				<li>
+					<div class="twitter"  data-toggle="tooltip" data-placement="top" title="Share On Twitter">
+						
+						<a class="twitter" onClick="window.open('http://twitter.com/share?url=http://backup/portal/servidores/postgresql/projeto/postgresql-projeto-arquitetura.html&amp;text=PostgreSQL%20-%20Projeto/Arquitetura','Twitter share','width=600,height=300,left='+(screen.availWidth/2-300)+',top='+(screen.availHeight/2-150)+''); return false;" href="http://twitter.com/share?url=http://backup/portal/servidores/postgresql/projeto/postgresql-projeto-arquitetura.html&amp;text=PostgreSQL%20-%20Projeto/Arquitetura">
+							<i class="fa fa-twitter"></i>
+						</a>
+
+					</div>
+				</li>
+				<li>
+					<div class="google-plus">
+						<a class="gplus" data-toggle="tooltip" data-placement="top" title="Share On Google Plus" onClick="window.open('https://plus.google.com/share?url=http://backup/portal/servidores/postgresql/projeto/postgresql-projeto-arquitetura.html','Google plus','width=585,height=666,left='+(screen.availWidth/2-292)+',top='+(screen.availHeight/2-333)+''); return false;" href="https://plus.google.com/share?url=http://backup/portal/servidores/postgresql/projeto/postgresql-projeto-arquitetura.html" >
+						<i class="fa fa-google-plus"></i></a>
+					</div>
+				</li>
+				
+				<li>
+					<div class="linkedin">
+						<a class="linkedin" data-toggle="tooltip" data-placement="top" title="Share On Linkedin" onClick="window.open('http://www.linkedin.com/shareArticle?mini=true&url=http://backup/portal/servidores/postgresql/projeto/postgresql-projeto-arquitetura.html','Linkedin','width=585,height=666,left='+(screen.availWidth/2-292)+',top='+(screen.availHeight/2-333)+''); return false;" href="http://www.linkedin.com/shareArticle?mini=true&url=http://backup/portal/servidores/postgresql/projeto/postgresql-projeto-arquitetura.html" >
+							
+						<i class="fa fa-linkedin-square"></i></a>
+					</div>
+				</li>
+			</ul>
+		</div>		
+	</div> <!-- /.helix-social-share -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			</div>
+					</div>
+	
+</article>
+</div></div><div id="sp-right" class="col-sm-3 col-md-3"><div class="sp-column class2"><div class="sp-module pop"><h3 class="sp-module-title">Populares</h3><div class="sp-module-content"><ul class="mostreadpop mod-list">
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="http://backup/portal/mobile/phaser/atualizar-o-node-js.html" itemprop="url">
+			<span itemprop="name">
+				Atualizar o Node.JS			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../../../joomla-3/dicas/melhorando-a-velocidade-do-site.html" itemprop="url">
+			<span itemprop="name">
+				Melhorando a velocidade do site			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="http://backup/portal/servidores/postgresql/projeto/boas-vindas.html" itemprop="url">
+			<span itemprop="name">
+				Boas Vindas!			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../../../joomla-3/instalacao.html" itemprop="url">
+			<span itemprop="name">
+				Instalação do Joomla			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../../../blog/diversos/e-possivel-viver-sem-o-google.html" itemprop="url">
+			<span itemprop="name">
+				É possível viver sem o Google?			</span>
+		</a>
+	</li>
+</ul>
+</div></div><div class="sp-module "><h3 class="sp-module-title">Novo Testamento</h3><div class="sp-module-content">E logo a boca se lhe abriu, e a língua se lhe soltou; e falava, louvando a Deus.
+
+<br>(Lc, 1:64) 
+</div></div><div class="sp-module "><h3 class="sp-module-title">Rotas no Mapa do Google</h3><div class="sp-module-content"><a href="https://www.google.com/maps/dir///@-3.7294526,-38.5422647,15z" target="_blank">Abrir o Mapa</a>
+</div></div></div></div></div></div></section><footer id="sp-footer"><div class="container"><div class="row"><div id="sp-footer1" class="col-sm-12 col-md-12"><div class="sp-column "><span class="sp-copyright">© 2015 Ribamar FS. All Rights Reserved. Designed By JoomShaper</span></div></div></div></div></footer>            </div> <!-- /.body-innerwrapper -->
+        </div> <!-- /.body-innerwrapper -->
+
+        <!-- Off Canvas Menu -->
+        <div class="offcanvas-menu">
+            <a href="postgresql-projeto-arquitetura.html#" class="close-offcanvas" aria-label="Close"><i class="fa fa-remove" aria-hidden="true" title="HELIX_CLOSE_MENU"></i></a>
+            <div class="offcanvas-inner">
+                                  <div class="sp-module _menu"><h3 class="sp-module-title">Menu Principal</h3><div class="sp-module-content"><ul class="nav menu">
+<li class="item-101"><a href="../../../index.html" > Início</a></li><li class="item-107  deeper parent"><a href="../../../basicos.html" > Básicos</a><span class="offcanvas-menu-toggler collapsed" data-toggle="collapse" data-target="#collapse-menu-107"><i class="open-icon fa fa-angle-down"></i><i class="close-icon fa fa-angle-up"></i></span><ul class="collapse" id="collapse-menu-107"><li class="item-112"><a href="../../../basicos/html.html" > HTML</a></li><li class="item-113"><a href="../../../basicos/javascript.html" > JavaScript</a></li><li class="item-114"><a href="../../../basicos/css.html" > CSS</a></li><li class="item-116"><a href="../../../basicos/jquery.html" > jQuery</a></li><li class="item-117"><a href="../../../basicos/bootstrap.html" > Bootstrap</a></li><li class="item-118"><a href="../../../basicos/php.html" > PHP</a></li><li class="item-119"><a href="../../../basicos/phpoo.html" > PHPOO</a></li><li class="item-120"><a href="../../../basicos/pdo.html" > PDO</a></li><li class="item-157"><a href="../../../basicos/ferramentas.html" > Ferramentas</a></li><li class="item-287"><a href="../../../basicos/outros.html" > Outros</a></li></ul></li><li class="item-108  active deeper parent"><a href="../../../servidores.html" > Servidores</a><span class="offcanvas-menu-toggler collapsed" data-toggle="collapse" data-target="#collapse-menu-108"><i class="open-icon fa fa-angle-down"></i><i class="close-icon fa fa-angle-up"></i></span><ul class="collapse" id="collapse-menu-108"><li class="item-121"><a href="../../desktop.html" > Desktop</a></li><li class="item-122"><a href="../../ubuntu-server.html" > Ubuntu Server</a></li><li class="item-123"><a href="../../shell-scripts.html" > Shell Scripts</a></li><li class="item-124"><a href="../../servidor-web.html" > Servidor Web</a></li><li class="item-156"><a href="../../servidor-sgbd.html" > Servidor SGBD</a></li><li class="item-193  active deeper parent"><a href="../../postgresql.html" > PostgreSQL</a><span class="offcanvas-menu-toggler collapsed" data-toggle="collapse" data-target="#collapse-menu-193"><i class="open-icon fa fa-angle-down"></i><i class="close-icon fa fa-angle-up"></i></span><ul class="collapse" id="collapse-menu-193"><li class="item-232"><a href="../introducao-ao-postgresql.html" > Introdução</a></li><li class="item-233  current active"><a href="../projeto.html" > Projeto</a></li><li class="item-234"><a href="../dimensionamento.html" > Dimensionamento</a></li></ul></li></ul></li><li class="item-148  deeper parent"><a href="../../../joomla-3.html" > Joomla 3</a><span class="offcanvas-menu-toggler collapsed" data-toggle="collapse" data-target="#collapse-menu-148"><i class="open-icon fa fa-angle-down"></i><i class="close-icon fa fa-angle-up"></i></span><ul class="collapse" id="collapse-menu-148"><li class="item-149"><a href="../../../joomla-3/introducao.html" > Introdução</a></li><li class="item-231"><a href="../../../joomla-3/seguranca.html" > Segurança</a></li><li class="item-199"><a href="../../../joomla-3/instalacao.html" > Instalação do Joomla</a></li><li class="item-152"><a href="../../../joomla-3/administracao.html" > Administração</a></li><li class="item-153"><a href="../../../joomla-3/extensoes.html" > Extensões</a></li><li class="item-154"><a href="../../../joomla-3/loja-simples.html" > Loja Simples</a></li><li class="item-155"><a href="../../../joomla-3/dicas.html" > Dicas</a></li></ul></li><li class="item-310  divider deeper parent"><a class="separator ">Frameworks</a>
+<span class="offcanvas-menu-toggler collapsed" data-toggle="collapse" data-target="#collapse-menu-310"><i class="open-icon fa fa-angle-down"></i><i class="close-icon fa fa-angle-up"></i></span><ul class="collapse" id="collapse-menu-310"><li class="item-138  deeper parent"><a href="../../../frameworks/cakephp-3.html" > CakePHP 3</a><span class="offcanvas-menu-toggler collapsed" data-toggle="collapse" data-target="#collapse-menu-138"><i class="open-icon fa fa-angle-down"></i><i class="close-icon fa fa-angle-up"></i></span><ul class="collapse" id="collapse-menu-138"><li class="item-139"><a href="../../../frameworks/cakephp-3/introducao.html" > Introdução</a></li><li class="item-140"><a href="../../../frameworks/cakephp-3/instalacao.html" > Instalação</a></li><li class="item-172"><a href="../../../frameworks/cakephp-3/configuracoes.html" > Configurações</a></li><li class="item-141"><a href="../../../frameworks/cakephp-3/convencoes.html" > Convenções</a></li><li class="item-142"><a href="../../../frameworks/cakephp-3/tutoriais.html" > Tutoriais</a></li><li class="item-144"><a href="../../../frameworks/cakephp-3/dicas.html" > Dicas</a></li><li class="item-145"><a href="../../../frameworks/cakephp-3/seguranca.html" > Segurança</a></li><li class="item-147"><a href="../../../frameworks/cakephp-3/mvc-no-cakephp-3.html" > MVC no CakePHP 3</a></li></ul></li><li class="item-171  deeper parent"><a href="../../../frameworks/laravel-5.html" > Laravel 5</a><span class="offcanvas-menu-toggler collapsed" data-toggle="collapse" data-target="#collapse-menu-171"><i class="open-icon fa fa-angle-down"></i><i class="close-icon fa fa-angle-up"></i></span><ul class="collapse" id="collapse-menu-171"><li class="item-173"><a href="../../../frameworks/laravel-5/introducao.html" > Introdução</a></li><li class="item-174"><a href="../../../frameworks/laravel-5/instalacao.html" > Instalação</a></li><li class="item-175"><a href="../../../frameworks/laravel-5/configuracoes.html" > Configurações</a></li><li class="item-176"><a href="../../../frameworks/laravel-5/routes.html" > Routes</a></li><li class="item-178"><a href="../../../frameworks/laravel-5/dicas.html" > Dicas</a></li><li class="item-177"><a href="../../../frameworks/laravel-5/tutoriais.html" > Tutoriais</a></li></ul></li></ul></li><li class="item-158  deeper parent"><a href="../../../mobile.html" > Mobile</a><span class="offcanvas-menu-toggler collapsed" data-toggle="collapse" data-target="#collapse-menu-158"><i class="open-icon fa fa-angle-down"></i><i class="close-icon fa fa-angle-up"></i></span><ul class="collapse" id="collapse-menu-158"><li class="item-179"><a href="../../../mobile/introducao.html" > Introdução</a></li><li class="item-180"><a href="../../../mobile/ambiente.html" > Ambiente</a></li><li class="item-188"><a href="../../../mobile/phaser.html" > Phaser</a></li><li class="item-187"><a href="../../../mobile/monaca.html" > Monaca</a></li><li class="item-181"><a href="../../../mobile/phonegap.html" > PhoneGap</a></li><li class="item-182"><a href="../../../mobile/app-inventor.html" > App Inventor</a></li><li class="item-159"><a href="../../../mobile/unity-3d.html" > Unity 3D</a></li><li class="item-160"><a href="../../../mobile/intel-xdk.html" > Intel XDK</a></li><li class="item-161"><a href="../../../mobile/outros.html" > Outros</a></li><li class="item-163"><a href="../../../mobile/dicas.html" > Dicas</a></li></ul></li><li class="item-168  deeper parent"><a href="../../../blog.html" > Blog</a><span class="offcanvas-menu-toggler collapsed" data-toggle="collapse" data-target="#collapse-menu-168"><i class="open-icon fa fa-angle-down"></i><i class="close-icon fa fa-angle-up"></i></span><ul class="collapse" id="collapse-menu-168"><li class="item-196"><a href="../../../blog/reflexoes.html" > Reflexões</a></li><li class="item-197"><a href="../../../blog/saude.html" > Saúde</a></li><li class="item-238"><a href="../../../blog/diversos.html" > Diversos</a></li><li class="item-271"><a href="../../../blog/estudos.html" > Estudos</a></li></ul></li><li class="item-215  deeper parent"><a href="../../../curriculo.html" > Sobre</a><span class="offcanvas-menu-toggler collapsed" data-toggle="collapse" data-target="#collapse-menu-215"><i class="open-icon fa fa-angle-down"></i><i class="close-icon fa fa-angle-up"></i></span><ul class="collapse" id="collapse-menu-215"><li class="item-167">		<a href="https://github.com/ribafs?tab=repositories" rel="noopener noreferrer" target="_blank" > Projetos</a></li><li class="item-164"><a href="../../../curriculo/livros.html" > Livros</a></li><li class="item-257"><a href="../../../curriculo/curriculo.html" > Currículo</a></li><li class="item-110"><a href="../../../curriculo/contato.html" > Contato</a></li><li class="item-251"><a href="../../../curriculo/mapa-do-site.html" > Mapa</a></li></ul></li></ul>
+</div></div>
+                            </div> <!-- /.offcanvas-inner -->
+        </div> <!-- /.offcanvas-menu -->
+
+        
+        
+        
+        <!-- Preloader -->
+        
+
+        <!-- Go to top -->
+                    <a href="javascript:void(0)" class="scrollup" aria-label="Go To Top">&nbsp;</a>
+        
+    </body>
+</html>

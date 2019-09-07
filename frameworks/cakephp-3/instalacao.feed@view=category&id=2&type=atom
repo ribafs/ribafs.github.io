@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="Joomla! - Open Source Content Management" -->
+<feed xmlns="http://www.w3.org/2005/Atom"  xml:lang="pt-br">
+	<title type="text">Instalação - RibaFS Portal</title>
+	<subtitle type="text">Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros.</subtitle>
+	<link rel="alternate" type="text/html" href="http://backup"/>
+	<id>http://backup/portal/frameworks/cakephp-3/instalacao.feed</id>
+	<updated>2019-09-07T19:25:25-03:00</updated>
+	<author>
+		<name>RibaFS Portal</name>
+	</author>
+	<generator uri="https://www.joomla.org">Joomla! - Open Source Content Management</generator>
+	<link rel="self" type="application/atom+xml" href="http://backup/portal/frameworks/cakephp-3/instalacao.feed?view=category&amp;id=2&amp;type=atom"/>
+	<entry>
+		<title>Contato</title>
+		<link rel="alternate" type="text/html" href="http://backup/portal/frameworks/cakephp-3/instalacao.html?view=article&amp;id=238&amp;catid=2"/>
+		<published>2018-01-30T16:27:22-03:00</published>
+		<updated>2018-01-30T16:27:22-03:00</updated>
+		<id>http://backup/portal/frameworks/cakephp-3/instalacao.html?view=article&amp;id=238&amp;catid=2</id>
+		<author>
+			<name>Ribamar FS</name>
+		</author>
+		<summary type="html">&lt;h3&gt;Contato&lt;/h3&gt;
+
+&lt;p&gt;Caso queira me contactar use o e-mail abaixo.&lt;/p&gt;
+
+&lt;p&gt;Os espaços devem ser removidos, pois são apenas para evitar spams.&lt;/p&gt;
+
+&lt;p&gt;ribafs @ gmail.com&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;</summary>
+		<content type="html">&lt;h3&gt;Contato&lt;/h3&gt;
+
+&lt;p&gt;Caso queira me contactar use o e-mail abaixo.&lt;/p&gt;
+
+&lt;p&gt;Os espaços devem ser removidos, pois são apenas para evitar spams.&lt;/p&gt;
+
+&lt;p&gt;ribafs @ gmail.com&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;</content>
+		<category term="Generica" />
+	</entry>
+	<entry>
+		<title>Suporte Nacional e Internacional para o PostgreSQL</title>
+		<link rel="alternate" type="text/html" href="http://backup/portal/frameworks/cakephp-3/instalacao.html?view=article&amp;id=218&amp;catid=2"/>
+		<published>2017-08-29T21:59:06-03:00</published>
+		<updated>2017-08-29T21:59:06-03:00</updated>
+		<id>http://backup/portal/frameworks/cakephp-3/instalacao.html?view=article&amp;id=218&amp;catid=2</id>
+		<author>
+			<name>Ribamar FS</name>
+		</author>
+		<summary type="html">&lt;p&gt;&lt;strong&gt;Quem oferece Suporte ao PostgreSQL no Brasil e quem o usa&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Empresas que Patrocinam o PostgreSQL:&lt;/strong&gt; &lt;br /&gt;- InterpriseDB &lt;br /&gt;- Fijitsu &lt;br /&gt;- RedHat &lt;br /&gt;- Skype &lt;br /&gt;- Sun &lt;br /&gt;&lt;br /&gt;Lista completa - &lt;a href=&quot;http://www.postgresql.org/about/sponsors&quot;&gt;http://www.postgresql.org/about/sponsors&lt;/a&gt;  &lt;br /&gt;&lt;br /&gt;Oferecem Suporte ao PostgreSQL (consultores individuais e empresas): &lt;br /&gt;Lista completa: &lt;a href=&quot;http://www.postgresql.org/support/professional_support&quot;&gt;http://www.postgresql.org/support/professional_support&lt;/a&gt;  &lt;br /&gt;&lt;br /&gt;Mais empresas e consutores que oferecem suporte ao PostgreSQL: &lt;br /&gt;&lt;a href=&quot;http://www.opensourcexperts.com/Index/index_html/PostgreSQL/index.html&quot;&gt;http://www.opensourcexperts.com/Index/index_html/PostgreSQL/index.html&lt;/a&gt;  &lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Oferecem Suporte ao PostgreSQL (no Brasil):&lt;/strong&gt; &lt;br /&gt;- Carlos Smanioto (Bauru) &lt;br /&gt;- dbExperts (SP) &lt;br /&gt;- Dextra (Campinas) &lt;br /&gt;- Flexsolutions Consultores (Goiânia) &lt;br /&gt;- Locadata (Belo Horizonte) &lt;br /&gt;- Mosman Consultoria e Desenvolvimento (São Pedro - SP) &lt;br /&gt;- Studio Server Hospedagem de Sites (Santos) &lt;br /&gt;&lt;br /&gt;Detalhes e Lista completa: &lt;a href=&quot;http://www.postgresql.org/support/professional_support_southamerica&quot;&gt;http://www.postgresql.org/support/professional_support_southamerica&lt;/a&gt;  &lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Algumas Empresas que usam o PostgreSQL (internacionais):&lt;/strong&gt; &lt;br /&gt;- Apple &lt;br /&gt;- BASF &lt;br /&gt;- Cisco &lt;br /&gt;- OMS (Organização Mundial de Saúde) &lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Algumas Empresas que usam o PostgreSQL (nacionais):&lt;/strong&gt; &lt;br /&gt;- FAB (Força Aérea Brasileira) &lt;br /&gt;- Prefeitura Municipal de Sobral &lt;br /&gt;- Vivo &lt;br /&gt;- DNOCS &lt;br /&gt;- Governo do Estado do Ceará adotou o PostgreSQL como SDGB oficial.&lt;br /&gt;- O DETRAN-CE migrou de Oracle para PostgreSQL&lt;/p&gt;</summary>
+		<content type="html">&lt;p&gt;&lt;strong&gt;Quem oferece Suporte ao PostgreSQL no Brasil e quem o usa&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Empresas que Patrocinam o PostgreSQL:&lt;/strong&gt; &lt;br /&gt;- InterpriseDB &lt;br /&gt;- Fijitsu &lt;br /&gt;- RedHat &lt;br /&gt;- Skype &lt;br /&gt;- Sun &lt;br /&gt;&lt;br /&gt;Lista completa - &lt;a href=&quot;http://www.postgresql.org/about/sponsors&quot;&gt;http://www.postgresql.org/about/sponsors&lt;/a&gt;  &lt;br /&gt;&lt;br /&gt;Oferecem Suporte ao PostgreSQL (consultores individuais e empresas): &lt;br /&gt;Lista completa: &lt;a href=&quot;http://www.postgresql.org/support/professional_support&quot;&gt;http://www.postgresql.org/support/professional_support&lt;/a&gt;  &lt;br /&gt;&lt;br /&gt;Mais empresas e consutores que oferecem suporte ao PostgreSQL: &lt;br /&gt;&lt;a href=&quot;http://www.opensourcexperts.com/Index/index_html/PostgreSQL/index.html&quot;&gt;http://www.opensourcexperts.com/Index/index_html/PostgreSQL/index.html&lt;/a&gt;  &lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Oferecem Suporte ao PostgreSQL (no Brasil):&lt;/strong&gt; &lt;br /&gt;- Carlos Smanioto (Bauru) &lt;br /&gt;- dbExperts (SP) &lt;br /&gt;- Dextra (Campinas) &lt;br /&gt;- Flexsolutions Consultores (Goiânia) &lt;br /&gt;- Locadata (Belo Horizonte) &lt;br /&gt;- Mosman Consultoria e Desenvolvimento (São Pedro - SP) &lt;br /&gt;- Studio Server Hospedagem de Sites (Santos) &lt;br /&gt;&lt;br /&gt;Detalhes e Lista completa: &lt;a href=&quot;http://www.postgresql.org/support/professional_support_southamerica&quot;&gt;http://www.postgresql.org/support/professional_support_southamerica&lt;/a&gt;  &lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Algumas Empresas que usam o PostgreSQL (internacionais):&lt;/strong&gt; &lt;br /&gt;- Apple &lt;br /&gt;- BASF &lt;br /&gt;- Cisco &lt;br /&gt;- OMS (Organização Mundial de Saúde) &lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Algumas Empresas que usam o PostgreSQL (nacionais):&lt;/strong&gt; &lt;br /&gt;- FAB (Força Aérea Brasileira) &lt;br /&gt;- Prefeitura Municipal de Sobral &lt;br /&gt;- Vivo &lt;br /&gt;- DNOCS &lt;br /&gt;- Governo do Estado do Ceará adotou o PostgreSQL como SDGB oficial.&lt;br /&gt;- O DETRAN-CE migrou de Oracle para PostgreSQL&lt;/p&gt;</content>
+		<category term="Generica" />
+	</entry>
+	<entry>
+		<title>Boas Vindas!</title>
+		<link rel="alternate" type="text/html" href="http://backup/portal/frameworks/cakephp-3/instalacao.html?view=article&amp;id=2&amp;catid=2"/>
+		<published>2017-06-22T14:58:41-03:00</published>
+		<updated>2017-06-22T14:58:41-03:00</updated>
+		<id>http://backup/portal/frameworks/cakephp-3/instalacao.html?view=article&amp;id=2&amp;catid=2</id>
+		<author>
+			<name>Ribamar FS</name>
+		</author>
+		<summary type="html">&lt;p&gt;Olá como vai? AQUI&lt;/p&gt;
+
+&lt;p&gt;Seja sinceramente bem vindo(a)!&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Este site está com todo o seu conteúdo atualizado e com alguns novos.&lt;br /&gt;Agora temos as versões 3 do Joomla e do CakePHP e também alguns assuntos que não havia, como Laravel 5 e várias ferramentas Mobile.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Os principais assuntos compartilhados aqui são os mostrados nos menus acima.&lt;br /&gt;Também, de vez em quando, publico algum artigo na seção Blog, sobre saúde ou alguma reflexão sobre a vida.&lt;br /&gt;&lt;br /&gt;O foco do conteúdo deste site fica em Linux, Windows, Web (online) e Mobile (especificamente Android).&lt;br /&gt;O destaque do conteúdo fica com o PostgreSQL (que começei a adicionar o conteúdo mas tem muita coisa) e a programação Mobile, especialmente por ter encontrado e compartilhado algumas ferramentas que facilitam a vida do programador, como o Phaser, PhoneGap e o Monaca.&lt;/p&gt;
+
+&lt;p&gt;Para as versões anteriores do Cake e do Joomla, além de Virtualização de Servidores Linux veja meu aite anterior &lt;a href=&quot;http://ribafs.16mb.com/&quot;&gt;http://ribafs.16mb.com/&lt;/a&gt; &lt;br /&gt;&lt;br /&gt;Meus livros agora estão todos no GitHub (todos gratuitos) - &lt;a title=&quot;https://github.com/ribafs/livros&quot; href=&quot;https://github.com/ribafs/livros&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;https://github.com/ribafs/livros&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Meus projetos no GitHub - &lt;a href=&quot;https://github.com/ribafs?tab=repositories&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;https://github.com/ribafs?tab=repositories&lt;/a&gt; &lt;br /&gt;&lt;br /&gt;Caso tenha encontrado algum erro ou tenha alguma sugestão para melhorar qualquer um dos artigos, por favor acesse o item Contato em Sobre e me envie um e-mail.&lt;br /&gt;&lt;br /&gt;Muito grato.&lt;br /&gt;Ribamar FS, 12 de julho de 2017&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;</summary>
+		<content type="html">&lt;p&gt;Olá como vai? AQUI&lt;/p&gt;
+
+&lt;p&gt;Seja sinceramente bem vindo(a)!&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Este site está com todo o seu conteúdo atualizado e com alguns novos.&lt;br /&gt;Agora temos as versões 3 do Joomla e do CakePHP e também alguns assuntos que não havia, como Laravel 5 e várias ferramentas Mobile.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Os principais assuntos compartilhados aqui são os mostrados nos menus acima.&lt;br /&gt;Também, de vez em quando, publico algum artigo na seção Blog, sobre saúde ou alguma reflexão sobre a vida.&lt;br /&gt;&lt;br /&gt;O foco do conteúdo deste site fica em Linux, Windows, Web (online) e Mobile (especificamente Android).&lt;br /&gt;O destaque do conteúdo fica com o PostgreSQL (que começei a adicionar o conteúdo mas tem muita coisa) e a programação Mobile, especialmente por ter encontrado e compartilhado algumas ferramentas que facilitam a vida do programador, como o Phaser, PhoneGap e o Monaca.&lt;/p&gt;
+
+&lt;p&gt;Para as versões anteriores do Cake e do Joomla, além de Virtualização de Servidores Linux veja meu aite anterior &lt;a href=&quot;http://ribafs.16mb.com/&quot;&gt;http://ribafs.16mb.com/&lt;/a&gt; &lt;br /&gt;&lt;br /&gt;Meus livros agora estão todos no GitHub (todos gratuitos) - &lt;a title=&quot;https://github.com/ribafs/livros&quot; href=&quot;https://github.com/ribafs/livros&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;https://github.com/ribafs/livros&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Meus projetos no GitHub - &lt;a href=&quot;https://github.com/ribafs?tab=repositories&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;https://github.com/ribafs?tab=repositories&lt;/a&gt; &lt;br /&gt;&lt;br /&gt;Caso tenha encontrado algum erro ou tenha alguma sugestão para melhorar qualquer um dos artigos, por favor acesse o item Contato em Sobre e me envie um e-mail.&lt;br /&gt;&lt;br /&gt;Muito grato.&lt;br /&gt;Ribamar FS, 12 de julho de 2017&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;</content>
+		<category term="Generica" />
+	</entry>
+</feed>

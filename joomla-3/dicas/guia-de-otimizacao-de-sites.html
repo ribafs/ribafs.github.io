@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br" dir="ltr">
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+                <!-- head -->
+        <base href="" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Ribamar FS" />
+	<meta name="description" content="Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros." />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>Guia de Otimização de Sites - RibaFS Portal</title>
+	<link href="http://ribafs.org/portal/joomla-3/dicas/guia-de-otimizacao-de-sites.html" rel="canonical" />
+	<link href="../../templates/shaper_helix3/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../../favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,300italic,regular,italic,600,600italic,700,700italic,800,800italic&amp;subset=latin" rel="stylesheet" type="text/css" />
+	<link href="http://fonts.googleapis.com/css?family=Amarante:regular&amp;subset=latin-ext" rel="stylesheet" type="text/css" />
+	<link href="../../cache/com_templates/templates/shaper_helix3/89f5542569bc2d8a7bb4667857dd5775.css" rel="stylesheet" type="text/css" />
+	<style type="text/css">
+body{font-family:Open Sans, sans-serif; font-size:16px; font-weight:normal; }h1{font-family:Open Sans, sans-serif; font-weight:800; }h2{font-family:Open Sans, sans-serif; font-weight:600; }h3{font-family:Open Sans, sans-serif; font-weight:normal; }h4{font-family:Open Sans, sans-serif; font-weight:normal; }h5{font-family:Open Sans, sans-serif; font-weight:600; }h6{font-family:Open Sans, sans-serif; font-weight:600; }.sp-megamenu-parent{font-family:Amarante, sans-serif; font-size:16px; font-weight:normal; }.sp-megamenu-parent > li.active > a, 
+.sp-megamenu-parent .sp-dropdown li.sp-menu-item.active > a { color: red; }
+#offcanvas-toggler > i { color: red !important; }
+#sp-top-bar{ background-color:#093d09;color:#999999; }#sp-top-bar a{color:#ceebe9;}#sp-header{ background-color:#54a859; }#sp-header a{color:#022e05;}#sp-page-title a{color:#e8f7f7;}#sp-main-body{ background-color:#fefffa; }
+	</style>
+	<script type="application/json" class="joomla-script-options new">{"csrf.token":"796296c0a9019553ed4bbba150ad5a40","system.paths":{"root":"\/portal","base":"\/portal"},"joomla.jtext":{"COM_COMMENT_PLEASE_FILL_IN_ALL_REQUIRED_FIELDS":"Favor preencher todos os campos obrigat\u00f3rios.","COM_COMMENT_ANONYMOUS":"An\u00f4nimo","JLIB_FORM_FIELD_INVALID":"Campo inv\u00e1lido:&#160;"},"system.keepalive":{"interval":840000,"uri":"\/portal\/component\/ajax\/?format=json"}}</script>
+	<script src="../../cache/com_templates/templates/shaper_helix3/b74bfabf7739a9fadfbbda80f713414b.js" type="text/javascript"></script>
+	<script type="text/javascript">
+jQuery(function($){ initTooltips(); $("body").on("subform-row-add", initTooltips); function initTooltips (event, container) { container = container || document;$(container).find(".hasTooltip").tooltip({"html": true,"container": "body"});} });jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+var sp_preloader = '0';
+
+var sp_gotop = '1';
+
+var sp_offanimation = 'default';
+
+	</script>
+	<meta property="og:url" content="http://backup/portal/joomla-3/dicas/guia-de-otimizacao-de-sites.html" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Guia de Otimização de Sites" />
+	<meta property="og:description" content="Com Foco em Joomla mas não somente De acordo com HubSpot, 80% do tráfego de um site começa com uma busca. É por isso que a otimização de sites (trabalhar c..." />
+
+            </head>
+
+    <body class="site com-content view-article no-layout no-task itemid-155 pt-br ltr  sticky-header layout-fluid off-canvas-menu-init">
+
+        <div class="body-wrapper">
+            <div class="body-innerwrapper">
+                <section id="sp-top-bar"><div class="container"><div class="row"><div id="sp-top1" class="col-sm-12 col-md-12"><div class="sp-column "><div class="sp-module "><div class="sp-module-content"><!-- https://www.clubedohardware.com.br/artigos/redes/colocando-um-mecanismo-de-busca-em-seu-site-r34327/ -->
+<FORM class="form-inline" method="GET" action="http://www.google.com/search">
+<div class="form-group">
+<input type="hidden" name="sitesearch" value="ribafs.github.io">
+<input style="height:20px" class="form-control" type="text" name="q" size="20" placeholder="Pesquisar...">
+</div>
+</FORM>
+
+</div></div><ul class="sp-contact-info"><li class="sp-contact-email"><i class="fa fa-envelope" aria-hidden="true"></i> <a href="mailto:ribafs@gmail.com">ribafs@gmail.com</a></li></ul></div></div></div></div></section><section id="sp-section-2"><div class="container"><div class="row"><div id="sp-top2" class="col-sm-12 col-md-12"><div class="sp-column "><div class="sp-module "><div class="sp-module-content">
+
+<div class="custom"  >
+	<p style="text-align: center;"><b>Don't you speak portuguese? Translate this site with <a href="https://translate.google.com/translate?hl=pt-BR&amp;sl=pt&amp;tl=en&amp;u=https://ribafs.org/portal" target="_blank" rel="noopener noreferrer">Google Translator </a></b></p></div>
+</div></div></div></div></div></div></section><header id="sp-header"><div class="container"><div class="row"><div id="sp-logo" class="col-xs-8 col-sm-2 col-md-2"><div class="sp-column "><h1 class="logo"> <a href="../../index.html">RibaFS Portal</a></h1></div></div><div id="sp-menu" class="col-xs-4 col-sm-10 col-md-10"><div class="sp-column ">			<div class='sp-megamenu-wrapper'>
+				<a id="offcanvas-toggler" class="visible-sm visible-xs" aria-label="Helix Megamenu Options" href="guia-de-otimizacao-de-sites.html#"><i class="fa fa-bars" aria-hidden="true" title="Helix Megamenu Options"></i></a>
+				<ul class="sp-megamenu-parent menu-fade hidden-sm hidden-xs"><li class="sp-menu-item"><a  href="../../index.html"  >Início</a></li><li class="sp-menu-item sp-has-child"><a  href="../../basicos.html"  >Básicos</a><div class="sp-dropdown sp-dropdown-main sp-menu-right" style="width: 240px;"><div class="sp-dropdown-inner"><ul class="sp-dropdown-items"><li class="sp-menu-item"><a  href="../../basicos/html.html"  >HTML</a></li><li class="sp-menu-item"><a  href="../../basicos/javascript.html"  >JavaScript</a></li><li class="sp-menu-item"><a  href="../../basicos/css.html"  >CSS</a></li><li class="sp-menu-item"><a  href="../../basicos/jquery.html"  >jQuery</a></li><li class="sp-menu-item"><a  href="../../basicos/bootstrap.html"  >Bootstrap</a></li><li class="sp-menu-item"><a  href="../../basicos/php.html"  >PHP</a></li><li class="sp-menu-item"><a  href="../../basicos/phpoo.html"  >PHPOO</a></li><li class="sp-menu-item"><a  href="../../basicos/pdo.html"  >PDO</a></li><li class="sp-menu-item"><a  href="../../basicos/ferramentas.html"  >Ferramentas</a></li><li class="sp-menu-item"><a  href="../../basicos/outros.html"  >Outros</a></li></ul></div></div></li><li class="sp-menu-item sp-has-child"><a  href="../../servidores.html"  >Servidores</a><div class="sp-dropdown sp-dropdown-main sp-menu-right" style="width: 240px;"><div class="sp-dropdown-inner"><ul class="sp-dropdown-items"><li class="sp-menu-item"><a  href="../../servidores/desktop.html"  >Desktop</a></li><li class="sp-menu-item"><a  href="../../servidores/ubuntu-server.html"  >Ubuntu Server</a></li><li class="sp-menu-item"><a  href="../../servidores/shell-scripts.html"  >Shell Scripts</a></li><li class="sp-menu-item"><a  href="../../servidores/servidor-web.html"  >Servidor Web</a></li><li class="sp-menu-item"><a  href="../../servidores/servidor-sgbd.html"  >Servidor SGBD</a></li><li class="sp-menu-item sp-has-child"><a  href="../../servidores/postgresql.html"  >PostgreSQL</a><div class="sp-dropdown sp-dropdown-sub sp-menu-right" style="width: 240px;"><div class="sp-dropdown-inner"><ul class="sp-dropdown-items"><li class="sp-menu-item"><a  href="../../servidores/postgresql/introducao-ao-postgresql.html"  >Introdução</a></li><li class="sp-menu-item"><a  href="../../servidores/postgresql/projeto.html"  >Projeto</a></li><li class="sp-menu-item"><a  href="../../servidores/postgresql/dimensionamento.html"  >Dimensionamento</a></li></ul></div></div></li></ul></div></div></li><li class="sp-menu-item sp-has-child active"><a  href="../../joomla-3.html"  >Joomla 3</a><div class="sp-dropdown sp-dropdown-main sp-menu-right" style="width: 240px;"><div class="sp-dropdown-inner"><ul class="sp-dropdown-items"><li class="sp-menu-item"><a  href="../introducao.html"  >Introdução</a></li><li class="sp-menu-item"><a  href="../seguranca.html"  >Segurança</a></li><li class="sp-menu-item"><a  href="../instalacao.html"  >Instalação do Joomla</a></li><li class="sp-menu-item"><a  href="../administracao.html"  >Administração</a></li><li class="sp-menu-item"><a  href="../extensoes.html"  >Extensões</a></li><li class="sp-menu-item"><a  href="../loja-simples.html"  >Loja Simples</a></li><li class="sp-menu-item current-item active"><a  href="../dicas.html"  >Dicas</a></li></ul></div></div></li><li class="sp-menu-item sp-has-child"><a  href="javascript:void(0);"  >Frameworks</a><div class="sp-dropdown sp-dropdown-main sp-dropdown-mega sp-menu-right" style="width: 600px;"><div class="sp-dropdown-inner"><div class="row"><div class="col-sm-6"><ul class="sp-mega-group"><li class="sp-menu-item sp-has-child"><a class="sp-group-title" href="../../frameworks/cakephp-3.html"  >CakePHP 3</a><ul class="sp-mega-group-child sp-dropdown-items"><li class="sp-menu-item"><a  href="../../frameworks/cakephp-3/introducao.html"  >Introdução</a></li><li class="sp-menu-item"><a  href="../../frameworks/cakephp-3/instalacao.html"  >Instalação</a></li><li class="sp-menu-item"><a  href="../../frameworks/cakephp-3/configuracoes.html"  >Configurações</a></li><li class="sp-menu-item"><a  href="../../frameworks/cakephp-3/convencoes.html"  >Convenções</a></li><li class="sp-menu-item"><a  href="../../frameworks/cakephp-3/tutoriais.html"  >Tutoriais</a></li><li class="sp-menu-item"><a  href="../../frameworks/cakephp-3/dicas.html"  >Dicas</a></li><li class="sp-menu-item"><a  href="../../frameworks/cakephp-3/seguranca.html"  >Segurança</a></li><li class="sp-menu-item"><a  href="../../frameworks/cakephp-3/mvc-no-cakephp-3.html"  >MVC no CakePHP 3</a></li></ul></li></ul></div><div class="col-sm-6"><ul class="sp-mega-group"><li class="sp-menu-item sp-has-child"><a class="sp-group-title" href="../../frameworks/laravel-5.html"  >Laravel 5</a><ul class="sp-mega-group-child sp-dropdown-items"><li class="sp-menu-item"><a  href="../../frameworks/laravel-5/introducao.html"  >Introdução</a></li><li class="sp-menu-item"><a  href="../../frameworks/laravel-5/instalacao.html"  >Instalação</a></li><li class="sp-menu-item"><a  href="../../frameworks/laravel-5/configuracoes.html"  >Configurações</a></li><li class="sp-menu-item"><a  href="../../frameworks/laravel-5/routes.html"  >Routes</a></li><li class="sp-menu-item"><a  href="../../frameworks/laravel-5/dicas.html"  >Dicas</a></li><li class="sp-menu-item"><a  href="../../frameworks/laravel-5/tutoriais.html"  >Tutoriais</a></li></ul></li></ul></div></div></div></div></li><li class="sp-menu-item sp-has-child"><a  href="../../mobile.html"  >Mobile</a><div class="sp-dropdown sp-dropdown-main sp-menu-right" style="width: 240px;"><div class="sp-dropdown-inner"><ul class="sp-dropdown-items"><li class="sp-menu-item"><a  href="../../mobile/introducao.html"  >Introdução</a></li><li class="sp-menu-item"><a  href="../../mobile/ambiente.html"  >Ambiente</a></li><li class="sp-menu-item"><a  href="../../mobile/phaser.html"  >Phaser</a></li><li class="sp-menu-item"><a  href="../../mobile/monaca.html"  >Monaca</a></li><li class="sp-menu-item"><a  href="../../mobile/phonegap.html"  >PhoneGap</a></li><li class="sp-menu-item"><a  href="../../mobile/app-inventor.html"  >App Inventor</a></li><li class="sp-menu-item"><a  href="../../mobile/unity-3d.html"  >Unity 3D</a></li><li class="sp-menu-item"><a  href="../../mobile/intel-xdk.html"  >Intel XDK</a></li><li class="sp-menu-item"><a  href="../../mobile/outros.html"  >Outros</a></li><li class="sp-menu-item"><a  href="../../mobile/dicas.html"  >Dicas</a></li></ul></div></div></li><li class="sp-menu-item sp-has-child"><a  href="../../blog.html"  >Blog</a><div class="sp-dropdown sp-dropdown-main sp-menu-right" style="width: 240px;"><div class="sp-dropdown-inner"><ul class="sp-dropdown-items"><li class="sp-menu-item"><a  href="../../blog/reflexoes.html"  >Reflexões</a></li><li class="sp-menu-item"><a  href="../../blog/saude.html"  >Saúde</a></li><li class="sp-menu-item"><a  href="../../blog/diversos.html"  >Diversos</a></li><li class="sp-menu-item"><a  href="../../blog/estudos.html"  >Estudos</a></li></ul></div></div></li><li class="sp-menu-item sp-has-child"><a  href="../../curriculo.html"  >Sobre</a><div class="sp-dropdown sp-dropdown-main sp-menu-right" style="width: 240px;"><div class="sp-dropdown-inner"><ul class="sp-dropdown-items"><li class="sp-menu-item"><a  href="https://github.com/ribafs?tab=repositories" rel="noopener noreferrer" target="_blank" >Projetos</a></li><li class="sp-menu-item"><a  href="../../curriculo/livros.html"  >Livros</a></li><li class="sp-menu-item"><a  href="../../curriculo/curriculo.html"  >Currículo</a></li><li class="sp-menu-item"><a  href="../../curriculo/contato.html"  >Contato</a></li><li class="sp-menu-item"><a  href="../../curriculo/mapa-do-site.html"  >Mapa</a></li></ul></div></div></li></ul>			</div>
+		</div></div></div></div></header><section id="sp-page-title"><div class="row"><div id="sp-title" class="col-sm-12 col-md-12"><div class="sp-column "></div></div></div></section><section id="sp-main-body"><div class="container"><div class="row"><div id="sp-left" class="col-sm-3 col-md-3"><div class="sp-column custom-class"><div class="sp-module "><h3 class="sp-module-title">Novidades</h3><div class="sp-module-content"><div class="latestnews">
+	<div itemscope itemtype="http://schema.org/Article">
+		<a href="../../blog/diversos/traducao-de-sites-de-forma-muito-simples.html" itemprop="url">
+			<span itemprop="name">
+				Tradução de sites de forma muito simples			</span>
+		</a>
+		<small>29 Agosto 2019</small>
+	</div>
+	<div itemscope itemtype="http://schema.org/Article">
+		<a href="../../servidores/desktop/recuperar-senha-do-root.html" itemprop="url">
+			<span itemprop="name">
+				Recuperar senha do root			</span>
+		</a>
+		<small>23 Agosto 2019</small>
+	</div>
+	<div itemscope itemtype="http://schema.org/Article">
+		<a href="../../blog/reflexoes/quer-ficar-rico.html" itemprop="url">
+			<span itemprop="name">
+				Quer ficar rico?			</span>
+		</a>
+		<small>19 Agosto 2019</small>
+	</div>
+	<div itemscope itemtype="http://schema.org/Article">
+		<a href="../../basicos/php/cuidado-com-floats-em-linguagens.html" itemprop="url">
+			<span itemprop="name">
+				Cuidado com floats em Linguagens			</span>
+		</a>
+		<small>19 Julho 2019</small>
+	</div>
+	<div itemscope itemtype="http://schema.org/Article">
+		<a href="../../servidores/servidor-web/setando-permissoes.html" itemprop="url">
+			<span itemprop="name">
+				Setando Permissões			</span>
+		</a>
+		<small>12 Julho 2019</small>
+	</div>
+</div>
+</div></div><div class="sp-module "><h3 class="sp-module-title">Pensamento do Dia</h3><div class="sp-module-content"><div>As pessoas são solitárias porque constroem paredes em vez de pontes. (Joseph F. Newton)
+</div>
+</div></div></div></div><div id="sp-component" class="col-sm-6 col-md-6"><div class="sp-column "><div id="system-message-container">
+	</div>
+
+
+<article class="item item-page" itemscope itemtype="http://schema.org/Article">
+	<meta itemprop="inLanguage" content="pt-BR" />
+	
+	
+
+	<div class="entry-header has-post-format">
+		<span class="post-format"><i class="fa fa-thumb-tack"></i></span>
+						<dl class="article-info">
+
+		
+			<dt class="article-info-term"></dt>	
+				
+							<dd class="createdby" itemprop="author" itemscope itemtype="http://schema.org/Person">
+	<i class="fa fa-user"></i>
+					<span itemprop="name" data-toggle="tooltip" title="Escrito por ">Ribamar FS</span>	</dd>			
+			
+							<dd class="category-name">
+	<i class="fa fa-folder-open-o"></i>
+				<a href="../dicas.html" itemprop="genre" data-toggle="tooltip" title="Categoria do Artigo">Dicas</a>	</dd>			
+			
+							<dd class="published">
+	<i class="fa fa-calendar-o"></i>
+	<time datetime="2017-09-21T12:56:37-03:00" itemprop="datePublished" data-toggle="tooltip" title="Data de Publicação">
+		21 Setembro 2017	</time>
+</dd>			
+		
+					
+			
+							<dd class="hits">
+	<span class="fa fa-eye"></span>
+	<meta itemprop="interactionCount" content="UserPageVisits:354" />
+	Acessos: 354</dd>					
+		
+
+	</dl>
+		
+					<h2 itemprop="name">
+									Guia de Otimização de Sites							</h2>
+												</div>
+
+						
+<div class="icons">
+	
+					<div class="btn-group pull-right">
+				<button class="btn dropdown-toggle" type="button" id="dropdownMenuButton-228" aria-label="Ferramentas de usuário"
+				data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					<span class="icon-cog" aria-hidden="true"></span>
+					<span class="caret" aria-hidden="true"></span>
+				</button>
+								<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton-228">
+											<li class="print-icon"> <a href="guia-de-otimizacao-de-sites.html@tmpl=component&amp;print=1&amp;layout=default.html" title="Imprimir o artigo < Guia de Otimização de Sites >" onclick="window.open(this.href,'win2','status=no,toolbar=no,scrollbars=yes,titlebar=no,menubar=no,resizable=yes,width=640,height=480,directories=no,location=no'); return false;" rel="nofollow">			<span class="icon-print" aria-hidden="true"></span>
+		Imprimir	</a> </li>
+																<li class="email-icon"> <a href="../../component/mailto/index.html@tmpl=component&amp;template=shaper_helix3&amp;link=b1436a201bb07a26ff0dd5ca10c85f58141da072.html" title="Envie este link a um amigo" onclick="window.open(this.href,'win2','width=400,height=450,menubar=yes,resizable=yes'); return false;" rel="nofollow">			<span class="icon-envelope" aria-hidden="true"></span>
+		Email	</a> </li>
+														</ul>
+			</div>
+		
+	</div>
+				
+	
+	
+				
+	
+			<div itemprop="articleBody">
+		<h2>Com Foco em Joomla mas não somente</h2>
+
+<p>De acordo com HubSpot, 80% do tráfego de um site começa com uma busca. É por isso que a otimização de sites (trabalhar com SEO) é tão importante.<br /><br />Você examina de perto o desempenho geral do site, em seguida, define e implementa novas metas com base no seu exame.<br /><br /><strong>Otimizar seções do Site</strong><br /><a href="https://www.quicksprout.com/">https://www.quicksprout.com/</a> <br /><br /><strong>Sugestões do QuicksProut:</strong><br /><br />- Refazer o título do site para que o tamanho fique entre 15 e 65 caracteres: Canto do cake, laravel, joomla, postgresql, servidores, etc. <br />- Incluir pelo menos uma das palavras chaves do conteúdo do site: cakephp, joomla, laravel, postgresql, etc.<br />- Sidebar: refazer o h2 do sidebar com 15-65 para conter pelo menos uma das palavras chaves do conteúdo: Aqui encontrará cakephp, laravel, joomla, servidores, etc<br />- Refazer o H2 do artigo Boas Vindas para que contenha de 15-65 pelo menos uma das palavras chaves do conteúdo:<br /> Boas Vindas ao Cantinho do Cake, Joomla, PostgreSQL, Laravel, etc.<br />Assim proceder com o H3 de: Novidades, Populares, Pensamento do Dia<br /><br /><strong>Usar apenas um único H1 por página.</strong><br /><br /><strong>Básicos:</strong><br />- Contratar um bom serviço de hospedagem, de preferência com discos SSD para que seja mais rápido.<br />- Evite serviços limitados, com limitada taxa de transferência, que pode chegar a deixar o visitante sem acesso ao site<br />- Entre outras boas características de uma boa hospedagem.<br /><br />Um dos maiores desafios que blogueiros e profissionais de marketing de conteúdo encaram é escrever conteúdo que é otimizado para os mecanismos de busca, e que seja também atrativo para as pessoas.<br /><br />Seu conteúdo precisa ser acompanhado de dois objetivos: primeiro, ter apelo para o usuário final (consumidores, clientes, prospects, leitores, etc.) e segundo, resolver um problema em particular.<br /><br />SEO é um método de otimizar (melhorar a efetividade de) seu conteúdo para os mecanismos de busca de maneira a ajudá-lo a ter uma classificação mais elevada do que o conteúdo dos outros sites que tem como alvo os mesmos termos de busca.<br /><br />Google exibe páginas da web em seus resultados de pesquisa com base na autoridade e relevância da página. E como medir autoridade e relevância?<br /><br />O Google determina a relevância da sua página analisando seu conteúdo com base em vários fatores, incluindo onde e quantas vezes você usa certas palavras e em que parte do conteúdo.<br /><br />O Google mede autoridade pelo número de links que apontam para aquela página e quão confiável esses links são.<br /><br />Quem ajuda a conduzir o usuário a tomar alguma decisão? Um redator (copywriter) o faz. Um redator é um profissional habilidoso que escreve textos para publicidade, promoções e textos que se conectam com o consumidor. No mundo do marketing, eles frequentemente são chamados de “criativos.”<br /><br />Um redator é alguém que entende as pessoas, sabe o que sua audiência gosta, e escolhe as palavras que trarão apelo a eles. O título, palavras, frases, sentenças e parágrafos usados no conteúdo tem que persuadir e influenciar os leitores a tomarem alguma decisão.<br /><br />As tags de título são elementos importantes de SEO (otimização de sites) e devem ser criadas corretamente. São básicas e compatíveis com os padrões HTML, razão pela qual o Google espera vê-las no seu site.<br /><br />Se você quer construir um negócio online próspero e sobreviver nesse mundo de SEO em constante mudança, seu trabalho é criar conteúdo útil que seja interessante, persuasivo, e bem otimizado para os mecanismos de busca — e você tem que fazer isso de maneira consistente.<br /><br />Alguns elementos de conteúdo valioso, como utilizar um visual interessante, são marcas de um bom copywriting.<br /><br /><strong>Velocidade do site</strong><br />Um estudo da Akamai revelou estas estatísticas:<br /><br />    40% das pessoas irão abandonar a página se ela demorar mais do que 3 segundos para carregar completamente.<br />    47% dos usuários finais esperam que a página carregue em até dois segundos ou menos.<br /><br />Se o carregamento da sua página está com mais de 2 segundos, que é o padrão de carregamento para sites, então você deveria fazer algumas coisas para melhorar.<br /><br /><strong>Medir a Velocidade do Site: (1,61s)</strong><br /><a href="https://tools.pingdom.com/">https://tools.pingdom.com/</a> <br /><br /><strong>Título</strong><br /><br />Seu conteúdo precisa ser valioso, mas se seu título é medíocre, sua taxa de cliques será baixa.<br />As pessoas leem os títulos cinco vezes mais do que o conteúdo.<br />No SEO copywriting, seu título deveria atrair a atenção das pessoas e então impulsioná-las a clicarem e lerem mais.<br />Via de regra escreva seu título antes de ir para o corpo do artigo ou post do blog.<br />Títulos com números são sempre mais vencedores.<br /><br />Se você quer que seu título inteiro seja visível nos mecanismos de busca, mantenha-o abaixo de 72 caracteres. Isso também fará com que seu CTR (click-through rates) aumente.<br /><br /><strong>Conteúdo</strong><br />A razão principal que faz as pessoas pesquisarem por algo no Google e nos outros mecanismos de busca é que elas estão procurando por conteúdo de qualidade. Mecanismos de busca também se alimentam de novos conteúdos, e é por isso que você deve atualizar seu site constantemente.<br /><br />Se você quer escrever o melhor conteúdo que irá ter uma boa classificação no Google, você tem que usar as palavras-chave corretas. Evite usar palavras-chave em excesso (stuffing keywords) e exagerar na otimização (over-optimization). Coloque a palavra-chave em seu título, mas se certifique-se que a frase fique suave para os leitores.<br /><br />A atualização do Google Panda 4.1 foi desenhada para penalizar conteúdos “magros” (thin contents) ou superficiais, mantendo-os fora da classificação mais alta do Google. Um post de um blog ou artigo deveria ter pelo menos 1.000 palavras.<br /><br />Cada parte do conteúdo que você escreve precisa de uma introdução convidativa. A introdução é a parte que vem depois do título (e sub-título se você usa em seu conteúdo). Sua introdução deveria conter pelo menos uma das suas palavras-chave direcionadas.<br /><br /><strong>MetaTags do Artigo</strong><br /><br />Antes de escrever seu conteúdo e publicá-lo, use a meta descrição para te ajudar nos mecanismos de busca. Meta descrição ajuda os mecanismos de busca e os usuários a entenderem qual é o assunto e por que suas palavras-chave e frases continuam aparecendo durante o conteúdo. Nos artigos do Joomla ficam na aba Opções de Publicação<br /><br />Google usa a meta descrição na sua página como um resumo quando as pessoas pesquisam por palavras-chave que sejam relevantes para sua página. Este resumo do texto é o que vai determinar se você vai conseguir cliques ou não, não importa o quanto você esteja bem classificado nos resultados de busca.<br /><br />Para o propósito de SEO copywriting, a meta descrição deveria ter entre 150 – 160 caracteres.<br /><br /><strong>Sua meta descrição tem que ser relevante e atrativa para eles.</strong><br /><br /><strong>Links nas Páginas</strong><br />Links nas páginas dizem ao Google que você é conectado e sociável, e que você está usando conteúdo útil que as pessoas podem acessar de algum lugar. Esse conteúdo poderia ser próprio, ou de algum outro site.<br /><br /><strong>Recomendações:</strong><br />    Usar link interno e externo para lugares relevantes na sua introdução<br />    Ter links para mais conteúdos aprofundados no assunto, tanto em sua página como em outras<br />    Usar link com um texto âncora apropriado, que flua naturalmente dentro do conteúdo<br /><br />Moz diz que o formato ideal para seu título é: Palavra-chave Primária – Palavra-chave Secundária | Marca<br /><br />Se você puder colocar a história da sua marca dentro de um post no blog, artigo, ou vídeo, você vai atrair mais atenção.<br /><br /><strong>Humor</strong>: Uma das razões por que você deveria escrever com humor é manter o leitor/audiência engajados. Você pode também usar o humor para simplificar um assunto que seja desconfortável ou controverso.<br /><br /><strong>Criar confiança na marca através de avaliações dos clientes</strong><br /><br />Antes de escrever posts ou artigos, Vivian Giang recomenda uma lista de 3 or 4 benefícios fortes que você precisa oferecer. Isso é muito importante, e te ajuda a criar um cabeçalho e parágrafos poderosos.<br /><br />Tenha um propósito claro: Ser claro com seu texto, post e mensagem é muito importante.<br /><br />Pesquise dados precisos que sejam relevantes para seu assunto.<br /><br /><strong>SEO</strong><br />nem todo site bom para usuário é bom para SEO, mas a maioria dos sites bons para SEO também é boa para o usuário. Só se faz bem SEO pensando bem no usuário.<br /><br />SEO consiste em colocar-se no lugar de um buscador e compreender quais critérios ele usa para avaliar e como avalia de fato um site/página e assim criar o site.<br /><br /><strong>Conteúdo</strong><br />O Google gosta mesmo de conteúdo em texto, bem explicado, bem desenvolvido.<br /><br /><strong>Links/Referências</strong><br />Outra coisa muito curiosa, e que está no coração do Google, é a maneira de avaliar a qualidade de um site ou página em relação aos links recebidos. Mais uma vez, no mundo acadêmico a relevância de um autor é medida geralmente por quantas vezes suas teses, monografias e papers são citados. Uau, a mesma coisa que faz um site ficar bem posicionado!<br /><br /><strong>Otimizar o Site</strong><br /><br />Por que otimizar nossos Sites é tão importante? Simplesmente porque nenhum usuário gosta de perder tempo esperando o carregamento das páginas. É extremamente irritante. E isso tem graves consequências, como mostram esses estudos:<br /><br />O Yahoo! descobriu que, para cada 400ms de melhora na performance, seu tráfego aumenta em 9% (fonte). <br />Ao cortar 2,2s da landing page do Firefox, a Mozilla aumentou o número de downloads em 15%, totalizando um ganho de mais de 60 milhões de cópias por ano (fonte). <br /><br />A Amazon concluiu que apenas 100ms de melhora aumentam 1% seu faturamento (fonte). <br />Em um de seus vários experimentos, o Google aumentou o número de resultados por página de 10 para 30. Isso aumentou o tempo de carregamento de 0.4s para 0.9s, o que diminuiu em 20% o tráfego das buscas (fonte). <br /><br />A Microsoft mostrou que 2s a mais de latência no Bing diminuíam o faturamento em 4,3% (fonte). <br />Em um experimento, a Caelum subiu o tamanho de sua página de 100kb para 300kb, aumentando o número de requests de 12 para 42, o que resultou em um crescimento no tempo de carregamento de 2s para 6s. Os impactos foram queda de 21% no tempo que os usuários ficam no Site, menos 28% pageviews e uma queda de 18% no conversion rate. <br /><br />Há diversos outros experimentos publicados, incluindo um estudo que mostra uma relação entre sites lentos e queda da pressão arterial (fonte). <br /><br />Minificar CSS e JS<br />Otimizar imagens<br />Habilitar gzip<br />Comprimir HTML<br />Reduzir cookies e headers<br />Fundir arquivos JS<br />Fundir arquivos CSS<br />Usar sprites de imagens<br />Especifique o tamanho das imagens<br />Use o JS no final da página<br />Use o CSS no topo<br />Use ferramentas de diagnóstico<br />Escreva código eficiente<br /><br /><br />Usar web analitics para medir o impacto das otimizações<br /><br /><strong>Instalar a extensão SEO Doctor</strong><br /><br /><strong>Conteúdo de Artigos:</strong><br /><br />Título (H1, automático pelo template)<br />Subtítulo (H2). Este não deve repetir o título, mas complementá-lo<br />Conteúdo do artigo<br /><br />Seus usuários ideais de um produto ou serviço dão um feedback, que então determina que tipo de novo conteúdo você irá criar para melhor atendê-los.<br /><br />As opiniões dos seus usuários contam. O público determina quais ideias, artigos, produtos ou conceitos serão investidos ou compartilhados.<br /><br /><strong>Pesquisa de mercado:</strong><br /><a href="https://www.quora.com/">https://www.quora.com/</a> <br /><a href="https://ubersuggest.io/">https://ubersuggest.io/</a> <br /><a href="https://ahrefs.com/">https://ahrefs.com/</a> <br /><br /><strong>Estatísticas de Sites</strong><br /><a href="http://www.webpagetest.org/">http://www.webpagetest.org/</a> <br /><br /><strong>Analisar os assuntos mais populares do site</strong><br /><br />Enquanto você responder a perguntas dos usuários com o seu conteúdo, seu tráfego de busca irá melhorar e também sua taxa de conversão.<br /><br />Criação de landing pages (páginas de promoção de um conteúdo/produto/serviço):<br />O conteúdo deve ter mais de 2000 palavras, porque isso é o que é preciso para provar ao Google que sua página é valiosa e merece uma boa classificação nas buscas.<br /><br />O conteúdo da sua landing page tem que  ser útil. Escreva para persuadir as pessoas a dar o próximo passo, porque esse é o objetivo número 1 de todo texto de vendas convincente: levá-lo a ler a frase seguinte.<br /><br />O <strong>“Design é o rei“</strong>, diz Derek Halpern. Se o seu conteúdo é útil, mas seu design é uma porcaria, você provavelmente vai falhar.<br /><br />Links ainda são um grande fator de ranking do Google no que diz respeito à otimização de sites. Sem links de qualidade, a página pode não classificar bem nos rankings, mesmo se você tiver um texto excelente.<br /><br /><strong>Faça seu Site Responsivo e Otimizado para Dispositivos Móveis</strong><br />Você pode aumentar seu tráfego de pesquisa, visando usuários móveis. Nos últimos dois anos, as consultas de busca móvel tiveram uma taxa de crescimento de 5x.<br /><br />Mais pessoas agora usam seus dispositivos móveis para acessar a web. Quatro em cada cinco consumidores usam smartphones para fazer compras.<br /><br />Os usuários de dispositivos móveis são compradores ardentes, talvez porque eles podem fazer compras em qualquer lugar.<br /><br />Outra razão para realizar a otimização de sites para dispositivos móveis, é que o Google penaliza sites que não são responsivos.<br /><br />Há muito potencial num infográfico na otimização de sites. Quando você cria informações visuais de alta qualidade, você aumenta o seu tráfego web.<br /><br />Por que os usuários de busca e consumidores preferem infográficos na hora de realizar a otimização de sites?<br /><br />É porque o cérebro humano processa dados visuais 60.000 vezes mais rápido do que texto. Além disso, 65% dos usuários são aprendizes visuais. E também, 90% da informação transmitida ao cérebro humano é visual.<br /><br /><strong>Criação de infográficos:</strong><br /><a href="https://visual.ly/">https://visual.ly/</a> <br /><a href="http://www.hongkiat.com/blog/infographic-tools/">http://www.hongkiat.com/blog/infographic-tools/</a> <br /><a href="http://www.modernmarketingpartners.com/top-20-free-infographic-directories-and-submission-tips/">http://www.modernmarketingpartners.com/top-20-free-infographic-directories-and-submission-tips/</a> <br /><br />Pegue dados do seu infográfico e transforme-o em um artigo detalhado para acompanhar o gráfico.<br /><br />Um dos fatores que o Google considera ao classificar páginas da web é a Indexação semântica latente (LSI).<br /><br />LSI é uma técnica de indexação e recuperação (otimização de sites) que usa uma fórmula matemática para identificar padrões num determinado parágrafo de texto.<br /><br />O objetivo do uso LSI na otimização de sites é para dizer ao rastreador do Google para indexar seu conteúdo com base em sua intenção. LSI na otimização de sites irá essencialmente deixar seus rankings à prova de balas e entregar resultados significativos para você.<br /><br />Google espera que você mencione Bill Gates quando você está escrevendo sobre Microsoft Windows, ou “mídia social” quando você menciona Facebook e Twitter.<br /><br />Excesso de palavras-chave é quando você insere uma enorme quantidade de palavras-chave e frases que se relacionam com a palavra-chave principal. É uma má prática de SEO que você deve evitar a todo custo.<br /><br />Crie uma apresentação sobre um assunto no SlideShare e mostre ao final ou em cada seção que couber, links para seu site.<br /><br />Não deixe que suas páginas de arquivos fiquem esquecidas. Comece identificando as melhores páginas de arquivos e a criar melhores conteúdos, com base em tendências e desenvolvimentos recentes. Seu tráfego de busca irá aumentar dramaticamente.<br /><br />Escreva um título compartilhável: O passo mais crítico de todos é escrever um título que irá inspirar as pessoas a compartilharem o seu post.<br /><br />Um blog é uma poderosa ferramenta de marketing para sua marca. De acordo com Search Engine People, blogs estão entre as cinco fontes de informações mais confiáveis online. E 82% dos consumidores gostam de ler conteúdos relevantes de marcas.<br /><br />Talvez seja porque, pela sua própria natureza, blogs fornecem um toque pessoal não encontrado em outro lugar.<br /><br /><strong>Referências:</strong><br /><a href="https://neilpatel.com/br/blog/10-tecnicas-avancadas-de-seo-que-vao-dobrar-seu-trafego-de-busca/">https://neilpatel.com/br/blog/10-tecnicas-avancadas-de-seo-que-vao-dobrar-seu-trafego-de-busca/</a> <br /><a href="https://neilpatel.com/br/blog/seo-copywriting-como-escrever-conteudo-para-as-pessoas-e-otimizar-para-o-google/">https://neilpatel.com/br/blog/seo-copywriting-como-escrever-conteudo-para-as-pessoas-e-otimizar-para-o-google/</a> <br /><a href="https://www.quicksprout.com/university/how-to-use-heading-tags-to-get-more-search-engine-traffic/">https://www.quicksprout.com/university/how-to-use-heading-tags-to-get-more-search-engine-traffic/</a> <br /><a href="http://www.searchenginejournal.com/14-best-paid-search-seo-tools/118689/">http://www.searchenginejournal.com/14-best-paid-search-seo-tools/118689/</a> <br /><a href="https://www.quicksprout.com/2013/12/02/how-to-grow-your-blog-to-100000-visits-a-month-in-18-months/">https://www.quicksprout.com/2013/12/02/how-to-grow-your-blog-to-100000-visits-a-month-in-18-months/</a> <br /><a href="http://youzign.com/blog/how-to-increase-blog-traffic-using-infographics/">http://youzign.com/blog/how-to-increase-blog-traffic-using-infographics/</a> <br /><a href="http://neilpatel.com/wp-content/uploads/2015/07/SEO-Copywriting.pdf">http://neilpatel.com/wp-content/uploads/2015/07/SEO-Copywriting.pdf</a> <br /><a href="https://moz.com/beginners-guide-to-seo">https://moz.com/beginners-guide-to-seo</a> <br /><a href="https://www.quicksprout.com/the-advanced-guide-to-seo/">https://www.quicksprout.com/the-advanced-guide-to-seo/</a> <br /><a href="https://www.madfishdigital.com/blog/case-study-usability-study-audit-results-30-increase-job-application-interest/">https://www.madfishdigital.com/blog/case-study-usability-study-audit-results-30-increase-job-application-interest/</a> <br /><a href="https://moz.com/blog/visual-guide-to-keyword-targeting-onpage-optimization">https://moz.com/blog/visual-guide-to-keyword-targeting-onpage-optimization</a> <br /><a href="https://www.crazyegg.com/blog/speed-up-your-website/">https://www.crazyegg.com/blog/speed-up-your-website/</a> <br /><a href="http://conversionxl.com/11-low-hanging-fruits-for-increasing-website-speed-and-conversions/">http://conversionxl.com/11-low-hanging-fruits-for-increasing-website-speed-and-conversions/</a> <br /><a href="http://backlinko.com/google-ranking-factors">http://backlinko.com/google-ranking-factors</a> <br /><a href="https://www.conversion.com.br/otimizacao-de-sites-seo/">https://www.conversion.com.br/otimizacao-de-sites-seo/</a> <br /><a href="https://www.conversion.com.br/blog/o-que-page-layout-muda-em-seo/">https://www.conversion.com.br/blog/o-que-page-layout-muda-em-seo/</a> <br /><a href="http://blog.caelum.com.br/por-uma-web-mais-rapida-26-tecnicas-de-otimizacao-de-sites/">http://blog.caelum.com.br/por-uma-web-mais-rapida-26-tecnicas-de-otimizacao-de-sites/</a> </p>
+
+<p> </p> 	</div>
+
+	
+	
+	<ul class="pager pagenav">
+	<li class="previous">
+		<a class="hasTooltip" title="Melhores práticas para um site mais rápido" aria-label="Artigo anterior: Melhores práticas para um site mais rápido" href="site-mais-rapido.html" rel="prev">
+			<span class="icon-chevron-left" aria-hidden="true"></span> <span aria-hidden="true">Ant</span>		</a>
+	</li>
+	<li class="next">
+		<a class="hasTooltip" title="Atualizar Site em Joomla para outra Versão" aria-label="Próximo artigo: Atualizar Site em Joomla para outra Versão" href="atualizar-site-joomla.html" rel="next">
+			<span aria-hidden="true">Próximo</span> <span class="icon-chevron-right" aria-hidden="true"></span>		</a>
+	</li>
+</ul>
+				
+	
+	<script type="text/x-template" id="ccomment-pagination">
+	<nav class="pagination text-center" v-if="pagination.last_page > 0">
+		<ul >
+			<li v-if="showPrevious()" :class="{ 'disabled' : pagination.current_page <= 1 }">
+				<span v-if="pagination.current_page <= 1">
+					<span aria-hidden="true">Ant</span>
+				</span>
+				<a href="guia-de-otimizacao-de-sites.html#" v-if="pagination.current_page > 1 " :aria-label="config.ariaPrevioius"
+				   @click.prevent="changePage(pagination.current_page - 1)">
+					<span aria-hidden="true">Ant</span>
+				</a>
+			</li>
+			<li v-for="num in array" :class="{ 'active': num === pagination.current_page }">
+				<a href="guia-de-otimizacao-de-sites.html#" @click.prevent="changePage(num)">{{ num }}</a>
+			</li>
+			<li v-if="showNext()"
+			    :class="{ 'disabled' : pagination.current_page === pagination.last_page || pagination.last_page === 0 }">
+				<span v-if="pagination.current_page === pagination.last_page || pagination.last_page === 0">
+					<span aria-hidden="true">Próximo</span>
+				</span>
+				<a href="guia-de-otimizacao-de-sites.html#" v-if="pagination.current_page < pagination.last_page" :aria-label="config.ariaNext"
+				   @click.prevent="changePage(pagination.current_page + 1)">
+					<span aria-hidden="true">Próximo</span>
+				</a>
+			</li>
+		</ul>
+	</nav>
+</script>
+	<script type="text/x-template" id="ccomment-avatar">
+		<div class="ccomment-avatar">
+			<a v-if="profileLink" v-bind:href="profileLink">
+				<img v-bind:src="avatar"/>
+			</a>
+			<img v-else v-bind:src="avatar"/>
+		</div>
+	</script>
+
+	<script type="text/x-template" id="ccomment-user-name">
+		<a v-if="profileLink" :href="profileLink">
+			<span class="ccomment-author">{{name}}</span>
+		</a>
+		<span v-else class="ccomment-author">{{name}}</span>
+	</script>
+
+	<script type="text/x-template" id="ccomment-created">
+		<a :href="'#!/ccomment-comment=' + id" class="muted ccomment-created">
+			{{date}}
+		</a>
+	</script>
+
+	<div id="ccomment-token" style="display:none;">
+		<input type="hidden" name="796296c0a9019553ed4bbba150ad5a40" value="1" />	</div>
+
+	
+<script type="text/x-template" id="ccomment-customfields">
+	<div class="ccomment-customfields" v-if="customfields">
+		<strong>Campos personalizados</strong>
+		<dl class="dl-horizontal">
+			<template v-for="customfield in customfields">
+				<dt>{{customfield.title}}</dt>
+				<dd>{{customfield.value}}</dd>
+			</template>
+		</dl>
+	</div>
+</script>
+
+<script type="text/x-template" id="ccomment-template">
+	<li v-bind:class="model.class+' ccomment-level-'+model.level">
+		<div class="ccomment-comment-content" v-bind:id="'ccomment-comment-'+model.id">
+			<div class="ccomment-data">
+									<ccomment-avatar
+							v-bind:avatar="model.avatar"
+							v-bind:profileLink="model.profileLink"/>
+								<div class="ccomment-content">
+					<div class="ccomment-meta">
+						<ccomment-user-name v-bind:name="model.name" v-bind:profileLink="model.profileLink"></ccomment-user-name>
+						<ccomment-created v-bind:date="model.date" v-bind:id="model.id"></ccomment-created>
+					</div>
+
+					<div v-html="model.comment">
+					</div>
+
+
+					<div v-if="model.galleria" class="js-ccomment-galleria galleria ccomment-galleria"></div>
+
+					<ccomment-customfields v-bind:customfields="model.customfields"></ccomment-customfields>
+					<div class="ccomment-actions">
+													<span class="muted">
+					{{model.votes}}
+					<i class="ccomment-thumbs-up ccomment-voting" v-on:click="vote(+1, model.id)"></i>
+					<i class="ccomment-thumbs-down ccomment-voting" v-on:click="vote(-1, model.id)"></i>
+				</span>
+						
+													<button class="btn btn-small ccomment-quote btn-link" v-on:click="quote(model.id)">
+								Citar							</button>
+						
+						
+						<div class="pull-right ccomment-moderation">
+							<button v-if="model.commentModerator" class="btn btn-mini btn-ccomment-edit" v-on:click="edit(model.id)">
+								Editar							</button>
+
+													</div>
+					</div>
+				</div>
+			</div>
+
+
+			<keep-alive>
+				<ccomment-form v-if="reply" :ref="'form-'+model.id" v-bind:focus="true">
+					<input slot="parent-id" name="jform[parentid]" type="hidden" v-bind:value="model.id"/>
+				</ccomment-form>
+			</keep-alive>
+		</div>
+
+		<ul v-if="hasChildren">
+			<ccomment-comment class="item" v-for="model in getChild()" v-bind:key="model.id" v-bind:model="model">
+			</ccomment-comment>
+		</ul>
+	</li>
+
+</script>
+	
+	
+
+		<script type="text/x-template" id="ccomment-form">
+			<form class="ccomment-form" v-on:submit.prevent="onSubmit">
+				<div class="ccomment-error-form row-fluid  margin-bottom" v-if="error">
+					<div class="alert alert-error">
+						{{errorMessage}}
+					</div>
+				</div>
+				<div class="ccomment-info-form row-fluid  margin-bottom" v-if="info">
+					<div class="alert alert-info">
+						{{infoMessage}}
+					</div>
+				</div>
+				<div class="row-fluid margin-bottom">
+											<div class="span1 hidden-phone">
+							<ccomment-avatar v-bind:avatar="getAvatar"></ccomment-avatar>
+						</div>
+					
+					<div class="span11">
+						<textarea v-on:focus="toggle"
+								  name="jform[comment]"
+								  class='js-ccomment-textarea ccomment-textarea span12 required'
+								  placeholder="Deixe um comentário"
+						></textarea>
+
+						<div v-show="uploadImage">
+							
+<div class="fileupload">
+	<!-- The fileupload-buttonbar contains buttons to add/delete files and start/cancel the upload -->
+	<div class="row fileupload-buttonbar">
+		<input type="file" name="files[]" class="js-ccomment-file-upload-real ccomment-file-upload-real" multiple/>
+		<div class="">
+			<!-- The global file processing state -->
+			<span class="fileupload-process"><span class="fa fa-spinner fa-pulse"></span></span>
+			Attach images by dragging & dropping or <span type="button" class="js-file-upload-fake ccomment-file-upload-fake btn-link"> by selecting them.</span>			<br/>
+			<small class="muted">The maximum file size for uploads is <strong>MB</strong>.				Only <strong></strong> files are allowed.</small>
+
+			<!-- The global progress state -->
+			<div class="fileupload-progress fade hide">
+				<!-- The global progress bar -->
+				<div class="progress progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+					<div class="progress-bar progress-bar-success" style="width:0%;"></div>
+				</div>
+				<!-- The extended global progress state -->
+				<div class="progress-extended">&nbsp;</div>
+			</div>
+			<div class="ccomment-file-list">
+				<div class="alert alert-error hide compojoom-max-number-files">
+					The maximum number of 3 allowed files to upload has been reached. If you want to upload more files you have to delete one of the existing uploaded files first.				</div>
+				<table role="presentation" class="table table-striped">
+					<thead></thead>
+					<tbody class="files"></tbody>
+				</table>
+				<div class="alert alert-error hide compojoom-max-number-files">
+					The maximum number of 3 allowed files to upload has been reached. If you want to upload more files you have to delete one of the existing uploaded files first.				</div>
+			</div>
+		</div>
+	</div>
+</div>
+						</div>
+
+						<div v-show="active">
+							<div class="span4 muted small">
+								Postando como																	<button type="button"
+											v-on:click="display = !display"
+											class="btn-link btn-small ccomment-posting-as">{{getDefaultName}}
+									</button>
+															</div>
+															<label class="checkbox pull-right small ccomment-notify">
+									<input type="checkbox" value="1" name="jform[notify]ƒ"
+										   v-on:click="notify = !notify"/>
+									<span class="muted">
+										Notificar-me de futuros comentários via e-mail									</span>
+								</label>
+							
+
+						</div>
+					</div>
+											<div v-show="display"
+							 class="row-fluid ccomment-user-info offset1					span11">
+							<div class="span6">
+								<input name="jform[name]"
+									   class="ccomment-name span12 no-margin "
+									   type='text'
+									   v-bind:value="getName"
+									   v-on:input="updateDefaultName"
+																			   placeholder="Informe seu nome"
+									   tabindex="2"
+																	/>
+								<span class="help-block pull-right small muted">
+								Exibido ao lado de seus comentários.							</span>
+							</div>
+
+															<div class="span6">
+									<input name='jform[email]'
+										   class="ccomment-email span12 no-margin "
+										   type='text'
+										   v-bind:value='getEmail'
+										   v-on:input="updateUserEmail"
+										   placeholder="Informe seu email"
+																				   tabindex="3"
+																			/>
+									<p class="help-block small pull-right muted">
+										Não exibido publicamente.																					<span class='gravatar'>
+											<a href='http://gravatar.com' target='_blank'>Gravatar</a> habilitado										</span>
+																			</p>
+								</div>
+													</div>
+					
+
+					
+					
+
+					<div class="row-fluid ccomment-actions" v-show="active">
+													<div class="pull-left muted small ccomment-undergo-moderation offset1">
+								Comentários serão submetidos a moderação antes de serem publicados.							</div>
+												<div class="pull-right">
+							<button v-on:click="reset()"
+									type="button"
+									class="btn ccomment-cancel">
+								Cancelar</button>
+							<button type="submit" class='btn btn-primary ccomment-send'
+									tabindex="7"
+									name='bsend'>
+								<span v-if="isSending">
+									Salvando...								</span>
+								<span v-else>
+									Enviar								</span>
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<input type="hidden" name="jform[contentid]" v-bind:value="itemConfig.contentid"/>
+				<input type="hidden" name="jform[component]" v-bind:value="itemConfig.component"/>
+				<input type="hidden" name="jform[page]" v-bind:value="page"/>
+				<slot name="parent-id"></slot>
+			</form>
+		</script>
+
+	
+
+
+
+
+<!-- The template to display files available for upload -->
+<script id="template-upload" type="text/x-tmpl">
+{% for (var i=0, file; file=o.files[i]; i++) { %}
+    <tr class="template-upload fade">
+        <td>
+            <span class="preview"></span>
+        </td>
+        <td>
+         <span class="name"><i>{%=file.name%}</i></span>
+            <div class="compojoom-single-file-progress">
+	            <div class="progress progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+	                <div class="progress-bar progress-bar-success" style="width:0%;"></div>
+	            </div>
+	           <small><strong class="size">Processing...</strong></small>
+			</div>
+        </td>
+        <td>
+            {% if (!i && !o.options.autoUpload) { %}
+                <button class="btn btn-default btn-xs start" disabled>
+                    <i class="fa fa-upload"></i>
+                    <span>Start</span>
+                </button>
+            {% } %}
+            {% if (!i) { %}
+                <button class="btn btn-default btn-xs btn-xs cancel pull-left">
+                    <i class="fa fa-stop"></i>
+                    <span>Cancel</span>
+                </button>
+            {% } %}
+        </td>
+    </tr>
+{% } %}
+</script>
+
+<!-- The template to display files available for download -->
+<script id="template-download" type="text/x-tmpl">
+{% for (var i=0, file; file=o.files[i]; i++) { %}
+    <tr class="template-download fade">
+        <td style="">
+        {% if (file.thumbnailUrl) { %}
+            <span class="preview">
+                {% if (file.url) { %}
+					<a href="http://backup/portal/{%=file.url%}" title="{%=file.name%}" download="{%=file.name%}" data-gallery>
+						<img src='http://backup/portal/joomla-3/dicas/{%=file.thumbnailUrl%}'>
+					</a>
+				{% } else { %}
+					<img src='http://backup/portal/joomla-3/dicas/{%=file.thumbnailUrl%}'>
+				{% } %}
+            </span>
+		{% } %}
+        </td>
+        <td>
+        {% if (!file.error) { %}
+	        <div class="file-meta">
+			    <div class="row">
+			        <div class="col-lg-4">
+			           <input type="text" class="form-control"
+			                placeholder="Title"
+							name="jform[picture_data][{%=file.name%}][title]"
+					        value="{%=file.title%}" />
+			        </div>
+			        <div class="col-lg-8">
+			            <input type="text" placeholder="Description" class="form-control"
+					                name="jform[picture_data][{%=file.name%}][description]"
+
+					                value="{%=file.description%}" />
+			        </div>
+			    </div>
+	        </div>
+		 {% } %}
+        {% if (file.error) { %}
+            <div><span class="label label-danger">Error</span> {%=file.error%}</div>
+        {% } %}
+        </td>
+        <td style="text-align: center">
+            {% if (file.deleteUrl) { %}
+                            {% } else { %}
+                 <button class="btn btn-default btn-xs btn-xs cancel">
+                    <i class="fa fa-stop"></i>
+                    <span>Cancel</span>
+                </button>
+            {% }%}
+            {% if (!file.error) { %}
+            <input type="hidden" name="jform[picture][]" value="{%=file.name%}" />
+            {% } %}
+        </td>
+    </tr>
+{% } %}
+</script>
+	
+<script type="text/x-template" id="ccomment-menu">
+	<div class="row-fluid ccomment-menu">
+		<h4 class="pull-left">
+			Comentários			(<span class="ccomment-comment-counter">{{pagination.total_with_children}}</span>)
+		</h4>
+		<div class="pull-right">
+							<button
+						v-on:click="newComment"
+						class="ccomment-add-new btn btn-mini" title='Adicionar Novo'>
+					Adicionar Novo				</button>
+														</div>
+	</div>
+</script>
+
+	<!-- the ccomment root element -->
+	<div class="ccomment" id="ccomment">
+
+		<ccomment-menu></ccomment-menu>
+
+		
+		
+		<ul class="ccomment-comments-list">
+			<ccomment-comment v-for="item in comments"
+							  v-if="item.parentid === -1"
+							  class="item"
+							  v-bind:key="item.id"
+							  v-bind:model="item">
+			</ccomment-comment>
+		</ul>
+
+					<pagination v-if="pagination.last_page > 1" :pagination="pagination" :callback="loadData" :options="paginationOptions"></pagination>
+		
+					<ccomment-form></ccomment-form>
+		
+			<div class="row-fluid small muted ccomment-powered">
+		<p class="text-center">
+			Comments fornecido por <a href='https://compojoom.com' rel='nofollow' target='_blank'>CComment</a>		</p>
+	</div>
+	</div>
+
+	<script type="text/javascript">
+		window.compojoom = compojoom = window.compojoom || {};
+		compojoom.ccomment = {
+			user: {"loggedin":false,"avatar":"http:\/\/backup\/portal\/media\/com_comment\/images\/noavatar.png"},
+			item: {"contentid":228,"component":"com_content","count":0},
+			config: {"comments_per_page":0,"sort":0,"tree":0,"use_name":0,"tree_depth":5,"form_position":0,"voting":1,"copyright":1,"pagination_position":0,"avatars":0,"gravatar":1,"support_ubb":1,"support_emoticons":0,"support_picture":0,"name_required":0,"email_required":0,"baseUrl":"http:\/\/backup\/portal\/","langCode":null,"file_upload":{"url":"http:\/\/backup\/portal\/index.php?option=com_comment&amp;task=multimedia.doIt","formControl":"jform","fieldName":"picture","maxNumberOfFiles":3,"fileTypes":null,"maxSize":null,"component":"com_comment","imageSize":{"x":"2400","y":"1800"}}}		};
+	</script>
+
+<script data-inline type="text/javascript" src="../../media/com_comment/cache/8e12eb270706cd6b2c8483104bf89b54.min.js"></script>
+			<div class="article-footer-wrap">
+			<div class="article-footer-top">
+									<div class="helix-social-share">
+		<div class="helix-social-share-icon">
+			<ul>
+				
+				<li>
+					<div class="facebook" data-toggle="tooltip" data-placement="top" title="Share On Facebook">
+
+						<a class="facebook" onClick="window.open('http://www.facebook.com/sharer.php?u=http://backup/portal/joomla-3/dicas/guia-de-otimizacao-de-sites.html','Facebook','width=600,height=300,left='+(screen.availWidth/2-300)+',top='+(screen.availHeight/2-150)+''); return false;" href="http://www.facebook.com/sharer.php?u=http://backup/portal/joomla-3/dicas/guia-de-otimizacao-de-sites.html">
+
+							<i class="fa fa-facebook"></i>
+						</a>
+
+					</div>
+				</li>
+				<li>
+					<div class="twitter"  data-toggle="tooltip" data-placement="top" title="Share On Twitter">
+						
+						<a class="twitter" onClick="window.open('http://twitter.com/share?url=http://backup/portal/joomla-3/dicas/guia-de-otimizacao-de-sites.html&amp;text=Guia%20de%20Otimização%20de%20Sites','Twitter share','width=600,height=300,left='+(screen.availWidth/2-300)+',top='+(screen.availHeight/2-150)+''); return false;" href="http://twitter.com/share?url=http://backup/portal/joomla-3/dicas/guia-de-otimizacao-de-sites.html&amp;text=Guia%20de%20Otimização%20de%20Sites">
+							<i class="fa fa-twitter"></i>
+						</a>
+
+					</div>
+				</li>
+				<li>
+					<div class="google-plus">
+						<a class="gplus" data-toggle="tooltip" data-placement="top" title="Share On Google Plus" onClick="window.open('https://plus.google.com/share?url=http://backup/portal/joomla-3/dicas/guia-de-otimizacao-de-sites.html','Google plus','width=585,height=666,left='+(screen.availWidth/2-292)+',top='+(screen.availHeight/2-333)+''); return false;" href="https://plus.google.com/share?url=http://backup/portal/joomla-3/dicas/guia-de-otimizacao-de-sites.html" >
+						<i class="fa fa-google-plus"></i></a>
+					</div>
+				</li>
+				
+				<li>
+					<div class="linkedin">
+						<a class="linkedin" data-toggle="tooltip" data-placement="top" title="Share On Linkedin" onClick="window.open('http://www.linkedin.com/shareArticle?mini=true&url=http://backup/portal/joomla-3/dicas/guia-de-otimizacao-de-sites.html','Linkedin','width=585,height=666,left='+(screen.availWidth/2-292)+',top='+(screen.availHeight/2-333)+''); return false;" href="http://www.linkedin.com/shareArticle?mini=true&url=http://backup/portal/joomla-3/dicas/guia-de-otimizacao-de-sites.html" >
+							
+						<i class="fa fa-linkedin-square"></i></a>
+					</div>
+				</li>
+			</ul>
+		</div>		
+	</div> <!-- /.helix-social-share -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			</div>
+					</div>
+	
+</article>
+</div></div><div id="sp-right" class="col-sm-3 col-md-3"><div class="sp-column class2"><div class="sp-module pop"><h3 class="sp-module-title">Populares</h3><div class="sp-module-content"><ul class="mostreadpop mod-list">
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="http://backup/portal/mobile/phaser/atualizar-o-node-js.html" itemprop="url">
+			<span itemprop="name">
+				Atualizar o Node.JS			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="melhorando-a-velocidade-do-site.html" itemprop="url">
+			<span itemprop="name">
+				Melhorando a velocidade do site			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="http://backup/portal/joomla-3/dicas/boas-vindas.html" itemprop="url">
+			<span itemprop="name">
+				Boas Vindas!			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../instalacao.html" itemprop="url">
+			<span itemprop="name">
+				Instalação do Joomla			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../../blog/diversos/e-possivel-viver-sem-o-google.html" itemprop="url">
+			<span itemprop="name">
+				É possível viver sem o Google?			</span>
+		</a>
+	</li>
+</ul>
+</div></div><div class="sp-module "><h3 class="sp-module-title">Novo Testamento</h3><div class="sp-module-content">Por amor da verdade que está em nós, e para sempre estará conosco:
+
+<br>(2Jo, 1:2) 
+</div></div><div class="sp-module "><h3 class="sp-module-title">Rotas no Mapa do Google</h3><div class="sp-module-content"><a href="https://www.google.com/maps/dir///@-3.7294526,-38.5422647,15z" target="_blank">Abrir o Mapa</a>
+</div></div></div></div></div></div></section><footer id="sp-footer"><div class="container"><div class="row"><div id="sp-footer1" class="col-sm-12 col-md-12"><div class="sp-column "><span class="sp-copyright">© 2015 Ribamar FS. All Rights Reserved. Designed By JoomShaper</span></div></div></div></div></footer>            </div> <!-- /.body-innerwrapper -->
+        </div> <!-- /.body-innerwrapper -->
+
+        <!-- Off Canvas Menu -->
+        <div class="offcanvas-menu">
+            <a href="guia-de-otimizacao-de-sites.html#" class="close-offcanvas" aria-label="Close"><i class="fa fa-remove" aria-hidden="true" title="HELIX_CLOSE_MENU"></i></a>
+            <div class="offcanvas-inner">
+                                  <div class="sp-module _menu"><h3 class="sp-module-title">Menu Principal</h3><div class="sp-module-content"><ul class="nav menu">
+<li class="item-101"><a href="../../index.html" > Início</a></li><li class="item-107  deeper parent"><a href="../../basicos.html" > Básicos</a><span class="offcanvas-menu-toggler collapsed" data-toggle="collapse" data-target="#collapse-menu-107"><i class="open-icon fa fa-angle-down"></i><i class="close-icon fa fa-angle-up"></i></span><ul class="collapse" id="collapse-menu-107"><li class="item-112"><a href="../../basicos/html.html" > HTML</a></li><li class="item-113"><a href="../../basicos/javascript.html" > JavaScript</a></li><li class="item-114"><a href="../../basicos/css.html" > CSS</a></li><li class="item-116"><a href="../../basicos/jquery.html" > jQuery</a></li><li class="item-117"><a href="../../basicos/bootstrap.html" > Bootstrap</a></li><li class="item-118"><a href="../../basicos/php.html" > PHP</a></li><li class="item-119"><a href="../../basicos/phpoo.html" > PHPOO</a></li><li class="item-120"><a href="../../basicos/pdo.html" > PDO</a></li><li class="item-157"><a href="../../basicos/ferramentas.html" > Ferramentas</a></li><li class="item-287"><a href="../../basicos/outros.html" > Outros</a></li></ul></li><li class="item-108  deeper parent"><a href="../../servidores.html" > Servidores</a><span class="offcanvas-menu-toggler collapsed" data-toggle="collapse" data-target="#collapse-menu-108"><i class="open-icon fa fa-angle-down"></i><i class="close-icon fa fa-angle-up"></i></span><ul class="collapse" id="collapse-menu-108"><li class="item-121"><a href="../../servidores/desktop.html" > Desktop</a></li><li class="item-122"><a href="../../servidores/ubuntu-server.html" > Ubuntu Server</a></li><li class="item-123"><a href="../../servidores/shell-scripts.html" > Shell Scripts</a></li><li class="item-124"><a href="../../servidores/servidor-web.html" > Servidor Web</a></li><li class="item-156"><a href="../../servidores/servidor-sgbd.html" > Servidor SGBD</a></li><li class="item-193  deeper parent"><a href="../../servidores/postgresql.html" > PostgreSQL</a><span class="offcanvas-menu-toggler collapsed" data-toggle="collapse" data-target="#collapse-menu-193"><i class="open-icon fa fa-angle-down"></i><i class="close-icon fa fa-angle-up"></i></span><ul class="collapse" id="collapse-menu-193"><li class="item-232"><a href="../../servidores/postgresql/introducao-ao-postgresql.html" > Introdução</a></li><li class="item-233"><a href="../../servidores/postgresql/projeto.html" > Projeto</a></li><li class="item-234"><a href="../../servidores/postgresql/dimensionamento.html" > Dimensionamento</a></li></ul></li></ul></li><li class="item-148  active deeper parent"><a href="../../joomla-3.html" > Joomla 3</a><span class="offcanvas-menu-toggler collapsed" data-toggle="collapse" data-target="#collapse-menu-148"><i class="open-icon fa fa-angle-down"></i><i class="close-icon fa fa-angle-up"></i></span><ul class="collapse" id="collapse-menu-148"><li class="item-149"><a href="../introducao.html" > Introdução</a></li><li class="item-231"><a href="../seguranca.html" > Segurança</a></li><li class="item-199"><a href="../instalacao.html" > Instalação do Joomla</a></li><li class="item-152"><a href="../administracao.html" > Administração</a></li><li class="item-153"><a href="../extensoes.html" > Extensões</a></li><li class="item-154"><a href="../loja-simples.html" > Loja Simples</a></li><li class="item-155  current active"><a href="../dicas.html" > Dicas</a></li></ul></li><li class="item-310  divider deeper parent"><a class="separator ">Frameworks</a>
+<span class="offcanvas-menu-toggler collapsed" data-toggle="collapse" data-target="#collapse-menu-310"><i class="open-icon fa fa-angle-down"></i><i class="close-icon fa fa-angle-up"></i></span><ul class="collapse" id="collapse-menu-310"><li class="item-138  deeper parent"><a href="../../frameworks/cakephp-3.html" > CakePHP 3</a><span class="offcanvas-menu-toggler collapsed" data-toggle="collapse" data-target="#collapse-menu-138"><i class="open-icon fa fa-angle-down"></i><i class="close-icon fa fa-angle-up"></i></span><ul class="collapse" id="collapse-menu-138"><li class="item-139"><a href="../../frameworks/cakephp-3/introducao.html" > Introdução</a></li><li class="item-140"><a href="../../frameworks/cakephp-3/instalacao.html" > Instalação</a></li><li class="item-172"><a href="../../frameworks/cakephp-3/configuracoes.html" > Configurações</a></li><li class="item-141"><a href="../../frameworks/cakephp-3/convencoes.html" > Convenções</a></li><li class="item-142"><a href="../../frameworks/cakephp-3/tutoriais.html" > Tutoriais</a></li><li class="item-144"><a href="../../frameworks/cakephp-3/dicas.html" > Dicas</a></li><li class="item-145"><a href="../../frameworks/cakephp-3/seguranca.html" > Segurança</a></li><li class="item-147"><a href="../../frameworks/cakephp-3/mvc-no-cakephp-3.html" > MVC no CakePHP 3</a></li></ul></li><li class="item-171  deeper parent"><a href="../../frameworks/laravel-5.html" > Laravel 5</a><span class="offcanvas-menu-toggler collapsed" data-toggle="collapse" data-target="#collapse-menu-171"><i class="open-icon fa fa-angle-down"></i><i class="close-icon fa fa-angle-up"></i></span><ul class="collapse" id="collapse-menu-171"><li class="item-173"><a href="../../frameworks/laravel-5/introducao.html" > Introdução</a></li><li class="item-174"><a href="../../frameworks/laravel-5/instalacao.html" > Instalação</a></li><li class="item-175"><a href="../../frameworks/laravel-5/configuracoes.html" > Configurações</a></li><li class="item-176"><a href="../../frameworks/laravel-5/routes.html" > Routes</a></li><li class="item-178"><a href="../../frameworks/laravel-5/dicas.html" > Dicas</a></li><li class="item-177"><a href="../../frameworks/laravel-5/tutoriais.html" > Tutoriais</a></li></ul></li></ul></li><li class="item-158  deeper parent"><a href="../../mobile.html" > Mobile</a><span class="offcanvas-menu-toggler collapsed" data-toggle="collapse" data-target="#collapse-menu-158"><i class="open-icon fa fa-angle-down"></i><i class="close-icon fa fa-angle-up"></i></span><ul class="collapse" id="collapse-menu-158"><li class="item-179"><a href="../../mobile/introducao.html" > Introdução</a></li><li class="item-180"><a href="../../mobile/ambiente.html" > Ambiente</a></li><li class="item-188"><a href="../../mobile/phaser.html" > Phaser</a></li><li class="item-187"><a href="../../mobile/monaca.html" > Monaca</a></li><li class="item-181"><a href="../../mobile/phonegap.html" > PhoneGap</a></li><li class="item-182"><a href="../../mobile/app-inventor.html" > App Inventor</a></li><li class="item-159"><a href="../../mobile/unity-3d.html" > Unity 3D</a></li><li class="item-160"><a href="../../mobile/intel-xdk.html" > Intel XDK</a></li><li class="item-161"><a href="../../mobile/outros.html" > Outros</a></li><li class="item-163"><a href="../../mobile/dicas.html" > Dicas</a></li></ul></li><li class="item-168  deeper parent"><a href="../../blog.html" > Blog</a><span class="offcanvas-menu-toggler collapsed" data-toggle="collapse" data-target="#collapse-menu-168"><i class="open-icon fa fa-angle-down"></i><i class="close-icon fa fa-angle-up"></i></span><ul class="collapse" id="collapse-menu-168"><li class="item-196"><a href="../../blog/reflexoes.html" > Reflexões</a></li><li class="item-197"><a href="../../blog/saude.html" > Saúde</a></li><li class="item-238"><a href="../../blog/diversos.html" > Diversos</a></li><li class="item-271"><a href="../../blog/estudos.html" > Estudos</a></li></ul></li><li class="item-215  deeper parent"><a href="../../curriculo.html" > Sobre</a><span class="offcanvas-menu-toggler collapsed" data-toggle="collapse" data-target="#collapse-menu-215"><i class="open-icon fa fa-angle-down"></i><i class="close-icon fa fa-angle-up"></i></span><ul class="collapse" id="collapse-menu-215"><li class="item-167">		<a href="https://github.com/ribafs?tab=repositories" rel="noopener noreferrer" target="_blank" > Projetos</a></li><li class="item-164"><a href="../../curriculo/livros.html" > Livros</a></li><li class="item-257"><a href="../../curriculo/curriculo.html" > Currículo</a></li><li class="item-110"><a href="../../curriculo/contato.html" > Contato</a></li><li class="item-251"><a href="../../curriculo/mapa-do-site.html" > Mapa</a></li></ul></li></ul>
+</div></div>
+                            </div> <!-- /.offcanvas-inner -->
+        </div> <!-- /.offcanvas-menu -->
+
+        
+        
+        
+        <!-- Preloader -->
+        
+
+        <!-- Go to top -->
+                    <a href="javascript:void(0)" class="scrollup" aria-label="Go To Top">&nbsp;</a>
+        
+    </body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br" dir="ltr">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <base href="" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Ribamar FS" />
+	<meta name="robots" content="noindex, nofollow" />
+	<meta name="description" content="Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros." />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>Usando overrides com o core do Joomla - RibaFS Portal</title>
+	<link href="http://ribafs.org/portal/joomla-3/extensoes/overrides-joomla.html?tmpl=component&amp;print=1&amp;layout=default" rel="canonical" />
+	<link href="../../templates/shaper_helix3/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../../favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<script src="../../media/jui/js/jquery.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../media/jui/js/jquery-noconflict.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../media/jui/js/jquery-migrate.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="http://backup/portal/media/system/js/caption.js?d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script type="text/javascript">
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+	</script>
+	<meta property="og:url" content="http://backup/portal/joomla-3/extensoes/overrides-joomla.html" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Usando overrides com o core do Joomla" />
+	<meta property="og:description" content="Usando overrides com o core do Joomla - Como substituir a saída do core do Joomla Tradução livre do original em inglês em: https://docs.joomla.org/How_to_o..." />
+
+   	<link rel="stylesheet" href="../../media/jui/css/bootstrap.min.css" type="text/css" />
+	<link rel="stylesheet" href="../../templates/shaper_helix3/css/frontend-edit.css" type="text/css" />
+    <link rel="stylesheet" href="../../templates/shaper_helix3/css/template.css" type="text/css" />
+</head>
+<body class="contentpane">
+	<div id="system-message-container">
+	</div>
+
+	
+
+<article class="item item-page" itemscope itemtype="http://schema.org/Article">
+	<meta itemprop="inLanguage" content="pt-BR" />
+	
+	
+
+	<div class="entry-header">
+		<span class="post-format"><i class="fa fa-thumb-tack"></i></span>
+		
+					<h2 itemprop="name">
+									Usando overrides com o core do Joomla							</h2>
+												</div>
+
+						<div id="pop-print" class="btn hidden-print">
+				<a href="overrides-joomla.html#" onclick="window.print();return false;">			<span class="icon-print" aria-hidden="true"></span>
+		Imprimir	</a>			</div>
+				
+	
+	
+				
+	
+			<div itemprop="articleBody">
+		<h4>Usando overrides com o core do Joomla - Como substituir a saída do core do Joomla</h4>
+
+<p>Tradução livre do original em inglês em:<br /><a href="https://docs.joomla.org/How_to_override_the_output_from_the_Joomla!_coreÂ">https://docs.joomla.org/How_to_override_the_output_from_the_Joomla!_core </a><br /><br />Acontece as vezes de desejarmos mudar a forma como aparecem no site algumas extensões (componentes ou módulos) do core do Joomla ou mesmo de terceiros.</p>
+
+<p>O Joomla nos oferece uma forma simples de fazer isso sem precisar reescrever por inteiro a extensão.<br />Podemos fazer isso substituindo/sobrescrevendo a aparência de uma extensão adicionando o código desejado para a pasta html do template. Também é possível sobrescrever Module chrome e paginação.<br /><br />Na versão 3.2 overrides podem ser criados usando o Template manager Creating Overrides<br />Extensões – Temas<br />Temas à esquerda e acima<br />Clicar no nome do template<br />Criar Substituição<br />Começando com overrides</p>
+
+<p>Faça uma cópia da view existente no diretório html do template e então modifique a cópia</p>
+
+<p>A estrutura de diretórios necessária é:<br />TEMPLATE_NAME/html/EXTENSION_NAME/VIEW_NAME/FILE_NAME.php</p>
+
+<p>Se você deseja mudar a maneira que a view 'Article' exibe um artigo com_content  então copie o arquivo:<br />PATH_TO_JOOMLA/components/com_content/views/article/tmpl/default.php<br />para<br />TEMPLATE_NAME/html/com_content/article/default.php</p>
+
+<p>Se deseja mudar como o módulo  mod_login é exibido, então copie:<br />PATH_TO_JOOMLA/modules/mod_login/tmpl/default.php<br />para<br />TEMPLATE_NAME/html/mod_login/default.php</p>
+
+<p>Joomla vem com um template para o site chamado Beez. Beez utiliza substituições de templates para produzir um layout tableless, para uma marcação mais rápida, mais suave e semanticamente correta. Para ver como é feito, localize o seu diretório de instalação do joomla do template e você notará o template Beez. Dentro do diretório do template Beez, você encontrará um diretório chamado html.<br /><br />A estrutura do diretório é a seguinte:<br />/your_joomla/templates/Beez/html/</p>
+
+<p>Caso deseje modificar o overrides usado no Beez você pode simplesmente copiar e colar o diretório html do Beez em seu próprio template. Ou então pode escolher por criar seus próprios arquivos de overrides. Verifique se são corretamente instalados em seu template.</p>
+
+<p><br />Para fazer isso você deve adicionar o seguinte código para o  templateDetails.xml do template para os arquivos adicionados:<br />&lt;files&gt; e &lt;/files&gt;</p>
+
+<p><strong>Outras Dicas</strong></p>
+
+<p>Você pode override as imagens do Joomla core que são armazenadas na pasta /media. Coloque uma imagem alternativa com o mesmo nome na pasta do seu template. Por exemplo o módulo Breadcrumbs usa uma seta laranja que é recebida de<br />/media/system/images/arrow.png. Joomla deve usar sua versão override se você colocar esta em:<br />/templates/your_template_name/images/system/arrow.png.</p>
+
+<p>Templates overrides são menos limitados. Eles permitem que você adicione, edite e remova a saída de componentes do core do Joomla.<br />O template Manager pode ser usado para criar files overrides prontos para editar.</p>
+
+<p><strong>Nota:</strong> existe uma extensão para o Firefox chamada Firebug que é útil para navegar entre os fontes do HTML das páginas e combinando com o PHP usado no overrides do template. Agora o Firebug também está disponível para o IE e o Chrome.<br /><br /><strong>Referências</strong><br /><a href="https://docs.joomla.org/How_to_override_the_output_from_the_Joomla!_core">https://docs.joomla.org/How_to_override_the_output_from_the_Joomla!_core</a> <br /><a href="https://docs.joomla.org/How_to_override_the_component_mvc_from_the_Joomla!_core">https://docs.joomla.org/How_to_override_the_component_mvc_from_the_Joomla!_core</a> <br /><a href="https://www.ostraining.com/blog/joomla/overrides/">https://www.ostraining.com/blog/joomla/overrides/</a> </p>
+
+<p> </p> 	</div>
+
+	
+	
+				
+	
+	
+	
+</article>
+
+</body>
+</html>

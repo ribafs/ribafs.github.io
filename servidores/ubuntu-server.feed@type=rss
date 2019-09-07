@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="Joomla! - Open Source Content Management" -->
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Ubuntu Server - RibaFS Portal</title>
+		<description><![CDATA[Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros.]]></description>
+		<link>http://backup/portal/servidores/ubuntu-server.html</link>
+		<lastBuildDate>Sat, 07 Sep 2019 18:52:39 -0300</lastBuildDate>
+		<generator>Joomla! - Open Source Content Management</generator>
+		<atom:link rel="self" type="application/rss+xml" href="http://backup/portal/servidores/ubuntu-server.feed?type=rss"/>
+		<language>pt-br</language>
+		<item>
+			<title>Find Tutorial</title>
+			<link>http://backup/portal/servidores/ubuntu-server/find-tutorial.html</link>
+			<guid isPermaLink="true">http://backup/portal/servidores/ubuntu-server/find-tutorial.html</guid>
+			<description><![CDATA[<h2>Procurando Arquivos pelo Terminal do Linux com find e locate</h2>
+
+<p><br /><strong>Procurar arquivo no diretório atual:</strong><br />find -name "arquivo.zip"<br /><br /><strong>Procurar arquivo ignorando o case:</strong><br />find -iname "Arquivo.zip"<br /><br /><strong>Procurar arquivos que não tenham um nome:</strong><br />find -not -name "nome-a-ignorar"<br /><br /><strong>Procurar arquivo pelo tipo:</strong><br />find -type tipo_descritor arquivo.txt<br /><br /><strong>tipo_descritor:</strong><br />    f: regular file<br />    d: directory<br />    l: symbolic link<br />    c: character devices<br />    b: block devices<br /><br /><strong>Procurar todos os arquivos tipo caractere no raiz:</strong><br />find / -type c<br /><br /><strong>Procurar todos os arquivos terminados com .conf:</strong><br />find / -type f -name "*.conf"</p>
+
+<p><strong>Mostrar os diretórios recursivamente até o terceiro nível de profundidade de /var/www</strong><br />find /var/www -maxdepth 3 -type d<br /><br /><strong>Procurando por tamanho/size:</strong><br />    c: bytes<br />    k: Kilobytes<br />    M: Megabytes<br />    G: Gigabytes<br />    b: 512-byte blocks<br /><br />find / -size 50c<br /><br /><strong>Procurar todos os arquivos menores que 50 bytes:</strong><br />find / -size -50c<br /><br /><strong>Procurar todos os arquivos maiores que 700MB:</strong><br />find / -size +700M<br /><br /><strong>Procurar arquivos de acordo com o tempo:</strong><br />    Access Time: Last time a file was read or written to. (-atime)<br />    Modification Time: Last time the contents of the file were modified.(-mtime)<br />    Change Time: Last time the file's inode meta-data was changed.(-ctime)<br /><br /><strong>Procurar arquivos que foram modificados há 1 dia:</strong><br />find / -mtime 1<br /><br /><strong>Procurar arquivos que foram acessados há menos de 1 dia:</strong><br />find / -atime -1<br /><br /><strong>Procurar arquivos que tiveram suas metainformações mudadas há mais de 3 dias:</strong><br />find / -ctime +3<br /><br /><strong>Arquivos que foram modificados há menos de 1 minuto:</strong><br />find / -mmin -1<br /><br /><strong>Procurar arquivos que tenham como dono o user syslog:</strong><br />find / -user syslog<br /><br /><strong>Procurar arquivos do grupo shadown:</strong><br />find / -group shadow<br /><br /><strong>Procurar arquivos com permissão 777:</strong><br />find . -type f -perm 0777 -print<br /><br /><strong>Procurar arquivos com permissão diferente de 777:</strong><br />find / -type f ! -perm 777<br /><br /><strong>Procurar todos os arquivos executáveis:</strong><br />find / -perm /a=x<br /><br /><strong>Procurar todos os arquivos com permissão 777 e mudar para 644:</strong><br />find / -type f -perm 0777 -print -exec chmod 644 {} \;<br /><br /><strong>Procurar diretórios com permissão 777 e mudar para 755:</strong><br />find / -type d -perm 777 -print -exec chmod 755 {} \;<br /><br /><strong>Procurar o arquivo tecmint.txt e removê-lo:</strong><br />find . -type f -name "tecmint.txt" -exec rm -f {} \;<br /><br /><strong>Procurar todos os arquivos .mp3 e removê-los:</strong><br />find . -type f -name "*.mp3" -exec rm -f {} \;<br /><br /><strong>Procurar todos os arquivos vazios:</strong><br />find /tmp -type f -empty<br /><br /><strong>Procurar todos os diretórios vazios:</strong><br />find /tmp -type d -empty<br /><br /><strong>Procurar todos os arquivos ocultos:</strong><br />find /tmp -type f -name ".*"<br /><br /><strong>Procurar todos os arquivos do usuário ribafs no diretório /home/ribafs:</strong><br />find /home/ribafs -user ribafs<br /><br /><strong>Procurar arquivos que tenham permissão igual a 666:</strong><br />find / -perm 666<br /><br /><strong>Procurar arquivos que tenham permissão igual a 777:</strong><br />find / -perm 777<br /><br /><strong>Contar os arquivos com certo nome no diretório atual:</strong><br />find -name file1 | wc -l<br /><br /><strong>Mudar as permissões do diretório /var/www/html recursivamente para 755 e de todos os arquivos para 644:</strong><br />find /var/www/html -type d -exec chmod 755 {} \;<br />find /var/www/html -type f -exec chmod 644 {} \;</p>
+
+<p><strong>Redimensionar todas as imagens jpg de um diretório para 300x300px (mantendo os nomes originais):</strong><br />find images -iname \*.jpg -exec convert -verbose -quality 80 -resize 300\&gt; "{}" "{}" \;<br /><br /><strong>Procurando com locate</strong><br /><br />sudo apt-get update<br />sudo apt-get install mlocate<br /><br />sudo updatedb<br /><br />locate nomearquivo<br /><br /><strong>Referências:</strong><br /><a href="https://www.digitalocean.com/community/tutorials/how-to-use-find-and-locate-to-search-for-files-on-a-linux-vps">https://www.digitalocean.com/community/tutorials/how-to-use-find-and-locate-to-search-for-files-on-a-linux-vps</a> <br /><a href="https://www.tecmint.com/35-practical-examples-of-linux-find-command/">https://www.tecmint.com/35-practical-examples-of-linux-find-command/</a></p>
+
+<p> </p>]]></description>
+			<category>Ubuntu Server</category>
+			<pubDate>Thu, 21 Sep 2017 16:36:10 -0300</pubDate>
+		</item>
+		<item>
+			<title>Upgrade do Ubuntu Server</title>
+			<link>http://backup/portal/servidores/ubuntu-server/upgrade-do-ubuntu-server.html</link>
+			<guid isPermaLink="true">http://backup/portal/servidores/ubuntu-server/upgrade-do-ubuntu-server.html</guid>
+			<description><![CDATA[<h4>Upgrade do Ubuntu Server</h4>
+
+<p>Atualizar o Ubuntu Server da versão atual para uma mais recente<br /><br />sudo apt-get update<br /><br />sudo do-release-upgrade<br /><br />A atualização pode demorar várias horas.<br /><br />Fiz upgrade do 14.04 para o 16.06, sem selecionar a versão, automaticamente</p>
+
+<p> </p>]]></description>
+			<category>Ubuntu Server</category>
+			<pubDate>Mon, 28 Aug 2017 17:43:34 -0300</pubDate>
+		</item>
+		<item>
+			<title>Guia de Compactação para o Terminal do Linux</title>
+			<link>http://backup/portal/servidores/ubuntu-server/compactacao-linux.html</link>
+			<guid isPermaLink="true">http://backup/portal/servidores/ubuntu-server/compactacao-linux.html</guid>
+			<description><![CDATA[<h4>Compactar e Descompactar Arquivos no Terminal do Linux</h4>
+
+<p><br /><strong>Instalar compactadores para Linux:</strong><br />sudo apt-get install unace zip unzip p7zip-full p7zip-rar sharutils uudeview mpack arj unrar rar lzma lha lzma-dev rar unrar-free ark ncompress<br /><br /><strong>zip</strong><br /><em><strong>Compactação</strong></em><br /><br />zip pacote.zip arquivoa.txt arquivob.txt arquivoc.odt<br />zip pacote.zip *.txt<br />zip -r documentos.zip /usr/*.txt<br /><br /><strong>Opções:</strong><br />-r recursivo<br />-1 rápido<br />-9 maior compactação<br />-D compactar somente arquivos, nada de diretório<br />-x arquivos - excluir da compactação alguns arquivos<br /><br /><em><strong>Descompactação</strong></em><br /><br />unzip nome.zip<br /><br />Em diretório específico<br />unzip nome.zip -d /tmp<br /><br /><strong>arj</strong></p>
+
+<p><em><strong>Compactar</strong></em><br />arj a pacote.arj arquivo.odt<br /><br /><em><strong>Descompactar</strong></em><br />arj x pacote.arj<br /><br /><br /><strong>tar</strong><br /><br /><em><strong>Compactar</strong></em><br />tar -czpvf pacote.tar arquivo1.gif memorando.htm carta.doc<br />tar -czpvf pacote.tar pasta<br /><br /><em><strong>Descompactar:</strong></em><br />tar -zxpvf nomedoarq.tar<br /><br /><br /><strong>tar.gz</strong></p>
+
+<p><em><strong>Compactar</strong></em><br />tar -czpvf pacote.tar.gz arquivo1.gif memorando.htm carta.doc<br />tar -czpvf pacote.tar.gz pasta<br /><br /><strong>Descompactar no diretório atual</strong><br />tar -zxpvf pacote.tar.gz -C /tmp<br /><br /><br /><strong>tar.bz2</strong><br />tar -jxpvf pacote.tar.bz2<br /><br /><strong>Descompactar</strong> apenas um arquivo de dentro do pacote<br />tar -xvf pacote.tar.gz foto1.png<br /><br /><strong>Lista de parâmetros do tar:</strong><br /><br />-c – cria um novo arquivo tar;<br />-M – cria, lista ou extrai um arquivo multivolume;<br />-p – mantém as permissões originais do(s) arquivo(s);<br />-r – acrescenta arquivos a um arquivo tar;<br />-t – exibe o conteúdo de um arquivo tar;<br />-v – exibe detalhes da operação;<br />-w – pede confirmação antes de cada ação;<br />-x – extrai arquivos de um arquivo tar;<br />-z – comprime ou extrai arquivos tar resultante com o gzip;<br />-j – comprime ou extrai arquivos tar resultante com o bz2;<br />-f – especifica o arquivo tar a ser usado;<br />-C – especifica o diretório dos arquivos a serem armazenados.<br /><br /><br /><strong>gzip</strong><br /><br /><em><strong>Compactar</strong></em><br />gzip documentos.odt<br /><br /><em><strong>Descompactar</strong></em><br />gunzip documentos.odt.gz<br /><br /><br /><strong>bzip2</strong><br /><br /><em><strong>Compactar</strong></em><br />bzip2 pacote.gz<br /><br /><em><strong>Descompactar</strong></em><br />bunzip2 pacote.bz2<br />bunzip2 pacote.tar.bz2<br /><br /><br /><strong>rar</strong><br /><br /><em><strong>Compactar</strong></em><br />rar a pacote.rar arquivoa arquivob<br />rar a pacote.rar /pasta<br /><br /><em><strong>Descompactar</strong></em><br />unrar x pacote.rar<br /><br /><br /><strong>7z</strong><br /><br /><em><strong>Compactar</strong></em><br />7za a pacote.7z arquivoa arquivob <br /><br /><em><strong>Descompactar</strong></em><br />7za x pacote.7z <br /><br /><br /><strong>lha</strong><br /><br /><em><strong>Compactar</strong></em><br />lha a pacote.lha arquivoa arquivob <br /><br /><em><strong>Descompactar</strong></em><br />lha x pacote.lha <br /><br /><br /><strong>zoo</strong><br /><br /><em><strong>Compactar</strong></em><br />zoo a pacote.zoo arquivoa arquivob <br /><br /><em><strong>Descompactar</strong></em><br />zoo x pacote.zoo <br /><br /><strong>Ajuda sobre um dos compactadores acima:</strong><br />man nome_compactador<br /><br />Ex:<br />man arj<br /><br /><strong>Referências:</strong><br /><a href="http://blog.kolaborativa.com/2011/10/compactar-e-descompactar-arquivos-zip-rar-tar-gz-bz2-tar-tar-bz2-pelo-terminal/">http://blog.kolaborativa.com/2011/10/compactar-e-descompactar-arquivos-zip-rar-tar-gz-bz2-tar-tar-bz2-pelo-terminal/</a> <br /><a href="https://linuxdicasesuporte.blogspot.com.br/2015/03/compactacao-de-arquivos-para-debian.html">https://linuxdicasesuporte.blogspot.com.br/2015/03/compactacao-de-arquivos-para-debian.html</a> <br /><br /></p>]]></description>
+			<category>Ubuntu Server</category>
+			<pubDate>Mon, 28 Aug 2017 13:42:11 -0300</pubDate>
+		</item>
+		<item>
+			<title>Ubuntu é a distribuição mais popular em servidores web</title>
+			<link>http://backup/portal/servidores/ubuntu-server/ubuntu-mais-popular.html</link>
+			<guid isPermaLink="true">http://backup/portal/servidores/ubuntu-server/ubuntu-mais-popular.html</guid>
+			<description><![CDATA[<h4>Ubuntu é a distribuição mais popular em servidores web</h4>
+
+<p>Gosto muito de observar a evolução das coisas e pessoas e admiro um trabalho sério e bem feito.</p>
+
+<p>O Ubuntu é uma jovem distribuição, que conquistou o usuário Linux no desktop e depois consquistou também no servidor.</p>
+
+<p>Cresceu muito e dela surgiram muitas outras jovens distribuições.</p>
+
+<p>Em 2016 tornou-se a distribuição mais ppular nos servidores web.</p>
+
+<p>Muitos detalhes aqui:</p>
+
+<p><a href="https://w3techs.com/blog/entry/ubuntu_became_the_most_popular_linux_distribution_for_web_servers">https://w3techs.com/blog/entry/ubuntu_became_the_most_popular_linux_distribution_for_web_servers</a></p>
+
+<p>Em 2017 também aparece como a mais popular:</p>
+
+<p><a href="http://www.serverwatch.com/columns/slideshows/top-10-linux-server-distributions.html">http://www.serverwatch.com/columns/slideshows/top-10-linux-server-distributions.html</a></p>
+
+<p><a href="https://sempreupdate.com.br/2017/03/melhores-distros-linux-2017.html">https://sempreupdate.com.br/2017/03/melhores-distros-linux-2017.html</a></p>
+
+<p><a href="https://www.os15melhores.com/as-15-melhores-distribuicoes-linux-para-2017/">https://www.os15melhores.com/as-15-melhores-distribuicoes-linux-para-2017/</a></p>
+
+<p>Para desktop eu prefiro o Linux Mint, um dos filhos do Ubuntu, mas para servidor meu preferido é o Ubuntu.</p>
+
+<p> </p>]]></description>
+			<category>Ubuntu Server</category>
+			<pubDate>Tue, 15 Aug 2017 19:38:16 -0300</pubDate>
+		</item>
+		<item>
+			<title>Limpar o Cache da RAM</title>
+			<link>http://backup/portal/servidores/ubuntu-server/limpar-o-cache-da-ram.html</link>
+			<guid isPermaLink="true">http://backup/portal/servidores/ubuntu-server/limpar-o-cache-da-ram.html</guid>
+			<description><![CDATA[<p><img src="http://backup/portal/images/conectarnautilus.png" /></p><h3>Limpar o cache da memória RAM</h3>
+
+
+<p>Para quem usa servidor tipo VPS com Linux, para limpar o cache da RAM basta executar: <br /><br /> sudo sysctl -w vm.drop_caches=3</p>
+
+
+<p>Observe a RAM livre antes e depois de executar este comando acima, com:</p>
+
+
+<p>free -m</p>
+
+
+<p> </p>]]></description>
+			<category>Ubuntu Server</category>
+			<pubDate>Sat, 24 Jun 2017 18:34:48 -0300</pubDate>
+		</item>
+		<item>
+			<title>Usando o Vagrant</title>
+			<link>http://backup/portal/servidores/ubuntu-server/usando-o-vagrant.html</link>
+			<guid isPermaLink="true">http://backup/portal/servidores/ubuntu-server/usando-o-vagrant.html</guid>
+			<description><![CDATA[<p><img src="http://backup/portal/images/conectarnautilus.png" /></p><p style="text-align: justify;"><strong>Usando o Vagrant</strong></p>
+
+<p style="text-align: justify;">O Vagrant é uma ferramenta de desenvolvimento que cria máquinas virtuais de vários sistemas operacionais, onde podemos instalar o que quizermos, configurar e ao final empacotar e transferir para outros computadores com grande facilidade.</p>
+
+<p style="text-align: justify;"><strong>Exemplo</strong></p>
+
+<p style="text-align: justify;">Em casa meu sistema operacional atual é o linux Mint 18.1, que vem com o PostgreSQL 9.5. Estou precisando usar a última versão, que é a 9.6.3. Então crio uma box com o Vagrant, contendo o Ubuntu 17.04. Com a última versão do Ubuntu posso instalar o PostgreSQL 9.6.3. Após criar a box com o 17.04, instalo e configuro o PostgreSQL, o PHP 7 e outros e configuro. Após tudo pronto e testado eu empacoto e levo para minha máquina no trabalho. Chegando lá eu uso sem reinstalar ou reconfigurar nada.</p>
+
+<p style="text-align: justify;"><strong>Usando o Vagrant para criar um ambiente de desenvolvimento</strong><br />Funciona no Linux, Windows e Mac<br /><br /><strong>Instalação</strong><br />Virtualbox e guest<br /><a href="https://www.virtualbox.org/wiki/Downloads">https://www.virtualbox.org/wiki/Downloads</a>  - Virtualbox e Extension Pack<br />Vargant - <a href="http://vagrantup.com">http://vagrantup.com</a> <br />git - <a href="https://git-scm.com/">https://git-scm.com/</a> <br /><br />Após nstalar tudo, vamos <strong>instalar uma box</strong> (pacote com um sistema operacional)<br /><br />Acesse<br /><a href="https://www.vagrantup.com/">https://www.vagrantup.com/</a> <br /><br />E clique em Find Boxes. Como exemplo vamos instalar a box Ubuntu 17.04<br /><br />Crie um diretório para o varant em seu home:<br />mkdir vagrant<br />cd vagrant mkdir ub1704<br /><br />Execute a linha de comando<br />vagrant init fso/zesty64; vagrant up --provider virtualbox<br /><br />Se no Windows faça em duas etapas, executando dois comandos separados pelo ;<br /><br />Ao concluir <strong>acesse a box com</strong><br />varant ssh<br /><br /><strong>Atualize com</strong><br />sudo apt update<br /><br /><strong>Sair da box com:</strong><br />exit<br /><br /><strong>Enviar algum arquivo para a box pelo scp:</strong><br />scp -P 2222 arquivo.ext vagrant@127.0.0.1:/home/vagrant<br /><br />A senha é vagrant<br /><br />Acesse novamente e instale o que deseja para seu ambiente: linguagens, ferramentas, SGBDs, etc.<br /><br /><strong>Parando uma box</strong><br />vagrant halt<br /><br /><strong>Destruindo quando não mais desejar</strong><br />vagrant destroy<br /><br /><strong>Empacotando para transporte</strong><br />É muito confortável e eficiente transportar seu ambiente prontinho, com tudo que você usa, as versões e configurações para um destino (casa, trabalho, etc).<br /><br />cd vagrant/ub1704<br />vagrant package --output ub1704.box<br /><br /><strong>Transportar os arquivos</strong><br />package.box e Vagrantfile<br /><br /><strong>No destino</strong><br />Criar uma pasta no home<br />Copiar os arquivos package.box e Vagrantfile para a pasta acima<br />Renomear (exemplo) package.box para ub1704.box<br />Mudar no Vagrantfile a linha <br />  config.vm.box = "fso/zesty64"<br />Para<br />  config.vm.box = "./ub1704.box"<br />Acessar e executar<br />vagrant up<br /><br /><strong>Para atualizar após alterações no Vagrantfile</strong><br />vagrant halt<br />vagrant up<br /><br /><strong>Instalar o plugin vbguest</strong></p>
+
+<p style="text-align: justify;">vagrant plugin install vagrant-vbguest<br /><br /><strong>Carregar alterações</strong><br />vagrant provision</p>]]></description>
+			<category>Ubuntu Server</category>
+			<pubDate>Sat, 24 Jun 2017 18:34:48 -0300</pubDate>
+		</item>
+		<item>
+			<title>Dicas Ubuntu</title>
+			<link>http://backup/portal/servidores/ubuntu-server/dicas-ubuntu.html</link>
+			<guid isPermaLink="true">http://backup/portal/servidores/ubuntu-server/dicas-ubuntu.html</guid>
+			<description><![CDATA[<p><img src="http://backup/portal/images/conectarnautilus.png" /></p><p><strong>Adicionar um serviço ao boot</strong><br />update-rc.d firewall defaults<br /><br /><strong>Remover serviço do boot</strong><br />update-rc.d -f firewall</p>
+
+
+<p><strong>Encontra binário, man page e source</strong><br />whereis comando</p>
+
+
+<p><strong>Encontrar binário</strong><br />which comando<br /><br /><strong>Atualizar Ubuntu para uma mais nova versão</strong><br />sudo apt-get update<br />sudo apt-get upgrade<br />sudo apt-get dist-upgrade<br />sudo apt-get install update-manager-core<br />sudo do-release-upgrade<br /><br />Caso queira a versão em desenvolvimento<br />sudo update-manager -d<br /><br />Após atualizar e reiniciar veja a versão assim:<br /><br />cat /etc/*-release<br /><br />uname -a<br /><br /><br /><strong>Script para renomear vários arquivos de uma vez.</strong><br /><br />#!/bin/sh<br />#Por José Henrique<br />for f in *.php<br />do<br />    #Troca o sufixo .php pelo .html<br />    newname=$(basename $f php)html<br /><br />    #Renomeia<br />    mv $f $newname<br />done<br /><br /><strong>Gerando uma iso de um CD ou DVD</strong><br />dd if=/dev/cdrom of=imagem.iso</p>
+
+
+<p><strong>Quebrando a senha do root</strong><br /><br />Em casos de perda da senha do root e em outros casos em que precisamos quebrar a senha do root, precisaremos geralmente de um Live CD com um Linux.<br /><br />Efetuar o boot <br />Ao final acessar um terminal e executar:<br /><br />Para visualizar as partições do HD:<br />fdisk -l<br /><br />Criar um diretório temporário (acima anote quem é a partição raiz, por exemplo sda1):<br />mkdir teste<br /><br />Montar a raiz em teste:<br />mount /mnt/sda1 teste<br />Acessar o diretório /etc:<br />cd teste/etc<br /><br />nano passwd<br /><br />A primeira linha está mais ou menos assim:<br />root:x:0:0:root:/root:/bin/bash<br /><br />Altere removendo apenas o “x”:<br />root::0:0:root:/root:/bin/bash<br /><br />Salve e saia com CTRL+O e CTRL+X<br /><br />Agora desmonte a partição:<br />umount /dev/sda1<br /><br />Reinicie <br /><br />Agora poderá acessar o root sem senha. Apenas entre com root para o usuário e quando solicitar a senha apenas tecle Enter.<br /><br />Execute o comando abaixo logo após o login e tecle enter e adicionar uma senha para o root:<br />passwd root<br /><br /><br /><strong>Acessar servidor via SSH (porta 2222)</strong><br />ssh -p 2222 ribafs@192.168.0.10<br /><br /><strong>Copiar arquivos via scp</strong><br />scp -P 2222 ribafs@192.168.0.10:/home/ribafs<br /><br /></p>
+
+
+<p> </p>]]></description>
+			<category>Ubuntu Server</category>
+			<pubDate>Sat, 24 Jun 2017 18:34:48 -0300</pubDate>
+		</item>
+		<item>
+			<title>Instalar Servidor Web e SGBD</title>
+			<link>http://backup/portal/servidores/ubuntu-server/instalar-servidor.html</link>
+			<guid isPermaLink="true">http://backup/portal/servidores/ubuntu-server/instalar-servidor.html</guid>
+			<description><![CDATA[<p><img src="http://backup/portal/images/conectarnautilus.png" /></p><p><strong>Script para instalação dos pacotes de um servidor web e SGBD</strong>:</p>
+
+
+<p>apache2 e módulos, php7 e extensões, mysql, sqlite e postgresql.</p>
+
+
+<p><a title="server_php7.sh" href="http://backup/portal/../down/servidores/server_php7.sh" rel="alternate">server_php7.sh</a></p>]]></description>
+			<category>Ubuntu Server</category>
+			<pubDate>Sat, 24 Jun 2017 18:34:48 -0300</pubDate>
+		</item>
+	</channel>
+</rss>

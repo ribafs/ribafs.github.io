@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="Joomla! - Open Source Content Management" -->
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Servidor SGBD - RibaFS Portal</title>
+		<description><![CDATA[Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros.]]></description>
+		<link>http://backup/portal/servidores/servidor-sgbd.html</link>
+		<lastBuildDate>Sat, 07 Sep 2019 18:53:58 -0300</lastBuildDate>
+		<generator>Joomla! - Open Source Content Management</generator>
+		<atom:link rel="self" type="application/rss+xml" href="http://backup/portal/servidores/servidor-sgbd.feed?type=rss"/>
+		<language>pt-br</language>
+		<item>
+			<title>Trocar senha de Usuário do MySQL</title>
+			<link>http://backup/portal/servidores/servidor-sgbd/trocar-senha-de-usuario-do-mysql.html</link>
+			<guid isPermaLink="true">http://backup/portal/servidores/servidor-sgbd/trocar-senha-de-usuario-do-mysql.html</guid>
+			<description><![CDATA[<h4>Trocar senha de Usuário do MySQL</h4>
+<p><strong>Resetar senha do root do mysql 5.7</strong><br />mysql -u root -p<br />use mysql<br />ALTER USER 'root'@'localhost' IDENTIFIED BY 'novasenha';<br /><br /><strong>Esqueceu a senha, criar uma nova</strong><br /><br /></p>
+<pre class="language-markup"><code>sudo su
+/etc/init.d/mysql stop
+sudo killall mysqld_safe
+sudo killall mysqld
+sudo mysqld_safe --skip-grant-tables &amp;
+mysql -u root
+use mysql;
+update user set authentication_string=password('novasenha') where user='root';
+update user set plugin="mysql_native_password";
+flush privileges;
+exit;
+/etc/init.d/mysql stop
+sudo kill -9 $(pgrep mysql)
+/etc/init.d/mysql start</code></pre>
+<p><br /><br /><strong>Teste com</strong><br />mysql -u root -p<br />novasenha</p>]]></description>
+			<category>Servidor SGBD</category>
+			<pubDate>Mon, 28 Aug 2017 17:42:12 -0300</pubDate>
+		</item>
+		<item>
+			<title>Importação e Exportação de bancos non MySQL</title>
+			<link>http://backup/portal/servidores/servidor-sgbd/importar-exportar-mysql.html</link>
+			<guid isPermaLink="true">http://backup/portal/servidores/servidor-sgbd/importar-exportar-mysql.html</guid>
+			<description><![CDATA[<h4>Importação e Exportação de bancos non MySQL<br />somente dados ou somente estrutura</h4>
+
+<p><br />mysqldump -u USERNAME -h HOST --single-transaction --no-create-info --skip-triggers YOURDATABASENAME YOURTABLENAME --where='id=12345678' <br /><br /># To export to file (<strong>data only</strong>)<br />mysqldump -u [user] -p[pass] --no-create-info mydb &gt; mydb.sql<br /><br /># To export to file (<strong>structure only</strong>)<br />mysqldump -u [user] -p[pass] --no-data mydb &gt; mydb.sql<br /><br /># To <strong>import</strong> to database<br />mysql -u [user] -psenha banco &lt; banco.sql<br /><br />NOTE: sem espaço entre -p e senha<br /><br />man -k  mysqldump<br /><br /># To export to file (data only)<br />mysqldump -t -u [user] -p[pass] -t mydb &gt; mydb_data.sql<br /><br /># To export to file (structure only)<br />mysqldump -d -u [user] -p[pass] -d mydb &gt; mydb_structure.sql<br /><br /><br />mysqldump --no-create-info --skip-triggers --extended-insert --lock-tables --quick database &gt; dump.sql<br /><br /><br /><strong>Backup no mysql somente dos dados</strong><br /><br />Criar um script com apenas o comando:<br />mysqldump -t -uroot -psenha -t --single-transaction nomebanco &gt; nomebanco_data.sql<br /><br /><strong>Backup somente da estrutura</strong><br /><br />Criar script com a linha abaixo<br />mysqldump -d -uroot -psenha --single-transaction -d nomebanco &gt; nomebanco_estrutura.sql</p>]]></description>
+			<category>Servidor SGBD</category>
+			<pubDate>Mon, 28 Aug 2017 13:36:44 -0300</pubDate>
+		</item>
+		<item>
+			<title>MySQL Resumo</title>
+			<link>http://backup/portal/servidores/servidor-sgbd/mysql-resumo.html</link>
+			<guid isPermaLink="true">http://backup/portal/servidores/servidor-sgbd/mysql-resumo.html</guid>
+			<description><![CDATA[<p><img src="http://backup/portal/images/conectarnautilus.png" /></p><p style="text-align: justify;"><strong>Resumo do MySQL</strong></p>
+
+<p style="text-align: justify;">apt-get update<br /> apt-get upgrade<br /> apt-get -y install mysql-server mysql-client</p>
+
+<p style="text-align: justify;"><strong>Criar bancos</strong><br /> Criar usuários com direitos somente ao banco<br /> Cada site deve ter um usuário exclusivo e um banco onde tem plenos poderes.</p>
+
+<p style="text-align: justify;"><strong>Para permitir acesso de host externo</strong><br /> nano /etc/mysql/my.cnf<br /> #bind-address  = 127.0.0.1<br /> Descomentado aceita somente conexão local</p>
+
+<p style="text-align: justify;">Checar se rede está habilitada:<br /> netstat -tap | grep mysql</p>
+
+<p style="text-align: justify;"><strong>Hardening e Tuninng do MySQL</strong></p>
+
+<p style="text-align: justify;">Execute o seguinte comando e siga os passos recomendados:<br /> mysql_secure_installation</p>
+
+<p style="text-align: justify;"> </p>
+
+<p style="text-align: justify;"><strong>Resumo</strong></p>
+
+<p style="text-align: justify;">E criar um usuário para acesso remoto e plenos poderes, já que o root deve estar restrito aos acessos locais (pelo mysql_secure_installation)<br /> EVITAR A CRIAÇÃO DESTE USUÁRIO</p>
+
+<p style="text-align: justify;">mysql -u root -p<br /> GRANT ALL PRIVILEGES ON *.* TO admin@"%" IDENTIFIED BY 'senha' WITH GRANT OPTION;<br /> FLUSH PRIVILEGES;</p>
+
+<p style="text-align: justify;">Criar usuário para o site em Joomla com poderes apenas no localhost<br /> banco - portal<br /> usuário - portal</p>
+
+<p style="text-align: justify;">mysql -u root -p<br /> create database portal;<br /> use portal;<br /> GRANT ALL PRIVILEGES ON portal.* TO portal@localhost IDENTIFIED BY 'senha' WITH GRANT OPTION;</p>
+
+<p style="text-align: justify;">show processList;</p>
+
+<p style="text-align: justify;">create database sic;<br /> GRANT ALL PRIVILEGES ON sic.* TO sic@localhost IDENTIFIED BY 'senha' WITH GRANT OPTION;<br /> FLUSH PRIVILEGES;</p>
+
+<p style="text-align: justify;">Liberando apenas para 192.168.0.201 (web)<br /> mysql -u root -p<br /> create database portal;<br /> GRANT ALL PRIVILEGES ON portal.* TO portal@192.168.0.201 IDENTIFIED BY 'senha' WITH GRANT OPTION;<br /> Outro<br /> GRANT ALL PRIVILEGES ON portal.* TO portal@10.10.0.201 IDENTIFIED BY 'senha' WITH GRANT OPTION;<br /> \q</p>
+
+<p style="text-align: justify;">service mysql restart</p>
+
+<p style="text-align: justify;"><strong>Privilégios:</strong><br /> *.* - Privilégio grobal. Todos os bancos (*) e todas as tabelas de todos os bancos (.*)<br /> db.* - Todas as tabelas do banco db<br /> db.tb - Somente a tabela tb do banco db</p>
+
+<p style="text-align: justify;">Acesso com o uso do coringa (%):</p>
+
+<p style="text-align: justify;">Exemplos:<br /> ... TO remoto@"%.mysqlbrasil.com.br"<br /> ... TO remoto@"200.236.13.%"<br /> ... TO " "@"%mysqlbrasil.com.br"</p>
+
+<p style="text-align: justify;"><br /> /etc/init.d/mysql restart</p>
+
+<p style="text-align: justify;"> </p>
+
+<p style="text-align: justify;"><strong>Mostrar estrutura de tabela</strong><br /> use banco<br /> describe tabela;</p>
+
+<p style="text-align: justify;"><strong>Mostrar privilégios</strong><br /> use banco<br /> show privileges;</p>
+
+<p style="text-align: justify;"><strong>Mostrar privilégios de um usuário</strong><br /> SHOW GRANTS FOR teste@localhost;</p>
+
+<p style="text-align: justify;"><strong>Remover usuário</strong><br /> DELETE FROM mysql.user WHERE user="teste" AND host="localhost";<br /> FLUSH PRIVILEGES;</p>
+
+<p style="text-align: justify;"><strong>Alterar o password de determinado usuário:</strong><br /> set password for 'root'@'localhost'=password('novopassword');</p>
+
+<p style="text-align: justify;"><strong>Importar script para banco</strong><br /> mysql -h servidor -u usuário -p senha database_name &lt; banco.sql<br /> -h servidor: geralmente localhost. Dependendo do lugar, coloca-se o ip:porta. Ex.: -h localhost<br /> -u usuário:  usuário que manda no seu banco. Ex.: -u root<br /> -p senha: precisa exemplificar não né? :P<br /> database_name: o nome do banco que vai receber os dados sql.<br /> banco.sql: arquivo que foi previamente feito o dump.</p>
+
+<p style="text-align: justify;"><strong>Exportar banco para script</strong><br /> mysqldump -u root -p --opt database_name &gt; banco.sql</p>
+
+<p style="text-align: justify;"> </p>
+
+<h3 style="text-align: justify;">Privilégios</h3>
+
+<p style="text-align: justify;"><strong>Criando outro super usuário para o mysql</strong></p>
+
+<p style="text-align: justify;">mysql -u root -p<br /> use mysql;<br /> GRANT ALL PRIVILEGES ON *.localhost TO dnocs@localhost IDENTIFIED BY 'dnocs.devel' WITH GRANT OPTION;<br /> flush privileges;<br /> exit;</p>
+
+<p style="text-align: justify;"><strong>Criar usuário restrito para site com joomla</strong><br /> Criar banco tendo como dono o usuário acima</p>
+
+<p style="text-align: justify;">host - 10.0.0.60<br /> banco - portaldev<br /> usuario - portaldev<br /> senha - portaldev</p>
+
+<p style="text-align: justify;">mysql -u root -p<br /> create database portaldev;<br /> use portaldev;<br /> GRANT ALL PRIVILEGES ON portaldev.* TO portaldev@localhost IDENTIFIED BY 'portaldev' WITH GRANT OPTION;</p>
+
+<p style="text-align: justify;"> </p>]]></description>
+			<category>Servidor SGBD</category>
+			<pubDate>Sat, 24 Jun 2017 18:34:48 -0300</pubDate>
+		</item>
+		<item>
+			<title>PostgreSQL Resumo</title>
+			<link>http://backup/portal/servidores/servidor-sgbd/postgresql-resumo.html</link>
+			<guid isPermaLink="true">http://backup/portal/servidores/servidor-sgbd/postgresql-resumo.html</guid>
+			<description><![CDATA[<p><img src="http://backup/portal/images/conectarnautilus.png" /></p><p style="text-align: justify;"><strong>Resumo de uso do PostgreSQL</strong></p>
+
+<p style="text-align: justify;">apt-get update<br /> apt-get install postgresql postgresql-doc postgresql-9.5-slony1 postgresql-9.5-postgis</p>
+
+<p style="text-align: justify;">sudo su</p>
+
+<p style="text-align: justify;">su - postgresql</p>
+
+<p style="text-align: justify;">psql</p>
+
+<p style="text-align: justify;"><strong>Permitir Acesso somente Local</strong></p>
+
+<p style="text-align: justify;">Para permitir que aplicativos e sites criados com o PHP tenham acesso através de uma conexão onde usam 'host=localhost', ou seja, local, devemos executar como root.</p>
+
+<p style="text-align: justify;"><br /> <strong>Criar bancos</strong><br /> Criar usuários com direitos somente ao banco<br /> Cada site deve ter um usuário exclusivo e um banco onde tem plenos poderes.</p>
+
+<p style="text-align: justify;"><br /> <strong>CRIAR MAIS DOIS USUÁRIOS</strong><br /> Criar usuários que não podem criar usuários, bancos nem roles</p>
+
+<p style="text-align: justify;">su - postgres<br /> createuser ribafs<br /> createuser joao<br /> <br /> <strong>Alterar a senha dentro do SGBD</strong><br /> psql<br /> ALTER USER postgres WITH PASSWORD 'senha';<br /> \q         para sair</p>
+
+<p style="text-align: justify;">cp /etc/postgresql/9.1/main/postgresql.conf /etc/postgresql/9.1/main/postgresql.confCOP<br /> nano /etc/postgresql/9.1/main/postgresql.conf</p>
+
+<p style="text-align: justify;">listen_addresses = '*'    (Escutar todas os IPs. Controlar no pg_hba.conf)</p>
+
+<p style="text-align: justify;"><br /> Neste arquivo (pg_hba.conf) você consegue restringir o acesso ao seu banco de dados por IP, por usuário, por tipo de senha, etc.</p>
+
+<p style="text-align: justify;">cp /etc/postgresql/9.1/main/pg_hba.conf /etc/postgresql/9.1/main/pg_hba.confCOP<br /> nano /etc/postgresql/9.1/main/pg_hba.conf</p>
+
+<p style="text-align: justify;"><strong>Liberar o IP do sysadmin (10.40.0.103)</strong></p>
+
+<p style="text-align: justify;"># Database administrative login by UNIX sockets<br /> local   all         postgres                          ident        (Usuário postgres usa a mesma senha do SO)</p>
+
+<p style="text-align: justify;"># TYPE  DATABASE    USER        CIDR-ADDRESS          METHOD</p>
+
+<p style="text-align: justify;"># "local" is for Unix domain socket connections only<br /> local   all         all                               ident<br /> # IPv4 local connections:<br /> host    all         all         127.0.0.1/32               md5<br /> host    all         all         10.40.0.133/32          md5</p>
+
+<p style="text-align: justify;">Toda uma rede:<br /> host    all         all         10.0.0.0/24          md5<br /> exit</p>
+
+<p style="text-align: justify;">/etc/init.d/postgresql restart</p>
+
+<p style="text-align: justify;">Para não atribuir senha para o postgres, usando somente através do root podemos usar:<br /> su postgres -c psql postgres</p>
+
+<p style="text-align: justify;">Alguns scripts em<br /> /usr/share/postgresql/8.4/</p>
+
+<p style="text-align: justify;"><strong>Uso Remoto do PostgreSQL</strong></p>
+
+<p style="text-align: justify;">Acesso remoto do IP 192.168.1.67<br /> No postgresql.conf listen_addresses deve estar com '*'</p>
+
+<p style="text-align: justify;">Alterar o pg_hba.conf na linha do IP para trust<br /> host    all         all         192.168.1.67/32          md5</p>
+
+<p style="text-align: justify;">Para toda a rede:<br /> host    all         all         192.168.1.0/24          md5</p>
+
+<p style="text-align: justify;">Restartar<br /> /etc/init.d/postgresql restart</p>
+
+<p style="text-align: justify;">Acessar com:<br /> psql -h IP -U usuario -d banco</p>
+
+<p style="text-align: justify;">ou<br /> psql -h IP -U usuario</p>
+
+<p style="text-align: justify;">Listar bancos remotamente<br /> psql -l -h 192.168.1.12 -U postgres</p>
+
+<p style="text-align: justify;">Ajuda<br /> psql --help</p>
+
+<p style="text-align: justify;"><br /> <strong>Backup local e restore remoto</strong><br /> pg_dump banco | psql -h hostname banco -U postgres</p>
+
+<p style="text-align: justify;">pg_restore apoena -f</p>
+
+<p style="text-align: justify;"><br /> <strong>Máscara Explicada</strong></p>
+
+<p style="text-align: justify;">Apenas para iluminar um pouco, aquele número que vem depois da barra "/"<br /> significa o número de bits que ele vai utilizar na mascara. Vejamos.</p>
+
+<p style="text-align: justify;">Suponha que voce deixe 189.0.0.0/24, o que vai acontecer?</p>
+
+<p style="text-align: justify;">1) Voce vai tentar conectar no IP do seu servidor a partir de seu IP de<br /> origem IP<br /> 2) Seu servidor vai pegar o seu IP de origem e fazer um calculo de<br /> mascara usando 24 bits, numa comparação XOR bit-a-bit que vai resultar<br /> em 189.22.33.0<br /> 3) Ele vai pegar o resultado do calculo acima e comparar com seu arquivo<br /> e vai identificar que 189.22.33.0 NÃO É IGUAL A 189.0.0.0.</p>
+
+<p style="text-align: justify;">Portanto você tem que utilizar 189.0.0.0/8, pois assim ele vai pegar o<br /> seu IP IP, vai fazer uma comparacao XOR bit-a-bit e vai ter<br /> como resultado 189.0.0.0, com esse resultado ele vai comprar com o<br /> 189.0.0.0 e vai reconhecer a IGUALDADE entre eles e vai aceitar.</p>
+
+<p style="text-align: justify;"><strong>Em resumo.</strong></p>
+
+<p style="text-align: justify;">IP/8  =&gt; IP/255.0.0.0       = 192.0.0.0<br /> IP/16 =&gt; IP/255.255.0.0     = 192.168.0.0<br /> IP/24 =&gt; IP/255.255.255.0   = 192.168.1.0<br /> IP/32 =&gt; IP/255.255.255.255 = 192.168.1.12</p>
+
+<p style="text-align: justify;">Outras mascaras são possíveis através de deslocamento de bit do parte da<br /> rede para o host, obtendo-se sub-redes, mas ai ja acabamos fungindo do<br /> escopo da lista.<br /> --<br /> Dickson S. Guedes</p>
+
+<p style="text-align: justify;"><br /> <strong>Criar Usuários com privilégios Restritos</strong></p>
+
+<p style="text-align: justify;">Permitir Acesso somente Local<br /> Para permitir que aplicativos e sites criados com o PHP tenham acesso através de uma conexão onde usam 'host=localhost', ou seja, local, devemos executar como root.</p>
+
+<p style="text-align: justify;">Neste arquivo (pg_hba.conf) você consegue restringir o acesso ao seu banco de dados por IP, por usuário, por tipo de senha, etc.</p>
+
+<p style="text-align: justify;">cp /etc/postgresql/8.4/main/pg_hba.conf /etc/postgresql/8.4/main/pg_hba.confCOP<br /> nano /etc/postgresql/8.4/main/pg_hba.conf</p>
+
+<p style="text-align: justify;">Liberar o IP do servidor WEB (10.10.0.102) e do servidor de Email (10.10.0.103)</p>
+
+<p style="text-align: justify;"># Database administrative login by UNIX sockets<br /> local   all         postgres                          ident        (Usuário postgres usa a mesma senha do SO)</p>
+
+<p style="text-align: justify;"># TYPE  DATABASE    USER        CIDR-ADDRESS          METHOD</p>
+
+<p style="text-align: justify;"># "local" is for Unix domain socket connections only<br /> local   all         all                               ident<br /> # IPv4 local connections:<br /> host    all         all         127.0.0.1/32               md5<br /> host    all         all         10.10.0.102/32          md5<br /> #host    all         all         10.10.0.103/32          md5</p>
+
+<p style="text-align: justify;">Toda uma rede:<br /> host    all         all         10.0.0.0/24          md5<br /> exit</p>
+
+<p style="text-align: justify;">/etc/init.d/postgresql restart</p>]]></description>
+			<category>Servidor SGBD</category>
+			<pubDate>Sat, 24 Jun 2017 18:34:48 -0300</pubDate>
+		</item>
+	</channel>
+</rss>

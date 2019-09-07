@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br" dir="ltr">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <base href="" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Ribamar FS" />
+	<meta name="robots" content="noindex, nofollow" />
+	<meta name="description" content="Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros." />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>Template no Laravel - RibaFS Portal</title>
+	<link href="http://ribafs.org/portal/frameworks/laravel-5/dicas/template-no-laravel.html?tmpl=component&amp;print=1&amp;layout=default" rel="canonical" />
+	<link href="../../../templates/shaper_helix3/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../../../favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<script src="../../../media/jui/js/jquery.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery-noconflict.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery-migrate.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="http://backup/portal/media/system/js/caption.js?d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script type="text/javascript">
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+	</script>
+	<meta property="og:url" content="http://backup/portal/frameworks/laravel-5/dicas/template-no-laravel.html" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Template no Laravel" />
+	<meta property="og:description" content="Sistema de Template do Laravel 5, que é o Blade Criar uma pasta template ou layouts dentro da pasta views Criar um template nesta pasta: template1.blade.ph..." />
+
+   	<link rel="stylesheet" href="../../../media/jui/css/bootstrap.min.css" type="text/css" />
+	<link rel="stylesheet" href="../../../templates/shaper_helix3/css/frontend-edit.css" type="text/css" />
+    <link rel="stylesheet" href="../../../templates/shaper_helix3/css/template.css" type="text/css" />
+</head>
+<body class="contentpane">
+	<div id="system-message-container">
+	</div>
+
+	
+
+<article class="item item-page" itemscope itemtype="http://schema.org/Article">
+	<meta itemprop="inLanguage" content="pt-BR" />
+	
+	
+
+	<div class="entry-header">
+		<span class="post-format"><i class="fa fa-thumb-tack"></i></span>
+		
+					<h2 itemprop="name">
+									Template no Laravel							</h2>
+												</div>
+
+						<div id="pop-print" class="btn hidden-print">
+				<a href="template-no-laravel.html#" onclick="window.print();return false;">			<span class="icon-print" aria-hidden="true"></span>
+		Imprimir	</a>			</div>
+				
+	
+	
+				
+	
+			<div itemprop="articleBody">
+		<p><strong>Sistema de Template do Laravel 5, que é o Blade</strong><br /><br />Criar uma pasta template ou layouts dentro da pasta views<br /><br />Criar um template nesta pasta:<br /><br />template1.blade.php<br /><br />&lt;!DOCTYPE html&gt;<br />&lt;html&gt;<br />    &lt;head&gt;<br />        &lt;title&gt;{{$title or 'Curso de Laravel 5.3'}}&lt;/title&gt;<br />    &lt;/head&gt;<br />    &lt;body&gt;<br />        @yeld('content')<br />    &lt;/body&gt;<br />&lt;/html&gt;<br /><br />Vamos usar o template acima na pasta home<br /><br />Criar index.blade.php<br /><br />@extends('site.template.template1')<br /><br />@section('content')<br /><br />&lt;h1&gt;Home page do site&lt;/h1&gt;<br /><br />{{$var1 or 'Não existe'}}<br /><br />@endsection<br /><br />Rodar código JavaScript/HTML<br /><br />{!! $xss !!}<br /><br />Controles no Template<br /><br />@section('content')<br /><br />@if ($var1 == '123')<br /><br />É igual<br />@endif<br /><br />@endsection<br /><br />@for($i;$&lt;10;$i++)<br /><br />@foreach($posts as $post)<br /><br />@forelse<br /><br />Comentários<br /><br />{{--<br />comentado<br /><br />--}}<br /><br />@php<br /><br />@endphp<br /><br />Includes<br /><br />@include('site.includes.sidebar', compact('var1'))<br /><br /><a href="https://www.youtube.com/watch?v=4RQX3nLBx8E&amp;index=9&amp;list=PLVSNL1PHDWvR3PeLXz6nvBkDhv1IQk4wP">https://www.youtube.com/watch?v=4RQX3nLBx8E&amp;index=9&amp;list=PLVSNL1PHDWvR3PeLXz6nvBkDhv1IQk4wP</a></p>
+
+
+<p> </p>
+
+
+<p>Detalhes em:<br />https://laravel.com/docs/5.4/blade<br /><br />@section('title', '| Criar novo Post');<br /><br />Criar select vindo do banco:<br /><br />&lt;select id="role" class="form-control" name="role" required&gt;<br />    @foreach($roles as $id =&gt; $role)<br />        &lt;option value="{{$id}}"&gt;{{$role}}&lt;/option&gt;<br />    @endforeach<br />&lt;/select&gt;<br /><br />@extends('layouts.app') &lt;!-- importa o arquivo app.blade.php da pasta layouts --&gt;<br /><br />@section('sidebar')<br />   This is the master sidebar.<br />@show<br /><br />@for ($i = 0; $i &lt; 10; $i++)<br />    The current value is {{ $i }}<br />@endfor<br /><br />@foreach ($users as $user)<br />    @if ($user-&gt;type == 1)<br />        @continue<br />    @endif<br /><br />    &lt;li&gt;{{ $user-&gt;name }}&lt;/li&gt;<br /><br />    @if ($user-&gt;number == 5)<br />        @break<br />    @endif<br />@endforeach<br /><br />@forelse ($users as $user)<br />    &lt;li&gt;{{ $user-&gt;name }}&lt;/li&gt;<br />@empty<br />    &lt;p&gt;No users&lt;/p&gt;<br />@endforelse<br /><br />@while (true)<br />    &lt;p&gt;I'm looping forever.&lt;/p&gt;<br />@endwhile<br /><br />@if (count($records) === 1)<br />    I have one record!<br />@elseif (count($records) &gt; 1)<br />    I have multiple records!<br />@else<br />    I don't have any records!<br />@endif<br /><br />@isset($records)<br />    // $records is defined and is not null...<br />@endisset<br /><br />@empty($records)<br />    // $records is "empty"...<br />@endempty<br /><br />@can('update', $post)<br /><br />@endcan<br /><br />@role('admin') // @if(Auth::check() &amp;&amp; Auth::user()-&gt;is('admin'))<br />    // user is admin<br />@endrole<br /><br />@permission('edit.articles') // @if(Auth::check() &amp;&amp; Auth::user()-&gt;can('edit.articles'))<br />    // user can edit articles<br />@endpermission<br /><br />@allowed('edit', $article) // @if(Auth::check() &amp;&amp; Auth::user()-&gt;allowed('edit', $article))<br />    // show edit button<br />@endallowed<br /><br />@role('admin|moderator', 'all') // @if(Auth::check() &amp;&amp; Auth::user()-&gt;is('admin|moderator', 'all'))<br />    // user is admin and also moderator<br />@else<br />    // something else<br />@endrole<br /><br /><strong>Forms</strong><br /><br />Value guardar o valor digitado<br />&lt;input type="text" name="username" value="{{ old('username') }}"&gt;</p> 	</div>
+
+	
+	
+				
+	
+	
+	
+</article>
+
+</body>
+</html>

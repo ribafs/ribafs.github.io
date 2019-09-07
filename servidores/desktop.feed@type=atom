@@ -1,0 +1,695 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="Joomla! - Open Source Content Management" -->
+<feed xmlns="http://www.w3.org/2005/Atom"  xml:lang="pt-br">
+	<title type="text">Desktop - RibaFS Portal</title>
+	<subtitle type="text">Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros.</subtitle>
+	<link rel="alternate" type="text/html" href="http://backup"/>
+	<id>http://backup/portal/servidores/desktop.feed</id>
+	<updated>2019-09-07T18:51:48-03:00</updated>
+	<author>
+		<name>RibaFS Portal</name>
+	</author>
+	<generator uri="https://www.joomla.org">Joomla! - Open Source Content Management</generator>
+	<link rel="self" type="application/atom+xml" href="http://backup/portal/servidores/desktop.feed?type=atom"/>
+	<entry>
+		<title>Recuperar senha do root</title>
+		<link rel="alternate" type="text/html" href="http://backup/portal/servidores/desktop/recuperar-senha-do-root.html"/>
+		<published>2019-08-23T13:25:45-03:00</published>
+		<updated>2019-08-23T13:25:45-03:00</updated>
+		<id>http://backup/portal/servidores/desktop/recuperar-senha-do-root.html</id>
+		<author>
+			<name>Ribamar FS</name>
+		</author>
+		<summary type="html">&lt;h3&gt;Recuperar senha de root no Linux&lt;/h3&gt;
+&lt;p&gt;&lt;br /&gt;Mesmo em distribuições baseadas no Ubuntu, onde se usa o sudo é importane conceder senha ao root, pois pode acontecer de precisar, como quando o sistema corrompe e temos de acessar no modo recovery.&lt;br /&gt;&lt;br /&gt;Este pequeno tutorial é para quando esquecemos a senha do root.&lt;br /&gt;&lt;br /&gt;Dar boot com live CD&lt;br /&gt;&lt;br /&gt;Acessar o terminal após o sistema ser carregado&lt;br /&gt;&lt;br /&gt;Descobrir a partição raiz em que está o Linux instalado com&lt;br /&gt;&lt;br /&gt;sudo su&lt;br /&gt;&lt;br /&gt;fdisk -l&lt;br /&gt;&lt;br /&gt;Exemplo: /dev/sda5&lt;br /&gt;&lt;br /&gt;mkdir teste&lt;br /&gt;mount /dev/sda5 teste&lt;br /&gt;&lt;br /&gt;chroot teste&lt;br /&gt;&lt;br /&gt;passwd root&lt;/p&gt;
+&lt;p&gt;Criar novo usuário se precisar&lt;br /&gt;adduser novo_user&lt;br /&gt;&lt;br /&gt;umount teste&lt;br /&gt;&lt;br /&gt;reboot&lt;br /&gt;&lt;br /&gt;Acessar linux com novo_user&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;</summary>
+		<content type="html">&lt;h3&gt;Recuperar senha de root no Linux&lt;/h3&gt;
+&lt;p&gt;&lt;br /&gt;Mesmo em distribuições baseadas no Ubuntu, onde se usa o sudo é importane conceder senha ao root, pois pode acontecer de precisar, como quando o sistema corrompe e temos de acessar no modo recovery.&lt;br /&gt;&lt;br /&gt;Este pequeno tutorial é para quando esquecemos a senha do root.&lt;br /&gt;&lt;br /&gt;Dar boot com live CD&lt;br /&gt;&lt;br /&gt;Acessar o terminal após o sistema ser carregado&lt;br /&gt;&lt;br /&gt;Descobrir a partição raiz em que está o Linux instalado com&lt;br /&gt;&lt;br /&gt;sudo su&lt;br /&gt;&lt;br /&gt;fdisk -l&lt;br /&gt;&lt;br /&gt;Exemplo: /dev/sda5&lt;br /&gt;&lt;br /&gt;mkdir teste&lt;br /&gt;mount /dev/sda5 teste&lt;br /&gt;&lt;br /&gt;chroot teste&lt;br /&gt;&lt;br /&gt;passwd root&lt;/p&gt;
+&lt;p&gt;Criar novo usuário se precisar&lt;br /&gt;adduser novo_user&lt;br /&gt;&lt;br /&gt;umount teste&lt;br /&gt;&lt;br /&gt;reboot&lt;br /&gt;&lt;br /&gt;Acessar linux com novo_user&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;</content>
+		<category term="Desktop" />
+	</entry>
+	<entry>
+		<title>Impressora HP Deskjet no Linux Mint</title>
+		<link rel="alternate" type="text/html" href="http://backup/portal/servidores/desktop/instalando-impressora-hp-deskjet-no-linux-mint.html"/>
+		<published>2019-07-01T15:14:45-03:00</published>
+		<updated>2019-07-01T15:14:45-03:00</updated>
+		<id>http://backup/portal/servidores/desktop/instalando-impressora-hp-deskjet-no-linux-mint.html</id>
+		<author>
+			<name>Ribamar FS</name>
+		</author>
+		<summary type="html">&lt;h3&gt;Instalando Impressora HP Deskjet Ink Advantage 2676 Wi-Fi no Linux Mint 19.1&lt;/h3&gt;
+&lt;p&gt;Instalar em um micro de rede wi-fi para imprimir pelo wi-fi e não via cabo&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Download do HPLIP 3.19.6&lt;/strong&gt;&lt;br /&gt;&lt;a href=&quot;https://developers.hp.com/hp-linux-imaging-and-printing/gethplip&quot;&gt;https://developers.hp.com/hp-linux-imaging-and-printing/gethplip&lt;/a&gt; &lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Orientações&lt;/strong&gt;&lt;br /&gt;&lt;a href=&quot;https://developers.hp.com/hp-linux-imaging-and-printing/install/install/index&quot;&gt;https://developers.hp.com/hp-linux-imaging-and-printing/install/install/index&lt;/a&gt; &lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Instalação&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;cd /home/ribafs&lt;br /&gt;mkdir hp&lt;br /&gt;cd hp&lt;br /&gt;&lt;br /&gt;Mover o arquivo baixado para /home/ribafs/hp&lt;/p&gt;
+&lt;p&gt;Executar:&lt;br /&gt;sudo sh hplip-3.19.6.run&lt;br /&gt;&lt;br /&gt;Após instalar reinicie a máquina&lt;br /&gt;&lt;br /&gt;Quando voltar conecte a impressora (temporariamente) pelo cabo USB no micro&lt;br /&gt;&lt;br /&gt;Execute pelo menu - HP Device Manager&lt;br /&gt;&lt;br /&gt;Clique na opção Wireless ... e então abaixo em Next&lt;br /&gt;&lt;br /&gt;Siga os demais passos até concluir.&lt;br /&gt;&lt;br /&gt;Ao final ele instala duas impressoras, uma local como default e outra Wi-fi.&lt;br /&gt;Eu troquei a Wifi para ser a Default.&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;Espero que tenha sido útil.&lt;/p&gt;
+&lt;p&gt;Em caso de problema deixe um comentário abaixo.&lt;/p&gt;</summary>
+		<content type="html">&lt;h3&gt;Instalando Impressora HP Deskjet Ink Advantage 2676 Wi-Fi no Linux Mint 19.1&lt;/h3&gt;
+&lt;p&gt;Instalar em um micro de rede wi-fi para imprimir pelo wi-fi e não via cabo&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Download do HPLIP 3.19.6&lt;/strong&gt;&lt;br /&gt;&lt;a href=&quot;https://developers.hp.com/hp-linux-imaging-and-printing/gethplip&quot;&gt;https://developers.hp.com/hp-linux-imaging-and-printing/gethplip&lt;/a&gt; &lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Orientações&lt;/strong&gt;&lt;br /&gt;&lt;a href=&quot;https://developers.hp.com/hp-linux-imaging-and-printing/install/install/index&quot;&gt;https://developers.hp.com/hp-linux-imaging-and-printing/install/install/index&lt;/a&gt; &lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Instalação&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;cd /home/ribafs&lt;br /&gt;mkdir hp&lt;br /&gt;cd hp&lt;br /&gt;&lt;br /&gt;Mover o arquivo baixado para /home/ribafs/hp&lt;/p&gt;
+&lt;p&gt;Executar:&lt;br /&gt;sudo sh hplip-3.19.6.run&lt;br /&gt;&lt;br /&gt;Após instalar reinicie a máquina&lt;br /&gt;&lt;br /&gt;Quando voltar conecte a impressora (temporariamente) pelo cabo USB no micro&lt;br /&gt;&lt;br /&gt;Execute pelo menu - HP Device Manager&lt;br /&gt;&lt;br /&gt;Clique na opção Wireless ... e então abaixo em Next&lt;br /&gt;&lt;br /&gt;Siga os demais passos até concluir.&lt;br /&gt;&lt;br /&gt;Ao final ele instala duas impressoras, uma local como default e outra Wi-fi.&lt;br /&gt;Eu troquei a Wifi para ser a Default.&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;Espero que tenha sido útil.&lt;/p&gt;
+&lt;p&gt;Em caso de problema deixe um comentário abaixo.&lt;/p&gt;</content>
+		<category term="Desktop" />
+	</entry>
+	<entry>
+		<title>Como Restaurar um Computador Dell</title>
+		<link rel="alternate" type="text/html" href="http://backup/portal/servidores/desktop/como-restaurar-um-computador-dell.html"/>
+		<published>2019-02-20T13:13:48-03:00</published>
+		<updated>2019-02-20T13:13:48-03:00</updated>
+		<id>http://backup/portal/servidores/desktop/como-restaurar-um-computador-dell.html</id>
+		<author>
+			<name>Ribamar FS</name>
+		</author>
+		<summary type="html">&lt;h3 style=&quot;text-align: left;&quot; align=&quot;center&quot;&gt;Como Restaurar um Computador Dell&lt;/h3&gt;
+&lt;p&gt;Aviso Importante: esta ação apagará todos os dados na(s) unidade(s) de destino. Então se necessário e possível faça backup antes deste procedimento.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Problema e Solução&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Este é mais um ótimo serviço que a Dell presta a seus clientes, além dos oferecidos para quem cria uma conta em seu site.&lt;/p&gt;
+&lt;p&gt;Em caso de problema irrecuperável no sistema operacional Windwos ou Linux, por uma falha no sistema ou troca de HD, então podemos usar o software da Dell OS Recovery Tool, que gera um disco de boot (Pendrive) contendo o Windows para dar boot com esse pendrive e reinstalar o sistema Windows ou Linux além de reconfigurar a BIOS como veio de fábrica.&lt;/p&gt;
+&lt;p&gt;No meu caso, havia removido todas as partições originais e criado outras para usar linux, assim como havia desabilitado o UEFI e Secure Boot na BIOS.&lt;/p&gt;
+&lt;p&gt;Ao final ele apagou todas as partições e criou apenas uma de 1TB contendo o Windows 10 e deixou a BIOS com UEFI e Secure Boot habilitado.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Requisitos&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Acesse:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.dell.com/support/article/br/pt/brbsdt1/sln299044/como-fazer-download-e-usar-o-dell-os-recovery-tool-do-microsoft-windows?lang=pt&quot;&gt;https://www.dell.com/support/article/br/pt/brbsdt1/sln299044/como-fazer-download-e-usar-o-dell-os-recovery-tool-do-microsoft-windows?lang=pt&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;- Anote a etiqueta do computador&lt;/p&gt;
+&lt;p&gt;- Acesse &lt;a href=&quot;https://www.dell.com/support/home/br/pt/brbsdt1/drivers/osiso/win&quot;&gt;https://www.dell.com/support/home/br/pt/brbsdt1/drivers/osiso/win&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Entre com a TAG/Etiqueta do computador&lt;/p&gt;
+&lt;p&gt;Digite abaixo o código de segurança&lt;/p&gt;
+&lt;p&gt;Faça o download da image ou imagens ISO e do software de gravação no pendrive Dell OS Recovery Tool&lt;/p&gt;
+&lt;p&gt;- Instale, como administrador, o Dell OS Recovery Tool em outro computador com Windows 7 ou superior com .NET Framework 4.5 ou neste computador e grave a ISO num pendrive de 8GB.&lt;/p&gt;
+&lt;p&gt;Veja as instruções aqui, de acordo com o sistema e a versão:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.dell.com/support/article/br/pt/brbsdt1/sln299044/como-fazer-download-e-usar-o-dell-os-recovery-tool-do-microsoft-windows?lang=pt&quot;&gt;https://www.dell.com/support/article/br/pt/brbsdt1/sln299044/como-fazer-download-e-usar-o-dell-os-recovery-tool-do-microsoft-windows?lang=pt&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;- Reiniciar o computador onde deseja restaurar com o pendrive conectado e teclar F12 para mudar a sequência de boot, se necessário&lt;/p&gt;
+&lt;p&gt;- Na tela “Escolha uma opção”, selecione Solucionar problemas e, em seguida, selecione Recuperar de uma unidade.&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;</summary>
+		<content type="html">&lt;h3 style=&quot;text-align: left;&quot; align=&quot;center&quot;&gt;Como Restaurar um Computador Dell&lt;/h3&gt;
+&lt;p&gt;Aviso Importante: esta ação apagará todos os dados na(s) unidade(s) de destino. Então se necessário e possível faça backup antes deste procedimento.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Problema e Solução&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Este é mais um ótimo serviço que a Dell presta a seus clientes, além dos oferecidos para quem cria uma conta em seu site.&lt;/p&gt;
+&lt;p&gt;Em caso de problema irrecuperável no sistema operacional Windwos ou Linux, por uma falha no sistema ou troca de HD, então podemos usar o software da Dell OS Recovery Tool, que gera um disco de boot (Pendrive) contendo o Windows para dar boot com esse pendrive e reinstalar o sistema Windows ou Linux além de reconfigurar a BIOS como veio de fábrica.&lt;/p&gt;
+&lt;p&gt;No meu caso, havia removido todas as partições originais e criado outras para usar linux, assim como havia desabilitado o UEFI e Secure Boot na BIOS.&lt;/p&gt;
+&lt;p&gt;Ao final ele apagou todas as partições e criou apenas uma de 1TB contendo o Windows 10 e deixou a BIOS com UEFI e Secure Boot habilitado.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Requisitos&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Acesse:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.dell.com/support/article/br/pt/brbsdt1/sln299044/como-fazer-download-e-usar-o-dell-os-recovery-tool-do-microsoft-windows?lang=pt&quot;&gt;https://www.dell.com/support/article/br/pt/brbsdt1/sln299044/como-fazer-download-e-usar-o-dell-os-recovery-tool-do-microsoft-windows?lang=pt&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;- Anote a etiqueta do computador&lt;/p&gt;
+&lt;p&gt;- Acesse &lt;a href=&quot;https://www.dell.com/support/home/br/pt/brbsdt1/drivers/osiso/win&quot;&gt;https://www.dell.com/support/home/br/pt/brbsdt1/drivers/osiso/win&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Entre com a TAG/Etiqueta do computador&lt;/p&gt;
+&lt;p&gt;Digite abaixo o código de segurança&lt;/p&gt;
+&lt;p&gt;Faça o download da image ou imagens ISO e do software de gravação no pendrive Dell OS Recovery Tool&lt;/p&gt;
+&lt;p&gt;- Instale, como administrador, o Dell OS Recovery Tool em outro computador com Windows 7 ou superior com .NET Framework 4.5 ou neste computador e grave a ISO num pendrive de 8GB.&lt;/p&gt;
+&lt;p&gt;Veja as instruções aqui, de acordo com o sistema e a versão:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.dell.com/support/article/br/pt/brbsdt1/sln299044/como-fazer-download-e-usar-o-dell-os-recovery-tool-do-microsoft-windows?lang=pt&quot;&gt;https://www.dell.com/support/article/br/pt/brbsdt1/sln299044/como-fazer-download-e-usar-o-dell-os-recovery-tool-do-microsoft-windows?lang=pt&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;- Reiniciar o computador onde deseja restaurar com o pendrive conectado e teclar F12 para mudar a sequência de boot, se necessário&lt;/p&gt;
+&lt;p&gt;- Na tela “Escolha uma opção”, selecione Solucionar problemas e, em seguida, selecione Recuperar de uma unidade.&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;</content>
+		<category term="Desktop" />
+	</entry>
+	<entry>
+		<title>Aumentando a Privacidade</title>
+		<link rel="alternate" type="text/html" href="http://backup/portal/servidores/desktop/aumentando-a-privacidade.html"/>
+		<published>2017-10-02T20:52:38-03:00</published>
+		<updated>2017-10-02T20:52:38-03:00</updated>
+		<id>http://backup/portal/servidores/desktop/aumentando-a-privacidade.html</id>
+		<author>
+			<name>Ribamar FS</name>
+		</author>
+		<summary type="html">&lt;h2&gt;Protegendo nossa Privacidade&lt;/h2&gt;
+
+&lt;p&gt;Vivemos tempos em que nossas informações valem ouro. Elas têm enriquecido muita gente, especialmente quem não nos respeita.&lt;/p&gt;
+
+&lt;p&gt;Algumas dicas do instrumento de busca DuckDuckGo para melhorar a privacidade:&lt;/p&gt;
+
+&lt;ul&gt;
+
+&lt;li&gt;&lt;a href=&quot;https://deref-gmx.com/mail/client/zlaVldA8LGk/dereferrer/?redirectUrl=https%3A%2F%2Fspreadprivacy.com%2Fiphone-privacy-tips%2F&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;iOS&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;a href=&quot;https://deref-gmx.com/mail/client/W4ynR3fUviY/dereferrer/?redirectUrl=https%3A%2F%2Fspreadprivacy.com%2Fandroid-privacy-tips%2F&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Android&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;a href=&quot;https://deref-gmx.com/mail/client/NXPHhMtFal8/dereferrer/?redirectUrl=https%3A%2F%2Fspreadprivacy.com%2Fmac-privacy-tips%2F&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Mac&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;a href=&quot;https://deref-gmx.com/mail/client/wNxUeitkw0k/dereferrer/?redirectUrl=https%3A%2F%2Fspreadprivacy.com%2Fwindows-10-privacy-tips%2F&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Windows 10&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;a href=&quot;https://deref-gmx.com/mail/client/nGAwKh9CPrc/dereferrer/?redirectUrl=https%3A%2F%2Fspreadprivacy.com%2Fwindows-7-privacy-tips%2F&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Windows 7&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;a href=&quot;https://deref-gmx.com/mail/client/i8oxyzYSpvs/dereferrer/?redirectUrl=https%3A%2F%2Fspreadprivacy.com%2Flinux-privacy-tips%2F&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Linux&lt;/a&gt;&lt;/li&gt;
+
+&lt;/ul&gt;
+
+&lt;p&gt; &lt;/p&gt;</summary>
+		<content type="html">&lt;h2&gt;Protegendo nossa Privacidade&lt;/h2&gt;
+
+&lt;p&gt;Vivemos tempos em que nossas informações valem ouro. Elas têm enriquecido muita gente, especialmente quem não nos respeita.&lt;/p&gt;
+
+&lt;p&gt;Algumas dicas do instrumento de busca DuckDuckGo para melhorar a privacidade:&lt;/p&gt;
+
+&lt;ul&gt;
+
+&lt;li&gt;&lt;a href=&quot;https://deref-gmx.com/mail/client/zlaVldA8LGk/dereferrer/?redirectUrl=https%3A%2F%2Fspreadprivacy.com%2Fiphone-privacy-tips%2F&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;iOS&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;a href=&quot;https://deref-gmx.com/mail/client/W4ynR3fUviY/dereferrer/?redirectUrl=https%3A%2F%2Fspreadprivacy.com%2Fandroid-privacy-tips%2F&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Android&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;a href=&quot;https://deref-gmx.com/mail/client/NXPHhMtFal8/dereferrer/?redirectUrl=https%3A%2F%2Fspreadprivacy.com%2Fmac-privacy-tips%2F&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Mac&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;a href=&quot;https://deref-gmx.com/mail/client/wNxUeitkw0k/dereferrer/?redirectUrl=https%3A%2F%2Fspreadprivacy.com%2Fwindows-10-privacy-tips%2F&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Windows 10&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;a href=&quot;https://deref-gmx.com/mail/client/nGAwKh9CPrc/dereferrer/?redirectUrl=https%3A%2F%2Fspreadprivacy.com%2Fwindows-7-privacy-tips%2F&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Windows 7&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;a href=&quot;https://deref-gmx.com/mail/client/i8oxyzYSpvs/dereferrer/?redirectUrl=https%3A%2F%2Fspreadprivacy.com%2Flinux-privacy-tips%2F&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Linux&lt;/a&gt;&lt;/li&gt;
+
+&lt;/ul&gt;
+
+&lt;p&gt; &lt;/p&gt;</content>
+		<category term="Desktop" />
+	</entry>
+	<entry>
+		<title>Remasterização para Ubuntu ou Mint</title>
+		<link rel="alternate" type="text/html" href="http://backup/portal/servidores/desktop/remasterizacao-para-ubuntu-ou-mint.html"/>
+		<published>2017-09-21T16:46:49-03:00</published>
+		<updated>2017-09-21T16:46:49-03:00</updated>
+		<id>http://backup/portal/servidores/desktop/remasterizacao-para-ubuntu-ou-mint.html</id>
+		<author>
+			<name>Ribamar FS</name>
+		</author>
+		<summary type="html">&lt;h2&gt;Customizando uma Instalação do Ubuntu, Mint ou Debian&lt;/h2&gt;
+&lt;p&gt;&lt;br /&gt;Útil para guardar um backup customizado do sistema operacional, para levar para outro computador, num curso, palestra, etc.&lt;br /&gt;&lt;br /&gt;Com estes passos, criamos um ambiente isolado com a iso baixada e onde podemos instalar novos pacotes e remover os desejados e assim criar uma iso customizada a gosto. Esta forma também é mais flexível que usando o Remastersys, pois podemos criar a ISO enquanto trabalhamos.&lt;br /&gt;&lt;br /&gt;Nos passos abaixo apenas estou querendo customizar adicionando os softwares que geralmente instalo após a instalação do Linux. Quem estiver interessado em customizaar o sistema do Linux, seu desktop, etc deve então ler a texto original em:&lt;br /&gt;&lt;a href=&quot;http://www.915tx.com/remaster/&quot;&gt;http://www.915tx.com/remaster/&lt;/a&gt; &lt;br /&gt;&lt;br /&gt;Google+ do autor https://plus.google.com/+PeteNavarro/posts, onde deseja receber comentários.&lt;br /&gt;&lt;br /&gt;Existia um bom programa que fazia isso (Remastersys) com simplicidade mas foi descontinuado e os que existem são instáveis.&lt;br /&gt;&lt;br /&gt;Explicação detalhada de cada comando:&lt;br /&gt;&lt;a href=&quot;https://forums.linuxmint.com/viewtopic.php?f=42&amp;amp;t=107350&quot;&gt;https://forums.linuxmint.com/viewtopic.php?f=42&amp;amp;t=107350&lt;/a&gt; &lt;br /&gt;&lt;br /&gt;Nota: alguns comandos ocupam mais de uma linha. Cuidado, sempre execute o comando completo.&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Instalação dos softwares necessários:&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;sudo apt-get install squashfs-tools genisoimage resolvconf&lt;br /&gt;&lt;br /&gt;Baixar a iso do Ubuntu ou do Mint:&lt;br /&gt;&lt;a href=&quot;http://www.ubuntu.com/download&quot;&gt;http://www.ubuntu.com/download&lt;/a&gt; &lt;br /&gt;&lt;a href=&quot;http://www.linuxmint.com/download.php&quot;&gt;http://www.linuxmint.com/download.php&lt;/a&gt; &lt;br /&gt;&lt;br /&gt;Mover a iso baixada para sua pasta /home/usuario&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Configurando e Criando a ISO customizada&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;Abra o terminal e digite ou copie/cole:&lt;br /&gt;&lt;br /&gt;mkdir ~/livecdtmp&lt;br /&gt;&lt;br /&gt;cd ~/livecdtmp&lt;br /&gt;&lt;br /&gt;mkdir extract-cd mnt&lt;br /&gt;&lt;br /&gt;sudo mount -o loop ~/INSIRA_SUA_ISO_AQUI.iso mnt&lt;br /&gt;&lt;br /&gt;sudo rsync --exclude=/casper/filesystem.squashfs -a mnt/ extract-cd&lt;br /&gt;&lt;br /&gt;sudo unsquashfs mnt/casper/filesystem.squashfs&lt;br /&gt;Aguarde...&lt;br /&gt;&lt;br /&gt;sudo mv squashfs-root edit&lt;br /&gt;&lt;br /&gt;sudo cp /etc/resolv.conf edit/etc/&lt;br /&gt;&lt;br /&gt;sudo mount --bind /dev/ edit/dev&lt;br /&gt;&lt;br /&gt;Entrar no ambiente chroot:&lt;br /&gt;sudo chroot edit&lt;br /&gt;&lt;br /&gt;mount -t proc none /proc &amp;amp;&amp;amp; mount -t sysfs none /sys &amp;amp;&amp;amp; mount -t devpts none /dev/pts&lt;br /&gt;&lt;br /&gt;export HOME=/root &amp;amp;&amp;amp; export LC_ALL=C&lt;br /&gt;&lt;br /&gt;cd /etc/skel&lt;br /&gt;&lt;br /&gt;mkdir Desktop Documents Downloads Music Pictures Public Templates Videos&lt;br /&gt;&lt;br /&gt;cd /&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Seu projeto está pronto para as alterações, adicionando e removendo softwares.&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;Eu basicamente executei o seguinte:&lt;br /&gt;&lt;br /&gt;apt update&lt;br /&gt;apt upgrade&lt;br /&gt;exit&lt;br /&gt;sudo reboot&lt;br /&gt;&lt;br /&gt;Após voltar executei:&lt;br /&gt;cd livecdtmp&lt;br /&gt;&lt;br /&gt;sudo mount --bind /dev/ edit/dev&lt;br /&gt;&lt;br /&gt;sudo chroot edit&lt;br /&gt;&lt;br /&gt;mount -t proc none /proc &amp;amp;&amp;amp; mount -t sysfs none /sys &amp;amp;&amp;amp; mount -t devpts none /dev/pts&lt;br /&gt;&lt;br /&gt;No tutorial original existem sugestões de configurar o sistema, personalizar o desktop entre outras.&lt;br /&gt;&lt;br /&gt;apt-get clean&lt;br /&gt;&lt;br /&gt;apt-get autoremove&lt;br /&gt;&lt;br /&gt;rm -rf /tmp/* ~/.bash_history&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Agora eu instalei tudo que geralmente instalo após instalar do zero (altere a gosto):&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;pre class=&quot;language-c&quot;&gt;&lt;code&gt;apt-get -y install aptitude ntp ntpdate git samba
+apt-get -y install apache2 libapache2-mod-php7.0
+a2enmod rewrite
+apt-get -y install postgresql postgresql-contrib mysql-server sqlite3
+apt-get -y install php7.0-bcmath php7.0 mcrypt php7.0-mcrypt php7.0-gd php7.0-mysql php7.0-sqlite3 php7.0-pgsql php7.0-ldap
+apt-get -y install php7.0-mcrypt php-pear php7.0-xsl curl php7.0-curl phpunit php-xdebug php7.0-intl composer
+apt-get -y install php7.0-zip php7.0-mbstring php-gettext php-mbstring php7.0-fpm php-auth phpmyadmin
+apt-get install php-curl php-mcrypt php-gd
+phpenmod mbstring
+apt-get -y install php-apcu
+wget http://ftp.ussg.iu.edu/linux/ubuntu/pool/main/m/memcached/memcached_1.4.25-2ubuntu1_amd64.deb
+dpkg -i memcached_1.4.25-2ubuntu1_amd64.deb
+apt-get -y install php-memcache
+apt-get -y install msttcorefonts
+apt-get -y install rar unrar zip unzip p7zip-full aptitude ubuntu-restricted-extras k3b kolourpaint4 gnome-search-tool
+#Instalar Java
+sudo add-apt-repository ppa:webupd8team/java
+sudo apt-get update
+sudo apt-get install oracle-java8-installer
+#Módulo de Segurança para o Banco do Brasil
+sudo apt-get install libnss3-tools libcurl3
+wget https://cloud.gastecnologia.com.br/bb/downloads/ws/warsaw_setup64.deb -O warsaw.deb
+sudo dpkg -i warsaw.deb
+rm warsaw.deb
+apt-get -y update
+apt-get -y upgrade&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Sair do ambiente chroot&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;umount /proc&lt;br /&gt;&lt;br /&gt;umount /sys&lt;br /&gt;&lt;br /&gt;umount /dev/pts&lt;br /&gt;&lt;br /&gt;exit&lt;br /&gt;&lt;br /&gt;sudo umount edit/dev&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Agora vamos construir a ISO ou volte e faça alterações.&lt;/strong&gt;&lt;br /&gt;Idealmente reinicie seu computador agora, especialmente se tiver pouca RAM (&amp;lt;= 4GB).&lt;br /&gt;&lt;br /&gt;sudo rm ~/livecdtmp/extract-cd/casper/filesystem.squashfs (somente se reconstruindo um projeto)&lt;br /&gt;&lt;br /&gt;cd livecdtmp&lt;br /&gt;&lt;br /&gt;sudo mksquashfs edit extract-cd/casper/filesystem.squashfs&lt;br /&gt;Aguarde...&lt;br /&gt;&lt;br /&gt;sudo nano extract-cd/README.diskdefines&lt;br /&gt;&lt;br /&gt;cd extract-cd&lt;br /&gt;&lt;br /&gt;find -type f -print0 | sudo xargs -0 md5sum | grep -v isolinux/boot.cat | sudo tee md5sum.txt&lt;br /&gt;&lt;br /&gt;cd ..&lt;br /&gt;&lt;br /&gt;sudo mkisofs -r -V &quot;REMASTER&quot; -cache-inodes -J -l -b isolinux/isolinux.bin -c isolinux/boot.cat -no-emul-boot -boot-load-size 4 -boot-info-table -o ../REMASTER.iso extract-cd&lt;br /&gt;&lt;br /&gt;cd ..&lt;br /&gt;&lt;br /&gt;sudo chmod 777 REMASTER.iso&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Está pronto para testar.&lt;/strong&gt;&lt;br /&gt;Para isso criei uma VM no VirtualBox com praticamente tudo default, exceto no HD que mudei para 20GB, pois exige mais que os 10 reservados por default pelo VirtualBox. A VM foi criada com sucesso e tudo correu bem. Testei todos os softwares que instalei e estavam lá: apache, php, mysql, etc.&lt;br /&gt;&lt;br /&gt;Referência&lt;br /&gt;&lt;a href=&quot;http://www.915tx.com/remaster/&quot;&gt;http://www.915tx.com/remaster/&lt;/a&gt;&lt;/p&gt;</summary>
+		<content type="html">&lt;h2&gt;Customizando uma Instalação do Ubuntu, Mint ou Debian&lt;/h2&gt;
+&lt;p&gt;&lt;br /&gt;Útil para guardar um backup customizado do sistema operacional, para levar para outro computador, num curso, palestra, etc.&lt;br /&gt;&lt;br /&gt;Com estes passos, criamos um ambiente isolado com a iso baixada e onde podemos instalar novos pacotes e remover os desejados e assim criar uma iso customizada a gosto. Esta forma também é mais flexível que usando o Remastersys, pois podemos criar a ISO enquanto trabalhamos.&lt;br /&gt;&lt;br /&gt;Nos passos abaixo apenas estou querendo customizar adicionando os softwares que geralmente instalo após a instalação do Linux. Quem estiver interessado em customizaar o sistema do Linux, seu desktop, etc deve então ler a texto original em:&lt;br /&gt;&lt;a href=&quot;http://www.915tx.com/remaster/&quot;&gt;http://www.915tx.com/remaster/&lt;/a&gt; &lt;br /&gt;&lt;br /&gt;Google+ do autor https://plus.google.com/+PeteNavarro/posts, onde deseja receber comentários.&lt;br /&gt;&lt;br /&gt;Existia um bom programa que fazia isso (Remastersys) com simplicidade mas foi descontinuado e os que existem são instáveis.&lt;br /&gt;&lt;br /&gt;Explicação detalhada de cada comando:&lt;br /&gt;&lt;a href=&quot;https://forums.linuxmint.com/viewtopic.php?f=42&amp;amp;t=107350&quot;&gt;https://forums.linuxmint.com/viewtopic.php?f=42&amp;amp;t=107350&lt;/a&gt; &lt;br /&gt;&lt;br /&gt;Nota: alguns comandos ocupam mais de uma linha. Cuidado, sempre execute o comando completo.&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Instalação dos softwares necessários:&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;sudo apt-get install squashfs-tools genisoimage resolvconf&lt;br /&gt;&lt;br /&gt;Baixar a iso do Ubuntu ou do Mint:&lt;br /&gt;&lt;a href=&quot;http://www.ubuntu.com/download&quot;&gt;http://www.ubuntu.com/download&lt;/a&gt; &lt;br /&gt;&lt;a href=&quot;http://www.linuxmint.com/download.php&quot;&gt;http://www.linuxmint.com/download.php&lt;/a&gt; &lt;br /&gt;&lt;br /&gt;Mover a iso baixada para sua pasta /home/usuario&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Configurando e Criando a ISO customizada&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;Abra o terminal e digite ou copie/cole:&lt;br /&gt;&lt;br /&gt;mkdir ~/livecdtmp&lt;br /&gt;&lt;br /&gt;cd ~/livecdtmp&lt;br /&gt;&lt;br /&gt;mkdir extract-cd mnt&lt;br /&gt;&lt;br /&gt;sudo mount -o loop ~/INSIRA_SUA_ISO_AQUI.iso mnt&lt;br /&gt;&lt;br /&gt;sudo rsync --exclude=/casper/filesystem.squashfs -a mnt/ extract-cd&lt;br /&gt;&lt;br /&gt;sudo unsquashfs mnt/casper/filesystem.squashfs&lt;br /&gt;Aguarde...&lt;br /&gt;&lt;br /&gt;sudo mv squashfs-root edit&lt;br /&gt;&lt;br /&gt;sudo cp /etc/resolv.conf edit/etc/&lt;br /&gt;&lt;br /&gt;sudo mount --bind /dev/ edit/dev&lt;br /&gt;&lt;br /&gt;Entrar no ambiente chroot:&lt;br /&gt;sudo chroot edit&lt;br /&gt;&lt;br /&gt;mount -t proc none /proc &amp;amp;&amp;amp; mount -t sysfs none /sys &amp;amp;&amp;amp; mount -t devpts none /dev/pts&lt;br /&gt;&lt;br /&gt;export HOME=/root &amp;amp;&amp;amp; export LC_ALL=C&lt;br /&gt;&lt;br /&gt;cd /etc/skel&lt;br /&gt;&lt;br /&gt;mkdir Desktop Documents Downloads Music Pictures Public Templates Videos&lt;br /&gt;&lt;br /&gt;cd /&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Seu projeto está pronto para as alterações, adicionando e removendo softwares.&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;Eu basicamente executei o seguinte:&lt;br /&gt;&lt;br /&gt;apt update&lt;br /&gt;apt upgrade&lt;br /&gt;exit&lt;br /&gt;sudo reboot&lt;br /&gt;&lt;br /&gt;Após voltar executei:&lt;br /&gt;cd livecdtmp&lt;br /&gt;&lt;br /&gt;sudo mount --bind /dev/ edit/dev&lt;br /&gt;&lt;br /&gt;sudo chroot edit&lt;br /&gt;&lt;br /&gt;mount -t proc none /proc &amp;amp;&amp;amp; mount -t sysfs none /sys &amp;amp;&amp;amp; mount -t devpts none /dev/pts&lt;br /&gt;&lt;br /&gt;No tutorial original existem sugestões de configurar o sistema, personalizar o desktop entre outras.&lt;br /&gt;&lt;br /&gt;apt-get clean&lt;br /&gt;&lt;br /&gt;apt-get autoremove&lt;br /&gt;&lt;br /&gt;rm -rf /tmp/* ~/.bash_history&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Agora eu instalei tudo que geralmente instalo após instalar do zero (altere a gosto):&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;pre class=&quot;language-c&quot;&gt;&lt;code&gt;apt-get -y install aptitude ntp ntpdate git samba
+apt-get -y install apache2 libapache2-mod-php7.0
+a2enmod rewrite
+apt-get -y install postgresql postgresql-contrib mysql-server sqlite3
+apt-get -y install php7.0-bcmath php7.0 mcrypt php7.0-mcrypt php7.0-gd php7.0-mysql php7.0-sqlite3 php7.0-pgsql php7.0-ldap
+apt-get -y install php7.0-mcrypt php-pear php7.0-xsl curl php7.0-curl phpunit php-xdebug php7.0-intl composer
+apt-get -y install php7.0-zip php7.0-mbstring php-gettext php-mbstring php7.0-fpm php-auth phpmyadmin
+apt-get install php-curl php-mcrypt php-gd
+phpenmod mbstring
+apt-get -y install php-apcu
+wget http://ftp.ussg.iu.edu/linux/ubuntu/pool/main/m/memcached/memcached_1.4.25-2ubuntu1_amd64.deb
+dpkg -i memcached_1.4.25-2ubuntu1_amd64.deb
+apt-get -y install php-memcache
+apt-get -y install msttcorefonts
+apt-get -y install rar unrar zip unzip p7zip-full aptitude ubuntu-restricted-extras k3b kolourpaint4 gnome-search-tool
+#Instalar Java
+sudo add-apt-repository ppa:webupd8team/java
+sudo apt-get update
+sudo apt-get install oracle-java8-installer
+#Módulo de Segurança para o Banco do Brasil
+sudo apt-get install libnss3-tools libcurl3
+wget https://cloud.gastecnologia.com.br/bb/downloads/ws/warsaw_setup64.deb -O warsaw.deb
+sudo dpkg -i warsaw.deb
+rm warsaw.deb
+apt-get -y update
+apt-get -y upgrade&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Sair do ambiente chroot&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;umount /proc&lt;br /&gt;&lt;br /&gt;umount /sys&lt;br /&gt;&lt;br /&gt;umount /dev/pts&lt;br /&gt;&lt;br /&gt;exit&lt;br /&gt;&lt;br /&gt;sudo umount edit/dev&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Agora vamos construir a ISO ou volte e faça alterações.&lt;/strong&gt;&lt;br /&gt;Idealmente reinicie seu computador agora, especialmente se tiver pouca RAM (&amp;lt;= 4GB).&lt;br /&gt;&lt;br /&gt;sudo rm ~/livecdtmp/extract-cd/casper/filesystem.squashfs (somente se reconstruindo um projeto)&lt;br /&gt;&lt;br /&gt;cd livecdtmp&lt;br /&gt;&lt;br /&gt;sudo mksquashfs edit extract-cd/casper/filesystem.squashfs&lt;br /&gt;Aguarde...&lt;br /&gt;&lt;br /&gt;sudo nano extract-cd/README.diskdefines&lt;br /&gt;&lt;br /&gt;cd extract-cd&lt;br /&gt;&lt;br /&gt;find -type f -print0 | sudo xargs -0 md5sum | grep -v isolinux/boot.cat | sudo tee md5sum.txt&lt;br /&gt;&lt;br /&gt;cd ..&lt;br /&gt;&lt;br /&gt;sudo mkisofs -r -V &quot;REMASTER&quot; -cache-inodes -J -l -b isolinux/isolinux.bin -c isolinux/boot.cat -no-emul-boot -boot-load-size 4 -boot-info-table -o ../REMASTER.iso extract-cd&lt;br /&gt;&lt;br /&gt;cd ..&lt;br /&gt;&lt;br /&gt;sudo chmod 777 REMASTER.iso&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Está pronto para testar.&lt;/strong&gt;&lt;br /&gt;Para isso criei uma VM no VirtualBox com praticamente tudo default, exceto no HD que mudei para 20GB, pois exige mais que os 10 reservados por default pelo VirtualBox. A VM foi criada com sucesso e tudo correu bem. Testei todos os softwares que instalei e estavam lá: apache, php, mysql, etc.&lt;br /&gt;&lt;br /&gt;Referência&lt;br /&gt;&lt;a href=&quot;http://www.915tx.com/remaster/&quot;&gt;http://www.915tx.com/remaster/&lt;/a&gt;&lt;/p&gt;</content>
+		<category term="Desktop" />
+	</entry>
+	<entry>
+		<title>Publicando Sites</title>
+		<link rel="alternate" type="text/html" href="http://backup/portal/servidores/desktop/publicando-sites.html"/>
+		<published>2017-09-21T16:32:08-03:00</published>
+		<updated>2017-09-21T16:32:08-03:00</updated>
+		<id>http://backup/portal/servidores/desktop/publicando-sites.html</id>
+		<author>
+			<name>Ribamar FS</name>
+		</author>
+		<summary type="html">&lt;h2&gt;Domínio e Hospedagem&lt;/h2&gt;
+
+&lt;p&gt;&lt;br /&gt;Quando pretendemos publicar um site na internet precisamos de pelo menos dois serviços: hospedagem de domínio e hospedagem do site (arquivos e bancos de dados). Geralmente gosto de contratar uma mesma empresa para ambos para ficar mais prático o pagamento.&lt;br /&gt;&lt;br /&gt;Para maior eficiência e segurança do nosso site não devemos procurar os serviços apenas baseados no menor preço, pois geralmente receberemos a pior qualidade.&lt;br /&gt;&lt;br /&gt;Uma boa ideia é pedir indicação de amigos/conhecidos que usem tais serviços e/ou pesquisar em forums especializados da área para receber informações de quem tem experiência com algumas empresas.&lt;br /&gt;&lt;br /&gt;Inicie com uma recomendada por alguém ou em algum forum e contrate inicialmente apenas um ou três meses para experimentar. &lt;br /&gt;Somente após o período de experiência, tendo aprovado o serviço, então contrate por um período maior, de 1 ou 2 anos. &lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Permissões dos arquivos&lt;/strong&gt;&lt;br /&gt;Boas hospedagens não aceitam arquivos com permissão 777. Aceitam mas não mostram no navegador impedindo a visualização do site.&lt;br /&gt;Então antes de enviar para o servidor execute estes dois comandos varrendo o diretório inteiro:&lt;br /&gt;&lt;br /&gt;find diretorio -type d -exec chmod 755 {} \;&lt;br /&gt;find diretorio -type f -exec chmod 644 {} \;&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Domínio&lt;/strong&gt;&lt;br /&gt;Gerenciamento do DNS&lt;br /&gt;Nameservers e DNS&lt;br /&gt;Registros&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Características de um bom domínio:&lt;/strong&gt; &lt;br /&gt;- Curto &lt;br /&gt;- Simples &lt;br /&gt;- Fácil de memorizar e de digitar &lt;br /&gt;- Sem acentos ou símbolos que compliquem &lt;br /&gt;- Tenha relação com o serviço ou produto do site &lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Analise os Recursos da Hospedagem&lt;/strong&gt;&lt;br /&gt;- Tem cPanel?&lt;br /&gt;- E-mails e webmail &lt;br /&gt;- Transferência de arquivos - Banda e limite de arquivos&lt;br /&gt;- Gerenciando domínios &lt;br /&gt;- Gerenciando bancos de dados:&lt;br /&gt;    - quantos bancos oferece&lt;br /&gt;    - TemphpMyAdmin&lt;br /&gt;    - MySQL&lt;br /&gt;    - PostgreSQL&lt;br /&gt;- Fantástico (instalador de scripts)&lt;br /&gt;- Analisadores de estatísticas&lt;br /&gt;- SSH&lt;br /&gt;- Outros&lt;br /&gt;&lt;br /&gt;Com estes dois serviços seu site já poderá aparecer na web e poderá compartilhar a URL. &lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Hospedagem Free com Suporte ao Joomla&lt;/strong&gt;&lt;br /&gt;Mas somente para testes e iniciar aprendizado&lt;br /&gt;Idealmente contrate uma boa hospedagem, mesmo que não seja das mais caras&lt;br /&gt;&lt;br /&gt;&lt;a href=&quot;https://www.000webhost.com/&quot;&gt;https://www.000webhost.com/&lt;/a&gt; &lt;br /&gt;&lt;a href=&quot;http://www.cloudaccess.net/products/joomla-hosting-support.html&quot;&gt;http://www.cloudaccess.net/products/joomla-hosting-support.html&lt;/a&gt; (especializada em Joomla e Wordpress)&lt;br /&gt;&lt;a href=&quot;http://www.hostinger.com.br/&quot;&gt;http://www.hostinger.com.br/&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;Observação: Aqui me refiro a hospedagem compartilhada, que é a mais simples e mais barata, indicada para quem está começando. Existem outros serviços de hospedagem mais avançados e mais caros: VPS e dedicada, mas não abordarei por enquanto.&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;</summary>
+		<content type="html">&lt;h2&gt;Domínio e Hospedagem&lt;/h2&gt;
+
+&lt;p&gt;&lt;br /&gt;Quando pretendemos publicar um site na internet precisamos de pelo menos dois serviços: hospedagem de domínio e hospedagem do site (arquivos e bancos de dados). Geralmente gosto de contratar uma mesma empresa para ambos para ficar mais prático o pagamento.&lt;br /&gt;&lt;br /&gt;Para maior eficiência e segurança do nosso site não devemos procurar os serviços apenas baseados no menor preço, pois geralmente receberemos a pior qualidade.&lt;br /&gt;&lt;br /&gt;Uma boa ideia é pedir indicação de amigos/conhecidos que usem tais serviços e/ou pesquisar em forums especializados da área para receber informações de quem tem experiência com algumas empresas.&lt;br /&gt;&lt;br /&gt;Inicie com uma recomendada por alguém ou em algum forum e contrate inicialmente apenas um ou três meses para experimentar. &lt;br /&gt;Somente após o período de experiência, tendo aprovado o serviço, então contrate por um período maior, de 1 ou 2 anos. &lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Permissões dos arquivos&lt;/strong&gt;&lt;br /&gt;Boas hospedagens não aceitam arquivos com permissão 777. Aceitam mas não mostram no navegador impedindo a visualização do site.&lt;br /&gt;Então antes de enviar para o servidor execute estes dois comandos varrendo o diretório inteiro:&lt;br /&gt;&lt;br /&gt;find diretorio -type d -exec chmod 755 {} \;&lt;br /&gt;find diretorio -type f -exec chmod 644 {} \;&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Domínio&lt;/strong&gt;&lt;br /&gt;Gerenciamento do DNS&lt;br /&gt;Nameservers e DNS&lt;br /&gt;Registros&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Características de um bom domínio:&lt;/strong&gt; &lt;br /&gt;- Curto &lt;br /&gt;- Simples &lt;br /&gt;- Fácil de memorizar e de digitar &lt;br /&gt;- Sem acentos ou símbolos que compliquem &lt;br /&gt;- Tenha relação com o serviço ou produto do site &lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Analise os Recursos da Hospedagem&lt;/strong&gt;&lt;br /&gt;- Tem cPanel?&lt;br /&gt;- E-mails e webmail &lt;br /&gt;- Transferência de arquivos - Banda e limite de arquivos&lt;br /&gt;- Gerenciando domínios &lt;br /&gt;- Gerenciando bancos de dados:&lt;br /&gt;    - quantos bancos oferece&lt;br /&gt;    - TemphpMyAdmin&lt;br /&gt;    - MySQL&lt;br /&gt;    - PostgreSQL&lt;br /&gt;- Fantástico (instalador de scripts)&lt;br /&gt;- Analisadores de estatísticas&lt;br /&gt;- SSH&lt;br /&gt;- Outros&lt;br /&gt;&lt;br /&gt;Com estes dois serviços seu site já poderá aparecer na web e poderá compartilhar a URL. &lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Hospedagem Free com Suporte ao Joomla&lt;/strong&gt;&lt;br /&gt;Mas somente para testes e iniciar aprendizado&lt;br /&gt;Idealmente contrate uma boa hospedagem, mesmo que não seja das mais caras&lt;br /&gt;&lt;br /&gt;&lt;a href=&quot;https://www.000webhost.com/&quot;&gt;https://www.000webhost.com/&lt;/a&gt; &lt;br /&gt;&lt;a href=&quot;http://www.cloudaccess.net/products/joomla-hosting-support.html&quot;&gt;http://www.cloudaccess.net/products/joomla-hosting-support.html&lt;/a&gt; (especializada em Joomla e Wordpress)&lt;br /&gt;&lt;a href=&quot;http://www.hostinger.com.br/&quot;&gt;http://www.hostinger.com.br/&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;Observação: Aqui me refiro a hospedagem compartilhada, que é a mais simples e mais barata, indicada para quem está começando. Existem outros serviços de hospedagem mais avançados e mais caros: VPS e dedicada, mas não abordarei por enquanto.&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;</content>
+		<category term="Desktop" />
+	</entry>
+	<entry>
+		<title>Alternativas para o Prompt do Windows</title>
+		<link rel="alternate" type="text/html" href="http://backup/portal/servidores/desktop/alternativas-para-o-prompt-do-windows.html"/>
+		<published>2017-08-28T17:30:38-03:00</published>
+		<updated>2017-08-28T17:30:38-03:00</updated>
+		<id>http://backup/portal/servidores/desktop/alternativas-para-o-prompt-do-windows.html</id>
+		<author>
+			<name>Ribamar FS</name>
+		</author>
+		<summary type="html">&lt;h4&gt;Alternativas para o Prompt do Windows&lt;/h4&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;strong&gt;O prompt do Windows tem várias limitações (pelo menos até a versão 7):&lt;/strong&gt;&lt;br /&gt;- Não fecha com ALT+F4&lt;br /&gt;- Não maximiza a janela&lt;br /&gt;- Não suporta SSH&lt;br /&gt;- Não suporta Git&lt;br /&gt; &lt;br /&gt;As alternativas abaixo não têm estas limitações &lt;br /&gt; &lt;br /&gt;&lt;strong&gt;CMDER&lt;/strong&gt; - &lt;a href=&quot;https://github.com/cmderdev/cmder/releases/Â&quot;&gt;https://github.com/cmderdev/cmder/releases/ &lt;/a&gt; &lt;br /&gt;Full e mini &lt;br /&gt; &lt;br /&gt;&lt;strong&gt;PowerCMD&lt;/strong&gt; - &lt;a href=&quot;http://www.powercmd.com/&quot;&gt;http://www.powercmd.com/&lt;/a&gt;  &lt;br /&gt; &lt;br /&gt;&lt;strong&gt;ColorConsole&lt;/strong&gt; - &lt;a href=&quot;http://www.softwareok.com/?seite=Freeware/ColorConsole&quot;&gt;http://www.softwareok.com/?seite=Freeware/ColorConsole&lt;/a&gt;  &lt;br /&gt; &lt;br /&gt;&lt;strong&gt;ConEmu&lt;/strong&gt; - &lt;a href=&quot;https://conemu.github.io/&quot;&gt;https://conemu.github.io/&lt;/a&gt;  &lt;br /&gt; &lt;br /&gt;&lt;strong&gt;Console&lt;/strong&gt; - &lt;a href=&quot;http://sourceforge.net/projects/console/Â&quot;&gt;http://sourceforge.net/projects/console/ &lt;/a&gt; &lt;br /&gt; &lt;br /&gt;&lt;strong&gt;GIT&lt;/strong&gt; - &lt;a href=&quot;https://git-scm.com/&quot;&gt;https://git-scm.com/&lt;/a&gt;  &lt;br /&gt; &lt;/p&gt;</summary>
+		<content type="html">&lt;h4&gt;Alternativas para o Prompt do Windows&lt;/h4&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;strong&gt;O prompt do Windows tem várias limitações (pelo menos até a versão 7):&lt;/strong&gt;&lt;br /&gt;- Não fecha com ALT+F4&lt;br /&gt;- Não maximiza a janela&lt;br /&gt;- Não suporta SSH&lt;br /&gt;- Não suporta Git&lt;br /&gt; &lt;br /&gt;As alternativas abaixo não têm estas limitações &lt;br /&gt; &lt;br /&gt;&lt;strong&gt;CMDER&lt;/strong&gt; - &lt;a href=&quot;https://github.com/cmderdev/cmder/releases/Â&quot;&gt;https://github.com/cmderdev/cmder/releases/ &lt;/a&gt; &lt;br /&gt;Full e mini &lt;br /&gt; &lt;br /&gt;&lt;strong&gt;PowerCMD&lt;/strong&gt; - &lt;a href=&quot;http://www.powercmd.com/&quot;&gt;http://www.powercmd.com/&lt;/a&gt;  &lt;br /&gt; &lt;br /&gt;&lt;strong&gt;ColorConsole&lt;/strong&gt; - &lt;a href=&quot;http://www.softwareok.com/?seite=Freeware/ColorConsole&quot;&gt;http://www.softwareok.com/?seite=Freeware/ColorConsole&lt;/a&gt;  &lt;br /&gt; &lt;br /&gt;&lt;strong&gt;ConEmu&lt;/strong&gt; - &lt;a href=&quot;https://conemu.github.io/&quot;&gt;https://conemu.github.io/&lt;/a&gt;  &lt;br /&gt; &lt;br /&gt;&lt;strong&gt;Console&lt;/strong&gt; - &lt;a href=&quot;http://sourceforge.net/projects/console/Â&quot;&gt;http://sourceforge.net/projects/console/ &lt;/a&gt; &lt;br /&gt; &lt;br /&gt;&lt;strong&gt;GIT&lt;/strong&gt; - &lt;a href=&quot;https://git-scm.com/&quot;&gt;https://git-scm.com/&lt;/a&gt;  &lt;br /&gt; &lt;/p&gt;</content>
+		<category term="Desktop" />
+	</entry>
+	<entry>
+		<title>Desligar Computador</title>
+		<link rel="alternate" type="text/html" href="http://backup/portal/servidores/desktop/desligar-computador.html"/>
+		<published>2017-07-18T17:58:03-03:00</published>
+		<updated>2017-07-18T17:58:03-03:00</updated>
+		<id>http://backup/portal/servidores/desktop/desligar-computador.html</id>
+		<author>
+			<name>Ribamar FS</name>
+		</author>
+		<summary type="html">&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Criar Atalho para Desligar, Reniciar e etc o Computador&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt; &lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;No Ubuntu e derivados atualmente a combinação Ctrl+Alt+Del não mais reinicia o compitador.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Mas existe uma alternativa de se criar uma tecla de atalho customizada que execute o comando:&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;gnome-session-quit --power-off&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;E atribuir para a combinação Ctrl+Alt+Del&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Assim novamente poderemos desligar, reiniciar, entre outras com Ctrl+Alt+Del.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt; &lt;/p&gt;</summary>
+		<content type="html">&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Criar Atalho para Desligar, Reniciar e etc o Computador&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt; &lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;No Ubuntu e derivados atualmente a combinação Ctrl+Alt+Del não mais reinicia o compitador.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Mas existe uma alternativa de se criar uma tecla de atalho customizada que execute o comando:&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;gnome-session-quit --power-off&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;E atribuir para a combinação Ctrl+Alt+Del&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Assim novamente poderemos desligar, reiniciar, entre outras com Ctrl+Alt+Del.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt; &lt;/p&gt;</content>
+		<category term="Desktop" />
+	</entry>
+	<entry>
+		<title>Remover Serviço do Windows</title>
+		<link rel="alternate" type="text/html" href="http://backup/portal/servidores/desktop/remover-servico-do-windows.html"/>
+		<published>2017-06-24T18:34:48-03:00</published>
+		<updated>2017-06-24T18:34:48-03:00</updated>
+		<id>http://backup/portal/servidores/desktop/remover-servico-do-windows.html</id>
+		<author>
+			<name>Ribamar FS</name>
+		</author>
+		<summary type="html">&lt;p&gt;&lt;strong&gt;Para remover um serviço do Windows&lt;/strong&gt; abra o prompt como administrador e execute:&lt;/p&gt;
+
+
+&lt;p&gt;sc delete nomeserviço&lt;/p&gt;
+
+
+&lt;p&gt;Exemplos:&lt;/p&gt;
+
+
+&lt;p&gt;sc delete apache2&lt;br /&gt; sc delete mysql&lt;/p&gt;
+
+
+&lt;p&gt; &lt;/p&gt;</summary>
+		<content type="html">&lt;p&gt;&lt;strong&gt;Para remover um serviço do Windows&lt;/strong&gt; abra o prompt como administrador e execute:&lt;/p&gt;
+
+
+&lt;p&gt;sc delete nomeserviço&lt;/p&gt;
+
+
+&lt;p&gt;Exemplos:&lt;/p&gt;
+
+
+&lt;p&gt;sc delete apache2&lt;br /&gt; sc delete mysql&lt;/p&gt;
+
+
+&lt;p&gt; &lt;/p&gt;</content>
+		<category term="Desktop" />
+	</entry>
+	<entry>
+		<title>Quebrar senha do Windows</title>
+		<link rel="alternate" type="text/html" href="http://backup/portal/servidores/desktop/quebrar-senha-do-windows.html"/>
+		<published>2017-06-24T18:34:48-03:00</published>
+		<updated>2017-06-24T18:34:48-03:00</updated>
+		<id>http://backup/portal/servidores/desktop/quebrar-senha-do-windows.html</id>
+		<author>
+			<name>Ribamar FS</name>
+		</author>
+		<summary type="html">&lt;p&gt;&lt;strong&gt;Para quebrar a senha do usuário do Windows&lt;/strong&gt; com o Hiren's Boot:&lt;/p&gt;
+
+
+&lt;p&gt;Dê o boot e escolha Mini Windows XP Ao iniciar o CD abra o programa &quot;HBCD Menu&quot; localizado na área de trabalho:&lt;/p&gt;
+
+
+&lt;p&gt;Programs &amp;gt; Passwords / Keys &amp;gt; Windows Login &amp;gt; NTPWEdit (Reset Xp/Vista/7 User Passowrd)&lt;/p&gt;
+
+
+&lt;p&gt;&lt;a href=&quot;http://www.hirensbootcd.org/&quot;&gt;http://www.hirensbootcd.org&lt;/a&gt;&lt;/p&gt;
+
+
+&lt;p&gt; &lt;/p&gt;</summary>
+		<content type="html">&lt;p&gt;&lt;strong&gt;Para quebrar a senha do usuário do Windows&lt;/strong&gt; com o Hiren's Boot:&lt;/p&gt;
+
+
+&lt;p&gt;Dê o boot e escolha Mini Windows XP Ao iniciar o CD abra o programa &quot;HBCD Menu&quot; localizado na área de trabalho:&lt;/p&gt;
+
+
+&lt;p&gt;Programs &amp;gt; Passwords / Keys &amp;gt; Windows Login &amp;gt; NTPWEdit (Reset Xp/Vista/7 User Passowrd)&lt;/p&gt;
+
+
+&lt;p&gt;&lt;a href=&quot;http://www.hirensbootcd.org/&quot;&gt;http://www.hirensbootcd.org&lt;/a&gt;&lt;/p&gt;
+
+
+&lt;p&gt; &lt;/p&gt;</content>
+		<category term="Desktop" />
+	</entry>
+	<entry>
+		<title>Gravar imagem em Pendrive no Mint</title>
+		<link rel="alternate" type="text/html" href="http://backup/portal/servidores/desktop/gravar-imagem-em-pendrive.html"/>
+		<published>2017-06-24T18:34:48-03:00</published>
+		<updated>2017-06-24T18:34:48-03:00</updated>
+		<id>http://backup/portal/servidores/desktop/gravar-imagem-em-pendrive.html</id>
+		<author>
+			<name>Ribamar FS</name>
+		</author>
+		<summary type="html">&lt;p&gt;&lt;strong&gt;Para gravar imagem de disco em Pendrive&lt;/strong&gt; no Linux Mint:&lt;/p&gt;
+&lt;p&gt;Iniciar&lt;/p&gt;
+&lt;p&gt;Gravador de Imagem USB&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;</summary>
+		<content type="html">&lt;p&gt;&lt;strong&gt;Para gravar imagem de disco em Pendrive&lt;/strong&gt; no Linux Mint:&lt;/p&gt;
+&lt;p&gt;Iniciar&lt;/p&gt;
+&lt;p&gt;Gravador de Imagem USB&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;</content>
+		<category term="Desktop" />
+	</entry>
+	<entry>
+		<title>Desativar Hibernação no Windows 8+</title>
+		<link rel="alternate" type="text/html" href="http://backup/portal/servidores/desktop/desativar-hibernacao-no-windows-8.html"/>
+		<published>2017-06-24T18:34:48-03:00</published>
+		<updated>2017-06-24T18:34:48-03:00</updated>
+		<id>http://backup/portal/servidores/desktop/desativar-hibernacao-no-windows-8.html</id>
+		<author>
+			<name>Ribamar FS</name>
+		</author>
+		<summary type="html">&lt;p&gt;&lt;strong&gt;Quando tentamos montar uma partição do Windows 8 ou superior no Ubuntu&lt;/strong&gt; ou derivados, então devemos desativar a Hibernação:&lt;/p&gt;
+
+
+&lt;p&gt;Presione a Tecla &lt;strong&gt;Windows + X &lt;/strong&gt;e execute como Administrador o &lt;strong&gt;Prompt de comando.&lt;/strong&gt;&lt;br /&gt; &lt;br /&gt; Com o Prompt aberto digite:  &lt;/p&gt;
+
+
+&lt;p&gt;&lt;strong&gt;powercfg -h off&lt;/strong&gt;&lt;/p&gt;
+
+
+&lt;p&gt;e pressione enter.&lt;br /&gt; &lt;br /&gt; Agora a hibernação no Windows está desativada.&lt;/p&gt;</summary>
+		<content type="html">&lt;p&gt;&lt;strong&gt;Quando tentamos montar uma partição do Windows 8 ou superior no Ubuntu&lt;/strong&gt; ou derivados, então devemos desativar a Hibernação:&lt;/p&gt;
+
+
+&lt;p&gt;Presione a Tecla &lt;strong&gt;Windows + X &lt;/strong&gt;e execute como Administrador o &lt;strong&gt;Prompt de comando.&lt;/strong&gt;&lt;br /&gt; &lt;br /&gt; Com o Prompt aberto digite:  &lt;/p&gt;
+
+
+&lt;p&gt;&lt;strong&gt;powercfg -h off&lt;/strong&gt;&lt;/p&gt;
+
+
+&lt;p&gt;e pressione enter.&lt;br /&gt; &lt;br /&gt; Agora a hibernação no Windows está desativada.&lt;/p&gt;</content>
+		<category term="Desktop" />
+	</entry>
+	<entry>
+		<title>Permissões no Servidor Web</title>
+		<link rel="alternate" type="text/html" href="http://backup/portal/servidores/desktop/permissoes-no-servidor-web.html"/>
+		<published>2017-06-24T18:34:48-03:00</published>
+		<updated>2017-06-24T18:34:48-03:00</updated>
+		<id>http://backup/portal/servidores/desktop/permissoes-no-servidor-web.html</id>
+		<author>
+			<name>Ribamar FS</name>
+		</author>
+		<summary type="html">&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Permissões no Servidor Web&lt;/strong&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;Quando usamos um sistema como o Linux, o diretório web não oferece permissão de escrita para um usuário comum.&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;Uma saída simples é adicionar o usuário comum para o grupo www-data (do apache) e mudar as permissões dos arquivos do /var/www/html. Isso quando somos apenas nós que usamos o computador.&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;Quando precisamos usar com uma equipe, então podemos criar um grupo e adicionar todos os usuários para este grupo e então adicionar o grupo para o www-data.&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;addgroup webdevel&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;adduser www-data webdevel&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;Criar script chamado perms no /usr/local/bin&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;sudo nano /usr/local/bin/perms&lt;/p&gt;
+&lt;pre class=&quot;language-markup&quot;&gt;&lt;code&gt;#!/bin/sh
+clear;
+echo &quot;Aguarde enquanto configuro as permissões do /var/www/html/$1&quot;;
+echo &quot;&quot;;
+chown -R www-data:webdevel /var/www/html/$1;
+find /var/www/html/$1 -type d -exec chmod 2775 {} \;
+find /var/www/html/$1 -type f -exec chmod 2664 {} \;
+echo &quot;&quot;;
+echo &quot;Concluído!&quot;;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Dar permissão de execução&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;sudo chmod +x /usr/local/bin/perms&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;Assim podemos executar este script sempre que copiarmos ou descompactarmos um arquivo para o /var/www/html&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;Podemos varrer apenas um subdiretório do html com:&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;sudo perms joomla, quando joomla é um subdiretório de html.&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt; &lt;/p&gt;</summary>
+		<content type="html">&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Permissões no Servidor Web&lt;/strong&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;Quando usamos um sistema como o Linux, o diretório web não oferece permissão de escrita para um usuário comum.&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;Uma saída simples é adicionar o usuário comum para o grupo www-data (do apache) e mudar as permissões dos arquivos do /var/www/html. Isso quando somos apenas nós que usamos o computador.&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;Quando precisamos usar com uma equipe, então podemos criar um grupo e adicionar todos os usuários para este grupo e então adicionar o grupo para o www-data.&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;addgroup webdevel&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;adduser www-data webdevel&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;Criar script chamado perms no /usr/local/bin&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;sudo nano /usr/local/bin/perms&lt;/p&gt;
+&lt;pre class=&quot;language-markup&quot;&gt;&lt;code&gt;#!/bin/sh
+clear;
+echo &quot;Aguarde enquanto configuro as permissões do /var/www/html/$1&quot;;
+echo &quot;&quot;;
+chown -R www-data:webdevel /var/www/html/$1;
+find /var/www/html/$1 -type d -exec chmod 2775 {} \;
+find /var/www/html/$1 -type f -exec chmod 2664 {} \;
+echo &quot;&quot;;
+echo &quot;Concluído!&quot;;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Dar permissão de execução&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;sudo chmod +x /usr/local/bin/perms&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;Assim podemos executar este script sempre que copiarmos ou descompactarmos um arquivo para o /var/www/html&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;Podemos varrer apenas um subdiretório do html com:&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;sudo perms joomla, quando joomla é um subdiretório de html.&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt; &lt;/p&gt;</content>
+		<category term="Desktop" />
+	</entry>
+	<entry>
+		<title>Remover Convidado</title>
+		<link rel="alternate" type="text/html" href="http://backup/portal/servidores/desktop/remover-convidado.html"/>
+		<published>2017-06-24T18:34:48-03:00</published>
+		<updated>2017-06-24T18:34:48-03:00</updated>
+		<id>http://backup/portal/servidores/desktop/remover-convidado.html</id>
+		<author>
+			<name>Ribamar FS</name>
+		</author>
+		<summary type="html">&lt;p&gt;&lt;strong&gt;Remover Convidado&lt;/strong&gt;&lt;/p&gt;
+
+
+&lt;p&gt;Para impedir que usuários usem o Convidado em sistemas Ubuntu e rerivados execute:&lt;/p&gt;
+
+
+&lt;p&gt;Edite o arquivo: sudo gedit /etc/lightdm/lightdm.conf&lt;/p&gt;
+
+
+&lt;p&gt;&lt;strong&gt;original:&lt;/strong&gt;&lt;/p&gt;
+
+
+&lt;p&gt;[SeatDefaults]&lt;br /&gt; greeter-session=unity-greeter&lt;br /&gt; user-session=ubuntu&lt;/p&gt;
+
+
+&lt;p&gt;&lt;br /&gt; &lt;strong&gt;Modifique para:&lt;/strong&gt;&lt;/p&gt;
+
+
+&lt;p&gt;[SeatDefaults]&lt;br /&gt; greeter-session=unity-greeter&lt;br /&gt; user-session=ubuntu&lt;br /&gt; allow-guest=false&lt;/p&gt;
+
+
+&lt;p&gt;Reinicie ou execute: sudo restart lightdm&lt;/p&gt;
+
+
+&lt;p&gt;&lt;strong&gt;Fonte da informação: &lt;/strong&gt;&lt;/p&gt;
+
+
+&lt;p&gt;&lt;a href=&quot;http://ftbeowulf.wordpress.com/2011/10/19/how-to-disable-the-ubuntu-11-10-guest-session/&quot;&gt;http://ftbeowulf.wordpress.com/2011/10/19/how-to-disable-the-ubuntu-11-10-guest-session/&lt;/a&gt;&lt;/p&gt;
+
+
+&lt;p&gt; &lt;/p&gt;</summary>
+		<content type="html">&lt;p&gt;&lt;strong&gt;Remover Convidado&lt;/strong&gt;&lt;/p&gt;
+
+
+&lt;p&gt;Para impedir que usuários usem o Convidado em sistemas Ubuntu e rerivados execute:&lt;/p&gt;
+
+
+&lt;p&gt;Edite o arquivo: sudo gedit /etc/lightdm/lightdm.conf&lt;/p&gt;
+
+
+&lt;p&gt;&lt;strong&gt;original:&lt;/strong&gt;&lt;/p&gt;
+
+
+&lt;p&gt;[SeatDefaults]&lt;br /&gt; greeter-session=unity-greeter&lt;br /&gt; user-session=ubuntu&lt;/p&gt;
+
+
+&lt;p&gt;&lt;br /&gt; &lt;strong&gt;Modifique para:&lt;/strong&gt;&lt;/p&gt;
+
+
+&lt;p&gt;[SeatDefaults]&lt;br /&gt; greeter-session=unity-greeter&lt;br /&gt; user-session=ubuntu&lt;br /&gt; allow-guest=false&lt;/p&gt;
+
+
+&lt;p&gt;Reinicie ou execute: sudo restart lightdm&lt;/p&gt;
+
+
+&lt;p&gt;&lt;strong&gt;Fonte da informação: &lt;/strong&gt;&lt;/p&gt;
+
+
+&lt;p&gt;&lt;a href=&quot;http://ftbeowulf.wordpress.com/2011/10/19/how-to-disable-the-ubuntu-11-10-guest-session/&quot;&gt;http://ftbeowulf.wordpress.com/2011/10/19/how-to-disable-the-ubuntu-11-10-guest-session/&lt;/a&gt;&lt;/p&gt;
+
+
+&lt;p&gt; &lt;/p&gt;</content>
+		<category term="Desktop" />
+	</entry>
+	<entry>
+		<title>Conectar ao SSH via Nautilus</title>
+		<link rel="alternate" type="text/html" href="http://backup/portal/servidores/desktop/conectar-ao-ssh-via-nautilus.html"/>
+		<published>2017-06-24T18:34:48-03:00</published>
+		<updated>2017-06-24T18:34:48-03:00</updated>
+		<id>http://backup/portal/servidores/desktop/conectar-ao-ssh-via-nautilus.html</id>
+		<author>
+			<name>Ribamar FS</name>
+		</author>
+		<summary type="html">&lt;p&gt;&lt;img src=&quot;http://backup/portal/images/conectarnautilus.png&quot; /&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Para conectar ao SSH através do Nemo ou Nautilus&lt;/strong&gt;&lt;/p&gt;
+
+
+&lt;p&gt;&lt;img src=&quot;http://backup/portal/images/conectarnautilus.png&quot; alt=&quot;Conectar SSH&quot; width=&quot;471&quot; height=&quot;347&quot; /&gt;&lt;/p&gt;
+
+
+&lt;p&gt; &lt;/p&gt;</summary>
+		<content type="html">&lt;p&gt;&lt;img src=&quot;http://backup/portal/images/conectarnautilus.png&quot; /&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Para conectar ao SSH através do Nemo ou Nautilus&lt;/strong&gt;&lt;/p&gt;
+
+
+&lt;p&gt;&lt;img src=&quot;http://backup/portal/images/conectarnautilus.png&quot; alt=&quot;Conectar SSH&quot; width=&quot;471&quot; height=&quot;347&quot; /&gt;&lt;/p&gt;
+
+
+&lt;p&gt; &lt;/p&gt;</content>
+		<category term="Desktop" />
+	</entry>
+	<entry>
+		<title>Instalar Servidor Web</title>
+		<link rel="alternate" type="text/html" href="http://backup/portal/servidores/desktop/instalar-servidor-web.html"/>
+		<published>2017-06-24T18:34:48-03:00</published>
+		<updated>2017-06-24T18:34:48-03:00</updated>
+		<id>http://backup/portal/servidores/desktop/instalar-servidor-web.html</id>
+		<author>
+			<name>Ribamar FS</name>
+		</author>
+		<summary type="html">&lt;p&gt;&lt;img src=&quot;http://backup/portal/images/conectarnautilus.png&quot; /&gt;&lt;/p&gt;&lt;p&gt;Script que simplifica e automatiza a instalação do servidor web e SGBD: apache2, php e extensões e mysql, postgresql e outros.&lt;/p&gt;
+
+
+&lt;p&gt;&lt;a title=&quot;servidor web&quot; href=&quot;http://backup/portal/../down/servidores/servweb_php7.sh&quot; rel=&quot;alternate&quot;&gt;servweb_php7.sh&lt;/a&gt; &lt;/p&gt;</summary>
+		<content type="html">&lt;p&gt;&lt;img src=&quot;http://backup/portal/images/conectarnautilus.png&quot; /&gt;&lt;/p&gt;&lt;p&gt;Script que simplifica e automatiza a instalação do servidor web e SGBD: apache2, php e extensões e mysql, postgresql e outros.&lt;/p&gt;
+
+
+&lt;p&gt;&lt;a title=&quot;servidor web&quot; href=&quot;http://backup/portal/../down/servidores/servweb_php7.sh&quot; rel=&quot;alternate&quot;&gt;servweb_php7.sh&lt;/a&gt; &lt;/p&gt;</content>
+		<category term="Desktop" />
+	</entry>
+	<entry>
+		<title>Formatar Pendrive via Terminal</title>
+		<link rel="alternate" type="text/html" href="http://backup/portal/servidores/desktop/formatar-pendrive.html"/>
+		<published>2017-06-24T18:34:48-03:00</published>
+		<updated>2017-06-24T18:34:48-03:00</updated>
+		<id>http://backup/portal/servidores/desktop/formatar-pendrive.html</id>
+		<author>
+			<name>Ribamar FS</name>
+		</author>
+		<summary type="html">&lt;p&gt;&lt;img src=&quot;http://backup/portal/images/conectarnautilus.png&quot; /&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Formatar pendrive no Linux&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;sudo fdisk -l (anotar a partição: sdf1)&lt;br /&gt;sudo umount /dev/sdf1 &lt;br /&gt;sudo mkfs.vfat -n 'RIBAFS' -I /dev/sdf1&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Alternativa ainda mais completa&lt;/strong&gt; - GParted&lt;/p&gt;
+&lt;p&gt;sudo apt-get install gparted&lt;/p&gt;
+&lt;p&gt;Obs.: muito cuidado para não formatar a partição do seu HD.&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;</summary>
+		<content type="html">&lt;p&gt;&lt;img src=&quot;http://backup/portal/images/conectarnautilus.png&quot; /&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Formatar pendrive no Linux&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;sudo fdisk -l (anotar a partição: sdf1)&lt;br /&gt;sudo umount /dev/sdf1 &lt;br /&gt;sudo mkfs.vfat -n 'RIBAFS' -I /dev/sdf1&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Alternativa ainda mais completa&lt;/strong&gt; - GParted&lt;/p&gt;
+&lt;p&gt;sudo apt-get install gparted&lt;/p&gt;
+&lt;p&gt;Obs.: muito cuidado para não formatar a partição do seu HD.&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;</content>
+		<category term="Desktop" />
+	</entry>
+	<entry>
+		<title>Compactação Multivolume</title>
+		<link rel="alternate" type="text/html" href="http://backup/portal/servidores/desktop/compactacao-multivolume.html"/>
+		<published>2017-06-24T18:34:48-03:00</published>
+		<updated>2017-06-24T18:34:48-03:00</updated>
+		<id>http://backup/portal/servidores/desktop/compactacao-multivolume.html</id>
+		<author>
+			<name>Ribamar FS</name>
+		</author>
+		<summary type="html">&lt;p&gt;&lt;img src=&quot;http://backup/portal/images/conectarnautilus.png&quot; /&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Compactar multivolumes no Linux&lt;/strong&gt;&lt;/p&gt;
+
+
+&lt;p&gt;Instale os pacots abaixo&lt;/p&gt;
+
+
+&lt;p&gt;&lt;br /&gt;sudo apt-get -y install unace rar unrar zip unzip p7zip-full p7zip-rar sharutils uudeview mpack arj cabextract file-roller xarchiver&lt;br /&gt;&lt;br /&gt;Estes oferecem suporte via Nautilus/Nemo&lt;br /&gt;.rar ou .7z&lt;/p&gt;
+
+
+&lt;p&gt;Agora pode compactar multivolume através do modo gráfico com o gerenciador de arquivos Nautilus ou Nemo.&lt;/p&gt;
+
+
+&lt;p&gt; &lt;/p&gt;</summary>
+		<content type="html">&lt;p&gt;&lt;img src=&quot;http://backup/portal/images/conectarnautilus.png&quot; /&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Compactar multivolumes no Linux&lt;/strong&gt;&lt;/p&gt;
+
+
+&lt;p&gt;Instale os pacots abaixo&lt;/p&gt;
+
+
+&lt;p&gt;&lt;br /&gt;sudo apt-get -y install unace rar unrar zip unzip p7zip-full p7zip-rar sharutils uudeview mpack arj cabextract file-roller xarchiver&lt;br /&gt;&lt;br /&gt;Estes oferecem suporte via Nautilus/Nemo&lt;br /&gt;.rar ou .7z&lt;/p&gt;
+
+
+&lt;p&gt;Agora pode compactar multivolume através do modo gráfico com o gerenciador de arquivos Nautilus ou Nemo.&lt;/p&gt;
+
+
+&lt;p&gt; &lt;/p&gt;</content>
+		<category term="Desktop" />
+	</entry>
+	<entry>
+		<title>10 Dicas para Acelerar o Windows 10</title>
+		<link rel="alternate" type="text/html" href="http://backup/portal/servidores/desktop/otimizar-windows10.html"/>
+		<published>2017-06-24T18:34:48-03:00</published>
+		<updated>2017-06-24T18:34:48-03:00</updated>
+		<id>http://backup/portal/servidores/desktop/otimizar-windows10.html</id>
+		<author>
+			<name>Ribamar FS</name>
+		</author>
+		<summary type="html">&lt;p&gt;&lt;img src=&quot;http://backup/portal/images/conectarnautilus.png&quot; /&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;10 Dicas para Acelerar o Windows 10&lt;/strong&gt;&lt;/p&gt;
+
+
+&lt;p&gt;&lt;a href=&quot;https://olhardigital.com.br/dicas_e_tutoriais/noticia/10-dicas-para-acelerar-o-windows-10/68720&quot;&gt;https://olhardigital.com.br/dicas_e_tutoriais/noticia/10-dicas-para-acelerar-o-windows-10/68720&lt;/a&gt; &lt;/p&gt;</summary>
+		<content type="html">&lt;p&gt;&lt;img src=&quot;http://backup/portal/images/conectarnautilus.png&quot; /&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;10 Dicas para Acelerar o Windows 10&lt;/strong&gt;&lt;/p&gt;
+
+
+&lt;p&gt;&lt;a href=&quot;https://olhardigital.com.br/dicas_e_tutoriais/noticia/10-dicas-para-acelerar-o-windows-10/68720&quot;&gt;https://olhardigital.com.br/dicas_e_tutoriais/noticia/10-dicas-para-acelerar-o-windows-10/68720&lt;/a&gt; &lt;/p&gt;</content>
+		<category term="Desktop" />
+	</entry>
+</feed>

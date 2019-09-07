@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br" dir="ltr">
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+                <!-- head -->
+        <base href="" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Ribamar FS" />
+	<meta name="description" content="Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros." />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>11.2 - Plugin DebugKit - RibaFS Portal</title>
+	<link href="http://ribafs.org/portal/curriculo/livros/cakephp/11-2-plugin-debugkit.html" rel="canonical" />
+	<link href="../../../templates/shaper_helix3/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../../../favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,300italic,regular,italic,600,600italic,700,700italic,800,800italic&amp;subset=latin" rel="stylesheet" type="text/css" />
+	<link href="http://fonts.googleapis.com/css?family=Amarante:regular&amp;subset=latin-ext" rel="stylesheet" type="text/css" />
+	<link href="../../../cache/com_templates/templates/shaper_helix3/89f5542569bc2d8a7bb4667857dd5775.css" rel="stylesheet" type="text/css" />
+	<style type="text/css">
+body{font-family:Open Sans, sans-serif; font-size:16px; font-weight:normal; }h1{font-family:Open Sans, sans-serif; font-weight:800; }h2{font-family:Open Sans, sans-serif; font-weight:600; }h3{font-family:Open Sans, sans-serif; font-weight:normal; }h4{font-family:Open Sans, sans-serif; font-weight:normal; }h5{font-family:Open Sans, sans-serif; font-weight:600; }h6{font-family:Open Sans, sans-serif; font-weight:600; }.sp-megamenu-parent{font-family:Amarante, sans-serif; font-size:16px; font-weight:normal; }.sp-megamenu-parent > li.active > a, 
+.sp-megamenu-parent .sp-dropdown li.sp-menu-item.active > a { color: red; }
+#offcanvas-toggler > i { color: red !important; }
+#sp-top-bar{ background-color:#093d09;color:#999999; }#sp-top-bar a{color:#ceebe9;}#sp-header{ background-color:#54a859; }#sp-header a{color:#022e05;}#sp-page-title a{color:#e8f7f7;}#sp-main-body{ background-color:#fefffa; }
+	</style>
+	<script type="application/json" class="joomla-script-options new">{"csrf.token":"796296c0a9019553ed4bbba150ad5a40","system.paths":{"root":"\/portal","base":"\/portal"},"joomla.jtext":{"COM_COMMENT_PLEASE_FILL_IN_ALL_REQUIRED_FIELDS":"Favor preencher todos os campos obrigat\u00f3rios.","COM_COMMENT_ANONYMOUS":"An\u00f4nimo","JLIB_FORM_FIELD_INVALID":"Campo inv\u00e1lido:&#160;"},"system.keepalive":{"interval":840000,"uri":"\/portal\/component\/ajax\/?format=json"}}</script>
+	<script src="../../../cache/com_templates/templates/shaper_helix3/b74bfabf7739a9fadfbbda80f713414b.js" type="text/javascript"></script>
+	<script type="text/javascript">
+jQuery(function($){ initTooltips(); $("body").on("subform-row-add", initTooltips); function initTooltips (event, container) { container = container || document;$(container).find(".hasTooltip").tooltip({"html": true,"container": "body"});} });jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+var sp_preloader = '0';
+
+var sp_gotop = '1';
+
+var sp_offanimation = 'default';
+
+	</script>
+	<meta property="og:url" content="http://backup/portal/curriculo/livros/cakephp/11-2-plugin-debugkit.html" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="11.2 - Plugin DebugKit" />
+	<meta property="og:description" content="11.2 - Plugin DebugKit Aquele que tentou e não conseguiu, é superior àquele que não tentou. https://book.cakephp.org/3.0/pt/debug-kit.html DebugKit é um pl..." />
+
+            </head>
+
+    <body class="site com-content view-article no-layout no-task itemid-164 pt-br ltr  sticky-header layout-fluid off-canvas-menu-init">
+
+        <div class="body-wrapper">
+            <div class="body-innerwrapper">
+                <section id="sp-top-bar"><div class="container"><div class="row"><div id="sp-top1" class="col-sm-12 col-md-12"><div class="sp-column "><div class="sp-module "><div class="sp-module-content"><!-- https://www.clubedohardware.com.br/artigos/redes/colocando-um-mecanismo-de-busca-em-seu-site-r34327/ -->
+<FORM class="form-inline" method="GET" action="http://www.google.com/search">
+<div class="form-group">
+<input type="hidden" name="sitesearch" value="ribafs.github.io">
+<input style="height:20px" class="form-control" type="text" name="q" size="20" placeholder="Pesquisar...">
+</div>
+</FORM>
+
+</div></div><ul class="sp-contact-info"><li class="sp-contact-email"><i class="fa fa-envelope" aria-hidden="true"></i> <a href="mailto:ribafs@gmail.com">ribafs@gmail.com</a></li></ul></div></div></div></div></section><section id="sp-section-2"><div class="container"><div class="row"><div id="sp-top2" class="col-sm-12 col-md-12"><div class="sp-column "><div class="sp-module "><div class="sp-module-content">
+
+<div class="custom"  >
+	<p style="text-align: center;"><b>Don't you speak portuguese? Translate this site with <a href="https://translate.google.com/translate?hl=pt-BR&amp;sl=pt&amp;tl=en&amp;u=https://ribafs.org/portal" target="_blank" rel="noopener noreferrer">Google Translator </a></b></p></div>
+</div></div></div></div></div></div></section><header id="sp-header"><div class="container"><div class="row"><div id="sp-logo" class="col-xs-8 col-sm-2 col-md-2"><div class="sp-column "><h1 class="logo"> <a href="../../../index.html">RibaFS Portal</a></h1></div></div><div id="sp-menu" class="col-xs-4 col-sm-10 col-md-10"><div class="sp-column ">			<div class='sp-megamenu-wrapper'>
+				<a id="offcanvas-toggler" class="visible-sm visible-xs" aria-label="Helix Megamenu Options" href="11-2-plugin-debugkit.html#"><i class="fa fa-bars" aria-hidden="true" title="Helix Megamenu Options"></i></a>
+				<ul class="sp-megamenu-parent menu-fade hidden-sm hidden-xs"><li class="sp-menu-item"><a  href="../../../index.html"  >Início</a></li><li class="sp-menu-item sp-has-child"><a  href="../../../basicos.html"  >Básicos</a><div class="sp-dropdown sp-dropdown-main sp-menu-right" style="width: 240px;"><div class="sp-dropdown-inner"><ul class="sp-dropdown-items"><li class="sp-menu-item"><a  href="../../../basicos/html.html"  >HTML</a></li><li class="sp-menu-item"><a  href="../../../basicos/javascript.html"  >JavaScript</a></li><li class="sp-menu-item"><a  href="../../../basicos/css.html"  >CSS</a></li><li class="sp-menu-item"><a  href="../../../basicos/jquery.html"  >jQuery</a></li><li class="sp-menu-item"><a  href="../../../basicos/bootstrap.html"  >Bootstrap</a></li><li class="sp-menu-item"><a  href="../../../basicos/php.html"  >PHP</a></li><li class="sp-menu-item"><a  href="../../../basicos/phpoo.html"  >PHPOO</a></li><li class="sp-menu-item"><a  href="../../../basicos/pdo.html"  >PDO</a></li><li class="sp-menu-item"><a  href="../../../basicos/ferramentas.html"  >Ferramentas</a></li><li class="sp-menu-item"><a  href="../../../basicos/outros.html"  >Outros</a></li></ul></div></div></li><li class="sp-menu-item sp-has-child"><a  href="../../../servidores.html"  >Servidores</a><div class="sp-dropdown sp-dropdown-main sp-menu-right" style="width: 240px;"><div class="sp-dropdown-inner"><ul class="sp-dropdown-items"><li class="sp-menu-item"><a  href="../../../servidores/desktop.html"  >Desktop</a></li><li class="sp-menu-item"><a  href="../../../servidores/ubuntu-server.html"  >Ubuntu Server</a></li><li class="sp-menu-item"><a  href="../../../servidores/shell-scripts.html"  >Shell Scripts</a></li><li class="sp-menu-item"><a  href="../../../servidores/servidor-web.html"  >Servidor Web</a></li><li class="sp-menu-item"><a  href="../../../servidores/servidor-sgbd.html"  >Servidor SGBD</a></li><li class="sp-menu-item sp-has-child"><a  href="../../../servidores/postgresql.html"  >PostgreSQL</a><div class="sp-dropdown sp-dropdown-sub sp-menu-right" style="width: 240px;"><div class="sp-dropdown-inner"><ul class="sp-dropdown-items"><li class="sp-menu-item"><a  href="../../../servidores/postgresql/introducao-ao-postgresql.html"  >Introdução</a></li><li class="sp-menu-item"><a  href="../../../servidores/postgresql/projeto.html"  >Projeto</a></li><li class="sp-menu-item"><a  href="../../../servidores/postgresql/dimensionamento.html"  >Dimensionamento</a></li></ul></div></div></li></ul></div></div></li><li class="sp-menu-item sp-has-child"><a  href="../../../joomla-3.html"  >Joomla 3</a><div class="sp-dropdown sp-dropdown-main sp-menu-right" style="width: 240px;"><div class="sp-dropdown-inner"><ul class="sp-dropdown-items"><li class="sp-menu-item"><a  href="../../../joomla-3/introducao.html"  >Introdução</a></li><li class="sp-menu-item"><a  href="../../../joomla-3/seguranca.html"  >Segurança</a></li><li class="sp-menu-item"><a  href="../../../joomla-3/instalacao.html"  >Instalação do Joomla</a></li><li class="sp-menu-item"><a  href="../../../joomla-3/administracao.html"  >Administração</a></li><li class="sp-menu-item"><a  href="../../../joomla-3/extensoes.html"  >Extensões</a></li><li class="sp-menu-item"><a  href="../../../joomla-3/loja-simples.html"  >Loja Simples</a></li><li class="sp-menu-item"><a  href="../../../joomla-3/dicas.html"  >Dicas</a></li></ul></div></div></li><li class="sp-menu-item sp-has-child"><a  href="javascript:void(0);"  >Frameworks</a><div class="sp-dropdown sp-dropdown-main sp-dropdown-mega sp-menu-right" style="width: 600px;"><div class="sp-dropdown-inner"><div class="row"><div class="col-sm-6"><ul class="sp-mega-group"><li class="sp-menu-item sp-has-child"><a class="sp-group-title" href="../../../frameworks/cakephp-3.html"  >CakePHP 3</a><ul class="sp-mega-group-child sp-dropdown-items"><li class="sp-menu-item"><a  href="../../../frameworks/cakephp-3/introducao.html"  >Introdução</a></li><li class="sp-menu-item"><a  href="../../../frameworks/cakephp-3/instalacao.html"  >Instalação</a></li><li class="sp-menu-item"><a  href="../../../frameworks/cakephp-3/configuracoes.html"  >Configurações</a></li><li class="sp-menu-item"><a  href="../../../frameworks/cakephp-3/convencoes.html"  >Convenções</a></li><li class="sp-menu-item"><a  href="../../../frameworks/cakephp-3/tutoriais.html"  >Tutoriais</a></li><li class="sp-menu-item"><a  href="../../../frameworks/cakephp-3/dicas.html"  >Dicas</a></li><li class="sp-menu-item"><a  href="../../../frameworks/cakephp-3/seguranca.html"  >Segurança</a></li><li class="sp-menu-item"><a  href="../../../frameworks/cakephp-3/mvc-no-cakephp-3.html"  >MVC no CakePHP 3</a></li></ul></li></ul></div><div class="col-sm-6"><ul class="sp-mega-group"><li class="sp-menu-item sp-has-child"><a class="sp-group-title" href="../../../frameworks/laravel-5.html"  >Laravel 5</a><ul class="sp-mega-group-child sp-dropdown-items"><li class="sp-menu-item"><a  href="../../../frameworks/laravel-5/introducao.html"  >Introdução</a></li><li class="sp-menu-item"><a  href="../../../frameworks/laravel-5/instalacao.html"  >Instalação</a></li><li class="sp-menu-item"><a  href="../../../frameworks/laravel-5/configuracoes.html"  >Configurações</a></li><li class="sp-menu-item"><a  href="../../../frameworks/laravel-5/routes.html"  >Routes</a></li><li class="sp-menu-item"><a  href="../../../frameworks/laravel-5/dicas.html"  >Dicas</a></li><li class="sp-menu-item"><a  href="../../../frameworks/laravel-5/tutoriais.html"  >Tutoriais</a></li></ul></li></ul></div></div></div></div></li><li class="sp-menu-item sp-has-child"><a  href="../../../mobile.html"  >Mobile</a><div class="sp-dropdown sp-dropdown-main sp-menu-right" style="width: 240px;"><div class="sp-dropdown-inner"><ul class="sp-dropdown-items"><li class="sp-menu-item"><a  href="../../../mobile/introducao.html"  >Introdução</a></li><li class="sp-menu-item"><a  href="../../../mobile/ambiente.html"  >Ambiente</a></li><li class="sp-menu-item"><a  href="../../../mobile/phaser.html"  >Phaser</a></li><li class="sp-menu-item"><a  href="../../../mobile/monaca.html"  >Monaca</a></li><li class="sp-menu-item"><a  href="../../../mobile/phonegap.html"  >PhoneGap</a></li><li class="sp-menu-item"><a  href="../../../mobile/app-inventor.html"  >App Inventor</a></li><li class="sp-menu-item"><a  href="../../../mobile/unity-3d.html"  >Unity 3D</a></li><li class="sp-menu-item"><a  href="../../../mobile/intel-xdk.html"  >Intel XDK</a></li><li class="sp-menu-item"><a  href="../../../mobile/outros.html"  >Outros</a></li><li class="sp-menu-item"><a  href="../../../mobile/dicas.html"  >Dicas</a></li></ul></div></div></li><li class="sp-menu-item sp-has-child"><a  href="../../../blog.html"  >Blog</a><div class="sp-dropdown sp-dropdown-main sp-menu-right" style="width: 240px;"><div class="sp-dropdown-inner"><ul class="sp-dropdown-items"><li class="sp-menu-item"><a  href="../../../blog/reflexoes.html"  >Reflexões</a></li><li class="sp-menu-item"><a  href="../../../blog/saude.html"  >Saúde</a></li><li class="sp-menu-item"><a  href="../../../blog/diversos.html"  >Diversos</a></li><li class="sp-menu-item"><a  href="../../../blog/estudos.html"  >Estudos</a></li></ul></div></div></li><li class="sp-menu-item sp-has-child active"><a  href="../../../curriculo.html"  >Sobre</a><div class="sp-dropdown sp-dropdown-main sp-menu-right" style="width: 240px;"><div class="sp-dropdown-inner"><ul class="sp-dropdown-items"><li class="sp-menu-item"><a  href="https://github.com/ribafs?tab=repositories" rel="noopener noreferrer" target="_blank" >Projetos</a></li><li class="sp-menu-item current-item active"><a  href="../../livros.html"  >Livros</a></li><li class="sp-menu-item"><a  href="../../curriculo.html"  >Currículo</a></li><li class="sp-menu-item"><a  href="../../contato.html"  >Contato</a></li><li class="sp-menu-item"><a  href="../../mapa-do-site.html"  >Mapa</a></li></ul></div></div></li></ul>			</div>
+		</div></div></div></div></header><section id="sp-page-title"><div class="row"><div id="sp-title" class="col-sm-12 col-md-12"><div class="sp-column "></div></div></div></section><section id="sp-main-body"><div class="container"><div class="row"><div id="sp-left" class="col-sm-3 col-md-3"><div class="sp-column custom-class"><div class="sp-module "><h3 class="sp-module-title">Novidades</h3><div class="sp-module-content"><div class="latestnews">
+	<div itemscope itemtype="http://schema.org/Article">
+		<a href="../../../blog/diversos/traducao-de-sites-de-forma-muito-simples.html" itemprop="url">
+			<span itemprop="name">
+				Tradução de sites de forma muito simples			</span>
+		</a>
+		<small>29 Agosto 2019</small>
+	</div>
+	<div itemscope itemtype="http://schema.org/Article">
+		<a href="../../../servidores/desktop/recuperar-senha-do-root.html" itemprop="url">
+			<span itemprop="name">
+				Recuperar senha do root			</span>
+		</a>
+		<small>23 Agosto 2019</small>
+	</div>
+	<div itemscope itemtype="http://schema.org/Article">
+		<a href="../../../blog/reflexoes/quer-ficar-rico.html" itemprop="url">
+			<span itemprop="name">
+				Quer ficar rico?			</span>
+		</a>
+		<small>19 Agosto 2019</small>
+	</div>
+	<div itemscope itemtype="http://schema.org/Article">
+		<a href="../../../basicos/php/cuidado-com-floats-em-linguagens.html" itemprop="url">
+			<span itemprop="name">
+				Cuidado com floats em Linguagens			</span>
+		</a>
+		<small>19 Julho 2019</small>
+	</div>
+	<div itemscope itemtype="http://schema.org/Article">
+		<a href="../../../servidores/servidor-web/setando-permissoes.html" itemprop="url">
+			<span itemprop="name">
+				Setando Permissões			</span>
+		</a>
+		<small>12 Julho 2019</small>
+	</div>
+</div>
+</div></div><div class="sp-module "><h3 class="sp-module-title">Pensamento do Dia</h3><div class="sp-module-content"><div>Apesar das tuas falsidades, das tuas lutas penosas e dos sonhos arruinados, a Terra continua a ser bela. Desiderata 
+</div>
+</div></div></div></div><div id="sp-component" class="col-sm-6 col-md-6"><div class="sp-column "><div id="system-message-container">
+	</div>
+
+
+<article class="item item-page" itemscope itemtype="http://schema.org/Article">
+	<meta itemprop="inLanguage" content="pt-BR" />
+	
+	
+
+	<div class="entry-header has-post-format">
+		<span class="post-format"><i class="fa fa-thumb-tack"></i></span>
+						<dl class="article-info">
+
+		
+			<dt class="article-info-term"></dt>	
+				
+							<dd class="createdby" itemprop="author" itemscope itemtype="http://schema.org/Person">
+	<i class="fa fa-user"></i>
+					<span itemprop="name" data-toggle="tooltip" title="Escrito por ">Ribamar FS</span>	</dd>			
+			
+							<dd class="category-name">
+	<i class="fa fa-folder-open-o"></i>
+				<a href="../cakephp.html" itemprop="genre" data-toggle="tooltip" title="Categoria do Artigo">CakePHP</a>	</dd>			
+			
+							<dd class="published">
+	<i class="fa fa-calendar-o"></i>
+	<time datetime="2019-07-03T08:44:33-03:00" itemprop="datePublished" data-toggle="tooltip" title="Data de Publicação">
+		03 Julho 2019	</time>
+</dd>			
+		
+					
+			
+							<dd class="hits">
+	<span class="fa fa-eye"></span>
+	<meta itemprop="interactionCount" content="UserPageVisits:12" />
+	Acessos: 12</dd>					
+		
+
+	</dl>
+		
+					<h2 itemprop="name">
+									11.2 - Plugin DebugKit							</h2>
+												</div>
+
+						
+<div class="icons">
+	
+					<div class="btn-group pull-right">
+				<button class="btn dropdown-toggle" type="button" id="dropdownMenuButton-275" aria-label="Ferramentas de usuário"
+				data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					<span class="icon-cog" aria-hidden="true"></span>
+					<span class="caret" aria-hidden="true"></span>
+				</button>
+								<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton-275">
+											<li class="print-icon"> <a href="11-2-plugin-debugkit.html@tmpl=component&amp;print=1&amp;layout=default.html" title="Imprimir o artigo < 11.2 - Plugin DebugKit >" onclick="window.open(this.href,'win2','status=no,toolbar=no,scrollbars=yes,titlebar=no,menubar=no,resizable=yes,width=640,height=480,directories=no,location=no'); return false;" rel="nofollow">			<span class="icon-print" aria-hidden="true"></span>
+		Imprimir	</a> </li>
+																<li class="email-icon"> <a href="../../../component/mailto/index.html@tmpl=component&amp;template=shaper_helix3&amp;link=a6ac07681cc576ffca1977246661746c8a67a1e9.html" title="Envie este link a um amigo" onclick="window.open(this.href,'win2','width=400,height=450,menubar=yes,resizable=yes'); return false;" rel="nofollow">			<span class="icon-envelope" aria-hidden="true"></span>
+		Email	</a> </li>
+														</ul>
+			</div>
+		
+	</div>
+				
+	
+	
+				
+	
+			<div itemprop="articleBody">
+		<h3>11.2 - Plugin DebugKit</h3>
+<p> </p>
+<p align="right"><em><strong>Aquele que tentou e não conseguiu, é superior àquele que não tentou.</strong></em></p>
+<p><a href="https://book.cakephp.org/3.0/pt/debug-kit.html">https://book.cakephp.org/3.0/pt/debug-kit.html</a></p>
+<p> </p>
+<p>DebugKit é um plugin suportado pelo time principal do CakePHP que oferece uma barra de ferramentas para auxiliar na depuração de aplicações do CakePHP.</p>
+<p>Já vem instalado por default no CakePHP 3</p>
+<p>Para usar clique no botão abaixo e à direita no aplicativo (no rodapé).</p>
+<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAvCAIAAAD4sNTGAAAAA3NCSVQICAjb4U/gAAAFZElEQVRYR+1YW08bRxT27H1tg43NNZiAgSQQRCgVgV7UVqr6GkVKpUp9aP9aH/pUqVXVqlIf2hQ1TVHTNgVKaBQKmHsDvhuvveu99RvbGIPx4gTU8sBqHtazM2e++eac75wxySR3XBfgYS4ABgrhouDgSnys3/n4/yXmovBxieOoH1zyccmHkzKU9cNpiPM3liEs6yKMi5DyQMu0TdNlWs7zjn19ERyEMLLMeNysx82IEpFEhucZt5uRRMJzLoalpi3LNgwrr5o5xWWYeLE01crlzaxiqSq+1gPXAI7i8lyLnwu0iD0hobtL6OriggEuEGC9HkaSiChQSphi6Nk2cNhaAauaimLEE2iF57uF7R1ta9uIxY1U2srlMOzF+CCiKHS0yzeHmqZuu0eG+a7Oehsq9xNCeB6N8Xq41qDYe7UyXn++m3vy1/6j33KLT/VozAY9VY8THzDnGR0JfnCvaXLChR2f7eE7O3ydHc1vv5n9Yy7xxVfZx7O2rldMOuGQrw8G7t1ten3qbACOzCaC0PTaJFgz9/dBTOWbk54KoZDUd0jsOaLhOzrEcF+1QScctmlUU3eOOKhlw2gUBw3C4359TmBg96hpJz4OpemcVj80Q0XvQPeKvU5+SjieEfgGMViKYu5noWms33/qFMJy5KhlJxxGIqHH4kJP6FS7GKBtbqfvTxvJtBTuFbqvCFe6EKhsc9OJc810Wt/bq/7khENdWU1/Pw3FlAb7oSUnWqx0go/80nJuYVEpKi/UlmsNiKEQ395GW0c75/eDA7ugq5FIevqBurTcKA4jkcw8nDEyGe/4mDQ4AEXnWlrK+l0LimUJxyG+9L0oGv1OCM0GrUE+GOTagsgJeDHS6dyfi8rCEyOZahQHxlEoP83knz6Th2/IgwPi1R5QzXq9yHalzMIIAqQWKagWGCIC09FUF906/IYPBiBfejxem42dzqVs2jT13T20zIOfOb8Ppw6SYZFtbmabvBSTKIJwI55E8pOuDZjpDBzWyuePITNTKbTDToRMVeiS0r3yxPsL7DJuGQvQDFnnwVnQxMZx8s0b/vfexUHAS7T1zcLWFvItzfhKzlLz1QSgVIADwVGqXdWJD88rtzzjY8rjuezsnJVVjilgCRjN8kVltFQN1r2TE96p2+hBrGlrG2pkXVuNaOsbNN3n85ZWoLlz/BYcDnCT33xb2Z0TDpQdSPfeiVelH37c/+XXwuaWpeu2joX12gOmJB/wDHr49nY0wMJKZmYfUPLPlsATzrT5jSmgUSNr1RQ74cAOwKo0EG776MPg+3fVv1eQIfPLK9rGprEXxeZs1Ffl5e2SLoEJgoKoVBMdrAPXdo+OoFUWVpdXcGSN4qDljCiURuNQ3WOjaKWf8Dg9GkcswP/NXA4OhHNRV+kW5eGhevJVWRhKjQKgURwIV2V+QQh1V08ovReDpdkO9xb5QJ+NkbHPPt/75FPW75MG+lG7yEPX5WuDcJpaydEia7n5hUZxFHb+iX/5NXbse+et4xVhkXlS9bcFFVzbVXRGDWyhBGRkiXXLqDOkvl4crtTfD02D/yL+U9/dh/FGcUActZVILJHMPvodpwspk8J9cDQ6v3JLODBGA7hEtWWhTHehZE+5UPdhPWV2nsaq3wduULjD33Ggx6LPyU8p3YjAaExJphCB3MMZzucDMXxbK80gLX4qYrhJoF7nBT0aRYqp3mLpnV4dAAtV+9Y2OCtebczaYafgKE2gaOJxNPwE24zHQ5d3y4xAlRSXBjQcH24GtQsc9uBKUSjUG9AQjurJ5f3Vs/ey/Sflp5e1dZZ5lziOsnfJxyUfTvF0UfyDhMNhJ5z/1bd/AbOhfrejP95LAAAAAElFTkSuQmCC" /></p>
+<p>Então aparecerá a barra do plugin ocupando toda a região do rodapé.</p>
+<p><img src="data:image/png;base64,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" /></p>
+<p><strong>Clique numa opção para ver detalhes</strong></p>
+<p>Exemplo: Sql log, mostra as consultas que levaram ao que aparece na tela</p>
+<p> </p>
+<p><strong>No CakePHP 3 temos duas opções de plugin, que ficam em:</strong></p>
+<p>aplicativo/plugins</p>
+<p>aplicativo/vendor/vendorname/plugin</p>
+<p> </p>
+<p><strong>Instalando um plugin pelo composer</strong></p>
+<p>cd aplicativo</p>
+<p><em>composer require vendorname/plugin-name</em></p>
+<p> </p>
+<p>Exemplo:</p>
+<p>composer require ribafs/cake-acl-br</p>
+<p> </p>
+<p><strong>Criação de Plugins no CakePHP</strong></p>
+<p>Execute:</p>
+<p>bin/cake bake plugin Ola</p>
+<p> </p>
+<p><strong>Ele criará toda a estrutura, mas vazia.</strong></p>
+<p>Vamos adicionar conteúdo apenas para mostrar como funciona.</p>
+<p> </p>
+<p><strong>Habilitar/Carregar o Plugin</strong></p>
+<p>bin/cake plugin load CakeAclBr</p>
+<p> </p>
+<p><strong>Descarregar plugin</strong></p>
+<pre>bin/cake plugin unload CakeAclBr</pre>
+<p> </p>
+<p><strong>Funções para debugar o código</strong></p>
+<p>Citando duas delas abaixo:</p>
+<p>Para verificar o código, use a função debug, cujo retorno ajuda a debugar:</p>
+<p> </p>
+<p>debug($variavel_objeto_array);</p>
+<p>exit;</p>
+<p> </p>
+<p>A função dd() é ainda mais prática, pois já tem o exit() embutido e não precisamos digitá-lo:</p>
+<p>dd($variavel_objeto_array);</p>
+<p> </p>
+<p><strong>Mais detalhes</strong></p>
+<p><a href="https://book.cakephp.org/debugkit/">https://book.cakephp.org/debugkit/</a></p> 	</div>
+
+	
+	
+	<ul class="pager pagenav">
+	<li class="previous">
+		<a class="hasTooltip" title="11.3 - Criação do plugin cake-acl-br" aria-label="Artigo anterior: 11.3 - Criação do plugin cake-acl-br" href="11-3-criacao-do-plugin-cake-acl-br.html" rel="prev">
+			<span class="icon-chevron-left" aria-hidden="true"></span> <span aria-hidden="true">Ant</span>		</a>
+	</li>
+	<li class="next">
+		<a class="hasTooltip" title="11.1 - Criação de Plugin para o CakePHP 3" aria-label="Próximo artigo: 11.1 - Criação de Plugin para o CakePHP 3" href="11-1-criacao-de-plugin-para-o-cakephp-3.html" rel="next">
+			<span aria-hidden="true">Próximo</span> <span class="icon-chevron-right" aria-hidden="true"></span>		</a>
+	</li>
+</ul>
+				
+	
+	<script type="text/x-template" id="ccomment-pagination">
+	<nav class="pagination text-center" v-if="pagination.last_page > 0">
+		<ul >
+			<li v-if="showPrevious()" :class="{ 'disabled' : pagination.current_page <= 1 }">
+				<span v-if="pagination.current_page <= 1">
+					<span aria-hidden="true">Ant</span>
+				</span>
+				<a href="11-2-plugin-debugkit.html#" v-if="pagination.current_page > 1 " :aria-label="config.ariaPrevioius"
+				   @click.prevent="changePage(pagination.current_page - 1)">
+					<span aria-hidden="true">Ant</span>
+				</a>
+			</li>
+			<li v-for="num in array" :class="{ 'active': num === pagination.current_page }">
+				<a href="11-2-plugin-debugkit.html#" @click.prevent="changePage(num)">{{ num }}</a>
+			</li>
+			<li v-if="showNext()"
+			    :class="{ 'disabled' : pagination.current_page === pagination.last_page || pagination.last_page === 0 }">
+				<span v-if="pagination.current_page === pagination.last_page || pagination.last_page === 0">
+					<span aria-hidden="true">Próximo</span>
+				</span>
+				<a href="11-2-plugin-debugkit.html#" v-if="pagination.current_page < pagination.last_page" :aria-label="config.ariaNext"
+				   @click.prevent="changePage(pagination.current_page + 1)">
+					<span aria-hidden="true">Próximo</span>
+				</a>
+			</li>
+		</ul>
+	</nav>
+</script>
+	<script type="text/x-template" id="ccomment-avatar">
+		<div class="ccomment-avatar">
+			<a v-if="profileLink" v-bind:href="profileLink">
+				<img v-bind:src="avatar"/>
+			</a>
+			<img v-else v-bind:src="avatar"/>
+		</div>
+	</script>
+
+	<script type="text/x-template" id="ccomment-user-name">
+		<a v-if="profileLink" :href="profileLink">
+			<span class="ccomment-author">{{name}}</span>
+		</a>
+		<span v-else class="ccomment-author">{{name}}</span>
+	</script>
+
+	<script type="text/x-template" id="ccomment-created">
+		<a :href="'#!/ccomment-comment=' + id" class="muted ccomment-created">
+			{{date}}
+		</a>
+	</script>
+
+	<div id="ccomment-token" style="display:none;">
+		<input type="hidden" name="796296c0a9019553ed4bbba150ad5a40" value="1" />	</div>
+
+	
+<script type="text/x-template" id="ccomment-customfields">
+	<div class="ccomment-customfields" v-if="customfields">
+		<strong>Campos personalizados</strong>
+		<dl class="dl-horizontal">
+			<template v-for="customfield in customfields">
+				<dt>{{customfield.title}}</dt>
+				<dd>{{customfield.value}}</dd>
+			</template>
+		</dl>
+	</div>
+</script>
+
+<script type="text/x-template" id="ccomment-template">
+	<li v-bind:class="model.class+' ccomment-level-'+model.level">
+		<div class="ccomment-comment-content" v-bind:id="'ccomment-comment-'+model.id">
+			<div class="ccomment-data">
+									<ccomment-avatar
+							v-bind:avatar="model.avatar"
+							v-bind:profileLink="model.profileLink"/>
+								<div class="ccomment-content">
+					<div class="ccomment-meta">
+						<ccomment-user-name v-bind:name="model.name" v-bind:profileLink="model.profileLink"></ccomment-user-name>
+						<ccomment-created v-bind:date="model.date" v-bind:id="model.id"></ccomment-created>
+					</div>
+
+					<div v-html="model.comment">
+					</div>
+
+
+					<div v-if="model.galleria" class="js-ccomment-galleria galleria ccomment-galleria"></div>
+
+					<ccomment-customfields v-bind:customfields="model.customfields"></ccomment-customfields>
+					<div class="ccomment-actions">
+													<span class="muted">
+					{{model.votes}}
+					<i class="ccomment-thumbs-up ccomment-voting" v-on:click="vote(+1, model.id)"></i>
+					<i class="ccomment-thumbs-down ccomment-voting" v-on:click="vote(-1, model.id)"></i>
+				</span>
+						
+													<button class="btn btn-small ccomment-quote btn-link" v-on:click="quote(model.id)">
+								Citar							</button>
+						
+						
+						<div class="pull-right ccomment-moderation">
+							<button v-if="model.commentModerator" class="btn btn-mini btn-ccomment-edit" v-on:click="edit(model.id)">
+								Editar							</button>
+
+													</div>
+					</div>
+				</div>
+			</div>
+
+
+			<keep-alive>
+				<ccomment-form v-if="reply" :ref="'form-'+model.id" v-bind:focus="true">
+					<input slot="parent-id" name="jform[parentid]" type="hidden" v-bind:value="model.id"/>
+				</ccomment-form>
+			</keep-alive>
+		</div>
+
+		<ul v-if="hasChildren">
+			<ccomment-comment class="item" v-for="model in getChild()" v-bind:key="model.id" v-bind:model="model">
+			</ccomment-comment>
+		</ul>
+	</li>
+
+</script>
+	
+	
+
+		<script type="text/x-template" id="ccomment-form">
+			<form class="ccomment-form" v-on:submit.prevent="onSubmit">
+				<div class="ccomment-error-form row-fluid  margin-bottom" v-if="error">
+					<div class="alert alert-error">
+						{{errorMessage}}
+					</div>
+				</div>
+				<div class="ccomment-info-form row-fluid  margin-bottom" v-if="info">
+					<div class="alert alert-info">
+						{{infoMessage}}
+					</div>
+				</div>
+				<div class="row-fluid margin-bottom">
+											<div class="span1 hidden-phone">
+							<ccomment-avatar v-bind:avatar="getAvatar"></ccomment-avatar>
+						</div>
+					
+					<div class="span11">
+						<textarea v-on:focus="toggle"
+								  name="jform[comment]"
+								  class='js-ccomment-textarea ccomment-textarea span12 required'
+								  placeholder="Deixe um comentário"
+						></textarea>
+
+						<div v-show="uploadImage">
+							
+<div class="fileupload">
+	<!-- The fileupload-buttonbar contains buttons to add/delete files and start/cancel the upload -->
+	<div class="row fileupload-buttonbar">
+		<input type="file" name="files[]" class="js-ccomment-file-upload-real ccomment-file-upload-real" multiple/>
+		<div class="">
+			<!-- The global file processing state -->
+			<span class="fileupload-process"><span class="fa fa-spinner fa-pulse"></span></span>
+			Attach images by dragging & dropping or <span type="button" class="js-file-upload-fake ccomment-file-upload-fake btn-link"> by selecting them.</span>			<br/>
+			<small class="muted">The maximum file size for uploads is <strong>MB</strong>.				Only <strong></strong> files are allowed.</small>
+
+			<!-- The global progress state -->
+			<div class="fileupload-progress fade hide">
+				<!-- The global progress bar -->
+				<div class="progress progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+					<div class="progress-bar progress-bar-success" style="width:0%;"></div>
+				</div>
+				<!-- The extended global progress state -->
+				<div class="progress-extended">&nbsp;</div>
+			</div>
+			<div class="ccomment-file-list">
+				<div class="alert alert-error hide compojoom-max-number-files">
+					The maximum number of 3 allowed files to upload has been reached. If you want to upload more files you have to delete one of the existing uploaded files first.				</div>
+				<table role="presentation" class="table table-striped">
+					<thead></thead>
+					<tbody class="files"></tbody>
+				</table>
+				<div class="alert alert-error hide compojoom-max-number-files">
+					The maximum number of 3 allowed files to upload has been reached. If you want to upload more files you have to delete one of the existing uploaded files first.				</div>
+			</div>
+		</div>
+	</div>
+</div>
+						</div>
+
+						<div v-show="active">
+							<div class="span4 muted small">
+								Postando como																	<button type="button"
+											v-on:click="display = !display"
+											class="btn-link btn-small ccomment-posting-as">{{getDefaultName}}
+									</button>
+															</div>
+															<label class="checkbox pull-right small ccomment-notify">
+									<input type="checkbox" value="1" name="jform[notify]ƒ"
+										   v-on:click="notify = !notify"/>
+									<span class="muted">
+										Notificar-me de futuros comentários via e-mail									</span>
+								</label>
+							
+
+						</div>
+					</div>
+											<div v-show="display"
+							 class="row-fluid ccomment-user-info offset1					span11">
+							<div class="span6">
+								<input name="jform[name]"
+									   class="ccomment-name span12 no-margin "
+									   type='text'
+									   v-bind:value="getName"
+									   v-on:input="updateDefaultName"
+																			   placeholder="Informe seu nome"
+									   tabindex="2"
+																	/>
+								<span class="help-block pull-right small muted">
+								Exibido ao lado de seus comentários.							</span>
+							</div>
+
+															<div class="span6">
+									<input name='jform[email]'
+										   class="ccomment-email span12 no-margin "
+										   type='text'
+										   v-bind:value='getEmail'
+										   v-on:input="updateUserEmail"
+										   placeholder="Informe seu email"
+																				   tabindex="3"
+																			/>
+									<p class="help-block small pull-right muted">
+										Não exibido publicamente.																					<span class='gravatar'>
+											<a href='http://gravatar.com' target='_blank'>Gravatar</a> habilitado										</span>
+																			</p>
+								</div>
+													</div>
+					
+
+					
+					
+
+					<div class="row-fluid ccomment-actions" v-show="active">
+													<div class="pull-left muted small ccomment-undergo-moderation offset1">
+								Comentários serão submetidos a moderação antes de serem publicados.							</div>
+												<div class="pull-right">
+							<button v-on:click="reset()"
+									type="button"
+									class="btn ccomment-cancel">
+								Cancelar</button>
+							<button type="submit" class='btn btn-primary ccomment-send'
+									tabindex="7"
+									name='bsend'>
+								<span v-if="isSending">
+									Salvando...								</span>
+								<span v-else>
+									Enviar								</span>
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<input type="hidden" name="jform[contentid]" v-bind:value="itemConfig.contentid"/>
+				<input type="hidden" name="jform[component]" v-bind:value="itemConfig.component"/>
+				<input type="hidden" name="jform[page]" v-bind:value="page"/>
+				<slot name="parent-id"></slot>
+			</form>
+		</script>
+
+	
+
+
+
+
+<!-- The template to display files available for upload -->
+<script id="template-upload" type="text/x-tmpl">
+{% for (var i=0, file; file=o.files[i]; i++) { %}
+    <tr class="template-upload fade">
+        <td>
+            <span class="preview"></span>
+        </td>
+        <td>
+         <span class="name"><i>{%=file.name%}</i></span>
+            <div class="compojoom-single-file-progress">
+	            <div class="progress progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+	                <div class="progress-bar progress-bar-success" style="width:0%;"></div>
+	            </div>
+	           <small><strong class="size">Processing...</strong></small>
+			</div>
+        </td>
+        <td>
+            {% if (!i && !o.options.autoUpload) { %}
+                <button class="btn btn-default btn-xs start" disabled>
+                    <i class="fa fa-upload"></i>
+                    <span>Start</span>
+                </button>
+            {% } %}
+            {% if (!i) { %}
+                <button class="btn btn-default btn-xs btn-xs cancel pull-left">
+                    <i class="fa fa-stop"></i>
+                    <span>Cancel</span>
+                </button>
+            {% } %}
+        </td>
+    </tr>
+{% } %}
+</script>
+
+<!-- The template to display files available for download -->
+<script id="template-download" type="text/x-tmpl">
+{% for (var i=0, file; file=o.files[i]; i++) { %}
+    <tr class="template-download fade">
+        <td style="">
+        {% if (file.thumbnailUrl) { %}
+            <span class="preview">
+                {% if (file.url) { %}
+					<a href="http://backup/portal/{%=file.url%}" title="{%=file.name%}" download="{%=file.name%}" data-gallery>
+						<img src='http://backup/portal/curriculo/livros/cakephp/{%=file.thumbnailUrl%}'>
+					</a>
+				{% } else { %}
+					<img src='http://backup/portal/curriculo/livros/cakephp/{%=file.thumbnailUrl%}'>
+				{% } %}
+            </span>
+		{% } %}
+        </td>
+        <td>
+        {% if (!file.error) { %}
+	        <div class="file-meta">
+			    <div class="row">
+			        <div class="col-lg-4">
+			           <input type="text" class="form-control"
+			                placeholder="Title"
+							name="jform[picture_data][{%=file.name%}][title]"
+					        value="{%=file.title%}" />
+			        </div>
+			        <div class="col-lg-8">
+			            <input type="text" placeholder="Description" class="form-control"
+					                name="jform[picture_data][{%=file.name%}][description]"
+
+					                value="{%=file.description%}" />
+			        </div>
+			    </div>
+	        </div>
+		 {% } %}
+        {% if (file.error) { %}
+            <div><span class="label label-danger">Error</span> {%=file.error%}</div>
+        {% } %}
+        </td>
+        <td style="text-align: center">
+            {% if (file.deleteUrl) { %}
+                            {% } else { %}
+                 <button class="btn btn-default btn-xs btn-xs cancel">
+                    <i class="fa fa-stop"></i>
+                    <span>Cancel</span>
+                </button>
+            {% }%}
+            {% if (!file.error) { %}
+            <input type="hidden" name="jform[picture][]" value="{%=file.name%}" />
+            {% } %}
+        </td>
+    </tr>
+{% } %}
+</script>
+	
+<script type="text/x-template" id="ccomment-menu">
+	<div class="row-fluid ccomment-menu">
+		<h4 class="pull-left">
+			Comentários			(<span class="ccomment-comment-counter">{{pagination.total_with_children}}</span>)
+		</h4>
+		<div class="pull-right">
+							<button
+						v-on:click="newComment"
+						class="ccomment-add-new btn btn-mini" title='Adicionar Novo'>
+					Adicionar Novo				</button>
+														</div>
+	</div>
+</script>
+
+	<!-- the ccomment root element -->
+	<div class="ccomment" id="ccomment">
+
+		<ccomment-menu></ccomment-menu>
+
+		
+		
+		<ul class="ccomment-comments-list">
+			<ccomment-comment v-for="item in comments"
+							  v-if="item.parentid === -1"
+							  class="item"
+							  v-bind:key="item.id"
+							  v-bind:model="item">
+			</ccomment-comment>
+		</ul>
+
+					<pagination v-if="pagination.last_page > 1" :pagination="pagination" :callback="loadData" :options="paginationOptions"></pagination>
+		
+					<ccomment-form></ccomment-form>
+		
+			<div class="row-fluid small muted ccomment-powered">
+		<p class="text-center">
+			Comments fornecido por <a href='https://compojoom.com' rel='nofollow' target='_blank'>CComment</a>		</p>
+	</div>
+	</div>
+
+	<script type="text/javascript">
+		window.compojoom = compojoom = window.compojoom || {};
+		compojoom.ccomment = {
+			user: {"loggedin":false,"avatar":"http:\/\/backup\/portal\/media\/com_comment\/images\/noavatar.png"},
+			item: {"contentid":275,"component":"com_content","count":0},
+			config: {"comments_per_page":0,"sort":0,"tree":0,"use_name":0,"tree_depth":5,"form_position":0,"voting":1,"copyright":1,"pagination_position":0,"avatars":0,"gravatar":1,"support_ubb":1,"support_emoticons":0,"support_picture":0,"name_required":0,"email_required":0,"baseUrl":"http:\/\/backup\/portal\/","langCode":null,"file_upload":{"url":"http:\/\/backup\/portal\/index.php?option=com_comment&amp;task=multimedia.doIt","formControl":"jform","fieldName":"picture","maxNumberOfFiles":3,"fileTypes":null,"maxSize":null,"component":"com_comment","imageSize":{"x":"2400","y":"1800"}}}		};
+	</script>
+
+<script data-inline type="text/javascript" src="../../../media/com_comment/cache/8e12eb270706cd6b2c8483104bf89b54.min.js"></script>
+			<div class="article-footer-wrap">
+			<div class="article-footer-top">
+									<div class="helix-social-share">
+		<div class="helix-social-share-icon">
+			<ul>
+				
+				<li>
+					<div class="facebook" data-toggle="tooltip" data-placement="top" title="Share On Facebook">
+
+						<a class="facebook" onClick="window.open('http://www.facebook.com/sharer.php?u=http://backup/portal/curriculo/livros/cakephp/11-2-plugin-debugkit.html','Facebook','width=600,height=300,left='+(screen.availWidth/2-300)+',top='+(screen.availHeight/2-150)+''); return false;" href="http://www.facebook.com/sharer.php?u=http://backup/portal/curriculo/livros/cakephp/11-2-plugin-debugkit.html">
+
+							<i class="fa fa-facebook"></i>
+						</a>
+
+					</div>
+				</li>
+				<li>
+					<div class="twitter"  data-toggle="tooltip" data-placement="top" title="Share On Twitter">
+						
+						<a class="twitter" onClick="window.open('http://twitter.com/share?url=http://backup/portal/curriculo/livros/cakephp/11-2-plugin-debugkit.html&amp;text=11.2%20-%20Plugin%20DebugKit','Twitter share','width=600,height=300,left='+(screen.availWidth/2-300)+',top='+(screen.availHeight/2-150)+''); return false;" href="http://twitter.com/share?url=http://backup/portal/curriculo/livros/cakephp/11-2-plugin-debugkit.html&amp;text=11.2%20-%20Plugin%20DebugKit">
+							<i class="fa fa-twitter"></i>
+						</a>
+
+					</div>
+				</li>
+				<li>
+					<div class="google-plus">
+						<a class="gplus" data-toggle="tooltip" data-placement="top" title="Share On Google Plus" onClick="window.open('https://plus.google.com/share?url=http://backup/portal/curriculo/livros/cakephp/11-2-plugin-debugkit.html','Google plus','width=585,height=666,left='+(screen.availWidth/2-292)+',top='+(screen.availHeight/2-333)+''); return false;" href="https://plus.google.com/share?url=http://backup/portal/curriculo/livros/cakephp/11-2-plugin-debugkit.html" >
+						<i class="fa fa-google-plus"></i></a>
+					</div>
+				</li>
+				
+				<li>
+					<div class="linkedin">
+						<a class="linkedin" data-toggle="tooltip" data-placement="top" title="Share On Linkedin" onClick="window.open('http://www.linkedin.com/shareArticle?mini=true&url=http://backup/portal/curriculo/livros/cakephp/11-2-plugin-debugkit.html','Linkedin','width=585,height=666,left='+(screen.availWidth/2-292)+',top='+(screen.availHeight/2-333)+''); return false;" href="http://www.linkedin.com/shareArticle?mini=true&url=http://backup/portal/curriculo/livros/cakephp/11-2-plugin-debugkit.html" >
+							
+						<i class="fa fa-linkedin-square"></i></a>
+					</div>
+				</li>
+			</ul>
+		</div>		
+	</div> <!-- /.helix-social-share -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			</div>
+					</div>
+	
+</article>
+</div></div><div id="sp-right" class="col-sm-3 col-md-3"><div class="sp-column class2"><div class="sp-module pop"><h3 class="sp-module-title">Populares</h3><div class="sp-module-content"><ul class="mostreadpop mod-list">
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="http://backup/portal/mobile/phaser/atualizar-o-node-js.html" itemprop="url">
+			<span itemprop="name">
+				Atualizar o Node.JS			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../../../joomla-3/dicas/melhorando-a-velocidade-do-site.html" itemprop="url">
+			<span itemprop="name">
+				Melhorando a velocidade do site			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="http://backup/portal/curriculo/livros/boas-vindas.html" itemprop="url">
+			<span itemprop="name">
+				Boas Vindas!			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../../../joomla-3/instalacao.html" itemprop="url">
+			<span itemprop="name">
+				Instalação do Joomla			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../../../blog/diversos/e-possivel-viver-sem-o-google.html" itemprop="url">
+			<span itemprop="name">
+				É possível viver sem o Google?			</span>
+		</a>
+	</li>
+</ul>
+</div></div><div class="sp-module "><h3 class="sp-module-title">Novo Testamento</h3><div class="sp-module-content">E originou-se um grande clamor; e, levantando-se os escribas da parte dos fariseus, contendiam, dizendo: Nenhum mal achamos neste homem, e, se algum espírito ou anjo lhe falou, não lutemos contra Deus.
+
+<br>(At, 23:9) 
+</div></div><div class="sp-module "><h3 class="sp-module-title">Rotas no Mapa do Google</h3><div class="sp-module-content"><a href="https://www.google.com/maps/dir///@-3.7294526,-38.5422647,15z" target="_blank">Abrir o Mapa</a>
+</div></div></div></div></div></div></section><footer id="sp-footer"><div class="container"><div class="row"><div id="sp-footer1" class="col-sm-12 col-md-12"><div class="sp-column "><span class="sp-copyright">© 2015 Ribamar FS. All Rights Reserved. Designed By JoomShaper</span></div></div></div></div></footer>            </div> <!-- /.body-innerwrapper -->
+        </div> <!-- /.body-innerwrapper -->
+
+        <!-- Off Canvas Menu -->
+        <div class="offcanvas-menu">
+            <a href="11-2-plugin-debugkit.html#" class="close-offcanvas" aria-label="Close"><i class="fa fa-remove" aria-hidden="true" title="HELIX_CLOSE_MENU"></i></a>
+            <div class="offcanvas-inner">
+                                  <div class="sp-module _menu"><h3 class="sp-module-title">Menu Principal</h3><div class="sp-module-content"><ul class="nav menu">
+<li class="item-101"><a href="../../../index.html" > Início</a></li><li class="item-107  deeper parent"><a href="../../../basicos.html" > Básicos</a><span class="offcanvas-menu-toggler collapsed" data-toggle="collapse" data-target="#collapse-menu-107"><i class="open-icon fa fa-angle-down"></i><i class="close-icon fa fa-angle-up"></i></span><ul class="collapse" id="collapse-menu-107"><li class="item-112"><a href="../../../basicos/html.html" > HTML</a></li><li class="item-113"><a href="../../../basicos/javascript.html" > JavaScript</a></li><li class="item-114"><a href="../../../basicos/css.html" > CSS</a></li><li class="item-116"><a href="../../../basicos/jquery.html" > jQuery</a></li><li class="item-117"><a href="../../../basicos/bootstrap.html" > Bootstrap</a></li><li class="item-118"><a href="../../../basicos/php.html" > PHP</a></li><li class="item-119"><a href="../../../basicos/phpoo.html" > PHPOO</a></li><li class="item-120"><a href="../../../basicos/pdo.html" > PDO</a></li><li class="item-157"><a href="../../../basicos/ferramentas.html" > Ferramentas</a></li><li class="item-287"><a href="../../../basicos/outros.html" > Outros</a></li></ul></li><li class="item-108  deeper parent"><a href="../../../servidores.html" > Servidores</a><span class="offcanvas-menu-toggler collapsed" data-toggle="collapse" data-target="#collapse-menu-108"><i class="open-icon fa fa-angle-down"></i><i class="close-icon fa fa-angle-up"></i></span><ul class="collapse" id="collapse-menu-108"><li class="item-121"><a href="../../../servidores/desktop.html" > Desktop</a></li><li class="item-122"><a href="../../../servidores/ubuntu-server.html" > Ubuntu Server</a></li><li class="item-123"><a href="../../../servidores/shell-scripts.html" > Shell Scripts</a></li><li class="item-124"><a href="../../../servidores/servidor-web.html" > Servidor Web</a></li><li class="item-156"><a href="../../../servidores/servidor-sgbd.html" > Servidor SGBD</a></li><li class="item-193  deeper parent"><a href="../../../servidores/postgresql.html" > PostgreSQL</a><span class="offcanvas-menu-toggler collapsed" data-toggle="collapse" data-target="#collapse-menu-193"><i class="open-icon fa fa-angle-down"></i><i class="close-icon fa fa-angle-up"></i></span><ul class="collapse" id="collapse-menu-193"><li class="item-232"><a href="../../../servidores/postgresql/introducao-ao-postgresql.html" > Introdução</a></li><li class="item-233"><a href="../../../servidores/postgresql/projeto.html" > Projeto</a></li><li class="item-234"><a href="../../../servidores/postgresql/dimensionamento.html" > Dimensionamento</a></li></ul></li></ul></li><li class="item-148  deeper parent"><a href="../../../joomla-3.html" > Joomla 3</a><span class="offcanvas-menu-toggler collapsed" data-toggle="collapse" data-target="#collapse-menu-148"><i class="open-icon fa fa-angle-down"></i><i class="close-icon fa fa-angle-up"></i></span><ul class="collapse" id="collapse-menu-148"><li class="item-149"><a href="../../../joomla-3/introducao.html" > Introdução</a></li><li class="item-231"><a href="../../../joomla-3/seguranca.html" > Segurança</a></li><li class="item-199"><a href="../../../joomla-3/instalacao.html" > Instalação do Joomla</a></li><li class="item-152"><a href="../../../joomla-3/administracao.html" > Administração</a></li><li class="item-153"><a href="../../../joomla-3/extensoes.html" > Extensões</a></li><li class="item-154"><a href="../../../joomla-3/loja-simples.html" > Loja Simples</a></li><li class="item-155"><a href="../../../joomla-3/dicas.html" > Dicas</a></li></ul></li><li class="item-310  divider deeper parent"><a class="separator ">Frameworks</a>
+<span class="offcanvas-menu-toggler collapsed" data-toggle="collapse" data-target="#collapse-menu-310"><i class="open-icon fa fa-angle-down"></i><i class="close-icon fa fa-angle-up"></i></span><ul class="collapse" id="collapse-menu-310"><li class="item-138  deeper parent"><a href="../../../frameworks/cakephp-3.html" > CakePHP 3</a><span class="offcanvas-menu-toggler collapsed" data-toggle="collapse" data-target="#collapse-menu-138"><i class="open-icon fa fa-angle-down"></i><i class="close-icon fa fa-angle-up"></i></span><ul class="collapse" id="collapse-menu-138"><li class="item-139"><a href="../../../frameworks/cakephp-3/introducao.html" > Introdução</a></li><li class="item-140"><a href="../../../frameworks/cakephp-3/instalacao.html" > Instalação</a></li><li class="item-172"><a href="../../../frameworks/cakephp-3/configuracoes.html" > Configurações</a></li><li class="item-141"><a href="../../../frameworks/cakephp-3/convencoes.html" > Convenções</a></li><li class="item-142"><a href="../../../frameworks/cakephp-3/tutoriais.html" > Tutoriais</a></li><li class="item-144"><a href="../../../frameworks/cakephp-3/dicas.html" > Dicas</a></li><li class="item-145"><a href="../../../frameworks/cakephp-3/seguranca.html" > Segurança</a></li><li class="item-147"><a href="../../../frameworks/cakephp-3/mvc-no-cakephp-3.html" > MVC no CakePHP 3</a></li></ul></li><li class="item-171  deeper parent"><a href="../../../frameworks/laravel-5.html" > Laravel 5</a><span class="offcanvas-menu-toggler collapsed" data-toggle="collapse" data-target="#collapse-menu-171"><i class="open-icon fa fa-angle-down"></i><i class="close-icon fa fa-angle-up"></i></span><ul class="collapse" id="collapse-menu-171"><li class="item-173"><a href="../../../frameworks/laravel-5/introducao.html" > Introdução</a></li><li class="item-174"><a href="../../../frameworks/laravel-5/instalacao.html" > Instalação</a></li><li class="item-175"><a href="../../../frameworks/laravel-5/configuracoes.html" > Configurações</a></li><li class="item-176"><a href="../../../frameworks/laravel-5/routes.html" > Routes</a></li><li class="item-178"><a href="../../../frameworks/laravel-5/dicas.html" > Dicas</a></li><li class="item-177"><a href="../../../frameworks/laravel-5/tutoriais.html" > Tutoriais</a></li></ul></li></ul></li><li class="item-158  deeper parent"><a href="../../../mobile.html" > Mobile</a><span class="offcanvas-menu-toggler collapsed" data-toggle="collapse" data-target="#collapse-menu-158"><i class="open-icon fa fa-angle-down"></i><i class="close-icon fa fa-angle-up"></i></span><ul class="collapse" id="collapse-menu-158"><li class="item-179"><a href="../../../mobile/introducao.html" > Introdução</a></li><li class="item-180"><a href="../../../mobile/ambiente.html" > Ambiente</a></li><li class="item-188"><a href="../../../mobile/phaser.html" > Phaser</a></li><li class="item-187"><a href="../../../mobile/monaca.html" > Monaca</a></li><li class="item-181"><a href="../../../mobile/phonegap.html" > PhoneGap</a></li><li class="item-182"><a href="../../../mobile/app-inventor.html" > App Inventor</a></li><li class="item-159"><a href="../../../mobile/unity-3d.html" > Unity 3D</a></li><li class="item-160"><a href="../../../mobile/intel-xdk.html" > Intel XDK</a></li><li class="item-161"><a href="../../../mobile/outros.html" > Outros</a></li><li class="item-163"><a href="../../../mobile/dicas.html" > Dicas</a></li></ul></li><li class="item-168  deeper parent"><a href="../../../blog.html" > Blog</a><span class="offcanvas-menu-toggler collapsed" data-toggle="collapse" data-target="#collapse-menu-168"><i class="open-icon fa fa-angle-down"></i><i class="close-icon fa fa-angle-up"></i></span><ul class="collapse" id="collapse-menu-168"><li class="item-196"><a href="../../../blog/reflexoes.html" > Reflexões</a></li><li class="item-197"><a href="../../../blog/saude.html" > Saúde</a></li><li class="item-238"><a href="../../../blog/diversos.html" > Diversos</a></li><li class="item-271"><a href="../../../blog/estudos.html" > Estudos</a></li></ul></li><li class="item-215  active deeper parent"><a href="../../../curriculo.html" > Sobre</a><span class="offcanvas-menu-toggler collapsed" data-toggle="collapse" data-target="#collapse-menu-215"><i class="open-icon fa fa-angle-down"></i><i class="close-icon fa fa-angle-up"></i></span><ul class="collapse" id="collapse-menu-215"><li class="item-167">		<a href="https://github.com/ribafs?tab=repositories" rel="noopener noreferrer" target="_blank" > Projetos</a></li><li class="item-164  current active"><a href="../../livros.html" > Livros</a></li><li class="item-257"><a href="../../curriculo.html" > Currículo</a></li><li class="item-110"><a href="../../contato.html" > Contato</a></li><li class="item-251"><a href="../../mapa-do-site.html" > Mapa</a></li></ul></li></ul>
+</div></div>
+                            </div> <!-- /.offcanvas-inner -->
+        </div> <!-- /.offcanvas-menu -->
+
+        
+        
+        
+        <!-- Preloader -->
+        
+
+        <!-- Go to top -->
+                    <a href="javascript:void(0)" class="scrollup" aria-label="Go To Top">&nbsp;</a>
+        
+    </body>
+</html>

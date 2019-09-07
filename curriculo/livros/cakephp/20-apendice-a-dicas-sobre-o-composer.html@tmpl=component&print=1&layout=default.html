@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br" dir="ltr">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <base href="" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Ribamar FS" />
+	<meta name="robots" content="noindex, nofollow" />
+	<meta name="description" content="Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros." />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>20 – Apêndice A - Dicas sobre o Composer - RibaFS Portal</title>
+	<link href="http://ribafs.org/portal/curriculo/livros/cakephp/20-apendice-a-dicas-sobre-o-composer.html?tmpl=component&amp;print=1&amp;layout=default" rel="canonical" />
+	<link href="../../../templates/shaper_helix3/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../../../favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<script src="../../../media/jui/js/jquery.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery-noconflict.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery-migrate.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="http://backup/portal/media/system/js/caption.js?d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script type="text/javascript">
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+	</script>
+	<meta property="og:url" content="http://backup/portal/curriculo/livros/cakephp/20-apendice-a-dicas-sobre-o-composer.html" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="20 – Apêndice A - Dicas sobre o Composer" />
+	<meta property="og:description" content="20 – Apêndice A - Dicas sobre o Composer Site oficial https://getcomposer.org Documentação https://getcomposer.org/doc/ É um gerenciador de dependências pa..." />
+
+   	<link rel="stylesheet" href="../../../media/jui/css/bootstrap.min.css" type="text/css" />
+	<link rel="stylesheet" href="../../../templates/shaper_helix3/css/frontend-edit.css" type="text/css" />
+    <link rel="stylesheet" href="../../../templates/shaper_helix3/css/template.css" type="text/css" />
+</head>
+<body class="contentpane">
+	<div id="system-message-container">
+	</div>
+
+	
+
+<article class="item item-page" itemscope itemtype="http://schema.org/Article">
+	<meta itemprop="inLanguage" content="pt-BR" />
+	
+	
+
+	<div class="entry-header">
+		<span class="post-format"><i class="fa fa-thumb-tack"></i></span>
+		
+					<h2 itemprop="name">
+									20 – Apêndice A - Dicas sobre o Composer							</h2>
+												</div>
+
+						<div id="pop-print" class="btn hidden-print">
+				<a href="20-apendice-a-dicas-sobre-o-composer.html#" onclick="window.print();return false;">			<span class="icon-print" aria-hidden="true"></span>
+		Imprimir	</a>			</div>
+				
+	
+	
+				
+	
+			<div itemprop="articleBody">
+		<h3>20 – Apêndice A - Dicas sobre o Composer<br /> </h3>
+<p>Site oficial <br /><a href="https://getcomposer.org">https://getcomposer.org</a>  <br /><br />Documentação<br /><a href="https://getcomposer.org/doc/">https://getcomposer.org/doc/ </a> <br /><br />É um gerenciador de dependências para PHP, com bons recursos para instalar, atualizar e gerenciar módulos em PHP. Ele checa quais as dependências de um pacote e as instala, usando as versões indicadas.<br /><br /><strong>Pré-requisitos para sua instalação:</strong><br />- PHP 5.3.2 ou superior<br />- curl<br />- php-cli<br />- php-mbstring<br />- git<br />- unzip<br /><br /><strong>Para Windows</strong><br />https://getcomposer.org/doc/00-intro.md#using-the-installer<br /><br /><strong>Para Linux</strong><br />sudo apt install composer<br /><br /><strong>Testando</strong><br /><br />composer list<br /><br /><strong>Instalando uma dependência/pacote em um projeto</strong><br /><br />cd projeto<br />composer require vendor_nome/pacote_nome<br /><br /><strong>Instalar um determinado release</strong><br /><br />composer require ribafs/admin-br:1.30<br /><br /><strong>Instalar a versão atual em desenvolvimento</strong><br /><br />composer require ribafs/admin-br:dev-master<br /><br />Ele criará a pasta vendor no diretório atual com as dependências dentro.<br /><br /><strong>Ajuda</strong><br /><br />composer help require<br /><br /><strong>Arquivos importantes:</strong><br /><br />composer.json<br />composer.lock<br />autoload.php<br /><br />composer.json<br /><br /><a href="https://getcomposer.org/doc/04-schema.md">https://getcomposer.org/doc/04-schema.md</a>  <br /><br /><strong>Criando um pacote com o composer</strong><br /><br />mkdir projeto<br />cd projeto<br /><br />composer init<br /><br /><strong>Opções:</strong><br />    --name: Name of the package.<br />    --description: Description of the package.<br />    --author: Autor no formato: Nome &lt;<span id="cloak51b862b46c03a3a058bc9e84ac60b765">Este endereço de email está sendo protegido de spambots. Você precisa do JavaScript ativado para vê-lo.</span><script type='text/javascript'>
+				document.getElementById('cloak51b862b46c03a3a058bc9e84ac60b765').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addy51b862b46c03a3a058bc9e84ac60b765 = '&#97;&#117;t&#111;r' + '&#64;';
+				addy51b862b46c03a3a058bc9e84ac60b765 = addy51b862b46c03a3a058bc9e84ac60b765 + '&#101;m&#97;&#105;l' + '&#46;' + 'c&#111;m';
+				var addy_text51b862b46c03a3a058bc9e84ac60b765 = '&#97;&#117;t&#111;r' + '&#64;' + '&#101;m&#97;&#105;l' + '&#46;' + 'c&#111;m';document.getElementById('cloak51b862b46c03a3a058bc9e84ac60b765').innerHTML += '<a ' + path + '\'' + prefix + ':' + addy51b862b46c03a3a058bc9e84ac60b765 + '\'>'+addy_text51b862b46c03a3a058bc9e84ac60b765+'<\/a>';
+		</script>&gt;<br />    --type: Type of package.<br />    --homepage: Homepage of the package.<br />    --require: Pacote para o require com uma versão. No formato vendor/pacote:1.0.0.<br />    --require-dev: Requisitos de desenvolvimento. Vide --require.<br />    --stability (-s): Valor para o campo minimum-stability.<br />    --license (-l): Licença do package.<br />    --repository: Provide one (or more) custom repositories. They will be stored in the generated composer.json, and used for auto-completion when prompting for the list of requires. Every repository can be either an HTTP URL pointing to a composer repository or a JSON string which similar to what the repositories key accepts.<br /> <br /><strong>Publicando projeto para ser instalado com composer:</strong><br /><br />- Hospedar o projeto no GitHub ou similar<br />- Publicar no Packagist e configurar a atualização automática<br />- Instalar com o composer<br /><br /><strong>Dicas:</strong><br /><br />- Adicione composer.lock no .gitignore em libraries<br />- Ordene os pacotes no require ou require-dev pelo nome<br />- Validar o composer.json:<br />    composer validate --no-check-all --strict<br />- Especificando duas versões do PHP:<br />"require": {<br />    "php": "7.1.* || 7.2.*"<br />},<br />- Configurar autoload-dev para testes:<br />"autoload": {<br />    "psr-4": {<br />        "Acme\\": "src/"<br />    }<br />},<br />"autoload-dev": {<br />    "psr-4": {<br />        "Acme\\": "tests/"<br />    }<br />},<br /><br />composer install - instalar dependêncis<br />composer update - atualizar dependências<br />composer clear-cache - limpar cache<br /><br /><strong>Desinstalar plugin</strong><br /><br />composer remove packageauthor/packagename --update-with-dependencies<br /><br /><strong>Após cada alteração no composer.json:</strong><br /><br />composer dump-autoload<br /><br /><br /><strong>O Packagist.org é o principal repositório de pacotes para o Composer</strong></p>
+<p>https://packagist.org/</p> 	</div>
+
+	
+	
+				
+	
+	
+	
+</article>
+
+</body>
+</html>

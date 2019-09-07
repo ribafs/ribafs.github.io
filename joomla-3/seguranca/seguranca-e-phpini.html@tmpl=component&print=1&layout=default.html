@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br" dir="ltr">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <base href="" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Ribamar FS" />
+	<meta name="robots" content="noindex, nofollow" />
+	<meta name="description" content="Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros." />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>Segurança e phpini - RibaFS Portal</title>
+	<link href="http://ribafs.org/portal/joomla-3/seguranca/seguranca-e-phpini.html?tmpl=component&amp;print=1&amp;layout=default" rel="canonical" />
+	<link href="../../templates/shaper_helix3/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../../favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="http://backup/portal/media/plg_content_prismsyntaxhighlighter/css/prism-okaidia.css" rel="stylesheet" type="text/css" />
+	<link href="http://backup/portal/media/plg_content_prismsyntaxhighlighter/css/prism-linenumbers.css" rel="stylesheet" type="text/css" />
+	<script src="http://backup/portal/media/plg_content_prismsyntaxhighlighter/js/prism-tinymce.js" type="text/javascript"></script>
+	<script src="../../media/jui/js/jquery.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../media/jui/js/jquery-noconflict.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../media/jui/js/jquery-migrate.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="http://backup/portal/media/system/js/caption.js?d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script type="text/javascript">
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+	</script>
+	<meta property="og:url" content="http://backup/portal/joomla-3/seguranca/seguranca-e-phpini.html" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Segurança e phpini" />
+	<meta property="og:description" content="Adicionar diretamente ao php.ini, para o caso de se ter acesso ao php.ini no servidor. session.save_path = "/var/www/html/tmp" cgi.force_redirect = 1 allow..." />
+
+   	<link rel="stylesheet" href="../../media/jui/css/bootstrap.min.css" type="text/css" />
+	<link rel="stylesheet" href="../../templates/shaper_helix3/css/frontend-edit.css" type="text/css" />
+    <link rel="stylesheet" href="../../templates/shaper_helix3/css/template.css" type="text/css" />
+</head>
+<body class="contentpane">
+	<div id="system-message-container">
+	</div>
+
+	
+
+<article class="item item-page" itemscope itemtype="http://schema.org/Article">
+	<meta itemprop="inLanguage" content="pt-BR" />
+	
+	
+
+	<div class="entry-header">
+		<span class="post-format"><i class="fa fa-thumb-tack"></i></span>
+		
+					<h2 itemprop="name">
+									Segurança e phpini							</h2>
+												</div>
+
+						<div id="pop-print" class="btn hidden-print">
+				<a href="seguranca-e-phpini.html#" onclick="window.print();return false;">			<span class="icon-print" aria-hidden="true"></span>
+		Imprimir	</a>			</div>
+				
+	
+	
+				
+	
+			<div itemprop="articleBody">
+		<p><strong>Adicionar diretamente ao php.ini, para o caso de se ter acesso ao php.ini no servidor.</strong><br /><br /></p>
+<pre class="language-markup"><code>session.save_path = "/var/www/html/tmp"
+cgi.force_redirect = 1
+allow_url_fopen= 0
+display_errors = 0
+expose_php = 0
+magic_quotes_gpc = 0
+memory_limit = 8388608
+#open_basedir = 1
+post_max_size = 262144
+upload_max_filesize = 262144
+upload_tmp_dir = "/var/www/html/tmp"
+disable_functions = proc_open, popen, disk_free_space, set_time_limit, leak, tempfile, exec, system, shell_exec, passthru, curl_exec, curl_multi_exec, parse_ini_file, show_source, apache_get_modules,apache_get_version,apache_getenv,apache_note, apache_setenv, disk_free_space, diskfreespace, dl, highlight_file, ini_alter, ini_restore, openlog, proc_nice, symlink, phpinfo </code></pre>
+<p><br /><br /><br /><strong>Adicionar ao configuration.php, para o caso de não ter acesso direto ao php.ini</strong><br /><br /></p>
+<pre class="language-markup"><code>ini_set('session.save_path', '/var/www/html/tmp');
+ini_set('cgi.force_redirect', 1);
+ini_set('allow_url_fopen', 0);
+ini_set('display_errors', 0);
+ini_set('allow_url_include', 0);
+ini_set('expose_php', 0);
+ini_set('magic_quotes_gpc', 0);
+ini_set('post_max_size', '262144'); // Ajustar a gosto
+ini_set('upload_max_filesize', '262144'); // Ajustar a gosto
+ini_set('upload_tmp_dir','/var/www/html/tmp');
+// Funções a serem desabilitadas
+$disfunctions = 'proc_open, popen, disk_free_space, set_time_limit, leak, tempfile, exec, system, shell_exec, passthru, curl_exec, curl_multi_exec, parse_ini_file, show_source, apache_get_modules, apache_get_version, apache_getenv, apache_note, apache_setenv, disk_free_space, diskfreespace, dl, highlight_file, ini_alter, ini_restore, openlog, proc_nice, symlink, phpinfo';
+ini_set('disable_functions', $disfunctions);</code></pre>
+<p><br /><br /><br /><strong>Verificar existência e as versões no seu servidor:</strong><br /><br /></p>
+<pre class="language-markup"><code>zend_extension=/usr/local/php52/lib/php/extensions/ioncube.so
+zend_extension_manager.optimizer=/usr/local/Zend/lib/Optimizer-3.3.3
+zend_extension_manager.optimizer_ts=/usr/local/Zend/lib/Optimizer_TS-3.3.3
+zend_optimizer.version=3.3.3
+zend_extension=/usr/local/Zend/lib/ZendExtensionManager.so
+zend_extension_ts=/usr/local/Zend/lib/ZendExtensionManager_TS.so </code></pre>
+<p><br /><br />Vários dos recursos acima você precisará confirmar com o suporte do seu servidor para ver se estão disponíveis.</p>
+<p> </p> 	</div>
+
+	
+	
+				
+	
+	
+	
+</article>
+
+</body>
+</html>

@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br" dir="ltr">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <base href="" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Ribamar FS" />
+	<meta name="robots" content="noindex, nofollow" />
+	<meta name="description" content="Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros." />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>Unity 3D - Navegação - RibaFS Portal</title>
+	<link href="http://ribafs.org/portal/mobile/unity-3d/unity-3d-navegacao.html?tmpl=component&amp;print=1&amp;layout=default" rel="canonical" />
+	<link href="../../templates/shaper_helix3/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../../favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<script src="../../media/jui/js/jquery.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../media/jui/js/jquery-noconflict.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../media/jui/js/jquery-migrate.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="http://backup/portal/media/system/js/caption.js?d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script type="text/javascript">
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+	</script>
+	<meta property="og:url" content="http://backup/portal/mobile/unity-3d/unity-3d-navegacao.html" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Unity 3D - Navegação" />
+	<meta property="og:description" content="Unity - Navegação Instalação do Unity Requisitos da versão 5 do Unity 3D Para desenvolvimento OS : Windows XP SP2+, 7 SP1+, 8; Mac OS X 10.6+. Não há supor..." />
+
+   	<link rel="stylesheet" href="../../media/jui/css/bootstrap.min.css" type="text/css" />
+	<link rel="stylesheet" href="../../templates/shaper_helix3/css/frontend-edit.css" type="text/css" />
+    <link rel="stylesheet" href="../../templates/shaper_helix3/css/template.css" type="text/css" />
+</head>
+<body class="contentpane">
+	<div id="system-message-container">
+	</div>
+
+	
+
+<article class="item item-page" itemscope itemtype="http://schema.org/Article">
+	<meta itemprop="inLanguage" content="pt-BR" />
+	
+	
+
+	<div class="entry-header">
+		<span class="post-format"><i class="fa fa-thumb-tack"></i></span>
+		
+					<h2 itemprop="name">
+									Unity 3D - Navegação							</h2>
+												</div>
+
+						<div id="pop-print" class="btn hidden-print">
+				<a href="unity-3d-navegacao.html#" onclick="window.print();return false;">			<span class="icon-print" aria-hidden="true"></span>
+		Imprimir	</a>			</div>
+				
+	
+	
+				
+	
+			<div itemprop="articleBody">
+		<p style="margin-bottom: 0cm; text-align: justify;" align="center"><span style="font-size: x-large;"><b>Unity - Navegação</b></span></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;" align="left"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;" align="left"><span style="font-size: large;"><b>Instalação do Unity</b></span></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;" align="left"> </p>
+
+<h3 style="margin-bottom: 0cm; text-align: justify;" align="left"><span style="font-size: large;"><b>Requisitos da versão 5 do Unity 3D<br /></b></span></h3>
+
+<h4 class="western" style="text-align: justify;"><strong>Para desenvolvimento</strong></h4>
+
+<p style="text-align: justify;"><b>OS</b>: Windows XP SP2+, 7 SP1+, 8; Mac OS X 10.6+.</p>
+
+<p style="text-align: justify;"><span style="font-size: small;">Não há suporte para o Windows Vista e as versões de servidor do Windows &amp; OS X não foram testadas.</span></p>
+
+<p style="text-align: justify;"><b>GPU</b>: placa gráfica com recursos do DX9 (Shader Model 2.0). Qualquer placa fabricada a partir de 2004 deve funcionar.</p>
+
+<p style="text-align: justify;">O restante depende mais da complexidade dos seus projetos.</p>
+
+<h4 class="western" style="text-align: justify;">Outros requisitos de desenvolvimento de plataforma:</h4>
+
+<p style="margin-bottom: 0cm; text-align: justify;">iOS: computador com Mac e Xcode 4.3.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Android: Android SDK e Java Development Kit (JDK).</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Windows Store Apps / Windows Phone: Windows 8 Pro de 64 bits e Visual Studio 2012+.</p>
+
+<p style="text-align: justify;">Blackberry: Java Runtime (JRE) de 32 bits.</p>
+
+<h4 class="western" style="text-align: justify;"><strong>Para executar jogos Unity</strong></h4>
+
+<p style="text-align: justify;">Em geral, o conteúdo desenvolvido com o Unity pode funcionar muito bem em qualquer lugar; isso vai depender da complexidade do seu projeto. Mais detalhes dos requisitos:</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Desktop:</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">OS: Windows XP+, Mac OS X 10.6+, Ubuntu 10.10+, SteamOS+</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Placa gráfica: recursos do DX9 (Shader Model 2.0); em geral, qualquer placa fabricada a partir de 2004 deve funcionar.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">CPU: suporte para o conjunto de instruções SSE2.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">O Web Player é compatível com IE, Chrome, Firefox, Safari e outros.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">iOS: requer iOS 4.3 ou posterior.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Android: OS 2.3.1 ou posterior; ARMv7 (Cortex) CPU; OpenGL ES 2.0 ou posterior.</p>
+
+<p style="text-align: justify;">Blackberry: OS 10 ou posterior.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><a href="https://unity3d.com/pt/unity/system-requirements">https://unity3d.com/pt/unity/system-requirements</a></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;" align="left"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Download</b></p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;"><a href="http://unity3d.com/unity/download">http://unity3d.com/unity/download</a> (hoje, 27/10/2014, está na versão 4.5.5)</p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;">Para instalar basta executar o arquivo baixado, sem dificuldades.</p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;">Na primeira execução exigirá um cadastro (gratuito) e escolha a versão free.</p>
+
+<p style="text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>A tela do Unity é dividida em paineis:</b></p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;"><b>Hierarchy</b> – onde ficam todos os objetos de uma cena. Uma lista dos GameObjects da cena.</p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;"><b>Inspector</b> – onde aparecem as propriedades de um objeto/asset selecionado</p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;"><b>Project</b> – onde ficam todos os assets: imagens, sprites, cenas, etc a disposição do jogo. Lista de assets, que age como uma biblioeca.</p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;"><b>Scene</b> – Tela onde adicionamos os objetos que comporão o jogo e são exibidos. Aqui é onde o jogo é construído, como uma fase do jogo ou menu.</p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;"><b>Game</b> – onde aparecerá o jogo em execução</p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;"><b>Console</b> – aqui são exibidas as mensagens de erro e também na barra de status</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; page-break-before: always; text-align: justify;"><b>Assets</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">É qualquer recurso utilizado ou que poderá ser usado no jogo e fica no painel Project.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Assets 3D precisam ser criados externamente. O Unity3d aceita vindos do Maya, do 3D Studio Max, do Blender e do FilmBox.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Imagens: png, jpeg, tiff e psd.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Áudio: wav, aif, mp3 e ogg</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">O Unity tem uma loja que vende assets e também oferece gratuitamente:</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><a href="https://www.assetstore.unity3d.com/en/">https://www.assetstore.unity3d.com/en/</a></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Sprite</b> – é uma imagem 2D para jogos, que pode ser simples ou múltipla, quando contém outras sub imagens. <span style="font-weight: normal;">Sprite Renderer</span> é um componente exclusivo de sprites.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Texturas</b> – são imagens em geral no Unity. As imagens importadas para o Unity devem ter dimensões na potência de 2: 64x64, 128x128, 516x516, etc.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Licença</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Desenvolvedor Indie – grátis (somente para pessoa física e empresas com lucro anual menor que US$ 100,000)</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Versão Pro de teste para 30 dias grátis</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Edição Pro – US$ 1,500.00 (licença permanente e não tem limites quanto ao que fazer com os jogos criados).</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">A versão free permite criar jogos de forma completa sem problema, não é uma versão que expira, inclusive publica para desktop, web, para Android e iOS sem pagar um centavo.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Detalhes:</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><a href="http://unity3d.com/unity/licenses">http://unity3d.com/unity/licenses</a></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; page-break-before: always; text-align: justify;" align="center"><b>Navegação em ambiente 2D</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Zoom</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Para aumentar ou reduzir o zoom da cena inteira, aperte o botão do meio do mouse e gire para a frente ou para traz, tanto em ambiente 2D quanto 3D.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Transform</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Um dos recursos mais importantes para trabalhar com os objetos na cena é o Transform.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Selecionando a mãozinha podemos clicar com o botão esquerdo do mouse e <b>arrastar a cena completa</b>, com todos os objetos dela.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Propositalmente as teclas de atalho seguem a ordem das teclas do teclado: QWERty, ou seja, a ordem das ferramentas é a mesma das teclas QWER do teclado tipo Querty.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Selecionando a cruz poderemos <b>mover</b> ou selecionar o objeto selecionado. Quando o objeto está pequeno não aparecem as setas nas bordas para redimensionar. Então ampliamos o zoom, rolando para a frente o botão do meio do mouse, até que apareçam os 4 pontos azuis nos cantos. Então podemos usar os pontos azuis ou mesmo em qualquer posição intermediária. Podemos clicar sobre o objeto, no centro e arrastar o mesmo pela cena.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">O terceiro botão, com as duas setas curvas, é usado na <b>rotação</b> do objeto selecionado.</p>
+
+<p style="margin-bottom: 0cm; page-break-before: always; text-align: justify;">Veja a seguir o mesmo objeto da imagem anterior mas com rotações sobre o mesmo. </p>
+
+<p style="margin-bottom: 0cm; page-break-before: always; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Redimensionamos</b> o objeto selecionado com o último botão. Após selecionar este botão e selecionar o objeto veja abaixo que aparecem dois pequenos quadrados verdes, um na vertical e outro na horizontal. Clicamos no quadrado da vertical e arrastamos para ambliar o objeto nesta direção. Veja o mesmo objeto anterior redimensionado abaixo:</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Inspector</b></p>
+
+<p style="text-align: justify;">Também podemos fazer alterações nos objetos usando o Inspector, entrando números diretamente nas respectivas caixas de texto. Tomemos o objeto anterior, vamos fazê-lo voltar ao estado anterior usando o Inspector:</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Alteremos no Inspector para:</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Position – (0,-4,0)</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Rotation – (0,0,0)</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Scale – (1,1,1)</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Alterando valores de X, Y e Z nas caixas de texto do Position, no Inspector</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Ao passar o ponteiro do mouse por cima de X, Y ou Z nas caixas de texto aparecem duas setinhas, uma para a esquerda e outra para a direita. Basta então que pressionemos o botão esquerdo e arrastemos para a esquerda ou para a direita para aumentar ou reduzir o valor.</p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; page-break-before: always; text-align: justify;"><b>Play</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Iniciar/Parar o Jogo</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Executar o Jogo</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Para executar o jogo podemos usar o atalho Ctrl+P.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Paineis Scene e Game</b> – Alternar entre Cena ou Design e Game ou Execução</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Scene</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>No painel de Cena</b>/Scene é onde são arrumados todos os assets do jogo em sua posição final. A cena é para onde arrastamos os assets para arrumar a nosso gosto.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Scenes</b> – uma cena é basicamente um nível do jogo ou um menu.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Criar uma nova cena</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">File – New Scene ou teclar Ctrl+S</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Painel de Hierarquia</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>O painel de Hierarquia</b> é onde os assets ficam organizados em uma cena. Onde ficam os objetos que já estão na cena e já fazem parte do jogo.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Inspector/Propriedades</b> – aparecem as propriedades quando um objeto está selecionado no painel de Hierarquia</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>O painel Inspector</b> deixa você inspecionar e ajustar todos os atributos de um asset selecionado no painel de Hierarquia. Desde posição, rotação, gravidade, cor, componentes, etc.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Projeto</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>O painel do Projeto</b> é onde ficam todos os Assets que são ou podem ser usados no projeto.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Araste Fino</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Ao arrastar objeto na cena teclar V para ajuste fino.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Foco</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Em cenas com muitos objetos a visualização de algum sai da cena algumas vezes. Para deixar um objeto isolado com o foco na cena selecionamos ele na Hierarquia e teclamos F. Ele terá o foco na cena. Outra forma é efetuar um duplo clique sobre o nome do objeto na Hierarquia.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Arrastar a Cena</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">A mãozinha é usada para arrastar toda a cena. O botão do meio do mouse também pode ser utilizado para isso. Pressionar e arrastar para arrastar a cena.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Mover</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Selecione um objeto e clique no botão de movimento, aquele com 4 setas no Transformer.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Então clique numa das setas e arraste para mover na direção da seta.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Redimensionar</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Selecione o botão Scale e faça o mesmo, sendo que agora aumentando ou reduzindo o objeto.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Rotação</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Clique no botão Rotação e gire o objeto clicando e num dos círculos coloridos e arrastando.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Gizmo</b><span style="font-weight: normal;"> – bússola 3D, que mostra a orientação da câmera na cena e possibilita mudar a orientação da visão, bastando clicar em seus vértices. Mas use com cuidado. Caso perca o controle sem saber como voltar tecle Ctrl+Z.</span></p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; page-break-before: always; text-align: justify;"><b>Layout</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Uma sugestão de layout, que ajuda bastante, visto que em tempo real já mostra as alterações da cena no painel Game abaixo.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">O Unity é muito flexível para a criação de layouts dos paineis. Podemos escolher uma das opções em layout ou podemos criar o nosso apenas arrastando cada painel para a posição desejada. Para isso clicar na aba com o nome do painel e arrastar para a posição desejada.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Algo que dá um pouco de trabalho é posicionar um personagem em uma cena/terreno 3D. Usando o layout acima fica bem mais simples.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Resetar o layout para o layout original:</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Barra de ferramentas -&gt; Window -&gt;Layouts-&gt;Revert Factory Settings</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Pasta Assets e Layout</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">A pasta assets é uma superpasta ou pasta raiz do projeto, que contem as demais pastas.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Alguns layouts não mostram a pasta Assets, mesmo ela estando lá, como é o caso do One-column e do Two-columns.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;" align="left"> </p> 	</div>
+
+	
+	
+				
+	
+	
+	
+</article>
+
+</body>
+</html>

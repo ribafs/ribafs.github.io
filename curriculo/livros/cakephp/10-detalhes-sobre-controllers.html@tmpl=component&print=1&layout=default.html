@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br" dir="ltr">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <base href="" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Ribamar FS" />
+	<meta name="robots" content="noindex, nofollow" />
+	<meta name="description" content="Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros." />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>10 - Detalhes sobre Controllers - RibaFS Portal</title>
+	<link href="http://ribafs.org/portal/curriculo/livros/cakephp/10-detalhes-sobre-controllers.html?tmpl=component&amp;print=1&amp;layout=default" rel="canonical" />
+	<link href="../../../templates/shaper_helix3/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../../../favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="http://backup/portal/media/plg_content_prismsyntaxhighlighter/css/prism-okaidia.css" rel="stylesheet" type="text/css" />
+	<link href="http://backup/portal/media/plg_content_prismsyntaxhighlighter/css/prism-linenumbers.css" rel="stylesheet" type="text/css" />
+	<script src="http://backup/portal/media/plg_content_prismsyntaxhighlighter/js/prism-tinymce.js" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery-noconflict.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery-migrate.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="http://backup/portal/media/system/js/caption.js?d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script type="text/javascript">
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+	</script>
+	<meta property="og:url" content="http://backup/portal/curriculo/livros/cakephp/10-detalhes-sobre-controllers.html" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="10 - Detalhes sobre Controllers" />
+	<meta property="og:description" content="10 – Detalhes sobre Controllers Já experimentou acreditar em você? Tente! Você não faz ideia do que é capaz. Os controllers correspondem ao ‘C’ no padrão M..." />
+
+   	<link rel="stylesheet" href="../../../media/jui/css/bootstrap.min.css" type="text/css" />
+	<link rel="stylesheet" href="../../../templates/shaper_helix3/css/frontend-edit.css" type="text/css" />
+    <link rel="stylesheet" href="../../../templates/shaper_helix3/css/template.css" type="text/css" />
+</head>
+<body class="contentpane">
+	<div id="system-message-container">
+	</div>
+
+	
+
+<article class="item item-page" itemscope itemtype="http://schema.org/Article">
+	<meta itemprop="inLanguage" content="pt-BR" />
+	
+	
+
+	<div class="entry-header">
+		<span class="post-format"><i class="fa fa-thumb-tack"></i></span>
+		
+					<h2 itemprop="name">
+									10 - Detalhes sobre Controllers							</h2>
+												</div>
+
+						<div id="pop-print" class="btn hidden-print">
+				<a href="10-detalhes-sobre-controllers.html#" onclick="window.print();return false;">			<span class="icon-print" aria-hidden="true"></span>
+		Imprimir	</a>			</div>
+				
+	
+	
+				
+	
+			<div itemprop="articleBody">
+		<h3>10 – Detalhes sobre Controllers</h3>
+<p align="right"> </p>
+<p align="right"><em><strong>Já experimentou acreditar em você? Tente! Você não faz ideia do que é capaz.</strong></em></p>
+<p align="justify"> </p>
+<p align="justify">Os controllers correspondem ao ‘C’ no padrão MVC. Após o roteamento ter sido aplicado e o controller correto encontrado, a ação do controller é chamada. Seu controller deve lidar com a interpretação dos dados de uma requisição, certificando-se que os models corretos são chamados e a resposta ou view esperada seja exibida. Os controllers podem ser vistos como intermediários entre a camada Model e View. Você vai querer manter seus controllers magros e seus Models gordos. Isso lhe ajudará a reutilizar seu código e testá-los mais facilmente.</p>
+<p align="justify">Mais comumente, controllers são usados para gerenciar a lógica de um único model. Por exemplo, se você está construindo um site para uma padaria online, você pode ter um RecipesController e um IngredientsController gerenciando suas receitas e seus ingredientes. No CakePHP, controllers são nomeados de acordo com o model que manipulam. É também absolutamente possível ter controllers que usam mais de um model.</p>
+<p align="justify">Os controllers da sua aplicação são classes que estendem a classe CakePHP AppController, a qual por sua vez estende a classe Controller do CakePHP. A classe AppController pode ser definida em /app/Controller/AppController.php e deve conter métodos que são compartilhados entre todos os seus controllers.</p>
+<p align="justify">Os controllers fornecem uma série de métodos que são chamados de ações. Ações são métodos em um controller que manipulam requisições. Por padrão, todos os métodos públicos em um controller são ações e acessíveis por urls.</p>
+<p align="justify">Os atributos e métodos criados em AppController vão estar disponíveis para todos os controllers da sua aplicação. Este é o lugar ideal para criar códigos que são comuns para todos os seus controllers. Componentes (que você vai aprender mais tarde) são a melhor alternativa para códigos que são usados por muitos (mas não obrigatoriamente em todos) controllers.</p>
+<p align="justify">Enquanto regras normais de herança de classes orientadas à objetos são aplicadas, o CakePHP também faz um pequeno trabalho extra quando se trata de atributos especiais do controller. A lista de componentes (components) e helpers usados no controller são tratados diferentemente. Nestes casos, as cadeias de valores do AppController são mescladas com os valores de seus controllers filhos. Os valores dos controllers filhos sempre sobrescreveram os do AppController.</p>
+<p>O CakePHP mescla as seguintes variáveis do AppController em controllers da sua aplicação:</p>
+<p>$components</p>
+<p>$helpers</p>
+<p>$uses</p>
+<p> </p>
+<p>Lembre-se de adicionar os helpers Html e Form padrões se você incluiu o atributo $helpers em seu AppController.</p>
+<p>Também lembre de fazer as chamadas de callbacks do AppController nos controllers filhos para obter melhores resultados:</p>
+<p>function beforeFilter() {</p>
+<p>parent::beforeFilter();</p>
+<p>}</p>
+<p>No CakePHP nós gostamos de manter os nossos actions do controller enxutos, e colocar a maior parte da lógica de negócio de nossa aplicação nos modelos.</p>
+<p><strong>Exemplo de Controller Comentado</strong></p>
+<pre class="language-php"><code>&lt;?php
+// O comando abaixo faz o include da classe AppController que encontra-se na pasta app/Controller
+App::uses('AppController', 'Controller');
+// Observe que o controller PostsController extende a classe AppController
+class PostsController extends AppController {
+
+A propriedade recursive define qual a profundidade que o CakePHP deve ir para procurar modelos associados de dados via métodos find() e read().
+
+Imagine uma aplicação com Groups e cada Group contém muitos Users que por sua vez, cada User tem muitos Articles. Você pode setar $recursive para vários valores baseado no total de dados que você deseja de volta de uma chamada $this-&gt;Group-&gt;find():
+
+    -1 Cake busca somente dados de Group, sem joins.
+    0 Cake busca dados de Group e seu domínio
+    1 Cake busca um Group, seu domínio e seus Users associados
+    2 Cake busca um Group, seu domínio, seus Users associados e os Articles assoaiados aos Users
+
+Não defina $recursive mais do que você precisa. Quando você tem dados buscados pelo CakePHP você não vai deixar sua aplicação lenta desnecessariamente. Observe também que o nível recursivo padrão é 1.
+
+*/
+		$this-&gt;Post-&gt;recursive = 0;
+/*
+
+O método set() tem como objetivo enviar informações para a View.
+Com a linha abaixo a view index.ctp poderá chamar o array $posts, que contém todos os posts paginados.
+
+*/
+		$this-&gt;set('posts', $this-&gt;paginate());
+	}
+/**
+ * view method
+ *
+ * @throws NotFoundException
+ * @param string $id
+ * @return void
+ */
+	public function view($id = null) {
+		// Verifica com o model Post, se existe o $id recebido
+		if (!$this-&gt;Post-&gt;exists($id)) {
+			throw new NotFoundException(__('Invalid post'));
+		}
+		// Opções para filtrar o model Post que tem o $id como chave primária
+		$options = array('conditions' =&gt; array('Post.' . $this-&gt;Post-&gt;primaryKey =&gt; $id));
+		// Passa para a view a variável $post com o primeiro Post encontrado
+		$this-&gt;set('post', $this-&gt;Post-&gt;find('first', $options));
+	}
+
+	public function add() {
+		// Verifica se a requisição é do tipo POST
+		if ($this-&gt;request-&gt;is('post')) {
+			// Cake PHP recomenda chamar a função create() para re-inicializar um model antes de salvar
+			// um novo registro. Criar - create(). Salvar/Atualizar - save().
+			$this-&gt;Post-&gt;create();
+			// O método save() salva o registro e também valida
+			if ($this-&gt;Post-&gt;save($this-&gt;request-&gt;data)) {
+				// setFlash mostra uma mensagem
+				$this-&gt;Session-&gt;setFlash(__('The post has been saved'));
+				// redirect redireciona para o action index. Também existem outros parâmetros
+				$this-&gt;redirect(array('action' =&gt; 'index'));
+			} else {
+				$this-&gt;Session-&gt;setFlash(__('The post could not be saved. Please, try again.'));
+			}
+		}
+	}
+	public function edit($id = null) {
+		// Verifica se existe o $id no model Post
+		if (!$this-&gt;Post-&gt;exists($id)) {
+			throw new NotFoundException(__('Invalid post'));
+		}
+	//echo 'CONTROLLER - Enviando para o Model';
+	//exit;
+		// Verifica se houve requisição do tipo POST ou PUT
+		if ($this-&gt;request-&gt;is('post') || $this-&gt;request-&gt;is('put')) {
+			if ($this-&gt;Post-&gt;save($this-&gt;request-&gt;data)) {
+	//echo 'CONTROLLER - Vindo do Model';
+	//exit;
+				$this-&gt;Session-&gt;setFlash(__('The post has been saved'));
+				$this-&gt;redirect(array('action' =&gt; 'index'));
+			} else {
+				$this-&gt;Session-&gt;setFlash(__('The post could not be saved. Please, try again.'));
+			}
+		} else {
+			$options = array('conditions' =&gt; array('Post.' . $this-&gt;Post-&gt;primaryKey =&gt; $id));
+			$this-&gt;request-&gt;data = $this-&gt;Post-&gt;find('first', $options);
+		}
+	}
+	public function delete($id = null) {
+		// Guarda em $this-&gt;Post-&gt;id o $id passado via parâmetro
+		$this-&gt;Post-&gt;id = $id;
+		if (!$this-&gt;Post-&gt;exists()) {
+			throw new NotFoundException(__('Invalid post'));
+		}
+		// CakeRequest::onlyAllow($methods) - adicionado no Cake 2.3. Substituiu o método 
+		// requireDelete() das versões anteriores.
+		$this-&gt;request-&gt;onlyAllow('post', 'delete');
+		// Exclui o registro
+		if ($this-&gt;Post-&gt;delete()) {
+			$this-&gt;Session-&gt;setFlash(__('Post deleted'));
+			$this-&gt;redirect(array('action' =&gt; 'index'));
+		}
+		$this-&gt;Session-&gt;setFlash(__('Post was not deleted'));
+		$this-&gt;redirect(array('action' =&gt; 'index'));
+	}
+}</code></pre>
+<p style="font-style: normal;"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;">Permitir que registros sejam deletados usando requisições GET é perigoso, pois rastreadores na web podem acidentalmente deletar todo o seu conteúdo.</span></span></p>
+<p style="font-style: normal;"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><b>Mais detalhes</b></span></span></p>
+<p style="font-style: normal;"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><a href="https://book.cakephp.org/3.0/en/controllers.html">https://book.cakephp.org/3.0/en/controllers.html</a></span></span></p> 	</div>
+
+	
+	
+				
+	
+	
+	
+</article>
+
+</body>
+</html>

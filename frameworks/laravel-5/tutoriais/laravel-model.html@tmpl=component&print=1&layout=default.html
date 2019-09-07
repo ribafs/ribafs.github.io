@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br" dir="ltr">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <base href="" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Ribamar FS" />
+	<meta name="robots" content="noindex, nofollow" />
+	<meta name="description" content="Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros." />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>Laravel - Model - RibaFS Portal</title>
+	<link href="http://ribafs.org/portal/frameworks/laravel-5/tutoriais/laravel-model.html?tmpl=component&amp;print=1&amp;layout=default" rel="canonical" />
+	<link href="../../../templates/shaper_helix3/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../../../favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<script src="../../../media/jui/js/jquery.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery-noconflict.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery-migrate.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="http://backup/portal/media/system/js/caption.js?d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script type="text/javascript">
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+	</script>
+	<meta property="og:url" content="http://backup/portal/frameworks/laravel-5/tutoriais/laravel-model.html" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Laravel - Model" />
+	<meta property="og:description" content="Models - lidam com código que manipula bancos de dados No Laravel 5 ficam na pasta \app Cada tabela tem um model correspondente, que é usado para interagir..." />
+
+   	<link rel="stylesheet" href="../../../media/jui/css/bootstrap.min.css" type="text/css" />
+	<link rel="stylesheet" href="../../../templates/shaper_helix3/css/frontend-edit.css" type="text/css" />
+    <link rel="stylesheet" href="../../../templates/shaper_helix3/css/template.css" type="text/css" />
+</head>
+<body class="contentpane">
+	<div id="system-message-container">
+	</div>
+
+	
+
+<article class="item item-page" itemscope itemtype="http://schema.org/Article">
+	<meta itemprop="inLanguage" content="pt-BR" />
+	
+	
+
+	<div class="entry-header">
+		<span class="post-format"><i class="fa fa-thumb-tack"></i></span>
+		
+					<h2 itemprop="name">
+									Laravel - Model							</h2>
+												</div>
+
+						<div id="pop-print" class="btn hidden-print">
+				<a href="laravel-model.html#" onclick="window.print();return false;">			<span class="icon-print" aria-hidden="true"></span>
+		Imprimir	</a>			</div>
+				
+	
+	
+				
+	
+			<div itemprop="articleBody">
+		<p><strong>Models - lidam com código que manipula bancos de dados</strong><br /><br />No Laravel 5 ficam na pasta \app<br /><br />Cada tabela tem um model correspondente, que é usado para interagir com a tabela. Models permitem consultar a tabela e também inserir registros na mesma.<br /><br />Ficam em app soltos, mas podemos criar dentro de outras pastas, tendo o cuidado de alterar seu namespace<br /><br /><strong>Todo model Eloquent extend a classe</strong><br />Illuminate\Database\Eloquent\Model<br /><br />https://www.youtube.com/watch?v=eFuhNCFrR2E&amp;index=12&amp;list=PLVSNL1PHDWvTQnUQjhBEzY2ZSzJTR9zcZ<br /><br /><strong>Criar uma model com o artisan</strong><br />php artisan make:model Carro<br /><br /><strong>ou para criar juntamente com a migration:</strong><br />php artisan make:model Carro -m<br /><br />Para o laravel uma tabela <strong>carros</strong> é representada por um model <strong>carro</strong>.<br /><br />O comando acima cria uma classe vazia de Model, mas é suficiente.<br /><br />Agora basta alterar o Controller, passando este model.<br /><br /><br />Podemos criar um diretório para os models dentro de app<br /><br />Então passamos este diretório no namespace do model que criamos e de outros que criarmos.<br /><br />php artisan make:model Produto<br /><br />Criar uma pasta para os models:<br /><br />app/Models<br /><br />Criar o mesmo model em app/Models (já cria com o namespace correto em models)<br />php artisan make:model Models\\Produto<br /><br />Para uma tabela chamada produtos um model Produto.<br /><br />Criar também a migration:<br />php artisan make:model Models\\Produto -m<br /><br /><br />No controller adicionar:<br /><br />use App\Models\Produto;<br /><br />public function index(Produto $produto){<br />    $produtos = $produto-&gt;all();<br /><br />    return view('produtos.index', compact('produtos'));<br />}<br /><br />Criar a view index em views/produtos/index.blade.php<br /><br />&lt;h1&gt;Listagem de Produtos&lt;/h1&gt;<br /><br />&lt;table&gt;<br />    &lt;tr&gt;<br />        &lt;th&gt;Nome&lt;/th&gt;<br />        &lt;th&gt;Descrição&lt;/th&gt;<br />    &lt;/tr&gt;<br />    @foreach($produtos as $produto)<br />    &lt;tr&gt;<br />        &lt;td&gt;{{$produto-&gt;nome}}&lt;/td&gt;<br />        &lt;td&gt;{{$produto-&gt;descricao}}&lt;/td&gt;<br />    &lt;/r&gt;<br />    @endforeach<br />&lt;/table&gt;<br /><br /><strong>Criar uma rota para produtos</strong><br /><br />Route::resource('produtos', 'Produtos\ProdutoController');<br /><br /><br /></p> 	</div>
+
+	
+	
+				
+	
+	
+	
+</article>
+
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br" dir="ltr">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <base href="" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Ribamar FS" />
+	<meta name="robots" content="noindex, nofollow" />
+	<meta name="description" content="Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros." />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>Conceitos Importantes no PostgreSQL - RibaFS Portal</title>
+	<link href="http://ribafs.org/portal/servidores/postgresql/introducao-ao-postgresql/conceitos-postgresql.html?tmpl=component&amp;print=1&amp;layout=default" rel="canonical" />
+	<link href="../../../templates/shaper_helix3/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../../../favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<script src="../../../media/jui/js/jquery.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery-noconflict.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery-migrate.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="http://backup/portal/media/system/js/caption.js?d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script type="text/javascript">
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+	</script>
+	<meta property="og:url" content="http://backup/portal/servidores/postgresql/introducao-ao-postgresql/conceitos-postgresql.html" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Conceitos Importantes no PostgreSQL" />
+	<meta property="og:description" content="Conceitos Importantes no PostgreSQL SGBDRO - Sistema Gerenciador de Bancos de Dados Relacional e Orientado a Objetos. São sistemas especializados no trabal..." />
+
+   	<link rel="stylesheet" href="../../../media/jui/css/bootstrap.min.css" type="text/css" />
+	<link rel="stylesheet" href="../../../templates/shaper_helix3/css/frontend-edit.css" type="text/css" />
+    <link rel="stylesheet" href="../../../templates/shaper_helix3/css/template.css" type="text/css" />
+</head>
+<body class="contentpane">
+	<div id="system-message-container">
+	</div>
+
+	
+
+<article class="item item-page" itemscope itemtype="http://schema.org/Article">
+	<meta itemprop="inLanguage" content="pt-BR" />
+	
+	
+
+	<div class="entry-header">
+		<span class="post-format"><i class="fa fa-thumb-tack"></i></span>
+		
+					<h2 itemprop="name">
+									Conceitos Importantes no PostgreSQL							</h2>
+												</div>
+
+						<div id="pop-print" class="btn hidden-print">
+				<a href="conceitos-postgresql.html#" onclick="window.print();return false;">			<span class="icon-print" aria-hidden="true"></span>
+		Imprimir	</a>			</div>
+				
+	
+	
+				
+	
+			<div itemprop="articleBody">
+		<h4>Conceitos Importantes no PostgreSQL</h4>
+
+<p><br /><strong>SGBDRO</strong> - Sistema Gerenciador de Bancos de Dados Relacional e Orientado a Objetos. São sistemas especializados no trabalho com bancos de dados, com muitos recursos para isso.<br /><br /><strong>Cluster</strong> - coleção de bancos de dados. Todos os bancos de dados de uma instalação do servidor.<br /><br /><strong>Banco</strong> <strong>de dados</strong> - coleção de tabelas, usuários, tipos de dados, funções, índices, sequências e outros objetos.<br /><br /><strong>Tabela</strong> - coleção de registros ou linhas<br /><br /><strong>Registro</strong> - coleção de campos ou colunas<br /><br /><strong>Campo</strong> - perção da tabela que armazena informações somente de um tipo<br /><br /><strong>Ordem</strong> - os registros são guardados na ordem em que são armazenados, mas o SQL não garante a ordem na recuperação. Precisa ser especificada explicitamente.<br /><br /><strong>Relação</strong> - Termo matemático para tabela. Existem outras formas de organizar dados diferentes de tabelas. Arquivos e diretórios é uma delas e orientação a objetos outra.<br />Uma tabela num banco de dados relacional parece com uma tabela no papel ou com uma planilha.<br /><br />Existem SGBDs modernos orientados a objetos.<br /><br /><strong>Conexão</strong> - cada usuário conecta somente a um único banco de dados por vez.<br /><br /><strong>Convenções</strong><br /><br />Nomes de bancos de dados, de tabelas e de campos devem ser escritos em minúsculas e palavras compostas com sublinhado as separando. Isto porque o PostgeSQL é case sensitivo.<br /><br />O SQL não é sensível ao caso, a não ser que os identificadores estejam escritos entre aspas duplas.<br /><br /><strong>MÁXIMO DE CAMPOS DE UMA TABELA</strong><br />Uma tabela pode conter no máximo de 250 a 1600 campos, dependendo do tipo de dados. Claro que jamais devemos usar uma tabela tão grande.<br /><br />Cada tabela deve conter informações somente sobre um único assunto.<br /><br />Ao tentar apagar uma tabela que não existe um erro é disparado. Para evitar isso:<br /><br />drop table if exists nometabela;<br /><br /><strong>Palavras Reservadas:</strong><br /><br />oid<br />tableoid<br />xmin<br />xmax<br />cmin<br />cmax<br />ctid<br /><br /></p> 	</div>
+
+	
+	
+				
+	
+	
+	
+</article>
+
+</body>
+</html>

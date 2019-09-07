@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br" dir="ltr">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <base href="" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Ribamar FS" />
+	<meta name="robots" content="noindex, nofollow" />
+	<meta name="description" content="Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros." />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>Instalação do Joomla - RibaFS Portal</title>
+	<link href="http://ribafs.org/portal/joomla-3/instalacao.html?tmpl=component&amp;print=1&amp;layout=default" rel="canonical" />
+	<link href="../templates/shaper_helix3/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<script src="../media/jui/js/jquery.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../media/jui/js/jquery-noconflict.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../media/jui/js/jquery-migrate.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="http://backup/portal/media/system/js/caption.js?d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script type="text/javascript">
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+	</script>
+	<meta property="og:url" content="http://backup/portal/joomla-3/instalacao.html" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Instalação do Joomla" />
+	<meta property="og:description" content="Instalação do Joomla 3.7.3 Download https://downloads.joomla.org/ Criar uma pasta no diretório web (criarei a pasta portal) portal Descompactar o Joomla de..." />
+
+   	<link rel="stylesheet" href="../media/jui/css/bootstrap.min.css" type="text/css" />
+	<link rel="stylesheet" href="../templates/shaper_helix3/css/frontend-edit.css" type="text/css" />
+    <link rel="stylesheet" href="../templates/shaper_helix3/css/template.css" type="text/css" />
+</head>
+<body class="contentpane">
+	<div id="system-message-container">
+	</div>
+
+	
+
+<article class="item item-page" itemscope itemtype="http://schema.org/Article">
+	<meta itemprop="inLanguage" content="pt-BR" />
+	
+	
+
+	<div class="entry-header">
+		<span class="post-format"><i class="fa fa-thumb-tack"></i></span>
+		
+					<h2 itemprop="name">
+									Instalação do Joomla							</h2>
+												</div>
+
+						<div id="pop-print" class="btn hidden-print">
+				<a href="instalacao.html#" onclick="window.print();return false;">			<span class="icon-print" aria-hidden="true"></span>
+		Imprimir	</a>			</div>
+				
+	
+	
+				
+	
+			<div itemprop="articleBody">
+		<h4 align="center">Instalação do Joomla 3.7.3</h4>
+<p> </p>
+<p><strong>Download</strong></p>
+<p><a href="https://downloads.joomla.org/">https://downloads.joomla.org/</a></p>
+<p>Criar uma pasta no diretório web (criarei a pasta portal)</p>
+<p>portal</p>
+<p>Descompactar o Joomla dentro da pasta portal. Se certifique que ele não criou outra pasta dentro de portal, mas sim que descompactou todo o seu conteúdo dentro de portal.</p>
+<p>Se for uma instalação local nem precisa criar o banco, pois o joomla o criará, desde que você use o super usuário root. Mas se estiver instalando em um servidor de hospedagem ou outro não usará o root. Então precisará criar o banco, criar um usuário e dar permissões ao usuário para usar o banco. Vou considerar a instalação local.</p>
+<p><strong>Chamando pelo Navegador</strong></p>
+<p><a href="http://localhost/portal">http://localhost/portal2</a></p>
+<p><strong>Configuração</strong></p>
+<p> </p>
+<p><img src="../images/jinstalacao1.png" alt="" /></p>
+<p><strong>Mude o idioma para Português do Brasil</strong></p>
+<p>Nome do Site – Meu site</p>
+<p>Descrição – Meu site com Joomla 3.7.3</p>
+<p>E-mail do administrador – <span id="cloak7c5ecc79aa127b103ec9eeda4f3c0cbd">Este endereço de email está sendo protegido de spambots. Você precisa do JavaScript ativado para vê-lo.</span><script type='text/javascript'>
+				document.getElementById('cloak7c5ecc79aa127b103ec9eeda4f3c0cbd').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addy7c5ecc79aa127b103ec9eeda4f3c0cbd = 'r&#105;b&#97;fs' + '&#64;';
+				addy7c5ecc79aa127b103ec9eeda4f3c0cbd = addy7c5ecc79aa127b103ec9eeda4f3c0cbd + 'gm&#97;&#105;l' + '&#46;' + 'c&#111;m';
+				var addy_text7c5ecc79aa127b103ec9eeda4f3c0cbd = 'r&#105;b&#97;fs' + '&#64;' + 'gm&#97;&#105;l' + '&#46;' + 'c&#111;m';document.getElementById('cloak7c5ecc79aa127b103ec9eeda4f3c0cbd').innerHTML += '<a ' + path + '\'' + prefix + ':' + addy7c5ecc79aa127b103ec9eeda4f3c0cbd + '\'>'+addy_text7c5ecc79aa127b103ec9eeda4f3c0cbd+'<\/a>';
+		</script></p>
+<p>Nome do Administrador – admin</p>
+<p>Senha do Administrador – admin</p>
+<p>Confirmar Senha do Administrador – admin</p>
+<p>Obs.: facilita o uso um usuário e senha simples e pequeno "admin".</p>
+<p>Clique em Próximo</p>
+<p> </p>
+<p><strong>Banco de Dados</strong></p>
+<p> </p>
+<p><img src="../images/jinstalacao2.png" alt="" /></p>
+<p>Precisa dos dados do MySQL. Entre com usuário, senha e nome do banco.</p>
+<p>Clique em Próximo</p>
+<p> </p>
+<p><strong>Visão Geral</strong></p>
+<p> </p>
+<p>Se considerar que é o primeiro site criado com Joomla, então escolha com conteúdo de exemplo.<br />Clique em Conteúdo de exemplo Aprenda Joomla, em inglês e então clique em Instalar.</p>
+<p>Para criar um site que você irá usar eu recomendo instalar sem conteúdo de exemplo, que fica menos trabalhoso, pois não precisará remover nada.</p>
+<p><img src="../images/jinstalacao3.png" alt="" /></p>
+<p>Aguarde que o banco seja criado e receba conteúdo.</p>
+<p>Clique em Finalizar</p>
+<p> </p>
+<p><strong>Joomla Instalado</strong></p>
+<p><img src="../images/jinstalacao4.png" alt="" /></p>
+<p>Clique em Remover o diretório installation.</p>
+<p>Então clique em Administrador para acessar o admin. Uma instalação do Joomla é constituída de dois sites: o administrator e o site visto pelos visitantes.</p>
+<p>Aparecerá a tela de login. Entre com admin e admin.</p>
+<p> </p>
+<p><img src="../images/jinstalacao5.png" alt="" /></p>
+<p>Administrator</p>
+<p><img src="../images/jinstalacao6.png" alt="" /></p>
+<p> </p>
+<p>Agora veja a cara do site padrão criado pelo Joomla</p>
+<p><img src="../images/jinstalacao7.png" alt="" /></p>
+<p>É um template bem simples, que geralmente não satisfaz quem instala o Joomla e cria outro ou procura por um gratuito ou pago na internet.</p>
+<p>Precisaremos instalar algumas extensões nativas e outras de terceiros.</p>
+<p> </p>
+<p><strong>Veja detalhes na seção de Administração.</strong></p>
+<p> </p>
+<p><strong>Conceitos do Joomla</strong></p>
+<p>O Joomla tem algumas extensões com que trabalha, módulos, componentes, plugins e templates.</p>
+<p>Um pouco sobre os elementos do Joomla e seus conceitos:</p>
+<p> </p>
+<p>- Módulos – Os módulos são as extensões do Joomla mais simples.</p>
+<p>Cada página do Joomla dividi-se em regiões, pedaços. E estas regiões chamam-se módulos. Temos a região do topo, onde podem ser mostrados alguns módulos. Um deles é a logomarca, outro é o menu. Também aí podemos exibir o breadcrumbs.</p>
+<p>A região central é reservada para exibir o conteúdo, os artigos.</p>
+<p>A quantidade de regiões de uma página Joomla depende do template. Temos módulos na lateral esquerda, na lateral direita, entre o topo e o conteúdo, no rodapé, etc.</p>
+<p>Detalhes - <a href="https://docs.joomla.org/Module">https://docs.joomla.org/Module</a></p>
+<p> </p>
+<p>Componentes – Geralmente os componentes são as extensões maiores e mais complexas. São uma pequena aplicação dentro do Joomla. Um exemplo de componente de terceiros é o extPlorer, que conta com diversas funcionalidades. Um exemplo de componente nativo é o Contato. Quando abrimos um componente sempre ele é executado na parte central da página. Este é o comportamento dos componentes.</p>
+<p>Detalhes - <a href="https://docs.joomla.org/Component/pt-br">https://docs.joomla.org/Component/pt-br</a></p>
+<p> </p>
+<p>Plugins – Plugins são extensões que disparam código quando acontece um dos eventos do Joomla. Os eventos são divididos em categorias. Temos eventos de editor, de conteúdo, de sistema de usuário, etc.</p>
+<p>Detalhes - <a href="https://docs.joomla.org/Plugin/pt-br">https://docs.joomla.org/Plugin/pt-br</a></p>
+<p> </p>
+<p>Templates – São as extensões que cuidam da aparência das páginas, cores, posições, etc. Atualmente existem extensões mais complexas, que reúnem duas ou mais extensões e são chamadas de frameworks para templates. A finalidade é oferecer mais recursos para a criação de templates. Um exemplo é o <a href="http://gantry.org/">http://gantry.org/</a>.</p>
+<p>Detalhes - <a href="https://docs.joomla.org/Template/pt-br">https://docs.joomla.org/Template/pt-br</a></p>
+<p> </p>
+<p> </p> 	</div>
+
+	
+	
+				
+	
+	
+	
+</article>
+
+</body>
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br" dir="ltr">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <base href="" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Ribamar FS" />
+	<meta name="robots" content="noindex, nofollow" />
+	<meta name="description" content="Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros." />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>9.3 - Helper - RibaFS Portal</title>
+	<link href="http://ribafs.org/portal/curriculo/livros/cakephp/9-3-helper.html?tmpl=component&amp;print=1&amp;layout=default" rel="canonical" />
+	<link href="../../../templates/shaper_helix3/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../../../favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="http://backup/portal/media/plg_content_prismsyntaxhighlighter/css/prism-okaidia.css" rel="stylesheet" type="text/css" />
+	<link href="http://backup/portal/media/plg_content_prismsyntaxhighlighter/css/prism-linenumbers.css" rel="stylesheet" type="text/css" />
+	<script src="http://backup/portal/media/plg_content_prismsyntaxhighlighter/js/prism-tinymce.js" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery-noconflict.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery-migrate.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="http://backup/portal/media/system/js/caption.js?d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script type="text/javascript">
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+	</script>
+	<meta property="og:url" content="http://backup/portal/curriculo/livros/cakephp/9-3-helper.html" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="9.3 - Helper" />
+	<meta property="og:description" content="9.3 – Helper Você não pode mudar o vento, mas pode ajustar as velas do barco para chegar onde quer Confúcio Os helpers contém código de apresentação que sã..." />
+
+   	<link rel="stylesheet" href="../../../media/jui/css/bootstrap.min.css" type="text/css" />
+	<link rel="stylesheet" href="../../../templates/shaper_helix3/css/frontend-edit.css" type="text/css" />
+    <link rel="stylesheet" href="../../../templates/shaper_helix3/css/template.css" type="text/css" />
+</head>
+<body class="contentpane">
+	<div id="system-message-container">
+	</div>
+
+	
+
+<article class="item item-page" itemscope itemtype="http://schema.org/Article">
+	<meta itemprop="inLanguage" content="pt-BR" />
+	
+	
+
+	<div class="entry-header">
+		<span class="post-format"><i class="fa fa-thumb-tack"></i></span>
+		
+					<h2 itemprop="name">
+									9.3 - Helper							</h2>
+												</div>
+
+						<div id="pop-print" class="btn hidden-print">
+				<a href="9-3-helper.html#" onclick="window.print();return false;">			<span class="icon-print" aria-hidden="true"></span>
+		Imprimir	</a>			</div>
+				
+	
+	
+				
+	
+			<div itemprop="articleBody">
+		<h3>9.3 – Helper</h3>
+<p align="right"><em><strong>Você não pode mudar o vento, mas pode ajustar as velas do barco para chegar onde quer</strong></em></p>
+<p align="right">Confúcio</p>
+<p align="justify">Os helpers contém código de apresentação que são compartilhados entre muitas views, elements ou layouts.</p>
+<p align="justify"><strong>Veja a relação de helper nativos do CakePHP 3:</strong></p>
+<p align="justify"><a href="https://book.cakephp.org/3.0/en/views/helpers/breadcrumbs.html">Breadcrumbs</a></p>
+<p><a href="https://book.cakephp.org/3.0/en/views/helpers/form.html">Form</a></p>
+<p><a href="https://book.cakephp.org/3.0/en/views/helpers/html.html">Html</a></p>
+<p><a href="https://book.cakephp.org/3.0/en/views/helpers/number.html">Number</a></p>
+<p><a href="https://book.cakephp.org/3.0/en/views/helpers/paginator.html">Paginator</a></p>
+<p><a href="https://book.cakephp.org/3.0/en/views/helpers/rss.html">Rss</a></p>
+<p><a href="https://book.cakephp.org/3.0/en/views/helpers/session.html">Session</a></p>
+<p><a href="https://book.cakephp.org/3.0/en/views/helpers/text.html">Text</a></p>
+<p><a href="https://book.cakephp.org/3.0/en/views/helpers/time.html">Time</a></p>
+<p><a href="https://book.cakephp.org/3.0/en/views/helpers/url.html">Url</a></p>
+<p> </p>
+<p>Carregamos Helpers no Cake declarando em classes views.</p>
+<p>src\View</p>
+<pre class="language-php"><code>Class AppView extends View
+{
+	public function initialize()
+	{
+		parent::initialize();
+		$this-&gt;loadHelper('Html');
+		$this-&gt;loadHelper('Form');
+		$this-&gt;loadHelper('Flash');
+	}
+}
+</code></pre>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><b>Usando o helper</b></span></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;">Também podemos usar o método beforeRender() dos controllers para carregar Helpers.</span></p>
+<pre class="language-php"><code>class ArticlesController extends AppController
+{
+    public function beforeRender(Event $event)
+    {
+        parent::beforeRender($event);
+        $this-&gt;viewBuilder()-&gt;helpers(['MeuHelper']);
+    }
+}</code></pre>
+<p><strong>Criando Helpers</strong></p>
+<p>Podemos criar classes Helper para usar em aplicações ou em plugins.</p>
+<p>Os Helpers têm algumas convenções que nos ajuda se as seguirmos:</p>
+<p>- Arquivos de classe Helper devem ficar em src/View/Helper. Exemplo:</p>
+<p>src/View/Helper/MeuHelper.php</p>
+<p>- Classes helpers devem ser sufixadas com Helper. Exemplo:</p>
+<p> </p>
+<p>MeuHelper</p>
+<p>- Quando referenciar classes helper deve omitir o sufixo Helper:</p>
+<p>$this-&gt;loadHelper('Meu');</p>
+<p>Criando o esqueleto de um Helper chamado Mensagem com o bake:</p>
+<p>cd /var/www/html/cliente</p>
+<p>bin/cake bake helper Mensagem</p>
+<p> </p>
+<p>Editar o src\View\Helper\MensagemHelper.php e adicionar a função msg(), assim:</p>
+<pre class="language-php"><code>&lt;?php
+namespace App\View\Helper;
+
+use Cake\View\Helper;
+use Cake\View\View;
+
+class MensagemHelper extends Helper
+{
+	protected $_defaultConfig = [];
+	
+	public function msg($msg)
+	{
+		return '&lt;h2&gt;'.$msg.'&lt;/h2&gt;';
+	}
+}</code></pre>
+<p><strong>Usando o Helper</strong></p>
+<p>Editar a view index.ctp e adicionar em algum lugar:</p>
+<p>&lt;?=$this-&gt;Mensagem-&gt;msg('Minha Mensagem Helper') ?&gt;</p>
+<p>Ao chamar no navegador verá a mensagem com título h2.</p>
+<p>Um helper bem simples para mostrar o caminho das pedras.</p>
+<p><strong>Máscaras no CakePHP</strong></p>
+<p>- Máscara na view index para o campo CPF</p>
+<p>Enquanto não descubro uma função do Cake que faz isso...</p>
+<p> </p>
+<p>O CPF é um campo texto mas constituido somente de números. A listagem (index.ctp) mostra a relação de números sem nenhuma formatação. Ajudaria se formatassemos usando uma máscara adequada para CPF, ajudaria a visualizar.</p>
+<p>Vamos fazer isso agora para a view Clientes/index.ctp:</p>
+<p>Substitua a linha</p>
+<p>&lt;td&gt;&lt;?php echo h($cliente['Cliente']['cpf']); ?&gt;&amp;nbsp;&lt;/td&gt;</p>
+<p>Por este código:</p>
+<pre class="language-php"><code>        &lt;tbody&gt;
+            &lt;?php foreach ($customers as $customer): ?&gt;
+&lt;?php 
+$cpfmask1 = substr($customer-&gt;cpf, 0,3);
+$cpfmask2 = substr($customer-&gt;cpf, 3,3);
+$cpfmask3 = substr($customer-&gt;cpf, 6,3);
+$cpfmask4 = substr($customer-&gt;cpf, 9,2);
+$cpfmask = $cpfmask1.'.'.$cpfmask2.'.'.$cpfmask3.'-'.$cpfmask4;
+?&gt;
+            &lt;tr&gt;
+                &lt;td&gt;&lt;?= $this-&gt;Number-&gt;format($customer-&gt;id) ?&gt;&lt;/td&gt;
+                &lt;td&gt;&lt;?= h($customer-&gt;name) ?&gt;&lt;/td&gt;
+                &lt;td&gt;&lt;?= h($customer-&gt;birthday) ?&gt;&lt;/td&gt;
+        		&lt;td&gt;&lt;?= h($cpfmask) ?&gt;&lt;/td&gt;</code></pre>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;">Com isso a listagem mostrará o CPF com a sua máscara.</span></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;">Caso existam registros eles não serão alterados, apenas os novos.</span></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"> </p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><b>Dicas sobre data e hora</b></span></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;">Ano mínimo sendo 16 anos antes do atual e máximo sendo 100 anos antes do atual em actions add e edit</span></span></p>
+<pre class="language-php"><code>		echo $this-&gt;Form-&gt;input('nascimento',['label' =&gt; 'Nascimento',
+	        'dateFormat'    =&gt; 'DMY',
+	        'minYear'       =&gt; date('Y') - 100,
+	        'maxYear'       =&gt; date('Y') - 16,
+	        'empty'         =&gt; [
+	            'day'       =&gt; 'Dia',
+	            'month'     =&gt; 'Mês',
+	            'year'      =&gt; 'Ano'
+            ]
+        ]);</code></pre>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><b>Detalhes em:</b></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><a href="http://book.cakephp.org/3.0/en/views/helpers.html">http://book.cakephp.org/3.0/en/views/helpers.html</a> </span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"> </p> 	</div>
+
+	
+	
+				
+	
+	
+	
+</article>
+
+</body>
+</html>

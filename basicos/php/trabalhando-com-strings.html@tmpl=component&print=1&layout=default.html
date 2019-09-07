@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br" dir="ltr">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <base href="" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Ribamar FS" />
+	<meta name="robots" content="noindex, nofollow" />
+	<meta name="description" content="Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros." />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>Trabalhando com Strings - RibaFS Portal</title>
+	<link href="http://ribafs.org/portal/basicos/php/trabalhando-com-strings.html?tmpl=component&amp;print=1&amp;layout=default" rel="canonical" />
+	<link href="../../templates/shaper_helix3/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../../favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="http://backup/portal/media/plg_content_prismsyntaxhighlighter/css/prism-okaidia.css" rel="stylesheet" type="text/css" />
+	<link href="http://backup/portal/media/plg_content_prismsyntaxhighlighter/css/prism-linenumbers.css" rel="stylesheet" type="text/css" />
+	<script src="http://backup/portal/media/plg_content_prismsyntaxhighlighter/js/prism-tinymce.js" type="text/javascript"></script>
+	<script src="../../media/jui/js/jquery.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../media/jui/js/jquery-noconflict.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../media/jui/js/jquery-migrate.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="http://backup/portal/media/system/js/caption.js?d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script type="text/javascript">
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+	</script>
+	<meta property="og:url" content="http://backup/portal/basicos/php/trabalhando-com-strings.html" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Trabalhando com Strings" />
+	<meta property="og:description" content="TRABALHANDO COM STRINGS E SUBSTRINGS NO PHP substr -- Retorna uma parte de uma string string substr ( string string, int start [, int length] ) Exemplo 1...." />
+
+   	<link rel="stylesheet" href="../../media/jui/css/bootstrap.min.css" type="text/css" />
+	<link rel="stylesheet" href="../../templates/shaper_helix3/css/frontend-edit.css" type="text/css" />
+    <link rel="stylesheet" href="../../templates/shaper_helix3/css/template.css" type="text/css" />
+</head>
+<body class="contentpane">
+	<div id="system-message-container">
+	</div>
+
+	
+
+<article class="item item-page" itemscope itemtype="http://schema.org/Article">
+	<meta itemprop="inLanguage" content="pt-BR" />
+	
+	
+
+	<div class="entry-header">
+		<span class="post-format"><i class="fa fa-thumb-tack"></i></span>
+		
+					<h2 itemprop="name">
+									Trabalhando com Strings							</h2>
+												</div>
+
+						<div id="pop-print" class="btn hidden-print">
+				<a href="trabalhando-com-strings.html#" onclick="window.print();return false;">			<span class="icon-print" aria-hidden="true"></span>
+		Imprimir	</a>			</div>
+				
+	
+	
+				
+	
+			<div itemprop="articleBody">
+		<p><strong>TRABALHANDO COM STRINGS E SUBSTRINGS NO PHP</strong><br /><br /><strong>substr</strong> -- Retorna uma parte de uma string<br /><br /><strong>string substr</strong> ( string string, int start [, int length] )<br /><br />Exemplo 1. Uso basico de <strong>substr()</strong></p>
+<p> </p>
+<pre class="language-php"><code>&lt;?php
+$rest = substr("abcdef", 1); // retorna "bcdef"
+$rest = substr("abcdef", 1, 3); // retorna "bcd"
+$rest = substr("abcdef", 0, 4); // retorna "abcd"
+$rest = substr("abcdef", 0, 8); // retorna "abcdef"
+
+// Outra opção é acessar atravéz de chaves
+$string = 'abcdef';
+echo $string{0}; // retorna a
+echo $string{3}; // retorna d
+?&gt;
+</code></pre>
+<p><br /><strong>Se start for negativo, a string retornada irá começar no caractere start a partir do fim de string.</strong><br /><br />Exemplo 2. Usando um inicio negativo</p>
+<pre class="language-php"><code>&lt;?php
+$rest = substr("abcdef", -1); // retorna "f"
+$rest = substr("abcdef", -2); // retorna "ef"
+$rest = substr("abcdef", -3, 1); // retorna "d"
+?&gt;
+
+Exemplo 3. Usando um length negativo
+&lt;?php
+$rest = substr("abcdef", 0, -1); // retorna "abcde"
+$rest = substr("abcdef", 2, -1); // retorna "cde"
+$rest = substr("abcdef", 4, -4); // retorna ""
+$rest = substr("abcdef", -3, -1); // retorna "de"
+?&gt;
+</code></pre>
+<p><br /><strong>SOBRESCREVENDO STRINGS</strong><br /><br />str_replace<br />str_replace -- Substitui todas as ocorrências da string de procura com a string de substituição <br />mixed str_replace ( mixed pesquisa, mixed substitui, mixed assunto [, int &amp;count] )<br /><br /></p>
+<pre class="language-php"><code>&lt;?php
+// Fornece: &lt;body text='black'&gt;
+$bodytag = str_replace("%body%", "black", "&lt;body text='%body%'&gt;");
+
+// Fornece: Hll Wrld f PHP
+$vowels = array("a", "e", "i", "o", "u", "A", "E", "I", "O", "U");
+$onlyconsonants = str_replace($vowels, "", "Hello World of PHP");
+
+// Fornece: você comeria pizza, cerveja e sorvete todos os dias
+$frase = "você comeria frutas, vegetais, e fibra todos os dias.";
+$saldavel = array("frutas", "vegetais", "fibra");
+$saboroso = array("pizza", "cerveja", "sorvete");
+
+$novafrase = str_replace($saudavel, $saboroso, $frase);
+
+// Uso do parâmetro count está disponível no PHP 5.0.0
+$str = str_replace("ll", "", "good golly miss molly!", $count);
+echo $count; // 2
+?&gt;
+</code></pre>
+<p><br /><strong>substr_replace</strong><br />substr_replace -- Substitui o texto dentro de uma parte de uma string<br />string substr_replace ( string string, string replacement, int start [, int length] )<br /><br /></p>
+<pre class="language-php"><code>&lt;?php
+$var = 'ABCDEFGH:/MNRPQR/';
+echo "Original: $var&lt;hr&gt;\n";
+
+/* Estes dois exemplos substituem tudo de $var com 'bob'. */
+echo substr_replace($var, 'bob', 0) . "&lt;br&gt;\n";
+echo substr_replace($var, 'bob', 0, strlen($var)) . "&lt;br&gt;\n";
+
+/* Insere 'bob' direto no começo de $var. */
+echo substr_replace($var, 'bob', 0, 0) . "&lt;br&gt;\n";
+
+/* Estes dois exemplos substituem 'MNRPQR' em $var com 'bob'. */
+echo substr_replace($var, 'bob', 10, -1) . "&lt;br&gt;\n";
+echo substr_replace($var, 'bob', -7, -1) . "&lt;br&gt;\n";
+
+/* Deleta 'MNRPQR' de $var. */
+echo substr_replace($var, '', 10, -1) . "&lt;br&gt;\n";
+?&gt;
+</code></pre>
+<p><br /><br /><strong>ENCONTRAR POSIÇÃO DE STRING</strong><br /><br /><strong>strpos</strong><br /><br />strpos -- Encontra a posição da primeira ocorrência de uma string<br /><br />int strpos ( string str, string procurar [, int offset] )<br /><br />Exemplos strpos()</p>
+<pre class="language-php"><code>&lt;?php
+//$str = 'abc';
+$str = 'cba';
+$procurar = 'a';
+$posicao = strpos($str, $procurar);
+
+// Note o uso de ===. Simples == não funcionaria como esperado
+// por causa da posição de 'a' é 0 (primeiro) caractere.
+if ($pos === false) {
+echo "A string '$procurar' não foi encontrada na string '$str'";
+} else {
+echo "A string '$procurar' foi encontrada na string '$str'";
+echo " e está na posição $posicao";
+}
+
+?&gt;
+
+&lt;?php
+
+//$email = <span id="cloakcf1e9cc62aeb37c03b118f08fe4927db">Este endereço de email está sendo protegido de spambots. Você precisa do JavaScript ativado para vê-lo.</span><script type='text/javascript'>
+				document.getElementById('cloakcf1e9cc62aeb37c03b118f08fe4927db').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addycf1e9cc62aeb37c03b118f08fe4927db = '&#039;r&#105;b&#97;fs' + '&#64;';
+				addycf1e9cc62aeb37c03b118f08fe4927db = addycf1e9cc62aeb37c03b118f08fe4927db + 'gm&#97;&#105;l' + '&#46;' + 'c&#111;m' + '&#46;' + 'br';
+				var addy_textcf1e9cc62aeb37c03b118f08fe4927db = '&#039;r&#105;b&#97;fs' + '&#64;' + 'gm&#97;&#105;l' + '&#46;' + 'c&#111;m' + '&#46;' + 'br';document.getElementById('cloakcf1e9cc62aeb37c03b118f08fe4927db').innerHTML += '<a ' + path + '\'' + prefix + ':' + addycf1e9cc62aeb37c03b118f08fe4927db + '\'>'+addy_textcf1e9cc62aeb37c03b118f08fe4927db+'<\/a>';
+		</script>';
+$email = <span id="cloak1709699c2d7fc9248ce3a978b7442e60">Este endereço de email está sendo protegido de spambots. Você precisa do JavaScript ativado para vê-lo.</span><script type='text/javascript'>
+				document.getElementById('cloak1709699c2d7fc9248ce3a978b7442e60').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addy1709699c2d7fc9248ce3a978b7442e60 = '&#039;r&#105;b&#97;fs' + '&#64;';
+				addy1709699c2d7fc9248ce3a978b7442e60 = addy1709699c2d7fc9248ce3a978b7442e60 + 'gm&#97;&#105;l' + '&#46;' + 'c&#111;m';
+				var addy_text1709699c2d7fc9248ce3a978b7442e60 = '&#039;r&#105;b&#97;fs' + '&#64;' + 'gm&#97;&#105;l' + '&#46;' + 'c&#111;m';document.getElementById('cloak1709699c2d7fc9248ce3a978b7442e60').innerHTML += '<a ' + path + '\'' + prefix + ':' + addy1709699c2d7fc9248ce3a978b7442e60 + '\'>'+addy_text1709699c2d7fc9248ce3a978b7442e60+'<\/a>';
+		</script>';
+$usuario = substr ($email, 0, strpos ($email, '@'));
+// Lembrando: substr ( string string, int start [, int length] )
+$dominio = substr ($email, strpos ($email, '@')+1);
+echo "Usuário '$usuario' e Domínio '$dominio'"; // o comprimento default é até o final
+?&gt;
+
+</code></pre>
+<p><br /><strong>CONTANDO AS OCORRÊNCIAS DE SUBSTING EM STRING</strong><br /><br /><strong>substr_count</strong> -- Conta o número de ocorrências de uma substring<br /><br />int substr_count ( string str, string conte_me )<br /><br />substr_count() retorna o número de vezes que a substring conte_me ocorre na string str. </p>
+<pre class="language-php"><code>&lt;?php
+$str = "Olá mundo do PHP";
+
+if (substr_count($str, "do") == 0)
+echo "nenhum";
+
+// same as:
+
+if (strpos($str, "do") === false)
+echo "nenhum";
+?&gt;
+</code></pre>
+<p><br /><br />Exemplo 1. Exemplo substr_count()</p>
+<p> </p>
+<p>&lt;?php<br />print substr_count("This is a test", "is"); // mostra 2<br />?&gt; <br /><br /><strong>TROCANDO PONTO POR VÍRGULA E VICE-VERSA</strong><br /><br />Se temos campos tipo moeda, devemos exibir com vírgula e gravar no banco com ponto.<br />Para isso uma boa saída é usar a dupla de funções implode e explode.<br /><br />Antes de exibir na tela (em consultas):<br />$f_custo_produtivo=explode(".",$f_custo_produtivo);<br />$f_custo_produtivo=implode(",",$f_custo_produtivo); <br /><br />Antes de gravar no banco (inclusão e atualização):<br />$f_custo_produtivo=explode(",",$f_custo_produtivo);<br />$f_custo_produtivo=implode(".",$f_custo_produtivo);<br /><br /><br /><strong>CONVERSÃO DE STRINGS</strong><br /><br />$foo = 1 + "10.5";echo $foo."&lt;br&gt;"; // $foo é float (11.5)<br />$foo = 1 + "-1.3e3";echo $foo."&lt;br&gt;"; // $foo é float (-1299)<br />$foo = 1 + "bob-1.3e3";echo $foo."&lt;br&gt;"; // $foo é integer (1)<br />$foo = 1 + "bob3";echo $foo."&lt;br&gt;"; // $foo é integer (1)<br />$foo = 1 + "10 Small Pigs";echo $foo."&lt;br&gt;"; // $foo é integer (11)<br />$foo = 4 + "10.2 Little Piggies";echo $foo."&lt;br&gt;"; // $foo é float (14.2)<br />$foo = "10.0 pigs " + 1;echo $foo."&lt;br&gt;"; // $foo é float (11)<br />$foo = "10.0 pigs " + 1.0;echo $foo."&lt;br&gt;"; // $foo é float (11)<br /><br /><strong>TRABALHANDO COM CARACTERES DE STRINGS</strong><br /><br />// Pega o primeiro caracter da string<br />$str = 'Isto é um teste.';<br />$first = $str{0};<br />echo $first."&lt;br&gt;";<br />// Pega o terceiro caracter da string<br />$third = $str{2};<br />echo $third."&lt;br&gt;";<br />// Pega o último caracter da string<br />$str = 'Isto ainda é um teste.';<br />$last = $str{strlen($str)-1};<br />echo $last."&lt;br&gt;";<br />// Modifica o ultimo caracter da string<br />$str = 'Olhe o mal';<br />echo $str{strlen($str)-1} = 'r';<br /><br /><strong>VALIDAÇÃO DE CARACTERES</strong><br /><br />ctype_alnum<br />ctype_alpha<br />ctype_cntrl<br />ctype_digit<br />ctype_graph<br />ctype_lower<br />ctype_print<br />ctype_punct<br />ctype_space<br />ctype_upper<br />ctype_xdigit<br /><br />ctype_alnum - Checa por caracteres alfanuméricos<br /><br />$strings = array('AbCd1zyZ9', 'foo!#$bar');<br />foreach ($strings as $testcase) {<br /> if (ctype_alnum($testcase)) {<br /> echo "The string $testcase consists of all letters or digits.\n";<br /> } else {<br /> echo "The string $testcase does not consist of all letters or digits.\n";<br /> }<br />}<br /><br /><br />ctype_alpha - Checa por caracteres alfabéticos<br /><br />$strings = array('KjgWZC', 'arf12');<br />foreach ($strings as $testcase) {<br /> if (ctype_alpha($testcase)) {<br /> echo "The string $testcase consists of all letters.\n";<br /> } else {<br /> echo "The string $testcase does not consist of all letters.\n";<br /> }<br />}<br /><br />ctype_digit - Checa por caracteres numéricos<br /><br />$strings = array('1820.20', '10002', 'wsl!12');<br />foreach ($strings as $testcase) {<br /> if (ctype_digit($testcase)) {<br /> echo "The string $testcase consists of all digits.\n";<br /> } else {<br /> echo "The string $testcase does not consist of all digits.\n";<br /> }<br />}<br />// Alerta: Ao executar veja que somente é válido quando todos são dígitos<br />// Não é indicado para testar valores decimais, com ponto ou vírgula<br /><br />ctype_lower - Checa por caracteres minúsculos<br /><br />$strings = array('aac123', 'qiutoas', 'QASsdks');<br />foreach ($strings as $testcase) {<br /> if (ctype_lower($testcase)) {<br /> echo "The string $testcase consists of all lowercase letters.\n";<br /> } else {<br /> echo "The string $testcase does not consist of all lowercase letters.\n";<br /> }<br />}<br /><br /><br />ctype_punct - Checa por Caracteres que não sejam espaço em branco nem alfanuméricos<br /><br />$strings = array('ABasdk!@!$#', '!@ # $', '*&amp;$()');<br />foreach ($strings as $testcase) {<br /> if (ctype_punct($testcase)) {<br /> echo "The string $testcase consists of all punctuation.\n";<br /> } else {<br /> echo "The string $testcase does not consist of all punctuation.\n";<br /> }<br />}<br /><br />ctype_space - Checa por espaços em branco<br /><br /><br /><strong>Validação de Tipos</strong><br /><br /> intval<br /> is_array<br /> is_bool<br /> is_callable<br /> is_double<br /> is_float<br /> is_int<br /> is_integer<br /> is_long<br /> is_null<br /> is_numeric<br /> is_object<br /> is_real<br /> is_resource<br /> is_scalar<br /> is_string<br /> isset<br /> print_r<br /> serialize<br /> settype<br /> strval<br /> unserialize<br /> unset<br /><br /><strong>CASES</strong><br /><br />strtoupper($str) - tudo maiúsculo<br />strtolower($str) - tudo minúsculo<br />ucfirst($str) - Converte para maiúscula o primeiro caractere de uma STRING<br />ucwords($STR) - Converte para maiúsculas o primeiro caractere de cada PALAVRA</p> 	</div>
+
+	
+	
+				
+	
+	
+	
+</article>
+
+</body>
+</html>

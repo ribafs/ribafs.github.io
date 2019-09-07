@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br" dir="ltr">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <base href="" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Ribamar FS" />
+	<meta name="robots" content="noindex, nofollow" />
+	<meta name="description" content="Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros." />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>Dicas para o Dimensionamento do Hardware - RibaFS Portal</title>
+	<link href="http://ribafs.org/portal/servidores/postgresql/dimensionamento/dicas-para-o-dimensionamento-do-hardware.html?tmpl=component&amp;print=1&amp;layout=default" rel="canonical" />
+	<link href="../../../templates/shaper_helix3/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../../../favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<script src="../../../media/jui/js/jquery.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery-noconflict.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery-migrate.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="http://backup/portal/media/system/js/caption.js?d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script type="text/javascript">
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+	</script>
+	<meta property="og:url" content="http://backup/portal/servidores/postgresql/dimensionamento/dicas-para-o-dimensionamento-do-hardware.html" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Dicas para o Dimensionamento do Hardware" />
+	<meta property="og:description" content="Algumas dicas para o Dimensionamento do hardware de um Servidor de Bancos de Dados com PostgreSQL O objetivo deste projeto é o de elaborar um planejamento..." />
+
+   	<link rel="stylesheet" href="../../../media/jui/css/bootstrap.min.css" type="text/css" />
+	<link rel="stylesheet" href="../../../templates/shaper_helix3/css/frontend-edit.css" type="text/css" />
+    <link rel="stylesheet" href="../../../templates/shaper_helix3/css/template.css" type="text/css" />
+</head>
+<body class="contentpane">
+	<div id="system-message-container">
+	</div>
+
+	
+
+<article class="item item-page" itemscope itemtype="http://schema.org/Article">
+	<meta itemprop="inLanguage" content="pt-BR" />
+	
+	
+
+	<div class="entry-header">
+		<span class="post-format"><i class="fa fa-thumb-tack"></i></span>
+		
+					<h2 itemprop="name">
+									Dicas para o Dimensionamento do Hardware							</h2>
+												</div>
+
+						<div id="pop-print" class="btn hidden-print">
+				<a href="dicas-para-o-dimensionamento-do-hardware.html#" onclick="window.print();return false;">			<span class="icon-print" aria-hidden="true"></span>
+		Imprimir	</a>			</div>
+				
+	
+	
+				
+	
+			<div itemprop="articleBody">
+		<h4 style="text-align: justify;">Algumas dicas para o Dimensionamento do hardware de um Servidor de Bancos de Dados com PostgreSQL</h4>
+
+<p style="text-align: justify;">O objetivo deste projeto é o de elaborar um planejamento para a administração de bancos de dados com o PostgreSQL, partindo do dimensionamento do hardware, a instalação do sistema operacional, a virtualização, a instalação do PostgreSQL e sua administração, com foco na administração.<br /><br /><strong>Dimensionamento do Hardware</strong><br />- Computador(es), memória, CPU, discos, etc<br />- Placas de rede e cabos<br />- Switchs<br />- Garantias<br />- Storages<br />- Nobreaks<br />- Internet e banda<br />- Sugestão de fabricantes<br /><br /><strong>Vantagens da Virtualização:</strong><br />- Incrementar a utilização do hardware<br />- Economizar energia elétrica e reduzir a emissão de Dióxido de Carbono<br />- Redução de hardware físico e de pessoal de manutenção<br />- Simplificação de backup e restore<br /><br />Pequenas empresas costumam escolher uma combinação de hardware e sistema operacional já integrado por fabricantes mais conhecidos, como Dell, HP e IBM, ou um pacote montado por algum consultor de TI ou revendedor de sua confiança. Saiba que será muito importante o conhecimento do revendedor para traduzir as necessidades do seu negócio para especificações de um servidor (hardware).<br /><br />Esses profissionais podem dimensionar o equipamento para suas necessidades atuais e garantir que o sistema possa evoluir conforme sua empresa cresça. Isso é muito importante!<br /><br />Se a finalidade deste equipamento é armazenar e compartilhar arquivos importantes, recomendamos o uso de uma proteção contra falha no disco como HDs em RAID, que são grupos de discos com redundância e espelhamento.<br /><br />Mais eficiente, porém mais caros, são os dispositivos de storage, unidades externas de discos com alto desempenho e segurança contra falhas. Mesmo assim, tais dispositivos apresentam um custo-benefício que merece ser avaliado e que pode caber dentro do seu orçamento, principalmente se o que conta é a continuidade do seu negócio.<br /><br />Não custa repetir: backup é essencial. As unidades de fita evoluíram bastante e por isso continuam sendo muito usadas. Tecnologias DAT, DLT, LTO são recomendadas para copiar todos os dados diariamente em fitas que guardam de 40 GB até 400 GB.<br /><br />No outro extremo, ou seja, quem precisa de um servidor para manipular um banco de dados, CRM, ERP, com 250 usuários ou mais, terá de escolher um sistema que tenha de dois a quatro processadores dual ou quad-core Xeon, 16 GB de memória e rodando a versão completa do Windows Server 2008 64 bits e respectivos aplicativos (Exchange, SQL, etc.) todos também 64 bits.<br /><a href="http://pcworld.com.br/dicas/2008/06/20/qual-a-configuracao-de-hardware-mais-adequada-para-o-servidor/">http://pcworld.com.br/dicas/2008/06/20/qual-a-configuracao-de-hardware-mais-adequada-para-o-servidor/</a> <br /><br /><strong>Quando o dimensionamento de hardware para um banco de dados o foco deve ser em três objetivos operacionais:</strong><br /><br />    Estimar os requisitos de armazenamento básicos para um banco de dados<br />    Estimar a quantidade de memória necessária para o processamento<br />    Estimar a quantidade de CPU necessária para carga de trabalho emitidas a partir de aplicativos clientes, como manipulação de dados (inserção, exclusão e atualização) bem como relatórios.<br /><a href="http://www.tiagobalabuch.com/my-product/dimensionamento-de-hardware-storage/">http://www.tiagobalabuch.com/my-product/dimensionamento-de-hardware-storage/</a> <br /><br /><strong>Dicas</strong><br /><br />1- Consulte a Intel pelo e-mail: <span id="cloakdb34c765ef52000be54c836a3113530e">Este endereço de email está sendo protegido de spambots. Você precisa do JavaScript ativado para vê-lo.</span><script type='text/javascript'>
+				document.getElementById('cloakdb34c765ef52000be54c836a3113530e').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addydb34c765ef52000be54c836a3113530e = 'Pr&#111;gr&#97;m&#97;s_ITR' + '&#64;';
+				addydb34c765ef52000be54c836a3113530e = addydb34c765ef52000be54c836a3113530e + 'l&#97;r-n&#101;wsl&#101;tt&#101;r' + '&#46;' + '&#105;nt&#101;l' + '&#46;' + 'c&#111;m';
+				var addy_textdb34c765ef52000be54c836a3113530e = 'Pr&#111;gr&#97;m&#97;s_ITR' + '&#64;' + 'l&#97;r-n&#101;wsl&#101;tt&#101;r' + '&#46;' + '&#105;nt&#101;l' + '&#46;' + 'c&#111;m';document.getElementById('cloakdb34c765ef52000be54c836a3113530e').innerHTML += '<a ' + path + '\'' + prefix + ':' + addydb34c765ef52000be54c836a3113530e + '\'>'+addy_textdb34c765ef52000be54c836a3113530e+'<\/a>';
+		</script><br />2- Consulte a AMD pelo e-mail: <span id="cloak3802116bd6d542fd6ef29077a703ef9a">Este endereço de email está sendo protegido de spambots. Você precisa do JavaScript ativado para vê-lo.</span><script type='text/javascript'>
+				document.getElementById('cloak3802116bd6d542fd6ef29077a703ef9a').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addy3802116bd6d542fd6ef29077a703ef9a = 's&#117;pp&#111;rt&#111;n&#101;' + '&#64;';
+				addy3802116bd6d542fd6ef29077a703ef9a = addy3802116bd6d542fd6ef29077a703ef9a + '&#97;mdp&#97;rtn&#101;r&#97;dv&#97;nt&#97;g&#101;' + '&#46;' + 'c&#111;m';
+				var addy_text3802116bd6d542fd6ef29077a703ef9a = 's&#117;pp&#111;rt&#111;n&#101;' + '&#64;' + '&#97;mdp&#97;rtn&#101;r&#97;dv&#97;nt&#97;g&#101;' + '&#46;' + 'c&#111;m';document.getElementById('cloak3802116bd6d542fd6ef29077a703ef9a').innerHTML += '<a ' + path + '\'' + prefix + ':' + addy3802116bd6d542fd6ef29077a703ef9a + '\'>'+addy_text3802116bd6d542fd6ef29077a703ef9a+'<\/a>';
+		</script><br />3- Consulte a Solution TI pelo e-mail: <span id="cloak74e854ca3a336e01c36f2e51d73a23d6">Este endereço de email está sendo protegido de spambots. Você precisa do JavaScript ativado para vê-lo.</span><script type='text/javascript'>
+				document.getElementById('cloak74e854ca3a336e01c36f2e51d73a23d6').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addy74e854ca3a336e01c36f2e51d73a23d6 = 's&#111;l&#117;t&#105;&#111;n' + '&#64;';
+				addy74e854ca3a336e01c36f2e51d73a23d6 = addy74e854ca3a336e01c36f2e51d73a23d6 + 's&#111;l&#117;t&#105;&#111;nt&#105;' + '&#46;' + 'c&#111;m' + '&#46;' + 'br';
+				var addy_text74e854ca3a336e01c36f2e51d73a23d6 = 's&#111;l&#117;t&#105;&#111;n' + '&#64;' + 's&#111;l&#117;t&#105;&#111;nt&#105;' + '&#46;' + 'c&#111;m' + '&#46;' + 'br';document.getElementById('cloak74e854ca3a336e01c36f2e51d73a23d6').innerHTML += '<a ' + path + '\'' + prefix + ':' + addy74e854ca3a336e01c36f2e51d73a23d6 + '\'>'+addy_text74e854ca3a336e01c36f2e51d73a23d6+'<\/a>';
+		</script> (distribuidor oficial)<br />4- Consulte a Dell Inc. pelo fone: 0800-7012538 (Servidores PowerEdge)<br />5- Não exagere no tamanho. Prefira um equipamento flexível.<br />6- Não vale apena arriscar! Economia-porca provoca cancer. Lembre que a base de todo o seu negócio de TI é seu SERVIDOR.<br />7- Compre utilizando Leasing com cláusula de atualização a cada 24 meses, seguro e restituição no Imposto de Renda.<br /><a href="https://under-linux.org/showthread.php?t=78543">https://under-linux.org/showthread.php?t=78543</a> <br /><br /><strong>Habilitar Virtualização na BIOS</strong><br />Para virtualizar precisa prever este requisito na aquisição do Hardware (Intel VT ou AMD-V) na CPU.<br /><br /><a href="http://miniserver.net.br/pfsense_guia_de_dimensionamento.html">http://miniserver.net.br/pfsense_guia_de_dimensionamento.html</a> <br /><a href="https://confluence.atlassian.com/confbr1/guia-de-requisitos-de-hardware-de-servidor-933709557.html">https://confluence.atlassian.com/confbr1/guia-de-requisitos-de-hardware-de-servidor-933709557.html</a> <br /><a href="https://docops.ca.com/display/UIM847BR/Preparar+o+hardware+do+servidor">https://docops.ca.com/display/UIM847BR/Preparar+o+hardware+do+servidor</a> <br /><a href="http://www.dell.com/br/empresa/p/networking-products">http://www.dell.com/br/empresa/p/networking-products</a> <br /><a href="https://docs.oracle.com/cd/E19226-01/821-1337/abpaj/index.html">https://docs.oracle.com/cd/E19226-01/821-1337/abpaj/index.html</a> <br /><a href="http://www.ufjf.br/eduardo_barrere/files/2013/11/Aula_03_2-2013.pdf">http://www.ufjf.br/eduardo_barrere/files/2013/11/Aula_03_2-2013.pdf</a> <br /><a href="http://www.adnlogico.pt/Infra-estrutura/equipamentos-e-servidores">http://www.adnlogico.pt/Infra-estrutura/equipamentos-e-servidores</a> <br /><a href="http://www.aedb.br/seget/arquivos/artigos10/26_Virtualizacao_SEGET_2010.pdf">http://www.aedb.br/seget/arquivos/artigos10/26_Virtualizacao_SEGET_2010.pdf</a> </p>
+
+<p style="text-align: justify;"> </p> 	</div>
+
+	
+	
+				
+	
+	
+	
+</article>
+
+</body>
+</html>

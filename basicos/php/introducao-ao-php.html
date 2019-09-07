@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br" dir="ltr">
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+                <!-- head -->
+        <base href="" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Ribamar FS" />
+	<meta name="description" content="Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros." />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>Introdução ao PHP - RibaFS Portal</title>
+	<link href="http://ribafs.org/portal/basicos/php/introducao-ao-php.html" rel="canonical" />
+	<link href="../../templates/shaper_helix3/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../../favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,300italic,regular,italic,600,600italic,700,700italic,800,800italic&amp;subset=latin" rel="stylesheet" type="text/css" />
+	<link href="http://fonts.googleapis.com/css?family=Amarante:regular&amp;subset=latin-ext" rel="stylesheet" type="text/css" />
+	<link href="../../cache/com_templates/templates/shaper_helix3/13dbdb302db49810d4fe978773c86c41.css" rel="stylesheet" type="text/css" />
+	<style type="text/css">
+body{font-family:Open Sans, sans-serif; font-size:16px; font-weight:normal; }h1{font-family:Open Sans, sans-serif; font-weight:800; }h2{font-family:Open Sans, sans-serif; font-weight:600; }h3{font-family:Open Sans, sans-serif; font-weight:normal; }h4{font-family:Open Sans, sans-serif; font-weight:normal; }h5{font-family:Open Sans, sans-serif; font-weight:600; }h6{font-family:Open Sans, sans-serif; font-weight:600; }.sp-megamenu-parent{font-family:Amarante, sans-serif; font-size:16px; font-weight:normal; }.sp-megamenu-parent > li.active > a, 
+.sp-megamenu-parent .sp-dropdown li.sp-menu-item.active > a { color: red; }
+#offcanvas-toggler > i { color: red !important; }
+#sp-top-bar{ background-color:#093d09;color:#999999; }#sp-top-bar a{color:#ceebe9;}#sp-header{ background-color:#54a859; }#sp-header a{color:#022e05;}#sp-page-title a{color:#e8f7f7;}#sp-main-body{ background-color:#fefffa; }
+	</style>
+	<script type="application/json" class="joomla-script-options new">{"csrf.token":"796296c0a9019553ed4bbba150ad5a40","system.paths":{"root":"\/portal","base":"\/portal"},"joomla.jtext":{"COM_COMMENT_PLEASE_FILL_IN_ALL_REQUIRED_FIELDS":"Favor preencher todos os campos obrigat\u00f3rios.","COM_COMMENT_ANONYMOUS":"An\u00f4nimo","JLIB_FORM_FIELD_INVALID":"Campo inv\u00e1lido:&#160;"},"system.keepalive":{"interval":840000,"uri":"\/portal\/component\/ajax\/?format=json"}}</script>
+	<script src="../../cache/com_templates/templates/shaper_helix3/54c592f5254dda874419f32ed016b1ca.js" type="text/javascript"></script>
+	<script type="text/javascript">
+jQuery(function($){ initTooltips(); $("body").on("subform-row-add", initTooltips); function initTooltips (event, container) { container = container || document;$(container).find(".hasTooltip").tooltip({"html": true,"container": "body"});} });jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+var sp_preloader = '0';
+
+var sp_gotop = '1';
+
+var sp_offanimation = 'default';
+
+	</script>
+	<meta property="og:url" content="http://backup/portal/basicos/php/introducao-ao-php.html" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Introdução ao PHP" />
+	<meta property="og:description" content="Introdução ao PHP Iniciando na Programação com PHP Para poder programar com PHP precisamos de um servidor web. Então instalaremos em nosso computador o pro..." />
+
+            </head>
+
+    <body class="site com-content view-article no-layout no-task itemid-118 pt-br ltr  sticky-header layout-fluid off-canvas-menu-init">
+
+        <div class="body-wrapper">
+            <div class="body-innerwrapper">
+                <section id="sp-top-bar"><div class="container"><div class="row"><div id="sp-top1" class="col-sm-12 col-md-12"><div class="sp-column "><div class="sp-module "><div class="sp-module-content"><!-- https://www.clubedohardware.com.br/artigos/redes/colocando-um-mecanismo-de-busca-em-seu-site-r34327/ -->
+<FORM class="form-inline" method="GET" action="http://www.google.com/search">
+<div class="form-group">
+<input type="hidden" name="sitesearch" value="ribafs.github.io">
+<input style="height:20px" class="form-control" type="text" name="q" size="20" placeholder="Pesquisar...">
+</div>
+</FORM>
+
+</div></div><ul class="sp-contact-info"><li class="sp-contact-email"><i class="fa fa-envelope" aria-hidden="true"></i> <a href="mailto:ribafs@gmail.com">ribafs@gmail.com</a></li></ul></div></div></div></div></section><section id="sp-section-2"><div class="container"><div class="row"><div id="sp-top2" class="col-sm-12 col-md-12"><div class="sp-column "><div class="sp-module "><div class="sp-module-content">
+
+<div class="custom"  >
+	<p style="text-align: center;"><b>Don't you speak portuguese? Translate this site with <a href="https://translate.google.com/translate?hl=pt-BR&amp;sl=pt&amp;tl=en&amp;u=https://ribafs.org/portal" target="_blank" rel="noopener noreferrer">Google Translator </a></b></p></div>
+</div></div></div></div></div></div></section><header id="sp-header"><div class="container"><div class="row"><div id="sp-logo" class="col-xs-8 col-sm-2 col-md-2"><div class="sp-column "><h1 class="logo"> <a href="../../index.html">RibaFS Portal</a></h1></div></div><div id="sp-menu" class="col-xs-4 col-sm-10 col-md-10"><div class="sp-column ">			<div class='sp-megamenu-wrapper'>
+				<a id="offcanvas-toggler" class="visible-sm visible-xs" aria-label="Helix Megamenu Options" href="introducao-ao-php.html#"><i class="fa fa-bars" aria-hidden="true" title="Helix Megamenu Options"></i></a>
+				<ul class="sp-megamenu-parent menu-fade hidden-sm hidden-xs"><li class="sp-menu-item"><a  href="../../index.html"  >Início</a></li><li class="sp-menu-item sp-has-child active"><a  href="../../basicos.html"  >Básicos</a><div class="sp-dropdown sp-dropdown-main sp-menu-right" style="width: 240px;"><div class="sp-dropdown-inner"><ul class="sp-dropdown-items"><li class="sp-menu-item"><a  href="../html.html"  >HTML</a></li><li class="sp-menu-item"><a  href="../javascript.html"  >JavaScript</a></li><li class="sp-menu-item"><a  href="../css.html"  >CSS</a></li><li class="sp-menu-item"><a  href="../jquery.html"  >jQuery</a></li><li class="sp-menu-item"><a  href="../bootstrap.html"  >Bootstrap</a></li><li class="sp-menu-item current-item active"><a  href="../php.html"  >PHP</a></li><li class="sp-menu-item"><a  href="../phpoo.html"  >PHPOO</a></li><li class="sp-menu-item"><a  href="../pdo.html"  >PDO</a></li><li class="sp-menu-item"><a  href="../ferramentas.html"  >Ferramentas</a></li><li class="sp-menu-item"><a  href="../outros.html"  >Outros</a></li></ul></div></div></li><li class="sp-menu-item sp-has-child"><a  href="../../servidores.html"  >Servidores</a><div class="sp-dropdown sp-dropdown-main sp-menu-right" style="width: 240px;"><div class="sp-dropdown-inner"><ul class="sp-dropdown-items"><li class="sp-menu-item"><a  href="../../servidores/desktop.html"  >Desktop</a></li><li class="sp-menu-item"><a  href="../../servidores/ubuntu-server.html"  >Ubuntu Server</a></li><li class="sp-menu-item"><a  href="../../servidores/shell-scripts.html"  >Shell Scripts</a></li><li class="sp-menu-item"><a  href="../../servidores/servidor-web.html"  >Servidor Web</a></li><li class="sp-menu-item"><a  href="../../servidores/servidor-sgbd.html"  >Servidor SGBD</a></li><li class="sp-menu-item sp-has-child"><a  href="../../servidores/postgresql.html"  >PostgreSQL</a><div class="sp-dropdown sp-dropdown-sub sp-menu-right" style="width: 240px;"><div class="sp-dropdown-inner"><ul class="sp-dropdown-items"><li class="sp-menu-item"><a  href="../../servidores/postgresql/introducao-ao-postgresql.html"  >Introdução</a></li><li class="sp-menu-item"><a  href="../../servidores/postgresql/projeto.html"  >Projeto</a></li><li class="sp-menu-item"><a  href="../../servidores/postgresql/dimensionamento.html"  >Dimensionamento</a></li></ul></div></div></li></ul></div></div></li><li class="sp-menu-item sp-has-child"><a  href="../../joomla-3.html"  >Joomla 3</a><div class="sp-dropdown sp-dropdown-main sp-menu-right" style="width: 240px;"><div class="sp-dropdown-inner"><ul class="sp-dropdown-items"><li class="sp-menu-item"><a  href="../../joomla-3/introducao.html"  >Introdução</a></li><li class="sp-menu-item"><a  href="../../joomla-3/seguranca.html"  >Segurança</a></li><li class="sp-menu-item"><a  href="../../joomla-3/instalacao.html"  >Instalação do Joomla</a></li><li class="sp-menu-item"><a  href="../../joomla-3/administracao.html"  >Administração</a></li><li class="sp-menu-item"><a  href="../../joomla-3/extensoes.html"  >Extensões</a></li><li class="sp-menu-item"><a  href="../../joomla-3/loja-simples.html"  >Loja Simples</a></li><li class="sp-menu-item"><a  href="../../joomla-3/dicas.html"  >Dicas</a></li></ul></div></div></li><li class="sp-menu-item sp-has-child"><a  href="javascript:void(0);"  >Frameworks</a><div class="sp-dropdown sp-dropdown-main sp-dropdown-mega sp-menu-right" style="width: 600px;"><div class="sp-dropdown-inner"><div class="row"><div class="col-sm-6"><ul class="sp-mega-group"><li class="sp-menu-item sp-has-child"><a class="sp-group-title" href="../../frameworks/cakephp-3.html"  >CakePHP 3</a><ul class="sp-mega-group-child sp-dropdown-items"><li class="sp-menu-item"><a  href="../../frameworks/cakephp-3/introducao.html"  >Introdução</a></li><li class="sp-menu-item"><a  href="../../frameworks/cakephp-3/instalacao.html"  >Instalação</a></li><li class="sp-menu-item"><a  href="../../frameworks/cakephp-3/configuracoes.html"  >Configurações</a></li><li class="sp-menu-item"><a  href="../../frameworks/cakephp-3/convencoes.html"  >Convenções</a></li><li class="sp-menu-item"><a  href="../../frameworks/cakephp-3/tutoriais.html"  >Tutoriais</a></li><li class="sp-menu-item"><a  href="../../frameworks/cakephp-3/dicas.html"  >Dicas</a></li><li class="sp-menu-item"><a  href="../../frameworks/cakephp-3/seguranca.html"  >Segurança</a></li><li class="sp-menu-item"><a  href="../../frameworks/cakephp-3/mvc-no-cakephp-3.html"  >MVC no CakePHP 3</a></li></ul></li></ul></div><div class="col-sm-6"><ul class="sp-mega-group"><li class="sp-menu-item sp-has-child"><a class="sp-group-title" href="../../frameworks/laravel-5.html"  >Laravel 5</a><ul class="sp-mega-group-child sp-dropdown-items"><li class="sp-menu-item"><a  href="../../frameworks/laravel-5/introducao.html"  >Introdução</a></li><li class="sp-menu-item"><a  href="../../frameworks/laravel-5/instalacao.html"  >Instalação</a></li><li class="sp-menu-item"><a  href="../../frameworks/laravel-5/configuracoes.html"  >Configurações</a></li><li class="sp-menu-item"><a  href="../../frameworks/laravel-5/routes.html"  >Routes</a></li><li class="sp-menu-item"><a  href="../../frameworks/laravel-5/dicas.html"  >Dicas</a></li><li class="sp-menu-item"><a  href="../../frameworks/laravel-5/tutoriais.html"  >Tutoriais</a></li></ul></li></ul></div></div></div></div></li><li class="sp-menu-item sp-has-child"><a  href="../../mobile.html"  >Mobile</a><div class="sp-dropdown sp-dropdown-main sp-menu-right" style="width: 240px;"><div class="sp-dropdown-inner"><ul class="sp-dropdown-items"><li class="sp-menu-item"><a  href="../../mobile/introducao.html"  >Introdução</a></li><li class="sp-menu-item"><a  href="../../mobile/ambiente.html"  >Ambiente</a></li><li class="sp-menu-item"><a  href="../../mobile/phaser.html"  >Phaser</a></li><li class="sp-menu-item"><a  href="../../mobile/monaca.html"  >Monaca</a></li><li class="sp-menu-item"><a  href="../../mobile/phonegap.html"  >PhoneGap</a></li><li class="sp-menu-item"><a  href="../../mobile/app-inventor.html"  >App Inventor</a></li><li class="sp-menu-item"><a  href="../../mobile/unity-3d.html"  >Unity 3D</a></li><li class="sp-menu-item"><a  href="../../mobile/intel-xdk.html"  >Intel XDK</a></li><li class="sp-menu-item"><a  href="../../mobile/outros.html"  >Outros</a></li><li class="sp-menu-item"><a  href="../../mobile/dicas.html"  >Dicas</a></li></ul></div></div></li><li class="sp-menu-item sp-has-child"><a  href="../../blog.html"  >Blog</a><div class="sp-dropdown sp-dropdown-main sp-menu-right" style="width: 240px;"><div class="sp-dropdown-inner"><ul class="sp-dropdown-items"><li class="sp-menu-item"><a  href="../../blog/reflexoes.html"  >Reflexões</a></li><li class="sp-menu-item"><a  href="../../blog/saude.html"  >Saúde</a></li><li class="sp-menu-item"><a  href="../../blog/diversos.html"  >Diversos</a></li><li class="sp-menu-item"><a  href="../../blog/estudos.html"  >Estudos</a></li></ul></div></div></li><li class="sp-menu-item sp-has-child"><a  href="../../curriculo.html"  >Sobre</a><div class="sp-dropdown sp-dropdown-main sp-menu-right" style="width: 240px;"><div class="sp-dropdown-inner"><ul class="sp-dropdown-items"><li class="sp-menu-item"><a  href="https://github.com/ribafs?tab=repositories" rel="noopener noreferrer" target="_blank" >Projetos</a></li><li class="sp-menu-item"><a  href="../../curriculo/livros.html"  >Livros</a></li><li class="sp-menu-item"><a  href="../../curriculo/curriculo.html"  >Currículo</a></li><li class="sp-menu-item"><a  href="../../curriculo/contato.html"  >Contato</a></li><li class="sp-menu-item"><a  href="../../curriculo/mapa-do-site.html"  >Mapa</a></li></ul></div></div></li></ul>			</div>
+		</div></div></div></div></header><section id="sp-page-title"><div class="row"><div id="sp-title" class="col-sm-12 col-md-12"><div class="sp-column "></div></div></div></section><section id="sp-main-body"><div class="container"><div class="row"><div id="sp-left" class="col-sm-3 col-md-3"><div class="sp-column custom-class"><div class="sp-module "><h3 class="sp-module-title">Novidades</h3><div class="sp-module-content"><div class="latestnews">
+	<div itemscope itemtype="http://schema.org/Article">
+		<a href="../../blog/diversos/traducao-de-sites-de-forma-muito-simples.html" itemprop="url">
+			<span itemprop="name">
+				Tradução de sites de forma muito simples			</span>
+		</a>
+		<small>29 Agosto 2019</small>
+	</div>
+	<div itemscope itemtype="http://schema.org/Article">
+		<a href="../../servidores/desktop/recuperar-senha-do-root.html" itemprop="url">
+			<span itemprop="name">
+				Recuperar senha do root			</span>
+		</a>
+		<small>23 Agosto 2019</small>
+	</div>
+	<div itemscope itemtype="http://schema.org/Article">
+		<a href="../../blog/reflexoes/quer-ficar-rico.html" itemprop="url">
+			<span itemprop="name">
+				Quer ficar rico?			</span>
+		</a>
+		<small>19 Agosto 2019</small>
+	</div>
+	<div itemscope itemtype="http://schema.org/Article">
+		<a href="cuidado-com-floats-em-linguagens.html" itemprop="url">
+			<span itemprop="name">
+				Cuidado com floats em Linguagens			</span>
+		</a>
+		<small>19 Julho 2019</small>
+	</div>
+	<div itemscope itemtype="http://schema.org/Article">
+		<a href="../../servidores/servidor-web/setando-permissoes.html" itemprop="url">
+			<span itemprop="name">
+				Setando Permissões			</span>
+		</a>
+		<small>12 Julho 2019</small>
+	</div>
+</div>
+</div></div><div class="sp-module "><h3 class="sp-module-title">Pensamento do Dia</h3><div class="sp-module-content"><div>Se não podes ter o trabalho de que gostas, gostas do que tens. (Desconhecido)
+</div>
+</div></div></div></div><div id="sp-component" class="col-sm-6 col-md-6"><div class="sp-column "><div id="system-message-container">
+	</div>
+
+
+<article class="item item-page" itemscope itemtype="http://schema.org/Article">
+	<meta itemprop="inLanguage" content="pt-BR" />
+	
+	
+
+	<div class="entry-header has-post-format">
+		<span class="post-format"><i class="fa fa-thumb-tack"></i></span>
+						<dl class="article-info">
+
+		
+			<dt class="article-info-term"></dt>	
+				
+							<dd class="createdby" itemprop="author" itemscope itemtype="http://schema.org/Person">
+	<i class="fa fa-user"></i>
+					<span itemprop="name" data-toggle="tooltip" title="Escrito por ">Ribamar FS</span>	</dd>			
+			
+							<dd class="category-name">
+	<i class="fa fa-folder-open-o"></i>
+				<a href="../php.html" itemprop="genre" data-toggle="tooltip" title="Categoria do Artigo">PHP</a>	</dd>			
+			
+							<dd class="published">
+	<i class="fa fa-calendar-o"></i>
+	<time datetime="2017-06-23T08:07:07-03:00" itemprop="datePublished" data-toggle="tooltip" title="Data de Publicação">
+		23 Junho 2017	</time>
+</dd>			
+		
+					
+			
+							<dd class="hits">
+	<span class="fa fa-eye"></span>
+	<meta itemprop="interactionCount" content="UserPageVisits:298" />
+	Acessos: 298</dd>					
+		
+
+	</dl>
+		
+					<h2 itemprop="name">
+									Introdução ao PHP							</h2>
+												</div>
+
+						
+<div class="icons">
+	
+					<div class="btn-group pull-right">
+				<button class="btn dropdown-toggle" type="button" id="dropdownMenuButton-16" aria-label="Ferramentas de usuário"
+				data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					<span class="icon-cog" aria-hidden="true"></span>
+					<span class="caret" aria-hidden="true"></span>
+				</button>
+								<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton-16">
+											<li class="print-icon"> <a href="introducao-ao-php.html@tmpl=component&amp;print=1&amp;layout=default.html" title="Imprimir o artigo < Introdução ao PHP >" onclick="window.open(this.href,'win2','status=no,toolbar=no,scrollbars=yes,titlebar=no,menubar=no,resizable=yes,width=640,height=480,directories=no,location=no'); return false;" rel="nofollow">			<span class="icon-print" aria-hidden="true"></span>
+		Imprimir	</a> </li>
+																<li class="email-icon"> <a href="../../component/mailto/index.html@tmpl=component&amp;template=shaper_helix3&amp;link=03975a14e3864287aa9ef473bafe10a5af767742.html" title="Envie este link a um amigo" onclick="window.open(this.href,'win2','width=400,height=450,menubar=yes,resizable=yes'); return false;" rel="nofollow">			<span class="icon-envelope" aria-hidden="true"></span>
+		Email	</a> </li>
+														</ul>
+			</div>
+		
+	</div>
+				
+	
+	
+				
+	
+			<div itemprop="articleBody">
+		<h3 style="text-align: justify;">Introdução ao PHP<br /><br /></h3>
+<p style="text-align: justify;"><strong>Iniciando na Programação com PHP</strong></p>
+<p style="text-align: justify;">Para poder programar com PHP precisamos de um servidor web. Então instalaremos em nosso computador o programa <a href="http://xampp.sf.net/">http://xampp.sf.net</a> que cria um diretório c:\xampp\htdocs, onde devemos criar nossos programas em PHP.</p>
+<p style="text-align: justify;">É importante saber que atualmente o PHP deve ser a linguagem mais popular para programar para a web. Acredito que a facilidade de programar, os recursos oferecidos por ele, a documentação farta em seu site (<a href="http://php.net/">http://php.net</a>) e a grande aceitação da comunidade foram responsáveis pela sua popularidade.</p>
+<p style="text-align: justify;">Veremos que com o PHP temos muitos recursos para criar sites e aplicativos.</p>
+<p style="text-align: justify;">Existe uma tradição para quando estamos iniciando a programar em qualquer linguagem, que é a de criar um programa bem simples, que apenas mostre uma frase na tela, no caso “Hello World!”. Veja nosso programa que mostra na tela essa mensagem traduzida:</p>
+<p style="text-align: justify;"><code> </code></p>
+<pre class="language-php"><code>&lt;?php
+
+    print “Olá Mundo!”;
+
+?&gt;
+</code></pre>
+<p style="text-align: justify;">Para ver como isso funciona precisamos criar um arquivo no diretório htdocs, com extensão .php e chamar este arquivo pelo navegador. Nosso diretório web é c:\xampp\htdocs</p>
+<p style="text-align: justify;">Vamos criar <strong>ola.php</strong> neste diretório, contendo:</p>
+<pre class="language-php"><code>&lt;?php
+
+    print "Olá Mundo!";
+
+?&gt;</code></pre>
+<p style="text-align: justify;">E chamar pelo navegador assim:</p>
+<p style="text-align: justify;"><a href="http://localhost/ola.php">http://localhost/ola.php</a></p>
+<p style="text-align: justify;">Então veremos a nossa frase</p>
+<p style="text-align: justify;">Olá Mundo!</p>
+<p style="text-align: justify;"><strong><br />Programando para Desktop com PHP</strong></p>
+<p style="text-align: justify;">Nada nos impede de criar aplicativos que serão usados apenas de forma offline usando o nosso PHP. Podemos tranquilamente usar para este fim. Para a criação de aplicativos, após dominar o básico do PHP, eu recomendo que use o Framework CakePHP ou outro da sua escolha.</p>
+<p style="text-align: justify;"> </p>
+<p style="text-align: justify;"><strong>PHP com HTML</strong></p>
+<p style="text-align: justify;">Vale lembrar que o PHP sempre fica do lado do servidor. Ele processa informações solicitadas pelo visitante e as devolve. Devolve tudo no formato HTML, juntamente com CSS e JavaScript, que ficam do lado do cliente.</p>
+<p style="text-align: justify;">Um código em PHP precisa iniciar com a TAG &lt;?php e terminar com ?&gt;. Qualquer arquivo que contenha código PHP precisa ter a extensão .php. Sendo assim, o interpretador do PHP não olhará para outros tipos de arquivos. E quando verificar arquivos .php somente processará os trechos entre &lt;?php e ?&gt;, o que estiver fora destas TAGs ele não olha.</p>
+<p style="text-align: justify;">O navegador interpreta todo código em HTML antes de mostrar na tela.<br /><br /></p>
+<p style="text-align: justify;"><strong>Separador de Instruções</strong></p>
+<p style="text-align: justify;">Observe que ao final da linha:</p>
+<p style="text-align: justify;">print "Como vai?";</p>
+<p style="text-align: justify;">Cada instrução do PHP termina com ponto e vírgula.</p>
+<p style="text-align: justify;">Instrução – é um comando único que damos ao PHP.</p>
+<p style="text-align: justify;">Exemplo: print “Olá”;</p>
+<p style="text-align: justify;">O PHP permite escrever mais de uma instrução por linha, mas devemos evitar, por conta de que fica obscuro o código.</p>
+<p style="text-align: justify;"><strong>Comentários</strong><br /> Em PHP existem três formas de se escrever comentários:</p>
+<p style="text-align: justify;">// - este é comentário oriundo do C++ e para apenas uma linha</p>
+<p style="text-align: justify;">/*</p>
+<p style="text-align: justify;">Este é o comentário oriundo do C</p>
+<p style="text-align: justify;">e para</p>
+<p style="text-align: justify;">múltiplas linhas</p>
+<p style="text-align: justify;">*/</p>
+<p style="text-align: justify;"># - Este é o comentário oriundo do shell, para uma única linha e que deve ser evitado, pois está em processo de obsolescência.</p>
+<p style="text-align: justify;"><strong>Estruturas de Controle</strong></p>
+<p style="text-align: justify;">Vejamos um pequeno trecho de código mais útil e interessante. Suponha que seu colégio tenha suas 4 notas dos 4 bimestres e precise fazer o cálculo para saber se você passou. Ele tem uma fórmula que é somar as 4 notas e dividir tudo por 4 para tirar a média. Veja:</p>
+<p style="text-align: justify;">Vamos criar um arquivo notas.php com o conteúdo abaixo ou testar diretamente no php-console, sem as tags inicial e final.</p>
+<p style="text-align: justify;"><strong>IF - ELSE</strong></p>
+<pre class="language-php"><code>&lt;?php
+
+$aluno = '&lt;b&gt;Elias EF&lt;/b&gt;';
+
+$nota1 = 10;
+$nota2 = 9;
+$nota3 = 7;
+$nota4 = 5;
+
+$resultado = ($nota1 + $nota2 + $nota3 + $nota4) / 4;
+
+if( $resultado &gt;= 7 ){
+    print "O aluno $aluno foi aprovado, com nota $resultado";
+}else{
+    print 'O aluno não passou!';
+}
+</code></pre>
+<p style="text-align: justify;"><strong>Variáveis</strong></p>
+<p style="text-align: justify;">Como o nome sugere seu valor varia. Vejamos.</p>
+<p style="text-align: justify;">Uma variável tem:</p>
+<p style="text-align: justify;">nome - $aluno, que é o nome precedido de $.</p>
+<p style="text-align: justify;">valor - 'Elias EF'</p>
+<p style="text-align: justify;">tipo – string (acontece que o PHP não declara tipos de variáveis)</p>
+<p style="text-align: justify;"><strong>Tipos de Dados</strong></p>
+<p style="text-align: justify;">O tipo de dados de uma variável será reconhecido quando o código for executado:</p>
+<p style="text-align: justify;">string, inteiro, float/double, boleano, array, objeto e resource.</p>
+<p style="text-align: justify;"><strong>Nome</strong><strong>s de</strong><strong> Variáveis</strong></p>
+<ul style="text-align: justify;">
+<li>
+<p>O nome das variáveis precisa começar com uma letra ou pelo símbolo de sublinhado</p>
+</li>
+<li>
+<p>O nome de variáveis pode conter somente caracteres alfa-numéricos e sublinhado: a-z, A-Z, 0-9 e _ .</p>
+</li>
+<li>
+<p>Não pode conter espaços. Quando várias palavras podemos usar o sublinhado para separá-las: $minha_variavel.</p>
+</li>
+</ul>
+<p style="text-align: justify;">As variáveis podem ter seu valor alterado durante a execução do script, daí seu nome.</p>
+<p style="text-align: justify;"><strong>Atribuição</strong></p>
+<p style="text-align: justify;">Se eu quiser guardar a primeira nota na variável $nota1, então preciso atribuir 10 para $nota1, assim:</p>
+<p style="text-align: justify;">$nota1 = 10;</p>
+<p style="text-align: justify;">Veja que usamos o sinal de igual para atribuir e terminamos com ponto e vírgula.</p>
+<p style="text-align: justify;">Posso atribuir um valor diretamente para uma variável, mas veja que também posso atribuir uma fórmula bem grande para a variável, assim:</p>
+<p style="text-align: justify;">$resultado = ($nota1 + $nota2 + $nota3 + $nota4) / 4;<br /> Parecido com uma calculadora o PHP fará os cálculos e guardará o valor na variável $resultado.</p>
+<p style="text-align: justify;">Na próxima linha ele vai testar o valor do $resultado. (if( $resultado &gt;= 7 ){)</p>
+<p style="text-align: justify;">Se for maior ou igual a 7 ele mostrará a primeira mensagem.</p>
+<p style="text-align: justify;">Caso contrário então mostrará a segunda mensagem. (}else{)</p>
+<p style="text-align: justify;">Vejamos mais um exemplo prático e interessante de uso do PHP</p>
+<p style="text-align: justify;"><strong>IF – ELSE IF – ELSE</strong></p>
+<p style="text-align: justify;">if (expressao){</p>
+<p style="text-align: justify;">executado de true e encessa o teste.</p>
+<p style="text-align: justify;">}else if (expressao2){</p>
+<p style="text-align: justify;">executado se true e encessa o teste.</p>
+<p style="text-align: justify;">}else if (expressao3){</p>
+<p style="text-align: justify;">executado se true e encessa o teste.</p>
+<p style="text-align: justify;">}else if (expressaoN){</p>
+<p style="text-align: justify;">executado se true e encessa o teste.</p>
+<p style="text-align: justify;">}else{</p>
+<p style="text-align: justify;">executado se false</p>
+<p style="text-align: justify;">}</p>
+<p style="text-align: justify;">Lembrando que somente entra no próximo teste, se o anterior for falso.</p>
+<pre class="language-php"><code>&lt;?php
+
+$hora = 14;
+
+if ($hora &lt;= 12) {
+
+    print “Está de manhã”;
+ }else if ($hora &gt; 12 &amp;&amp; $hora &lt; 18 ){
+
+    print “Está de tarde”;
+ }el se{
+
+    print “Está de noite”;
+}
+</code></pre>
+<p style="text-align: justify;"><strong>if - else</strong></p>
+<p style="text-align: justify;">O <strong>if</strong> testa uma expressão</p>
+<p style="text-align: justify;">Caso a expressão seja verdadeira, todo o código após o <strong>if</strong> será executado.</p>
+<p style="text-align: justify;">Caso não seja verdadeira o código após o <strong>else</strong> será executado.</p>
+<p style="text-align: justify;"><strong>i</strong><strong>f – eles if – else</strong><br /> O <strong>if</strong> testa uma expressão<br /> Caso a expressão seja verdadeira, todo o código após o <strong>if</strong> será executado.</p>
+<p style="text-align: justify;">Caso a expressão seja falsa então o else if testará uma nova expressão</p>
+<p style="text-align: justify;">Caso a nova expressão seja verdadeira o código após o else if será executado<br /> Caso a nova expressão seja falsa, o código após o else ou o novo else if será</p>
+<p style="text-align: justify;">executado</p>
+<p style="text-align: justify;"><strong>Criando Strings</strong></p>
+<p style="text-align: justify;">Strings pequenas, com apenas uma linha podem ser mostradas com print ou echo, mas textos com várias linhas podem ser armazenados com o recurso chamado Heredoc:</p>
+<p style="text-align: justify;"><em><strong>Armazenando o texto numa variável</strong></em></p>
+<pre class="language-php"><code>&lt;?php
+$str = &lt;&lt;&lt;EOD
+Exemplo de uma string
+distribuída em várias linhas
+utilizando a sintaxe heredoc.
+EOD;
+</code></pre>
+<p style="text-align: justify;"><em><strong>Ou simplesmente mostrando</strong></em></p>
+<pre class="language-php"><code>&lt;?php
+echo &lt;&lt;&lt;show
+
+&lt;a href="/portal/index.php"&gt;Início&lt;/a&gt;
+&lt;h3&gt;Edite Seus Dados&lt;/h3&gt;
+&lt;form action="update.php" method="post"&gt;
+&lt;table width="500" border="1"&gt;
+    &lt;tr&gt;
+        &lt;th scope="row"&gt;Nome&lt;/th&gt;
+            &lt;td&gt;&lt;input type="text" name="nome" value="$nome"&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;th scope="row"&gt;Nascimento&lt;/th&gt;
+            &lt;td&gt;&lt;input type="text" name="data_nasc" value=$data_nasc&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;th scope="row"&gt;E-mail&lt;/th&gt;
+            &lt;td&gt;&lt;input type="text" name="email" value="$email"&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+&lt;/form&gt;
+
+show;
+</code></pre>
+<p style="text-align: justify;"><strong>Mais uma estrutura interessante do PHP - </strong><strong>Switch</strong></p>
+<p style="text-align: justify;">switch – Este testa uma variável contra alguns valores. Parece com um bloco de if else if. Quando encontra o valor correto executa o código seguinte e sai da iteração.</p>
+<pre class="language-php"><code>&lt;?php
+
+$opcao = 3;
+
+switch ($opcao) {
+    case 1:
+        print 1;
+        break;
+    case 2:
+        print 2;
+        break;
+    case 3:
+        print 3;
+        break;
+    case 4:
+        print 4;
+        break;
+    case 5:
+        print 5;
+        break;
+    default:
+        print 'Nenhuma das anteriores';
+        break;
+}
+</code></pre>
+<p style="text-align: justify;">Obs.: Caso removamos um dos comandos break o código continua no próximo case.</p>
+<p style="text-align: justify;"><strong>Laços: for, while, forwach</strong></p>
+<p style="text-align: justify;">Estruturas que resolvem vários problemas com pouco esforço.</p>
+<p style="text-align: justify;"><strong>for</strong></p>
+<pre class="language-php"><code>&lt;?php
+
+for ($x = 1; $x &lt;= 10; $x++) {
+
+    print $x;
+}
+
+for ($x = 1; $x &lt;= 10; $x++) {
+
+    print $x . '&lt;br&gt;';
+}
+
+for ($x = 0; $x &lt; 10; $x++) {
+
+    print $x;
+}
+</code></pre>
+<p style="text-align: justify;">Existem variações de uso do for. No caso abaixo, como não temos teste do valor, o incremento continua indefinidamente:</p>
+<p style="text-align: justify;">for($x=0; ;$x++){</p>
+<p style="text-align: justify;">print $x;</p>
+<p style="text-align: justify;">}</p>
+<p style="text-align: justify;">Nestes casos precisamos inserir um teste no corpo do for, assim:</p>
+<pre class="language-php"><code>&lt;?php
+
+for ($x = 0;; $x++) {
+
+    if ($x &gt; 10) {
+
+        break;
+    }
+
+    print $x;
+}
+</code></pre>
+<p style="text-align: justify;"><strong>Continue</strong><br /> Este comando sai do laço e volta na próxima iteração, ou um certo número de comandos para sair do laço. Veja</p>
+<p style="text-align: justify;"> </p>
+<pre class="language-php"><code>&lt;?php
+
+for ($i = 0; $i &lt; 10; ++$i) {
+    if ($i &lt; 5) {
+        continue;
+    }
+    print "$i&lt;br&gt;";
+}
+</code></pre>
+<p style="text-align: justify;"> </p>
+<p style="text-align: justify;"><strong>Break</strong></p>
+<p style="text-align: justify;">Interrompe o laço, entregando o processamento para a linha seguinte ao laço.</p>
+<pre class="language-php"><code>&lt;?php
+for ($x = 0; $x &lt; 5; ++$x) {
+    if ($x == 2) {
+        break;
+    }
+    print "$x&lt;br&gt;";
+}</code></pre>
+<p style="text-align: justify;">Experimente.</p>
+<p style="text-align: justify;"><strong>foreach</strong></p>
+<p style="text-align: justify;">Laço através de um array.</p>
+<pre class="language-php"><code>&lt;?php
+
+$arr = array(1, 2, 3, 4);
+foreach ($arr as $value) {
+    $value = $value * 2;
+    print $value;
+}
+// $arr is now array(2, 4, 6, 8)
+unset($value); // Limpar a variável, que armazena o valor
+</code></pre>
+<p style="text-align: justify;"><strong>Colher Chave e Valor</strong></p>
+<pre class="language-php"><code>&lt;?php
+$arr = array(1, 2, 3, 4);
+foreach ($arr as $chave =&gt; $value) {
+    $value = $value * 2;
+    print 'Chave: ' . $chave . ' - Valor: ' . $value . '&lt;br&gt;';
+}
+unset($valor); // Limpar a variável, que armazena o valor
+</code></pre>
+<p style="text-align: justify;">Existe muito mais recursos, mas me parece que já dá para perceber isso com estes exemplos mostrados.</p>
+<p style="text-align: justify;">Qualquer dúvida sobre qualquer comando do PHP vá até o site oficial em <a href="http://php.net/">http://php.net</a> e faça uma busca pelo comando, que verá a sintaxe e muitos exemplos de uso.</p>
+<p style="text-align: justify;"><strong>Atribuição</strong></p>
+<p style="text-align: justify;">Atribuir um valor para uma variável é entregar um valor para ela guardar.</p>
+<p style="text-align: justify;">Exemplo</p>
+<p style="text-align: justify;">$variavel = 5;</p>
+<p style="text-align: justify;">Estamos acima dizendo que a variavel guarde o valor 5.</p>
+<p style="text-align: justify;"> </p>
+<p style="text-align: justify;"><strong>Comparação</strong></p>
+<p style="text-align: justify;">Comparação é o que fazemos em uma expressão geralmente em if.</p>
+<p style="text-align: justify;">Exemplo</p>
+<p style="text-align: justify;">if($x==3)</p>
+<p style="text-align: justify;">Estou querendo dizer acima: se $x for igual a 3.</p>
+<p style="text-align: justify;">Veja que quando queremos atribuir usamos apenas um sinal de igualdade:</p>
+<p style="text-align: justify;">$x = 3;</p>
+<p style="text-align: justify;">Quando queremos comparar usamos dois sinais de igualdade: if($x == 3)</p>
+<p style="text-align: justify;"><strong>Usando = e == ou ===</strong></p>
+<p style="text-align: justify;">Com = armazenamos um valor em uma variável.</p>
+<p style="text-align: justify;">Com == eu testo se uma variável é igual a um valor.</p>
+<p style="text-align: justify;"> </p> 	</div>
+
+	
+	
+	<ul class="pager pagenav">
+	<li class="previous">
+		<a class="hasTooltip" title="Usando locales com PHP" aria-label="Artigo anterior: Usando locales com PHP" href="usando-locales-com-php.html" rel="prev">
+			<span class="icon-chevron-left" aria-hidden="true"></span> <span aria-hidden="true">Ant</span>		</a>
+	</li>
+	<li class="next">
+		<a class="hasTooltip" title="Arquivos e Diretórios" aria-label="Próximo artigo: Arquivos e Diretórios" href="arquivos-e-diretorios.html" rel="next">
+			<span aria-hidden="true">Próximo</span> <span class="icon-chevron-right" aria-hidden="true"></span>		</a>
+	</li>
+</ul>
+				
+	
+	<script type="text/x-template" id="ccomment-pagination">
+	<nav class="pagination text-center" v-if="pagination.last_page > 0">
+		<ul >
+			<li v-if="showPrevious()" :class="{ 'disabled' : pagination.current_page <= 1 }">
+				<span v-if="pagination.current_page <= 1">
+					<span aria-hidden="true">Ant</span>
+				</span>
+				<a href="introducao-ao-php.html#" v-if="pagination.current_page > 1 " :aria-label="config.ariaPrevioius"
+				   @click.prevent="changePage(pagination.current_page - 1)">
+					<span aria-hidden="true">Ant</span>
+				</a>
+			</li>
+			<li v-for="num in array" :class="{ 'active': num === pagination.current_page }">
+				<a href="introducao-ao-php.html#" @click.prevent="changePage(num)">{{ num }}</a>
+			</li>
+			<li v-if="showNext()"
+			    :class="{ 'disabled' : pagination.current_page === pagination.last_page || pagination.last_page === 0 }">
+				<span v-if="pagination.current_page === pagination.last_page || pagination.last_page === 0">
+					<span aria-hidden="true">Próximo</span>
+				</span>
+				<a href="introducao-ao-php.html#" v-if="pagination.current_page < pagination.last_page" :aria-label="config.ariaNext"
+				   @click.prevent="changePage(pagination.current_page + 1)">
+					<span aria-hidden="true">Próximo</span>
+				</a>
+			</li>
+		</ul>
+	</nav>
+</script>
+	<script type="text/x-template" id="ccomment-avatar">
+		<div class="ccomment-avatar">
+			<a v-if="profileLink" v-bind:href="profileLink">
+				<img v-bind:src="avatar"/>
+			</a>
+			<img v-else v-bind:src="avatar"/>
+		</div>
+	</script>
+
+	<script type="text/x-template" id="ccomment-user-name">
+		<a v-if="profileLink" :href="profileLink">
+			<span class="ccomment-author">{{name}}</span>
+		</a>
+		<span v-else class="ccomment-author">{{name}}</span>
+	</script>
+
+	<script type="text/x-template" id="ccomment-created">
+		<a :href="'#!/ccomment-comment=' + id" class="muted ccomment-created">
+			{{date}}
+		</a>
+	</script>
+
+	<div id="ccomment-token" style="display:none;">
+		<input type="hidden" name="796296c0a9019553ed4bbba150ad5a40" value="1" />	</div>
+
+	
+<script type="text/x-template" id="ccomment-customfields">
+	<div class="ccomment-customfields" v-if="customfields">
+		<strong>Campos personalizados</strong>
+		<dl class="dl-horizontal">
+			<template v-for="customfield in customfields">
+				<dt>{{customfield.title}}</dt>
+				<dd>{{customfield.value}}</dd>
+			</template>
+		</dl>
+	</div>
+</script>
+
+<script type="text/x-template" id="ccomment-template">
+	<li v-bind:class="model.class+' ccomment-level-'+model.level">
+		<div class="ccomment-comment-content" v-bind:id="'ccomment-comment-'+model.id">
+			<div class="ccomment-data">
+									<ccomment-avatar
+							v-bind:avatar="model.avatar"
+							v-bind:profileLink="model.profileLink"/>
+								<div class="ccomment-content">
+					<div class="ccomment-meta">
+						<ccomment-user-name v-bind:name="model.name" v-bind:profileLink="model.profileLink"></ccomment-user-name>
+						<ccomment-created v-bind:date="model.date" v-bind:id="model.id"></ccomment-created>
+					</div>
+
+					<div v-html="model.comment">
+					</div>
+
+
+					<div v-if="model.galleria" class="js-ccomment-galleria galleria ccomment-galleria"></div>
+
+					<ccomment-customfields v-bind:customfields="model.customfields"></ccomment-customfields>
+					<div class="ccomment-actions">
+													<span class="muted">
+					{{model.votes}}
+					<i class="ccomment-thumbs-up ccomment-voting" v-on:click="vote(+1, model.id)"></i>
+					<i class="ccomment-thumbs-down ccomment-voting" v-on:click="vote(-1, model.id)"></i>
+				</span>
+						
+													<button class="btn btn-small ccomment-quote btn-link" v-on:click="quote(model.id)">
+								Citar							</button>
+						
+						
+						<div class="pull-right ccomment-moderation">
+							<button v-if="model.commentModerator" class="btn btn-mini btn-ccomment-edit" v-on:click="edit(model.id)">
+								Editar							</button>
+
+													</div>
+					</div>
+				</div>
+			</div>
+
+
+			<keep-alive>
+				<ccomment-form v-if="reply" :ref="'form-'+model.id" v-bind:focus="true">
+					<input slot="parent-id" name="jform[parentid]" type="hidden" v-bind:value="model.id"/>
+				</ccomment-form>
+			</keep-alive>
+		</div>
+
+		<ul v-if="hasChildren">
+			<ccomment-comment class="item" v-for="model in getChild()" v-bind:key="model.id" v-bind:model="model">
+			</ccomment-comment>
+		</ul>
+	</li>
+
+</script>
+	
+	
+
+		<script type="text/x-template" id="ccomment-form">
+			<form class="ccomment-form" v-on:submit.prevent="onSubmit">
+				<div class="ccomment-error-form row-fluid  margin-bottom" v-if="error">
+					<div class="alert alert-error">
+						{{errorMessage}}
+					</div>
+				</div>
+				<div class="ccomment-info-form row-fluid  margin-bottom" v-if="info">
+					<div class="alert alert-info">
+						{{infoMessage}}
+					</div>
+				</div>
+				<div class="row-fluid margin-bottom">
+											<div class="span1 hidden-phone">
+							<ccomment-avatar v-bind:avatar="getAvatar"></ccomment-avatar>
+						</div>
+					
+					<div class="span11">
+						<textarea v-on:focus="toggle"
+								  name="jform[comment]"
+								  class='js-ccomment-textarea ccomment-textarea span12 required'
+								  placeholder="Deixe um comentário"
+						></textarea>
+
+						<div v-show="uploadImage">
+							
+<div class="fileupload">
+	<!-- The fileupload-buttonbar contains buttons to add/delete files and start/cancel the upload -->
+	<div class="row fileupload-buttonbar">
+		<input type="file" name="files[]" class="js-ccomment-file-upload-real ccomment-file-upload-real" multiple/>
+		<div class="">
+			<!-- The global file processing state -->
+			<span class="fileupload-process"><span class="fa fa-spinner fa-pulse"></span></span>
+			Attach images by dragging & dropping or <span type="button" class="js-file-upload-fake ccomment-file-upload-fake btn-link"> by selecting them.</span>			<br/>
+			<small class="muted">The maximum file size for uploads is <strong>MB</strong>.				Only <strong></strong> files are allowed.</small>
+
+			<!-- The global progress state -->
+			<div class="fileupload-progress fade hide">
+				<!-- The global progress bar -->
+				<div class="progress progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+					<div class="progress-bar progress-bar-success" style="width:0%;"></div>
+				</div>
+				<!-- The extended global progress state -->
+				<div class="progress-extended">&nbsp;</div>
+			</div>
+			<div class="ccomment-file-list">
+				<div class="alert alert-error hide compojoom-max-number-files">
+					The maximum number of 3 allowed files to upload has been reached. If you want to upload more files you have to delete one of the existing uploaded files first.				</div>
+				<table role="presentation" class="table table-striped">
+					<thead></thead>
+					<tbody class="files"></tbody>
+				</table>
+				<div class="alert alert-error hide compojoom-max-number-files">
+					The maximum number of 3 allowed files to upload has been reached. If you want to upload more files you have to delete one of the existing uploaded files first.				</div>
+			</div>
+		</div>
+	</div>
+</div>
+						</div>
+
+						<div v-show="active">
+							<div class="span4 muted small">
+								Postando como																	<button type="button"
+											v-on:click="display = !display"
+											class="btn-link btn-small ccomment-posting-as">{{getDefaultName}}
+									</button>
+															</div>
+															<label class="checkbox pull-right small ccomment-notify">
+									<input type="checkbox" value="1" name="jform[notify]ƒ"
+										   v-on:click="notify = !notify"/>
+									<span class="muted">
+										Notificar-me de futuros comentários via e-mail									</span>
+								</label>
+							
+
+						</div>
+					</div>
+											<div v-show="display"
+							 class="row-fluid ccomment-user-info offset1					span11">
+							<div class="span6">
+								<input name="jform[name]"
+									   class="ccomment-name span12 no-margin "
+									   type='text'
+									   v-bind:value="getName"
+									   v-on:input="updateDefaultName"
+																			   placeholder="Informe seu nome"
+									   tabindex="2"
+																	/>
+								<span class="help-block pull-right small muted">
+								Exibido ao lado de seus comentários.							</span>
+							</div>
+
+															<div class="span6">
+									<input name='jform[email]'
+										   class="ccomment-email span12 no-margin "
+										   type='text'
+										   v-bind:value='getEmail'
+										   v-on:input="updateUserEmail"
+										   placeholder="Informe seu email"
+																				   tabindex="3"
+																			/>
+									<p class="help-block small pull-right muted">
+										Não exibido publicamente.																					<span class='gravatar'>
+											<a href='http://gravatar.com' target='_blank'>Gravatar</a> habilitado										</span>
+																			</p>
+								</div>
+													</div>
+					
+
+					
+					
+
+					<div class="row-fluid ccomment-actions" v-show="active">
+													<div class="pull-left muted small ccomment-undergo-moderation offset1">
+								Comentários serão submetidos a moderação antes de serem publicados.							</div>
+												<div class="pull-right">
+							<button v-on:click="reset()"
+									type="button"
+									class="btn ccomment-cancel">
+								Cancelar</button>
+							<button type="submit" class='btn btn-primary ccomment-send'
+									tabindex="7"
+									name='bsend'>
+								<span v-if="isSending">
+									Salvando...								</span>
+								<span v-else>
+									Enviar								</span>
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<input type="hidden" name="jform[contentid]" v-bind:value="itemConfig.contentid"/>
+				<input type="hidden" name="jform[component]" v-bind:value="itemConfig.component"/>
+				<input type="hidden" name="jform[page]" v-bind:value="page"/>
+				<slot name="parent-id"></slot>
+			</form>
+		</script>
+
+	
+
+
+
+
+<!-- The template to display files available for upload -->
+<script id="template-upload" type="text/x-tmpl">
+{% for (var i=0, file; file=o.files[i]; i++) { %}
+    <tr class="template-upload fade">
+        <td>
+            <span class="preview"></span>
+        </td>
+        <td>
+         <span class="name"><i>{%=file.name%}</i></span>
+            <div class="compojoom-single-file-progress">
+	            <div class="progress progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+	                <div class="progress-bar progress-bar-success" style="width:0%;"></div>
+	            </div>
+	           <small><strong class="size">Processing...</strong></small>
+			</div>
+        </td>
+        <td>
+            {% if (!i && !o.options.autoUpload) { %}
+                <button class="btn btn-default btn-xs start" disabled>
+                    <i class="fa fa-upload"></i>
+                    <span>Start</span>
+                </button>
+            {% } %}
+            {% if (!i) { %}
+                <button class="btn btn-default btn-xs btn-xs cancel pull-left">
+                    <i class="fa fa-stop"></i>
+                    <span>Cancel</span>
+                </button>
+            {% } %}
+        </td>
+    </tr>
+{% } %}
+</script>
+
+<!-- The template to display files available for download -->
+<script id="template-download" type="text/x-tmpl">
+{% for (var i=0, file; file=o.files[i]; i++) { %}
+    <tr class="template-download fade">
+        <td style="">
+        {% if (file.thumbnailUrl) { %}
+            <span class="preview">
+                {% if (file.url) { %}
+					<a href="http://backup/portal/{%=file.url%}" title="{%=file.name%}" download="{%=file.name%}" data-gallery>
+						<img src='http://backup/portal/basicos/php/{%=file.thumbnailUrl%}'>
+					</a>
+				{% } else { %}
+					<img src='http://backup/portal/basicos/php/{%=file.thumbnailUrl%}'>
+				{% } %}
+            </span>
+		{% } %}
+        </td>
+        <td>
+        {% if (!file.error) { %}
+	        <div class="file-meta">
+			    <div class="row">
+			        <div class="col-lg-4">
+			           <input type="text" class="form-control"
+			                placeholder="Title"
+							name="jform[picture_data][{%=file.name%}][title]"
+					        value="{%=file.title%}" />
+			        </div>
+			        <div class="col-lg-8">
+			            <input type="text" placeholder="Description" class="form-control"
+					                name="jform[picture_data][{%=file.name%}][description]"
+
+					                value="{%=file.description%}" />
+			        </div>
+			    </div>
+	        </div>
+		 {% } %}
+        {% if (file.error) { %}
+            <div><span class="label label-danger">Error</span> {%=file.error%}</div>
+        {% } %}
+        </td>
+        <td style="text-align: center">
+            {% if (file.deleteUrl) { %}
+                            {% } else { %}
+                 <button class="btn btn-default btn-xs btn-xs cancel">
+                    <i class="fa fa-stop"></i>
+                    <span>Cancel</span>
+                </button>
+            {% }%}
+            {% if (!file.error) { %}
+            <input type="hidden" name="jform[picture][]" value="{%=file.name%}" />
+            {% } %}
+        </td>
+    </tr>
+{% } %}
+</script>
+	
+<script type="text/x-template" id="ccomment-menu">
+	<div class="row-fluid ccomment-menu">
+		<h4 class="pull-left">
+			Comentários			(<span class="ccomment-comment-counter">{{pagination.total_with_children}}</span>)
+		</h4>
+		<div class="pull-right">
+							<button
+						v-on:click="newComment"
+						class="ccomment-add-new btn btn-mini" title='Adicionar Novo'>
+					Adicionar Novo				</button>
+														</div>
+	</div>
+</script>
+
+	<!-- the ccomment root element -->
+	<div class="ccomment" id="ccomment">
+
+		<ccomment-menu></ccomment-menu>
+
+		
+		
+		<ul class="ccomment-comments-list">
+			<ccomment-comment v-for="item in comments"
+							  v-if="item.parentid === -1"
+							  class="item"
+							  v-bind:key="item.id"
+							  v-bind:model="item">
+			</ccomment-comment>
+		</ul>
+
+					<pagination v-if="pagination.last_page > 1" :pagination="pagination" :callback="loadData" :options="paginationOptions"></pagination>
+		
+					<ccomment-form></ccomment-form>
+		
+			<div class="row-fluid small muted ccomment-powered">
+		<p class="text-center">
+			Comments fornecido por <a href='https://compojoom.com' rel='nofollow' target='_blank'>CComment</a>		</p>
+	</div>
+	</div>
+
+	<script type="text/javascript">
+		window.compojoom = compojoom = window.compojoom || {};
+		compojoom.ccomment = {
+			user: {"loggedin":false,"avatar":"http:\/\/backup\/portal\/media\/com_comment\/images\/noavatar.png"},
+			item: {"contentid":16,"component":"com_content","count":0},
+			config: {"comments_per_page":0,"sort":0,"tree":0,"use_name":0,"tree_depth":5,"form_position":0,"voting":1,"copyright":1,"pagination_position":0,"avatars":0,"gravatar":1,"support_ubb":1,"support_emoticons":0,"support_picture":0,"name_required":0,"email_required":0,"baseUrl":"http:\/\/backup\/portal\/","langCode":null,"file_upload":{"url":"http:\/\/backup\/portal\/index.php?option=com_comment&amp;task=multimedia.doIt","formControl":"jform","fieldName":"picture","maxNumberOfFiles":3,"fileTypes":null,"maxSize":null,"component":"com_comment","imageSize":{"x":"2400","y":"1800"}}}		};
+	</script>
+
+<script data-inline type="text/javascript" src="../../media/com_comment/cache/8e12eb270706cd6b2c8483104bf89b54.min.js"></script>
+			<div class="article-footer-wrap">
+			<div class="article-footer-top">
+									<div class="helix-social-share">
+		<div class="helix-social-share-icon">
+			<ul>
+				
+				<li>
+					<div class="facebook" data-toggle="tooltip" data-placement="top" title="Share On Facebook">
+
+						<a class="facebook" onClick="window.open('http://www.facebook.com/sharer.php?u=http://backup/portal/basicos/php/introducao-ao-php.html','Facebook','width=600,height=300,left='+(screen.availWidth/2-300)+',top='+(screen.availHeight/2-150)+''); return false;" href="http://www.facebook.com/sharer.php?u=http://backup/portal/basicos/php/introducao-ao-php.html">
+
+							<i class="fa fa-facebook"></i>
+						</a>
+
+					</div>
+				</li>
+				<li>
+					<div class="twitter"  data-toggle="tooltip" data-placement="top" title="Share On Twitter">
+						
+						<a class="twitter" onClick="window.open('http://twitter.com/share?url=http://backup/portal/basicos/php/introducao-ao-php.html&amp;text=Introdução%20ao%20PHP','Twitter share','width=600,height=300,left='+(screen.availWidth/2-300)+',top='+(screen.availHeight/2-150)+''); return false;" href="http://twitter.com/share?url=http://backup/portal/basicos/php/introducao-ao-php.html&amp;text=Introdução%20ao%20PHP">
+							<i class="fa fa-twitter"></i>
+						</a>
+
+					</div>
+				</li>
+				<li>
+					<div class="google-plus">
+						<a class="gplus" data-toggle="tooltip" data-placement="top" title="Share On Google Plus" onClick="window.open('https://plus.google.com/share?url=http://backup/portal/basicos/php/introducao-ao-php.html','Google plus','width=585,height=666,left='+(screen.availWidth/2-292)+',top='+(screen.availHeight/2-333)+''); return false;" href="https://plus.google.com/share?url=http://backup/portal/basicos/php/introducao-ao-php.html" >
+						<i class="fa fa-google-plus"></i></a>
+					</div>
+				</li>
+				
+				<li>
+					<div class="linkedin">
+						<a class="linkedin" data-toggle="tooltip" data-placement="top" title="Share On Linkedin" onClick="window.open('http://www.linkedin.com/shareArticle?mini=true&url=http://backup/portal/basicos/php/introducao-ao-php.html','Linkedin','width=585,height=666,left='+(screen.availWidth/2-292)+',top='+(screen.availHeight/2-333)+''); return false;" href="http://www.linkedin.com/shareArticle?mini=true&url=http://backup/portal/basicos/php/introducao-ao-php.html" >
+							
+						<i class="fa fa-linkedin-square"></i></a>
+					</div>
+				</li>
+			</ul>
+		</div>		
+	</div> <!-- /.helix-social-share -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			</div>
+					</div>
+	
+</article>
+</div></div><div id="sp-right" class="col-sm-3 col-md-3"><div class="sp-column class2"><div class="sp-module pop"><h3 class="sp-module-title">Populares</h3><div class="sp-module-content"><ul class="mostreadpop mod-list">
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="http://backup/portal/mobile/phaser/atualizar-o-node-js.html" itemprop="url">
+			<span itemprop="name">
+				Atualizar o Node.JS			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../../joomla-3/dicas/melhorando-a-velocidade-do-site.html" itemprop="url">
+			<span itemprop="name">
+				Melhorando a velocidade do site			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="http://backup/portal/basicos/php/boas-vindas.html" itemprop="url">
+			<span itemprop="name">
+				Boas Vindas!			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../../joomla-3/instalacao.html" itemprop="url">
+			<span itemprop="name">
+				Instalação do Joomla			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../../blog/diversos/e-possivel-viver-sem-o-google.html" itemprop="url">
+			<span itemprop="name">
+				É possível viver sem o Google?			</span>
+		</a>
+	</li>
+</ul>
+</div></div><div class="sp-module "><h3 class="sp-module-title">Novo Testamento</h3><div class="sp-module-content">Então mandou à multidão que se assentasse no chão,
+
+<br>(Mt, 15:35) 
+</div></div><div class="sp-module "><h3 class="sp-module-title">Rotas no Mapa do Google</h3><div class="sp-module-content"><a href="https://www.google.com/maps/dir///@-3.7294526,-38.5422647,15z" target="_blank">Abrir o Mapa</a>
+</div></div></div></div></div></div></section><footer id="sp-footer"><div class="container"><div class="row"><div id="sp-footer1" class="col-sm-12 col-md-12"><div class="sp-column "><span class="sp-copyright">© 2015 Ribamar FS. All Rights Reserved. Designed By JoomShaper</span></div></div></div></div></footer>            </div> <!-- /.body-innerwrapper -->
+        </div> <!-- /.body-innerwrapper -->
+
+        <!-- Off Canvas Menu -->
+        <div class="offcanvas-menu">
+            <a href="introducao-ao-php.html#" class="close-offcanvas" aria-label="Close"><i class="fa fa-remove" aria-hidden="true" title="HELIX_CLOSE_MENU"></i></a>
+            <div class="offcanvas-inner">
+                                  <div class="sp-module _menu"><h3 class="sp-module-title">Menu Principal</h3><div class="sp-module-content"><ul class="nav menu">
+<li class="item-101"><a href="../../index.html" > Início</a></li><li class="item-107  active deeper parent"><a href="../../basicos.html" > Básicos</a><span class="offcanvas-menu-toggler collapsed" data-toggle="collapse" data-target="#collapse-menu-107"><i class="open-icon fa fa-angle-down"></i><i class="close-icon fa fa-angle-up"></i></span><ul class="collapse" id="collapse-menu-107"><li class="item-112"><a href="../html.html" > HTML</a></li><li class="item-113"><a href="../javascript.html" > JavaScript</a></li><li class="item-114"><a href="../css.html" > CSS</a></li><li class="item-116"><a href="../jquery.html" > jQuery</a></li><li class="item-117"><a href="../bootstrap.html" > Bootstrap</a></li><li class="item-118  current active"><a href="../php.html" > PHP</a></li><li class="item-119"><a href="../phpoo.html" > PHPOO</a></li><li class="item-120"><a href="../pdo.html" > PDO</a></li><li class="item-157"><a href="../ferramentas.html" > Ferramentas</a></li><li class="item-287"><a href="../outros.html" > Outros</a></li></ul></li><li class="item-108  deeper parent"><a href="../../servidores.html" > Servidores</a><span class="offcanvas-menu-toggler collapsed" data-toggle="collapse" data-target="#collapse-menu-108"><i class="open-icon fa fa-angle-down"></i><i class="close-icon fa fa-angle-up"></i></span><ul class="collapse" id="collapse-menu-108"><li class="item-121"><a href="../../servidores/desktop.html" > Desktop</a></li><li class="item-122"><a href="../../servidores/ubuntu-server.html" > Ubuntu Server</a></li><li class="item-123"><a href="../../servidores/shell-scripts.html" > Shell Scripts</a></li><li class="item-124"><a href="../../servidores/servidor-web.html" > Servidor Web</a></li><li class="item-156"><a href="../../servidores/servidor-sgbd.html" > Servidor SGBD</a></li><li class="item-193  deeper parent"><a href="../../servidores/postgresql.html" > PostgreSQL</a><span class="offcanvas-menu-toggler collapsed" data-toggle="collapse" data-target="#collapse-menu-193"><i class="open-icon fa fa-angle-down"></i><i class="close-icon fa fa-angle-up"></i></span><ul class="collapse" id="collapse-menu-193"><li class="item-232"><a href="../../servidores/postgresql/introducao-ao-postgresql.html" > Introdução</a></li><li class="item-233"><a href="../../servidores/postgresql/projeto.html" > Projeto</a></li><li class="item-234"><a href="../../servidores/postgresql/dimensionamento.html" > Dimensionamento</a></li></ul></li></ul></li><li class="item-148  deeper parent"><a href="../../joomla-3.html" > Joomla 3</a><span class="offcanvas-menu-toggler collapsed" data-toggle="collapse" data-target="#collapse-menu-148"><i class="open-icon fa fa-angle-down"></i><i class="close-icon fa fa-angle-up"></i></span><ul class="collapse" id="collapse-menu-148"><li class="item-149"><a href="../../joomla-3/introducao.html" > Introdução</a></li><li class="item-231"><a href="../../joomla-3/seguranca.html" > Segurança</a></li><li class="item-199"><a href="../../joomla-3/instalacao.html" > Instalação do Joomla</a></li><li class="item-152"><a href="../../joomla-3/administracao.html" > Administração</a></li><li class="item-153"><a href="../../joomla-3/extensoes.html" > Extensões</a></li><li class="item-154"><a href="../../joomla-3/loja-simples.html" > Loja Simples</a></li><li class="item-155"><a href="../../joomla-3/dicas.html" > Dicas</a></li></ul></li><li class="item-310  divider deeper parent"><a class="separator ">Frameworks</a>
+<span class="offcanvas-menu-toggler collapsed" data-toggle="collapse" data-target="#collapse-menu-310"><i class="open-icon fa fa-angle-down"></i><i class="close-icon fa fa-angle-up"></i></span><ul class="collapse" id="collapse-menu-310"><li class="item-138  deeper parent"><a href="../../frameworks/cakephp-3.html" > CakePHP 3</a><span class="offcanvas-menu-toggler collapsed" data-toggle="collapse" data-target="#collapse-menu-138"><i class="open-icon fa fa-angle-down"></i><i class="close-icon fa fa-angle-up"></i></span><ul class="collapse" id="collapse-menu-138"><li class="item-139"><a href="../../frameworks/cakephp-3/introducao.html" > Introdução</a></li><li class="item-140"><a href="../../frameworks/cakephp-3/instalacao.html" > Instalação</a></li><li class="item-172"><a href="../../frameworks/cakephp-3/configuracoes.html" > Configurações</a></li><li class="item-141"><a href="../../frameworks/cakephp-3/convencoes.html" > Convenções</a></li><li class="item-142"><a href="../../frameworks/cakephp-3/tutoriais.html" > Tutoriais</a></li><li class="item-144"><a href="../../frameworks/cakephp-3/dicas.html" > Dicas</a></li><li class="item-145"><a href="../../frameworks/cakephp-3/seguranca.html" > Segurança</a></li><li class="item-147"><a href="../../frameworks/cakephp-3/mvc-no-cakephp-3.html" > MVC no CakePHP 3</a></li></ul></li><li class="item-171  deeper parent"><a href="../../frameworks/laravel-5.html" > Laravel 5</a><span class="offcanvas-menu-toggler collapsed" data-toggle="collapse" data-target="#collapse-menu-171"><i class="open-icon fa fa-angle-down"></i><i class="close-icon fa fa-angle-up"></i></span><ul class="collapse" id="collapse-menu-171"><li class="item-173"><a href="../../frameworks/laravel-5/introducao.html" > Introdução</a></li><li class="item-174"><a href="../../frameworks/laravel-5/instalacao.html" > Instalação</a></li><li class="item-175"><a href="../../frameworks/laravel-5/configuracoes.html" > Configurações</a></li><li class="item-176"><a href="../../frameworks/laravel-5/routes.html" > Routes</a></li><li class="item-178"><a href="../../frameworks/laravel-5/dicas.html" > Dicas</a></li><li class="item-177"><a href="../../frameworks/laravel-5/tutoriais.html" > Tutoriais</a></li></ul></li></ul></li><li class="item-158  deeper parent"><a href="../../mobile.html" > Mobile</a><span class="offcanvas-menu-toggler collapsed" data-toggle="collapse" data-target="#collapse-menu-158"><i class="open-icon fa fa-angle-down"></i><i class="close-icon fa fa-angle-up"></i></span><ul class="collapse" id="collapse-menu-158"><li class="item-179"><a href="../../mobile/introducao.html" > Introdução</a></li><li class="item-180"><a href="../../mobile/ambiente.html" > Ambiente</a></li><li class="item-188"><a href="../../mobile/phaser.html" > Phaser</a></li><li class="item-187"><a href="../../mobile/monaca.html" > Monaca</a></li><li class="item-181"><a href="../../mobile/phonegap.html" > PhoneGap</a></li><li class="item-182"><a href="../../mobile/app-inventor.html" > App Inventor</a></li><li class="item-159"><a href="../../mobile/unity-3d.html" > Unity 3D</a></li><li class="item-160"><a href="../../mobile/intel-xdk.html" > Intel XDK</a></li><li class="item-161"><a href="../../mobile/outros.html" > Outros</a></li><li class="item-163"><a href="../../mobile/dicas.html" > Dicas</a></li></ul></li><li class="item-168  deeper parent"><a href="../../blog.html" > Blog</a><span class="offcanvas-menu-toggler collapsed" data-toggle="collapse" data-target="#collapse-menu-168"><i class="open-icon fa fa-angle-down"></i><i class="close-icon fa fa-angle-up"></i></span><ul class="collapse" id="collapse-menu-168"><li class="item-196"><a href="../../blog/reflexoes.html" > Reflexões</a></li><li class="item-197"><a href="../../blog/saude.html" > Saúde</a></li><li class="item-238"><a href="../../blog/diversos.html" > Diversos</a></li><li class="item-271"><a href="../../blog/estudos.html" > Estudos</a></li></ul></li><li class="item-215  deeper parent"><a href="../../curriculo.html" > Sobre</a><span class="offcanvas-menu-toggler collapsed" data-toggle="collapse" data-target="#collapse-menu-215"><i class="open-icon fa fa-angle-down"></i><i class="close-icon fa fa-angle-up"></i></span><ul class="collapse" id="collapse-menu-215"><li class="item-167">		<a href="https://github.com/ribafs?tab=repositories" rel="noopener noreferrer" target="_blank" > Projetos</a></li><li class="item-164"><a href="../../curriculo/livros.html" > Livros</a></li><li class="item-257"><a href="../../curriculo/curriculo.html" > Currículo</a></li><li class="item-110"><a href="../../curriculo/contato.html" > Contato</a></li><li class="item-251"><a href="../../curriculo/mapa-do-site.html" > Mapa</a></li></ul></li></ul>
+</div></div>
+                            </div> <!-- /.offcanvas-inner -->
+        </div> <!-- /.offcanvas-menu -->
+
+        
+        
+        
+        <!-- Preloader -->
+        
+
+        <!-- Go to top -->
+                    <a href="javascript:void(0)" class="scrollup" aria-label="Go To Top">&nbsp;</a>
+        
+    </body>
+</html>

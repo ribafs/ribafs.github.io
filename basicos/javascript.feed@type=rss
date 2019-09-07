@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="Joomla! - Open Source Content Management" -->
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>JavaScript - RibaFS Portal</title>
+		<description><![CDATA[Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros.]]></description>
+		<link>http://backup/portal/basicos/javascript.html</link>
+		<lastBuildDate>Sat, 07 Sep 2019 18:48:56 -0300</lastBuildDate>
+		<generator>Joomla! - Open Source Content Management</generator>
+		<atom:link rel="self" type="application/rss+xml" href="http://backup/portal/basicos/javascript.feed?type=rss"/>
+		<language>pt-br</language>
+		<item>
+			<title>Frameworks JavaScript para Matemática</title>
+			<link>http://backup/portal/basicos/javascript/frameworks-javascript-para-matematica.html</link>
+			<guid isPermaLink="true">http://backup/portal/basicos/javascript/frameworks-javascript-para-matematica.html</guid>
+			<description><![CDATA[<h4>Frameworks JavaScript para Matemática</h4>
+
+
+<p><a href="https://www.mathjax.org/">https://www.mathjax.org/</a> <br /><br /><a href="http://mathlib.de/en">http://mathlib.de/en</a> <br /><a href="http://mathlib.de/en/demos">http://mathlib.de/en/demos</a> <br /><br /><a href="https://jsxgraph.uni-bayreuth.de/wp/index.html">https://jsxgraph.uni-bayreuth.de/wp/index.html</a> <br /><br /><strong>Exemplos</strong><br /><a href="https://jsxgraph.uni-bayreuth.de/wiki/index.php/Category:Examples">https://jsxgraph.uni-bayreuth.de/wiki/index.php/Category:Examples</a> <br /><br /><a href="http://mathjs.org/">http://mathjs.org/</a> <br /><br /><a href="http://mathnotepad.com/">http://mathnotepad.com/</a> <br /><br /><a href="http://asciimath.org/">http://asciimath.org/</a> <br /><br /></p>]]></description>
+			<category>JavaScript</category>
+			<pubDate>Tue, 01 Aug 2017 16:58:12 -0300</pubDate>
+		</item>
+		<item>
+			<title>Introdução ao JavaScript</title>
+			<link>http://backup/portal/basicos/javascript/introducao-ao-javascript.html</link>
+			<guid isPermaLink="true">http://backup/portal/basicos/javascript/introducao-ao-javascript.html</guid>
+			<description><![CDATA[<h3 style="text-align: justify;">Introdução ao JavaScript</h3>
+
+<p style="text-align: justify;">JavaScript é uma linguagem de script que funciona no lado cliente, ou seja, é interpretada pelo  próprio navegador. É usada para tornar o site interativo, podendo disparar ações em eventos,  enviar mensagens, efetuar algumas ações.<br />  <br /> Atualmente o JavaScript está em alta, pois com a chegada do HTML5 e CSS3 ele ganhou muito destaque e força. A cada dia aparecem novos frameworks para criação de jogos e aplicativos para celular usando JavaScript. Se fizer uma busca por frameworks em Javascript para a criação de jogos encontrará uma enormidade.<br />  <br /> O foco do JavaScript é implementar o comportamento ou a inteligência das páginas.<br />  <br /> De forma semelhane ao CSS podemos usar o JavaScript com o HTML de 3 formas:<br />  <br /> - Inline - dentro das tags do HTML<br /> - Internamente - como um trecho de código da página HTML, usando a tag &lt;script&gt;<br /> - Externamente - criando um arquivo externo com código JS e fazendo o include no arquivo HTML, sem a tag &lt;script&gt;<br />  <br /> A forma mais flexível é usando um arquivo externo, quando se fica mais a vontade e inclusive separa o HTML do JavaScript, organizando melhor o código.<br />  <br /> Para incluir um arquivo externo entramos na tag &lt;head&gt; a linha:<br /> &lt;script type="text/javascript" src="http://backup/portal/script.js"&gt;&lt;/script&gt;</p>
+
+<p style="text-align: justify;">Mas idealmente devemos usar o include acima na parte inferior da página, logo acima de &lt;/body&gt;.</p>
+
+<p style="text-align: justify;"> </p>]]></description>
+			<category>JavaScript</category>
+			<pubDate>Thu, 22 Jun 2017 17:41:08 -0300</pubDate>
+		</item>
+		<item>
+			<title>Mais sobre JavaScript</title>
+			<link>http://backup/portal/basicos/javascript/mais-sobre-javascript.html</link>
+			<guid isPermaLink="true">http://backup/portal/basicos/javascript/mais-sobre-javascript.html</guid>
+			<description><![CDATA[<p style="text-align: justify;"><strong>Comentários</strong><br />  <br /> // Comentário de uma única linha<br />  <br /> /* Comentário<br />  * para<br />  * várias<br />  * linhas<br />  */<br />  <br /> É uma linguagem completa, inclusive tem orientação a objetos.<br /> Conta com as estruturas: if, for, while, switch, etc.<br />  <br /> <strong>Variáveis</strong><br />  <br /> Escopo: local e global<br />  <br /> <strong>Funções</strong><br />  <br /> Pequeno exemplo de uso de objetos:<br />  <br /> var pessoa = new Object();<br /> pessoa.nome = "Ribamar";<br /> pessoa.idade = 59;<br /> pessoa.profissao = "Programador";<br />  <br /> Outra forma:<br />  <br /> var pessoa = {<br />     nome: "Ribamar",<br />     idade: 59,<br />     profissao = "Programador",<br />     <br />     digaNome: function(){<br />         alert(this.nome);<br />     }<br /> };<br />  <br /> var formacaoJava = {<br />  sigla : " K10", nome : " Formação Desenvolvedor Java ",<br />  cursos : [<br />  {<br />     sigla : "K11 ",<br />     nome : " Orientação a Objetos em Java "<br />  },<br />  {<br />     sigla : "K12 ",<br />     nome : " Desenvolvimento Web com JSF2 e JPA2 "<br />  },<br />  ]<br /> };</p>
+
+<p style="text-align: justify;"><strong>Algumas Ferramentas</strong><br /> - Firebug é uma ótima extensão para o Firefox<br /> - Netbeans para HTML5/JavaScript - <a href="http://netbeans.org/">http://netbeans.org</a><br /> - Eclipse para JavaScript - <a href="http://www.eclipse.org/downloads/packages/eclipse-ide-javascript-web-developers/heliossr1">http://www.eclipse.org/downloads/packages/eclipse-ide-javascript-web-developers/heliossr1</a><br />  <br /> Apareceram vários frameworks sobre o JavaScript:<br /> - AngularJS - <a href="https://angularjs.org/">https://angularjs.org/</a><br /> - Backbone - <a href="http://backbonejs.org/">http://backbonejs.org/</a><br /> - TypeScript - <a href="https://www.typescriptlang.org/">https://www.typescriptlang.org/</a><br />  <br /> Mais sobre JavaScript:<br /> <a href="http://www.w3schools.com/JS/">http://www.w3schools.com/JS/</a></p>
+
+<p style="text-align: justify;"> </p>
+
+<p style="text-align: justify;"><strong>JavaScript PopUp Boxes</strong></p>
+
+<p style="text-align: justify;">With JavaScript you can create three types of PopUp boxes: Alert, Confirm and Prompt. In javaScript you can also manipulate browsers to create popup windows, but that is covered in a later tutorial.</p>
+
+<p style="text-align: justify;"> <br /> <strong>Alert</strong></p>
+
+<p style="text-align: justify;">An alert box is often used if you want to make sure information comes through to the user or during testing. A developer can use alerts to see how code is being interpreted. When an alert box pops up, the user will have to click "OK" to proceed.</p>
+
+<p style="text-align: justify;">&lt;script type="text/javascript"&gt;<br /> function disp_conf()<br /> {<br /> alert ("I am an alert box!!");<br /> }<br /> &lt;/script&gt;</p>
+
+<p style="text-align: justify;">&lt;input type="button" onclick="disp_alert()" value="Display Alert" /&gt;</p>
+
+<p style="text-align: justify;"> <br /> <strong>Confirm Box</strong></p>
+
+<p style="text-align: justify;">A confirm box is often used if you want the user to verify or accept something.. When a confirm box pops up, the user will have to click either "OK" or "Cancel" to proceed. If the user clicks "OK", the box returns true. If the user clicks "Cancel", the box returns false.</p>
+
+<p style="text-align: justify;">&lt;script type="text/javascript"&gt;<br /> function disp_confirm()<br /> {<br /> var x = confirm("Press a button");<br /> if (x == true)<br /> {<br /> document.write("You pressed OK!");<br /> }<br /> else<br /> {<br /> document.write("You pressed Cancel!");<br /> }<br /> }<br /> &lt;/script&gt;</p>
+
+<p style="text-align: justify;">&lt;input type="button" onclick="disp_confirm()" value="Display Confirm" /&gt;</p>
+
+<p style="text-align: justify;"> <br /> <strong>Prompt Box</strong></p>
+
+<p style="text-align: justify;">A prompt box is often used if you want the user to input a value before entering a page. When a prompt box pops up, the user will have to click either "OK" or "Cancel" to proceed after entering an input value. If the user clicks "OK" the box returns the input value. If the user clicks "Cancel" the box returns null.</p>
+
+<p style="text-align: justify;">&lt;script type="text/javascript"&gt;<br /> function disp_prompt()<br /> {<br /> var name=prompt("Please enter your name","Tutorials Fan");<br /> if (name!=null &amp;&amp; name != "")<br /> {<br /> document.write("Hello " + name + "! How are you today?");<br /> }<br /> }<br /> &lt;/script&gt;</p>
+
+<p style="text-align: justify;">&lt;input type="button" onclick="disp_promt()" value="Display Prompt" /&gt;<br />  <br /> <strong>Conclusão</strong></p>
+
+<p style="text-align: justify;">PopUp boxes are simple to use, yet are an invaluable tool. As you start developing more complex code, you will see how wonderful an alert is to test if statements. Just remember there are three basic types of PopUp boxes: Alert, Confirm and Prompt. Think about using a prompt box as a way to ask for a password.</p>
+
+<p style="text-align: justify;"><a href="http://www.quackit.com/javascript/tutorial/javascript_popup_boxes.cfm">http://www.quackit.com/javascript/tutorial/javascript_popup_boxes.cfm</a></p>
+
+<p style="text-align: justify;"><strong> </strong></p>]]></description>
+			<category>JavaScript</category>
+			<pubDate>Thu, 22 Jun 2017 17:41:08 -0300</pubDate>
+		</item>
+		<item>
+			<title>Integração do JS com o PHP</title>
+			<link>http://backup/portal/basicos/javascript/mais-sobre-javascript-2.html</link>
+			<guid isPermaLink="true">http://backup/portal/basicos/javascript/mais-sobre-javascript-2.html</guid>
+			<description><![CDATA[<p style="text-align: justify;"><b>Integração entre PHP e JavaScript</b></p>
+<p style="text-align: justify;">O PHP pode ter acesso às variáveis do JavaScript e o JavaScript pode ter acesso às variáveis do PHP. Veja alguns exemplos:</p>
+<p style="text-align: justify;">PHP Comunicando com JavaScript: PHP recebendo variáveis do JavaScript e JavaScript recebendo variáveis do PHP</p>
+<p style="text-align: justify;">&lt;!-- Arquivo php2_js.php --&gt;</p>
+<p style="text-align: justify;">&lt;h1 style='font-size:18px;text-align:center;'&gt;Integração entre PHP e JavaScript&lt;/h1&gt;</p>
+<p style="text-align: justify;">Lembrando que o PHP é processado no servidor (pelo Apache, por exemplo)</p>
+<p style="text-align: justify;">Enquanto que o JavaScript é processado no cliente (pelo Navegador).</p>
+<p style="text-align: justify;"><b>&lt;h2&gt;Variáveis em JavaScript&lt;/h2&gt;</b></p>
+<pre class="language-javascript"><code>&lt;script&gt;
+
+var variavel_js=250;
+
+alert("A variável_js vale "+variavel_js);
+
+document.write("A variável_js vale "+variavel_js);
+
+document.write("&lt;br&gt;");
+
+document.write("Aqui não saimos do Navegador ainda&lt;br&gt;");
+
+&lt;/script&gt;</code></pre>
+<p style="text-align: justify;"><b>&lt;h2&gt;Variáveis em PHP&lt;/h2&gt;</b></p>
+<pre class="language-php"><code>&lt;?php
+
+$variavel_php=850;
+
+print "&lt;script&gt;alert('A variavel_php vale '+$variavel_php)&lt;/script&gt;";
+
+print "O alert anterior recebeu a variável do servidor e exibiu&lt;br&gt;";
+
+print "&lt;br&gt;A \$variavel_php vale $variavel_php&lt;br&gt;";
+
+?&gt;</code></pre>
+<p style="text-align: justify;"><b>&lt;h2&gt;JavaScript recebendo de PHP&lt;/h2&gt;</b></p>
+<pre class="language-javascript"><code>&lt;script&gt;
+
+variavel2_js = '&lt;?=$variavel_php?&gt;' - 150;
+
+alert("variavel2_js recebeu \"$variavel_php - 150\" e agora vale " + variavel2_js);
+
+alert("Para receber o valor da variável do PHP no navegador, a página já deve ter vindo do servidor.");
+
+document.write("variavel2_js recebeu \"$variavel_php - 150\" e agora vale " + variavel2_js);
+
+document.write("&lt;br&gt;");
+
+&lt;/script&gt;</code></pre>
+<p style="text-align: justify;"><b>&lt;h2&gt;PHP recebendo de JavaScript&lt;/h2&gt;</b></p>
+<pre class="language-php"><code>&lt;?php
+
+$variavel2_php="&lt;script&gt;document.write(variavel2_js)&lt;/script&gt;";
+
+print "Usando PHP: A variavel2_php recebeu variavel2_js e agora vale $variavel2_php&lt;br&gt;&lt;br&gt;";
+
+print "Isso acima está errado, pois apenas é algo que tem valor quando chega ao navegador.&lt;br&gt;&lt;br&gt;";
+
+print "Para que o PHP receba de fato o valor de uma variável em JS, esta variável deve ser recebida por uma variável
+
+em PHP submetida para o servidor, por exemplo o campo de um formulário&lt;br&gt;&lt;br&gt;";
+
+// Não podemos concatenar assim: &lt;script&gt;alert('A variável variavel2_php agora vale' + $variavel2_php)&lt;/script&gt;
+
+// Pois a variável $variavel2_php contém &lt;script&gt;alert(...
+
+print "&lt;script&gt;document.write('Usando JS: A variável variavel2_php agora vale' )&lt;/script&gt; $variavel2_php";
+
+?&gt;
+
+&lt;script&gt;var varSigla="DNOCS";&lt;/script&gt;
+
+&lt;form method="POST" action="php_js2.php"&gt;
+
+&lt;br&gt;&lt;br&gt;
+
+Clique Neste campo e mude o foco:
+
+&lt;input name="sigla" maxlength="13" value="ValorOriginal" onFocus="this.value=varSigla"&gt;
+
+&lt;input type=submit value=Enviar&gt;
+
+&lt;/form&gt;
+
+
+&lt;?php
+
+print "&lt;font color='red'&gt;&lt;h4&gt;Para Ajuda com a depuração do JavaScript:
+
+usando o Firefox vá em Ferramentas - Console de Erros&lt;/h4&gt;&lt;/font&gt;";
+
+echo "&lt;hr&gt;&lt;h2&gt;Código Fonte&lt;/h2&gt;";
+
+show_source(__FILE__);
+
+?&gt;
+
+&lt;?php
+
+// Arquivo php2_js.php
+
+if ($_POST['sigla']){
+
+echo "A variável sigla, campo do Form que valia 'ValorOriginal', recebeu o valor da variável JS 'DNOCS'&lt;br&gt;";
+
+echo "que foi atribuído à variável \$sigla do PHP através do campo do form!";
+
+}
+
+echo "&lt;hr&gt;&lt;h2&gt;Código Fonte&lt;/h2&gt;";
+
+show_source(__FILE__);
+
+?&gt;</code></pre>
+<p style="text-align: justify;">Outro Exemplo de Integração do PHP com JavaScript</p>
+<p style="text-align: justify;">&lt;h1&gt;Integração entre PHP e JavaScript&lt;/h1&gt;</p>
+<p style="text-align: justify;">&lt;script&gt;</p>
+<p style="text-align: justify;">var nome;</p>
+<p style="text-align: justify;">nome = prompt('Qual o seu nome?','João Brito Cunha');</p>
+<p style="text-align: justify;">&lt;/script&gt;</p>
+<p style="text-align: justify;">&lt;h2&gt;PHP Mostrando variável JavaScript&lt;/h2&gt;</p>
+<p style="text-align: justify;">&lt;?php</p>
+<p style="text-align: justify;">echo "Seu nome é &lt;script&gt;document.write(nome)&lt;/script&gt;";</p>
+<p style="text-align: justify;">echo "&lt;script&gt;alert('Seu nome é '+nome)&lt;/script&gt;";</p>
+<p style="text-align: justify;">?&gt;</p>
+<p style="text-align: justify;"><b>&lt;h2&gt;JavaScript Mostrando variável PHP&lt;/h2&gt;</b></p>
+<pre class="language-php"><code>&lt;?php
+
+$arquivo="phpjs.php";
+
+$acao='excluir';
+
+$tipo='diretorio';
+
+echo "&lt;br&gt;&lt;br&gt;Arquivo = $arquivo Ação = $acao e Tipo = $tipo";
+
+?&gt;
+
+&lt;script&gt;
+
+if(!confirm("Confirma?")){
+
+alert("Não confirmou!");
+
+}else{
+
+alert("Arquivo = &lt;?=$arquivo?&gt; Acao = &lt;?=$acao?&gt; Tipo = &lt;?=$tipo?&gt;");
+
+}
+
+&lt;/script&gt;</code></pre>
+<p style="text-align: justify;"><b>&lt;h2&gt;HTML e JavaScript Mostrando variável PHP&lt;/h2&gt;</b></p>
+<p style="text-align: justify;">&lt;?php $sigla="DNOCS"; ?&gt;</p>
+<p style="text-align: justify;">&lt;form&gt;</p>
+<p style="text-align: justify;">Clique Neste campo e mude o foco&lt;br&gt;</p>
+<p style="text-align: justify;">&lt;input name="sigla" maxlength="10" value="&lt;?=$sigla?&gt;"</p>
+<p style="text-align: justify;">onBlur="javascript:location.href='&lt;?=$PHP_SELF?&gt;?sigla=document.forms[0].sigla.value'"&gt;</p>
+<p style="text-align: justify;">&lt;/form&gt;</p>
+<p style="text-align: justify;">Passing JavaScript variables to PHP</p>
+<p style="text-align: justify;">Original em:</p>
+<p style="text-align: justify;"><a href="http://www.webcheatsheet.com/php/passing_javascript_variables_php.php">http://www.webcheatsheet.com/php/passing_javascript_variables_php.php</a></p>
+<p style="text-align: justify;">Criar arquivo js.html com o conteúdo:</p>
+<pre class="language-php"><code>&lt;script type="text/javascript"&gt;
+
+width = screen.width;
+
+height = screen.height;
+
+if (width &gt; 0 &amp;&amp; height &gt;0) {
+
+window.location.href = "http://localhost/main.php?width=" + width + "&amp;height=" + height;
+
+} else
+
+exit();
+
+&lt;/script&gt;
+
+Criar o arquivo main.php com o seguinte conteúdo:
+
+&lt;?php
+
+echo "&lt;h1&gt;Screen Resolution:&lt;/h1&gt;";
+
+echo "Width : ".$_GET['width']."&lt;br&gt;";
+
+echo "Height : ".$_GET['height']."&lt;br&gt;";
+
+?&gt;</code></pre>]]></description>
+			<category>JavaScript</category>
+			<pubDate>Thu, 22 Jun 2017 17:41:08 -0300</pubDate>
+		</item>
+		<item>
+			<title>Utilitários JavaScript</title>
+			<link>http://backup/portal/basicos/javascript/utilitarios-javascript.html</link>
+			<guid isPermaLink="true">http://backup/portal/basicos/javascript/utilitarios-javascript.html</guid>
+			<description><![CDATA[<p><strong>Utilitários em JavaScript e HTML</strong></p>
+<p><a title="uteis" href="http://backup/portal/down/basicos/js/uteis_jshtml.zip" rel="alternate">uteis_jshtml.zip</a></p>
+<p>- Cálculo de Feriados Móveis</p>
+<p>- Validação de CPF e CNPJ</p>
+<p>- Validação da Inscrição Estadual</p>
+<p>- Dia da semana em que você nasceu</p>
+<p>- Select com estados do Brasil</p>
+<p>- Select com países do mundo</p>
+<p>- Limitar caracteres de textarea</p>
+<p> </p>
+<p> </p>]]></description>
+			<category>JavaScript</category>
+			<pubDate>Thu, 22 Jun 2017 17:41:08 -0300</pubDate>
+		</item>
+		<item>
+			<title>Funções em JavaScript</title>
+			<link>http://backup/portal/basicos/javascript/funcoes-em-javascript.html</link>
+			<guid isPermaLink="true">http://backup/portal/basicos/javascript/funcoes-em-javascript.html</guid>
+			<description><![CDATA[<p><strong>Funções em JavaScript</strong></p>
+<p><a title="Funções" href="http://backup/portal/down/basicos/js/funcoes_js.zip" rel="alternate">funcoes_js.zip</a></p>
+<p>Diversas funções úteis em JavaScript.</p>]]></description>
+			<category>JavaScript</category>
+			<pubDate>Thu, 22 Jun 2017 17:41:08 -0300</pubDate>
+		</item>
+		<item>
+			<title>Joguinhos em JavaScript</title>
+			<link>http://backup/portal/basicos/javascript/joguinhos-em-javascript.html</link>
+			<guid isPermaLink="true">http://backup/portal/basicos/javascript/joguinhos-em-javascript.html</guid>
+			<description><![CDATA[<p><strong>Joguinhos em JavaScript</strong></p>
+<p><a title="Jogos" href="http://backup/portal/down/basicos/js/jogos_js.zip" rel="alternate">jogos_js.zip</a></p>
+<p>Diversas joguinhos em JavaScript.</p>
+<p>Bom para oferecer em sites. Simples mas dá para se divertir e para aproveitar seu código como aprendizado.</p>]]></description>
+			<category>JavaScript</category>
+			<pubDate>Thu, 22 Jun 2017 17:41:08 -0300</pubDate>
+		</item>
+	</channel>
+</rss>

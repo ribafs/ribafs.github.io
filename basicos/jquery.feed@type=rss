@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="Joomla! - Open Source Content Management" -->
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>jQuery - RibaFS Portal</title>
+		<description><![CDATA[Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros.]]></description>
+		<link>http://backup/portal/basicos/jquery.html</link>
+		<lastBuildDate>Sat, 07 Sep 2019 18:49:49 -0300</lastBuildDate>
+		<generator>Joomla! - Open Source Content Management</generator>
+		<atom:link rel="self" type="application/rss+xml" href="http://backup/portal/basicos/jquery.feed?type=rss"/>
+		<language>pt-br</language>
+		<item>
+			<title>Introdução ao jQuery</title>
+			<link>http://backup/portal/basicos/jquery/introducao-ao-jquery.html</link>
+			<guid isPermaLink="true">http://backup/portal/basicos/jquery/introducao-ao-jquery.html</guid>
+			<description><![CDATA[<h3 style="text-align: justify;">Introdução ao Framework jQuery</h3>
+<p style="text-align: justify;">Adaptação da apostila da Caelum – Introdução à web:</p>
+<p style="text-align: justify;"><a href="https://www.caelum.com.br/download/caelum-html-css-javascript-php.pdf">https://www.caelum.com.br/download/caelum-html-css-javascript-php.pdf</a></p>
+<p style="text-align: justify;">A principal vantagem na adoção de uma biblioteca de JavaScript é permitir uma maior compatibilidade de um mesmo código com diversos navegadores. Uma maneira de se atingir esse objetivo é criando funções que verificam quaisquer características necessárias e permitam que o programador escreva um código único para todos os navegadores.</p>
+<p style="text-align: justify;">Além dessa vantagem, o jQuery, que é hoje a biblioteca padrão na programação front-end para Web, traz uma sintaxe mais “fluida” nas tarefas mais comuns ao programador que são: selecionar um elemento do documento e alterar suas características.</p>
+<p style="text-align: justify;">Com ela é possível selecionar elementos com maior facilidade, maior compatibilidade, e com menos código.</p>
+<p style="text-align: justify;">Por exemplo. Veja a diferença dos códigos:</p>
+<p style="text-align: justify;"><strong>// JavaScript "puro"</strong></p>
+<div style="color: #d4d4d4; background-color: #1e1e1e; font-family: 'Fira Code','Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'; font-weight: normal; font-size: 14px; line-height: 19px; white-space: pre;">
+<div><span style="color: #569cd6;">var</span> <span style="color: #9cdcfe;">cabecalho</span> <span style="color: #d4d4d4;">=</span> <span style="color: #9cdcfe;">document</span><span style="color: #d4d4d4;">.</span><span style="color: #dcdcaa;">getElementById</span><span style="color: #d4d4d4;">(</span><span style="color: #ce9178;">"cabecalho"</span><span style="color: #d4d4d4;">);</span></div>
+<br />
+<div><span style="color: #c586c0;">if</span><span style="color: #d4d4d4;"> (</span><span style="color: #9cdcfe;">cabecalho</span><span style="color: #d4d4d4;">.</span><span style="color: #9cdcfe;">attachEvent</span><span style="color: #d4d4d4;">) {</span></div>
+<br />
+<div><span style="color: #9cdcfe;">cabecalho</span><span style="color: #d4d4d4;">.</span><span style="color: #dcdcaa;">attachEvent</span><span style="color: #d4d4d4;">(</span><span style="color: #ce9178;">"onclick"</span><span style="color: #d4d4d4;">, </span><span style="color: #569cd6;">function</span><span style="color: #d4d4d4;"> (</span><span style="color: #9cdcfe;">event</span><span style="color: #d4d4d4;">) {</span></div>
+<br />
+<div><span style="color: #dcdcaa;">alert</span><span style="color: #d4d4d4;">(</span><span style="color: #ce9178;">"Você clicou no cabeçalho, usuário do IE!"</span><span style="color: #d4d4d4;">);</span></div>
+<br />
+<div><span style="color: #d4d4d4;"> });</span></div>
+<br />
+<div><span style="color: #d4d4d4;">} </span><span style="color: #c586c0;">else</span> <span style="color: #c586c0;">if</span><span style="color: #d4d4d4;"> (</span><span style="color: #9cdcfe;">cabecalho</span><span style="color: #d4d4d4;">.</span><span style="color: #9cdcfe;">addEventListener</span><span style="color: #d4d4d4;">) {</span></div>
+<br />
+<div><span style="color: #9cdcfe;">cabecalho</span><span style="color: #d4d4d4;">.</span><span style="color: #dcdcaa;">addEventListener</span><span style="color: #d4d4d4;">(</span><span style="color: #ce9178;">"click"</span><span style="color: #d4d4d4;">, </span><span style="color: #569cd6;">function</span><span style="color: #d4d4d4;"> (</span><span style="color: #9cdcfe;">event</span><span style="color: #d4d4d4;">) {</span></div>
+<br />
+<div><span style="color: #dcdcaa;">alert</span><span style="color: #d4d4d4;">(</span><span style="color: #ce9178;">"Você clicou no cabeçalho!"</span><span style="color: #d4d4d4;">)</span></div>
+<br />
+<div><span style="color: #d4d4d4;"> }, </span><span style="color: #569cd6;">false</span><span style="color: #d4d4d4;">);</span></div>
+<br />
+<div><span style="color: #d4d4d4;">}</span></div>
+</div>
+<p style="text-align: justify;"><strong>// jQuery</strong></p>
+<p style="text-align: justify;">$("#cabecalho").click(function (event) {</p>
+<p style="text-align: justify;">alert("Você clicou no cabeçalho!");</p>
+<p style="text-align: justify;">});</p>
+<p style="text-align: justify;">O jQuery é uma biblioteca de Javascript “leve”, fácil de utilizar no sentido “escrever menos, fazer mais”. Esta biblioteca foi desenvolvida por John Resig, um programador de Javascript. O site oficial do JQuery fica em <a title="JQuery, biblioteca Javascript, site oficial" href="http://www.jquery.com/" target="_blank" rel="nofollow noopener noreferrer">www.jQuery.com</a>.</p>
+<p style="text-align: justify;">Atualmente o jQuery é praticamente onipresente em qualquer site da web. Diretamente ou mais ainda em forma de plugin.</p>
+<p style="text-align: justify;"> </p>
+<p style="text-align: justify;"><strong>Plugins com jQuery</strong></p>
+<p style="text-align: justify;">17 plugins - <a href="http://www.creativebloq.com/jquery/top-jquery-plugins-6133175">http://www.creativebloq.com/jquery/top-jquery-plugins-6133175</a></p>
+<p style="text-align: justify;">5500 plugins - <a href="http://www.jqueryrain.com/">http://www.jqueryrain.com/</a></p>
+<p style="text-align: justify;"> </p>
+<h3 style="text-align: justify;"><strong>Exemplo em jQuery e JavaScript</strong></h3>
+<p style="text-align: justify;">Um código em Javascript puro, para atribuir o valor "5" em um elemento qualquer.</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr" style="text-align: justify;">
+<div style="color: #d4d4d4; background-color: #1e1e1e; font-family: 'Fira Code','Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'; font-weight: normal; font-size: 14px; line-height: 19px; white-space: pre;">
+<div><span style="color: #9cdcfe;">document</span><span style="color: #d4d4d4;">.</span><span style="color: #dcdcaa;">getElementById</span><span style="color: #d4d4d4;">( </span><span style="color: #ce9178;">'Teste'</span><span style="color: #d4d4d4;"> ).</span><span style="color: #9cdcfe;">value</span> <span style="color: #d4d4d4;">=</span> <span style="color: #b5cea8;">5</span><span style="color: #d4d4d4;">;</span></div>
+</div>
+<pre>
+</pre>
+</div>
+<p style="text-align: justify;">O mesmo código em jQuery.</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<div style="color: #d4d4d4; background-color: #1e1e1e; font-family: 'Fira Code','Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'; font-weight: normal; font-size: 14px; line-height: 19px; white-space: pre;">
+<div><span style="color: #dcdcaa;">$</span><span style="color: #d4d4d4;">( </span><span style="color: #ce9178;">'#Teste'</span><span style="color: #d4d4d4;"> ).</span><span style="color: #dcdcaa;">val</span><span style="color: #d4d4d4;">( </span><span style="color: #b5cea8;">5</span><span style="color: #d4d4d4;"> );</span></div>
+</div>
+<pre> </pre>
+</div>]]></description>
+			<category>jQuery</category>
+			<pubDate>Thu, 22 Jun 2017 20:25:21 -0300</pubDate>
+		</item>
+	</channel>
+</rss>

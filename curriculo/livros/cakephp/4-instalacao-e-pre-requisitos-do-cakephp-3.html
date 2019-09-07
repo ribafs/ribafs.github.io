@@ -1,0 +1,1342 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br" dir="ltr">
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+                <!-- head -->
+        <base href="" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Ribamar FS" />
+	<meta name="description" content="Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros." />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>4 - Instalação e pré-requisitos do CakePHP 3 - RibaFS Portal</title>
+	<link href="http://ribafs.org/portal/curriculo/livros/cakephp/4-instalacao-e-pre-requisitos-do-cakephp-3.html" rel="canonical" />
+	<link href="../../../templates/shaper_helix3/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../../../favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,300italic,regular,italic,600,600italic,700,700italic,800,800italic&amp;subset=latin" rel="stylesheet" type="text/css" />
+	<link href="http://fonts.googleapis.com/css?family=Amarante:regular&amp;subset=latin-ext" rel="stylesheet" type="text/css" />
+	<link href="../../../cache/com_templates/templates/shaper_helix3/13dbdb302db49810d4fe978773c86c41.css" rel="stylesheet" type="text/css" />
+	<style type="text/css">
+body{font-family:Open Sans, sans-serif; font-size:16px; font-weight:normal; }h1{font-family:Open Sans, sans-serif; font-weight:800; }h2{font-family:Open Sans, sans-serif; font-weight:600; }h3{font-family:Open Sans, sans-serif; font-weight:normal; }h4{font-family:Open Sans, sans-serif; font-weight:normal; }h5{font-family:Open Sans, sans-serif; font-weight:600; }h6{font-family:Open Sans, sans-serif; font-weight:600; }.sp-megamenu-parent{font-family:Amarante, sans-serif; font-size:16px; font-weight:normal; }.sp-megamenu-parent > li.active > a, 
+.sp-megamenu-parent .sp-dropdown li.sp-menu-item.active > a { color: red; }
+#offcanvas-toggler > i { color: red !important; }
+#sp-top-bar{ background-color:#093d09;color:#999999; }#sp-top-bar a{color:#ceebe9;}#sp-header{ background-color:#54a859; }#sp-header a{color:#022e05;}#sp-page-title a{color:#e8f7f7;}#sp-main-body{ background-color:#fefffa; }
+	</style>
+	<script type="application/json" class="joomla-script-options new">{"csrf.token":"796296c0a9019553ed4bbba150ad5a40","system.paths":{"root":"\/portal","base":"\/portal"},"joomla.jtext":{"COM_COMMENT_PLEASE_FILL_IN_ALL_REQUIRED_FIELDS":"Favor preencher todos os campos obrigat\u00f3rios.","COM_COMMENT_ANONYMOUS":"An\u00f4nimo","JLIB_FORM_FIELD_INVALID":"Campo inv\u00e1lido:&#160;"},"system.keepalive":{"interval":840000,"uri":"\/portal\/component\/ajax\/?format=json"}}</script>
+	<script src="../../../cache/com_templates/templates/shaper_helix3/54c592f5254dda874419f32ed016b1ca.js" type="text/javascript"></script>
+	<script type="text/javascript">
+jQuery(function($){ initTooltips(); $("body").on("subform-row-add", initTooltips); function initTooltips (event, container) { container = container || document;$(container).find(".hasTooltip").tooltip({"html": true,"container": "body"});} });jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+var sp_preloader = '0';
+
+var sp_gotop = '1';
+
+var sp_offanimation = 'default';
+
+	</script>
+	<meta property="og:url" content="http://backup/portal/curriculo/livros/cakephp/4-instalacao-e-pre-requisitos-do-cakephp-3.html" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="4 - Instalação e pré-requisitos do CakePHP 3" />
+	<meta property="og:description" content="4 – Instalação e pré-requisitos do CakePHP 3 Talento ganha jogos, mas trabalho sério e inteligência ganha campeonato. Michael Jordan Pré-requisitos da vers..." />
+
+            </head>
+
+    <body class="site com-content view-article no-layout no-task itemid-164 pt-br ltr  sticky-header layout-fluid off-canvas-menu-init">
+
+        <div class="body-wrapper">
+            <div class="body-innerwrapper">
+                <section id="sp-top-bar"><div class="container"><div class="row"><div id="sp-top1" class="col-sm-12 col-md-12"><div class="sp-column "><div class="sp-module "><div class="sp-module-content"><!-- https://www.clubedohardware.com.br/artigos/redes/colocando-um-mecanismo-de-busca-em-seu-site-r34327/ -->
+<FORM class="form-inline" method="GET" action="http://www.google.com/search">
+<div class="form-group">
+<input type="hidden" name="sitesearch" value="ribafs.github.io">
+<input style="height:20px" class="form-control" type="text" name="q" size="20" placeholder="Pesquisar...">
+</div>
+</FORM>
+
+</div></div><ul class="sp-contact-info"><li class="sp-contact-email"><i class="fa fa-envelope" aria-hidden="true"></i> <a href="mailto:ribafs@gmail.com">ribafs@gmail.com</a></li></ul></div></div></div></div></section><section id="sp-section-2"><div class="container"><div class="row"><div id="sp-top2" class="col-sm-12 col-md-12"><div class="sp-column "><div class="sp-module "><div class="sp-module-content">
+
+<div class="custom"  >
+	<p style="text-align: center;"><b>Don't you speak portuguese? Translate this site with <a href="https://translate.google.com/translate?hl=pt-BR&amp;sl=pt&amp;tl=en&amp;u=https://ribafs.org/portal" target="_blank" rel="noopener noreferrer">Google Translator </a></b></p></div>
+</div></div></div></div></div></div></section><header id="sp-header"><div class="container"><div class="row"><div id="sp-logo" class="col-xs-8 col-sm-2 col-md-2"><div class="sp-column "><h1 class="logo"> <a href="../../../index.html">RibaFS Portal</a></h1></div></div><div id="sp-menu" class="col-xs-4 col-sm-10 col-md-10"><div class="sp-column ">			<div class='sp-megamenu-wrapper'>
+				<a id="offcanvas-toggler" class="visible-sm visible-xs" aria-label="Helix Megamenu Options" href="4-instalacao-e-pre-requisitos-do-cakephp-3.html#"><i class="fa fa-bars" aria-hidden="true" title="Helix Megamenu Options"></i></a>
+				<ul class="sp-megamenu-parent menu-fade hidden-sm hidden-xs"><li class="sp-menu-item"><a  href="../../../index.html"  >Início</a></li><li class="sp-menu-item sp-has-child"><a  href="../../../basicos.html"  >Básicos</a><div class="sp-dropdown sp-dropdown-main sp-menu-right" style="width: 240px;"><div class="sp-dropdown-inner"><ul class="sp-dropdown-items"><li class="sp-menu-item"><a  href="../../../basicos/html.html"  >HTML</a></li><li class="sp-menu-item"><a  href="../../../basicos/javascript.html"  >JavaScript</a></li><li class="sp-menu-item"><a  href="../../../basicos/css.html"  >CSS</a></li><li class="sp-menu-item"><a  href="../../../basicos/jquery.html"  >jQuery</a></li><li class="sp-menu-item"><a  href="../../../basicos/bootstrap.html"  >Bootstrap</a></li><li class="sp-menu-item"><a  href="../../../basicos/php.html"  >PHP</a></li><li class="sp-menu-item"><a  href="../../../basicos/phpoo.html"  >PHPOO</a></li><li class="sp-menu-item"><a  href="../../../basicos/pdo.html"  >PDO</a></li><li class="sp-menu-item"><a  href="../../../basicos/ferramentas.html"  >Ferramentas</a></li><li class="sp-menu-item"><a  href="../../../basicos/outros.html"  >Outros</a></li></ul></div></div></li><li class="sp-menu-item sp-has-child"><a  href="../../../servidores.html"  >Servidores</a><div class="sp-dropdown sp-dropdown-main sp-menu-right" style="width: 240px;"><div class="sp-dropdown-inner"><ul class="sp-dropdown-items"><li class="sp-menu-item"><a  href="../../../servidores/desktop.html"  >Desktop</a></li><li class="sp-menu-item"><a  href="../../../servidores/ubuntu-server.html"  >Ubuntu Server</a></li><li class="sp-menu-item"><a  href="../../../servidores/shell-scripts.html"  >Shell Scripts</a></li><li class="sp-menu-item"><a  href="../../../servidores/servidor-web.html"  >Servidor Web</a></li><li class="sp-menu-item"><a  href="../../../servidores/servidor-sgbd.html"  >Servidor SGBD</a></li><li class="sp-menu-item sp-has-child"><a  href="../../../servidores/postgresql.html"  >PostgreSQL</a><div class="sp-dropdown sp-dropdown-sub sp-menu-right" style="width: 240px;"><div class="sp-dropdown-inner"><ul class="sp-dropdown-items"><li class="sp-menu-item"><a  href="../../../servidores/postgresql/introducao-ao-postgresql.html"  >Introdução</a></li><li class="sp-menu-item"><a  href="../../../servidores/postgresql/projeto.html"  >Projeto</a></li><li class="sp-menu-item"><a  href="../../../servidores/postgresql/dimensionamento.html"  >Dimensionamento</a></li></ul></div></div></li></ul></div></div></li><li class="sp-menu-item sp-has-child"><a  href="../../../joomla-3.html"  >Joomla 3</a><div class="sp-dropdown sp-dropdown-main sp-menu-right" style="width: 240px;"><div class="sp-dropdown-inner"><ul class="sp-dropdown-items"><li class="sp-menu-item"><a  href="../../../joomla-3/introducao.html"  >Introdução</a></li><li class="sp-menu-item"><a  href="../../../joomla-3/seguranca.html"  >Segurança</a></li><li class="sp-menu-item"><a  href="../../../joomla-3/instalacao.html"  >Instalação do Joomla</a></li><li class="sp-menu-item"><a  href="../../../joomla-3/administracao.html"  >Administração</a></li><li class="sp-menu-item"><a  href="../../../joomla-3/extensoes.html"  >Extensões</a></li><li class="sp-menu-item"><a  href="../../../joomla-3/loja-simples.html"  >Loja Simples</a></li><li class="sp-menu-item"><a  href="../../../joomla-3/dicas.html"  >Dicas</a></li></ul></div></div></li><li class="sp-menu-item sp-has-child"><a  href="javascript:void(0);"  >Frameworks</a><div class="sp-dropdown sp-dropdown-main sp-dropdown-mega sp-menu-right" style="width: 600px;"><div class="sp-dropdown-inner"><div class="row"><div class="col-sm-6"><ul class="sp-mega-group"><li class="sp-menu-item sp-has-child"><a class="sp-group-title" href="../../../frameworks/cakephp-3.html"  >CakePHP 3</a><ul class="sp-mega-group-child sp-dropdown-items"><li class="sp-menu-item"><a  href="../../../frameworks/cakephp-3/introducao.html"  >Introdução</a></li><li class="sp-menu-item"><a  href="../../../frameworks/cakephp-3/instalacao.html"  >Instalação</a></li><li class="sp-menu-item"><a  href="../../../frameworks/cakephp-3/configuracoes.html"  >Configurações</a></li><li class="sp-menu-item"><a  href="../../../frameworks/cakephp-3/convencoes.html"  >Convenções</a></li><li class="sp-menu-item"><a  href="../../../frameworks/cakephp-3/tutoriais.html"  >Tutoriais</a></li><li class="sp-menu-item"><a  href="../../../frameworks/cakephp-3/dicas.html"  >Dicas</a></li><li class="sp-menu-item"><a  href="../../../frameworks/cakephp-3/seguranca.html"  >Segurança</a></li><li class="sp-menu-item"><a  href="../../../frameworks/cakephp-3/mvc-no-cakephp-3.html"  >MVC no CakePHP 3</a></li></ul></li></ul></div><div class="col-sm-6"><ul class="sp-mega-group"><li class="sp-menu-item sp-has-child"><a class="sp-group-title" href="../../../frameworks/laravel-5.html"  >Laravel 5</a><ul class="sp-mega-group-child sp-dropdown-items"><li class="sp-menu-item"><a  href="../../../frameworks/laravel-5/introducao.html"  >Introdução</a></li><li class="sp-menu-item"><a  href="../../../frameworks/laravel-5/instalacao.html"  >Instalação</a></li><li class="sp-menu-item"><a  href="../../../frameworks/laravel-5/configuracoes.html"  >Configurações</a></li><li class="sp-menu-item"><a  href="../../../frameworks/laravel-5/routes.html"  >Routes</a></li><li class="sp-menu-item"><a  href="../../../frameworks/laravel-5/dicas.html"  >Dicas</a></li><li class="sp-menu-item"><a  href="../../../frameworks/laravel-5/tutoriais.html"  >Tutoriais</a></li></ul></li></ul></div></div></div></div></li><li class="sp-menu-item sp-has-child"><a  href="../../../mobile.html"  >Mobile</a><div class="sp-dropdown sp-dropdown-main sp-menu-right" style="width: 240px;"><div class="sp-dropdown-inner"><ul class="sp-dropdown-items"><li class="sp-menu-item"><a  href="../../../mobile/introducao.html"  >Introdução</a></li><li class="sp-menu-item"><a  href="../../../mobile/ambiente.html"  >Ambiente</a></li><li class="sp-menu-item"><a  href="../../../mobile/phaser.html"  >Phaser</a></li><li class="sp-menu-item"><a  href="../../../mobile/monaca.html"  >Monaca</a></li><li class="sp-menu-item"><a  href="../../../mobile/phonegap.html"  >PhoneGap</a></li><li class="sp-menu-item"><a  href="../../../mobile/app-inventor.html"  >App Inventor</a></li><li class="sp-menu-item"><a  href="../../../mobile/unity-3d.html"  >Unity 3D</a></li><li class="sp-menu-item"><a  href="../../../mobile/intel-xdk.html"  >Intel XDK</a></li><li class="sp-menu-item"><a  href="../../../mobile/outros.html"  >Outros</a></li><li class="sp-menu-item"><a  href="../../../mobile/dicas.html"  >Dicas</a></li></ul></div></div></li><li class="sp-menu-item sp-has-child"><a  href="../../../blog.html"  >Blog</a><div class="sp-dropdown sp-dropdown-main sp-menu-right" style="width: 240px;"><div class="sp-dropdown-inner"><ul class="sp-dropdown-items"><li class="sp-menu-item"><a  href="../../../blog/reflexoes.html"  >Reflexões</a></li><li class="sp-menu-item"><a  href="../../../blog/saude.html"  >Saúde</a></li><li class="sp-menu-item"><a  href="../../../blog/diversos.html"  >Diversos</a></li><li class="sp-menu-item"><a  href="../../../blog/estudos.html"  >Estudos</a></li></ul></div></div></li><li class="sp-menu-item sp-has-child active"><a  href="../../../curriculo.html"  >Sobre</a><div class="sp-dropdown sp-dropdown-main sp-menu-right" style="width: 240px;"><div class="sp-dropdown-inner"><ul class="sp-dropdown-items"><li class="sp-menu-item"><a  href="https://github.com/ribafs?tab=repositories" rel="noopener noreferrer" target="_blank" >Projetos</a></li><li class="sp-menu-item current-item active"><a  href="../../livros.html"  >Livros</a></li><li class="sp-menu-item"><a  href="../../curriculo.html"  >Currículo</a></li><li class="sp-menu-item"><a  href="../../contato.html"  >Contato</a></li><li class="sp-menu-item"><a  href="../../mapa-do-site.html"  >Mapa</a></li></ul></div></div></li></ul>			</div>
+		</div></div></div></div></header><section id="sp-page-title"><div class="row"><div id="sp-title" class="col-sm-12 col-md-12"><div class="sp-column "></div></div></div></section><section id="sp-main-body"><div class="container"><div class="row"><div id="sp-left" class="col-sm-3 col-md-3"><div class="sp-column custom-class"><div class="sp-module "><h3 class="sp-module-title">Novidades</h3><div class="sp-module-content"><div class="latestnews">
+	<div itemscope itemtype="http://schema.org/Article">
+		<a href="../../../blog/diversos/traducao-de-sites-de-forma-muito-simples.html" itemprop="url">
+			<span itemprop="name">
+				Tradução de sites de forma muito simples			</span>
+		</a>
+		<small>29 Agosto 2019</small>
+	</div>
+	<div itemscope itemtype="http://schema.org/Article">
+		<a href="../../../servidores/desktop/recuperar-senha-do-root.html" itemprop="url">
+			<span itemprop="name">
+				Recuperar senha do root			</span>
+		</a>
+		<small>23 Agosto 2019</small>
+	</div>
+	<div itemscope itemtype="http://schema.org/Article">
+		<a href="../../../blog/reflexoes/quer-ficar-rico.html" itemprop="url">
+			<span itemprop="name">
+				Quer ficar rico?			</span>
+		</a>
+		<small>19 Agosto 2019</small>
+	</div>
+	<div itemscope itemtype="http://schema.org/Article">
+		<a href="../../../basicos/php/cuidado-com-floats-em-linguagens.html" itemprop="url">
+			<span itemprop="name">
+				Cuidado com floats em Linguagens			</span>
+		</a>
+		<small>19 Julho 2019</small>
+	</div>
+	<div itemscope itemtype="http://schema.org/Article">
+		<a href="../../../servidores/servidor-web/setando-permissoes.html" itemprop="url">
+			<span itemprop="name">
+				Setando Permissões			</span>
+		</a>
+		<small>12 Julho 2019</small>
+	</div>
+</div>
+</div></div><div class="sp-module "><h3 class="sp-module-title">Pensamento do Dia</h3><div class="sp-module-content"><div>Aceita com serenidade o cortejo dos anos, e renuncia sem reservas aos dons da juventude. Desiderata 
+</div>
+</div></div></div></div><div id="sp-component" class="col-sm-6 col-md-6"><div class="sp-column "><div id="system-message-container">
+	</div>
+
+
+<article class="item item-page" itemscope itemtype="http://schema.org/Article">
+	<meta itemprop="inLanguage" content="pt-BR" />
+	
+	
+
+	<div class="entry-header has-post-format">
+		<span class="post-format"><i class="fa fa-thumb-tack"></i></span>
+						<dl class="article-info">
+
+		
+			<dt class="article-info-term"></dt>	
+				
+							<dd class="createdby" itemprop="author" itemscope itemtype="http://schema.org/Person">
+	<i class="fa fa-user"></i>
+					<span itemprop="name" data-toggle="tooltip" title="Escrito por ">Ribamar FS</span>	</dd>			
+			
+							<dd class="category-name">
+	<i class="fa fa-folder-open-o"></i>
+				<a href="../cakephp.html" itemprop="genre" data-toggle="tooltip" title="Categoria do Artigo">CakePHP</a>	</dd>			
+			
+							<dd class="published">
+	<i class="fa fa-calendar-o"></i>
+	<time datetime="2019-07-02T18:22:25-03:00" itemprop="datePublished" data-toggle="tooltip" title="Data de Publicação">
+		02 Julho 2019	</time>
+</dd>			
+		
+					
+			
+							<dd class="hits">
+	<span class="fa fa-eye"></span>
+	<meta itemprop="interactionCount" content="UserPageVisits:16" />
+	Acessos: 16</dd>					
+		
+
+	</dl>
+		
+					<h2 itemprop="name">
+									4 - Instalação e pré-requisitos do CakePHP 3							</h2>
+												</div>
+
+						
+<div class="icons">
+	
+					<div class="btn-group pull-right">
+				<button class="btn dropdown-toggle" type="button" id="dropdownMenuButton-251" aria-label="Ferramentas de usuário"
+				data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					<span class="icon-cog" aria-hidden="true"></span>
+					<span class="caret" aria-hidden="true"></span>
+				</button>
+								<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton-251">
+											<li class="print-icon"> <a href="4-instalacao-e-pre-requisitos-do-cakephp-3.html@tmpl=component&amp;print=1&amp;layout=default.html" title="Imprimir o artigo < 4 - Instalação e pré-requisitos do CakePHP 3 >" onclick="window.open(this.href,'win2','status=no,toolbar=no,scrollbars=yes,titlebar=no,menubar=no,resizable=yes,width=640,height=480,directories=no,location=no'); return false;" rel="nofollow">			<span class="icon-print" aria-hidden="true"></span>
+		Imprimir	</a> </li>
+																<li class="email-icon"> <a href="../../../component/mailto/index.html@tmpl=component&amp;template=shaper_helix3&amp;link=2ac911bca9f69b97c49995b99e48386c18b9cc9a.html" title="Envie este link a um amigo" onclick="window.open(this.href,'win2','width=400,height=450,menubar=yes,resizable=yes'); return false;" rel="nofollow">			<span class="icon-envelope" aria-hidden="true"></span>
+		Email	</a> </li>
+														</ul>
+			</div>
+		
+	</div>
+				
+	
+	
+				
+	
+			<div itemprop="articleBody">
+		<h3>4 – Instalação e pré-requisitos do CakePHP 3</h3>
+<p align="right"><em><strong>Talento ganha jogos, mas trabalho sério e inteligência ganha campeonato.</strong></em></p>
+<p align="right">Michael Jordan</p>
+<p align="right"> </p>
+<p><strong>Pré-requisitos da versão 3.7</strong></p>
+<p>- Web server como Apache 2 com mod_rewrite ou Nginx ou IIS</p>
+<p>- PHP 5.6 ou superior</p>
+<p>- Extensões mbstring, intl, simplexml e PDO</p>
+<p>- Um dos SGBDs suportados: MySQL, PostgreSQL, MariaDB, Microsoft SQL Server e SQLite</p>
+<p>- Composer (opcional mas recomendado)</p>
+<p align="left"> </p>
+<p><strong>Instalação do Composer</strong></p>
+<p>- Se tens a versão 7 ou superior do PHP instale assim (no Debian ou derivada):</p>
+<p><em>sudo apt-get install composer</em></p>
+<p> </p>
+<p>- Para a versão 5.x assim:</p>
+<p>sudo su</p>
+<p>curl -sS https://getcomposer.org/installer | php</p>
+<p> </p>
+<p>Colocar no path do Linux na versão 5.x:</p>
+<p>mv composer.phar /usr/local/bin/composer</p>
+<p> </p>
+<p>- A instalação no Windows é feita baixando</p>
+<p><a href="https://getcomposer.org/Composer-Setup.exe">https://getcomposer.org/Composer-Setup.exe</a></p>
+<p> </p>
+<p><strong>Instalando o CakePHP</strong></p>
+<p align="justify">Para criar um aplicativo com o CakePHP 3, instalamos sua estrutura básica e completa através do composer para então criar o aplicativo usando o bake ou manualmente</p>
+<p align="justify"><em>composer create-project --prefer-dist cakephp/app nome_app</em></p>
+<p align="justify"> </p>
+<p align="justify">A vantagem de usar o Composer é que ele irá completar automaticamente um conjunto importante de tarefas, como configurar corretamente as permissões das pastas /tmp e /logs. criar o config/app.php para você e setar um salt único.</p>
+<p align="justify">Como o comando é grande e pode dar trabalho de memorizar, vamos criar um link (no Windows crie um bat com %1), no Linux para receber parâmetro é $1.</p>
+<p><em>sudo nano /usr/local/bin/cake</em></p>
+<p>No windows salve na pasta <a href="file:///backup/transp/Estudar/c:/windows">c:\windows</a> para que fique no path</p>
+<p><strong>Cole a linha</strong></p>
+<p><em>composer create-project --prefer-dist cakephp/app $1</em></p>
+<p> </p>
+<p><strong>No Windows</strong></p>
+<p>Crie um arquivo c:\windows\cake.bat</p>
+<p><em>composer create-project --prefer-dist cakephp/app %1</em></p>
+<p> </p>
+<p>Para instalar uma versão diferente da atual, a 3.5.13, por exemplo:</p>
+<p><em>composer create-project --prefer-dist cakephp/cakephp:3.5.13 blog</em></p>
+<p> </p>
+<p><strong>Execute assim com nosso script/batch criado:</strong></p>
+<p>cd /var/www/html</p>
+<p>cake cliente</p>
+<p> </p>
+<p>Ou</p>
+<p>cd c:\xampp\htdocs</p>
+<p>cake.bat cliente</p>
+<p> </p>
+<p align="justify">Ao finalizar o Cake já terá trazido todo o seu código para a pasta /var/www/html/cliente ou c:\xampp\htdocs\cliente.</p>
+<p>E já vem com um controller default para que vejamos algo.</p>
+<p><strong>Vejas as mensagens finais do instalador:</strong></p>
+<p><em>Writing lock file</em></p>
+<p><em>Generating autoload files</em></p>
+<p><em>&gt; Cake\Composer\Installer\PluginInstaller::postAutoloadDump</em></p>
+<p><em>&gt; App\Console\Installer::postInstall</em></p>
+<p><em>Created `config/app.php` file</em></p>
+<p><em>Created `/backup/www/cake/aclbr/tmp/cache/views` directory</em></p>
+<p><em>Set Folder Permissions ? (Default to Y) [Y,n]? </em></p>
+<p><em>Permissions set on /backup/www/cake/aclbr/tmp/cache</em></p>
+<p><em>Permissions set on /backup/www/cake/aclbr/tmp/cache/models</em></p>
+<p><em>Permissions set on /backup/www/cake/aclbr/tmp/cache/persistent</em></p>
+<p><em>Permissions set on /backup/www/cake/aclbr/tmp/cache/views</em></p>
+<p><em>Permissions set on /backup/www/cake/aclbr/tmp/sessions</em></p>
+<p><em>Permissions set on /backup/www/cake/aclbr/tmp/tests</em></p>
+<p><em>Permissions set on /backup/www/cake/aclbr/tmp</em></p>
+<p><em>Permissions set on /backup/www/cake/aclbr/logs</em></p>
+<p><em>Updated Security.salt value in config/app.php</em></p>
+<p> </p>
+<p>Ele criou o arquivo config/app.php</p>
+<p>Ajustou as permissões no /tmp e no /logs</p>
+<p>Atualizou o salt em config/app.php</p>
+<p> </p>
+<p><strong>Estrutura de diretórios do CakePHP 3.7.7:</strong></p>
+<p>/bin – contém todos os arquivos executáveis para a console do CakePHP</p>
+<p>/config – Contém os arquivos de configuração do usuário</p>
+<p>/logs – Contém os arquivos de log da aplicação</p>
+<p>/plugins – destinado a armazenar os plugins locais da aplicação</p>
+<p>/src – Contém os Controllers, Models, Templates e Views da aplicação</p>
+<p>/tests – Contém todos os seus arquivos de teste</p>
+<p>/tmp – Arquivos temporários são armazenados aqui</p>
+<p>/vendor – Contém todas as dependências do Cake e o próprio. Os instalados com</p>
+<p>composer ficam aqui</p>
+<p>/webroot – Contém todos os arquivos publicamente acessíveis</p>
+<p>composer.json – Arquivo do composer com a lista e versões dos arquivos que a aplicação</p>
+<p>depende</p>
+<p>composer.lock – Arquivo do composer que bloqueia específicas versões de pacotes de</p>
+<p>PHP instalados</p>
+<p>index.php - Arquivo inicial que chama o webroot</p>
+<p>phpunit.xml.dist – A ser usado pelo phpunit</p>
+<p>README.md – Informações do repositório para o GitHub</p>
+<p><strong>Mais Detalhes em:</strong></p>
+<p><a href="https://book.cakephp.org/3.0/pt/intro/cakephp-folder-structure.html">https://book.cakephp.org/3.0/pt/intro/cakephp-folder-structure.html</a></p>
+<p> </p>
+<p>Os diretórios tmp e logs precisam ter permissões adequadas para que possam ser alterados pelo seu servidor web. Se você usou o Composer na instalação, ele deve ter feito isso por você e confirmado com uma mensagem "Permissions set on &lt;folder&gt;". Se você ao invés disso, recebeu uma mensagem de erro ou se quiser fazê-lo manualmente, a melhor forma seria descobrir por qual usuário o seu servidor web é executado (&lt;?= 'whoami'; ?&gt;) e alterar o proprietário desses dois diretórios para este usuário. Os comandos finais a serem executados (em *nix) podem ser algo como:</p>
+<pre>chown -R www-data tmp
+chown -R www-data logs</pre>
+<p>Se por alguma razão o CakePHP não puder escrever nesses diretórios, você será informado por uma advertência enquanto não estiver em modo de produção.</p>
+<p><strong>Chame pelo navegador</strong></p>
+<p><a href="http://localhost/cliente">http://localhost/cliente</a></p>
+<p> </p>
+<p><strong>Configurações do banco de dados no config/app.php</strong></p>
+<p>Procure a seção Datasources e altere apenas:</p>
+<p>'username' =&gt; 'root',</p>
+<p>'password' =&gt; '',</p>
+<p>'database' =&gt; 'cliente',</p>
+<p> </p>
+<p>Crie o banco chamado cliente com a tabela cliente e importe o script abaixo:</p>
+<pre class="language-php"><code>CREATE TABLE IF NOT EXISTS `clientes` (
+`id` int(11) NOT NULL AUTO_INCREMENT,
+`nome` char(45) NOT NULL,
+`email` varchar(50) DEFAULT NULL,
+`data_nasc` date DEFAULT NULL,
+`cpf` char(11) NOT NULL,
+PRIMARY KEY (`id`)
+);
+
+INSERT INTO `clientes` (`id`, `nome`, `email`, `data_nasc`, `cpf`) VALUES
+(1, 'Erin Pate Skinner', <span id="cloak2fed9b4afdc7da6b3a9c1f888868e698">Este endereço de email está sendo protegido de spambots. Você precisa do JavaScript ativado para vê-lo.</span><script type='text/javascript'>
+				document.getElementById('cloak2fed9b4afdc7da6b3a9c1f888868e698').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addy2fed9b4afdc7da6b3a9c1f888868e698 = '&#039;d&#111;l&#111;r.v&#105;t&#97;&#101;.d&#111;l&#111;r' + '&#64;';
+				addy2fed9b4afdc7da6b3a9c1f888868e698 = addy2fed9b4afdc7da6b3a9c1f888868e698 + 'm&#111;ll&#105;sv&#105;t&#97;&#101;p&#111;s&#117;&#101;r&#101;' + '&#46;' + 'c&#97;';
+				var addy_text2fed9b4afdc7da6b3a9c1f888868e698 = '&#039;d&#111;l&#111;r.v&#105;t&#97;&#101;.d&#111;l&#111;r' + '&#64;' + 'm&#111;ll&#105;sv&#105;t&#97;&#101;p&#111;s&#117;&#101;r&#101;' + '&#46;' + 'c&#97;';document.getElementById('cloak2fed9b4afdc7da6b3a9c1f888868e698').innerHTML += '<a ' + path + '\'' + prefix + ':' + addy2fed9b4afdc7da6b3a9c1f888868e698 + '\'>'+addy_text2fed9b4afdc7da6b3a9c1f888868e698+'<\/a>';
+		</script>', '2013-10-07', '74426302285'),
+(2, 'Leonard Martinez Hays', <span id="cloak0494a62230ea177aab44bd1ed5205cab">Este endereço de email está sendo protegido de spambots. Você precisa do JavaScript ativado para vê-lo.</span><script type='text/javascript'>
+				document.getElementById('cloak0494a62230ea177aab44bd1ed5205cab').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addy0494a62230ea177aab44bd1ed5205cab = '&#039;d&#105;gn&#105;ss&#105;m.m&#97;gn&#97;.&#97;' + '&#64;';
+				addy0494a62230ea177aab44bd1ed5205cab = addy0494a62230ea177aab44bd1ed5205cab + 'd&#111;l&#111;rv&#105;t&#97;&#101;' + '&#46;' + '&#111;rg';
+				var addy_text0494a62230ea177aab44bd1ed5205cab = '&#039;d&#105;gn&#105;ss&#105;m.m&#97;gn&#97;.&#97;' + '&#64;' + 'd&#111;l&#111;rv&#105;t&#97;&#101;' + '&#46;' + '&#111;rg';document.getElementById('cloak0494a62230ea177aab44bd1ed5205cab').innerHTML += '<a ' + path + '\'' + prefix + ':' + addy0494a62230ea177aab44bd1ed5205cab + '\'>'+addy_text0494a62230ea177aab44bd1ed5205cab+'<\/a>';
+		</script>', '2012-08-22', '75278965048'),
+(3, 'Aladdin Curry French', <span id="cloakd529214499d6a200d1683dc8654f5822">Este endereço de email está sendo protegido de spambots. Você precisa do JavaScript ativado para vê-lo.</span><script type='text/javascript'>
+				document.getElementById('cloakd529214499d6a200d1683dc8654f5822').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addyd529214499d6a200d1683dc8654f5822 = '&#039;&#101;&#117;.&#97;&#117;g&#117;&#101;' + '&#64;';
+				addyd529214499d6a200d1683dc8654f5822 = addyd529214499d6a200d1683dc8654f5822 + '&#101;&#117;t&#101;mp&#111;r&#101;r&#97;t' + '&#46;' + '&#111;rg';
+				var addy_textd529214499d6a200d1683dc8654f5822 = '&#039;&#101;&#117;.&#97;&#117;g&#117;&#101;' + '&#64;' + '&#101;&#117;t&#101;mp&#111;r&#101;r&#97;t' + '&#46;' + '&#111;rg';document.getElementById('cloakd529214499d6a200d1683dc8654f5822').innerHTML += '<a ' + path + '\'' + prefix + ':' + addyd529214499d6a200d1683dc8654f5822 + '\'>'+addy_textd529214499d6a200d1683dc8654f5822+'<\/a>';
+		</script>', '2012-10-28', '10376915676'),
+(4, 'Chloe Macdonald Dalton', <span id="cloakdef3ee01f673caa5cbd1de7586508859">Este endereço de email está sendo protegido de spambots. Você precisa do JavaScript ativado para vê-lo.</span><script type='text/javascript'>
+				document.getElementById('cloakdef3ee01f673caa5cbd1de7586508859').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addydef3ee01f673caa5cbd1de7586508859 = '&#039;p&#97;rt&#117;r&#105;&#101;nt.m&#111;nt&#101;s' + '&#64;';
+				addydef3ee01f673caa5cbd1de7586508859 = addydef3ee01f673caa5cbd1de7586508859 + 'M&#97;&#117;r&#105;s' + '&#46;' + 'c&#97;';
+				var addy_textdef3ee01f673caa5cbd1de7586508859 = '&#039;p&#97;rt&#117;r&#105;&#101;nt.m&#111;nt&#101;s' + '&#64;' + 'M&#97;&#117;r&#105;s' + '&#46;' + 'c&#97;';document.getElementById('cloakdef3ee01f673caa5cbd1de7586508859').innerHTML += '<a ' + path + '\'' + prefix + ':' + addydef3ee01f673caa5cbd1de7586508859 + '\'>'+addy_textdef3ee01f673caa5cbd1de7586508859+'<\/a>';
+		</script>', '2013-05-12', '64444679077'),
+(5, 'Mallory Sweet Strong', <span id="cloak26dc48bedf6c4cc540589608e13ff2ce">Este endereço de email está sendo protegido de spambots. Você precisa do JavaScript ativado para vê-lo.</span><script type='text/javascript'>
+				document.getElementById('cloak26dc48bedf6c4cc540589608e13ff2ce').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addy26dc48bedf6c4cc540589608e13ff2ce = '&#039;l&#111;r&#101;m' + '&#64;';
+				addy26dc48bedf6c4cc540589608e13ff2ce = addy26dc48bedf6c4cc540589608e13ff2ce + 'fr&#105;ng&#105;ll&#97;p&#111;rtt&#105;t&#111;r' + '&#46;' + 'c&#97;';
+				var addy_text26dc48bedf6c4cc540589608e13ff2ce = '&#039;l&#111;r&#101;m' + '&#64;' + 'fr&#105;ng&#105;ll&#97;p&#111;rtt&#105;t&#111;r' + '&#46;' + 'c&#97;';document.getElementById('cloak26dc48bedf6c4cc540589608e13ff2ce').innerHTML += '<a ' + path + '\'' + prefix + ':' + addy26dc48bedf6c4cc540589608e13ff2ce + '\'>'+addy_text26dc48bedf6c4cc540589608e13ff2ce+'<\/a>';
+		</script>', '2013-05-19', '15687101505'),
+(6, 'Jermaine Pierce Woodward', <span id="cloakc6ac10775471d2d998537944601eca6c">Este endereço de email está sendo protegido de spambots. Você precisa do JavaScript ativado para vê-lo.</span><script type='text/javascript'>
+				document.getElementById('cloakc6ac10775471d2d998537944601eca6c').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addyc6ac10775471d2d998537944601eca6c = '&#039;m&#105;.p&#101;d&#101;.n&#111;n&#117;mmy' + '&#64;';
+				addyc6ac10775471d2d998537944601eca6c = addyc6ac10775471d2d998537944601eca6c + 'm&#111;l&#101;st&#105;&#101;&#97;rc&#117;' + '&#46;' + 'c&#97;';
+				var addy_textc6ac10775471d2d998537944601eca6c = '&#039;m&#105;.p&#101;d&#101;.n&#111;n&#117;mmy' + '&#64;' + 'm&#111;l&#101;st&#105;&#101;&#97;rc&#117;' + '&#46;' + 'c&#97;';document.getElementById('cloakc6ac10775471d2d998537944601eca6c').innerHTML += '<a ' + path + '\'' + prefix + ':' + addyc6ac10775471d2d998537944601eca6c + '\'>'+addy_textc6ac10775471d2d998537944601eca6c+'<\/a>';
+		</script>', '2013-03-22', '36712502261'),
+(7, 'Bell Raymond Pruitt', <span id="cloak7d67aec43ee5a3b4e4234463d0303b44">Este endereço de email está sendo protegido de spambots. Você precisa do JavaScript ativado para vê-lo.</span><script type='text/javascript'>
+				document.getElementById('cloak7d67aec43ee5a3b4e4234463d0303b44').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addy7d67aec43ee5a3b4e4234463d0303b44 = '&#039;d&#105;gn&#105;ss&#105;m.t&#101;mp&#111;r.&#97;rc&#117;' + '&#64;';
+				addy7d67aec43ee5a3b4e4234463d0303b44 = addy7d67aec43ee5a3b4e4234463d0303b44 + 'n&#117;nc&#97;c' + '&#46;' + '&#111;rg';
+				var addy_text7d67aec43ee5a3b4e4234463d0303b44 = '&#039;d&#105;gn&#105;ss&#105;m.t&#101;mp&#111;r.&#97;rc&#117;' + '&#64;' + 'n&#117;nc&#97;c' + '&#46;' + '&#111;rg';document.getElementById('cloak7d67aec43ee5a3b4e4234463d0303b44').innerHTML += '<a ' + path + '\'' + prefix + ':' + addy7d67aec43ee5a3b4e4234463d0303b44 + '\'>'+addy_text7d67aec43ee5a3b4e4234463d0303b44+'<\/a>';
+		</script>', '2013-03-09', '64629428663'),
+(8, 'Lydia Bell Whitfield', <span id="cloakedf0097d08be70810262c533afb2cb93">Este endereço de email está sendo protegido de spambots. Você precisa do JavaScript ativado para vê-lo.</span><script type='text/javascript'>
+				document.getElementById('cloakedf0097d08be70810262c533afb2cb93').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addyedf0097d08be70810262c533afb2cb93 = '&#039;S&#101;d' + '&#64;';
+				addyedf0097d08be70810262c533afb2cb93 = addyedf0097d08be70810262c533afb2cb93 + 's&#101;mp&#101;r' + '&#46;' + 'c&#111;m';
+				var addy_textedf0097d08be70810262c533afb2cb93 = '&#039;S&#101;d' + '&#64;' + 's&#101;mp&#101;r' + '&#46;' + 'c&#111;m';document.getElementById('cloakedf0097d08be70810262c533afb2cb93').innerHTML += '<a ' + path + '\'' + prefix + ':' + addyedf0097d08be70810262c533afb2cb93 + '\'>'+addy_textedf0097d08be70810262c533afb2cb93+'<\/a>';
+		</script>', '2013-12-02', '41962749289'),
+(9, 'Tad Mason Graham', <span id="cloakf612a5b8f5d1299b7c9fe2f31fdde2ce">Este endereço de email está sendo protegido de spambots. Você precisa do JavaScript ativado para vê-lo.</span><script type='text/javascript'>
+				document.getElementById('cloakf612a5b8f5d1299b7c9fe2f31fdde2ce').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addyf612a5b8f5d1299b7c9fe2f31fdde2ce = '&#039;&#101;l&#105;t.&#101;r&#97;t' + '&#64;';
+				addyf612a5b8f5d1299b7c9fe2f31fdde2ce = addyf612a5b8f5d1299b7c9fe2f31fdde2ce + 'v&#101;st&#105;b&#117;l&#117;m' + '&#46;' + '&#101;d&#117;';
+				var addy_textf612a5b8f5d1299b7c9fe2f31fdde2ce = '&#039;&#101;l&#105;t.&#101;r&#97;t' + '&#64;' + 'v&#101;st&#105;b&#117;l&#117;m' + '&#46;' + '&#101;d&#117;';document.getElementById('cloakf612a5b8f5d1299b7c9fe2f31fdde2ce').innerHTML += '<a ' + path + '\'' + prefix + ':' + addyf612a5b8f5d1299b7c9fe2f31fdde2ce + '\'>'+addy_textf612a5b8f5d1299b7c9fe2f31fdde2ce+'<\/a>';
+		</script>', '2012-06-08', '05642745964'),
+(10, 'Felix Bradshaw Mccray', <span id="cloakbde7618f5e8f55bc7ad95a07fe9b89ca">Este endereço de email está sendo protegido de spambots. Você precisa do JavaScript ativado para vê-lo.</span><script type='text/javascript'>
+				document.getElementById('cloakbde7618f5e8f55bc7ad95a07fe9b89ca').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addybde7618f5e8f55bc7ad95a07fe9b89ca = '&#039;d&#117;&#105;' + '&#64;';
+				addybde7618f5e8f55bc7ad95a07fe9b89ca = addybde7618f5e8f55bc7ad95a07fe9b89ca + '&#101;l&#105;tC&#117;r&#97;b&#105;t&#117;rs&#101;d' + '&#46;' + '&#101;d&#117;';
+				var addy_textbde7618f5e8f55bc7ad95a07fe9b89ca = '&#039;d&#117;&#105;' + '&#64;' + '&#101;l&#105;tC&#117;r&#97;b&#105;t&#117;rs&#101;d' + '&#46;' + '&#101;d&#117;';document.getElementById('cloakbde7618f5e8f55bc7ad95a07fe9b89ca').innerHTML += '<a ' + path + '\'' + prefix + ':' + addybde7618f5e8f55bc7ad95a07fe9b89ca + '\'>'+addy_textbde7618f5e8f55bc7ad95a07fe9b89ca+'<\/a>';
+		</script>', '2013-09-16', '82071617437'),
+(11, 'Idona Jensen Garrett', <span id="cloak28a3e3b62b64afb7f0a2cfefe34248a9">Este endereço de email está sendo protegido de spambots. Você precisa do JavaScript ativado para vê-lo.</span><script type='text/javascript'>
+				document.getElementById('cloak28a3e3b62b64afb7f0a2cfefe34248a9').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addy28a3e3b62b64afb7f0a2cfefe34248a9 = '&#039;s&#101;m' + '&#64;';
+				addy28a3e3b62b64afb7f0a2cfefe34248a9 = addy28a3e3b62b64afb7f0a2cfefe34248a9 + 'Cr&#97;sv&#117;lp&#117;t&#97;t&#101;' + '&#46;' + 'c&#111;m';
+				var addy_text28a3e3b62b64afb7f0a2cfefe34248a9 = '&#039;s&#101;m' + '&#64;' + 'Cr&#97;sv&#117;lp&#117;t&#97;t&#101;' + '&#46;' + 'c&#111;m';document.getElementById('cloak28a3e3b62b64afb7f0a2cfefe34248a9').innerHTML += '<a ' + path + '\'' + prefix + ':' + addy28a3e3b62b64afb7f0a2cfefe34248a9 + '\'>'+addy_text28a3e3b62b64afb7f0a2cfefe34248a9+'<\/a>';
+		</script>', '2014-01-08', '07941004794'),
+(12, 'Wayne Ray Padilla', <span id="cloake552faffe44bc35a1edd1fd421f04e96">Este endereço de email está sendo protegido de spambots. Você precisa do JavaScript ativado para vê-lo.</span><script type='text/javascript'>
+				document.getElementById('cloake552faffe44bc35a1edd1fd421f04e96').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addye552faffe44bc35a1edd1fd421f04e96 = '&#039;l&#117;ct&#117;s.f&#101;l&#105;s.p&#117;r&#117;s' + '&#64;';
+				addye552faffe44bc35a1edd1fd421f04e96 = addye552faffe44bc35a1edd1fd421f04e96 + 'n&#111;nj&#117;st&#111;Pr&#111;&#105;n' + '&#46;' + '&#111;rg';
+				var addy_texte552faffe44bc35a1edd1fd421f04e96 = '&#039;l&#117;ct&#117;s.f&#101;l&#105;s.p&#117;r&#117;s' + '&#64;' + 'n&#111;nj&#117;st&#111;Pr&#111;&#105;n' + '&#46;' + '&#111;rg';document.getElementById('cloake552faffe44bc35a1edd1fd421f04e96').innerHTML += '<a ' + path + '\'' + prefix + ':' + addye552faffe44bc35a1edd1fd421f04e96 + '\'>'+addy_texte552faffe44bc35a1edd1fd421f04e96+'<\/a>';
+		</script>', '2014-04-03', '60934465323'),
+(13, 'Nelle Finch Cantu', <span id="cloakf828a895f65340de664e8d09b3eb317d">Este endereço de email está sendo protegido de spambots. Você precisa do JavaScript ativado para vê-lo.</span><script type='text/javascript'>
+				document.getElementById('cloakf828a895f65340de664e8d09b3eb317d').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addyf828a895f65340de664e8d09b3eb317d = '&#039;pl&#97;c&#101;r&#97;t.&#101;g&#101;t' + '&#64;';
+				addyf828a895f65340de664e8d09b3eb317d = addyf828a895f65340de664e8d09b3eb317d + 'D&#111;n&#101;c' + '&#46;' + 'c&#97;';
+				var addy_textf828a895f65340de664e8d09b3eb317d = '&#039;pl&#97;c&#101;r&#97;t.&#101;g&#101;t' + '&#64;' + 'D&#111;n&#101;c' + '&#46;' + 'c&#97;';document.getElementById('cloakf828a895f65340de664e8d09b3eb317d').innerHTML += '<a ' + path + '\'' + prefix + ':' + addyf828a895f65340de664e8d09b3eb317d + '\'>'+addy_textf828a895f65340de664e8d09b3eb317d+'<\/a>';
+		</script>', '2012-05-29', '64704574060'),
+(14, 'Maite Emerson Best', <span id="cloakc5668ce3233063e0e1f45ffd27012116">Este endereço de email está sendo protegido de spambots. Você precisa do JavaScript ativado para vê-lo.</span><script type='text/javascript'>
+				document.getElementById('cloakc5668ce3233063e0e1f45ffd27012116').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addyc5668ce3233063e0e1f45ffd27012116 = '&#039;d&#117;&#105;.&#97;&#117;g&#117;&#101;' + '&#64;';
+				addyc5668ce3233063e0e1f45ffd27012116 = addyc5668ce3233063e0e1f45ffd27012116 + 'q&#117;&#105;sd&#105;&#97;m' + '&#46;' + 'c&#111;m';
+				var addy_textc5668ce3233063e0e1f45ffd27012116 = '&#039;d&#117;&#105;.&#97;&#117;g&#117;&#101;' + '&#64;' + 'q&#117;&#105;sd&#105;&#97;m' + '&#46;' + 'c&#111;m';document.getElementById('cloakc5668ce3233063e0e1f45ffd27012116').innerHTML += '<a ' + path + '\'' + prefix + ':' + addyc5668ce3233063e0e1f45ffd27012116 + '\'>'+addy_textc5668ce3233063e0e1f45ffd27012116+'<\/a>';
+		</script>', '2014-04-01', '04531857574'),
+(15, 'Jada Holman Wilkins', <span id="cloak7ed6350ab19dab0e8753ca0c716f433e">Este endereço de email está sendo protegido de spambots. Você precisa do JavaScript ativado para vê-lo.</span><script type='text/javascript'>
+				document.getElementById('cloak7ed6350ab19dab0e8753ca0c716f433e').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addy7ed6350ab19dab0e8753ca0c716f433e = '&#039;d&#111;l&#111;r' + '&#64;';
+				addy7ed6350ab19dab0e8753ca0c716f433e = addy7ed6350ab19dab0e8753ca0c716f433e + 'tr&#105;st&#105;q&#117;&#101;&#97;l&#105;q&#117;&#101;t' + '&#46;' + 'c&#111;m';
+				var addy_text7ed6350ab19dab0e8753ca0c716f433e = '&#039;d&#111;l&#111;r' + '&#64;' + 'tr&#105;st&#105;q&#117;&#101;&#97;l&#105;q&#117;&#101;t' + '&#46;' + 'c&#111;m';document.getElementById('cloak7ed6350ab19dab0e8753ca0c716f433e').innerHTML += '<a ' + path + '\'' + prefix + ':' + addy7ed6350ab19dab0e8753ca0c716f433e + '\'>'+addy_text7ed6350ab19dab0e8753ca0c716f433e+'<\/a>';
+		</script>', '2013-01-11', '88994190741'),
+(16, 'Beverly Lane Lindsay', <span id="cloak85572f2e03d76a1e514849736636ddcc">Este endereço de email está sendo protegido de spambots. Você precisa do JavaScript ativado para vê-lo.</span><script type='text/javascript'>
+				document.getElementById('cloak85572f2e03d76a1e514849736636ddcc').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addy85572f2e03d76a1e514849736636ddcc = '&#039;&#101;t.&#101;&#117;&#105;sm&#111;d' + '&#64;';
+				addy85572f2e03d76a1e514849736636ddcc = addy85572f2e03d76a1e514849736636ddcc + '&#97;m&#101;tf&#97;&#117;c&#105;b&#117;s&#117;t' + '&#46;' + 'c&#111;m';
+				var addy_text85572f2e03d76a1e514849736636ddcc = '&#039;&#101;t.&#101;&#117;&#105;sm&#111;d' + '&#64;' + '&#97;m&#101;tf&#97;&#117;c&#105;b&#117;s&#117;t' + '&#46;' + 'c&#111;m';document.getElementById('cloak85572f2e03d76a1e514849736636ddcc').innerHTML += '<a ' + path + '\'' + prefix + ':' + addy85572f2e03d76a1e514849736636ddcc + '\'>'+addy_text85572f2e03d76a1e514849736636ddcc+'<\/a>';
+		</script>', '2013-10-22', '40194697135'),
+(17, 'Hayden Clayton Foreman', <span id="cloak101c5be60691c7201647ec46b63db1e6">Este endereço de email está sendo protegido de spambots. Você precisa do JavaScript ativado para vê-lo.</span><script type='text/javascript'>
+				document.getElementById('cloak101c5be60691c7201647ec46b63db1e6').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addy101c5be60691c7201647ec46b63db1e6 = '&#039;&#101;n&#105;m' + '&#64;';
+				addy101c5be60691c7201647ec46b63db1e6 = addy101c5be60691c7201647ec46b63db1e6 + '&#97;l&#105;q&#117;&#97;m&#101;n&#105;mn&#101;c' + '&#46;' + '&#101;d&#117;';
+				var addy_text101c5be60691c7201647ec46b63db1e6 = '&#039;&#101;n&#105;m' + '&#64;' + '&#97;l&#105;q&#117;&#97;m&#101;n&#105;mn&#101;c' + '&#46;' + '&#101;d&#117;';document.getElementById('cloak101c5be60691c7201647ec46b63db1e6').innerHTML += '<a ' + path + '\'' + prefix + ':' + addy101c5be60691c7201647ec46b63db1e6 + '\'>'+addy_text101c5be60691c7201647ec46b63db1e6+'<\/a>';
+		</script>', '2013-04-16', '72583040904'),
+(18, 'Hadassah Leonard Key', <span id="cloak8d06d74f9ba944c5bb7dff921057adea">Este endereço de email está sendo protegido de spambots. Você precisa do JavaScript ativado para vê-lo.</span><script type='text/javascript'>
+				document.getElementById('cloak8d06d74f9ba944c5bb7dff921057adea').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addy8d06d74f9ba944c5bb7dff921057adea = '&#039;d&#117;&#105;.q&#117;&#105;s' + '&#64;';
+				addy8d06d74f9ba944c5bb7dff921057adea = addy8d06d74f9ba944c5bb7dff921057adea + '&#97;&#117;g&#117;&#101;&#105;d&#97;nt&#101;' + '&#46;' + 'c&#111;m';
+				var addy_text8d06d74f9ba944c5bb7dff921057adea = '&#039;d&#117;&#105;.q&#117;&#105;s' + '&#64;' + '&#97;&#117;g&#117;&#101;&#105;d&#97;nt&#101;' + '&#46;' + 'c&#111;m';document.getElementById('cloak8d06d74f9ba944c5bb7dff921057adea').innerHTML += '<a ' + path + '\'' + prefix + ':' + addy8d06d74f9ba944c5bb7dff921057adea + '\'>'+addy_text8d06d74f9ba944c5bb7dff921057adea+'<\/a>';
+		</script>', '2013-04-07', '72626859924'),
+(19, 'Adrian Ballard Peters', <span id="cloak8c13b3d5c4c40adec96d63f3d86d421f">Este endereço de email está sendo protegido de spambots. Você precisa do JavaScript ativado para vê-lo.</span><script type='text/javascript'>
+				document.getElementById('cloak8c13b3d5c4c40adec96d63f3d86d421f').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addy8c13b3d5c4c40adec96d63f3d86d421f = '&#039;&#101;n&#105;m.C&#117;r&#97;b&#105;t&#117;r' + '&#64;';
+				addy8c13b3d5c4c40adec96d63f3d86d421f = addy8c13b3d5c4c40adec96d63f3d86d421f + 'f&#97;&#117;c&#105;b&#117;s' + '&#46;' + 'c&#111;m';
+				var addy_text8c13b3d5c4c40adec96d63f3d86d421f = '&#039;&#101;n&#105;m.C&#117;r&#97;b&#105;t&#117;r' + '&#64;' + 'f&#97;&#117;c&#105;b&#117;s' + '&#46;' + 'c&#111;m';document.getElementById('cloak8c13b3d5c4c40adec96d63f3d86d421f').innerHTML += '<a ' + path + '\'' + prefix + ':' + addy8c13b3d5c4c40adec96d63f3d86d421f + '\'>'+addy_text8c13b3d5c4c40adec96d63f3d86d421f+'<\/a>';
+		</script>', '2012-07-13', '50918748283'),
+(20, 'Phyllis Richmond Wynn', <span id="cloakc117c4abe170e2ebc5e3d15d5f031779">Este endereço de email está sendo protegido de spambots. Você precisa do JavaScript ativado para vê-lo.</span><script type='text/javascript'>
+				document.getElementById('cloakc117c4abe170e2ebc5e3d15d5f031779').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addyc117c4abe170e2ebc5e3d15d5f031779 = '&#039;&#101;g&#101;t.l&#97;&#111;r&#101;&#101;t' + '&#64;';
+				addyc117c4abe170e2ebc5e3d15d5f031779 = addyc117c4abe170e2ebc5e3d15d5f031779 + 'j&#117;st&#111;&#101;&#117;&#97;rc&#117;' + '&#46;' + '&#111;rg';
+				var addy_textc117c4abe170e2ebc5e3d15d5f031779 = '&#039;&#101;g&#101;t.l&#97;&#111;r&#101;&#101;t' + '&#64;' + 'j&#117;st&#111;&#101;&#117;&#97;rc&#117;' + '&#46;' + '&#111;rg';document.getElementById('cloakc117c4abe170e2ebc5e3d15d5f031779').innerHTML += '<a ' + path + '\'' + prefix + ':' + addyc117c4abe170e2ebc5e3d15d5f031779 + '\'>'+addy_textc117c4abe170e2ebc5e3d15d5f031779+'<\/a>';
+		</script>', '2013-07-01', '62712888794'),
+(21, 'Amelia Baird Barrera', <span id="cloak779c10497f809ab06c81384a168bfda6">Este endereço de email está sendo protegido de spambots. Você precisa do JavaScript ativado para vê-lo.</span><script type='text/javascript'>
+				document.getElementById('cloak779c10497f809ab06c81384a168bfda6').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addy779c10497f809ab06c81384a168bfda6 = '&#039;&#105;d.&#97;nt&#101;' + '&#64;';
+				addy779c10497f809ab06c81384a168bfda6 = addy779c10497f809ab06c81384a168bfda6 + 'd&#105;gn&#105;ss&#105;m' + '&#46;' + '&#111;rg';
+				var addy_text779c10497f809ab06c81384a168bfda6 = '&#039;&#105;d.&#97;nt&#101;' + '&#64;' + 'd&#105;gn&#105;ss&#105;m' + '&#46;' + '&#111;rg';document.getElementById('cloak779c10497f809ab06c81384a168bfda6').innerHTML += '<a ' + path + '\'' + prefix + ':' + addy779c10497f809ab06c81384a168bfda6 + '\'>'+addy_text779c10497f809ab06c81384a168bfda6+'<\/a>';
+		</script>', '2012-06-09', '12106836368'),
+(22, 'Whitney Mack Lamb', <span id="cloak3f06b37b69e407389326af0e9c89aa5d">Este endereço de email está sendo protegido de spambots. Você precisa do JavaScript ativado para vê-lo.</span><script type='text/javascript'>
+				document.getElementById('cloak3f06b37b69e407389326af0e9c89aa5d').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addy3f06b37b69e407389326af0e9c89aa5d = '&#039;q&#117;&#97;m.C&#117;r&#97;b&#105;t&#117;r.v&#101;l' + '&#64;';
+				addy3f06b37b69e407389326af0e9c89aa5d = addy3f06b37b69e407389326af0e9c89aa5d + 'Pr&#97;&#101;s&#101;ntl&#117;ct&#117;sC&#117;r&#97;b&#105;t&#117;r' + '&#46;' + '&#111;rg';
+				var addy_text3f06b37b69e407389326af0e9c89aa5d = '&#039;q&#117;&#97;m.C&#117;r&#97;b&#105;t&#117;r.v&#101;l' + '&#64;' + 'Pr&#97;&#101;s&#101;ntl&#117;ct&#117;sC&#117;r&#97;b&#105;t&#117;r' + '&#46;' + '&#111;rg';document.getElementById('cloak3f06b37b69e407389326af0e9c89aa5d').innerHTML += '<a ' + path + '\'' + prefix + ':' + addy3f06b37b69e407389326af0e9c89aa5d + '\'>'+addy_text3f06b37b69e407389326af0e9c89aa5d+'<\/a>';
+		</script>', '2012-06-26', '52403407001'),
+(23, 'Myra Mcmahon Valentine', <span id="cloakd8883ecbf6c954e3d224da1def0396fc">Este endereço de email está sendo protegido de spambots. Você precisa do JavaScript ativado para vê-lo.</span><script type='text/javascript'>
+				document.getElementById('cloakd8883ecbf6c954e3d224da1def0396fc').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addyd8883ecbf6c954e3d224da1def0396fc = '&#039;&#97;c.m&#105;' + '&#64;';
+				addyd8883ecbf6c954e3d224da1def0396fc = addyd8883ecbf6c954e3d224da1def0396fc + 'fr&#105;ng&#105;ll&#97;m&#105;' + '&#46;' + '&#101;d&#117;';
+				var addy_textd8883ecbf6c954e3d224da1def0396fc = '&#039;&#97;c.m&#105;' + '&#64;' + 'fr&#105;ng&#105;ll&#97;m&#105;' + '&#46;' + '&#101;d&#117;';document.getElementById('cloakd8883ecbf6c954e3d224da1def0396fc').innerHTML += '<a ' + path + '\'' + prefix + ':' + addyd8883ecbf6c954e3d224da1def0396fc + '\'>'+addy_textd8883ecbf6c954e3d224da1def0396fc+'<\/a>';
+		</script>', '2012-07-27', '42961419194');</code></pre>
+<p> </p>
+<p><strong>Routes</strong></p>
+<p>Para que ao abrir o aplicativo automaticamente ele mostra o controller Clientes, em config/routes.php altere a linha abaixo:</p>
+<p>Originalmente é assim a alinha:</p>
+<p>$routes-&gt;connect('/', ['controller' =&gt; 'Pages', 'action' =&gt; 'display', 'home']);</p>
+<p> </p>
+<p><strong>Mudei para</strong></p>
+<p>$routes-&gt;connect('/', ['controller' =&gt; 'Clientes', 'action' =&gt; 'index']);</p>
+<p> </p>
+<p><strong>Geração do Código do CRUD completo com o Bake</strong></p>
+<p>Depois de configurados o app.php e o routes.php, então execute:</p>
+<p>cd cliente</p>
+<p>bin/cake bake all clientes</p>
+<p align="left"><strong>Importante</strong>.: Lembre de mudar a barra / por \ se estiver usando o Windows.</p>
+<p align="left"> </p>
+<p align="left">Como saber a versão atual do CakePHP que está instalado?</p>
+<p align="left">bin/cake version</p>
+<p align="left"> </p>
+<p>Acesse novamente pelo Navegador</p>
+<p>Agora pode acessar seu aplicativo pelo navegador</p>
+<p><a href="http://localhost/cliente">http://localhost/</a><a href="http://localhost/cliente">cliente</a></p>
+<p>Aparece por default o Clientes/index, como configuramos no routes</p>
+<p align="left">Um CRUD completo e fundional com bons recursos.</p>
+<p align="left"> </p>
+<p align="left"><strong>Customizações</strong></p>
+<p align="justify">Agora já podemos melhorar seus recursos e também instalar o plugin cake-acl-br para implementar ACL com Bootstrap e outros bons recursos, ou se apenas deseja</p>
+<p align="justify">implementar o Bootstrap instale o plugin cake-bs-br:</p>
+<p align="left"><a href="https://github.com/ribafs/cake-acl-br">https://github.com/ribafs/cake-acl-br</a></p>
+<p align="left"><a href="https://github.com/ribafs/cake-bs-br">https://github.com/ribafs/cake-bs-br</a></p>
+<p align="left"> </p>
+<p align="left">O tutorial/README.md tem um bom tutorial que mostra diversas customizações do aplicativo.</p>
+<p align="left"><strong>Testando</strong></p>
+<p align="justify">Crie um novo registro e insira um e-mail inválido e então clique em SUBMIT. Veja que o Cake já criou o form usando HTML5, pois o campo para o e-mail é do tipo e-mail e o HTML5 não deixa inserir um e-mail inválido.</p>
+<p align="left"> </p>
+<p align="left">Tome cuidado com a criação do banco de dados</p>
+<p align="justify">O Cake faz isso com as informações que colhe do banco de dados e critica de acordo com as constraints presentes. Um exemplo é quando usamos o NOT NULL em um campo. Neste caso o Cake cria uma validação para obrigar o preenchimento do campo.</p>
+<p align="left"> </p>
+<p align="left"><strong>Problema com o mod_rewrite?</strong></p>
+<p align="left">Ocasionalmente, novos usuários irão se atrapalhar com problemas de mod_rewrite. Por exemplo, se a página de boas vindas do CakePHP parecer estranha (sem imagens ou estilos CSS). Isto provavelmente significa que o mod_rewrite não está funcionando em seu servidor. Por favor, verifique a seção <a href="https://book.cakephp.org/3.0/pt/installation.html#url-rewriting">Reescrita de URL</a> para obter ajuda e resolver qualquer problema relacionado.</p>
+<p align="left"><strong>Detalhes</strong></p>
+<p align="left"><a href="https://book.cakephp.org/3.0/en/installation.html">https://book.cakephp.org/3.0/en/installation.html</a></p>
+<p align="left"> </p>
+<h2><a name="__RefHeading___Toc24837_2925173334"></a><strong>4.1 - Algumas configurações</strong></h2>
+<p style="font-weight: normal;" align="left"> </p>
+<p align="left"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><b>config/app.php</b></span></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><b>Debug</b></p>
+<pre class="language-php"><code>
+    'debug' =&gt; filter_var(env('DEBUG', true), FILTER_VALIDATE_BOOLEAN),
+
+    'App' =&gt; [
+        'namespace' =&gt; 'App',
+        'encoding' =&gt; env('APP_ENCODING', 'UTF-8'),
+        'defaultLocale' =&gt; env('APP_DEFAULT_LOCALE', 'en_US'),
+        'defaultTimezone' =&gt; env('APP_DEFAULT_TIMEZONE', 'UTC'),
+        'base' =&gt; false,
+        'dir' =&gt; 'src',
+        'webroot' =&gt; 'webroot',
+        'wwwRoot' =&gt; WWW_ROOT,
+        //'baseUrl' =&gt; env('SCRIPT_NAME'),
+        'fullBaseUrl' =&gt; false,
+        'imageBaseUrl' =&gt; 'img/',
+        'cssBaseUrl' =&gt; 'css/',
+        'jsBaseUrl' =&gt; 'js/',
+        'paths' =&gt; [
+            'plugins' =&gt; [ROOT . DS . 'plugins' . DS],
+            'templates' =&gt; [APP . 'Template' . DS],
+            'locales' =&gt; [APP . 'Locale' . DS],
+        ],
+    ],
+
+    'Cache' =&gt; [
+        'default' =&gt; [
+            'className' =&gt; 'Cake\Cache\Engine\FileEngine',
+            'path' =&gt; CACHE,
+            'url' =&gt; env('CACHE_DEFAULT_URL', null),
+        ],
+
+        /**
+         * Configure the cache used for general framework caching.
+         * Translation cache files are stored with this configuration.
+         * Duration will be set to '+2 minutes' in bootstrap.php when debug = true
+         * If you set 'className' =&gt; 'Null' core cache will be disabled.
+         */
+        '_cake_core_' =&gt; [
+            'className' =&gt; 'Cake\Cache\Engine\FileEngine',
+            'prefix' =&gt; 'myapp_cake_core_',
+            'path' =&gt; CACHE . 'persistent/',
+            'serialize' =&gt; true,
+            'duration' =&gt; '+1 years',
+            'url' =&gt; env('CACHE_CAKECORE_URL', null),
+        ],
+
+        /**
+         * Configure the cache for model and datasource caches. This cache
+         * configuration is used to store schema descriptions, and table listings
+         * in connections.
+         * Duration will be set to '+2 minutes' in bootstrap.php when debug = true
+         */
+        '_cake_model_' =&gt; [
+            'className' =&gt; 'Cake\Cache\Engine\FileEngine',
+            'prefix' =&gt; 'myapp_cake_model_',
+            'path' =&gt; CACHE . 'models/',
+            'serialize' =&gt; true,
+            'duration' =&gt; '+1 years',
+            'url' =&gt; env('CACHE_CAKEMODEL_URL', null),
+        ],
+
+        /**
+         * Configure the cache for routes. The cached routes collection is built the
+         * first time the routes are processed via `config/routes.php`.
+         * Duration will be set to '+2 seconds' in bootstrap.php when debug = true
+         */
+        '_cake_routes_' =&gt; [
+            'className' =&gt; 'Cake\Cache\Engine\FileEngine',
+            'prefix' =&gt; 'myapp_cake_routes_',
+            'path' =&gt; CACHE,
+            'serialize' =&gt; true,
+            'duration' =&gt; '+1 years',
+            'url' =&gt; env('CACHE_CAKEROUTES_URL', null),
+        ],
+    ],
+
+    'Error' =&gt; [
+        'errorLevel' =&gt; E_ALL,
+        'exceptionRenderer' =&gt; 'Cake\Error\ExceptionRenderer',
+        'skipLog' =&gt; [],
+        'log' =&gt; true,
+        'trace' =&gt; true,
+    ],
+
+    'EmailTransport' =&gt; [
+        'default' =&gt; [
+            'className' =&gt; 'Cake\Mailer\Transport\MailTransport',
+            /*
+             * The following keys are used in SMTP transports:
+             */
+            'host' =&gt; 'localhost',
+            'port' =&gt; 25,
+            'timeout' =&gt; 30,
+            'username' =&gt; null,
+            'password' =&gt; null,
+            'client' =&gt; null,
+            'tls' =&gt; null,
+            'url' =&gt; env('EMAIL_TRANSPORT_DEFAULT_URL', null),
+        ],
+    ],
+
+    'Email' =&gt; [
+        'default' =&gt; [
+            'transport' =&gt; 'default',
+            'from' =&gt; 'you@localhost',
+            //'charset' =&gt; 'utf-8',
+            //'headerCharset' =&gt; 'utf-8',
+        ],
+    ],
+
+    'Datasources' =&gt; [
+        'default' =&gt; [
+            'className' =&gt; 'Cake\Database\Connection',
+            'driver' =&gt; 'Cake\Database\Driver\Mysql',
+            'persistent' =&gt; false,
+            'host' =&gt; 'localhost',
+            //'port' =&gt; 'non_standard_port_number',
+            'username' =&gt; 'root',
+            'password' =&gt; 'root',
+            'database' =&gt; 'admin_area',
+            //'encoding' =&gt; 'utf8mb4',
+            'timezone' =&gt; 'UTC',
+            'flags' =&gt; [],
+            'cacheMetadata' =&gt; true,
+            'log' =&gt; false,
+
+            'quoteIdentifiers' =&gt; false,
+
+            'url' =&gt; env('DATABASE_URL', null),
+        ],
+
+        /**
+         * The test connection is used during the test suite.
+         */
+        'test' =&gt; [
+            'className' =&gt; 'Cake\Database\Connection',
+            'driver' =&gt; 'Cake\Database\Driver\Mysql',
+            'persistent' =&gt; false,
+            'host' =&gt; 'localhost',
+            //'port' =&gt; 'non_standard_port_number',
+            'username' =&gt; 'my_app',
+            'password' =&gt; 'secret',
+            'database' =&gt; 'test_myapp',
+            //'encoding' =&gt; 'utf8mb4',
+            'timezone' =&gt; 'UTC',
+            'cacheMetadata' =&gt; true,
+            'quoteIdentifiers' =&gt; false,
+            'log' =&gt; false,
+            //'init' =&gt; ['SET GLOBAL innodb_stats_on_metadata = 0'],
+            'url' =&gt; env('DATABASE_TEST_URL', null),
+        ],
+    ],
+
+    'Log' =&gt; [
+        'debug' =&gt; [
+            'className' =&gt; 'Cake\Log\Engine\FileLog',
+            'path' =&gt; LOGS,
+            'file' =&gt; 'debug',
+            'url' =&gt; env('LOG_DEBUG_URL', null),
+            'scopes' =&gt; false,
+            'levels' =&gt; ['notice', 'info', 'debug'],
+        ],
+        'error' =&gt; [
+            'className' =&gt; 'Cake\Log\Engine\FileLog',
+            'path' =&gt; LOGS,
+            'file' =&gt; 'error',
+            'url' =&gt; env('LOG_ERROR_URL', null),
+            'scopes' =&gt; false,
+            'levels' =&gt; ['warning', 'error', 'critical', 'alert', 'emergency'],
+        ],
+        // To enable this dedicated query log, you need set your datasource's log flag to true
+        'queries' =&gt; [
+            'className' =&gt; 'Cake\Log\Engine\FileLog',
+            'path' =&gt; LOGS,
+            'file' =&gt; 'queries',
+            'url' =&gt; env('LOG_QUERIES_URL', null),
+            'scopes' =&gt; ['queriesLog'],
+        ],
+    ],
+
+    'Session' =&gt; [
+        'defaults' =&gt; 'php',
+    ],
+</code></pre>
+<p style="margin-bottom: 0cm; line-height: 100%;"> </p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><b>config/bootstrap.php</b></p>
+<p style="margin-bottom: 0cm; line-height: 100%;">* Setup detectors for mobile and tablet.</p>
+<p style="margin-bottom: 0cm; line-height: 100%;">*/</p>
+<p style="margin-bottom: 0cm; line-height: 100%;">ServerRequest::addDetector('mobile', function ($request) {</p>
+<p style="margin-bottom: 0cm; line-height: 100%;">$detector = new \Detection\MobileDetect();</p>
+<p style="margin-bottom: 0cm; line-height: 100%;">return $detector-&gt;isMobile();</p>
+<p style="margin-bottom: 0cm; line-height: 100%;">});</p>
+<p style="margin-bottom: 0cm; line-height: 100%;">ServerRequest::addDetector('tablet', function ($request) {</p>
+<p style="margin-bottom: 0cm; line-height: 100%;">$detector = new \Detection\MobileDetect();</p>
+<p style="margin-bottom: 0cm; line-height: 100%;">return $detector-&gt;isTablet();</p>
+<p style="margin-bottom: 0cm; line-height: 100%;">});</p>
+<p style="margin-bottom: 0cm; line-height: 100%;"> </p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><b>Também podemos configurar timezone</b> e formato de datas no bootstrap.php, veja:</p>
+<p style="margin-bottom: 0cm; line-height: 100%;">date_default_timezone_set('America/Fortaleza');</p>
+<pre class="language-php"><code>/**
+* Locale Formats
+*/
+
+\Cake\I18n\Time::setToStringFormat([IntlDateFormatter::MEDIUM, IntlDateFormatter::SHORT]);
+\Cake\I18n\Time::setToStringFormat('dd/MM/YYYY HH:mm');
+
+\Cake\Database\Type::build('date')-&gt;useLocaleParser()-&gt;setLocaleFormat('dd/MM/yyyy');
+
+\Cake\Database\Type::build('datetime')-&gt;useLocaleParser()-&gt;setLocaleFormat('dd/MM/yyyy HH:mm');
+
+\Cake\Database\Type::build('timestamp')-&gt;useLocaleParser()-&gt;setLocaleFormat('dd/MM/yyyy HH:mm');
+
+\Cake\Database\Type::build('decimal')-&gt;useLocaleParser();
+
+\Cake\Database\Type::build('float')-&gt;useLocaleParser();
+
+ini_set('intl.default_locale', 'pt_BR');
+
+/**
+* Default formats
+*/
+\Cake\I18n\Time::setToStringFormat('dd/MM/yyyy HH:mm:ss');
+\Cake\I18n\Date::setToStringFormat('dd/MM/yyyy');
+\Cake\I18n\FrozenTime::setToStringFormat('dd/MM/yyyy HH:mm:ss');
+\Cake\I18n\FrozenDate::setToStringFormat('dd/MM/yyyy');</code></pre>
+<p style="margin-bottom: 0cm; line-height: 100%;"> </p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><b>O código acima vem do plugin admin-br</b></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"> </p>
+<p style="margin-bottom: 0cm; line-height: 100%; page-break-before: always;"><b>config/bootstrap_cli.php</b></p>
+<p style="margin-bottom: 0cm; line-height: 100%;">Neste podemos alterar o comportamento default do bake. Vide admin-br.</p>
+<p style="margin-bottom: 0cm; line-height: 100%;"> </p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><b>config/requirements.php</b></p>
+<p style="margin-bottom: 0cm; line-height: 100%;">Neste ele verifica a versão mínima exigida do PHP e as duas extensões (intl e mbstring):</p>
+<p style="margin-bottom: 0cm; line-height: 100%;"> </p>
+<pre class="language-php"><code>&lt;?php
+if (version_compare(PHP_VERSION, '5.6.0') &lt; 0) {
+    trigger_error('Your PHP version must be equal or higher than 5.6.0 to use CakePHP.' . PHP_EOL, E_USER_ERROR);
+}
+
+/*
+ * You can remove this if you are confident you have intl installed.
+ */
+
+if (!extension_loaded('intl')) {
+    trigger_error('You must enable the intl extension to use CakePHP.' . PHP_EOL, E_USER_ERROR);
+}
+
+/*
+ * You can remove this if you are confident you have mbstring installed.
+ */
+
+if (!extension_loaded('mbstring')) {
+    trigger_error('You must enable the mbstring extension to use CakePHP.' . PHP_EOL, E_USER_ERROR);
+}
+</code></pre>
+<p style="margin-bottom: 0cm; line-height: 100%;"> </p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><b>config/routes.php</b></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><b>Neste ele verifica as rotas:</b></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"> </p>
+<pre class="language-php"><code>Router::scope('/', function (RouteBuilder $routes) {
+// Register scoped middleware for in scopes.
+$routes-&gt;registerMiddleware('csrf', new CsrfProtectionMiddleware([
+'httpOnly' =&gt; true
+]));
+
+/**
+* Apply a middleware to the current route scope.
+* Requires middleware to be registered via `Application::routes()` with `registerMiddleware()`
+*/
+
+$routes-&gt;applyMiddleware('csrf');
+...</code></pre>
+<p style="margin-bottom: 0cm; line-height: 100%;"> </p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><b>E define as rotas default e outras:</b></p>
+<p style="margin-bottom: 0cm; line-height: 100%;">$routes-&gt;connect('/', ['controller' =&gt; 'Users', 'action' =&gt; 'login']);</p>
+<p style="margin-bottom: 0cm; line-height: 100%;">$routes-&gt;connect('/pages/*', ['controller' =&gt; 'Pages', 'action' =&gt; 'display']);</p>
+<p style="margin-bottom: 0cm; line-height: 100%;"> </p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><b>Detalhes</b></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><a href="https://book.cakephp.org/3.0/en/development/configuration.html">https://book.cakephp.org/3.0/en/development/configuration.html</a></p> 	</div>
+
+	
+	
+	<ul class="pager pagenav">
+	<li class="previous">
+		<a class="hasTooltip" title="5 - Gerando Código com Bake" aria-label="Artigo anterior: 5 - Gerando Código com Bake" href="5-gerando-codigo-com-bake.html" rel="prev">
+			<span class="icon-chevron-left" aria-hidden="true"></span> <span aria-hidden="true">Ant</span>		</a>
+	</li>
+	<li class="next">
+		<a class="hasTooltip" title="3 - Convenções sobre Configurações" aria-label="Próximo artigo: 3 - Convenções sobre Configurações" href="3-convencoes-sobre-configuracoes.html" rel="next">
+			<span aria-hidden="true">Próximo</span> <span class="icon-chevron-right" aria-hidden="true"></span>		</a>
+	</li>
+</ul>
+				
+	
+	<script type="text/x-template" id="ccomment-pagination">
+	<nav class="pagination text-center" v-if="pagination.last_page > 0">
+		<ul >
+			<li v-if="showPrevious()" :class="{ 'disabled' : pagination.current_page <= 1 }">
+				<span v-if="pagination.current_page <= 1">
+					<span aria-hidden="true">Ant</span>
+				</span>
+				<a href="4-instalacao-e-pre-requisitos-do-cakephp-3.html#" v-if="pagination.current_page > 1 " :aria-label="config.ariaPrevioius"
+				   @click.prevent="changePage(pagination.current_page - 1)">
+					<span aria-hidden="true">Ant</span>
+				</a>
+			</li>
+			<li v-for="num in array" :class="{ 'active': num === pagination.current_page }">
+				<a href="4-instalacao-e-pre-requisitos-do-cakephp-3.html#" @click.prevent="changePage(num)">{{ num }}</a>
+			</li>
+			<li v-if="showNext()"
+			    :class="{ 'disabled' : pagination.current_page === pagination.last_page || pagination.last_page === 0 }">
+				<span v-if="pagination.current_page === pagination.last_page || pagination.last_page === 0">
+					<span aria-hidden="true">Próximo</span>
+				</span>
+				<a href="4-instalacao-e-pre-requisitos-do-cakephp-3.html#" v-if="pagination.current_page < pagination.last_page" :aria-label="config.ariaNext"
+				   @click.prevent="changePage(pagination.current_page + 1)">
+					<span aria-hidden="true">Próximo</span>
+				</a>
+			</li>
+		</ul>
+	</nav>
+</script>
+	<script type="text/x-template" id="ccomment-avatar">
+		<div class="ccomment-avatar">
+			<a v-if="profileLink" v-bind:href="profileLink">
+				<img v-bind:src="avatar"/>
+			</a>
+			<img v-else v-bind:src="avatar"/>
+		</div>
+	</script>
+
+	<script type="text/x-template" id="ccomment-user-name">
+		<a v-if="profileLink" :href="profileLink">
+			<span class="ccomment-author">{{name}}</span>
+		</a>
+		<span v-else class="ccomment-author">{{name}}</span>
+	</script>
+
+	<script type="text/x-template" id="ccomment-created">
+		<a :href="'#!/ccomment-comment=' + id" class="muted ccomment-created">
+			{{date}}
+		</a>
+	</script>
+
+	<div id="ccomment-token" style="display:none;">
+		<input type="hidden" name="796296c0a9019553ed4bbba150ad5a40" value="1" />	</div>
+
+	
+<script type="text/x-template" id="ccomment-customfields">
+	<div class="ccomment-customfields" v-if="customfields">
+		<strong>Campos personalizados</strong>
+		<dl class="dl-horizontal">
+			<template v-for="customfield in customfields">
+				<dt>{{customfield.title}}</dt>
+				<dd>{{customfield.value}}</dd>
+			</template>
+		</dl>
+	</div>
+</script>
+
+<script type="text/x-template" id="ccomment-template">
+	<li v-bind:class="model.class+' ccomment-level-'+model.level">
+		<div class="ccomment-comment-content" v-bind:id="'ccomment-comment-'+model.id">
+			<div class="ccomment-data">
+									<ccomment-avatar
+							v-bind:avatar="model.avatar"
+							v-bind:profileLink="model.profileLink"/>
+								<div class="ccomment-content">
+					<div class="ccomment-meta">
+						<ccomment-user-name v-bind:name="model.name" v-bind:profileLink="model.profileLink"></ccomment-user-name>
+						<ccomment-created v-bind:date="model.date" v-bind:id="model.id"></ccomment-created>
+					</div>
+
+					<div v-html="model.comment">
+					</div>
+
+
+					<div v-if="model.galleria" class="js-ccomment-galleria galleria ccomment-galleria"></div>
+
+					<ccomment-customfields v-bind:customfields="model.customfields"></ccomment-customfields>
+					<div class="ccomment-actions">
+													<span class="muted">
+					{{model.votes}}
+					<i class="ccomment-thumbs-up ccomment-voting" v-on:click="vote(+1, model.id)"></i>
+					<i class="ccomment-thumbs-down ccomment-voting" v-on:click="vote(-1, model.id)"></i>
+				</span>
+						
+													<button class="btn btn-small ccomment-quote btn-link" v-on:click="quote(model.id)">
+								Citar							</button>
+						
+						
+						<div class="pull-right ccomment-moderation">
+							<button v-if="model.commentModerator" class="btn btn-mini btn-ccomment-edit" v-on:click="edit(model.id)">
+								Editar							</button>
+
+													</div>
+					</div>
+				</div>
+			</div>
+
+
+			<keep-alive>
+				<ccomment-form v-if="reply" :ref="'form-'+model.id" v-bind:focus="true">
+					<input slot="parent-id" name="jform[parentid]" type="hidden" v-bind:value="model.id"/>
+				</ccomment-form>
+			</keep-alive>
+		</div>
+
+		<ul v-if="hasChildren">
+			<ccomment-comment class="item" v-for="model in getChild()" v-bind:key="model.id" v-bind:model="model">
+			</ccomment-comment>
+		</ul>
+	</li>
+
+</script>
+	
+	
+
+		<script type="text/x-template" id="ccomment-form">
+			<form class="ccomment-form" v-on:submit.prevent="onSubmit">
+				<div class="ccomment-error-form row-fluid  margin-bottom" v-if="error">
+					<div class="alert alert-error">
+						{{errorMessage}}
+					</div>
+				</div>
+				<div class="ccomment-info-form row-fluid  margin-bottom" v-if="info">
+					<div class="alert alert-info">
+						{{infoMessage}}
+					</div>
+				</div>
+				<div class="row-fluid margin-bottom">
+											<div class="span1 hidden-phone">
+							<ccomment-avatar v-bind:avatar="getAvatar"></ccomment-avatar>
+						</div>
+					
+					<div class="span11">
+						<textarea v-on:focus="toggle"
+								  name="jform[comment]"
+								  class='js-ccomment-textarea ccomment-textarea span12 required'
+								  placeholder="Deixe um comentário"
+						></textarea>
+
+						<div v-show="uploadImage">
+							
+<div class="fileupload">
+	<!-- The fileupload-buttonbar contains buttons to add/delete files and start/cancel the upload -->
+	<div class="row fileupload-buttonbar">
+		<input type="file" name="files[]" class="js-ccomment-file-upload-real ccomment-file-upload-real" multiple/>
+		<div class="">
+			<!-- The global file processing state -->
+			<span class="fileupload-process"><span class="fa fa-spinner fa-pulse"></span></span>
+			Attach images by dragging & dropping or <span type="button" class="js-file-upload-fake ccomment-file-upload-fake btn-link"> by selecting them.</span>			<br/>
+			<small class="muted">The maximum file size for uploads is <strong>MB</strong>.				Only <strong></strong> files are allowed.</small>
+
+			<!-- The global progress state -->
+			<div class="fileupload-progress fade hide">
+				<!-- The global progress bar -->
+				<div class="progress progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+					<div class="progress-bar progress-bar-success" style="width:0%;"></div>
+				</div>
+				<!-- The extended global progress state -->
+				<div class="progress-extended">&nbsp;</div>
+			</div>
+			<div class="ccomment-file-list">
+				<div class="alert alert-error hide compojoom-max-number-files">
+					The maximum number of 3 allowed files to upload has been reached. If you want to upload more files you have to delete one of the existing uploaded files first.				</div>
+				<table role="presentation" class="table table-striped">
+					<thead></thead>
+					<tbody class="files"></tbody>
+				</table>
+				<div class="alert alert-error hide compojoom-max-number-files">
+					The maximum number of 3 allowed files to upload has been reached. If you want to upload more files you have to delete one of the existing uploaded files first.				</div>
+			</div>
+		</div>
+	</div>
+</div>
+						</div>
+
+						<div v-show="active">
+							<div class="span4 muted small">
+								Postando como																	<button type="button"
+											v-on:click="display = !display"
+											class="btn-link btn-small ccomment-posting-as">{{getDefaultName}}
+									</button>
+															</div>
+															<label class="checkbox pull-right small ccomment-notify">
+									<input type="checkbox" value="1" name="jform[notify]ƒ"
+										   v-on:click="notify = !notify"/>
+									<span class="muted">
+										Notificar-me de futuros comentários via e-mail									</span>
+								</label>
+							
+
+						</div>
+					</div>
+											<div v-show="display"
+							 class="row-fluid ccomment-user-info offset1					span11">
+							<div class="span6">
+								<input name="jform[name]"
+									   class="ccomment-name span12 no-margin "
+									   type='text'
+									   v-bind:value="getName"
+									   v-on:input="updateDefaultName"
+																			   placeholder="Informe seu nome"
+									   tabindex="2"
+																	/>
+								<span class="help-block pull-right small muted">
+								Exibido ao lado de seus comentários.							</span>
+							</div>
+
+															<div class="span6">
+									<input name='jform[email]'
+										   class="ccomment-email span12 no-margin "
+										   type='text'
+										   v-bind:value='getEmail'
+										   v-on:input="updateUserEmail"
+										   placeholder="Informe seu email"
+																				   tabindex="3"
+																			/>
+									<p class="help-block small pull-right muted">
+										Não exibido publicamente.																					<span class='gravatar'>
+											<a href='http://gravatar.com' target='_blank'>Gravatar</a> habilitado										</span>
+																			</p>
+								</div>
+													</div>
+					
+
+					
+					
+
+					<div class="row-fluid ccomment-actions" v-show="active">
+													<div class="pull-left muted small ccomment-undergo-moderation offset1">
+								Comentários serão submetidos a moderação antes de serem publicados.							</div>
+												<div class="pull-right">
+							<button v-on:click="reset()"
+									type="button"
+									class="btn ccomment-cancel">
+								Cancelar</button>
+							<button type="submit" class='btn btn-primary ccomment-send'
+									tabindex="7"
+									name='bsend'>
+								<span v-if="isSending">
+									Salvando...								</span>
+								<span v-else>
+									Enviar								</span>
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<input type="hidden" name="jform[contentid]" v-bind:value="itemConfig.contentid"/>
+				<input type="hidden" name="jform[component]" v-bind:value="itemConfig.component"/>
+				<input type="hidden" name="jform[page]" v-bind:value="page"/>
+				<slot name="parent-id"></slot>
+			</form>
+		</script>
+
+	
+
+
+
+
+<!-- The template to display files available for upload -->
+<script id="template-upload" type="text/x-tmpl">
+{% for (var i=0, file; file=o.files[i]; i++) { %}
+    <tr class="template-upload fade">
+        <td>
+            <span class="preview"></span>
+        </td>
+        <td>
+         <span class="name"><i>{%=file.name%}</i></span>
+            <div class="compojoom-single-file-progress">
+	            <div class="progress progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+	                <div class="progress-bar progress-bar-success" style="width:0%;"></div>
+	            </div>
+	           <small><strong class="size">Processing...</strong></small>
+			</div>
+        </td>
+        <td>
+            {% if (!i && !o.options.autoUpload) { %}
+                <button class="btn btn-default btn-xs start" disabled>
+                    <i class="fa fa-upload"></i>
+                    <span>Start</span>
+                </button>
+            {% } %}
+            {% if (!i) { %}
+                <button class="btn btn-default btn-xs btn-xs cancel pull-left">
+                    <i class="fa fa-stop"></i>
+                    <span>Cancel</span>
+                </button>
+            {% } %}
+        </td>
+    </tr>
+{% } %}
+</script>
+
+<!-- The template to display files available for download -->
+<script id="template-download" type="text/x-tmpl">
+{% for (var i=0, file; file=o.files[i]; i++) { %}
+    <tr class="template-download fade">
+        <td style="">
+        {% if (file.thumbnailUrl) { %}
+            <span class="preview">
+                {% if (file.url) { %}
+					<a href="http://backup/portal/{%=file.url%}" title="{%=file.name%}" download="{%=file.name%}" data-gallery>
+						<img src='http://backup/portal/curriculo/livros/cakephp/{%=file.thumbnailUrl%}'>
+					</a>
+				{% } else { %}
+					<img src='http://backup/portal/curriculo/livros/cakephp/{%=file.thumbnailUrl%}'>
+				{% } %}
+            </span>
+		{% } %}
+        </td>
+        <td>
+        {% if (!file.error) { %}
+	        <div class="file-meta">
+			    <div class="row">
+			        <div class="col-lg-4">
+			           <input type="text" class="form-control"
+			                placeholder="Title"
+							name="jform[picture_data][{%=file.name%}][title]"
+					        value="{%=file.title%}" />
+			        </div>
+			        <div class="col-lg-8">
+			            <input type="text" placeholder="Description" class="form-control"
+					                name="jform[picture_data][{%=file.name%}][description]"
+
+					                value="{%=file.description%}" />
+			        </div>
+			    </div>
+	        </div>
+		 {% } %}
+        {% if (file.error) { %}
+            <div><span class="label label-danger">Error</span> {%=file.error%}</div>
+        {% } %}
+        </td>
+        <td style="text-align: center">
+            {% if (file.deleteUrl) { %}
+                            {% } else { %}
+                 <button class="btn btn-default btn-xs btn-xs cancel">
+                    <i class="fa fa-stop"></i>
+                    <span>Cancel</span>
+                </button>
+            {% }%}
+            {% if (!file.error) { %}
+            <input type="hidden" name="jform[picture][]" value="{%=file.name%}" />
+            {% } %}
+        </td>
+    </tr>
+{% } %}
+</script>
+	
+<script type="text/x-template" id="ccomment-menu">
+	<div class="row-fluid ccomment-menu">
+		<h4 class="pull-left">
+			Comentários			(<span class="ccomment-comment-counter">{{pagination.total_with_children}}</span>)
+		</h4>
+		<div class="pull-right">
+							<button
+						v-on:click="newComment"
+						class="ccomment-add-new btn btn-mini" title='Adicionar Novo'>
+					Adicionar Novo				</button>
+														</div>
+	</div>
+</script>
+
+	<!-- the ccomment root element -->
+	<div class="ccomment" id="ccomment">
+
+		<ccomment-menu></ccomment-menu>
+
+		
+		
+		<ul class="ccomment-comments-list">
+			<ccomment-comment v-for="item in comments"
+							  v-if="item.parentid === -1"
+							  class="item"
+							  v-bind:key="item.id"
+							  v-bind:model="item">
+			</ccomment-comment>
+		</ul>
+
+					<pagination v-if="pagination.last_page > 1" :pagination="pagination" :callback="loadData" :options="paginationOptions"></pagination>
+		
+					<ccomment-form></ccomment-form>
+		
+			<div class="row-fluid small muted ccomment-powered">
+		<p class="text-center">
+			Comments fornecido por <a href='https://compojoom.com' rel='nofollow' target='_blank'>CComment</a>		</p>
+	</div>
+	</div>
+
+	<script type="text/javascript">
+		window.compojoom = compojoom = window.compojoom || {};
+		compojoom.ccomment = {
+			user: {"loggedin":false,"avatar":"http:\/\/backup\/portal\/media\/com_comment\/images\/noavatar.png"},
+			item: {"contentid":251,"component":"com_content","count":0},
+			config: {"comments_per_page":0,"sort":0,"tree":0,"use_name":0,"tree_depth":5,"form_position":0,"voting":1,"copyright":1,"pagination_position":0,"avatars":0,"gravatar":1,"support_ubb":1,"support_emoticons":0,"support_picture":0,"name_required":0,"email_required":0,"baseUrl":"http:\/\/backup\/portal\/","langCode":null,"file_upload":{"url":"http:\/\/backup\/portal\/index.php?option=com_comment&amp;task=multimedia.doIt","formControl":"jform","fieldName":"picture","maxNumberOfFiles":3,"fileTypes":null,"maxSize":null,"component":"com_comment","imageSize":{"x":"2400","y":"1800"}}}		};
+	</script>
+
+<script data-inline type="text/javascript" src="../../../media/com_comment/cache/8e12eb270706cd6b2c8483104bf89b54.min.js"></script>
+			<div class="article-footer-wrap">
+			<div class="article-footer-top">
+									<div class="helix-social-share">
+		<div class="helix-social-share-icon">
+			<ul>
+				
+				<li>
+					<div class="facebook" data-toggle="tooltip" data-placement="top" title="Share On Facebook">
+
+						<a class="facebook" onClick="window.open('http://www.facebook.com/sharer.php?u=http://backup/portal/curriculo/livros/cakephp/4-instalacao-e-pre-requisitos-do-cakephp-3.html','Facebook','width=600,height=300,left='+(screen.availWidth/2-300)+',top='+(screen.availHeight/2-150)+''); return false;" href="http://www.facebook.com/sharer.php?u=http://backup/portal/curriculo/livros/cakephp/4-instalacao-e-pre-requisitos-do-cakephp-3.html">
+
+							<i class="fa fa-facebook"></i>
+						</a>
+
+					</div>
+				</li>
+				<li>
+					<div class="twitter"  data-toggle="tooltip" data-placement="top" title="Share On Twitter">
+						
+						<a class="twitter" onClick="window.open('http://twitter.com/share?url=http://backup/portal/curriculo/livros/cakephp/4-instalacao-e-pre-requisitos-do-cakephp-3.html&amp;text=4%20-%20Instalação%20e%20pré-requisitos%20do%20CakePHP%203','Twitter share','width=600,height=300,left='+(screen.availWidth/2-300)+',top='+(screen.availHeight/2-150)+''); return false;" href="http://twitter.com/share?url=http://backup/portal/curriculo/livros/cakephp/4-instalacao-e-pre-requisitos-do-cakephp-3.html&amp;text=4%20-%20Instalação%20e%20pré-requisitos%20do%20CakePHP%203">
+							<i class="fa fa-twitter"></i>
+						</a>
+
+					</div>
+				</li>
+				<li>
+					<div class="google-plus">
+						<a class="gplus" data-toggle="tooltip" data-placement="top" title="Share On Google Plus" onClick="window.open('https://plus.google.com/share?url=http://backup/portal/curriculo/livros/cakephp/4-instalacao-e-pre-requisitos-do-cakephp-3.html','Google plus','width=585,height=666,left='+(screen.availWidth/2-292)+',top='+(screen.availHeight/2-333)+''); return false;" href="https://plus.google.com/share?url=http://backup/portal/curriculo/livros/cakephp/4-instalacao-e-pre-requisitos-do-cakephp-3.html" >
+						<i class="fa fa-google-plus"></i></a>
+					</div>
+				</li>
+				
+				<li>
+					<div class="linkedin">
+						<a class="linkedin" data-toggle="tooltip" data-placement="top" title="Share On Linkedin" onClick="window.open('http://www.linkedin.com/shareArticle?mini=true&url=http://backup/portal/curriculo/livros/cakephp/4-instalacao-e-pre-requisitos-do-cakephp-3.html','Linkedin','width=585,height=666,left='+(screen.availWidth/2-292)+',top='+(screen.availHeight/2-333)+''); return false;" href="http://www.linkedin.com/shareArticle?mini=true&url=http://backup/portal/curriculo/livros/cakephp/4-instalacao-e-pre-requisitos-do-cakephp-3.html" >
+							
+						<i class="fa fa-linkedin-square"></i></a>
+					</div>
+				</li>
+			</ul>
+		</div>		
+	</div> <!-- /.helix-social-share -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			</div>
+					</div>
+	
+</article>
+</div></div><div id="sp-right" class="col-sm-3 col-md-3"><div class="sp-column class2"><div class="sp-module pop"><h3 class="sp-module-title">Populares</h3><div class="sp-module-content"><ul class="mostreadpop mod-list">
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="http://backup/portal/mobile/phaser/atualizar-o-node-js.html" itemprop="url">
+			<span itemprop="name">
+				Atualizar o Node.JS			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../../../joomla-3/dicas/melhorando-a-velocidade-do-site.html" itemprop="url">
+			<span itemprop="name">
+				Melhorando a velocidade do site			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="http://backup/portal/curriculo/livros/boas-vindas.html" itemprop="url">
+			<span itemprop="name">
+				Boas Vindas!			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../../../joomla-3/instalacao.html" itemprop="url">
+			<span itemprop="name">
+				Instalação do Joomla			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../../../blog/diversos/e-possivel-viver-sem-o-google.html" itemprop="url">
+			<span itemprop="name">
+				É possível viver sem o Google?			</span>
+		</a>
+	</li>
+</ul>
+</div></div><div class="sp-module "><h3 class="sp-module-title">Novo Testamento</h3><div class="sp-module-content">Àqueles a quem perdoardes os pecados lhes são perdoados; e àqueles a quem os retiverdes lhes são retidos.
+
+<br>(Jo, 20:23) 
+</div></div><div class="sp-module "><h3 class="sp-module-title">Rotas no Mapa do Google</h3><div class="sp-module-content"><a href="https://www.google.com/maps/dir///@-3.7294526,-38.5422647,15z" target="_blank">Abrir o Mapa</a>
+</div></div></div></div></div></div></section><footer id="sp-footer"><div class="container"><div class="row"><div id="sp-footer1" class="col-sm-12 col-md-12"><div class="sp-column "><span class="sp-copyright">© 2015 Ribamar FS. All Rights Reserved. Designed By JoomShaper</span></div></div></div></div></footer>            </div> <!-- /.body-innerwrapper -->
+        </div> <!-- /.body-innerwrapper -->
+
+        <!-- Off Canvas Menu -->
+        <div class="offcanvas-menu">
+            <a href="4-instalacao-e-pre-requisitos-do-cakephp-3.html#" class="close-offcanvas" aria-label="Close"><i class="fa fa-remove" aria-hidden="true" title="HELIX_CLOSE_MENU"></i></a>
+            <div class="offcanvas-inner">
+                                  <div class="sp-module _menu"><h3 class="sp-module-title">Menu Principal</h3><div class="sp-module-content"><ul class="nav menu">
+<li class="item-101"><a href="../../../index.html" > Início</a></li><li class="item-107  deeper parent"><a href="../../../basicos.html" > Básicos</a><span class="offcanvas-menu-toggler collapsed" data-toggle="collapse" data-target="#collapse-menu-107"><i class="open-icon fa fa-angle-down"></i><i class="close-icon fa fa-angle-up"></i></span><ul class="collapse" id="collapse-menu-107"><li class="item-112"><a href="../../../basicos/html.html" > HTML</a></li><li class="item-113"><a href="../../../basicos/javascript.html" > JavaScript</a></li><li class="item-114"><a href="../../../basicos/css.html" > CSS</a></li><li class="item-116"><a href="../../../basicos/jquery.html" > jQuery</a></li><li class="item-117"><a href="../../../basicos/bootstrap.html" > Bootstrap</a></li><li class="item-118"><a href="../../../basicos/php.html" > PHP</a></li><li class="item-119"><a href="../../../basicos/phpoo.html" > PHPOO</a></li><li class="item-120"><a href="../../../basicos/pdo.html" > PDO</a></li><li class="item-157"><a href="../../../basicos/ferramentas.html" > Ferramentas</a></li><li class="item-287"><a href="../../../basicos/outros.html" > Outros</a></li></ul></li><li class="item-108  deeper parent"><a href="../../../servidores.html" > Servidores</a><span class="offcanvas-menu-toggler collapsed" data-toggle="collapse" data-target="#collapse-menu-108"><i class="open-icon fa fa-angle-down"></i><i class="close-icon fa fa-angle-up"></i></span><ul class="collapse" id="collapse-menu-108"><li class="item-121"><a href="../../../servidores/desktop.html" > Desktop</a></li><li class="item-122"><a href="../../../servidores/ubuntu-server.html" > Ubuntu Server</a></li><li class="item-123"><a href="../../../servidores/shell-scripts.html" > Shell Scripts</a></li><li class="item-124"><a href="../../../servidores/servidor-web.html" > Servidor Web</a></li><li class="item-156"><a href="../../../servidores/servidor-sgbd.html" > Servidor SGBD</a></li><li class="item-193  deeper parent"><a href="../../../servidores/postgresql.html" > PostgreSQL</a><span class="offcanvas-menu-toggler collapsed" data-toggle="collapse" data-target="#collapse-menu-193"><i class="open-icon fa fa-angle-down"></i><i class="close-icon fa fa-angle-up"></i></span><ul class="collapse" id="collapse-menu-193"><li class="item-232"><a href="../../../servidores/postgresql/introducao-ao-postgresql.html" > Introdução</a></li><li class="item-233"><a href="../../../servidores/postgresql/projeto.html" > Projeto</a></li><li class="item-234"><a href="../../../servidores/postgresql/dimensionamento.html" > Dimensionamento</a></li></ul></li></ul></li><li class="item-148  deeper parent"><a href="../../../joomla-3.html" > Joomla 3</a><span class="offcanvas-menu-toggler collapsed" data-toggle="collapse" data-target="#collapse-menu-148"><i class="open-icon fa fa-angle-down"></i><i class="close-icon fa fa-angle-up"></i></span><ul class="collapse" id="collapse-menu-148"><li class="item-149"><a href="../../../joomla-3/introducao.html" > Introdução</a></li><li class="item-231"><a href="../../../joomla-3/seguranca.html" > Segurança</a></li><li class="item-199"><a href="../../../joomla-3/instalacao.html" > Instalação do Joomla</a></li><li class="item-152"><a href="../../../joomla-3/administracao.html" > Administração</a></li><li class="item-153"><a href="../../../joomla-3/extensoes.html" > Extensões</a></li><li class="item-154"><a href="../../../joomla-3/loja-simples.html" > Loja Simples</a></li><li class="item-155"><a href="../../../joomla-3/dicas.html" > Dicas</a></li></ul></li><li class="item-310  divider deeper parent"><a class="separator ">Frameworks</a>
+<span class="offcanvas-menu-toggler collapsed" data-toggle="collapse" data-target="#collapse-menu-310"><i class="open-icon fa fa-angle-down"></i><i class="close-icon fa fa-angle-up"></i></span><ul class="collapse" id="collapse-menu-310"><li class="item-138  deeper parent"><a href="../../../frameworks/cakephp-3.html" > CakePHP 3</a><span class="offcanvas-menu-toggler collapsed" data-toggle="collapse" data-target="#collapse-menu-138"><i class="open-icon fa fa-angle-down"></i><i class="close-icon fa fa-angle-up"></i></span><ul class="collapse" id="collapse-menu-138"><li class="item-139"><a href="../../../frameworks/cakephp-3/introducao.html" > Introdução</a></li><li class="item-140"><a href="../../../frameworks/cakephp-3/instalacao.html" > Instalação</a></li><li class="item-172"><a href="../../../frameworks/cakephp-3/configuracoes.html" > Configurações</a></li><li class="item-141"><a href="../../../frameworks/cakephp-3/convencoes.html" > Convenções</a></li><li class="item-142"><a href="../../../frameworks/cakephp-3/tutoriais.html" > Tutoriais</a></li><li class="item-144"><a href="../../../frameworks/cakephp-3/dicas.html" > Dicas</a></li><li class="item-145"><a href="../../../frameworks/cakephp-3/seguranca.html" > Segurança</a></li><li class="item-147"><a href="../../../frameworks/cakephp-3/mvc-no-cakephp-3.html" > MVC no CakePHP 3</a></li></ul></li><li class="item-171  deeper parent"><a href="../../../frameworks/laravel-5.html" > Laravel 5</a><span class="offcanvas-menu-toggler collapsed" data-toggle="collapse" data-target="#collapse-menu-171"><i class="open-icon fa fa-angle-down"></i><i class="close-icon fa fa-angle-up"></i></span><ul class="collapse" id="collapse-menu-171"><li class="item-173"><a href="../../../frameworks/laravel-5/introducao.html" > Introdução</a></li><li class="item-174"><a href="../../../frameworks/laravel-5/instalacao.html" > Instalação</a></li><li class="item-175"><a href="../../../frameworks/laravel-5/configuracoes.html" > Configurações</a></li><li class="item-176"><a href="../../../frameworks/laravel-5/routes.html" > Routes</a></li><li class="item-178"><a href="../../../frameworks/laravel-5/dicas.html" > Dicas</a></li><li class="item-177"><a href="../../../frameworks/laravel-5/tutoriais.html" > Tutoriais</a></li></ul></li></ul></li><li class="item-158  deeper parent"><a href="../../../mobile.html" > Mobile</a><span class="offcanvas-menu-toggler collapsed" data-toggle="collapse" data-target="#collapse-menu-158"><i class="open-icon fa fa-angle-down"></i><i class="close-icon fa fa-angle-up"></i></span><ul class="collapse" id="collapse-menu-158"><li class="item-179"><a href="../../../mobile/introducao.html" > Introdução</a></li><li class="item-180"><a href="../../../mobile/ambiente.html" > Ambiente</a></li><li class="item-188"><a href="../../../mobile/phaser.html" > Phaser</a></li><li class="item-187"><a href="../../../mobile/monaca.html" > Monaca</a></li><li class="item-181"><a href="../../../mobile/phonegap.html" > PhoneGap</a></li><li class="item-182"><a href="../../../mobile/app-inventor.html" > App Inventor</a></li><li class="item-159"><a href="../../../mobile/unity-3d.html" > Unity 3D</a></li><li class="item-160"><a href="../../../mobile/intel-xdk.html" > Intel XDK</a></li><li class="item-161"><a href="../../../mobile/outros.html" > Outros</a></li><li class="item-163"><a href="../../../mobile/dicas.html" > Dicas</a></li></ul></li><li class="item-168  deeper parent"><a href="../../../blog.html" > Blog</a><span class="offcanvas-menu-toggler collapsed" data-toggle="collapse" data-target="#collapse-menu-168"><i class="open-icon fa fa-angle-down"></i><i class="close-icon fa fa-angle-up"></i></span><ul class="collapse" id="collapse-menu-168"><li class="item-196"><a href="../../../blog/reflexoes.html" > Reflexões</a></li><li class="item-197"><a href="../../../blog/saude.html" > Saúde</a></li><li class="item-238"><a href="../../../blog/diversos.html" > Diversos</a></li><li class="item-271"><a href="../../../blog/estudos.html" > Estudos</a></li></ul></li><li class="item-215  active deeper parent"><a href="../../../curriculo.html" > Sobre</a><span class="offcanvas-menu-toggler collapsed" data-toggle="collapse" data-target="#collapse-menu-215"><i class="open-icon fa fa-angle-down"></i><i class="close-icon fa fa-angle-up"></i></span><ul class="collapse" id="collapse-menu-215"><li class="item-167">		<a href="https://github.com/ribafs?tab=repositories" rel="noopener noreferrer" target="_blank" > Projetos</a></li><li class="item-164  current active"><a href="../../livros.html" > Livros</a></li><li class="item-257"><a href="../../curriculo.html" > Currículo</a></li><li class="item-110"><a href="../../contato.html" > Contato</a></li><li class="item-251"><a href="../../mapa-do-site.html" > Mapa</a></li></ul></li></ul>
+</div></div>
+                            </div> <!-- /.offcanvas-inner -->
+        </div> <!-- /.offcanvas-menu -->
+
+        
+        
+        
+        <!-- Preloader -->
+        
+
+        <!-- Go to top -->
+                    <a href="javascript:void(0)" class="scrollup" aria-label="Go To Top">&nbsp;</a>
+        
+    </body>
+</html>

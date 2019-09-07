@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="Joomla! - Open Source Content Management" -->
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Início - RibaFS Portal</title>
+		<description><![CDATA[Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros.]]></description>
+		<link>http://backup/portal/</link>
+		<lastBuildDate>Sat, 07 Sep 2019 18:42:16 -0300</lastBuildDate>
+		<generator>Joomla! - Open Source Content Management</generator>
+		<atom:link rel="self" type="application/rss+xml" href="http://backup/portal/?format=feed&amp;type=rss"/>
+		<language>pt-br</language>
+		<item>
+			<title>Boas Vindas!</title>
+			<link>http://backup/portal/?view=article&amp;id=2:boas-vindas&amp;catid=2</link>
+			<guid isPermaLink="true">http://backup/portal/?view=article&amp;id=2:boas-vindas&amp;catid=2</guid>
+			<description><![CDATA[<div class="feed-description"><p>Olá como vai? AQUI</p>
+
+<p>Seja sinceramente bem vindo(a)!</p>
+
+<p style="text-align: justify;">Este site está com todo o seu conteúdo atualizado e com alguns novos.<br />Agora temos as versões 3 do Joomla e do CakePHP e também alguns assuntos que não havia, como Laravel 5 e várias ferramentas Mobile.</p>
+
+<p style="text-align: justify;">Os principais assuntos compartilhados aqui são os mostrados nos menus acima.<br />Também, de vez em quando, publico algum artigo na seção Blog, sobre saúde ou alguma reflexão sobre a vida.<br /><br />O foco do conteúdo deste site fica em Linux, Windows, Web (online) e Mobile (especificamente Android).<br />O destaque do conteúdo fica com o PostgreSQL (que começei a adicionar o conteúdo mas tem muita coisa) e a programação Mobile, especialmente por ter encontrado e compartilhado algumas ferramentas que facilitam a vida do programador, como o Phaser, PhoneGap e o Monaca.</p>
+
+<p>Para as versões anteriores do Cake e do Joomla, além de Virtualização de Servidores Linux veja meu aite anterior <a href="http://ribafs.16mb.com/">http://ribafs.16mb.com/</a> <br /><br />Meus livros agora estão todos no GitHub (todos gratuitos) - <a title="https://github.com/ribafs/livros" href="https://github.com/ribafs/livros" target="_blank" rel="noopener noreferrer">https://github.com/ribafs/livros</a></p>
+
+<p>Meus projetos no GitHub - <a href="https://github.com/ribafs?tab=repositories" target="_blank" rel="noopener noreferrer">https://github.com/ribafs?tab=repositories</a> <br /><br />Caso tenha encontrado algum erro ou tenha alguma sugestão para melhorar qualquer um dos artigos, por favor acesse o item Contato em Sobre e me envie um e-mail.<br /><br />Muito grato.<br />Ribamar FS, 12 de julho de 2017</p>
+
+<p> </p></div>]]></description>
+			<category>Destacado</category>
+			<category>Generica</category>
+			<pubDate>Thu, 22 Jun 2017 11:58:41 -0300</pubDate>
+		</item>
+	</channel>
+</rss>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br" dir="ltr">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <base href="" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Ribamar FS" />
+	<meta name="robots" content="noindex, nofollow" />
+	<meta name="description" content="Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros." />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>Introdução ao PostgreSQL - RibaFS Portal</title>
+	<link href="http://ribafs.org/portal/servidores/postgresql/introducao-ao-postgresql/introducao-ao-postgresql.html?tmpl=component&amp;print=1&amp;layout=default" rel="canonical" />
+	<link href="../../../templates/shaper_helix3/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../../../favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<script src="../../../media/jui/js/jquery.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery-noconflict.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery-migrate.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="http://backup/portal/media/system/js/caption.js?d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script type="text/javascript">
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+	</script>
+	<meta property="og:url" content="http://backup/portal/servidores/postgresql/introducao-ao-postgresql/introducao-ao-postgresql.html" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Introdução ao PostgreSQL" />
+	<meta property="og:description" content="PostgreSQL PostgreSQL é um sistema gerenciador de banco de dados objeto relacional (SGBDOR), desenvolvido como projeto de código aberto. Características At..." />
+
+   	<link rel="stylesheet" href="../../../media/jui/css/bootstrap.min.css" type="text/css" />
+	<link rel="stylesheet" href="../../../templates/shaper_helix3/css/frontend-edit.css" type="text/css" />
+    <link rel="stylesheet" href="../../../templates/shaper_helix3/css/template.css" type="text/css" />
+</head>
+<body class="contentpane">
+	<div id="system-message-container">
+	</div>
+
+	
+
+<article class="item item-page" itemscope itemtype="http://schema.org/Article">
+	<meta itemprop="inLanguage" content="pt-BR" />
+	
+	
+
+	<div class="entry-header">
+		<span class="post-format"><i class="fa fa-thumb-tack"></i></span>
+		
+					<h2 itemprop="name">
+									Introdução ao PostgreSQL							</h2>
+												</div>
+
+						<div id="pop-print" class="btn hidden-print">
+				<a href="introducao-ao-postgresql.html#" onclick="window.print();return false;">			<span class="icon-print" aria-hidden="true"></span>
+		Imprimir	</a>			</div>
+				
+	
+	
+				
+	
+			<div itemprop="articleBody">
+		<div>
+
+<h4 style="text-align: justify;"><strong>PostgreSQL</strong></h4>
+
+<p style="text-align: justify;"><br />PostgreSQL é um sistema gerenciador de banco de dados objeto relacional (SGBDOR), desenvolvido como projeto de código aberto.<br /><br /><strong>Características</strong><br />Atualmente, o PostgreSQL é um dos SGBDs (Sistema Gerenciador de Bancos de Dados) de código aberto mais avançados, contando com recursos como:<br /><br />    Consultas complexas<br />    Chaves estrangeiras<br />    Integridade transacional<br />    Controle de concorrência multi-versão<br />    Suporte ao modelo híbrido objeto-relacional<br />    Ele tem facilidade de Acesso<br />    Gatilhos<br />    Visões<br />    Linguagem Procedural em várias linguagens (PL/pgSQL, PL/Python, PL/Java, PL/Perl) para Procedimentos armazenados<br />    Indexação por texto<br />    Estrutura para guardar dados Georeferenciados PostGIS<br /><br /><strong>Histórico</strong><br />O PostgreSQL é um dos resultados de uma ampla evolução que se iniciou com o projeto Ingres, desenvolvido na Universidade de Berkeley, Califórnia. O líder do projeto, Michael Stonebraker, um dos pioneiros dos bancos de dados relacionais, deixou a universidade em 1982 para comercializar o Ingres, porém retornou a ela logo em seguida.[4]<br /><br />Após seu retorno a Berkeley, em 1985, Stonebraker começou um projeto pós-Ingres com o objetivo de resolver problemas com o modelo de banco de dados relacional. O principal problema era a incapacidade do modelo relacional compreender “tipos” (atualmente, chamados de objetos), ou seja, combinações de dados simples que formam uma única unidade.[4]<br /><br />O projeto resultante, chamado Postgres, era orientado a introduzir a menor quantidade possível de funcionalidades para completar o suporte a tipos. Estas funcionalidades incluíam a habilidade de definir tipos, mas também a habilidade de descrever relações - as quais até este momento eram amplamente utilizadas, mas completamente mantidas pelo usuário. No Postgres, o banco de dados "compreendia" as relações e podia obter informações de tabelas relacionadas utilizando regras.[4]<br /><br />Iniciando em 1986, a equipe divulgou uma série de documentos descrevendo a base do sistema e em 1988 o projeto possuía um protótipo funcional. A versão 1 foi liberada para um grupo pequeno de usuários em junho de 1989, seguida pela versão 2 com um sistema de regras reescrito em junho de 1990. Para a versão 3, liberada em 1991, o sistema de regras foi reescrito novamente, mas também foram adicionados suporte para múltiplos gerenciadores de armazenamento e um melhorado motor de consultas. Já em 1993, Postgres havia crescido imensamente em popularidade e possuía uma grande demanda por suporte e por novas funcionalidades. Após a liberação da versão 4, a qual era uma simples versão de limpeza, o projeto foi oficialmente abandonado pela Universidade de Berkeley.[4]<br /><br />Entretanto, devido ao fato do seu código fonte estar sob uma licença BSD, o seu desenvolvimento foi continuado. Em 1994, dois estudantes , Andrew Yu e Jolly Chen, adicionaram um interpretador SQL para substituir a linguagem QUEL (desenvolvida para o Ingres) e o projeto foi renomeado para Postgres95. Com a divulgação de seu código pela Internet, Postgres95 iniciou uma nova vida como software open source.[4]<br /><br />Em agosto de 1996, Marc Fournier, Bruce Momjian e Vadim B. Mikheev lançaram a primeira versão externa da Universidade de Berkeley e deram início à tarefa de estabilizar o código herdado. Também em 1996, o projeto foi renomeado para PostgreSQL a fim de refletir a nova linguagem de consulta ao banco de dados: SQL. A primeira versão de PostgreSQL, a 6.0, foi liberada em janeiro de 1997. Desde então, um grupo de desenvolvedores e de voluntários de todo o mundo, coordenados pela Internet, têm mantido o software e desenvolvido novas funcionalidades.<br /><br />As principais características acrescentadas nas versões 6.x são o en:MVCC (Multiversion Concurrency Control – Controle de Concorrência Multiversões), melhorias no SQL e novos tipos de dados nativos (novos tipos de datas e hora e tipos geométricos).<br /><br />Em maio de 2000 foi liberada a versão 7.0. As versões 7.x trouxeram as seguintes novas funcionalidades: Write-Ahead Log (WAL), esquemas SQL, outer joins, suporte a IPv6, indexação por texto, suporte melhorado a SSL e informações estatísticas do banco de dados.<br /><br />A versão 8.0 foi lançada em janeiro de 2005 e entre outras novidades, foi a primeira a ter suporte nativo para Microsoft Windows (tradicionalmente, o PostgreSQL só rodava de forma nativa em sistemas Unix e, em sistemas Windows - através da biblioteca Cygwin). Dentre as muitas novidades da versão 8.x, pode-se destacar o suporte a tablespaces, savepoints, point-in-time recovery, roles e Two-Phase Commit (2PC). Em setembro de 2010 foi lançada a versão mais recente: 9.0.<br /><br /><strong>Desenvolvimento do Projeto</strong><br />O PostgreSQL é um projeto open source coordenado pelo PostgreSQL Global Development Group. Embora as atividades do grupo sejam patrocinadas por diversas organizações de todo o mundo, seu modelo de desenvolvimento é o modelo Bazar (originalmente apresentado em A Catedral e o Bazar de Eric S. Raymond).<br /><br />Portanto, o desenvolvimento do PostgreSQL é feito por um grupo de desenvolvedores, em sua maioria voluntários, espalhados por todo o mundo e que se comunicam via Internet. Logo, trata-se, de um projeto direcionado pela comunidade de desenvolvedores e de usuários, a qual qualquer pessoa pode se juntar, bastando se inscrever em listas de discussão e participar delas.<br /><br />Voluntários interessados em contribuir com o projeto também podem consultar as sugestões de tarefas de desenvolvimento de novas funções e de correções de erros que são publicadas na lista TODO ou apresentar suas próprias sugestões. O código desenvolvido é submetido à equipe do projeto que pode aceitá-lo e incluí-lo nas novas versões ou recusá-lo. Voluntários também podem colaborar gerando documentação ou realizando traduções!<br /><br />As ferramentas utilizadas para o apoio ao desenvolvimento são o sistema de gestão de fontes CVS (Concurrent Version System), listas de discussão, servidor de news e salas de bate-papo (IRC).<br />Estruturas de Decisão<br /><br />O Projeto PostgreSQL é desenvolvido e direcionado pela sua comunidade de desenvolvedores e de usuários. Para coordenar o projeto há uma equipe central (core team) composta por sete desenvolvedores e um grupo de committers CVS. O código fornecido por voluntários é avaliado e aceito ou rejeitado pelos committers.<br /><br />Este modelo de desenvolvimento de software, baseado no modelo Bazar originalmente apresentado em A Catedral e o Bazar de Eric S. Raymond, possibilita o desenvolvimento de software com qualidade devido, principalmente, a permitir:<br /><br />    Tratar usuários como parceiros e/ou desenvolvedores. Eles contribuem diretamente com o desenvolvimento do software apresentando os problemas enfrentados, suas necessidades, suas sugestões de solução e, até mesmo, seu próprio código fonte de solução. Assim, usuários auxiliam de forma pró-ativa nas melhorias e na depuração do software.<br />    Reutilizar código fonte.<br />    Lançar rapidamente e frequentemente novas versões. Com uma base ampla de usuários testadores do software, os eventuais problemas são rapidamente identificados e sugestões de solução também aparecem com rapidez.<br /><br /><strong>Estado Atual</strong><br />Além de doações, o projeto PostgreSQL se sustenta pelo patrocínio de diversas empresas, entre as quais se destacam: Fujitsu, Hub.Org, NTT Group, Red Hat, Skype e SRA.<br /><br />O software tem adquirido prestígio na comunidade Linux, tendo recebido diversas vezes o prêmio Linux Journal Editor's Choice de melhor sistema de gerenciamento de banco de dados (SGBD).<br /><br />Uma diversidade de módulos adicionais está disponível através do pgfoundry.<br /><br />A aceitação do PostgreSQL tem se ampliado para além da comunidade de código aberto. Há entre os seus usuários grandes empresas internacionais, órgãos governamentais de vários países e universidades de prestígio mundial. Existe uma lista dos principais usuários no Brasil e no mundo e, também, há alguns estudos de caso de aplicações que utilizam o PostgreSQL.<br /><br />Fonte:<br />Wikipédia - <a href="https://pt.wikipedia.org/wiki/PostgreSQL">https://pt.wikipedia.org/wiki/PostgreSQL</a></p>
+
+<p style="text-align: justify;"> </p>
+
+<p style="text-align: justify;"><strong>Sumário Previsto</strong><br /><br />Parte 1<br />1 - Introdução: história, características, recursos e novidades<br />2 - Projeto do Servidor<br />3 - Dimensionamento de hardware<br />4 - Ferramentas<br />5 - Instalação com pacotes (no Linux) e com instalador (no Windows)<br />6 - Linguagem SQL<br />    DCL - Data Control Language: comandos grant e revoke (administração dos usuários, grupos e privilégios)<br />    DDL - Data Definition Language: comandos de definição e alteração de dados: create, drop, alter, rename, etc<br />    DML - Data Manipulation Language: comandos para manipular dados: insert, update, delete<br />    DQL - Data query Language: comandos para consutla de dados: select<br />7 - Catálogo do Sistema<br />8 - Tipos Geográficos<br />9 - Dicas<br />10 - Exercícios<br />11 - Scripts SQL<br /><br />Parte 2<br />1 - Segurança<br />2 - Linguagem do lado Server<br />3 - Modelagem de dados<br />    - Criar as tabelas do modelo de Vídeo Locadora<br />    - Gerar um DER do banco com o dbVisualizer<br />4 - Performance do SGBD<br />5 - Bancos de testes<br />6 - Administração do PostgreSQL<br />    6.1 - Instalação via fontes<br />    6.2 - Backup e Restore<br />    6.3 - Importação e Exportação<br />    6.4 - Configurações<br />    6.5 - Clusters<br />    6.6 - Esquemas<br />    6.7 - Manutenção<br />    6.8 - Monitoramento<br />    6.9 - Scripts Shell<br />    6.10 - Servidor<br />    6.11 - Table Spaces<br />    6.12 - Administração de Usuários<br />    6.13 - Conectividade</p>
+
+<p style="text-align: justify;"> </p>
+
+</div> 	</div>
+
+	
+	
+				
+	
+	
+	
+</article>
+
+</body>
+</html>

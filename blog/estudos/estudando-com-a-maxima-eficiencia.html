@@ -1,0 +1,1170 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br" dir="ltr">
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+                <!-- head -->
+        <base href="" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Ribamar FS" />
+	<meta name="description" content="Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros." />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>Estudando com a Máxima Eficiência - RibaFS Portal</title>
+	<link href="http://ribafs.org/portal/blog/estudos/estudando-com-a-maxima-eficiencia.html" rel="canonical" />
+	<link href="../../templates/shaper_helix3/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../../favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,300italic,regular,italic,600,600italic,700,700italic,800,800italic&amp;subset=latin" rel="stylesheet" type="text/css" />
+	<link href="http://fonts.googleapis.com/css?family=Amarante:regular&amp;subset=latin-ext" rel="stylesheet" type="text/css" />
+	<link href="../../cache/com_templates/templates/shaper_helix3/89f5542569bc2d8a7bb4667857dd5775.css" rel="stylesheet" type="text/css" />
+	<style type="text/css">
+body{font-family:Open Sans, sans-serif; font-size:16px; font-weight:normal; }h1{font-family:Open Sans, sans-serif; font-weight:800; }h2{font-family:Open Sans, sans-serif; font-weight:600; }h3{font-family:Open Sans, sans-serif; font-weight:normal; }h4{font-family:Open Sans, sans-serif; font-weight:normal; }h5{font-family:Open Sans, sans-serif; font-weight:600; }h6{font-family:Open Sans, sans-serif; font-weight:600; }.sp-megamenu-parent{font-family:Amarante, sans-serif; font-size:16px; font-weight:normal; }.sp-megamenu-parent > li.active > a, 
+.sp-megamenu-parent .sp-dropdown li.sp-menu-item.active > a { color: red; }
+#offcanvas-toggler > i { color: red !important; }
+#sp-top-bar{ background-color:#093d09;color:#999999; }#sp-top-bar a{color:#ceebe9;}#sp-header{ background-color:#54a859; }#sp-header a{color:#022e05;}#sp-page-title a{color:#e8f7f7;}#sp-main-body{ background-color:#fefffa; }
+	</style>
+	<script type="application/json" class="joomla-script-options new">{"csrf.token":"796296c0a9019553ed4bbba150ad5a40","system.paths":{"root":"\/portal","base":"\/portal"},"joomla.jtext":{"COM_COMMENT_PLEASE_FILL_IN_ALL_REQUIRED_FIELDS":"Favor preencher todos os campos obrigat\u00f3rios.","COM_COMMENT_ANONYMOUS":"An\u00f4nimo","JLIB_FORM_FIELD_INVALID":"Campo inv\u00e1lido:&#160;"},"system.keepalive":{"interval":840000,"uri":"\/portal\/component\/ajax\/?format=json"}}</script>
+	<script src="../../cache/com_templates/templates/shaper_helix3/b74bfabf7739a9fadfbbda80f713414b.js" type="text/javascript"></script>
+	<script type="text/javascript">
+jQuery(function($){ initTooltips(); $("body").on("subform-row-add", initTooltips); function initTooltips (event, container) { container = container || document;$(container).find(".hasTooltip").tooltip({"html": true,"container": "body"});} });jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+var sp_preloader = '0';
+
+var sp_gotop = '1';
+
+var sp_offanimation = 'default';
+
+	</script>
+	<meta property="og:url" content="http://backup/portal/blog/estudos/estudando-com-a-maxima-eficiencia.html" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Estudando com a Máxima Eficiência" />
+	<meta property="og:description" content="Dicas, Reflexões e Links úteis Sumário Grande Quantidade de Matéria Encarar Desafios Estudar duro ou se divertir? Decida Seja criterioso com seu alimento P..." />
+
+            </head>
+
+    <body class="site com-content view-article no-layout no-task itemid-271 pt-br ltr  sticky-header layout-fluid off-canvas-menu-init">
+
+        <div class="body-wrapper">
+            <div class="body-innerwrapper">
+                <section id="sp-top-bar"><div class="container"><div class="row"><div id="sp-top1" class="col-sm-12 col-md-12"><div class="sp-column "><div class="sp-module "><div class="sp-module-content"><!-- https://www.clubedohardware.com.br/artigos/redes/colocando-um-mecanismo-de-busca-em-seu-site-r34327/ -->
+<FORM class="form-inline" method="GET" action="http://www.google.com/search">
+<div class="form-group">
+<input type="hidden" name="sitesearch" value="ribafs.github.io">
+<input style="height:20px" class="form-control" type="text" name="q" size="20" placeholder="Pesquisar...">
+</div>
+</FORM>
+
+</div></div><ul class="sp-contact-info"><li class="sp-contact-email"><i class="fa fa-envelope" aria-hidden="true"></i> <a href="mailto:ribafs@gmail.com">ribafs@gmail.com</a></li></ul></div></div></div></div></section><section id="sp-section-2"><div class="container"><div class="row"><div id="sp-top2" class="col-sm-12 col-md-12"><div class="sp-column "><div class="sp-module "><div class="sp-module-content">
+
+<div class="custom"  >
+	<p style="text-align: center;"><b>Don't you speak portuguese? Translate this site with <a href="https://translate.google.com/translate?hl=pt-BR&amp;sl=pt&amp;tl=en&amp;u=https://ribafs.org/portal" target="_blank" rel="noopener noreferrer">Google Translator </a></b></p></div>
+</div></div></div></div></div></div></section><header id="sp-header"><div class="container"><div class="row"><div id="sp-logo" class="col-xs-8 col-sm-2 col-md-2"><div class="sp-column "><h1 class="logo"> <a href="../../index.html">RibaFS Portal</a></h1></div></div><div id="sp-menu" class="col-xs-4 col-sm-10 col-md-10"><div class="sp-column ">			<div class='sp-megamenu-wrapper'>
+				<a id="offcanvas-toggler" class="visible-sm visible-xs" aria-label="Helix Megamenu Options" href="estudando-com-a-maxima-eficiencia.html#"><i class="fa fa-bars" aria-hidden="true" title="Helix Megamenu Options"></i></a>
+				<ul class="sp-megamenu-parent menu-fade hidden-sm hidden-xs"><li class="sp-menu-item"><a  href="../../index.html"  >Início</a></li><li class="sp-menu-item sp-has-child"><a  href="../../basicos.html"  >Básicos</a><div class="sp-dropdown sp-dropdown-main sp-menu-right" style="width: 240px;"><div class="sp-dropdown-inner"><ul class="sp-dropdown-items"><li class="sp-menu-item"><a  href="../../basicos/html.html"  >HTML</a></li><li class="sp-menu-item"><a  href="../../basicos/javascript.html"  >JavaScript</a></li><li class="sp-menu-item"><a  href="../../basicos/css.html"  >CSS</a></li><li class="sp-menu-item"><a  href="../../basicos/jquery.html"  >jQuery</a></li><li class="sp-menu-item"><a  href="../../basicos/bootstrap.html"  >Bootstrap</a></li><li class="sp-menu-item"><a  href="../../basicos/php.html"  >PHP</a></li><li class="sp-menu-item"><a  href="../../basicos/phpoo.html"  >PHPOO</a></li><li class="sp-menu-item"><a  href="../../basicos/pdo.html"  >PDO</a></li><li class="sp-menu-item"><a  href="../../basicos/ferramentas.html"  >Ferramentas</a></li><li class="sp-menu-item"><a  href="../../basicos/outros.html"  >Outros</a></li></ul></div></div></li><li class="sp-menu-item sp-has-child"><a  href="../../servidores.html"  >Servidores</a><div class="sp-dropdown sp-dropdown-main sp-menu-right" style="width: 240px;"><div class="sp-dropdown-inner"><ul class="sp-dropdown-items"><li class="sp-menu-item"><a  href="../../servidores/desktop.html"  >Desktop</a></li><li class="sp-menu-item"><a  href="../../servidores/ubuntu-server.html"  >Ubuntu Server</a></li><li class="sp-menu-item"><a  href="../../servidores/shell-scripts.html"  >Shell Scripts</a></li><li class="sp-menu-item"><a  href="../../servidores/servidor-web.html"  >Servidor Web</a></li><li class="sp-menu-item"><a  href="../../servidores/servidor-sgbd.html"  >Servidor SGBD</a></li><li class="sp-menu-item sp-has-child"><a  href="../../servidores/postgresql.html"  >PostgreSQL</a><div class="sp-dropdown sp-dropdown-sub sp-menu-right" style="width: 240px;"><div class="sp-dropdown-inner"><ul class="sp-dropdown-items"><li class="sp-menu-item"><a  href="../../servidores/postgresql/introducao-ao-postgresql.html"  >Introdução</a></li><li class="sp-menu-item"><a  href="../../servidores/postgresql/projeto.html"  >Projeto</a></li><li class="sp-menu-item"><a  href="../../servidores/postgresql/dimensionamento.html"  >Dimensionamento</a></li></ul></div></div></li></ul></div></div></li><li class="sp-menu-item sp-has-child"><a  href="../../joomla-3.html"  >Joomla 3</a><div class="sp-dropdown sp-dropdown-main sp-menu-right" style="width: 240px;"><div class="sp-dropdown-inner"><ul class="sp-dropdown-items"><li class="sp-menu-item"><a  href="../../joomla-3/introducao.html"  >Introdução</a></li><li class="sp-menu-item"><a  href="../../joomla-3/seguranca.html"  >Segurança</a></li><li class="sp-menu-item"><a  href="../../joomla-3/instalacao.html"  >Instalação do Joomla</a></li><li class="sp-menu-item"><a  href="../../joomla-3/administracao.html"  >Administração</a></li><li class="sp-menu-item"><a  href="../../joomla-3/extensoes.html"  >Extensões</a></li><li class="sp-menu-item"><a  href="../../joomla-3/loja-simples.html"  >Loja Simples</a></li><li class="sp-menu-item"><a  href="../../joomla-3/dicas.html"  >Dicas</a></li></ul></div></div></li><li class="sp-menu-item sp-has-child"><a  href="javascript:void(0);"  >Frameworks</a><div class="sp-dropdown sp-dropdown-main sp-dropdown-mega sp-menu-right" style="width: 600px;"><div class="sp-dropdown-inner"><div class="row"><div class="col-sm-6"><ul class="sp-mega-group"><li class="sp-menu-item sp-has-child"><a class="sp-group-title" href="../../frameworks/cakephp-3.html"  >CakePHP 3</a><ul class="sp-mega-group-child sp-dropdown-items"><li class="sp-menu-item"><a  href="../../frameworks/cakephp-3/introducao.html"  >Introdução</a></li><li class="sp-menu-item"><a  href="../../frameworks/cakephp-3/instalacao.html"  >Instalação</a></li><li class="sp-menu-item"><a  href="../../frameworks/cakephp-3/configuracoes.html"  >Configurações</a></li><li class="sp-menu-item"><a  href="../../frameworks/cakephp-3/convencoes.html"  >Convenções</a></li><li class="sp-menu-item"><a  href="../../frameworks/cakephp-3/tutoriais.html"  >Tutoriais</a></li><li class="sp-menu-item"><a  href="../../frameworks/cakephp-3/dicas.html"  >Dicas</a></li><li class="sp-menu-item"><a  href="../../frameworks/cakephp-3/seguranca.html"  >Segurança</a></li><li class="sp-menu-item"><a  href="../../frameworks/cakephp-3/mvc-no-cakephp-3.html"  >MVC no CakePHP 3</a></li></ul></li></ul></div><div class="col-sm-6"><ul class="sp-mega-group"><li class="sp-menu-item sp-has-child"><a class="sp-group-title" href="../../frameworks/laravel-5.html"  >Laravel 5</a><ul class="sp-mega-group-child sp-dropdown-items"><li class="sp-menu-item"><a  href="../../frameworks/laravel-5/introducao.html"  >Introdução</a></li><li class="sp-menu-item"><a  href="../../frameworks/laravel-5/instalacao.html"  >Instalação</a></li><li class="sp-menu-item"><a  href="../../frameworks/laravel-5/configuracoes.html"  >Configurações</a></li><li class="sp-menu-item"><a  href="../../frameworks/laravel-5/routes.html"  >Routes</a></li><li class="sp-menu-item"><a  href="../../frameworks/laravel-5/dicas.html"  >Dicas</a></li><li class="sp-menu-item"><a  href="../../frameworks/laravel-5/tutoriais.html"  >Tutoriais</a></li></ul></li></ul></div></div></div></div></li><li class="sp-menu-item sp-has-child"><a  href="../../mobile.html"  >Mobile</a><div class="sp-dropdown sp-dropdown-main sp-menu-right" style="width: 240px;"><div class="sp-dropdown-inner"><ul class="sp-dropdown-items"><li class="sp-menu-item"><a  href="../../mobile/introducao.html"  >Introdução</a></li><li class="sp-menu-item"><a  href="../../mobile/ambiente.html"  >Ambiente</a></li><li class="sp-menu-item"><a  href="../../mobile/phaser.html"  >Phaser</a></li><li class="sp-menu-item"><a  href="../../mobile/monaca.html"  >Monaca</a></li><li class="sp-menu-item"><a  href="../../mobile/phonegap.html"  >PhoneGap</a></li><li class="sp-menu-item"><a  href="../../mobile/app-inventor.html"  >App Inventor</a></li><li class="sp-menu-item"><a  href="../../mobile/unity-3d.html"  >Unity 3D</a></li><li class="sp-menu-item"><a  href="../../mobile/intel-xdk.html"  >Intel XDK</a></li><li class="sp-menu-item"><a  href="../../mobile/outros.html"  >Outros</a></li><li class="sp-menu-item"><a  href="../../mobile/dicas.html"  >Dicas</a></li></ul></div></div></li><li class="sp-menu-item sp-has-child active"><a  href="../../blog.html"  >Blog</a><div class="sp-dropdown sp-dropdown-main sp-menu-right" style="width: 240px;"><div class="sp-dropdown-inner"><ul class="sp-dropdown-items"><li class="sp-menu-item"><a  href="../reflexoes.html"  >Reflexões</a></li><li class="sp-menu-item"><a  href="../saude.html"  >Saúde</a></li><li class="sp-menu-item"><a  href="../diversos.html"  >Diversos</a></li><li class="sp-menu-item current-item active"><a  href="../estudos.html"  >Estudos</a></li></ul></div></div></li><li class="sp-menu-item sp-has-child"><a  href="../../curriculo.html"  >Sobre</a><div class="sp-dropdown sp-dropdown-main sp-menu-right" style="width: 240px;"><div class="sp-dropdown-inner"><ul class="sp-dropdown-items"><li class="sp-menu-item"><a  href="https://github.com/ribafs?tab=repositories" rel="noopener noreferrer" target="_blank" >Projetos</a></li><li class="sp-menu-item"><a  href="../../curriculo/livros.html"  >Livros</a></li><li class="sp-menu-item"><a  href="../../curriculo/curriculo.html"  >Currículo</a></li><li class="sp-menu-item"><a  href="../../curriculo/contato.html"  >Contato</a></li><li class="sp-menu-item"><a  href="../../curriculo/mapa-do-site.html"  >Mapa</a></li></ul></div></div></li></ul>			</div>
+		</div></div></div></div></header><section id="sp-page-title"><div class="row"><div id="sp-title" class="col-sm-12 col-md-12"><div class="sp-column "></div></div></div></section><section id="sp-main-body"><div class="container"><div class="row"><div id="sp-left" class="col-sm-3 col-md-3"><div class="sp-column custom-class"><div class="sp-module "><h3 class="sp-module-title">Novidades</h3><div class="sp-module-content"><div class="latestnews">
+	<div itemscope itemtype="http://schema.org/Article">
+		<a href="../diversos/traducao-de-sites-de-forma-muito-simples.html" itemprop="url">
+			<span itemprop="name">
+				Tradução de sites de forma muito simples			</span>
+		</a>
+		<small>29 Agosto 2019</small>
+	</div>
+	<div itemscope itemtype="http://schema.org/Article">
+		<a href="../../servidores/desktop/recuperar-senha-do-root.html" itemprop="url">
+			<span itemprop="name">
+				Recuperar senha do root			</span>
+		</a>
+		<small>23 Agosto 2019</small>
+	</div>
+	<div itemscope itemtype="http://schema.org/Article">
+		<a href="../reflexoes/quer-ficar-rico.html" itemprop="url">
+			<span itemprop="name">
+				Quer ficar rico?			</span>
+		</a>
+		<small>19 Agosto 2019</small>
+	</div>
+	<div itemscope itemtype="http://schema.org/Article">
+		<a href="../../basicos/php/cuidado-com-floats-em-linguagens.html" itemprop="url">
+			<span itemprop="name">
+				Cuidado com floats em Linguagens			</span>
+		</a>
+		<small>19 Julho 2019</small>
+	</div>
+	<div itemscope itemtype="http://schema.org/Article">
+		<a href="../../servidores/servidor-web/setando-permissoes.html" itemprop="url">
+			<span itemprop="name">
+				Setando Permissões			</span>
+		</a>
+		<small>12 Julho 2019</small>
+	</div>
+</div>
+</div></div><div class="sp-module "><h3 class="sp-module-title">Pensamento do Dia</h3><div class="sp-module-content"><div>Escuto e esqueço; vejo e recordo; faço e entendo. (Tao Te King)
+</div>
+</div></div></div></div><div id="sp-component" class="col-sm-6 col-md-6"><div class="sp-column "><div id="system-message-container">
+	</div>
+
+
+<article class="item item-page" itemscope itemtype="http://schema.org/Article">
+	<meta itemprop="inLanguage" content="pt-BR" />
+	
+	
+
+	<div class="entry-header has-post-format">
+		<span class="post-format"><i class="fa fa-thumb-tack"></i></span>
+						<dl class="article-info">
+
+		
+			<dt class="article-info-term"></dt>	
+				
+							<dd class="createdby" itemprop="author" itemscope itemtype="http://schema.org/Person">
+	<i class="fa fa-user"></i>
+					<span itemprop="name" data-toggle="tooltip" title="Escrito por ">Ribamar FS</span>	</dd>			
+			
+							<dd class="category-name">
+	<i class="fa fa-folder-open-o"></i>
+				<a href="../estudos.html" itemprop="genre" data-toggle="tooltip" title="Categoria do Artigo">Estudos</a>	</dd>			
+			
+							<dd class="published">
+	<i class="fa fa-calendar-o"></i>
+	<time datetime="2018-04-08T15:44:13-03:00" itemprop="datePublished" data-toggle="tooltip" title="Data de Publicação">
+		08 Abril 2018	</time>
+</dd>			
+		
+					
+			
+							<dd class="hits">
+	<span class="fa fa-eye"></span>
+	<meta itemprop="interactionCount" content="UserPageVisits:1723" />
+	Acessos: 1723</dd>					
+		
+
+	</dl>
+		
+					<h2 itemprop="name">
+									Estudando com a Máxima Eficiência							</h2>
+												</div>
+
+						
+<div class="icons">
+	
+					<div class="btn-group pull-right">
+				<button class="btn dropdown-toggle" type="button" id="dropdownMenuButton-239" aria-label="Ferramentas de usuário"
+				data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					<span class="icon-cog" aria-hidden="true"></span>
+					<span class="caret" aria-hidden="true"></span>
+				</button>
+								<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton-239">
+											<li class="print-icon"> <a href="estudando-com-a-maxima-eficiencia.html@tmpl=component&amp;print=1&amp;layout=default.html" title="Imprimir o artigo < Estudando com a Máxima Eficiência >" onclick="window.open(this.href,'win2','status=no,toolbar=no,scrollbars=yes,titlebar=no,menubar=no,resizable=yes,width=640,height=480,directories=no,location=no'); return false;" rel="nofollow">			<span class="icon-print" aria-hidden="true"></span>
+		Imprimir	</a> </li>
+																<li class="email-icon"> <a href="../../component/mailto/index.html@tmpl=component&amp;template=shaper_helix3&amp;link=36191e24f43d9a98e688d4ef818722638ef0698e.html" title="Envie este link a um amigo" onclick="window.open(this.href,'win2','width=400,height=450,menubar=yes,resizable=yes'); return false;" rel="nofollow">			<span class="icon-envelope" aria-hidden="true"></span>
+		Email	</a> </li>
+														</ul>
+			</div>
+		
+	</div>
+				
+	
+	
+				
+	
+			<div itemprop="articleBody">
+		<h4 style="text-align: left;" align="center">Dicas, Reflexões e Links úteis</h4>
+
+<div id="Sumário1" dir="ltr">
+
+<div id="Sumário1_Head" dir="ltr">
+
+<p><strong>Sumário</strong></p>
+
+</div>
+
+<p><a href="estudando-com-a-maxima-eficiencia.html#__RefHeading___Toc1125_910990196">Grande Quantidade de Matéria</a></p>
+
+<p><a href="estudando-com-a-maxima-eficiencia.html#__RefHeading___Toc1127_910990196">Encarar Desafios</a></p>
+
+<p><a href="estudando-com-a-maxima-eficiencia.html#__RefHeading___Toc1129_910990196">Estudar duro ou se divertir? Decida</a></p>
+
+<p><a href="estudando-com-a-maxima-eficiencia.html#__RefHeading___Toc1236_2065335795">Seja criterioso com seu alimento</a></p>
+
+<p><a href="estudando-com-a-maxima-eficiencia.html#__RefHeading___Toc1131_910990196">Procurar emprego ou ser procurado por ele?</a></p>
+
+<p><a href="estudando-com-a-maxima-eficiencia.html#__RefHeading___Toc1133_910990196">Não existe nada perfeito e isso é muito bom</a></p>
+
+<p><a href="estudando-com-a-maxima-eficiencia.html#__RefHeading___Toc1135_910990196">Estude de forma equilibrada todas as matérias</a></p>
+
+<p><a href="estudando-com-a-maxima-eficiencia.html#__RefHeading___Toc1137_910990196">Inteligência, uma ótima aliada</a></p>
+
+<p><a href="estudando-com-a-maxima-eficiencia.html#__RefHeading___Toc1139_910990196">Outra grande aliada, a Memória</a></p>
+
+<p><a href="estudando-com-a-maxima-eficiencia.html#__RefHeading___Toc1141_910990196">Você tem muitos recursos</a></p>
+
+<p><a href="estudando-com-a-maxima-eficiencia.html#__RefHeading___Toc1143_910990196">Sempre tire suas dúvidas em sala</a></p>
+
+<p><a href="estudando-com-a-maxima-eficiencia.html#__RefHeading___Toc1145_910990196">Eficiência</a></p>
+
+<p><a href="estudando-com-a-maxima-eficiencia.html#__RefHeading___Toc1147_910990196">Marcador de livros</a></p>
+
+<p><a href="estudando-com-a-maxima-eficiencia.html#__RefHeading___Toc1149_910990196">Valor dos estudos</a></p>
+
+<p><a href="estudando-com-a-maxima-eficiencia.html#__RefHeading___Toc1151_910990196">Organização, oura ferramenta</a></p>
+
+<p><a href="estudando-com-a-maxima-eficiencia.html#__RefHeading___Toc1153_910990196">Programe seus estudos</a></p>
+
+<p><a href="estudando-com-a-maxima-eficiencia.html#__RefHeading___Toc1155_910990196">Gostar de desafios e resolver problemas</a></p>
+
+<p><a href="estudando-com-a-maxima-eficiencia.html#__RefHeading___Toc1157_910990196">Gravar aulas</a></p>
+
+<p><a href="estudando-com-a-maxima-eficiencia.html#__RefHeading___Toc1159_910990196">Cama não é um lugar adequado para estudar</a></p>
+
+<p><a href="estudando-com-a-maxima-eficiencia.html#__RefHeading___Toc1161_910990196">Distrações</a></p>
+
+<p><a href="estudando-com-a-maxima-eficiencia.html#__RefHeading___Toc1163_910990196">Marcador de cadernos</a></p>
+
+<p><a href="estudando-com-a-maxima-eficiencia.html#__RefHeading___Toc1165_910990196">Estudo é seu objetivo principal nesta fase da vida</a></p>
+
+<p><a href="estudando-com-a-maxima-eficiencia.html#__RefHeading___Toc1167_910990196">Relaxe</a></p>
+
+<p><a href="estudando-com-a-maxima-eficiencia.html#__RefHeading___Toc1169_910990196">Formas eficientes e não eficientes de estudar</a></p>
+
+<p><a href="estudando-com-a-maxima-eficiencia.html#__RefHeading___Toc1171_910990196">Não existe uma técnica mágica</a></p>
+
+<p><a href="estudando-com-a-maxima-eficiencia.html#__RefHeading___Toc1173_910990196">Alguns Fatores que Influem na Máxima Eficiência</a></p>
+
+<p><a href="estudando-com-a-maxima-eficiencia.html#__RefHeading___Toc1175_910990196">Lei da Atração</a></p>
+
+<p><a href="estudando-com-a-maxima-eficiencia.html#__RefHeading___Toc1177_910990196">Alguns dos materiais de estudo mais importantes, na ordem</a></p>
+
+<p><a href="estudando-com-a-maxima-eficiencia.html#__RefHeading___Toc1179_910990196">Curiosidade</a></p>
+
+<p><a href="estudando-com-a-maxima-eficiencia.html#__RefHeading___Toc1181_910990196">Referências</a></p>
+
+</div>
+
+<p>Veja que estudar com eficiência tem um peso e uma sugestão enquanto estudar com a Máxima eficiência é outra coisa.</p>
+
+<p>Para maior eficiência a concentração ajuda e muito. Veja isso:</p>
+
+<p><a href="https://www.primecursos.com.br/blog/prime-cursos/como-melhorar-sua-concentracao-com-a-neurociencia/" target="_blank" rel="noopener noreferrer">https://www.primecursos.com.br/blog/prime-cursos/como-melhorar-sua-concentracao-com-a-neurociencia/</a></p>
+
+<p>O título é meio provocativo, mas é sincero. Mesmo que aqui você não vá receber todas as informações necessárias para estudar com a máxima eficiência (e acredito que em nenhum lugar), ainda assim esta é a ideia, te passar algumas dicas sobre como tornar seus estudos mais eficientes e te estimulara para que você se empenhe para conseguir sempre a máxima eficiência possível em seus estudos. Isso você pode fazer e deve, inclusive em tudo na sua vida.</p>
+
+<p>Este artigo é fruto de uma pesquisa e de alguma reflexão e experiência própria.</p>
+
+<p>O resultado da pesquisa não me levou a algo muito importante a se fazer para tornar o estudo mais eficiente, mas encontrei algumas boas recomendações.</p>
+
+<h3><a name="__RefHeading___Toc1125_910990196"></a>Grande Quantidade de Matéria</h3>
+
+<p>Como a quantidade de matéria a ser estudada é muito grande para o tempo que você tem, então você precisa aprender a estudar da forma mais eficiente possível, para assim conseguir aprender todas as matérias e ser aprovado(a) em todas.</p>
+
+<h3 class="western"><a name="__RefHeading___Toc1127_910990196"></a><span style="font-family: Liberation\ Sans, sans-serif;"><span style="font-size: large;"><b>Encarar Desafios</b></span></span></h3>
+
+<p>Não é uma tarefa fácil, de maneira alguma. Você precisa estar inteiramente consciente disso, que será uma tarefa árdua. Mas vamos começar falando que para você ser bem sucedido em teus estudos precisa assumir uma atitude de quem encara desafios, de quem está disposto a fazer um grande sacrifício em nome de uma grande causa. Mas isso não significa que precisa ser algo desagradável. Você precisa se estimular, se sentir desafiado por todas as dificuldades que o estudo apresenta. Tem mais, isso serve não somente para seus estudos, mas para todas as dificuldades que tenha na sua vida. Encarar desafios, estudá-los de cabeça fria, de forma organizada e racional é uma forma muito eficiente de vencer os desafios. E dependendo da forma como você encarar isso poderá ser algo muito agradável e importante para você.</p>
+
+<h3 class="western"><a name="__RefHeading___Toc1129_910990196"></a><span style="font-family: Liberation\ Sans, sans-serif;"><span style="font-size: large;"><b>Estudar duro ou se divertir? Decida</b></span></span></h3>
+
+<p>Você não é obrigado a fazer todo este sacrifício, a dedicar muito tempo da sua vida a estudar. Talvez seja mais interessante chutar o pau da barraca, se juntar a vários colegas que levam suas vidas apenas a se divertir, a se encontrarem, usar Facebook, Whatsapp, Instagran, assistir filmes, vídeos, jogar e muito mais atividades divertidas e atraentes. Mas é interessante refletir com grande seriedade e lembrar que eles não estão fazendo muito pelo futuro, para conseguir uma profissão mais rentável e que valorize suas vidas. Precisarão estar competindo por empregos que pagam apenas um salário mínimo. Enquanto que quem estuda muito, se empenha para aprender de tudo e ser aprovado inclusive por média, quem faz assim está se preparando melhor para abraçar uma profissão rentável e ser realmente um especialista, alguém valorizado no mercado de trabalho.</p>
+
+<h3 class="western"><a name="__RefHeading___Toc1236_2065335795"></a>Seja criterioso com seu alimento</h3>
+
+<p>E aqui não me refiro ao alimento que nutre seu corpo, mas ao que nutre sua mente e sua personalidade. Muito alimento tem sabor e enche a barriga mas não nutre o corpo, não aumenta sua energia nem a mantém. Seja criterioso com os filmes que assiste, pois eles podem ajudar sua inteligência, seu caráter, seus conhecimentos ou atrapalhar tudo isso. Assim como seus amigos, os jogos que joga, etc.</p>
+
+<h3 class="western"><a name="__RefHeading___Toc1131_910990196"></a>Procurar emprego ou ser procurado por ele?</h3>
+
+<p>Me parece que o maior objetivo deve ser o de ser alguém que domina muito um conhecimento, uma profissão, que leve o trabalho a procurar você, que leve as empresas a procurarem alguém como você e não você procurar trabalho. Veja que isto ocorre em muitas profissões, onde os melhores profissionais não saem procurando trabalho mas as pessoas os procuram, as empresas os procuram e valorizam o que sabem fazer e como fazem.</p>
+
+<h3 class="western"><a name="__RefHeading___Toc1133_910990196"></a>Não existe nada perfeito e isso é muito bom</h3>
+
+<p>Devo começar dizendo que não existe nada perfeito no mundo e isso tem uma enorme vantagem: então tudo pode ser melhorado, pode ser feito com mais simplicidade, pode ser otimizado. É bom lembrar disso quando tiver um problema que está te dando trabalho. Pesquise em outros livros, veja outros exemplos parecidos e procure então outras formas de resolver. Não empanque em uma ideia e fique em-burra-do nela. Procure alternativas. Por outro lado não é produtivo ficar melhorando algo indefinidamente. Precisamos ter consciência do que fazemos e confiança para perceber quando está bom.</p>
+
+<h3 class="western"><a name="__RefHeading___Toc1135_910990196"></a>Estude de forma equilibrada todas as matérias</h3>
+
+<p>Como você precisa aprender e passar em todas as matérias, talvez seja importante estudar mais as matérias nas quais você tem nota baixa. As que tem notas melhores podem ficar em segundo plano, pois é importante tirar boas notas e ser aprovado em todas as matérias. Não pode desprezar nenhuma. Caso sempre estude mais as que mais gosta o que vai acontecer? As que estuda menos terá notas ainda menores e as que estuda mais notas ainda melhores. Como precisa passar em todas então procure ficar atento e equilibrar seus estudos para ter as notas equilibradas.</p>
+
+<h3 class="western"><a name="__RefHeading___Toc1137_910990196"></a>Inteligência, uma ótima aliada</h3>
+
+<p>Uma maravilhosa ferramenta que existe e que pode e deve ser melhorada é a inteligência.</p>
+
+<p>Para melhorar precisamos primeiro confiar que temos que somos capazes de aumentar. Confiando então procuraremos ficar atentos ao assunto e procuremos fazer cada coisa de forma mais bem feita e assim criar uma verdadeira atitude, algo que se torne uma característica nossa, algo que estará sempre ao nosso lado, conosco. Esta atitude de caprichar, de aceitar desafios de estimular sua inteligências com problemas reais e com problemas dos estudos. Existem livros com testes de raciocínio e inteligência. Existem livros com testes de QI (Quociente de Inteligência), que ma aprece não medem inteligência mas podem estimular o raciocínio lógico, o raciocínio matemático e outras áreas. Mas é muito importante salientar que a inteligência somente será uma aliada se você se empenhar muito nos seus estudos. A inteligência sozinha não vale muita coisa, mas aliada ao esforço sério e estudo árduo então teremos uma grande aliada.</p>
+
+<p>Você precisa aprender a raciocinar usando a lógica, para que consiga aprender com mais eficiência. Algumas pessoas alimentam ideias que não são coerentes, que não são lógicas, que são meio ou muito fantasiosas e mágicas. Precisamos ter os “pés no chão” e procurar raciocinar com clareza, sem fantasias. Assim conseguiremos ter um maior rendimento nos estudos e na vida.</p>
+
+<h3 class="western"><a name="__RefHeading___Toc1139_910990196"></a>Outra grande aliada, a Memória</h3>
+
+<p>Outra grande ferramenta e auxiliar da inteligência é a memória. Todos nós temos a capacidade de memorizar, mas precisamos melhorar a memória que temos. Para isso também precisamos confiar que poderemos aumentar e que nossa memória será melhor e mais útil com o tempo, com os exercícios e com a confiança depositada nela. Veja como se perde tempo fazendo algo várias vezes quando não valorizamos a nossa memória. Você vai sair de casa e mal abre a porta você volta por que esqueceu de algo. Você tem a responsabilidade de mudar isso. Se empenhe em fortalecer esta sua aliada.</p>
+
+<p>Para que aumentemos nossa inteligência e nossa memória precisamos não apenas confiar que o faremos, mas querer muito, querer com todas as nossas forças, usando tudo ao nosso alcance para conseguir isso. Lembre que sendo alguém mais inteligente e com melhor memória você será mais bem sucedido não somente nos estudos mas em tudo que fizer na vida. Então tenha sempre estas duas ferramentas em mente e em cada situação que possa usar para conseguir exercite.</p>
+
+<h3 class="western"><a name="__RefHeading___Toc1141_910990196"></a>Você tem muitos recursos</h3>
+
+<p>Lembre que você tem vários outros recursos importantes que poderão te ajudar nos estudos, confiança, força de vontade, controle emocional, disciplina, organização, etc</p>
+
+<h3 class="western"><a name="__RefHeading___Toc1143_910990196"></a>Sempre tire suas dúvidas em sala</h3>
+
+<p>Se interessar pra valer. Dormir cedo e pelo menos 8 horas por noite. Acordar cedo e sentar na frente. Prestar a máxima atenção às aulas e realmente manter interesse, sempre lembrando de perguntar caso não tenha entendido. Nunca tenha vergonha de perguntar algo. Você está ali é pra isso e o professor também. Tem mais, geralmente o professor gosta quando alguém pergunta, pois valoriza sua aula e permite que ele explique de outra forma e melhor, possibilitando que outros colegas também compreendam.</p>
+
+<h3 class="western"><a name="__RefHeading___Toc1145_910990196"></a>Eficiência</h3>
+
+<p>Seja racional e inteligente em tudo que fizer na sua vida. Procure estudar um certo tempo e fazer um pequeno intervalo então. Tenha sempre em mente de estar desempenhando tudo que fizer com a máxima eficiência, até chegar ao ponto de estar realmente agindo assim automaticamente. Assim isso passará a fazer parte da sua personalidade e será uma atitude. Será que isso é bom?</p>
+
+<p>Me parece que fazer bem feito tudo que se faz na vida é algo importante. Caso chegue a se tornar alguém perfeccionista, isso me parece bom. Mas a maior regra que conheço é a do equilíbrio, então não exagere nem na eficiência, precisa estar sempre no controle para que atinja a maior produtividade.</p>
+
+<h3 class="western"><a name="__RefHeading___Toc1147_910990196"></a>Marcador de livros</h3>
+
+<p>Lembre de usar um marcador de livros para ajudar você a ler, especialmente quando a linha é larga, as vezes da largura do livro. Um marcador ajuda.</p>
+
+<p>Como marcador eu uso uma tira de papel em baixo da mão e vou descendo para facilitar que meus olhos não percam a linha onde estava.</p>
+
+<h3 class="western"><a name="__RefHeading___Toc1149_910990196"></a>Valor dos estudos</h3>
+
+<p>Para dar ênfase aos seus estudos e valorizá-los você precisa entender que eles são muito importante para você. Como eles são importantes então tudo que você puder fazer para torná-lo mais eficientes você deve fazer e dar bastante atenção. Então se empenhe muito em ser inteligente e em ter uma super memória e mais do que isso se empenhe muito em estudar.</p>
+
+<p>Se você estuda somente porque seus pais querem que estude, então dificilmente conseguirá fazer algo importante com seus estudos. Você precisa decidir por você mesmo, precisa entender que estudar é importante para a sua vida, especialmente para o seu futuro.</p>
+
+<p>Empenho, dedicação e esforço.</p>
+
+<h3 class="western"><a name="__RefHeading___Toc1151_910990196"></a>Organização, outra ferramenta</h3>
+
+<p>Seja organizado para evitar perda de tempo procurando coisas. Mantenha todos os cadernos, livros, lápis, canetas, etc, tudo organizado e no devido lugar sobre sua mesa de estudos. Lembre que deve organizar não somente sua mesa de estudos. Precisa organizar sua vida como um todo para que problemas externos não atrapalhem o bom desempenho dos seus estudos.</p>
+
+<h3 class="western"><a name="__RefHeading___Toc1153_910990196"></a>Programe seus estudos</h3>
+
+<p>Faça sua programação de estudo. Tantas horas para certa matéria, tantas para outra e tenha tudo isso registrado para verificar se está cumprindo e se está te ajudando.</p>
+
+<p>Não existe fórmula mágica para obter a máxima eficiência nos estudos</p>
+
+<p>Não existe uma fórmula mágica para obter a máxima eficiência nos estudos. Existem algumas dicas e uma atitude proativa da sua parte e que faça um grande esforço. Infelizmente as escolas ainda não despertaram para ensinar os alunos a estudar de forma eficiente. Então você deve usar as informações que encontrar, usar sua inteligência, sua memória, sua organização, trocar ideias sobre isso com seus colegas, com seus professores, seus pais e conhecidos. Geralmente vamos com o tempo juntando informações e dicas que nos ajudam a estudar melhor e tudo vai ficando menos trabalhoso.</p>
+
+<p>Precisa otimizar seu tempo, seus estudos e tudo que fizer na vida para conseguir obter o melhor resultado em seus estudos.</p>
+
+<h3 class="western"><a name="__RefHeading___Toc1155_910990196"></a>Gostar de desafios e resolver problemas</h3>
+
+<p>Sua maturidade, seu controle emocional são muito importantes e também te ajudarão. Caso tenha tirado uma nota baixa e isso te faça sentir ruim. Lembre que problemas são para serem resolvidos e quando encarados de frente e resolvidos nos tornam ainda mais resistentes para os mesmos. Sentar, fazer anotações sobre o problema, se possível criar um desenho, anote tudo que pode fazer para melhorar ou resolver. Precisa de firmeza e de confiança para resolver problemas. Não vá jogar tudo fora. Você precisa aprender a gostar de encarar desafios, de enfrentar problemas. Não importa qual seja, vá em frente pois é a sua vida e você precisa resolver da melhor maneira possível e não de qualquer jeito. Lembre de ser racional neste momento, frio. Caso se envolva emocionalmente, caso fique chateado, caso fique triste, isso irá atrapalhar você, minar sua energia e impedirá que você veja as coisas da forma adequada. Acalme-se, confie em você e faça um planejamento adequado para superar o problema.</p>
+
+<h3 class="western"><a name="__RefHeading___Toc1157_910990196"></a>Gravar aulas</h3>
+
+<p>Talvez seja útil gravar aulas que considere difíceis para ouvir algumas vezes quando chegar à casa. Avalie se vale a pena.</p>
+
+<h3 class="western"><a name="__RefHeading___Toc1159_910990196"></a>Cama é um lugar adequado para estudar</h3>
+
+<p>Evite estudar na cama, prefira estudar numa mesa.</p>
+
+<h3 class="western"><a name="__RefHeading___Toc1161_910990196"></a>Distrações</h3>
+
+<p>Celular, computador, somente para necessidades. Deixe de lado tudo que te distrai. Talvez usar um fone de ouvido te ajude, mesmo que não esteja ouvindo nada, mas para abafar ruídos e barulhos.</p>
+
+<h3 class="western"><a name="__RefHeading___Toc1163_910990196"></a>Marcador de cadernos</h3>
+
+<p>Caso use apenas um único caderno para todas as matérias uma forma prática de procurar uma matéria é colocar um clipe em cada matéria, que ajuda a encontrar.</p>
+
+<p>Seja racional, procure se alimentar de forma que te ajude, evitando alimentos que já sabe que não irão alimentar teu corpo com eficiência. Procure dormir bem e relaxar tanto quanto seu organismo precisa. Respeite os sinais do seu corpo. Se sentir sono é mais produtivo dormir, pois estudar com sono não terá grande rendimento.</p>
+
+<h3 class="western"><a name="__RefHeading___Toc1165_910990196"></a>Estudo é seu objetivo principal nesta fase da vida</h3>
+
+<p>Faça exercícios físicos mas sem exagerar. Lembre que nesta fase da sua vida, seu objetivo principal são seus estudos.</p>
+
+<h3 class="western"><a name="__RefHeading___Toc1167_910990196"></a>Relaxe</h3>
+
+<p>Aprenda a relaxar, especialmente quando se sentir ansioso e estressado. Pare, respire fundo e calmamente e vá inspirando e expirando até acalmar.</p>
+
+<h3 class="western"><a name="__RefHeading___Toc1169_910990196"></a>Formas eficientes e não eficientes de estudar</h3>
+
+<p>Segundo uma pesquisa feita em 2013 na revista científica Psychological Science in the Public Interest:</p>
+
+<p>- Grifar, efetuar resumos, ler novamente, mapas mentais não são muito produtivos</p>
+
+<p>- Interrogação elaborativa, estudo intercalado (estudar também outras fontes) e auto explicação tem média produtividade</p>
+
+<p>- Resolver exercícios e Estudo distribuído (distribuir o estudo em vários blocos) tem alta produtividade</p>
+
+<h3 class="western"><a name="__RefHeading___Toc1171_910990196"></a>Não existe uma técnica mágica</h3>
+
+<p>Observação importante: Lembre-se de que estes indicativos acima reflete os resultados da pesquisa, porém cada pessoa tem suas próprias técnicas de estudo e não existe um método que seja a verdadeira bala de prata que te dará de brinde a máxima eficiência. Sem menosprezar a ciência, mas precisamos ter em mente que pesquisas científicas são importantes, mas também falham, pois são feitas por seres falhos. Leia-as, as estude mas com moderação, use o que considerar útil e descarte o restante.</p>
+
+<h3 class="western"><a name="__RefHeading___Toc1173_910990196"></a>Alguns Fatores que Influem na Máxima Eficiência</h3>
+
+<p>Empenho - A meu ver o fator mais importante para se atingir a máxima eficiência é o empenho, o esforço e o trabalho/estudo sério. Parafraseando um dos maiores cientistas (Thomas Alva Edison) “A máxima eficiência é atingida com 1% de inteligência e 99% de empenho e estudo dedicado”.</p>
+
+<p>Prestar atenção às aulas - Um fator que colabora com o empenho e demonstra o mesmo é prestar atenção às aulas. Isso ajuda muito e se prestar muito atenção e tirar todas as dúvidas que venham a aparecer na sala, a sua necessidade de estudo em cada será menor. Então procure todos os dias:</p>
+
+<p>- Sentar na frente</p>
+
+<p>- Dar a máxima atenção ao que o professor está explicando. Devore mesmo a aula. Lembre que está fazendo algo muito importante.</p>
+
+<p>- Sempre, mas sempre mesmo, quando tiver alguma dúvida pergunte gentilmente ao professor para te explicar, pois não entendeu. Lembre que isso ajuda o professor, pois ele percebe que sua aula está sendo assistida e é importante para alguém. Também será importante para alguns colegas que porventura tiveram a mesma dúvida e não tiveram coragem de perguntar. Então fique atento, procure entender tudo, mas se não entender algo, por favor, pergunte.</p>
+
+<p>Estudo em casa – Aqui fica a parte mais consistente do seu estudo. Se necessário estude muitas horas todos os dias. Quando sentir que está dominando melhor cada matérias, então poderá reduzir a quantidade de horas e talvez começar a estudar uma profissão, mas lembrando de manter seus estudos com a maior atenção. Lembre que para se tornar um aluno bom, que sente segurança e domina bem todas as matérias são necessários vários anos e com muito empenho. Não acontece no primeiro ano de estudo sério e nem talvez no segundo. Mas tudo depende também do seu empenho e inteligência.</p>
+
+<h3 class="western"><a name="__RefHeading___Toc1175_910990196"></a>Lei da Atração</h3>
+
+<p>Conhecida por alguns como lei de causa e efeito ou lei do karma. Atualmente ela é super valorizada e até tornada mágica. Se assistir o vídeo O Segredo no Youtube talvez concorde comigo. Mas estou falando nela porque tem toda a lógica o fato de que quando você se empenha, dá tudo de si fazendo algo, planejando e executando da melhor forma que você consegue. Quando você age assim a probabilidade de sucesso é muito grande. Então lembre que você não pode garantir o sucesso mas pode se empenhar ao máximo para conseguir. Faça isso, faça bem feita a sua parte.</p>
+
+<h3 class="western" style="page-break-before: always;"><a name="__RefHeading___Toc1177_910990196"></a> Alguns dos materiais de estudo mais importantes, na ordem</h3>
+
+<p>- Os próprios livros didáticos/Aulas em sala</p>
+
+<p>- Livros similares, do mesmo ano e assunto e ano (podem ser digitais)</p>
+
+<p>- Tutoriais em texto: HTML (páginas), PDF, EPUB, etc</p>
+
+<p>- Vídeo aulas</p>
+
+<p>- Invente o seu :)</p>
+
+<p>Parafraseando outro grande cientista (Isaac Newton) sobre a importância do estudo sério: “Se atingi a máxima eficiência em minha vida de cientista é porque estudei muito os grandes cientistas que vieram antes de mim”.</p>
+
+<h3 class="western"><a name="__RefHeading___Toc1179_910990196"></a>Curiosidade</h3>
+
+<p>A curiosidade é uma característica de pessoas inteligentes, que observam detalhes e que se interessam em aprender coisas novas. Deve te ajudar ter curiosidade em aprender todas as matérias e conhecer de tudo.</p>
+
+<h3 class="western"><a name="__RefHeading___Toc1181_910990196"></a>Referências</h3>
+
+<p>Observação: não testei todos os links abaixo, portanto seja criterioso e descarte os que não forem úteis e eficientes.</p>
+
+<p>- O mínimo pra se tornar uma pessoa mais inteligente | Oi Seiiti Arata 34</p>
+
+<p style="margin-bottom: 0cm; line-height: 100%;"><a href="https://www.youtube.com/watch?v=0x4BT-LZP_M">https://www.youtube.com/watch?v=0x4BT-LZP_M</a></p>
+
+<p style="margin-bottom: 0cm; line-height: 100%;">- Como estudar com eficiência | Oi Seiiti Arata 36</p>
+
+<p style="margin-bottom: 0cm; line-height: 100%;"><a href="https://www.youtube.com/watch?v=lnQ8W1LllpI">https://www.youtube.com/watch?v=lnQ8W1LllpI</a></p>
+
+<p style="margin-bottom: 0cm; line-height: 100%;">- As 10 melhores técnicas de estudo, segundo a ciência (a #9 é a minha preferida)</p>
+
+<p style="margin-bottom: 0cm; line-height: 100%;"><a href="https://mude.nu/estudo-10-melhores-formas/">https://mude.nu/estudo-10-melhores-formas/</a></p>
+
+<p style="margin-bottom: 0cm; line-height: 100%;">- Como Fixar na Memória o Conteúdo Estudado - O Guia Completo</p>
+
+<p style="margin-bottom: 0cm; line-height: 100%;"><a href="http://www.tudosobreconcursos.com/dicas/como-fixar-na-memoria-o-conteudo-estudado-o-guia-completo">http://www.tudosobreconcursos.com/dicas/como-fixar-na-memoria-o-conteudo-estudado-o-guia-completo</a></p>
+
+<p style="margin-bottom: 0cm; line-height: 100%;">- 7 dicas para estudar de forma eficiente</p>
+
+<p style="margin-bottom: 0cm; line-height: 100%;"><a href="https://www.ead.com.br/ead/7-dicas-para-estudar-de-forma-eficiente.html">https://www.ead.com.br/ead/7-dicas-para-estudar-de-forma-eficiente.html</a></p>
+
+<p style="margin-bottom: 0cm; line-height: 100%;"><b>Porque algumas pessoas se dão bem na vida? Qual seuu segredo?</b></p>
+
+<p style="margin-bottom: 0cm; line-height: 100%;"><a href="https://super.abril.com.br/ciencia/o-segredo-do-sucesso/"><span style="font-weight: normal;">https://super.abril.com.br/ciencia/o-segredo-do-sucesso/</span></a></p>
+
+<p style="margin-bottom: 0cm; line-height: 100%;"><b>Sites de Estudos</b></p>
+
+<p style="margin-bottom: 0cm; line-height: 100%;"><a href="https://brasilescola.uol.com.br/">https://brasilescola.uol.com.br/</a></p>
+
+<p style="margin-bottom: 0cm; line-height: 100%;"><a href="https://www.matematicario.com.br/">https://www.matematicario.com.br/</a></p>
+
+<p style="margin-bottom: 0cm; line-height: 100%;"><a href="https://www.soportugues.com.br/">https://www.soportugues.com.br/</a></p>
+
+<p style="margin-bottom: 0cm; line-height: 100%;"><a href="https://canaldoensino.com.br/blog/16-sites-para-estudar-de-graca-para-concursos-publicos">https://canaldoensino.com.br/blog/16-sites-para-estudar-de-graca-para-concursos-publicos</a></p>
+
+<p style="margin-bottom: 0cm; line-height: 100%;"><a href="https://www.mundovestibular.com.br/">https://www.mundovestibular.com.br/</a></p>
+
+<p style="margin-bottom: 0cm; line-height: 100%;">Provas e gabaritos do ENEM para baixar</p>
+
+<p style="margin-bottom: 0cm; line-height: 100%;"><a href="https://vestibulandoweb.com.br/enem/vestibular-provas-enem.asp">https://vestibulandoweb.com.br/enem/vestibular-provas-enem.asp</a></p>
+
+<p style="margin-bottom: 0cm; line-height: 100%;">Conjugar verbos para você</p>
+
+<p style="margin-bottom: 0cm; line-height: 100%;"><a href="http://linguistica.insite.com.br/mod_perl/conjugue">http://linguistica.insite.com.br/mod_perl/conjugue</a></p>
+
+<p style="margin-bottom: 0cm; line-height: 100%;"><b>Busca por livros acadêmicos</b></p>
+
+<p style="margin-bottom: 0cm; line-height: 100%;"><a href="https://scholar.google.com.br/">https://scholar.google.com.br/</a></p>
+
+<p style="margin-bottom: 0cm; line-height: 100%;"><b>Livros didáticos grátis</b></p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; line-height: 100%;">Muitos livros gratuitos - <a href="http://www.dominiopublico.gov.br/pesquisa/PesquisaObraForm.jsp">http://www.dominiopublico.gov.br/pesquisa/PesquisaObraForm.jsp</a></p>
+
+<p style="margin-bottom: 0cm; line-height: 100%;"><a href="http://www.estudajovem.com.br/2013/03/livros-didaticos-gratis-em-pdf.html">http://www.estudajovem.com.br/2013/03/livros-didaticos-gratis-em-pdf.html</a></p>
+
+<p style="margin-bottom: 0cm; line-height: 100%;"><a href="https://projetomedicina.com.br/conteudo-exclusivo/colecao-passe-facil-no-enem/">https://projetomedicina.com.br/conteudo-exclusivo/colecao-passe-facil-no-enem/</a></p>
+
+<p style="margin-bottom: 0cm; line-height: 100%;"><a href="https://viacarreira.com/apostilas-pre-vestibular-gratuitas-material-de-cursinho-em-pdf-215959/">https://viacarreira.com/apostilas-pre-vestibular-gratuitas-material-de-cursinho-em-pdf-215959/</a></p>
+
+<p style="margin-bottom: 0cm; line-height: 100%;"><a href="https://foconoenem.com/apostila-enem-2016-pdf-download-gratis/">https://foconoenem.com/apostila-enem-2016-pdf-download-gratis/</a></p>
+
+<p style="margin-bottom: 0cm; line-height: 100%;"><a href="https://pt.scribd.com/document/246238339/Caderno-Marista-Para-o-Enem-Matematica-e-Suas-Tecnologias-1">https://pt.scribd.com/document/246238339/Caderno-Marista-Para-o-Enem-Matematica-e-Suas-Tecnologias-1</a></p>
+
+<p style="margin-bottom: 0cm; line-height: 100%;"><a href="http://www.educadores.diaadia.pr.gov.br/arquivos/File/gabaritando_enem/2015/simulado_impresso_gabaritando_enem.pdf">http://www.educadores.diaadia.pr.gov.br/arquivos/File/gabaritando_enem/2015/simulado_impresso_gabaritando_enem.pdf</a></p>
+
+<p style="margin-bottom: 0cm; line-height: 100%;"><a href="http://www.ufjf.br/cursinho/files/2014/09/Material-revisional-iMPRESSAO.pdf">http://www.ufjf.br/cursinho/files/2014/09/Material-revisional-iMPRESSAO.pdf</a></p>
+
+<p style="margin-bottom: 0cm; line-height: 100%;"><a href="http://download.inep.gov.br/educacao_basica/enem/guia_participante/2016/manual_de_redacao_do_enem_2016.pdf">http://download.inep.gov.br/educacao_basica/enem/guia_participante/2016/manual_de_redacao_do_enem_2016.pdf</a></p>
+
+<p style="margin-bottom: 0cm; line-height: 100%;"><a href="https://catracalivre.com.br/geral/educacao-3/indicacao/baixe-gratuitamente-130-apostilas-para-estudar-para-o-enem/">https://catracalivre.com.br/geral/educacao-3/indicacao/baixe-gratuitamente-130-apostilas-para-estudar-para-o-enem/</a></p>
+
+<p style="margin-bottom: 0cm; line-height: 100%;"><a href="http://portal.mec.gov.br/colecao-explorando-o-ensino-sp-3427598/volumes">http://portal.mec.gov.br/colecao-explorando-o-ensino-sp-3427598/volumes</a></p>
+
+<p style="margin-bottom: 0cm; line-height: 100%;"><a href="https://g1.globo.com/educacao/noticia/encceja-veja-material-de-estudo-apostilas-e-o-que-cai-na-prova-para-quem-quer-o-diploma-do-ensino-medio-ou-do-fundamental.ghtml">https://g1.globo.com/educacao/noticia/encceja-veja-material-de-estudo-apostilas-e-o-que-cai-na-prova-para-quem-quer-o-diploma-do-ensino-medio-ou-do-fundamental.ghtml</a></p>
+
+<p style="margin-bottom: 0cm; line-height: 100%;"><a href="http://portal.mec.gov.br/secretaria-de-regulacao-e-supervisao-da-educacao-superior-seres/194-secretarias-112877938/secad-educacao-continuada-223369541/13536-materiais-didaticos">http://portal.mec.gov.br/secretaria-de-regulacao-e-supervisao-da-educacao-superior-seres/194-secretarias-112877938/secad-educacao-continuada-223369541/13536-materiais-didaticos</a></p>
+
+<p style="margin-bottom: 0cm; line-height: 100%;">Entenda as 5 competências</p>
+
+<p style="margin-bottom: 0cm; line-height: 100%;"><a href="http://foconoenem.com/guia-de-redacao-do-enem/">http://foconoenem.com/guia-de-redacao-do-enem/</a></p>
+
+<p style="margin-bottom: 0cm; line-height: 100%;">Aplicativos sobre estudos, que podem ser úteis, mas avalie bem antes e use com moderação, pois</p>
+
+<p><b>Três em cada quatro apps da Google Play possuem rastreadores, afirma estudo</b></p>
+
+<p style="margin-bottom: 0cm; line-height: 100%;"><a href="https://play.google.com/store/apps/details?id=com.sandrobot.aprovado&amp;hl=pt_BR">https://play.google.com/store/apps/details?id=com.sandrobot.aprovado&amp;hl=pt_BR</a></p>
+
+<p style="margin-bottom: 0cm; line-height: 100%;"><a href="https://play.google.com/store/apps/details?id=br.com.passeidireto&amp;hl=pt_BR">https://play.google.com/store/apps/details?id=br.com.passeidireto&amp;hl=pt_BR</a></p>
+
+<p style="margin-bottom: 0cm; line-height: 100%;"><a href="https://play.google.com/store/apps/details?id=br.com.ftd.guiadeestudos&amp;hl=pt_BR">https://play.google.com/store/apps/details?id=br.com.ftd.guiadeestudos&amp;hl=pt_BR</a></p>
+
+<p style="margin-bottom: 0cm; line-height: 100%;"><a href="https://canaltech.com.br/android/aprenda-a-denunciar-aplicativos-na-google-play/">https://canaltech.com.br/android/aprenda-a-denunciar-aplicativos-na-google-play/</a></p>
+
+<p style="margin-bottom: 0cm; line-height: 100%;"><b>Testes de QI e de raciocínio Online – para momentos de descanso</b></p>
+
+<p style="margin-bottom: 0cm; line-height: 100%;">Descansar carregando pedra. :)</p>
+
+<p style="margin-bottom: 0cm; line-height: 100%;"><a href="https://guiadoestudante.abril.com.br/estudo/aprenda-como-se-preparar-para-os-testes-de-raciocinio-logico/">https://guiadoestudante.abril.com.br/estudo/aprenda-como-se-preparar-para-os-testes-de-raciocinio-logico/</a></p>
+
+<p style="margin-bottom: 0cm; line-height: 100%;"><a href="https://testedeqi.org/">https://testedeqi.org/</a></p>
+
+<p style="margin-bottom: 0cm; line-height: 100%;"><a href="http://www.testesonline.com.br/fazer-teste-online/teste-de-raciocinio-logico">http://www.testesonline.com.br/fazer-teste-online/teste-de-raciocinio-logico</a></p>
+
+<p style="margin-bottom: 0cm; line-height: 100%;"><a href="https://pt.testsworld.net/teste-de-logica.html">https://pt.testsworld.net/teste-de-logica.html</a></p>
+
+<p style="margin-bottom: 0cm; line-height: 100%;"><a href="https://www.fatosdesconhecidos.com.br/resolva-estes-testes-de-raciocinio-logico-e-descubra-a-potencia-do-seu-cerebro/">https://www.fatosdesconhecidos.com.br/resolva-estes-testes-de-raciocinio-logico-e-descubra-a-potencia-do-seu-cerebro/</a></p>
+
+<p style="margin-bottom: 0cm; line-height: 100%;"><a href="https://rachacuca.com.br/testes/">https://rachacuca.com.br/testes/</a></p>
+
+<p style="margin-bottom: 0cm; line-height: 100%;"><a href="http://www.vestibular1.com.br/testes/testes-de-raciocinio/testes-de-raciocinio/">http://www.vestibular1.com.br/testes/testes-de-raciocinio/testes-de-raciocinio/</a></p>
+
+<p style="margin-bottom: 0cm; line-height: 100%;"><a href="https://www.buzzfeed.com/raphaelevangelista/testes-de-raciocinio-que-parecem-simples-mas-vao-bugar?utm_term=.xljZJPPob#.mgPZMRRn6">https://www.buzzfeed.com/raphaelevangelista/testes-de-raciocinio-que-parecem-simples-mas-vao-bugar?utm_term=.xljZJPPob#.mgPZMRRn6</a></p>
+
+<p style="margin-bottom: 0cm; line-height: 100%;"><a href="https://www.shldirect.com/pt/example-questions/inductive-reasoning">https://www.shldirect.com/pt/example-questions/inductive-reasoning</a></p>
+
+<p style="margin-bottom: 0cm; line-height: 100%;"><a href="https://www.lumosity.com/">https://www.lumosity.com/</a></p>
+
+<p style="margin-bottom: 0cm; line-height: 100%;"><b>Curiosidades</b></p>
+
+<p style="margin-bottom: 0cm; line-height: 100%;">O site que advinha tudo - <a href="http://pt.akinator.com/">http://pt.akinator.com/</a></p>
+
+<p style="margin-bottom: 0cm; line-height: 100%;">Construa Gráficos de Funções usando o Google</p>
+
+<p style="margin-bottom: 0cm; line-height: 100%;"><a href="http://www.prof-edigleyalexandre.com/2011/12/construa-graficos-de-funcoes.html">http://www.prof-edigleyalexandre.com/2011/12/construa-graficos-de-funcoes.html</a></p>
+
+<p style="margin-bottom: 0cm; line-height: 100%;"><a href="https://www.visiblebody.com/">https://www.visiblebody.com/</a></p>
+
+<p style="margin-bottom: 0cm; line-height: 100%;"><a href="https://www.healthline.com/human-body-maps">https://www.healthline.com/human-body-maps</a></p>
+
+<p style="margin-bottom: 0cm; line-height: 100%;"><a href="https://www.solarsystemscope.com/">https://www.solarsystemscope.com/</a></p>
+
+<p style="margin-bottom: 0cm; line-height: 100%;">Matemática multimídia - <a href="http://m3.ime.unicamp.br/">http://m3.ime.unicamp.br/</a></p>
+
+<p style="margin-bottom: 0cm; line-height: 100%;"><a href="http://sorisomail.com/partilha/74120.html">http://sorisomail.com/partilha/74120.html</a></p>
+
+<p style="margin-bottom: 0cm; line-height: 100%;">Criar caixas de papel ou papelão</p>
+
+<p style="margin-bottom: 0cm; line-height: 100%;"><a href="http://www.templatemaker.nl/?lang=pt">http://www.templatemaker.nl/?lang=pt</a></p>
+
+<p style="margin-bottom: 0cm; line-height: 100%;"><b>Como melhorar a inteligência</b></p>
+
+<p style="margin-bottom: 0cm; line-height: 100%;"><a href="https://www.youtube.com/watch?v=qhoKo5YxzUE">https://www.youtube.com/watch?v=qhoKo5YxzUE</a></p>
+
+<p style="margin-bottom: 0cm; line-height: 100%;"><a href="https://www.youtube.com/watch?v=oIBpPRvDsLE">https://www.youtube.com/watch?v=oIBpPRvDsLE</a></p>
+
+<p style="margin-bottom: 0cm; line-height: 100%;"><a href="https://www.youtube.com/watch?v=q-1pfviGMRQ">https://www.youtube.com/watch?v=q-1pfviGMRQ</a></p>
+
+<p style="margin-bottom: 0cm; line-height: 100%;"><a href="https://www.youtube.com/watch?v=v_OfAY5wzTQ">https://www.youtube.com/watch?v=v_OfAY5wzTQ</a></p>
+
+<p style="margin-bottom: 0cm; line-height: 100%;"><a href="https://www.youtube.com/watch?v=XB_NM8U2cl0">https://www.youtube.com/watch?v=XB_NM8U2cl0</a></p>
+
+<p style="margin-bottom: 0cm; line-height: 100%;"><a href="https://www.youtube.com/watch?v=WmNkQQaApWA">https://www.youtube.com/watch?v=WmNkQQaApWA</a></p>
+
+<p style="margin-bottom: 0cm; line-height: 100%;"><a href="https://www.youtube.com/watch?v=kT9P7jLqdvw">https://www.youtube.com/watch?v=kT9P7jLqdvw</a></p>
+
+<p style="margin-bottom: 0cm; line-height: 100%;"><b>Apps</b></p>
+
+<p style="margin-bottom: 0cm; line-height: 100%;">Android:</p>
+
+<p style="margin-bottom: 0cm; line-height: 100%;">1 - Lumosity: <a href="https://www.youtube.com/redirect?q=https%3A%2F%2Fgoo.gl%2FWuUfwu&amp;event=video_description&amp;v=b7nJjd6rQHg&amp;redir_token=tzZAh3HH4SyCpfovHPIxvQ32NnV8MTUyMzE5MzE2MUAxNTIzMTA2NzYx">https://goo.gl/WuUfwu</a></p>
+
+<p style="margin-bottom: 0cm; line-height: 100%;">2 - Memorado: <a href="https://www.youtube.com/redirect?q=https%3A%2F%2Fgoo.gl%2FH97fAA&amp;event=video_description&amp;v=b7nJjd6rQHg&amp;redir_token=tzZAh3HH4SyCpfovHPIxvQ32NnV8MTUyMzE5MzE2MUAxNTIzMTA2NzYx">https://goo.gl/H97fAA</a></p>
+
+<p style="margin-bottom: 0cm; line-height: 100%;">3 - NeuroNation: <a href="https://www.youtube.com/redirect?q=https%3A%2F%2Fgoo.gl%2FFbvADx&amp;event=video_description&amp;v=b7nJjd6rQHg&amp;redir_token=tzZAh3HH4SyCpfovHPIxvQ32NnV8MTUyMzE5MzE2MUAxNTIzMTA2NzYx">https://goo.gl/FbvADx</a></p>
+
+<p style="margin-bottom: 0cm; line-height: 100%;">(Bônus Android) Elevate: <a href="https://www.youtube.com/redirect?q=https%3A%2F%2Fgoo.gl%2FxdBA0T&amp;event=video_description&amp;v=b7nJjd6rQHg&amp;redir_token=tzZAh3HH4SyCpfovHPIxvQ32NnV8MTUyMzE5MzE2MUAxNTIzMTA2NzYx">https://goo.gl/xdBA0T</a></p>
+
+<p style="margin-bottom: 0cm; line-height: 100%;">iOS:</p>
+
+<p style="margin-bottom: 0cm; line-height: 100%;">1 - Lumosity: <a href="https://www.youtube.com/redirect?q=https%3A%2F%2Fgoo.gl%2F69qkjF&amp;event=video_description&amp;v=b7nJjd6rQHg&amp;redir_token=tzZAh3HH4SyCpfovHPIxvQ32NnV8MTUyMzE5MzE2MUAxNTIzMTA2NzYx">https://goo.gl/69qkjF</a></p>
+
+<p style="margin-bottom: 0cm; line-height: 100%;">2 - Memorado: <a href="https://www.youtube.com/redirect?q=https%3A%2F%2Fgoo.gl%2FECqRTo&amp;event=video_description&amp;v=b7nJjd6rQHg&amp;redir_token=tzZAh3HH4SyCpfovHPIxvQ32NnV8MTUyMzE5MzE2MUAxNTIzMTA2NzYx">https://goo.gl/ECqRTo</a></p>
+
+<p style="margin-bottom: 0cm; line-height: 100%;">3 - NeuroNation: <a href="https://www.youtube.com/redirect?q=https%3A%2F%2Fgoo.gl%2FDMCYfh&amp;event=video_description&amp;v=b7nJjd6rQHg&amp;redir_token=tzZAh3HH4SyCpfovHPIxvQ32NnV8MTUyMzE5MzE2MUAxNTIzMTA2NzYx">https://goo.gl/DMCYfh</a></p>
+
+<p style="margin-bottom: 0cm; line-height: 100%;">(Bônus iOS) Elevate: <a href="https://goo.gl/PLge5M">https://goo.gl/PLge5M</a></p>
+
+<p style="margin-bottom: 0cm; line-height: 100%;"><b>Como melhorar a memória</b></p>
+
+<p style="margin-bottom: 0cm; line-height: 100%;"><a href="http://www.cursou.com.br/desenvolvimento-pessoal/curso-memorizacao-gratis/">http://www.cursou.com.br/desenvolvimento-pessoal/curso-memorizacao-gratis/</a></p>
+
+<p style="margin-bottom: 0cm; line-height: 100%;"><a href="https://www.youtube.com/watch?v=_efWhnguZL8">https://www.youtube.com/watch?v=_efWhnguZL8</a></p>
+
+<p style="margin-bottom: 0cm; line-height: 100%;"><a href="https://www.youtube.com/watch?v=21VySCp_7TE">https://www.youtube.com/watch?v=21VySCp_7TE</a> – 6 vídeos</p>
+
+<p style="margin-bottom: 0cm; line-height: 100%;"><a href="https://www.youtube.com/watch?v=VMS9gzWHQME">https://www.youtube.com/watch?v=VMS9gzWHQME</a></p>
+
+<p style="margin-bottom: 0cm; line-height: 100%;"><a href="https://www.youtube.com/watch?v=zOcRjfoX2YE">https://www.youtube.com/watch?v=zOcRjfoX2YE</a></p>
+
+<p style="margin-bottom: 0cm; line-height: 100%;"><a href="https://www.youtube.com/watch?v=RoNV140JucE">https://www.youtube.com/watch?v=RoNV140JucE</a></p>
+
+<p style="margin-bottom: 0cm; line-height: 100%;"><b>Músicas para melhorar a concentração nos estudos (caso goste do estilo)<br /></b></p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; line-height: 100%;"><a href="https://www.youtube.com/watch?v=Ao6mIoBuQCA">https://www.youtube.com/watch?v=Ao6mIoBuQCA</a></p>
+
+<p style="margin-bottom: 0cm; line-height: 100%;"><b>Softwares que podem ser úteis</b></p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; line-height: 100%;">GeoGebra - <a href="https://www.geogebra.org/">https://www.geogebra.org/</a></p>
+
+<p style="margin-bottom: 0cm; line-height: 100%;"><b>Sites para tirar dúvidas</b></p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; line-height: 100%;"><a href="http://www.ajudamatematica.com/viewtopic.php?f=98&amp;t=117">http://www.ajudamatematica.com/viewtopic.php?f=98&amp;t=117</a></p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; line-height: 100%;"><a href="http://www.zoomdigital.com.br/site-resolve-sua-licao-de-matematica/">http://www.zoomdigital.com.br/site-resolve-sua-licao-de-matematica/</a></p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; line-height: 100%;"><a href="http://www.mat.ufrgs.br/~portosil/consulta.html">http://www.mat.ufrgs.br/~portosil/consulta.html</a></p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; line-height: 100%;">Trabalhos escolares prontos - <a href="https://www.coladaweb.com/">https://www.coladaweb.com/</a></p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; line-height: 100%;"> </p> 	</div>
+
+	
+	
+	<ul class="pager pagenav">
+	<li class="next">
+		<a class="hasTooltip" title="Estimulando para Estudar" aria-label="Próximo artigo: Estimulando para Estudar" href="estimulando-para-estudar.html" rel="next">
+			<span aria-hidden="true">Próximo</span> <span class="icon-chevron-right" aria-hidden="true"></span>		</a>
+	</li>
+</ul>
+				
+	
+	<script type="text/x-template" id="ccomment-pagination">
+	<nav class="pagination text-center" v-if="pagination.last_page > 0">
+		<ul >
+			<li v-if="showPrevious()" :class="{ 'disabled' : pagination.current_page <= 1 }">
+				<span v-if="pagination.current_page <= 1">
+					<span aria-hidden="true">Ant</span>
+				</span>
+				<a href="estudando-com-a-maxima-eficiencia.html#" v-if="pagination.current_page > 1 " :aria-label="config.ariaPrevioius"
+				   @click.prevent="changePage(pagination.current_page - 1)">
+					<span aria-hidden="true">Ant</span>
+				</a>
+			</li>
+			<li v-for="num in array" :class="{ 'active': num === pagination.current_page }">
+				<a href="estudando-com-a-maxima-eficiencia.html#" @click.prevent="changePage(num)">{{ num }}</a>
+			</li>
+			<li v-if="showNext()"
+			    :class="{ 'disabled' : pagination.current_page === pagination.last_page || pagination.last_page === 0 }">
+				<span v-if="pagination.current_page === pagination.last_page || pagination.last_page === 0">
+					<span aria-hidden="true">Próximo</span>
+				</span>
+				<a href="estudando-com-a-maxima-eficiencia.html#" v-if="pagination.current_page < pagination.last_page" :aria-label="config.ariaNext"
+				   @click.prevent="changePage(pagination.current_page + 1)">
+					<span aria-hidden="true">Próximo</span>
+				</a>
+			</li>
+		</ul>
+	</nav>
+</script>
+	<script type="text/x-template" id="ccomment-avatar">
+		<div class="ccomment-avatar">
+			<a v-if="profileLink" v-bind:href="profileLink">
+				<img v-bind:src="avatar"/>
+			</a>
+			<img v-else v-bind:src="avatar"/>
+		</div>
+	</script>
+
+	<script type="text/x-template" id="ccomment-user-name">
+		<a v-if="profileLink" :href="profileLink">
+			<span class="ccomment-author">{{name}}</span>
+		</a>
+		<span v-else class="ccomment-author">{{name}}</span>
+	</script>
+
+	<script type="text/x-template" id="ccomment-created">
+		<a :href="'#!/ccomment-comment=' + id" class="muted ccomment-created">
+			{{date}}
+		</a>
+	</script>
+
+	<div id="ccomment-token" style="display:none;">
+		<input type="hidden" name="796296c0a9019553ed4bbba150ad5a40" value="1" />	</div>
+
+	
+<script type="text/x-template" id="ccomment-customfields">
+	<div class="ccomment-customfields" v-if="customfields">
+		<strong>Campos personalizados</strong>
+		<dl class="dl-horizontal">
+			<template v-for="customfield in customfields">
+				<dt>{{customfield.title}}</dt>
+				<dd>{{customfield.value}}</dd>
+			</template>
+		</dl>
+	</div>
+</script>
+
+<script type="text/x-template" id="ccomment-template">
+	<li v-bind:class="model.class+' ccomment-level-'+model.level">
+		<div class="ccomment-comment-content" v-bind:id="'ccomment-comment-'+model.id">
+			<div class="ccomment-data">
+									<ccomment-avatar
+							v-bind:avatar="model.avatar"
+							v-bind:profileLink="model.profileLink"/>
+								<div class="ccomment-content">
+					<div class="ccomment-meta">
+						<ccomment-user-name v-bind:name="model.name" v-bind:profileLink="model.profileLink"></ccomment-user-name>
+						<ccomment-created v-bind:date="model.date" v-bind:id="model.id"></ccomment-created>
+					</div>
+
+					<div v-html="model.comment">
+					</div>
+
+
+					<div v-if="model.galleria" class="js-ccomment-galleria galleria ccomment-galleria"></div>
+
+					<ccomment-customfields v-bind:customfields="model.customfields"></ccomment-customfields>
+					<div class="ccomment-actions">
+													<span class="muted">
+					{{model.votes}}
+					<i class="ccomment-thumbs-up ccomment-voting" v-on:click="vote(+1, model.id)"></i>
+					<i class="ccomment-thumbs-down ccomment-voting" v-on:click="vote(-1, model.id)"></i>
+				</span>
+						
+													<button class="btn btn-small ccomment-quote btn-link" v-on:click="quote(model.id)">
+								Citar							</button>
+						
+						
+						<div class="pull-right ccomment-moderation">
+							<button v-if="model.commentModerator" class="btn btn-mini btn-ccomment-edit" v-on:click="edit(model.id)">
+								Editar							</button>
+
+													</div>
+					</div>
+				</div>
+			</div>
+
+
+			<keep-alive>
+				<ccomment-form v-if="reply" :ref="'form-'+model.id" v-bind:focus="true">
+					<input slot="parent-id" name="jform[parentid]" type="hidden" v-bind:value="model.id"/>
+				</ccomment-form>
+			</keep-alive>
+		</div>
+
+		<ul v-if="hasChildren">
+			<ccomment-comment class="item" v-for="model in getChild()" v-bind:key="model.id" v-bind:model="model">
+			</ccomment-comment>
+		</ul>
+	</li>
+
+</script>
+	
+	
+
+		<script type="text/x-template" id="ccomment-form">
+			<form class="ccomment-form" v-on:submit.prevent="onSubmit">
+				<div class="ccomment-error-form row-fluid  margin-bottom" v-if="error">
+					<div class="alert alert-error">
+						{{errorMessage}}
+					</div>
+				</div>
+				<div class="ccomment-info-form row-fluid  margin-bottom" v-if="info">
+					<div class="alert alert-info">
+						{{infoMessage}}
+					</div>
+				</div>
+				<div class="row-fluid margin-bottom">
+											<div class="span1 hidden-phone">
+							<ccomment-avatar v-bind:avatar="getAvatar"></ccomment-avatar>
+						</div>
+					
+					<div class="span11">
+						<textarea v-on:focus="toggle"
+								  name="jform[comment]"
+								  class='js-ccomment-textarea ccomment-textarea span12 required'
+								  placeholder="Deixe um comentário"
+						></textarea>
+
+						<div v-show="uploadImage">
+							
+<div class="fileupload">
+	<!-- The fileupload-buttonbar contains buttons to add/delete files and start/cancel the upload -->
+	<div class="row fileupload-buttonbar">
+		<input type="file" name="files[]" class="js-ccomment-file-upload-real ccomment-file-upload-real" multiple/>
+		<div class="">
+			<!-- The global file processing state -->
+			<span class="fileupload-process"><span class="fa fa-spinner fa-pulse"></span></span>
+			Attach images by dragging & dropping or <span type="button" class="js-file-upload-fake ccomment-file-upload-fake btn-link"> by selecting them.</span>			<br/>
+			<small class="muted">The maximum file size for uploads is <strong>MB</strong>.				Only <strong></strong> files are allowed.</small>
+
+			<!-- The global progress state -->
+			<div class="fileupload-progress fade hide">
+				<!-- The global progress bar -->
+				<div class="progress progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+					<div class="progress-bar progress-bar-success" style="width:0%;"></div>
+				</div>
+				<!-- The extended global progress state -->
+				<div class="progress-extended">&nbsp;</div>
+			</div>
+			<div class="ccomment-file-list">
+				<div class="alert alert-error hide compojoom-max-number-files">
+					The maximum number of 3 allowed files to upload has been reached. If you want to upload more files you have to delete one of the existing uploaded files first.				</div>
+				<table role="presentation" class="table table-striped">
+					<thead></thead>
+					<tbody class="files"></tbody>
+				</table>
+				<div class="alert alert-error hide compojoom-max-number-files">
+					The maximum number of 3 allowed files to upload has been reached. If you want to upload more files you have to delete one of the existing uploaded files first.				</div>
+			</div>
+		</div>
+	</div>
+</div>
+						</div>
+
+						<div v-show="active">
+							<div class="span4 muted small">
+								Postando como																	<button type="button"
+											v-on:click="display = !display"
+											class="btn-link btn-small ccomment-posting-as">{{getDefaultName}}
+									</button>
+															</div>
+															<label class="checkbox pull-right small ccomment-notify">
+									<input type="checkbox" value="1" name="jform[notify]ƒ"
+										   v-on:click="notify = !notify"/>
+									<span class="muted">
+										Notificar-me de futuros comentários via e-mail									</span>
+								</label>
+							
+
+						</div>
+					</div>
+											<div v-show="display"
+							 class="row-fluid ccomment-user-info offset1					span11">
+							<div class="span6">
+								<input name="jform[name]"
+									   class="ccomment-name span12 no-margin "
+									   type='text'
+									   v-bind:value="getName"
+									   v-on:input="updateDefaultName"
+																			   placeholder="Informe seu nome"
+									   tabindex="2"
+																	/>
+								<span class="help-block pull-right small muted">
+								Exibido ao lado de seus comentários.							</span>
+							</div>
+
+															<div class="span6">
+									<input name='jform[email]'
+										   class="ccomment-email span12 no-margin "
+										   type='text'
+										   v-bind:value='getEmail'
+										   v-on:input="updateUserEmail"
+										   placeholder="Informe seu email"
+																				   tabindex="3"
+																			/>
+									<p class="help-block small pull-right muted">
+										Não exibido publicamente.																					<span class='gravatar'>
+											<a href='http://gravatar.com' target='_blank'>Gravatar</a> habilitado										</span>
+																			</p>
+								</div>
+													</div>
+					
+
+					
+					
+
+					<div class="row-fluid ccomment-actions" v-show="active">
+													<div class="pull-left muted small ccomment-undergo-moderation offset1">
+								Comentários serão submetidos a moderação antes de serem publicados.							</div>
+												<div class="pull-right">
+							<button v-on:click="reset()"
+									type="button"
+									class="btn ccomment-cancel">
+								Cancelar</button>
+							<button type="submit" class='btn btn-primary ccomment-send'
+									tabindex="7"
+									name='bsend'>
+								<span v-if="isSending">
+									Salvando...								</span>
+								<span v-else>
+									Enviar								</span>
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<input type="hidden" name="jform[contentid]" v-bind:value="itemConfig.contentid"/>
+				<input type="hidden" name="jform[component]" v-bind:value="itemConfig.component"/>
+				<input type="hidden" name="jform[page]" v-bind:value="page"/>
+				<slot name="parent-id"></slot>
+			</form>
+		</script>
+
+	
+
+
+
+
+<!-- The template to display files available for upload -->
+<script id="template-upload" type="text/x-tmpl">
+{% for (var i=0, file; file=o.files[i]; i++) { %}
+    <tr class="template-upload fade">
+        <td>
+            <span class="preview"></span>
+        </td>
+        <td>
+         <span class="name"><i>{%=file.name%}</i></span>
+            <div class="compojoom-single-file-progress">
+	            <div class="progress progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+	                <div class="progress-bar progress-bar-success" style="width:0%;"></div>
+	            </div>
+	           <small><strong class="size">Processing...</strong></small>
+			</div>
+        </td>
+        <td>
+            {% if (!i && !o.options.autoUpload) { %}
+                <button class="btn btn-default btn-xs start" disabled>
+                    <i class="fa fa-upload"></i>
+                    <span>Start</span>
+                </button>
+            {% } %}
+            {% if (!i) { %}
+                <button class="btn btn-default btn-xs btn-xs cancel pull-left">
+                    <i class="fa fa-stop"></i>
+                    <span>Cancel</span>
+                </button>
+            {% } %}
+        </td>
+    </tr>
+{% } %}
+</script>
+
+<!-- The template to display files available for download -->
+<script id="template-download" type="text/x-tmpl">
+{% for (var i=0, file; file=o.files[i]; i++) { %}
+    <tr class="template-download fade">
+        <td style="">
+        {% if (file.thumbnailUrl) { %}
+            <span class="preview">
+                {% if (file.url) { %}
+					<a href="http://backup/portal/{%=file.url%}" title="{%=file.name%}" download="{%=file.name%}" data-gallery>
+						<img src='http://backup/portal/blog/estudos/{%=file.thumbnailUrl%}'>
+					</a>
+				{% } else { %}
+					<img src='http://backup/portal/blog/estudos/{%=file.thumbnailUrl%}'>
+				{% } %}
+            </span>
+		{% } %}
+        </td>
+        <td>
+        {% if (!file.error) { %}
+	        <div class="file-meta">
+			    <div class="row">
+			        <div class="col-lg-4">
+			           <input type="text" class="form-control"
+			                placeholder="Title"
+							name="jform[picture_data][{%=file.name%}][title]"
+					        value="{%=file.title%}" />
+			        </div>
+			        <div class="col-lg-8">
+			            <input type="text" placeholder="Description" class="form-control"
+					                name="jform[picture_data][{%=file.name%}][description]"
+
+					                value="{%=file.description%}" />
+			        </div>
+			    </div>
+	        </div>
+		 {% } %}
+        {% if (file.error) { %}
+            <div><span class="label label-danger">Error</span> {%=file.error%}</div>
+        {% } %}
+        </td>
+        <td style="text-align: center">
+            {% if (file.deleteUrl) { %}
+                            {% } else { %}
+                 <button class="btn btn-default btn-xs btn-xs cancel">
+                    <i class="fa fa-stop"></i>
+                    <span>Cancel</span>
+                </button>
+            {% }%}
+            {% if (!file.error) { %}
+            <input type="hidden" name="jform[picture][]" value="{%=file.name%}" />
+            {% } %}
+        </td>
+    </tr>
+{% } %}
+</script>
+	
+<script type="text/x-template" id="ccomment-menu">
+	<div class="row-fluid ccomment-menu">
+		<h4 class="pull-left">
+			Comentários			(<span class="ccomment-comment-counter">{{pagination.total_with_children}}</span>)
+		</h4>
+		<div class="pull-right">
+							<button
+						v-on:click="newComment"
+						class="ccomment-add-new btn btn-mini" title='Adicionar Novo'>
+					Adicionar Novo				</button>
+														</div>
+	</div>
+</script>
+
+	<!-- the ccomment root element -->
+	<div class="ccomment" id="ccomment">
+
+		<ccomment-menu></ccomment-menu>
+
+		
+		
+		<ul class="ccomment-comments-list">
+			<ccomment-comment v-for="item in comments"
+							  v-if="item.parentid === -1"
+							  class="item"
+							  v-bind:key="item.id"
+							  v-bind:model="item">
+			</ccomment-comment>
+		</ul>
+
+					<pagination v-if="pagination.last_page > 1" :pagination="pagination" :callback="loadData" :options="paginationOptions"></pagination>
+		
+					<ccomment-form></ccomment-form>
+		
+			<div class="row-fluid small muted ccomment-powered">
+		<p class="text-center">
+			Comments fornecido por <a href='https://compojoom.com' rel='nofollow' target='_blank'>CComment</a>		</p>
+	</div>
+	</div>
+
+	<script type="text/javascript">
+		window.compojoom = compojoom = window.compojoom || {};
+		compojoom.ccomment = {
+			user: {"loggedin":false,"avatar":"http:\/\/backup\/portal\/media\/com_comment\/images\/noavatar.png"},
+			item: {"contentid":239,"component":"com_content","count":2},
+			config: {"comments_per_page":0,"sort":0,"tree":0,"use_name":0,"tree_depth":5,"form_position":0,"voting":1,"copyright":1,"pagination_position":0,"avatars":0,"gravatar":1,"support_ubb":1,"support_emoticons":0,"support_picture":0,"name_required":0,"email_required":0,"baseUrl":"http:\/\/backup\/portal\/","langCode":null,"file_upload":{"url":"http:\/\/backup\/portal\/index.php?option=com_comment&amp;task=multimedia.doIt","formControl":"jform","fieldName":"picture","maxNumberOfFiles":3,"fileTypes":null,"maxSize":null,"component":"com_comment","imageSize":{"x":"2400","y":"1800"}}}		};
+	</script>
+
+<script data-inline type="text/javascript" src="../../media/com_comment/cache/8e12eb270706cd6b2c8483104bf89b54.min.js"></script>
+			<div class="article-footer-wrap">
+			<div class="article-footer-top">
+									<div class="helix-social-share">
+		<div class="helix-social-share-icon">
+			<ul>
+				
+				<li>
+					<div class="facebook" data-toggle="tooltip" data-placement="top" title="Share On Facebook">
+
+						<a class="facebook" onClick="window.open('http://www.facebook.com/sharer.php?u=http://backup/portal/blog/estudos/estudando-com-a-maxima-eficiencia.html','Facebook','width=600,height=300,left='+(screen.availWidth/2-300)+',top='+(screen.availHeight/2-150)+''); return false;" href="http://www.facebook.com/sharer.php?u=http://backup/portal/blog/estudos/estudando-com-a-maxima-eficiencia.html">
+
+							<i class="fa fa-facebook"></i>
+						</a>
+
+					</div>
+				</li>
+				<li>
+					<div class="twitter"  data-toggle="tooltip" data-placement="top" title="Share On Twitter">
+						
+						<a class="twitter" onClick="window.open('http://twitter.com/share?url=http://backup/portal/blog/estudos/estudando-com-a-maxima-eficiencia.html&amp;text=Estudando%20com%20a%20Máxima%20Eficiência','Twitter share','width=600,height=300,left='+(screen.availWidth/2-300)+',top='+(screen.availHeight/2-150)+''); return false;" href="http://twitter.com/share?url=http://backup/portal/blog/estudos/estudando-com-a-maxima-eficiencia.html&amp;text=Estudando%20com%20a%20Máxima%20Eficiência">
+							<i class="fa fa-twitter"></i>
+						</a>
+
+					</div>
+				</li>
+				<li>
+					<div class="google-plus">
+						<a class="gplus" data-toggle="tooltip" data-placement="top" title="Share On Google Plus" onClick="window.open('https://plus.google.com/share?url=http://backup/portal/blog/estudos/estudando-com-a-maxima-eficiencia.html','Google plus','width=585,height=666,left='+(screen.availWidth/2-292)+',top='+(screen.availHeight/2-333)+''); return false;" href="https://plus.google.com/share?url=http://backup/portal/blog/estudos/estudando-com-a-maxima-eficiencia.html" >
+						<i class="fa fa-google-plus"></i></a>
+					</div>
+				</li>
+				
+				<li>
+					<div class="linkedin">
+						<a class="linkedin" data-toggle="tooltip" data-placement="top" title="Share On Linkedin" onClick="window.open('http://www.linkedin.com/shareArticle?mini=true&url=http://backup/portal/blog/estudos/estudando-com-a-maxima-eficiencia.html','Linkedin','width=585,height=666,left='+(screen.availWidth/2-292)+',top='+(screen.availHeight/2-333)+''); return false;" href="http://www.linkedin.com/shareArticle?mini=true&url=http://backup/portal/blog/estudos/estudando-com-a-maxima-eficiencia.html" >
+							
+						<i class="fa fa-linkedin-square"></i></a>
+					</div>
+				</li>
+			</ul>
+		</div>		
+	</div> <!-- /.helix-social-share -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			</div>
+					</div>
+	
+</article>
+</div></div><div id="sp-right" class="col-sm-3 col-md-3"><div class="sp-column class2"><div class="sp-module pop"><h3 class="sp-module-title">Populares</h3><div class="sp-module-content"><ul class="mostreadpop mod-list">
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="http://backup/portal/mobile/phaser/atualizar-o-node-js.html" itemprop="url">
+			<span itemprop="name">
+				Atualizar o Node.JS			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../../joomla-3/dicas/melhorando-a-velocidade-do-site.html" itemprop="url">
+			<span itemprop="name">
+				Melhorando a velocidade do site			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="http://backup/portal/blog/estudos/boas-vindas.html" itemprop="url">
+			<span itemprop="name">
+				Boas Vindas!			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../../joomla-3/instalacao.html" itemprop="url">
+			<span itemprop="name">
+				Instalação do Joomla			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../diversos/e-possivel-viver-sem-o-google.html" itemprop="url">
+			<span itemprop="name">
+				É possível viver sem o Google?			</span>
+		</a>
+	</li>
+</ul>
+</div></div><div class="sp-module "><h3 class="sp-module-title">Novo Testamento</h3><div class="sp-module-content">E Pedro, tomando a palavra, disse a Jesus: Mestre, é bom que estejamos aqui; e façamos três cabanas, uma para ti, outra para Moisés, e outra para Elias.
+
+<br>(Mc, 9:5) 
+</div></div><div class="sp-module "><h3 class="sp-module-title">Rotas no Mapa do Google</h3><div class="sp-module-content"><a href="https://www.google.com/maps/dir///@-3.7294526,-38.5422647,15z" target="_blank">Abrir o Mapa</a>
+</div></div></div></div></div></div></section><footer id="sp-footer"><div class="container"><div class="row"><div id="sp-footer1" class="col-sm-12 col-md-12"><div class="sp-column "><span class="sp-copyright">© 2015 Ribamar FS. All Rights Reserved. Designed By JoomShaper</span></div></div></div></div></footer>            </div> <!-- /.body-innerwrapper -->
+        </div> <!-- /.body-innerwrapper -->
+
+        <!-- Off Canvas Menu -->
+        <div class="offcanvas-menu">
+            <a href="estudando-com-a-maxima-eficiencia.html#" class="close-offcanvas" aria-label="Close"><i class="fa fa-remove" aria-hidden="true" title="HELIX_CLOSE_MENU"></i></a>
+            <div class="offcanvas-inner">
+                                  <div class="sp-module _menu"><h3 class="sp-module-title">Menu Principal</h3><div class="sp-module-content"><ul class="nav menu">
+<li class="item-101"><a href="../../index.html" > Início</a></li><li class="item-107  deeper parent"><a href="../../basicos.html" > Básicos</a><span class="offcanvas-menu-toggler collapsed" data-toggle="collapse" data-target="#collapse-menu-107"><i class="open-icon fa fa-angle-down"></i><i class="close-icon fa fa-angle-up"></i></span><ul class="collapse" id="collapse-menu-107"><li class="item-112"><a href="../../basicos/html.html" > HTML</a></li><li class="item-113"><a href="../../basicos/javascript.html" > JavaScript</a></li><li class="item-114"><a href="../../basicos/css.html" > CSS</a></li><li class="item-116"><a href="../../basicos/jquery.html" > jQuery</a></li><li class="item-117"><a href="../../basicos/bootstrap.html" > Bootstrap</a></li><li class="item-118"><a href="../../basicos/php.html" > PHP</a></li><li class="item-119"><a href="../../basicos/phpoo.html" > PHPOO</a></li><li class="item-120"><a href="../../basicos/pdo.html" > PDO</a></li><li class="item-157"><a href="../../basicos/ferramentas.html" > Ferramentas</a></li><li class="item-287"><a href="../../basicos/outros.html" > Outros</a></li></ul></li><li class="item-108  deeper parent"><a href="../../servidores.html" > Servidores</a><span class="offcanvas-menu-toggler collapsed" data-toggle="collapse" data-target="#collapse-menu-108"><i class="open-icon fa fa-angle-down"></i><i class="close-icon fa fa-angle-up"></i></span><ul class="collapse" id="collapse-menu-108"><li class="item-121"><a href="../../servidores/desktop.html" > Desktop</a></li><li class="item-122"><a href="../../servidores/ubuntu-server.html" > Ubuntu Server</a></li><li class="item-123"><a href="../../servidores/shell-scripts.html" > Shell Scripts</a></li><li class="item-124"><a href="../../servidores/servidor-web.html" > Servidor Web</a></li><li class="item-156"><a href="../../servidores/servidor-sgbd.html" > Servidor SGBD</a></li><li class="item-193  deeper parent"><a href="../../servidores/postgresql.html" > PostgreSQL</a><span class="offcanvas-menu-toggler collapsed" data-toggle="collapse" data-target="#collapse-menu-193"><i class="open-icon fa fa-angle-down"></i><i class="close-icon fa fa-angle-up"></i></span><ul class="collapse" id="collapse-menu-193"><li class="item-232"><a href="../../servidores/postgresql/introducao-ao-postgresql.html" > Introdução</a></li><li class="item-233"><a href="../../servidores/postgresql/projeto.html" > Projeto</a></li><li class="item-234"><a href="../../servidores/postgresql/dimensionamento.html" > Dimensionamento</a></li></ul></li></ul></li><li class="item-148  deeper parent"><a href="../../joomla-3.html" > Joomla 3</a><span class="offcanvas-menu-toggler collapsed" data-toggle="collapse" data-target="#collapse-menu-148"><i class="open-icon fa fa-angle-down"></i><i class="close-icon fa fa-angle-up"></i></span><ul class="collapse" id="collapse-menu-148"><li class="item-149"><a href="../../joomla-3/introducao.html" > Introdução</a></li><li class="item-231"><a href="../../joomla-3/seguranca.html" > Segurança</a></li><li class="item-199"><a href="../../joomla-3/instalacao.html" > Instalação do Joomla</a></li><li class="item-152"><a href="../../joomla-3/administracao.html" > Administração</a></li><li class="item-153"><a href="../../joomla-3/extensoes.html" > Extensões</a></li><li class="item-154"><a href="../../joomla-3/loja-simples.html" > Loja Simples</a></li><li class="item-155"><a href="../../joomla-3/dicas.html" > Dicas</a></li></ul></li><li class="item-310  divider deeper parent"><a class="separator ">Frameworks</a>
+<span class="offcanvas-menu-toggler collapsed" data-toggle="collapse" data-target="#collapse-menu-310"><i class="open-icon fa fa-angle-down"></i><i class="close-icon fa fa-angle-up"></i></span><ul class="collapse" id="collapse-menu-310"><li class="item-138  deeper parent"><a href="../../frameworks/cakephp-3.html" > CakePHP 3</a><span class="offcanvas-menu-toggler collapsed" data-toggle="collapse" data-target="#collapse-menu-138"><i class="open-icon fa fa-angle-down"></i><i class="close-icon fa fa-angle-up"></i></span><ul class="collapse" id="collapse-menu-138"><li class="item-139"><a href="../../frameworks/cakephp-3/introducao.html" > Introdução</a></li><li class="item-140"><a href="../../frameworks/cakephp-3/instalacao.html" > Instalação</a></li><li class="item-172"><a href="../../frameworks/cakephp-3/configuracoes.html" > Configurações</a></li><li class="item-141"><a href="../../frameworks/cakephp-3/convencoes.html" > Convenções</a></li><li class="item-142"><a href="../../frameworks/cakephp-3/tutoriais.html" > Tutoriais</a></li><li class="item-144"><a href="../../frameworks/cakephp-3/dicas.html" > Dicas</a></li><li class="item-145"><a href="../../frameworks/cakephp-3/seguranca.html" > Segurança</a></li><li class="item-147"><a href="../../frameworks/cakephp-3/mvc-no-cakephp-3.html" > MVC no CakePHP 3</a></li></ul></li><li class="item-171  deeper parent"><a href="../../frameworks/laravel-5.html" > Laravel 5</a><span class="offcanvas-menu-toggler collapsed" data-toggle="collapse" data-target="#collapse-menu-171"><i class="open-icon fa fa-angle-down"></i><i class="close-icon fa fa-angle-up"></i></span><ul class="collapse" id="collapse-menu-171"><li class="item-173"><a href="../../frameworks/laravel-5/introducao.html" > Introdução</a></li><li class="item-174"><a href="../../frameworks/laravel-5/instalacao.html" > Instalação</a></li><li class="item-175"><a href="../../frameworks/laravel-5/configuracoes.html" > Configurações</a></li><li class="item-176"><a href="../../frameworks/laravel-5/routes.html" > Routes</a></li><li class="item-178"><a href="../../frameworks/laravel-5/dicas.html" > Dicas</a></li><li class="item-177"><a href="../../frameworks/laravel-5/tutoriais.html" > Tutoriais</a></li></ul></li></ul></li><li class="item-158  deeper parent"><a href="../../mobile.html" > Mobile</a><span class="offcanvas-menu-toggler collapsed" data-toggle="collapse" data-target="#collapse-menu-158"><i class="open-icon fa fa-angle-down"></i><i class="close-icon fa fa-angle-up"></i></span><ul class="collapse" id="collapse-menu-158"><li class="item-179"><a href="../../mobile/introducao.html" > Introdução</a></li><li class="item-180"><a href="../../mobile/ambiente.html" > Ambiente</a></li><li class="item-188"><a href="../../mobile/phaser.html" > Phaser</a></li><li class="item-187"><a href="../../mobile/monaca.html" > Monaca</a></li><li class="item-181"><a href="../../mobile/phonegap.html" > PhoneGap</a></li><li class="item-182"><a href="../../mobile/app-inventor.html" > App Inventor</a></li><li class="item-159"><a href="../../mobile/unity-3d.html" > Unity 3D</a></li><li class="item-160"><a href="../../mobile/intel-xdk.html" > Intel XDK</a></li><li class="item-161"><a href="../../mobile/outros.html" > Outros</a></li><li class="item-163"><a href="../../mobile/dicas.html" > Dicas</a></li></ul></li><li class="item-168  active deeper parent"><a href="../../blog.html" > Blog</a><span class="offcanvas-menu-toggler collapsed" data-toggle="collapse" data-target="#collapse-menu-168"><i class="open-icon fa fa-angle-down"></i><i class="close-icon fa fa-angle-up"></i></span><ul class="collapse" id="collapse-menu-168"><li class="item-196"><a href="../reflexoes.html" > Reflexões</a></li><li class="item-197"><a href="../saude.html" > Saúde</a></li><li class="item-238"><a href="../diversos.html" > Diversos</a></li><li class="item-271  current active"><a href="../estudos.html" > Estudos</a></li></ul></li><li class="item-215  deeper parent"><a href="../../curriculo.html" > Sobre</a><span class="offcanvas-menu-toggler collapsed" data-toggle="collapse" data-target="#collapse-menu-215"><i class="open-icon fa fa-angle-down"></i><i class="close-icon fa fa-angle-up"></i></span><ul class="collapse" id="collapse-menu-215"><li class="item-167">		<a href="https://github.com/ribafs?tab=repositories" rel="noopener noreferrer" target="_blank" > Projetos</a></li><li class="item-164"><a href="../../curriculo/livros.html" > Livros</a></li><li class="item-257"><a href="../../curriculo/curriculo.html" > Currículo</a></li><li class="item-110"><a href="../../curriculo/contato.html" > Contato</a></li><li class="item-251"><a href="../../curriculo/mapa-do-site.html" > Mapa</a></li></ul></li></ul>
+</div></div>
+                            </div> <!-- /.offcanvas-inner -->
+        </div> <!-- /.offcanvas-menu -->
+
+        
+        
+        
+        <!-- Preloader -->
+        
+
+        <!-- Go to top -->
+                    <a href="javascript:void(0)" class="scrollup" aria-label="Go To Top">&nbsp;</a>
+        
+    </body>
+</html>

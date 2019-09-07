@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br" dir="ltr">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <base href="" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Ribamar FS" />
+	<meta name="robots" content="noindex, nofollow" />
+	<meta name="description" content="Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros." />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>PHPOO na Prática - RibaFS Portal</title>
+	<link href="http://ribafs.org/portal/basicos/phpoo/phpoo-na-pratica.html?tmpl=component&amp;print=1&amp;layout=default" rel="canonical" />
+	<link href="../../templates/shaper_helix3/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../../favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="http://backup/portal/media/plg_content_prismsyntaxhighlighter/css/prism-okaidia.css" rel="stylesheet" type="text/css" />
+	<link href="http://backup/portal/media/plg_content_prismsyntaxhighlighter/css/prism-linenumbers.css" rel="stylesheet" type="text/css" />
+	<script src="http://backup/portal/media/plg_content_prismsyntaxhighlighter/js/prism-tinymce.js" type="text/javascript"></script>
+	<script src="../../media/jui/js/jquery.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../media/jui/js/jquery-noconflict.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../media/jui/js/jquery-migrate.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="http://backup/portal/media/system/js/caption.js?d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script type="text/javascript">
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+	</script>
+	<meta property="og:url" content="http://backup/portal/basicos/phpoo/phpoo-na-pratica.html" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="PHPOO na Prática" />
+	<meta property="og:description" content="<?php // Tradicional classe inicial - olaMundo class OlaMundo { function OlaMundo(){ return "Olá Mundo do PHPOO!"; } } $ola = new OlaMundo(); print $ola->O..." />
+
+   	<link rel="stylesheet" href="../../media/jui/css/bootstrap.min.css" type="text/css" />
+	<link rel="stylesheet" href="../../templates/shaper_helix3/css/frontend-edit.css" type="text/css" />
+    <link rel="stylesheet" href="../../templates/shaper_helix3/css/template.css" type="text/css" />
+</head>
+<body class="contentpane">
+	<div id="system-message-container">
+	</div>
+
+	
+
+<article class="item item-page" itemscope itemtype="http://schema.org/Article">
+	<meta itemprop="inLanguage" content="pt-BR" />
+	
+	
+
+	<div class="entry-header">
+		<span class="post-format"><i class="fa fa-thumb-tack"></i></span>
+		
+					<h2 itemprop="name">
+									PHPOO na Prática							</h2>
+												</div>
+
+						<div id="pop-print" class="btn hidden-print">
+				<a href="phpoo-na-pratica.html#" onclick="window.print();return false;">			<span class="icon-print" aria-hidden="true"></span>
+		Imprimir	</a>			</div>
+				
+	
+	
+				
+	
+			<div itemprop="articleBody">
+		<pre class="language-php"><code>&lt;?php
+
+// Tradicional classe inicial - olaMundo
+
+class OlaMundo {
+
+	function OlaMundo(){	
+
+		return "Olá Mundo do PHPOO!";
+
+	}
+
+}
+
+
+$ola = new OlaMundo();
+
+print $ola-&gt;OlaMundo();
+
+
+// Classe Pessoa
+
+class Pessoa {
+
+	private $nome;
+
+	function setNome($nome){
+
+		$this-&gt;nome = $nome;
+
+	}
+
+	function getNome(){
+
+		return $this-&gt;nome;
+	}
+}
+
+$joao = new Pessoa();
+$joao-&gt;setNome("João Brito");
+$pedro = new Pessoa();
+$pedro-&gt;setNome("Pedro Ribeiro");
+
+
+print '&lt;b&gt;&lt;br&gt;&lt;br&gt;Classe Pessoa:&lt;br&gt;&lt;/b&gt;';
+print $joao-&gt;getNome();
+print '&lt;br&gt;';
+print $pedro-&gt;getNome();
+
+
+class Construtor {
+
+   function __construct() {
+
+       print "No construtor da Classe";
+
+   }
+
+}
+
+print '&lt;b&gt;&lt;br&gt;&lt;br&gt;Classe Construtor:&lt;br&gt;&lt;/b&gt;';
+$obj = new Construtor();
+print $obj-&gt;Construtor;
+
+
+// Controle de acessos
+
+class Acessos{
+	public $variavelPublic = "Variável Pública&lt;br&gt;";
+	protected $variavelProtected = "Variável Protegida&lt;br&gt;";
+	private $variavelPrivate = "Variável Privada&lt;br&gt;";
+	
+	public function getPublic(){
+		return $this-&gt;variavelPublic; 		 			
+	}
+
+	public function getProtected(){
+		return $this-&gt;variavelProtected; 		 			
+	}
+	
+	public function getPrivate(){
+		return $this-&gt;variavelPrivate; 		 			
+	}
+	
+	public function getMetodoPrivate(){
+		return Acessos::getPrivate(); 		 			
+	}	
+	
+}  
+
+
+$especificacaoAcesso = new Acessos();
+echo $especificacaoAcesso-&gt;getPublic();
+echo $especificacaoAcesso-&gt;getMetodoPrivate(); 
+//echo $especificaAcesso-&gt;getPrivate(); // Dará um erro fatal
+
+// Variáveis e Métodos Static, onde podemos usar sem instanciar a classe
+
+class Estatica{ 
+	static $varStatic = "Variável Estática&lt;br&gt;"; 
+
+	static function getStatic(){
+		return Estatica::$varStatic;
+	} 
+} 
+
+
+// Ou chamando a variável diretamente "Estatica::$varStatic". 
+echo Estatica::getStatic();
+
+
+// Métodos Final
+class ClasseFinal{	
+	final function getFinal(){
+		echo "Método Final"; 
+	} 
+} 
+
+$classeFinal = new ClasseFinal(); 
+$classeFinal-&gt;getFinal();
+
+
+// Método Construtor e Destrutor
+
+class ContrutorDestrutor{ 
+
+	private $varMethod; 
+	function __construct(){ 
+		$this-&gt;varMethod = "Construtor()"; 
+		echo "Método {$this-&gt;varMethod}&lt;br&gt;"; 
+	} 
+
+	function __destruct(){ 
+		$this-&gt;varMethod = "Destrutor()"; 
+		echo "Método {$this-&gt;varMethod}&lt;br&gt;"; 
+	} 
+} 
+
+$contrutorDestrutor = new ContrutorDestrutor(); 
+unset($contrutorDestrutor); 
+
+class ContrutorDestrutorFilho extends ContrutorDestrutor{ 
+	function __construct(){ 
+		parent::__construct(); 
+		echo "Método Filho Construtor&lt;br&gt;"; 
+	} 
+
+	function __destruct(){ 
+		parent::__destruct(); 
+		echo "Método Filho Destrutor&lt;br&gt;"; 
+	} 
+} 
+
+echo "&lt;br&gt;"; 
+$contrutorDestrutorFilho = new ContrutorDestrutorFilho(); 
+
+
+// Constantes da Classe
+
+class Constante{ 
+	const constante = "Minha Constante"; 
+
+} 
+
+echo Constante::constante; 
+
+
+// Clonando Objetos
+class ClasseClonando{ 
+    public $varClone; 
+    function __construct(){ 
+        $this-&gt;varClone = "&lt;br&gt;Php5&lt;br&gt;"; 
+    } 
+
+    function __clone(){ 
+        $this-&gt;varClone = "Php5 Clone&lt;br&gt;"; 
+    } 
+} 
+
+
+$classeClonando = new ClasseClonando(); 
+$cloneClasseClonando = clone $classeClonando; 
+echo $classeClonando-&gt;varClone . "&lt;br&gt;" . $cloneClasseClonando-&gt;varClone;
+
+
+// InstanceOf (Testar se classe é instância de outra)
+
+class TesteInstanceOf 
+{ 
+//....
+} 
+
+
+class ClasseInstanceOf{ 
+    function __construct($obj){ 
+        if ($obj instanceof TesteInstanceOf) { 
+            echo "Objeto da classe(TesteInstanceOf)&lt;br&gt;"; 
+        } else { 
+            echo "Não é um objeto da classe(TesteInstanceOf)&lt;br&gt;"; 
+        } 
+    } 
+} 
+
+$testeInstanceOf = new TesteInstanceOf(); 
+$classeInstanceOf = new ClasseInstanceOf($testeInstanceOf); 
+
+
+
+//Classes Abstratas
+
+abstract class Abstrata{ 
+    public abstract function setNome($nome); 
+    public abstract function getNome(); 
+} 
+
+
+class ClasseAbstrata extends Abstrata{ 
+    private $nome; 
+    public function setNome($newNome){ 
+        $this-&gt;nome = $newNome; 
+    } 
+
+    public function getNome(){ 
+        return $this-&gt;nome; 
+    } 
+} 
+
+$classeAbstrata = new ClasseAbstrata(); 
+$classeAbstrata-&gt;setNome("Php5"); 
+echo $classeAbstrata-&gt;getNome()."&lt;br&gt;"; 
+
+
+// Interfaces
+interface IPessoa{ 
+    public function setNome($nome); 
+    public function getNome(); 
+} 
+
+
+interface IPessoaFisica{ 
+    public function setCpf($cpf); 
+    public function getCpf(); 
+} 
+
+
+interface IPessoaJuridica{ 
+    public function setCnpj($cnpj); 
+    public function getCnpj(); 
+} 
+
+
+class ClassePessoa implements IPessoa, IPessoaFisica, IPessoaJuridica{ 
+    function __construct($nome, $cpf, $cnpj){ 
+        ClassePessoa::setNome($nome); 
+        ClassePessoa::setCpf($cpf); 
+        ClassePessoa::setCnpj($cnpj); 
+    } 
+
+    /* Métodos Set */ 
+    public function setNome($nome){ 
+        $this-&gt;nome = $nome; 
+    } 
+    public function setCpf($cpf){ 
+        $this-&gt;cpf = $cpf; 
+    }
+    public function setCnpj($cnpj){ 
+        $this-&gt;cnpj = $cnpj; 
+    } 
+    /* Métodos Get */ 
+    public function getNome(){ 
+        return $this-&gt;nome; 
+    } 
+    public function getCpf(){ 
+        return $this-&gt;cpf; 
+    } 
+    public function getCnpj(){ 
+        return $this-&gt;cnpj; 
+    } 
+    function __destruct(){ 
+        echo ClassePessoa::getNome()."&lt;br&gt;".ClassePessoa::getCpf()."&lt;br&gt;".ClassePessoa::getCnpj(); 
+    } 
+} 
+
+$classePessoa = new ClassePessoa("Rodrigo", "324.541.588-98", "6545.2101/0001"); 
+
+
+// Tratamento de erros lógicos - Exceptions
+
+class BusinessException extends Exception{ 
+
+    function __construct($msg){ 
+
+        // Vai para a função construtora do Exception. 
+
+        parent::__construct($msg); 
+
+    } 
+
+} 
+
+
+
+class Excecao{ 
+
+    function __construct($nome){ 
+
+        try { 
+
+            if ($nome == "") { 
+
+                throw new BusinessException("Nome não pode ser em branco"); 
+
+            } elseif(strlen($nome) &lt; 5) { 
+
+                throw new BusinessException("Nome precisa ter no mínimo 5 letras"); 
+
+            } elseif(strtolower($nome) == "corinthians") { 
+
+                throw new BusinessException("Corinthians campeão"); 
+
+            } else { 
+
+                throw new BusinessException("Paramêtro inválido"); 
+
+            } 
+
+        } catch (BusinessException $businessException) { 
+
+            echo $businessException-&gt;getMessage(); 
+
+        } 
+
+    } 
+
+} 
+
+
+
+$excecao = new Excecao("Corinthians"); 
+
+
+
+// Singleton
+
+class Singleton { 
+
+    private static $instance = null; 
+
+
+
+    public static function getInstance(){ 
+
+        if (Singleton::$instance == null) { 
+
+            Singleton::$instance = new Singleton(); 
+
+        } 
+
+        return Singleton::$instance; 
+
+    } 
+
+} 
+
+
+
+$objA = Singleton::getInstance(); 
+
+$objB = Singleton::getInstance(); 
+
+if ($objA == $objB) { 
+
+    echo "&lt;br&gt;Instância única"; 
+
+} else { 
+
+    echo "&lt;br&gt;Instâncias diferentes"; 
+
+} 
+
+
+
+// Pattern Factory
+
+abstract class AbstractFactory 
+
+{ 
+
+    private $nome; 
+
+    private $rendaMensal; 
+
+
+
+    function __construct($nome, $rendaMensal){ 
+
+        $this-&gt;setNome($nome); 
+
+        $this-&gt;setRendaMensal($rendaMensal); 
+
+    } 
+
+
+
+    public function setNome($newNome){ 
+
+        $this-&gt;nome = $newNome; 
+
+    } 
+
+
+
+    public function setRendaMensal($newRendaMensal){ 
+
+        $this-&gt;rendaMensal = $newRendaMensal; 
+
+    } 
+
+
+
+    public function getNome(){ 
+
+        return $this-&gt;nome; 
+
+    } 
+
+
+
+    public function getRendaMensal(){ 
+
+        return $this-&gt;rendaMensal; 
+
+    } 
+
+
+
+    public abstract function analisarCredito(); // Boolean 
+
+    public abstract function getCategoria(); // String 
+
+} 
+
+
+
+class ClientePadrao extends AbstractFactory{ 
+
+    function __construct($nome, $rendaMensal){ 
+
+        parent::__construct($nome, $rendaMensal); 
+
+    } 
+
+
+
+    // Foi declarada no AbstractFactory 
+
+    public function analisarCredito(){ 
+
+        return true; 
+
+    } 
+
+
+
+    // Foi declarada no AbstractFactory
+
+    public function getCategoria(){ 
+
+        return "Cliente Padrão"; 
+
+    } 
+
+} 
+
+
+
+class ClienteRisco extends AbstractFactory{ 
+
+    function __construct($nome, $rendaMensal){ 
+
+        parent::__construct($nome, $rendaMensal); 
+
+    } 
+
+
+
+    // Foi declarada no AbstractFactory 
+
+    public function analisarCredito(){ 
+
+        return false; 
+
+    } 
+
+
+
+    // Foi declarada no AbstractFactory 
+
+    public function getCategoria(){ 
+
+        return "Cliente Risco"; 
+
+    } 
+
+} 
+
+
+
+class ClienteSeguro extends AbstractFactory{ 
+
+    function __construct($nome, $rendaMensal){ 
+
+        parent::__construct($nome, $rendaMensal); 
+
+    } 
+
+
+
+    // Foi declarada no AbstractFactory 
+
+    public function analisarCredito(){ 
+
+        return true; 
+
+    } 
+
+
+
+    // Foi declarada no AbstractFactory 
+
+    public function getCategoria(){ 
+
+        return "Cliente com alta credibilidade"; 
+
+    } 
+
+} 
+
+
+
+class SingletonFactory{ 
+
+    private static $rendaMedia = 500; 
+
+    private static $rendaBaixa = 240; 
+
+    private static $instance = null; 
+
+
+
+    public static function getCliente($nome, $rendaMensal){ 
+
+        if ($rendaMensal &lt;= SingletonFactory::$rendaBaixa) { 
+
+            SingletonFactory::$instance = new ClienteRisco($nome, $rendaMensal); 
+
+        } elseif ($rendaMensal &gt; SingletonFactory::$rendaBaixa and 
+
+				$rendaMensal &lt;= SingletonFactory::$rendaMedia) { 
+
+            SingletonFactory::$instance = new ClientePadrao($nome, $rendaMensal); 
+
+        } else { 
+
+            SingletonFactory::$instance = new ClienteSeguro($nome, $rendaMensal); 
+
+        } 
+
+
+
+        $clienteAprovacao = "reprovado"; 
+
+        if (SingletonFactory::$instance-&gt;analisarCredito()) { 
+
+            $clienteAprovacao = "aprovado"; 
+
+        } 
+
+
+
+        echo "&lt;br&gt;Cliente = ".SingletonFactory::$instance-&gt;getNome()."&lt;br&gt;"; 
+
+        echo "Categoria = ".SingletonFactory::$instance-&gt;getCategoria()."&lt;br&gt;"; 
+
+        echo "Crédito = ".$clienteAprovacao; 
+
+        echo "&lt;hr&gt;"; 
+
+    } 
+
+} 
+
+
+
+SingletonFactory::getCliente("Rodrigo", 1977); 
+
+SingletonFactory::getCliente("Corinthians", 350); 
+
+SingletonFactory::getCliente("John", 220); 
+
+
+
+// Listando os métodos de um Objeto
+
+
+
+class OlaMundo2 {
+
+   // constructor
+
+   function OlaMundo2(){
+
+       return(true);
+
+   }
+
+   // method 1
+
+   function funcao1(){
+
+       return(true);
+
+   }
+
+
+
+   // method 2
+
+   function funcao2(){
+
+       return(true);
+
+   }
+
+}
+
+
+
+$meus_objetos = new OlaMundo2();
+
+$metodos_classe = get_class_methods(get_class($meus_objetos));
+
+
+
+foreach ($metodos_classe as $nome_metodo) {
+
+   echo "$nome_metodo&lt;br&gt;";
+
+}
+
+
+
+// Listando as variáveis de uma classe
+
+
+
+class Variaveis {
+
+
+
+   var $variavel1; // esta não tem valor default...
+
+   var $variavel2 = "xyz";
+
+   var $variavel3 = 100;
+
+
+
+   // construtor
+
+   function Variaveis() {
+
+       // mudar algumas propriedades
+
+         $this-&gt;var1 = "foo";
+
+         $this-&gt;var2 = "bar";
+
+         return true;
+
+   }
+
+
+
+}
+
+
+
+$minha_classe = new Variaveis();
+
+$variaveis = get_class_vars(get_class($minha_classe));
+
+
+
+foreach ($variaveis as $nome =&gt; $value) {
+
+   echo "$nome = $value&lt;br&gt;";
+
+}
+
+
+
+// Listar variáveis de um objeto
+
+
+
+class Point2D {
+
+   var $x, $y;
+
+   var $label;
+
+
+
+   function Point2D($x, $y){
+
+       $this-&gt;x = $x;
+
+       $this-&gt;y = $y;
+
+   }
+
+
+
+   function setLabel($label){
+
+       $this-&gt;label = $label;
+
+   }
+
+
+
+   function getPoint(){
+
+       return array("x" =&gt; $this-&gt;x,
+
+                     "y" =&gt; $this-&gt;y,
+
+                     "label" =&gt; $this-&gt;label);
+
+   }
+
+}
+
+
+
+// "$label" is declared but not defined
+
+$p1 = new Point2D(1.233, 3.445);
+
+print_r(get_object_vars($p1));
+
+
+
+$p1-&gt;setLabel("point #1");
+
+print_r(get_object_vars($p1));
+
+
+
+// Testando existência de classe e subclasse
+
+class Foo { var $myVar; }
+
+
+
+class Foo_Bar extends Foo { var $myVar2;}
+
+
+
+echo class_exists('Foo')."&lt;br&gt;"; //true
+
+echo class_exists('foo')."&lt;br&gt;"; //true
+
+echo class_exists('Foo_Bar')."&lt;br&gt;"; // true
+
+echo get_parent_class('Foo_Bar')."&lt;br&gt;"; // foo (NOTE: NOT Foo!)
+
+
+
+// Devolver nome da classe pai para objeto ou classe
+
+class dad {
+
+   function dad(){
+
+   // implemente alguma lógica
+
+   }
+
+}
+
+
+
+class child extends dad {
+
+   function child(){
+
+       echo "Eu sou a classe &lt;b&gt;" , get_parent_class($this) , "'s &lt;/b&gt;filho&lt;br&gt;";
+
+   }
+
+}
+
+
+
+class child2 extends dad {
+
+   function child2(){
+
+       echo "Eu também sou a classe &lt;b&gt;" , get_parent_class('child2') , "'s &lt;/b&gt;filho&lt;br&gt;";
+
+   }
+
+}
+
+
+
+$foo = new child();
+
+$bar = new child2();
+
+
+
+// Checar se método da classe existe
+
+class Foo1 {
+
+  public function bar() {
+
+   echo "Eu sou private Foo1::bar()&lt;br&gt;";
+
+  }
+
+}
+
+
+
+class Foo2 {
+
+  private function bar() {
+
+   echo "Eu sou public Foo2::bar()&lt;br&gt;";
+
+  }
+
+}
+
+
+
+$f1=new Foo1;
+
+$f2=new Foo2;
+
+
+
+if(is_callable(array($f1,"bar"))) {
+
+   echo "Foo1::bar() é acessível&lt;br&gt;";
+
+} else {
+
+   echo "Foo1::bar() não é acessível&lt;br&gt;";
+
+}
+
+if(is_callable(array($f2,"bar"))) {
+
+   echo "Foo2::bar() é acessível&lt;br&gt;";
+
+} else {
+
+   echo "Foo2::bar() não é acessível&lt;br&gt;";
+
+}
+
+if(in_array("bar",get_class_methods($f1))) {
+
+   echo "Foo1::bar() é acessível&lt;br&gt;";
+
+} else {
+
+   echo "Foo1::bar() não é acessível&lt;br&gt;";
+
+}
+
+if(in_array("bar",get_class_methods($f2))) {
+
+   echo "Foo2::bar() é acessível&lt;br&gt;";
+
+} else {
+
+   echo "Foo2::bar() não é acessível&lt;br&gt;";
+
+}
+</code></pre> 	</div>
+
+	
+	
+				
+	
+	
+	
+</article>
+
+</body>
+</html>

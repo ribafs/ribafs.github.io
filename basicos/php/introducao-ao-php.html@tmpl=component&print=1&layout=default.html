@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br" dir="ltr">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <base href="" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Ribamar FS" />
+	<meta name="robots" content="noindex, nofollow" />
+	<meta name="description" content="Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros." />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>Introdução ao PHP - RibaFS Portal</title>
+	<link href="http://ribafs.org/portal/basicos/php/introducao-ao-php.html?tmpl=component&amp;print=1&amp;layout=default" rel="canonical" />
+	<link href="../../templates/shaper_helix3/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../../favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="http://backup/portal/media/plg_content_prismsyntaxhighlighter/css/prism-okaidia.css" rel="stylesheet" type="text/css" />
+	<link href="http://backup/portal/media/plg_content_prismsyntaxhighlighter/css/prism-linenumbers.css" rel="stylesheet" type="text/css" />
+	<script src="http://backup/portal/media/plg_content_prismsyntaxhighlighter/js/prism-tinymce.js" type="text/javascript"></script>
+	<script src="../../media/jui/js/jquery.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../media/jui/js/jquery-noconflict.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../media/jui/js/jquery-migrate.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="http://backup/portal/media/system/js/caption.js?d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script type="text/javascript">
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+	</script>
+	<meta property="og:url" content="http://backup/portal/basicos/php/introducao-ao-php.html" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Introdução ao PHP" />
+	<meta property="og:description" content="Introdução ao PHP Iniciando na Programação com PHP Para poder programar com PHP precisamos de um servidor web. Então instalaremos em nosso computador o pro..." />
+
+   	<link rel="stylesheet" href="../../media/jui/css/bootstrap.min.css" type="text/css" />
+	<link rel="stylesheet" href="../../templates/shaper_helix3/css/frontend-edit.css" type="text/css" />
+    <link rel="stylesheet" href="../../templates/shaper_helix3/css/template.css" type="text/css" />
+</head>
+<body class="contentpane">
+	<div id="system-message-container">
+	</div>
+
+	
+
+<article class="item item-page" itemscope itemtype="http://schema.org/Article">
+	<meta itemprop="inLanguage" content="pt-BR" />
+	
+	
+
+	<div class="entry-header">
+		<span class="post-format"><i class="fa fa-thumb-tack"></i></span>
+		
+					<h2 itemprop="name">
+									Introdução ao PHP							</h2>
+												</div>
+
+						<div id="pop-print" class="btn hidden-print">
+				<a href="introducao-ao-php.html#" onclick="window.print();return false;">			<span class="icon-print" aria-hidden="true"></span>
+		Imprimir	</a>			</div>
+				
+	
+	
+				
+	
+			<div itemprop="articleBody">
+		<h3 style="text-align: justify;">Introdução ao PHP<br /><br /></h3>
+<p style="text-align: justify;"><strong>Iniciando na Programação com PHP</strong></p>
+<p style="text-align: justify;">Para poder programar com PHP precisamos de um servidor web. Então instalaremos em nosso computador o programa <a href="http://xampp.sf.net/">http://xampp.sf.net</a> que cria um diretório c:\xampp\htdocs, onde devemos criar nossos programas em PHP.</p>
+<p style="text-align: justify;">É importante saber que atualmente o PHP deve ser a linguagem mais popular para programar para a web. Acredito que a facilidade de programar, os recursos oferecidos por ele, a documentação farta em seu site (<a href="http://php.net/">http://php.net</a>) e a grande aceitação da comunidade foram responsáveis pela sua popularidade.</p>
+<p style="text-align: justify;">Veremos que com o PHP temos muitos recursos para criar sites e aplicativos.</p>
+<p style="text-align: justify;">Existe uma tradição para quando estamos iniciando a programar em qualquer linguagem, que é a de criar um programa bem simples, que apenas mostre uma frase na tela, no caso “Hello World!”. Veja nosso programa que mostra na tela essa mensagem traduzida:</p>
+<p style="text-align: justify;"><code> </code></p>
+<pre class="language-php"><code>&lt;?php
+
+    print “Olá Mundo!”;
+
+?&gt;
+</code></pre>
+<p style="text-align: justify;">Para ver como isso funciona precisamos criar um arquivo no diretório htdocs, com extensão .php e chamar este arquivo pelo navegador. Nosso diretório web é c:\xampp\htdocs</p>
+<p style="text-align: justify;">Vamos criar <strong>ola.php</strong> neste diretório, contendo:</p>
+<pre class="language-php"><code>&lt;?php
+
+    print "Olá Mundo!";
+
+?&gt;</code></pre>
+<p style="text-align: justify;">E chamar pelo navegador assim:</p>
+<p style="text-align: justify;"><a href="http://localhost/ola.php">http://localhost/ola.php</a></p>
+<p style="text-align: justify;">Então veremos a nossa frase</p>
+<p style="text-align: justify;">Olá Mundo!</p>
+<p style="text-align: justify;"><strong><br />Programando para Desktop com PHP</strong></p>
+<p style="text-align: justify;">Nada nos impede de criar aplicativos que serão usados apenas de forma offline usando o nosso PHP. Podemos tranquilamente usar para este fim. Para a criação de aplicativos, após dominar o básico do PHP, eu recomendo que use o Framework CakePHP ou outro da sua escolha.</p>
+<p style="text-align: justify;"> </p>
+<p style="text-align: justify;"><strong>PHP com HTML</strong></p>
+<p style="text-align: justify;">Vale lembrar que o PHP sempre fica do lado do servidor. Ele processa informações solicitadas pelo visitante e as devolve. Devolve tudo no formato HTML, juntamente com CSS e JavaScript, que ficam do lado do cliente.</p>
+<p style="text-align: justify;">Um código em PHP precisa iniciar com a TAG &lt;?php e terminar com ?&gt;. Qualquer arquivo que contenha código PHP precisa ter a extensão .php. Sendo assim, o interpretador do PHP não olhará para outros tipos de arquivos. E quando verificar arquivos .php somente processará os trechos entre &lt;?php e ?&gt;, o que estiver fora destas TAGs ele não olha.</p>
+<p style="text-align: justify;">O navegador interpreta todo código em HTML antes de mostrar na tela.<br /><br /></p>
+<p style="text-align: justify;"><strong>Separador de Instruções</strong></p>
+<p style="text-align: justify;">Observe que ao final da linha:</p>
+<p style="text-align: justify;">print "Como vai?";</p>
+<p style="text-align: justify;">Cada instrução do PHP termina com ponto e vírgula.</p>
+<p style="text-align: justify;">Instrução – é um comando único que damos ao PHP.</p>
+<p style="text-align: justify;">Exemplo: print “Olá”;</p>
+<p style="text-align: justify;">O PHP permite escrever mais de uma instrução por linha, mas devemos evitar, por conta de que fica obscuro o código.</p>
+<p style="text-align: justify;"><strong>Comentários</strong><br /> Em PHP existem três formas de se escrever comentários:</p>
+<p style="text-align: justify;">// - este é comentário oriundo do C++ e para apenas uma linha</p>
+<p style="text-align: justify;">/*</p>
+<p style="text-align: justify;">Este é o comentário oriundo do C</p>
+<p style="text-align: justify;">e para</p>
+<p style="text-align: justify;">múltiplas linhas</p>
+<p style="text-align: justify;">*/</p>
+<p style="text-align: justify;"># - Este é o comentário oriundo do shell, para uma única linha e que deve ser evitado, pois está em processo de obsolescência.</p>
+<p style="text-align: justify;"><strong>Estruturas de Controle</strong></p>
+<p style="text-align: justify;">Vejamos um pequeno trecho de código mais útil e interessante. Suponha que seu colégio tenha suas 4 notas dos 4 bimestres e precise fazer o cálculo para saber se você passou. Ele tem uma fórmula que é somar as 4 notas e dividir tudo por 4 para tirar a média. Veja:</p>
+<p style="text-align: justify;">Vamos criar um arquivo notas.php com o conteúdo abaixo ou testar diretamente no php-console, sem as tags inicial e final.</p>
+<p style="text-align: justify;"><strong>IF - ELSE</strong></p>
+<pre class="language-php"><code>&lt;?php
+
+$aluno = '&lt;b&gt;Elias EF&lt;/b&gt;';
+
+$nota1 = 10;
+$nota2 = 9;
+$nota3 = 7;
+$nota4 = 5;
+
+$resultado = ($nota1 + $nota2 + $nota3 + $nota4) / 4;
+
+if( $resultado &gt;= 7 ){
+    print "O aluno $aluno foi aprovado, com nota $resultado";
+}else{
+    print 'O aluno não passou!';
+}
+</code></pre>
+<p style="text-align: justify;"><strong>Variáveis</strong></p>
+<p style="text-align: justify;">Como o nome sugere seu valor varia. Vejamos.</p>
+<p style="text-align: justify;">Uma variável tem:</p>
+<p style="text-align: justify;">nome - $aluno, que é o nome precedido de $.</p>
+<p style="text-align: justify;">valor - 'Elias EF'</p>
+<p style="text-align: justify;">tipo – string (acontece que o PHP não declara tipos de variáveis)</p>
+<p style="text-align: justify;"><strong>Tipos de Dados</strong></p>
+<p style="text-align: justify;">O tipo de dados de uma variável será reconhecido quando o código for executado:</p>
+<p style="text-align: justify;">string, inteiro, float/double, boleano, array, objeto e resource.</p>
+<p style="text-align: justify;"><strong>Nome</strong><strong>s de</strong><strong> Variáveis</strong></p>
+<ul style="text-align: justify;">
+<li>
+<p>O nome das variáveis precisa começar com uma letra ou pelo símbolo de sublinhado</p>
+</li>
+<li>
+<p>O nome de variáveis pode conter somente caracteres alfa-numéricos e sublinhado: a-z, A-Z, 0-9 e _ .</p>
+</li>
+<li>
+<p>Não pode conter espaços. Quando várias palavras podemos usar o sublinhado para separá-las: $minha_variavel.</p>
+</li>
+</ul>
+<p style="text-align: justify;">As variáveis podem ter seu valor alterado durante a execução do script, daí seu nome.</p>
+<p style="text-align: justify;"><strong>Atribuição</strong></p>
+<p style="text-align: justify;">Se eu quiser guardar a primeira nota na variável $nota1, então preciso atribuir 10 para $nota1, assim:</p>
+<p style="text-align: justify;">$nota1 = 10;</p>
+<p style="text-align: justify;">Veja que usamos o sinal de igual para atribuir e terminamos com ponto e vírgula.</p>
+<p style="text-align: justify;">Posso atribuir um valor diretamente para uma variável, mas veja que também posso atribuir uma fórmula bem grande para a variável, assim:</p>
+<p style="text-align: justify;">$resultado = ($nota1 + $nota2 + $nota3 + $nota4) / 4;<br /> Parecido com uma calculadora o PHP fará os cálculos e guardará o valor na variável $resultado.</p>
+<p style="text-align: justify;">Na próxima linha ele vai testar o valor do $resultado. (if( $resultado &gt;= 7 ){)</p>
+<p style="text-align: justify;">Se for maior ou igual a 7 ele mostrará a primeira mensagem.</p>
+<p style="text-align: justify;">Caso contrário então mostrará a segunda mensagem. (}else{)</p>
+<p style="text-align: justify;">Vejamos mais um exemplo prático e interessante de uso do PHP</p>
+<p style="text-align: justify;"><strong>IF – ELSE IF – ELSE</strong></p>
+<p style="text-align: justify;">if (expressao){</p>
+<p style="text-align: justify;">executado de true e encessa o teste.</p>
+<p style="text-align: justify;">}else if (expressao2){</p>
+<p style="text-align: justify;">executado se true e encessa o teste.</p>
+<p style="text-align: justify;">}else if (expressao3){</p>
+<p style="text-align: justify;">executado se true e encessa o teste.</p>
+<p style="text-align: justify;">}else if (expressaoN){</p>
+<p style="text-align: justify;">executado se true e encessa o teste.</p>
+<p style="text-align: justify;">}else{</p>
+<p style="text-align: justify;">executado se false</p>
+<p style="text-align: justify;">}</p>
+<p style="text-align: justify;">Lembrando que somente entra no próximo teste, se o anterior for falso.</p>
+<pre class="language-php"><code>&lt;?php
+
+$hora = 14;
+
+if ($hora &lt;= 12) {
+
+    print “Está de manhã”;
+ }else if ($hora &gt; 12 &amp;&amp; $hora &lt; 18 ){
+
+    print “Está de tarde”;
+ }el se{
+
+    print “Está de noite”;
+}
+</code></pre>
+<p style="text-align: justify;"><strong>if - else</strong></p>
+<p style="text-align: justify;">O <strong>if</strong> testa uma expressão</p>
+<p style="text-align: justify;">Caso a expressão seja verdadeira, todo o código após o <strong>if</strong> será executado.</p>
+<p style="text-align: justify;">Caso não seja verdadeira o código após o <strong>else</strong> será executado.</p>
+<p style="text-align: justify;"><strong>i</strong><strong>f – eles if – else</strong><br /> O <strong>if</strong> testa uma expressão<br /> Caso a expressão seja verdadeira, todo o código após o <strong>if</strong> será executado.</p>
+<p style="text-align: justify;">Caso a expressão seja falsa então o else if testará uma nova expressão</p>
+<p style="text-align: justify;">Caso a nova expressão seja verdadeira o código após o else if será executado<br /> Caso a nova expressão seja falsa, o código após o else ou o novo else if será</p>
+<p style="text-align: justify;">executado</p>
+<p style="text-align: justify;"><strong>Criando Strings</strong></p>
+<p style="text-align: justify;">Strings pequenas, com apenas uma linha podem ser mostradas com print ou echo, mas textos com várias linhas podem ser armazenados com o recurso chamado Heredoc:</p>
+<p style="text-align: justify;"><em><strong>Armazenando o texto numa variável</strong></em></p>
+<pre class="language-php"><code>&lt;?php
+$str = &lt;&lt;&lt;EOD
+Exemplo de uma string
+distribuída em várias linhas
+utilizando a sintaxe heredoc.
+EOD;
+</code></pre>
+<p style="text-align: justify;"><em><strong>Ou simplesmente mostrando</strong></em></p>
+<pre class="language-php"><code>&lt;?php
+echo &lt;&lt;&lt;show
+
+&lt;a href="/portal/index.php"&gt;Início&lt;/a&gt;
+&lt;h3&gt;Edite Seus Dados&lt;/h3&gt;
+&lt;form action="update.php" method="post"&gt;
+&lt;table width="500" border="1"&gt;
+    &lt;tr&gt;
+        &lt;th scope="row"&gt;Nome&lt;/th&gt;
+            &lt;td&gt;&lt;input type="text" name="nome" value="$nome"&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;th scope="row"&gt;Nascimento&lt;/th&gt;
+            &lt;td&gt;&lt;input type="text" name="data_nasc" value=$data_nasc&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;th scope="row"&gt;E-mail&lt;/th&gt;
+            &lt;td&gt;&lt;input type="text" name="email" value="$email"&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+&lt;/form&gt;
+
+show;
+</code></pre>
+<p style="text-align: justify;"><strong>Mais uma estrutura interessante do PHP - </strong><strong>Switch</strong></p>
+<p style="text-align: justify;">switch – Este testa uma variável contra alguns valores. Parece com um bloco de if else if. Quando encontra o valor correto executa o código seguinte e sai da iteração.</p>
+<pre class="language-php"><code>&lt;?php
+
+$opcao = 3;
+
+switch ($opcao) {
+    case 1:
+        print 1;
+        break;
+    case 2:
+        print 2;
+        break;
+    case 3:
+        print 3;
+        break;
+    case 4:
+        print 4;
+        break;
+    case 5:
+        print 5;
+        break;
+    default:
+        print 'Nenhuma das anteriores';
+        break;
+}
+</code></pre>
+<p style="text-align: justify;">Obs.: Caso removamos um dos comandos break o código continua no próximo case.</p>
+<p style="text-align: justify;"><strong>Laços: for, while, forwach</strong></p>
+<p style="text-align: justify;">Estruturas que resolvem vários problemas com pouco esforço.</p>
+<p style="text-align: justify;"><strong>for</strong></p>
+<pre class="language-php"><code>&lt;?php
+
+for ($x = 1; $x &lt;= 10; $x++) {
+
+    print $x;
+}
+
+for ($x = 1; $x &lt;= 10; $x++) {
+
+    print $x . '&lt;br&gt;';
+}
+
+for ($x = 0; $x &lt; 10; $x++) {
+
+    print $x;
+}
+</code></pre>
+<p style="text-align: justify;">Existem variações de uso do for. No caso abaixo, como não temos teste do valor, o incremento continua indefinidamente:</p>
+<p style="text-align: justify;">for($x=0; ;$x++){</p>
+<p style="text-align: justify;">print $x;</p>
+<p style="text-align: justify;">}</p>
+<p style="text-align: justify;">Nestes casos precisamos inserir um teste no corpo do for, assim:</p>
+<pre class="language-php"><code>&lt;?php
+
+for ($x = 0;; $x++) {
+
+    if ($x &gt; 10) {
+
+        break;
+    }
+
+    print $x;
+}
+</code></pre>
+<p style="text-align: justify;"><strong>Continue</strong><br /> Este comando sai do laço e volta na próxima iteração, ou um certo número de comandos para sair do laço. Veja</p>
+<p style="text-align: justify;"> </p>
+<pre class="language-php"><code>&lt;?php
+
+for ($i = 0; $i &lt; 10; ++$i) {
+    if ($i &lt; 5) {
+        continue;
+    }
+    print "$i&lt;br&gt;";
+}
+</code></pre>
+<p style="text-align: justify;"> </p>
+<p style="text-align: justify;"><strong>Break</strong></p>
+<p style="text-align: justify;">Interrompe o laço, entregando o processamento para a linha seguinte ao laço.</p>
+<pre class="language-php"><code>&lt;?php
+for ($x = 0; $x &lt; 5; ++$x) {
+    if ($x == 2) {
+        break;
+    }
+    print "$x&lt;br&gt;";
+}</code></pre>
+<p style="text-align: justify;">Experimente.</p>
+<p style="text-align: justify;"><strong>foreach</strong></p>
+<p style="text-align: justify;">Laço através de um array.</p>
+<pre class="language-php"><code>&lt;?php
+
+$arr = array(1, 2, 3, 4);
+foreach ($arr as $value) {
+    $value = $value * 2;
+    print $value;
+}
+// $arr is now array(2, 4, 6, 8)
+unset($value); // Limpar a variável, que armazena o valor
+</code></pre>
+<p style="text-align: justify;"><strong>Colher Chave e Valor</strong></p>
+<pre class="language-php"><code>&lt;?php
+$arr = array(1, 2, 3, 4);
+foreach ($arr as $chave =&gt; $value) {
+    $value = $value * 2;
+    print 'Chave: ' . $chave . ' - Valor: ' . $value . '&lt;br&gt;';
+}
+unset($valor); // Limpar a variável, que armazena o valor
+</code></pre>
+<p style="text-align: justify;">Existe muito mais recursos, mas me parece que já dá para perceber isso com estes exemplos mostrados.</p>
+<p style="text-align: justify;">Qualquer dúvida sobre qualquer comando do PHP vá até o site oficial em <a href="http://php.net/">http://php.net</a> e faça uma busca pelo comando, que verá a sintaxe e muitos exemplos de uso.</p>
+<p style="text-align: justify;"><strong>Atribuição</strong></p>
+<p style="text-align: justify;">Atribuir um valor para uma variável é entregar um valor para ela guardar.</p>
+<p style="text-align: justify;">Exemplo</p>
+<p style="text-align: justify;">$variavel = 5;</p>
+<p style="text-align: justify;">Estamos acima dizendo que a variavel guarde o valor 5.</p>
+<p style="text-align: justify;"> </p>
+<p style="text-align: justify;"><strong>Comparação</strong></p>
+<p style="text-align: justify;">Comparação é o que fazemos em uma expressão geralmente em if.</p>
+<p style="text-align: justify;">Exemplo</p>
+<p style="text-align: justify;">if($x==3)</p>
+<p style="text-align: justify;">Estou querendo dizer acima: se $x for igual a 3.</p>
+<p style="text-align: justify;">Veja que quando queremos atribuir usamos apenas um sinal de igualdade:</p>
+<p style="text-align: justify;">$x = 3;</p>
+<p style="text-align: justify;">Quando queremos comparar usamos dois sinais de igualdade: if($x == 3)</p>
+<p style="text-align: justify;"><strong>Usando = e == ou ===</strong></p>
+<p style="text-align: justify;">Com = armazenamos um valor em uma variável.</p>
+<p style="text-align: justify;">Com == eu testo se uma variável é igual a um valor.</p>
+<p style="text-align: justify;"> </p> 	</div>
+
+	
+	
+				
+	
+	
+	
+</article>
+
+</body>
+</html>

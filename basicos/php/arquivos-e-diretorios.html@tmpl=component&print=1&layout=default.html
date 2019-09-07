@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br" dir="ltr">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <base href="" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Ribamar FS" />
+	<meta name="robots" content="noindex, nofollow" />
+	<meta name="description" content="Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros." />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>Arquivos e Diretórios - RibaFS Portal</title>
+	<link href="http://ribafs.org/portal/basicos/php/arquivos-e-diretorios.html?tmpl=component&amp;print=1&amp;layout=default" rel="canonical" />
+	<link href="../../templates/shaper_helix3/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../../favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="http://backup/portal/media/plg_content_prismsyntaxhighlighter/css/prism-okaidia.css" rel="stylesheet" type="text/css" />
+	<link href="http://backup/portal/media/plg_content_prismsyntaxhighlighter/css/prism-linenumbers.css" rel="stylesheet" type="text/css" />
+	<script src="http://backup/portal/media/plg_content_prismsyntaxhighlighter/js/prism-tinymce.js" type="text/javascript"></script>
+	<script src="../../media/jui/js/jquery.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../media/jui/js/jquery-noconflict.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../media/jui/js/jquery-migrate.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="http://backup/portal/media/system/js/caption.js?d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script type="text/javascript">
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+	</script>
+	<meta property="og:url" content="http://backup/portal/basicos/php/arquivos-e-diretorios.html" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Arquivos e Diretórios" />
+	<meta property="og:description" content="TRABALHANDO COM ARQUIVOS E DIRETÓRIOS NO PHP Abrir arquivo fopen(filename, mode, [use_include_path]); filename: pode ser simplesmente um nome, ou um caminh..." />
+
+   	<link rel="stylesheet" href="../../media/jui/css/bootstrap.min.css" type="text/css" />
+	<link rel="stylesheet" href="../../templates/shaper_helix3/css/frontend-edit.css" type="text/css" />
+    <link rel="stylesheet" href="../../templates/shaper_helix3/css/template.css" type="text/css" />
+</head>
+<body class="contentpane">
+	<div id="system-message-container">
+	</div>
+
+	
+
+<article class="item item-page" itemscope itemtype="http://schema.org/Article">
+	<meta itemprop="inLanguage" content="pt-BR" />
+	
+	
+
+	<div class="entry-header">
+		<span class="post-format"><i class="fa fa-thumb-tack"></i></span>
+		
+					<h2 itemprop="name">
+									Arquivos e Diretórios							</h2>
+												</div>
+
+						<div id="pop-print" class="btn hidden-print">
+				<a href="arquivos-e-diretorios.html#" onclick="window.print();return false;">			<span class="icon-print" aria-hidden="true"></span>
+		Imprimir	</a>			</div>
+				
+	
+	
+				
+	
+			<div itemprop="articleBody">
+		<p style="text-align: justify;"><strong>TRABALHANDO COM ARQUIVOS E DIRETÓRIOS NO PHP</strong><br /><br /><strong>Abrir arquivo</strong><br />fopen(filename, mode, [use_include_path]);<br /><br />filename: pode ser simplesmente um nome, ou um caminho completo. <br />Exemplos: "arquivo.txt", "./arquivo.dat", "/data/data.txt".<br /><br />mode: especifica o modo de abertura, ou seja, se o arquivo deve ser aberto para leitura, <br />escrita, etc. Modos de abertura:<br /><br />- r: abre o arquivo no modo somente leitura e posiciona o ponteiro no início do arquivo; <br /> o arquivo já deve existir;<br />- r+: abre o arquivo para leitura/escrita, posiciona o ponteiro no início do arquivo;<br />- w: abre o arquivo no modo somente escrita; se o arquivo já existir, será sobrescrito; <br /> senão, será criado um novo;<br />- w+: abre o arquivo para escrita/leitura; se o arquivo já existir, será sobrescrito; <br /> senão, será criado um novo;<br />- a: abre o arquivo para anexar dados, posiciona o ponteiro no final do arquivo; <br /> se o arquivo não existir, será criado um novo;<br />- a+: abre o arquivo para anexo/leitura, posiciona o ponteiro no final do arquivo; <br /> se o arquivo não existir, será criado um novo;<br /><br /></p>
+<pre class="language-php"><code>&lt;?php
+
+    $fp = fopen("./arquivo.dat", "r"); // $fp conterá o handle do arquivo que abrimos
+
+?&gt;</code></pre>
+<p style="text-align: justify;"><br /><strong>Fechar Arquivo</strong><br /><br />fclose(handle_arquivo);<br /><br /></p>
+<pre class="language-php"><code>&lt;?php
+
+fclose($fp);
+
+?&gt;</code></pre>
+<p style="text-align: justify;"><br /><br /><strong>Gravando em arquivo:</strong></p>
+<pre class="language-php"><code>&lt;?php
+
+$fp = fopen("./dados.txt", "w");
+
+fwrite($fp, "Olá mundo do PHP!"); // grava a string no arquivo. Se não existir será criado
+
+fclose($fp);
+
+?&gt;</code></pre>
+<p style="text-align: justify;"><br /><strong>Lendo arquivo:</strong></p>
+<pre class="language-php"><code>&lt;?php
+$fp = fopen("./dados.txt", "r");
+$texto = fread($fp, 20); // lê 20 bytes do arquivo e armazena em $text
+fclose($fp);
+echo $texto;
+</code></pre>
+<p style="text-align: justify;"><br /><br />fgets(): Esta função é usada na leitura de strings de um arquivo. fgets() lê "length \u2013 1" bytes do arquivo. Se for encontrado o final da linha e o número de bytes especificados não tiver sido atingido, fgets() terminará a leitura no final da linha (ou no final do arquivo, se for o caso). Eis a sua sintaxe:<br /><br />fgets(handle, length);<br />- handle: handle do arquivo de onde os dados serão lidos;<br />- length: tamanho em bytes do buffer de leitura;<br /><br />Exemplo:</p>
+<pre class="language-php"><code>&lt;?php
+$fp = fopen("./dados.txt", "r");
+$texto = fgets($fp, 3);
+fclose($fp);
+echo $texto;
+?&gt;</code></pre>
+<p style="text-align: justify;"><br />fgetc(): Esta função permite ler caractere por caractere de um arquivo. Seguem a sintaxe e um exemplo de utilização:<br /><br />fgetc(handle);<br />- handle: handle do arquivo de onde os dados serão lidos;<br /><br />Exemplo:</p>
+<pre class="language-php"><code>&lt;?php
+$fp = fopen("./dados.txt", "r");
+while (!feof($fp)){
+    $char .= fgetc($fp);
+}
+fclose($fp);
+echo $char."&lt;br&gt;&lt;br&gt;";
+?&gt;</code></pre>
+<p style="text-align: justify;"><br /><br />file(): Esta função lê um arquivo completo, e armazena cada linha do arquivo como um elemento de um array. Depois de ler todo o conteúdo do arquivo, file() o fecha automaticamente, não sendo necessária uma chamada a fclose(); Vejamos a sintaxe:<br /><br />file(filename);<br />- filename: nome ou caminho completo de um arquivo.<br /><br />Exemplo:</p>
+<pre class="language-php"><code>&lt;?php
+// file() lê todo o arquivo
+$file_lines = file("./dados.txt");
+echo "Primeira linha: " . $file_lines[0]."&lt;br&gt;";
+echo "Segunda linha: " . $file_lines[1]."&lt;br&gt;";
+echo "Terceira linha: " . $file_lines[2];
+?&gt;</code></pre>
+<p style="text-align: justify;"><br /><br />Além dessas funções para leitura e escrita, existe ainda uma função bastante útil, que testa se o final do arquivo foi atingido. É a função feof(), que tem a seguinte sintaxe:<br /><br />feof(handle);<br />- handle: handle do arquivo;<br /><br />Exemplo:</p>
+<pre class="language-php"><code>&lt;?php
+$fp = fopen("./dados.txt", "r");
+while(!feof($fp)) {
+    $char .= fgetc($fp);
+}
+fclose($fp);
+echo $char;
+?&gt;</code></pre>
+<p style="text-align: justify;"><br /><br /><strong>Contando o Número de Linhas de um arquivo</strong></p>
+<pre class="language-php"><code>&lt;?php
+// Contar o número de linhas de um arquivo, iniciando com 1
+$fp = "./dados.txt";
+$line_count = count (file ($fp));
+echo $line_count;
+?&gt;</code></pre>
+<p style="text-align: justify;"><br /><br /><strong>Contar palavras de um arquivo</strong></p>
+<pre class="language-php"><code>&lt;?php
+// Contar palavras repetidas em um arquivo
+$fn = "./dados.txt";
+$f_contents = preg_split ("/[\s+/", implode ("", file ($fn)));
+foreach ($f_content as $palavra) {
+    $ar[$palavra]++;
+}
+print "A seguinte palavra tem duplicatas&lt;br&gt;";
+foreach ($ar as $palavra =&gt; $conta_palavra) {
+    if (conta_palavra &gt; 1) {
+        print "Palavra: $palavra&lt;br&gt;Número de ocorrências: $conta_palavra&lt;br&gt;&lt;br&gt;";
+    }
+}
+?&gt;</code></pre>
+<p style="text-align: justify;"><br /><br /><strong>Ler de forma inversa um arquivo, linha a linha</strong><br /><br /></p>
+<pre class="language-php"><code>&lt;?php
+$fn = "./dados.txt";
+$f_contents = array_reverse (file ($fn));
+foreach ($f_contents as $linha_inversa) {
+    print $linha_inversa;
+}
+?&gt;</code></pre>
+<p style="text-align: justify;"><br /><br /><br /><strong>Ler aleatoriamente linha de arquivo</strong><br /><br /></p>
+<pre class="language-php"><code>&lt;?php
+$fn = "./pensamentos.txt";
+$f_contents = file ($fn);
+srand ((double)microtime()*1000000);
+$linha_aleatoria = $f_contents[ rand (0, (count ($f_contents) - 1)) ];
+print $linha_aleatoria;
+?&gt;
+</code></pre>
+<p style="text-align: justify;"><br /><strong>Ler linha específica de arquivo</strong><br /><br /></p>
+<pre class="language-php"><code>&lt;?php
+$fn = "./dados.txt";
+$nr_linha = 38;
+$f_contents = file ($fn);
+$sua_linha = $f_contents [$nr_linha];
+print $sua_linha;
+?&gt;</code></pre>
+<p style="text-align: justify;"><br /><br /><strong>OPERAÇÕES COM DIRETÓRIOS</strong><br /><br /><strong>Mostrando conteúdo de diretório</strong><br /><br /></p>
+<pre class="language-php"><code>&lt;?php
+$dn = opendir ("/home/1www/");
+while ($file = readdir ($dn)) {
+    print "$file&lt;br&gt;";
+}
+closedir($dn);
+?&gt;</code></pre>
+<p style="text-align: justify;"><br /><br /><strong>Excluindo arquivos do SO</strong><br /><br /></p>
+<pre class="language-php"><code>&lt;?php
+$fn = "./dados0.txt";
+// Excluindo arquivo
+$ret = unlink ($fn);
+if ($ret){
+     die ("Arquivo excluído!");
+}else{
+    die ("Erro ao excluir arquivo");
+}
+?&gt;</code></pre>
+<p style="text-align: justify;"><br /><br /><strong>Copiando arquivos</strong><br /><br /></p>
+<pre class="language-php"><code>&lt;?php
+$fn = "./dados.txt";
+
+if (copy ($fn, "dados0.txt")){
+     die ("Arquivo '$fn' copiado para dados0.txt ");
+}else{
+    die ("Erro ao copiar arquivo");
+}
+?&gt;</code></pre>
+<p style="text-align: justify;"><br /><br /><strong>Processando todos os arquivos de um diretório</strong><br /><br /></p>
+<pre class="language-php"><code>&lt;?php
+$dh = dir ("/home/1www/");
+while ($entrada = $dh-&gt;read()) {
+    print $entrada . "&lt;br&gt;";
+}
+$dh-&gt;close();
+?&gt;
+</code></pre>
+<p style="text-align: justify;"><br /><strong>Referência:</strong><br /><a href="http://phpbrasil.com/articles/print.php/id/310">http://phpbrasil.com/articles/print.php/id/310</a> <br /><br /><strong>TESTE SE ARQUIVO QUE PODE LIDO (READABLE)</strong><br /><br /></p>
+<pre class="language-php"><code>&lt;?php
+if (is_readable('http://127.0.0.1/index.html')) {
+   header('Location: http://127.0.0.1/index.html');
+}else{
+    echo "Este arquivo não pode ser lido!";
+}
+
+?&gt;</code></pre> 	</div>
+
+	
+	
+				
+	
+	
+	
+</article>
+
+</body>
+</html>

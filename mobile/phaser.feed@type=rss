@@ -1,0 +1,669 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="Joomla! - Open Source Content Management" -->
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Phaser - RibaFS Portal</title>
+		<description><![CDATA[Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros.]]></description>
+		<link>http://backup/portal/mobile/phaser.html</link>
+		<lastBuildDate>Sat, 07 Sep 2019 19:01:28 -0300</lastBuildDate>
+		<generator>Joomla! - Open Source Content Management</generator>
+		<atom:link rel="self" type="application/rss+xml" href="http://backup/portal/mobile/phaser.feed?type=rss"/>
+		<language>pt-br</language>
+		<item>
+			<title>Phaser Dicas</title>
+			<link>http://backup/portal/mobile/phaser/phaser-dicas.html</link>
+			<guid isPermaLink="true">http://backup/portal/mobile/phaser/phaser-dicas.html</guid>
+			<description><![CDATA[<h4>Phaser Dicas</h4>
+<pre class="language-javascript"><code>BasicGame.Game = function (game) {
+// When a State is added to Phaser it automatically has the following properties set on it, even if they already exist:
+this.game; // a reference to the currently running game (Phaser.Game)
+this.add; // used to add sprites, text, groups, etc (Phaser.GameObjectFactory)
+this.camera; // a reference to the game camera (Phaser.Camera)
+this.cache; // the game cache (Phaser.Cache)
+this.input; // the global input manager. You can access this.input.keyboard, this.input.mouse, as well from it. (Phaser.Input)
+this.load; // for preloading assets (Phaser.Loader)
+this.math; // lots of useful common math operations (Phaser.Math)
+this.sound; // the sound manager - add a sound, play one, set-up markers, etc (Phaser.SoundManager)
+this.stage; // the game stage (Phaser.Stage)
+this.time; // the clock (Phaser.Time)
+this.tweens; // the tween manager (Phaser.TweenManager)
+this.state; // the state manager (Phaser.StateManager)
+this.world; // the game world (Phaser.World)
+this.particles; // the particle manager (Phaser.Particles)
+this.physics; // the physics manager (Phaser.Physics)
+this.rnd; // the repeatable random number generator (Phaser.RandomDataGenerator)
+
+// You can use any of these from any function within this State.
+// But do consider them as being 'reserved words', i.e. don't create a property for your own game called "world" or you'll over-write the world reference.
+};
+</code></pre>
+<p><br />Com esta função podemos chamar<br /><br />this.add ao invés de this.game.add<br /><br /><strong>Usar</strong><br />this.add.sprite(0, 0, 'einstein');<br /><br />no lugar de:<br />this.game.add.sprite(0, 0, 'einstein');<br /><br />A função update() atualiza a tela em torno de 60 vezes por segundo.<br /><br />Implementar entradas pelo teclado no Phaser é algo simples. A função retorna as 4 teclas de setas:<br /><br />this.cursors = this.input.keyboard.createCursorKeys();<br /><br /><strong>Exemplo de uso:</strong><br /><br /></p>
+<pre class="language-javascript"><code>this.player.body.velocity.x = 0;
+this.player.body.velocity.y = 0;
+
+if (this.cursors.left.isDown) {
+this.player.body.velocity.x = -this.player.speed;
+} else if (this.cursors.right.isDown) {
+this.player.body.velocity.x = this.player.speed;
+}
+
+if (this.cursors.up.isDown) {
+this.player.body.velocity.y = -this.player.speed;
+} else if (this.cursors.down.isDown) {
+this.player.body.velocity.y = this.player.speed;
+}
+</code></pre>
+<p><br />Caso permitamos ao jogador apertar ao mesmo tempo as teclas para movimentos horizontais e verticais então poderemos ter movimentos em 8 sentidos ao invés de apenas 4. Teremos também movimentos nas diagonais e não somente na vertical e horizontal.<br /><br />Alguns objetos funcionam melhor quando contidos em grupo, como é o caso de balas. Assim reduz o consumo de memória.<br /><br />Outro bom uso de grupo é nas explosões.<br /><br /><strong>Refatorar o código com os objetivos:</strong><br />- Recomendação: Refactorar sempre que o código for duplicado 3 ou mais vezes.<br />- Tornar a manutenção mais simples<br />- Reduzir o consumo de memória<br />- Deixar o jogo mais rápido<br />- Quebrar trechos de código grandes em pequenas funções<br />- Reduzir hard-coded trechos e constantes numéricas fixas para isso criando constanes em um state que fica mais fácil de alterar.<br />- Usar também valores relativos às dimensões, como this.game.width, ao inves de 800 fica mais flexível<br /><br />O Phaser assume que seus sprites são orientados para a direita.<br /><br /><strong>Coordenadas do Canvas</strong><br /><br />O ponto (0, 0) fica no canto superior esquerdo, portanto<br />O X aumenta da esquerda para a direita<br />O Y aumenta de cima para baixo<br /><br /><strong>Formatos de áudio suportados pelo Phaser:</strong><br /><br />- Ogg e MP4 dão a maior cobertura de navegadores<br />- Wav deve ser evitado por ser grande<br />- MP3 deve ser evitado por problemas de licensa<br /><br /><strong>Publicação do Jogo</strong><br /><br />Um jogo com o Phaser pode ser hospedado em qualquer servidor com suporte ao HTML 5 com um servidor web.<br /><br />Uma boa alternativa free é o GitHub, mas requer conhecimento do Git.<br /><br /><strong>Hospedagem free no Neocities</strong></p>
+<p><br />Ele aceita drag and drop em sua administração.<br /><a href="http://neocities.org">http://neocities.org</a> <br />Desvantagem: não suporta criação de pastas. Todos os arquivos devem ficar no raiz do seu site. Não aceita upload de .wav.</p>
+<p> </p>]]></description>
+			<category>Phaser</category>
+			<pubDate>Mon, 28 Aug 2017 17:25:42 -0300</pubDate>
+		</item>
+		<item>
+			<title>Jogo do Phaser em Mobile</title>
+			<link>http://backup/portal/mobile/phaser/phaser-em-mobile.html</link>
+			<guid isPermaLink="true">http://backup/portal/mobile/phaser/phaser-em-mobile.html</guid>
+			<description><![CDATA[<h4>Phaser em Mobile</h4>
+
+
+<p><strong>Configurando um jogo para web criado com o Phaser para que se adapte automaticamente em dispositivo móvel.</strong><br /><br /><strong>Adicionar estas 3 linhas de escala ao início do método preload():</strong><br /><br />    preload: function(){<br />        game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;<br />        game.scale.pageAlignHorizontally = true;<br />        game.scale.pageAlignVertically = true;<br /><br />Com isso a visualização pelo navegador já muda. Ele enche a tela se adaptando ao seu tamanho.<br /><br />Como verificar com facilidade, se realmente se adapta aos dispositivos móveis?<br />Uma forma simples é instalar a extensão Ripple, que é emulador mobile.<br /><br /><strong>Baixar o emulador Ripper para o Chrome</strong><br /><br />Acesse com o Chrome<br /><a href="https://chrome.google.com/webstore/detail/ripple-emulator-beta/geelfhphabnejjhdalkjhgipohgpdnoc">https://chrome.google.com/webstore/detail/ripple-emulator-beta/geelfhphabnejjhdalkjhgipohgpdnoc</a> <br /><br />Instale a extensão<br /><br />Agora abra o endereço do jogo pelo navegador Chrome, mas somente com o servidor web:<br /><a href="http://localhost/labirinto">http://localhost/labirinto</a> <br /><br />Clique no pequeno ícone azul acima e à esquerda<br />E Habilite para Phonegap<br /><br />Finalmente, podemos pensar em instalar nosso jogo em celulares.<br />Para isso conheço dois serviços simples:<br /><a href="http://build.phonegap.com">http://build.phonegap.com</a> <br /><a href="http://monaca.io">http://monaca.io</a> <br /><br />Precisamos criar um projeto em um destes e adaptar o projeto criado para o código do nosso jogo.<br />Veja na seção sobre <a title="http://ribafs.org/portal/mobile/phonegap" href="http://ribafs.org/portal/mobile/phonegap" target="_blank" rel="noopener noreferrer">PhoneGap</a> ou <a title="http://ribafs.org/portal/mobile/monaca" href="http://ribafs.org/portal/mobile/monaca" target="_blank" rel="noopener noreferrer">Monaca</a> sobre como efetuar o build e publicar seu jogo.</p>
+
+
+<p> </p>]]></description>
+			<category>Phaser</category>
+			<pubDate>Sat, 29 Jul 2017 16:32:00 -0300</pubDate>
+		</item>
+		<item>
+			<title>Phaser - Ferramentas</title>
+			<link>http://backup/portal/mobile/phaser/phaser-ferramentas.html</link>
+			<guid isPermaLink="true">http://backup/portal/mobile/phaser/phaser-ferramentas.html</guid>
+			<description><![CDATA[<h4>Phaser - Ferramentas</h4>
+
+
+<p>Algumas das melhores ferramentas que encontrei para a criação de Jogos com o frfamework Phaser. A maioria eu encontrei na seção de News do site do Phaser.<br /><br /><strong>cordova-phaser</strong><br />Template do cordova para phaser, que cria um projeto cordova com uma estrutura adequada para um projeto Phaser<br /><a href="https://github.com/amex4152/cordova-phaser">https://github.com/amex4152/cordova-phaser</a> <br /><br />Usando:<br />cordova create hello com.example.hello HelloWorld --template cordova-phaser<br />cd hello<br />cordova prepare<br /><br /><br /><strong>phaser-cli</strong><br /><a href="https://github.com/nerdenough/phaser-cli">https://github.com/nerdenough/phaser-cli</a> <br /><br />Cliente de phaser para node.js<br /><br />Instalação<br />sudo npm install -g phaser-cli<br /><br />Usando:<br /><br />phaser init &lt;template-name&gt; &lt;project-name&gt;<br /><br />Exemplo:<br />phaser init webpack meu-projeto<br />cd meu-projeto<br />npm install (instala os módulos do node)<br />npm run dev (inicia o servidor web e já abre o meu-projeto/index.html no navegador default em http://localhost:8080)<br /><br />webpack - template em <a href="https://github.com/phaser-templates/webpack">https://github.com/phaser-templates/webpack</a> <br /><br />Repositório de templates - <a href="https://github.com/phaser-templates">https://github.com/phaser-templates</a> <br /><br />Templates atualmente:<br /><br />Usando um template customizado:<br /><br />phaser init username/repo my-project<br /><br />username/repo é o username do github e o repositório. Ex: ribafs/repositorio1<br /><br />Instalar com tempalte local:<br />phaser init ~/fs/path/to-custom-template my-project<br /><br />Mais detalhes em:<br /><a href="https://github.com/nerdenough/phaser-cli">https://github.com/nerdenough/phaser-cli</a> <br /><br /><br /><strong>phaser-component-library</strong><br /><a href="https://github.com/SaFrMo/phaser-component-library">https://github.com/SaFrMo/phaser-component-library</a> <br /><br />phaser-mario - npm install phaser-mario - <a href="https://github.com/SaFrMo/phaser-mario">https://github.com/SaFrMo/phaser-mario</a> <br /><br />phaser-link - npm install phaser-link - <a href="https://github.com/SaFrMo/phaser-link">https://github.com/SaFrMo/phaser-link</a> <br /><br />phaser-percent-bar - npm install phaser-percent-bar - <a href="https://github.com/SaFrMo/phaser-percent-bar">https://github.com/SaFrMo/phaser-percent-bar</a> <br /><br />data-uri-snippets - npm install data-uri-snippets - <a href="https://github.com/SaFrMo/data-uri-snippets">https://github.com/SaFrMo/data-uri-snippets</a> <br /><br /><br /><strong>gui component for phaser</strong><br /><a href="https://github.com/redsheep/RSGUI">https://github.com/redsheep/RSGUI</a> <br /><br /><a href="https://redsheep.github.io/RSGUI-Examples/">https://redsheep.github.io/RSGUI-Examples/</a> <br /><br /><br /><strong>Editor para Phaser e outras ferramentas HTML5</strong><br /><a href="http://mightyeditor.mightyfingers.com/">http://mightyeditor.mightyfingers.com/</a> <br /><br /><strong>Phaser Sprite GUI</strong><br /><a href="https://samme.github.io/phaser-sprite-gui/">https://samme.github.io/phaser-sprite-gui/</a> <br /><br /><strong>Phaser Plugin Game GUI</strong><br /><a href="https://samme.github.io/phaser-plugin-game-gui/">https://samme.github.io/phaser-plugin-game-gui/</a> <br /><br /><strong>Phaser Debug</strong><br />Plugin simples de debug para Phaser<br /><a href="https://github.com/englercj/phaser-debug/">https://github.com/englercj/phaser-debug/</a> <br /><br />Faça o download do projeto acima<br />Descompacte<br />Copie o arquivo phaser-debug.js que se encontra na pasta dist para seu projeto<br />Faça o include do mesmo no index.html<br />&lt;script src="http://backup/portal/phaser.js"&gt;&lt;/script&gt;<br />&lt;script src="http://backup/portal/phaser-debug.js"&gt;&lt;/script&gt;<br /><br />Habilitando o plugin:<br />game.add.plugin(Phaser.Plugin.Debug);<br /><br />Agora ele agirá sempre que for solicitado.<br /><br />Como o debug é algo muito importante, este plugin pode ser útil usado paralelamente com o Inspetor do navegador.<br /><br /><strong>Phaser Multiscreen Example</strong><br />Uso de escala. Opção para lidar com várias dimensões de dispositivos no seu game<br /><a href="https://github.com/vinod8990/Phaser_Multiscreen_Example">https://github.com/vinod8990/Phaser_Multiscreen_Example</a> <br /><a href="https://github.com/photonstorm/phaser/blob/master/v2/resources/Project%20Templates/Full%20Screen%20Mobile/index.html">https://github.com/photonstorm/phaser/blob/master/v2/resources/Project%20Templates/Full%20Screen%20Mobile/index.html</a> <br /><br /><strong>Phaser starter</strong><br />Projeto inicial de game com Phaser para ter o ambiente funcionando com facilidade. <br />Com Webpack, ES6 transpiling, page reloading and Github page publishing.<br /><a href="https://github.com/oliverbenns/phaser-starter/releases">https://github.com/oliverbenns/phaser-starter/releases</a> <br /><br />Faça o download do site acima e execute:<br />Descompacte<br />cd phaser-starter<br />nvm install<br />npm install<br /><br /><strong>Final Android Resizer</strong><br />Algo chato é criar todas as imagens para um projeto android, para efetuar o build, criando uma mesma imagem em várias dimensões.<br />Esta ferramenta nos ajuda nisso: Redimensionar todas as imagens de um projeto mobile para android<br /><a href="https://github.com/asystat/Final-Android-Resizer">https://github.com/asystat/Final-Android-Resizer</a> <br /><br />Faça o download e Descompacte<br />Execute o arquivo Executable Jar/Final Android Resizer.jar<br /><br />No linux clique com o botão direito sobre o arquivo - Abrir Com - Oracle Java 8 Runtime<br /><br /><strong>Phaser Editor</strong><br />IDE para criação de jogos HTML 5<br /><a href="http://phasereditor.boniatillo.com/blog/downloads">http://phasereditor.boniatillo.com/blog/downloads</a> <br /><a href="https://github.com/boniatillo-com/PhaserEditor">https://github.com/boniatillo-com/PhaserEditor</a> <br /><br /><strong>grunt-phaser-assetpack-generator</strong><br /><a href="https://github.com/hilts-vaughan/grunt-phaser-assetpack-generator">https://github.com/hilts-vaughan/grunt-phaser-assetpack-generator</a> <br /><br /><strong>Phaser Node Kit</strong><br /><a href="https://develephant.github.io/phaser-node-kit/">https://develephant.github.io/phaser-node-kit/</a> <br /><br /><strong>Spriter-Player-for-Phaser</strong><br /><a href="https://github.com/SBCGames/Spriter-Player-for-Phaser">https://github.com/SBCGames/Spriter-Player-for-Phaser</a> <br /><br /><strong>Plugin Responsive para Phaser</strong><br />Phaser-Responsive plugin adds images/sprites/buttons/groups that can be pinned to corners/sides/center!<br /><a href="https://github.com/orange-games/phaser-responsive">https://github.com/orange-games/phaser-responsive</a> <br /><br /></p>]]></description>
+			<category>Phaser</category>
+			<pubDate>Sat, 29 Jul 2017 16:32:00 -0300</pubDate>
+		</item>
+		<item>
+			<title>Bons Jogos com Phaser</title>
+			<link>http://backup/portal/mobile/phaser/bons-jogos-com-phaser.html</link>
+			<guid isPermaLink="true">http://backup/portal/mobile/phaser/bons-jogos-com-phaser.html</guid>
+			<description><![CDATA[<h4>Alguns bons Jogos com o Framework Phaser</h4>
+
+
+<p><strong>Jogão - Strick TacTics</strong><br /><a href="http://striketactics.net/">http://striketactics.net/<br /></a><a href="http://striketactics.net/play">http://striketactics.net/play</a> - jogar online<br /><br /><strong>Mario Phaser</strong><br /><a href="https://github.com/agar3s/marioPhaser">https://github.com/agar3s/marioPhaser</a> <br /><br /><strong>Labirinto Adventure</strong><br /><a href="http://cdn2.kidmons.com/games/labyrinth/index.php">http://cdn2.kidmons.com/games/labyrinth/index.php</a> <br /><br /><a href="http://gamepyong.com/skylegend/skylegend.php">http://gamepyong.com/skylegend/skylegend.php</a> <br /><br /><strong>Sword</strong><br /><a href="http://m.addictinggames.com/content-items/html5-games/moa/index.html">http://m.addictinggames.com/content-items/html5-games/moa/index.html</a> <br /><br /><strong>Operações aritméticas</strong> (não é um jogo mas achei interessante)<br /><a href="http://gamepyong.com/ints/ints.php">http://gamepyong.com/ints/ints.php</a> <br /><br /><strong>9 jogos criados com Phaser</strong><br /><a href="https://www.joshmorony.com/9-fun-html5-games-built-with-phaser/">https://www.joshmorony.com/9-fun-html5-games-built-with-phaser/</a> <br /><br /><a href="http://www.andy-howard.com/top-games-built-in-phaser/index.html">http://www.andy-howard.com/top-games-built-in-phaser/index.html</a> <br /><br /><a href="https://itch.io/games/tag-phaser">https://itch.io/games/tag-phaser</a> <br /><br /><strong>Funny Games</strong><br /><a href="http://twisted-city.fbrq.io/twisted-city/index.html">http://twisted-city.fbrq.io/twisted-city/index.html</a> <br /><br /><strong>http://www.gunfight.io/</strong></p>
+
+
+<p><strong>Piano</strong><br /><a href="https://wasi0013.github.io/Phaser-Piano/">https://wasi0013.github.io/Phaser-Piano/</a> <br />Download - <a href="https://github.com/wasi0013/Phaser-Piano">https://github.com/wasi0013/Phaser-Piano</a> <br /><br /><a href="http://output.jsbin.com/humivu/27/">http://output.jsbin.com/humivu/27/</a> <br />Download - <a href="https://github.com/jschomay/phaser-demo-game/">https://github.com/jschomay/phaser-demo-game/</a> <br /><br /><strong>Prince of Persia</strong><br />Download - <a href="https://github.com/ultrabolido/PrinceJS">https://github.com/ultrabolido/PrinceJS</a> <br /><br /><strong>Muitos</strong> <strong>Outros</strong><br /><a href="https://phaser.io/games">https://phaser.io/games</a> <br /><br /><strong>Uma grande lista de jogos com Phaser no forum do Phaser</strong><br /><a href="http://pgl.ilinov.eu/">http://pgl.ilinov.eu/</a></p>
+
+
+<p>Se quizer indicar algum que não esteja na lista acima, favor deixar no form de comentário abaixo.</p>]]></description>
+			<category>Phaser</category>
+			<pubDate>Sat, 29 Jul 2017 16:32:00 -0300</pubDate>
+		</item>
+		<item>
+			<title>Onde publicar jogos online</title>
+			<link>http://backup/portal/mobile/phaser/onde-publicar-jogos-online.html</link>
+			<guid isPermaLink="true">http://backup/portal/mobile/phaser/onde-publicar-jogos-online.html</guid>
+			<description><![CDATA[<h4><strong>Onde publicar jogos online</strong></h4>
+
+
+<p><strong>Click Jogos<br /></strong><a href="http://www.clickjogos.com.br/cadastro/">http://www.clickjogos.com.br/cadastro/</a> </p>
+
+
+<p><strong>IRCH</strong><br /><a href="https://itch.io/docs/creators/html5">https://itch.io/docs/creators/html5</a> <br /><br /><strong>Google Drive</strong><br /><a href="https://drive.google.com">https://drive.google.com</a> <br /><br /><strong>Dropbox</strong><br /><a href="https://www.dropbox.com">https://www.dropbox.com</a>/ <br /><br /><strong>Criando uma conta e um site em</strong><br /><a href="http://www.000webhost.com/">http://www.000webhost.com/</a> <br /><br /><strong>Criar conta em e um site em</strong><br /><a href="https://pages.github.com/">https://pages.github.com/</a></p>
+
+
+<p><strong>Publicando jogos do Phaser (ou qualquer jogo em HTML 5) na Steam</strong><br /><br />Getting a Phaser Game on Steam 1 - Greenlight - <a href="http://blog.bravebunny.co/phaser-game-on-steam-1-greenlight/">http://blog.bravebunny.co/phaser-game-on-steam-1-greenlight/</a> <br />Getting a Phaser Game on Steam 2 - Making it Look and Feel Like a PC Game - <a href="http://blog.bravebunny.co/getting-a-phaser-game-on-steam-2-look-and-feel/">http://blog.bravebunny.co/getting-a-phaser-game-on-steam-2-look-and-feel/</a> <br />Getting a Phaser Game on Steam 3 - Making an Executable - <a href="http://blog.bravebunny.co/getting-a-phaser-game-on-steam-3-executable/">http://blog.bravebunny.co/getting-a-phaser-game-on-steam-3-executable/</a></p>
+
+
+<p> </p>]]></description>
+			<category>Phaser</category>
+			<pubDate>Sat, 29 Jul 2017 16:32:00 -0300</pubDate>
+		</item>
+		<item>
+			<title>Servidor Web Simples</title>
+			<link>http://backup/portal/mobile/phaser/servidor-web-simples.html</link>
+			<guid isPermaLink="true">http://backup/portal/mobile/phaser/servidor-web-simples.html</guid>
+			<description><![CDATA[<h4 style="text-align: justify;">Servidor Web Simples</h4>
+
+<p style="text-align: justify;">Para criar ou testar jogos web criados com Phaser ou outro framework em HTML 5, geralmente basta abrir a pasta e efetuar um duplo clique no index.html. Mas tem jogo que somente funciona com Chrome ou outro navegador. Neste caso precisamos que o jogo rode sob um servidor web.</p>
+
+<p style="text-align: justify;">Mas aí basta ter apenas o Apache instalado ou qualquer outro servidor web. Não precisa ter suporte a PHP, Java, MySQL, etc.</p>
+
+<p style="text-align: justify;">Servidores web bem simples de instalar e sem qualquer configuração são alguns módulos do Node.js, instaláveis com o npm.</p>
+
+<p style="text-align: justify;">Atualmente boa parte dos programadores têm o node.js instalado e os que não têm ganharão ao instalar.<br /><br />O node.js tem alguns módulos de servidor web. São servidores simples, apenas para sites estáticos, ou seja, apenas HTML, CSS e JavaScript.<br />Mas são muito simples de instalar e de usar. Caso precise da URL do node.js veja ao final deste artigo.<br /><br />Um exemplo de código que não funciona no Firefox é quando o jogo/aplicativo usa o WebSQL/SQLite, nem mesmo que esteja no dirtório web. Precisa do Chrome.<br /><br />Para instalar em máquina sem servidor web fica mais simples que a instalação de um servidor web convencional, especialmente se for no Windows.<br /><br /><strong>Light-server</strong><br /><a href="https://github.com/johnpapa/lite-server">https://github.com/johnpapa/lite-server</a> <br /><br /><strong>Instalação no Ubuntu e derivados</strong><br />sudo npm install -g light-server <br /><br />No Windows - abrir o prompt e executar:<br />npm install -g light-server<br /><br /><strong>Usando</strong><br />light-server -s c:\xampp\htdocs\labirinto<br />Agora abra o navegador e digite:<br />http://localhost:4000<br /><br />Para receber ajuda sobre mais comandos e opções<br /><br />light-server -h<br /><br /><br /><strong>Live Server - Outro ainda mais simples e prático</strong><br /><a href="https://github.com/tapio/live-server">https://github.com/tapio/live-server</a></p>
+
+<p style="text-align: justify;"><strong>Instalação</strong><br />No Ubuntu<br />sudo npm install live-server -g<br /><br />Windows<br />npm install live-server -g<br /><br /><strong>Usando</strong><br />cd c:\xampp\htdocs\labirinto<br />live-server<br /><br />E ele já abre o index.html no navegador default<br /><br />Para abrir no navegador Chrome (quando ele não é o default):<br />live-server --browser=google-chrome<br /><br />Para abrir no chrome e numa pasta<br />live-server --browser=google-chrome --open=/var/www/html/labirinto</p>
+
+<p style="text-align: justify;"><strong>Simpleficando</strong><br />Para tornar isso mais prático e não precisar memorizar o comando, podemos criar um script para linux ou batch para windows.<br /><br />No Linux<br />sudo nano /usr/local/bin/live<br />live-server --browser=google-chrome --open=$1<br /><br />sudo chmod +x /usr/local/bin/live<br /><br />Usando<br />live /var/www/html/labirinto<br /><br />No windows<br />Iniciar - executar<br />notepad c:\windows\live.bat<br />live-server --browser=google-chrome --open=%1<br /><br />Usando<br />live c:\xampp\htdocs\labirinto<br /><br />Ajuda sobre o live-server<br />live-server -h<br /><br /><strong>Instalação do Node.js</strong><br />Faça o download e instale daqui<br /><a href="https://nodejs.org/">https://nodejs.org/</a></p>
+
+<p style="text-align: justify;"><strong>Debugando</strong><br /> Uma vantagem deste tipo de servidor é que ele mostra no terminal os logs e já podemos ver os erros, caso existam. Um exemplo é quando ele não encontra um arquivo e mostra o erro 404.<br /><br /><br /></p>]]></description>
+			<category>Phaser</category>
+			<pubDate>Sat, 29 Jul 2017 16:32:00 -0300</pubDate>
+		</item>
+		<item>
+			<title>Atualizar o Node.JS</title>
+			<link>http://backup/portal/mobile/phaser/atualizar-o-node-js.html</link>
+			<guid isPermaLink="true">http://backup/portal/mobile/phaser/atualizar-o-node-js.html</guid>
+			<description><![CDATA[<h4><strong>Atualizar o Node.JS</strong></h4>
+<p><strong>No Linux Ubuntu</strong></p>
+<p>sudo apt-get update<br />sudo apt-get install build-essential checkinstall libssl-dev<br /><br />node -v<br />sudo npm cache clean -f<br />sudo npm install -g n<br /><br />Instalar último node.js<br />sudo n stable<br /><br />Anote a versão instalada acima e use abaixo no lugar de 8.2.1:<br />sudo ln -sf /usr/local/n/versions/node/8.2.1/bin/node /usr/bin/nodejs<br />node -v<br /><br />Para desinstalar:<br />sudo apt-get install --reinstall nodejs-legacy # corrige /usr/bin/node<br />sudo n rm 8.2.1 # troque pela versão que você instalou<br />sudo npm uninstall -g n<br /><br /></p>
+<p><strong>No Windows</strong><br /><br />node -v<br />npm cache clean -f<br />npm install -g n<br /><br />Instalar último node.js<br />n stable<br /><br />node -v<br /><br /><strong>Para desinstalar:</strong><br />n rm 8.2.1 # troque pela versão que você instalou<br />npm uninstall -g n<br /><br /></p>]]></description>
+			<category>Phaser</category>
+			<pubDate>Sat, 29 Jul 2017 16:32:00 -0300</pubDate>
+		</item>
+		<item>
+			<title>Firebase - Hospedagem de aplicativos mobile</title>
+			<link>http://backup/portal/mobile/phaser/firebase-hospedagem-de-aplicativos-mobile.html</link>
+			<guid isPermaLink="true">http://backup/portal/mobile/phaser/firebase-hospedagem-de-aplicativos-mobile.html</guid>
+			<description><![CDATA[<h4 style="text-align: justify;">Firebase - Hospedagem de aplicativos mobile e web - Com recursos profissionais</h4>
+
+<p style="text-align: justify;"><a href="https://firebase.google.com/">https://firebase.google.com/</a></p>
+
+<p style="text-align: justify;">Tutorial<br /><a href="https://www.tudocelular.com/android/noticias/n72091/google-lanca-nova-versao-do-firebase.html">https://www.tudocelular.com/android/noticias/n72091/google-lanca-nova-versao-do-firebase.html</a> <br /><br />O Firebase é uma ferramenta do Google e ao mesmo tempo uma infraestrutura para você desenvolver aplicativos com maior rapidez e flexibilidade.<br /><br />O Firebase é uma plataforma móvel que ajuda você a desenvolver rapidamente aplicativos de alta qualidade, crescer sua base de usuários, e ganhar mais dinheiro. Composto de características complementares que você pode misturar e combinar para atender às suas necessidades.<br /><br />No survey de 2017 do Ionic, o Firebase aparece como o ambiente preferido de tecnologia backend<br /><a href="http://ionicframework.com/survey/2017#big-picture">http://ionicframework.com/survey/2017#big-picture</a> <br /><br />A ferramenta possui um Analytics propondo ser uma solução de análise livre e ilimitada, construída dentro do próprio base. Obtenha insights sobre seus usuários a partir de cliques em seu aplicativo. O Firebase Analytics trabalha em conjunto com outras funcionalidades, para que possa agir de acordo as taxas de click indesejados e falhas em seus aplicativos.<br /><br />Entregue aplicativos em várias plataformas com uma API em um único SDK, seja para iOS, Android, JavaScript e C++. Ele permite que você trabalhe ao mesmo tempo em plataformas diferentes sem mudar sua estrutura.<br /><br />Comece gratuitamente e pague em escala somente pelo que usar. <br />Plano gratuito com limites generosos para amadores. Veja: <a href="https://firebase.google.com/pricing/?hl=pt-br">https://firebase.google.com/pricing/?hl=pt-br</a> <br /><br />A maioria dos seus recursos serão sempre gratuitos, para qualquer nível de desenvolvimento. As quatro principais características principais tem um generoso tempo de trial gratuito e logo dois planos pagos caso deseje crescer mais.<br /><br />Quando seu aplicativo for um sucesso de crescimento, você não precisa se preocupar em escalar o seu código ou mudar de servidor com capacidade extra – o Firebase cuida de tudo para você, basta adquirir os planos.<br /><br />O Firebase oferece apoio por e-mail gratuito para todos os desenvolvedores, e a equipe Firebase e Especialistas do Google Developer estão ativos em comunidades online como o GitHub.<br /><br />Firebase possui um SDK e um console para criar e gerenciar aplicações.<br /><br /><strong>A plataforma oferece as seguintes funcionalidades:</strong><br /><br />    AdMob - integração com o Google AdMob;<br />    AdWords - integração com o Google AdWords;<br />    Analytics - um painel para monitorar o comportamento dos usuários da aplicação, segmentação demográfica e desempenho de campanha;<br />    Autenticação - suporte para autenticação de usuários via e-mail, Facebook, GitHub, Google Sign-In e Twitter;<br />    Relatório de Erros - monitora os erros da aplicação em todos os dispositivos e é integrado com o Analytics para analisar o comportamento dos usuários após falhas;<br />    Database - um banco de dados NoSQL utilizado para armazenar dados JSON;<br />    Dynamic Links - deep links para possibilitar que o usuário acesse páginas internas da aplicação;<br />    Hosting - uma CDN (Content Delivery Network) distribuída globalmente para servir aplicações web;<br />    Indexing - utilizado para indexar as aplicações na busca do Google (Google Search);<br />    Invites - possibilita a troca de informações sobre uma aplicação entre usuários;<br />    Messaging - o antigo Google Cloud Messaging (GCM) é o novo Firebase Cloud Messaging (FCM);<br />    Notifications - gerenciamento de notificações enviadas para o seu usuário;<br />    Offline - possibilita a armazenagem de dados na memória cache local, permitindo assim o funcionamento da aplicação em estado offline;<br />    Real time - os dados são armazenados em tempo real no banco de dados;<br />    Remote Config - permite aos desenvolvedores modificar o comportamento e a aparência da aplicação sem requerer que os usuários realizem o download de uma nova versão. Está funcionalidade é utilizada para testes A/B, alterar o tema visual da aplicação ou até mesmo se comunicar com usuários de regiões especificas, etc;<br />    Storage - armazena as mídias do usuário, como áudio, imagens e vídeos;<br />    Synchronization - quando os dados são alterados em um dispositivo eles são enviados para o Firebase e então para todos os dispositivos conectados. Caso existam dispositivos offline neste momento os mesmos serão atualizados com a última versão dos dados logo após a conexão com a internet;<br />    Test Lab - teste a aplicação em dispositivos reais.<br /><br />O kit de desenvolvimento de software (SDK) do Firebase atualmente suporta o desenvolvimento nas seguintes linguagens de programação: C++, Java, Javascript, Node.js, Objective-C e Swift.<br /><br />Ela oferece um plano gratuito para aqueles que estejam interessados em conhecer seu funcionamento, como também um plano de pagamentos flexíveis, baseado em seu consumo, que oferece integração total com a plataforma Google Cloud.<br /><br /><strong>Explorar projeto de demonstração</strong><br /><a href="https://console.firebase.google.com/project/fir-demo-project/overview">https://console.firebase.google.com/project/fir-demo-project/overview</a></p>]]></description>
+			<category>Phaser</category>
+			<pubDate>Sat, 29 Jul 2017 16:32:00 -0300</pubDate>
+		</item>
+		<item>
+			<title>Compilação do JavaScript</title>
+			<link>http://backup/portal/mobile/phaser/compilacao-do-javascript.html</link>
+			<guid isPermaLink="true">http://backup/portal/mobile/phaser/compilacao-do-javascript.html</guid>
+			<description><![CDATA[<h4>Compilação do Javascript</h4>
+
+
+<p><br />Uma ferramenta interessante do NWJS SDK é o NWJC, que cria um binário a partir de um fonte .js:</p>
+
+
+<p><a href="https://nwjs.io/">https://nwjs.io/</a> </p>
+
+
+<p>Efetuar o downloa do site acima e descompactar.<br /><br />Acessar a pasta do nw-sdk<br /><br />Criar uma pasta compjs dentro da pasta do nw-sdk e acessá-la<br /><br />Crie o arquivo meu.js contendo:<br /><br />// Detectar o SO em uso<br />var os = require('os');<br />document.write('Você está rodando em ', os.platform());<br /><br />Estando na pasta do nw-sdk execute:<br />../nwjc meu.js meu.bin<br /><br />Agora crie o index.html contendo:<br /><br />&lt;!DOCTYPE html&gt;<br />&lt;html&gt;<br />&lt;head&gt;<br />  &lt;meta http-equiv="Content-Type" content="text/html;charset=utf-8" /&gt;<br />  &lt;title&gt;NWJC - exemplo&lt;/title&gt;<br />&lt;/head&gt;<br />&lt;body style="width: 100%; height: 100%;"&gt;<br /><br />&lt;script&gt;<br />require('nw.gui').Window.get().evalNWBin(null, 'meu.bin');<br />&lt;/script&gt;<br />&lt;/body&gt;<br />&lt;/html&gt;<br /><br /><strong>Criar o package.json básico no raiz do nw-sdk ou adapte o existente</strong><br /><br />{<br />  "name": "nwjc_exemplo",<br />  "main": "index.html"<br />}<br /><br /><strong>Rode com</strong><br /><br />./nw compjs<br /><br /><br /><strong>Alerta</strong>: o binário gerado não é multiplataforma e devemos executar o nwjc em cada plataforma usada.<br /><br /></p>]]></description>
+			<category>Phaser</category>
+			<pubDate>Sat, 29 Jul 2017 16:32:00 -0300</pubDate>
+		</item>
+		<item>
+			<title>Criando executável para Jogo web</title>
+			<link>http://backup/portal/mobile/phaser/criando-executavel-para-jogo-web.html</link>
+			<guid isPermaLink="true">http://backup/portal/mobile/phaser/criando-executavel-para-jogo-web.html</guid>
+			<description><![CDATA[<h4 style="text-align: justify;">Criando executável para Jogo web usando o NWJS</h4>
+
+<p style="text-align: justify;">Ou para qualquer aplicativo/site html.<br />Talvez não seja algo tão necessário mas, pode ser útil em alguma situação.</p>
+
+<p style="text-align: justify;">Para criar um executável para um jogo web, para que rode independente de navegador, uma boa alternativa é o <br />NWJS ( <a href="http://nwjs.io">http://nwjs.io</a> ).<br /><br />Ele é basicamente uma versão simplificada do navegador Google Crome que abre um arquivo html.<br /><br />Ele é baseado no Chromium e no Node JS. A versão do node para rodar o NWJS 0.24 indicada é a 8.21. Se precisar <strong>atualizar o node</strong> veja o artigo<br /><a href="http://backup/portal/mobile/phaser/atualizar-o-node-js">http://ribafs.org/portal/mobile/phaser/atualizar-o-node-js</a> <br /><br /><strong>Download</strong><br /><a href="http://nwjs.io">http://nwjs.io</a> <br /><br />Podemos usar a versão normal ou a SDK (o SDK tem mais recursos).<br />Faça o download da normal, que é menor e tem tudo o que precisaremos para criar o standalone do jogo<br /><br /><strong>Empacotando o jogo/aplicativo juntamente com o nw</strong><br /><br />- Criar um diretório no seu diretório home:<br />/meus_desktops<br />- Dentro deste diretório crie um diretório para um jogo e outro para o NW<br />/meus_desktops<br />    /meu_jogo (todo o código do jogo)<br />    /nw (aqui descompacte o NWJS)   <br />- Acessar pelo terminal/prompt o /meus_desktops/meu_jogo<br />- Executar:<br />  npm init (criará interativamente o package.json). O nome do pacote deve ser tudo em minúsculas e o arquivo inicial o index.html.<br />Para rodar a aplicação com o NW são requeridos apenas main e name.<br />O main deve chamar o index.html do jogo.<br />- Compactar todos os arquivos da pasta meu_jogo, sem a pasta: meu_jogo.zip<br />- Renomear meu_jogo.zip para meu_jogo.nw<br />- Concatenar o executável nw com o meu_jogo.nw:<br /><br /><strong>No Linux</strong><br />cat nw ../meu_jogo.nw &gt; meu_jogo &amp;&amp; chmod +x meu_jogo<br /><br /><strong>No Windows</strong><br />copy /b nw.exe+meu_jogo.nw meu_jogo.exe <br /><br />Com isso criamos o arquivo meu_jogo no diretório do nw.<br /><br />Agora para <strong>executar o jogo</strong>, ainda no diretório nw, basta executar:<br />./meu_jogo<br /><br />Ou<br />meu_jogo.exe<br /><br />Precisamos ficar no diretório do nw para rodar o executável, pois ele precisa de acesso aos seus arquivos/libs.<br /><br />Dica: se na pasta do jogo tiver um package.json, remova o package.json da pasta do nw.<br /><br /><br /><strong>Referências</strong><br /><br /><a href="http://koobazaur.com/gamedev/streamlining-standalone-web-game-development-environment-phaser-nwjs/">http://koobazaur.com/gamedev/streamlining-standalone-web-game-development-environment-phaser-nwjs/</a> <br /><a href="https://code.tutsplus.com/tutorials/introduction-to-html5-desktop-apps-with-node-webkit--net-36296">https://code.tutsplus.com/tutorials/introduction-to-html5-desktop-apps-with-node-webkit--net-36296</a> <br /><a href="https://www.sitepoint.com/cross-platform-desktop-app-nw-js/">https://www.sitepoint.com/cross-platform-desktop-app-nw-js/</a><br /><a href="https://github.com/nwjs/nw.js/wiki/how-to-package-and-distribute-your-apps">https://github.com/nwjs/nw.js/wiki/how-to-package-and-distribute-your-apps</a> <br /><a href="http://thejackalofjavascript.com/getting-started-with-node-webkit-apps/">http://thejackalofjavascript.com/getting-started-with-node-webkit-apps/</a></p>]]></description>
+			<category>Phaser</category>
+			<pubDate>Sat, 29 Jul 2017 16:32:00 -0300</pubDate>
+		</item>
+		<item>
+			<title>Exercícios sobre Canvas</title>
+			<link>http://backup/portal/mobile/phaser/exercicios-sobre-canvas.html</link>
+			<guid isPermaLink="true">http://backup/portal/mobile/phaser/exercicios-sobre-canvas.html</guid>
+			<description><![CDATA[<h4>Exercícios sobre HTML 5 Canvas</h4>
+
+
+<p>Do livro livro HTML 5 Canvas Cookbook da editora PacktPub</p>
+
+
+<p><a href="http://www.html5canvastutorials.com/cookbook/#ch1">http://www.html5canvastutorials.com/cookbook/#ch1</a> </p>
+
+
+<p> </p>]]></description>
+			<category>Phaser</category>
+			<pubDate>Sat, 29 Jul 2017 16:32:00 -0300</pubDate>
+		</item>
+		<item>
+			<title>Phaser - Referências</title>
+			<link>http://backup/portal/mobile/phaser/phaser-referencias.html</link>
+			<guid isPermaLink="true">http://backup/portal/mobile/phaser/phaser-referencias.html</guid>
+			<description><![CDATA[<h4>Phaser - Referências</h4>
+
+
+<p><strong>Site Oficial</strong><a href="http://phaser.io">http://phaser.io</a> </p>
+
+
+<p><strong>Forum Oficial do Phaser</strong><br /><a href="http://www.html5gamedevs.com/forum/14-phaser/">http://www.html5gamedevs.com/forum/14-phaser/</a></p>
+
+
+<p><strong>Aprenda a Utilizar a Game Engine Phaser Para Desenvolvimento de Jogos HTML5 (Introdução ao Phaser)<br /></strong><a href="https://gamedevelopment.tutsplus.com/pt/articles/how-to-learn-the-phaser-html5-game-engine--gamedev-13643">https://gamedevelopment.tutsplus.com/pt/articles/how-to-learn-the-phaser-html5-game-engine--gamedev-13643</a></p>
+
+
+<p><strong>Bom tutorial</strong><br /><a href="https://www.sitepoint.com/javascript-game-programming-using-phaser/">https://www.sitepoint.com/javascript-game-programming-using-phaser/</a></p>
+
+
+<p><strong>Jogo Grátis de Phaser (em espanhol)</strong><br /><a href="https://quizzpot.com/members/#/courses/videojuegos-en-html5">https://quizzpot.com/members/#/courses/videojuegos-en-html5</a></p>
+
+
+<p><strong>Curso de Phaser Grátis (em inglês)</strong><br /><a href="https://www.udemy.com/making-games-with-phaser/">https://www.udemy.com/making-games-with-phaser/</a></p>
+
+
+<p><strong>Phaser CheatSheets</strong><br /><a href="https://gist.github.com/woubuc/6ef002051aeef453a95b">https://gist.github.com/woubuc/6ef002051aeef453a95b</a></p>
+
+
+<p><strong>Vídeo Aulas no Youtube</strong></p>
+
+
+<p><strong>Curso Básico - Intermediário (espalhol) - 23 vídeos</strong><br /><a href="https://www.youtube.com/watch?v=KuUZnxCvPxk&amp;list=PLdGlusD_3WpF9TUyLRcMOnU9jdZIi3y9a">https://www.youtube.com/watch?v=KuUZnxCvPxk&amp;list=PLdGlusD_3WpF9TUyLRcMOnU9jdZIi3y9a</a></p>
+
+
+<p><strong>Introdução ao Desenvolvimento de Games com Phaser</strong> - 12 aulas<br /><a href="https://www.youtube.com/watch?v=8SwYzPrqaD0&amp;list=PLclUTiUoLCbDach_zDnhtyFvz2sIVyuJt">https://www.youtube.com/watch?v=8SwYzPrqaD0&amp;list=PLclUTiUoLCbDach_zDnhtyFvz2sIVyuJt</a></p>
+
+
+<p><strong>Criando um Jogo de Labirinto com Phaser</strong> - 10 aulas<br /><a href="https://www.youtube.com/watch?v=SSlIJOD-JMU&amp;list=PLclUTiUoLCbDog-vStY7VFHpFXJVML6EY">https://www.youtube.com/watch?v=SSlIJOD-JMU&amp;list=PLclUTiUoLCbDog-vStY7VFHpFXJVML6EY</a></p>
+
+
+<p><strong>Jogão criado com o Phaser - Twisted City</strong><br /><a href="http://twisted-city.fbrq.io/twisted-city/index.html">http://twisted-city.fbrq.io/twisted-city/index.html</a> <br /><a href="http://www.gunfight.io/">http://www.gunfight.io/</a></p>
+
+
+<p><strong>Dicas de uso do timer no Phaser</strong><br /><a href="https://phasergames.com/phaser-timer-basics-tutorial/">https://phasergames.com/phaser-timer-basics-tutorial/</a><br /><br /><strong>Jogo tipo Siga-me/Simon</strong><br /><a href="https://phasergames.com/phaser/simon/index.html">https://phasergames.com/phaser/simon/index.html</a></p>
+
+
+<p><strong>Como adicionar um jogo do Phaser (ou qualquer jogo HTML) na Steam</strong><br /><a href="http://www.andy-howard.com/phaser-to-steam/">http://www.andy-howard.com/phaser-to-steam/</a></p>
+
+
+<p><strong>Street Fighter</strong><br /><a href="https://github.com/vicboma1/streetFighter1">https://github.com/vicboma1/streetFighter1</a> </p>
+
+
+<p><strong>Dicas sobre Escala</strong><br /><a href="https://www.joshmorony.com/how-to-scale-a-game-for-all-device-sizes-in-phaser/">https://www.joshmorony.com/how-to-scale-a-game-for-all-device-sizes-in-phaser/</a> <br /><a href="http://codetuto.com/2014/04/multi-screen-game-development-in-phaser/">http://codetuto.com/2014/04/multi-screen-game-development-in-phaser/</a> <br /><a href="http://mightyfingers.com/tutorials/advanced/simple-scaling-and-fullscreen/">http://mightyfingers.com/tutorials/advanced/simple-scaling-and-fullscreen/</a></p>
+
+
+<p><strong>Criação de Sprites, mapas e outros recursos para Phaser</strong><a href="http://mightyeditor.mightyfingers.com/"><br />http://mightyeditor.mightyfingers.com/<br /></a>Exemplo de uso - <a href="https://gamedevacademy.org/make-a-quick-phaser-compatible-game-using-mightyeditor/">https://gamedevacademy.org/make-a-quick-phaser-compatible-game-using-mightyeditor/</a></p>
+
+
+<p><strong>Phaser Sprite GUI Online</strong><br /><a href="https://samme.github.io/phaser-sprite-gui/">https://samme.github.io/phaser-sprite-gui/</a><br /> Download - <a href="https://github.com/samme/phaser-sprite-gui">https://github.com/samme/phaser-sprite-gui</a></p>
+
+
+<p><strong>Phaser Game GUI Plugin Online</strong><br /><a href="https://samme.github.io/phaser-plugin-game-gui/">https://samme.github.io/phaser-plugin-game-gui/</a> <br />Download - <a href="https://github.com/samme/phaser-plugin-game-gui">https://github.com/samme/phaser-plugin-game-gui</a></p>
+
+
+<p><strong>How to publish your HTML5 game on Facebook</strong><br /><a href="http://www.emanueleferonato.com/2016/03/10/how-to-publish-your-html5-game-on-facebook-using-facebook-login-share-and-cpmstar-ads/">http://www.emanueleferonato.com/2016/03/10/how-to-publish-your-html5-game-on-facebook-using-facebook-login-share-and-cpmstar-ads/</a></p>
+
+
+<p><strong>The Complete Guide to Debugging Phaser Games</strong><br /><a href="https://gamedevacademy.org/how-to-debug-phaser-games/?a=13">https://gamedevacademy.org/how-to-debug-phaser-games/?a=13</a></p>
+
+
+<p><strong>20 Lugares para Você Publicar seu Jogo</strong><br /><a href="http://producaodejogos.com/20-lugares-para-voce-publicar-seu-jogo/">http://producaodejogos.com/20-lugares-para-voce-publicar-seu-jogo/</a></p>
+
+
+<p><strong>Como decidir qual jogo desenvolver – As 4 ferramentas de um desenvolvedor indie veterano</strong><br /><a href="http://producaodejogos.com/como-decidir-qual-jogo-desenvolver-as-4-ferramentas-de-um-desenvolvedor-indie-veterano/">http://producaodejogos.com/como-decidir-qual-jogo-desenvolver-as-4-ferramentas-de-um-desenvolvedor-indie-veterano/</a></p>
+
+
+<p><strong>Introdução ao JavaScript Orientado a Objeto</strong><br /><a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript">https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript</a></p>
+
+
+<p><strong>Desenvolvimento de Jogos</strong><br /><a href="https://developer.mozilla.org/pt-BR/docs/Games">https://developer.mozilla.org/pt-BR/docs/Games</a></p>
+
+
+<p><strong>Vários Exemplos de Jogos Web na Mozilla</strong><br /><a href="https://developer.mozilla.org/en-US/docs/Games/Examples">https://developer.mozilla.org/en-US/docs/Games/Examples</a></p>
+
+
+<p><strong>Tutorial de criação de Jogos em Português em 12 partes (do Paulo Marcos Trentin):</strong><br />Com o código fonte e bem comentado.<br /><a href="https://www.paulotrentin.com.br/category/programacao/criando-jogos-com-html5-e-phaser/page/2/">https://www.paulotrentin.com.br/category/programacao/criando-jogos-com-html5-e-phaser/page/2/</a><br /><a href="https://www.paulotrentin.com.br/category/programacao/criando-jogos-com-html5-e-phaser/">https://www.paulotrentin.com.br/category/programacao/criando-jogos-com-html5-e-phaser/</a> </p>
+
+
+<p><strong>Livros sobre Phaser</strong><br /><a href="https://phaser.io/shop/books/discover-phaser">https://phaser.io/shop/books/discover-phaser</a> <br /><a href="https://phaser.io/shop/books/procedural-endless-runner">https://phaser.io/shop/books/procedural-endless-runner</a><br /><a title="https://phaser.io/interphase/1" href="https://phaser.io/interphase/1">https://phaser.io/interphase/1</a><a href="https://leanpub.com/html5shootemupinanafternoon"><br /></a><a href="https://phaser.io/shop/books/vertical-endless-runner">https://phaser.io/shop/books/vertical-endless-runner</a><br /><a href="https://phaser.io/shop/books/from-null-to-full">https://phaser.io/shop/books/from-null-to-full</a><br /><a href="https://phaser.io/shop/books/mobile-development-for-web-developers">https://phaser.io/shop/books/mobile-development-for-web-developers</a> <a href="https://leanpub.com/html5shootemupinanafternoon"><br />https://leanpub.com/html5shootemupinanafternoon</a> </p>
+
+
+<p><strong>Teoria Juegos</strong><br />Muita coisa sobre Phaser. Vários exemplos:<br /><a href="https://github.com/hpneo/teoria-juegos">https://github.com/hpneo/teoria-juegos</a></p>
+
+
+<p><strong>Muitas informações úteis sobre mobile no Survey do Ionic de 2017</strong><br /><a href="http://ionicframework.com/survey/2017">http://ionicframework.com/survey/2017</a></p>
+
+
+<p><strong>Curiosidade: Muitas informações e números sobre projetos do GitHub</strong><br /><a href="https://octoverse.github.com/">https://octoverse.github.com/</a></p>
+
+
+<p> </p>]]></description>
+			<category>Phaser</category>
+			<pubDate>Tue, 25 Jul 2017 16:32:00 -0300</pubDate>
+		</item>
+		<item>
+			<title>Phaser - Editores</title>
+			<link>http://backup/portal/mobile/phaser/phaser-editores.html</link>
+			<guid isPermaLink="true">http://backup/portal/mobile/phaser/phaser-editores.html</guid>
+			<description><![CDATA[<h4 style="text-align: justify;">Phaser - Editores</h4>
+<p style="text-align: justify;"><br /><strong>VSCode Resumo</strong><br /><br />Procurando um bom editor para programar com o framework Phaser, encotnrei 3:<br /><br /><a href="http://atom.io">http://atom.io</a> <br /><a href="http://brackets.io">http://brackets.io</a> <br /><a href="https://code.visualstudio.com/">https://code.visualstudio.com/</a> <br /><br />Me parece que todos os 3 foram criados com o Electrom ( <a href="https://electron.atom.io/">https://electron.atom.io/</a> ).<br /><br />Os 3 autocompletam o código HTML e CSS, mas não o JavaScript. Como o Phaser tem uma biblioteca que podemos indicar para o editor, então vejamos.<br /><br />Com as dicas sugeridas aqui todos os 3 autocompletam o código do JavaScript do Phaser, mas me senti mais confortável com o VSCode.<br />Experimente os 3 e escolha o seu.<br /><br />Em um documento HTML em branco digite:<br />!<br />e tecle TAB<br /><br />Verá:<br /><br />&lt;!DOCTYPE html&gt;<br />&lt;html lang="en"&gt;<br />&lt;head&gt;<br /> &lt;meta charset="UTF-8"&gt;<br /> &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;<br /> &lt;meta http-equiv="X-UA-Compatible" content="ie=edge"&gt;<br /> &lt;title&gt;Document&lt;/title&gt;<br />&lt;/head&gt;<br />&lt;body&gt;<br /> <br />&lt;/body&gt;<br />&lt;/html&gt;<br /><br />Com foco em device-width</p>
+<p style="text-align: justify;">Existe uma grande quantidade de extensões que ajudam na codificação. Veja abaixo.<br /><br /><strong>Editor Para o Phaser</strong><br /><a href="https://phasereditor2d.com/blog/downloads">https://phasereditor2d.com/blog/downloads</a> <br /><br /><br /><strong>Para que o VSCode auto-complete o código do Pahser e dê algumas dicas siga estes passos:</strong><br /><br />- Faça o download do phaser no formato zip.<br />https://github.com/photonstorm/phaser<br /><br />- Descompacte<br /><br />- Crie uma pasta em seu projeto<br /> js/vendor ou lib/vendor ou apenas js/<br /><br />- Copie os arquivos de phaser-master<br /> v2/build (todos, exceto custom e config.php)<br /> para a pasta js/vendor do projeto<br /><br />- Crie uma pasta js/defs em seu projeto<br /><br />Para programar com Typescript:<br />Copie estes arquivos <br /> box2d.d.ts<br /> p2.d.ts<br /> phaser.comments.d.ts<br /> phaser_box2d.d.ts<br /> pixi.comments.d.ts<br /> tslint.json<br /> typings.json<br /> da pasta v2/typescript para a pasta js/defs<br /><br />- Caso ainda tenha algum problema crie na pasta js do projeto o arquivo jsconfig.json, contendo apenas<br />{ }<br /><br />Com isso o VSCode ficará autocompletando bem o código do phaser e dando dicas sobre o código.<br /><br /><strong>Configurações do editor</strong><br />File - Preferences - Settings</p>
+<p style="text-align: justify;"><strong>Dicas</strong><br /><a href="https://github.com/Microsoft/vscode-tips-and-tricks">https://github.com/Microsoft/vscode-tips-and-tricks</a> <br /><a href="https://code.visualstudio.com/docs/getstarted/userinterface">https://code.visualstudio.com/docs/getstarted/userinterface</a></p>
+<p style="text-align: justify;"><br /><strong>Instalar extensões</strong><br /><br />Clique no ícone à esquerda<br />ou<br />View - Extensions<br />Ou Ctrl+Shift+X<br /><br />Ou no VSCode Market<br /><a href="https://marketplace.visualstudio.com/VSCode">https://marketplace.visualstudio.com/VSCode</a> <br /><br />Ou ainda<br />Ctrl+P e digite o comando. Exemplo: <br />ext install html-snippets<br />ext install vscode-color - <a href="https://github.com/anseki/vscode-color">https://github.com/anseki/vscode-color</a> <br />Exibir Terminal Integrado<br />View - Integrated Terminal ou Ctrl+Shift+'</p>
+<p style="text-align: justify;">ou<br />Faça o download da extensão<br />Descompacte<br />Copie seu diretório para<br />$HOME/.vscode/extensions<br /><br />Dica de CSS:<br />Crie um arquivo css<br />Digite:<br />background-color:<br /><br />Tecle Ctrl+Barra de espaços que aparece a relação de cores<br /><br />Quando digitar<br />.teste{<br /> background-color: #f00;<br />}<br /><br />Verá um pequeno quadrado na cor vermelha ao lado do código<br /><br /><br /><strong>Teclas de Atalho:</strong><br /><br />Ctrl+P - mostra os arquivos do diretório atual. Digite ? e receberá uma lista de comandos disponíveis<br />Ctrl+Shift+P - mostra os comandos do editor<br />Ctrl+G - ir para uma específica linha do arquivo aberto<br />Ctrl+PgDown - navegar entre as abas/arquivos abertas (para a direita)<br />Ctrl+PgUp - navegar entre as abas/arquivos abertas (para a esquerda)<br />Ctrl+W - fechar arquivo atual aberto<br />Ctrl+Shift+E - Abrir painel do Explorer (explorador de arquivos)<br />Ctrl+Shift+F - buscar um termo em todos os arquivos da pasta atual e sub pastas<br />Ctrl+Shift+X - mostrar extensões instaladas<br />Ctrl+Shift+' - exibir terminal integrado</p>
+<p style="text-align: justify;"><br /><strong>Busca por todos os arquivos do projeto</strong><br />Um recurso bem útil que vem com o VSCode.<br />Para o VSCode um projeto é uma pasta. Quando abrimos uma pasta podemos efetuar uma busca de uma string por todos os arquivos da pasta aberta.<br />Para isso basta clicar na lupa acima e à esquerda.<br /><br /><strong>Dica</strong>:<br />Adding the &lt;script&gt;-tags at the bottom of the &lt;body&gt;-tags, ensures that the document's markup (also known as DOM), is fully loaded before our scripts are. This way we can assume it loaded when working with it in Javascript.<br /><br /></p>
+<p style="text-align: justify;">Agora veja o VSCode autocompletando o código do Phaser (4 níveis)</p>
+<p style="text-align: justify;">Quero digitar<br />game.physics.arcade.enable<br />Digito "g" e ele sugere game. Apenas teclo enter e digito um ponto colado<br />Digito "ph" e ele sugere physics. Teclo Enter e digito um ponto colado<br />Ele já traz "arcade" como primeira opção e teclo Enter e digito um ponto colado<br />Digito "e" e ele me sugere "enable". Teclo enter. Agora digito "(" e ele fecha.</p>
+<p style="text-align: justify;">Me ajuda muito. Veja abaixo as 4 fases:</p>
+<p style="text-align: justify;"><img src="http://backup/portal/images/vscode.jpeg" alt="" /></p>
+<p style="text-align: justify;"><strong>Dica:<br /></strong>O autocompletar só funciona num contexto requerido, ou seja, somente dentro de um dos métodos do jogo e não fora. Dentro de:<br />preload(), create(), update() ou render().</p>
+<p style="text-align: justify;"> </p>
+<p style="text-align: justify;"> </p>]]></description>
+			<category>Phaser</category>
+			<pubDate>Tue, 25 Jul 2017 16:32:00 -0300</pubDate>
+		</item>
+		<item>
+			<title>Framework Phaser</title>
+			<link>http://backup/portal/mobile/phaser/framework-phaser.html</link>
+			<guid isPermaLink="true">http://backup/portal/mobile/phaser/framework-phaser.html</guid>
+			<description><![CDATA[<p><strong>Framework Phaser</strong><br /><br />Introdução ao Framework Phaser <br /><br />O Phaser é um ótimo e sólido framework open source para a criação da jogos web e mobile em HTML5 e que usa JavaScript. Tem uma forte comunidade em torno dele e bons plugins, além de uma boa documentação e exemplos em seu site.<br /><br />Site oficial - <a href="http://phaser.io/Â">http://phaser.io/ </a> <br /><br /><strong>Alguns Recursos do site:</strong><br /><br />Novidades - <a href="http://phaser.io/newsÂ">http://phaser.io/news </a> <br />Últimas Novidades - <a href="http://phaser.io/">http://phaser.io/</a>  <br /><br /><strong>Documentação</strong><br /><br />    API Documentation - <a href="http://phaser.io/docs">http://phaser.io/docs</a>  <br />    Getting Started - <a href="http://phaser.io/tutorials/getting-started">http://phaser.io/tutorials/getting-started</a>  <br />    Making your first game - <a href="http://phaser.io/tutorials/making-your-first-phaser-game">http://phaser.io/tutorials/making-your-first-phaser-game</a>  <br />    Official Tutorials - <a href="http://phaser.io/learn/official-tutorials">http://phaser.io/learn/official-tutorials</a>  <br />    Vídeos - <a href="http://phaser.io/news/category/video">http://phaser.io/news/category/video</a>  <br />    Community Tutorials - <a href="http://phaser.io/learn/community-tutorials">http://phaser.io/learn/community-tutorials</a>  <br />    Online Code Editor - <a href="http://phaser.io/sandbox">http://phaser.io/sandbox</a>  <br />    Search Docs - <a href="http://phaser.io/learn/chains">http://phaser.io/learn/chains</a>  <br />    Phaser 3 Labs - <a href="http://phaser.io/labs">http://phaser.io/labs</a>  <br />    Code Examples - <a href="http://phaser.io/examples">http://phaser.io/examples</a>  <br />    Jogos publicados - <a href="http://phaser.io/news/category/game">http://phaser.io/news/category/game</a>  <br />    Books and Plugins - <a href="http://phaser.io/shop">http://phaser.io/shop</a>  <br />    Encontros - <a href="http://phaser.io/news/category/meetup">http://phaser.io/news/category/meetup</a>  <br />    Conferências - <a href="http://phaser.io/news/category/conference">http://phaser.io/news/category/conference</a>  <br />    Livros - <a href="http://phaser.io/shop/books">http://phaser.io/shop/books</a>  <br />    Plugins - <a href="http://phaser.io/shop/plugins">http://phaser.io/shop/plugins</a>  <br />    Cursos - <a href="http://phaser.io/shop/courses/zenva">http://phaser.io/shop/courses/zenva</a>  <br />    Suporte premiun - <a href="http://phaser.io/shop/premium-support">http://phaser.io/shop/premium-support</a>      <br /><br />Download - <a href="http://phaser.io/download">http://phaser.io/download</a>  <br />Clone - <a href="https://github.com/photonstorm/phaser/tree/v2.4.6">https://github.com/photonstorm/phaser/tree/v2.4.6</a>  <br />js - <a href="https://github.com/photonstorm/phaser/releases/download/v2.4.6/phaser.js">https://github.com/photonstorm/phaser/releases/download/v2.4.6/phaser.js</a>  <br />min.js - <a href="https://github.com/photonstorm/phaser/releases/download/v2.4.6/phaser.min.js">https://github.com/photonstorm/phaser/releases/download/v2.4.6/phaser.min.js</a>  <br />zip - <a href="https://github.com/photonstorm/phaser/archive/v2.4.6.zip">https://github.com/photonstorm/phaser/archive/v2.4.6.zip</a>  <br />tar.gz - <a href="https://github.com/photonstorm/phaser/archive/v2.4.6.tar.gz">https://github.com/photonstorm/phaser/archive/v2.4.6.tar.gz</a>  <br /><br /><strong>Iniciando</strong><br />    Faça o download, veja acima<br />    Iniciando em JavaScript - <a href="http://phaser.io/tutorials/getting-started/index">http://phaser.io/tutorials/getting-started/index</a>  <br />    Iniciando com TypeScript - <a href="http://phaser.io/tutorials/how-to-use-phaser-with-typescript">http://phaser.io/tutorials/how-to-use-phaser-with-typescript</a>  <br />    Criando projeto nas Nuvens - <a href="http://phaser.io/tutorials/getting-started/part3">http://phaser.io/tutorials/getting-started/part3</a>  <br />        JSBin - <a href="http://jsbin.com/">http://jsbin.com/</a>  <br />        codepen - <a href="http://codepen.io/">http://codepen.io/</a>  <br />        JSFiddle - <a href="https://jsfiddle.net/">https://jsfiddle.net/</a>  <br />        Cloud9 - <a href="https://c9.io/">https://c9.io/</a>  <br />        Sandbox - <a href="http://phaser.io/sandbox">http://phaser.io/sandbox</a>  <br />    Exemplos online - <a href="http://phaser.io/examples">http://phaser.io/examples</a>  <br />    Publicar - <a href="http://phaser.io/news/category/game">http://phaser.io/news/category/game</a>  <br /><br />Para começar criando jogos com o Phaser é importante criar um servidor web localmente, tendo em vista a exigência de alguns jogos, ou melhor, a exigência de segurança por parte dos navegadores. O Xampp.sf.net é uma boa alternativa.<br /><br />Novidades da versão 2.4.6 - <a href="http://phaser.io/download/stable">http://phaser.io/download/stable</a>  <br /><br />Logo - <a href="http://phaser.io/download/logo">http://phaser.io/download/logo</a>  <br /><br />Arquivo de Versões - <a href="http://phaser.io/download/archive">http://phaser.io/download/archive</a>  <br /><br /><strong>Comunidade</strong><br />    Receber newsletter - <a href="http://phaser.io/community/newsletter">http://phaser.io/community/newsletter</a>  <br />    Forum - <a href="http://phaser.io/community/forum">http://phaser.io/community/forum</a>  <br />    Twitter - <a href="http://phaser.io/community/twitter">http://phaser.io/community/twitter</a>  <br />    Canal de IRC - <a href="http://phaser.io/community/irc">http://phaser.io/community/irc</a>  <br /><br /><strong>Cursos de Phaser no Udemy</strong><br /><a href="https://www.udemy.com/courses/search/?ref=home&amp;src=ukw&amp;q=phaser&amp;sort=price-low-to-high">https://www.udemy.com/courses/search/?ref=home&amp;src=ukw&amp;q=phaser&amp;sort=price-low-to-high</a> </p>
+
+
+<p><strong>Ferramentas offline</strong><br /><br />Notepad++<br />gedit<br />Sublime Text<br />Intel XDK<br />WebStorm<br />VisualStudio para TypeScript<br />Brackets<br /><br /><strong>Download</strong><br />http://phaser.io/download/stable<br /><br />Instalar servidor web local<br />E usar no servidor<br /><br /><strong>HelloWorld</strong><br /><a href="https://github.com/photonstorm/phaser/raw/master/resources/tutorials/01%20Getting%20Started/hellophaser.zip">https://github.com/photonstorm/phaser/raw/master/resources/tutorials/01%20Getting%20Started/hellophaser.zip</a> <br /><br />Exemplos online<br /><a href="http://phaser.io/examples">http://phaser.io/examples</a> <br /><br />Para download<br /><a href="https://github.com/photonstorm/phaser-examples">https://github.com/photonstorm/phaser-examples</a> <br /><br /><strong>Criando Primeiro Jogo</strong><br /><a href="http://phaser.io/tutorials/making-your-first-phaser-game">http://phaser.io/tutorials/making-your-first-phaser-game</a> <br /><br /><strong>Tutoriais e Documentação</strong><br /><a href="http://phaser.io/learn">http://phaser.io/learn</a> <br /><a href="http://phaser.io/tutorials/getting-started">http://phaser.io/tutorials/getting-started</a> <br /><a href="http://phaser.io/learn/official-tutorials">http://phaser.io/learn/official-tutorials</a> <br /><a href="http://phaser.io/learn/community-tutorials">http://phaser.io/learn/community-tutorials</a> <br /><br /><strong>Editor de Código Online</strong><br /><a href="http://phaser.io/sandbox">http://phaser.io/sandbox</a> <br /><br /><strong>Forum</strong><br /><a href="https://groups.google.com/d/forum/phaser3-dev">https://groups.google.com/d/forum/phaser3-dev</a> <br /><br /></p>
+
+
+<p><strong>Gerando Build dos Jogos do Phaser</strong></p>
+
+
+<p>Existem algumas alternativas simples para gerar o build, ou seja, criar um APK, por exemplo, dos exemplos do Phaser. As duas melhores que conheço são o Phonegap e o Monaca.</p>
+
+
+<p>Basta criar um projeto com um deles e adaptar o fonte do Phaser para o projeto e depois efetuar o build.</p>
+
+
+<p>Veja aqui na seção de exemplos do Phaser. Foi assim que usei o Breakout do Phaser e gerei o build com o Phonegap.</p>
+
+
+<p> </p>
+
+
+<p><strong>Livro de Phaser para ler Online</strong><br />Phaser.js Game Design Workbook - <a href="https://leanpub.com/phaserjsgamedesignworkbook/read">https://leanpub.com/phaserjsgamedesignworkbook/read</a></p>
+
+
+<p><br /><strong>Multi-platform Games with PhaserJS</strong><br /><a href="http://createdineden.com/blog/post/multi-platform-games-with-phaserjs/">http://createdineden.com/blog/post/multi-platform-games-with-phaserjs/</a> </p>
+
+
+<p> </p>
+
+
+<p><strong>Intro To Phaser Part 1: Setting Up Your Dev Environment and Phaser - Em 3 partes</strong><br /><a href="https://developer.amazon.com/blogs/post/Tx1NQ9QEA4MWGTY/Intro-To-Phaser-Part-1-Setting-Up-Your-Dev-Environment-and-Phaser">https://developer.amazon.com/blogs/post/Tx1NQ9QEA4MWGTY/Intro-To-Phaser-Part-1-Setting-Up-Your-Dev-Environment-and-Phaser</a></p>
+
+
+<p> </p>]]></description>
+			<category>Phaser</category>
+			<pubDate>Tue, 11 Jul 2017 16:32:44 -0300</pubDate>
+		</item>
+		<item>
+			<title>Phaser - Exemplos</title>
+			<link>http://backup/portal/mobile/phaser/phaser-exemplos.html</link>
+			<guid isPermaLink="true">http://backup/portal/mobile/phaser/phaser-exemplos.html</guid>
+			<description><![CDATA[<p><img src="http://backup/portal/images/breakout.jpeg" /></p><p><strong>Exemplos testados do Phaser</strong><br /><br /></p>
+
+
+<p>Estes exemplos foram encontrados na internet. Apenas para o breakout, traduzi alguns termos e frases.</p>
+
+
+<p><strong>Bom exemplo de Piano criado com o Phaser</strong><br />Toque com mouse ou teclado<br /><a href="https://github.com/wasi0013/Phaser-Piano">https://github.com/wasi0013/Phaser-Piano</a></p>
+
+
+<p><br /><strong>Bom Jogo de Nave Espacial/spaceship</strong></p>
+
+
+<p><img src="http://backup/portal/images/spaceship.png" alt="" /></p>
+
+
+<p>Tutorial bem comentado, passo-a-passo e com código fonte em 5 partes:<br /><a href="http://codeperfectionist.com/articles/phaser-js-tutorial-building-a-polished-space-shooter-game-part-1/">http://codeperfectionist.com/articles/phaser-js-tutorial-building-a-polished-space-shooter-game-part-1/</a><br />Dica: apenas edite o game.js e remova a URL dos assets no preload(), deixando somente assim: game.load.image('starfield', 'assets/starfield.png');</p>
+
+
+<p><strong><br />Prince of Persia com Phaser</strong></p>
+
+
+<p><img src="http://backup/portal/images/princeofpersia.png" alt="" /></p>
+
+
+<p><a href="https://github.com/ultrabolido/PrinceJS">https://github.com/ultrabolido/PrinceJS</a></p>
+
+
+<p> </p>
+
+
+<p><strong>Breakout</strong></p>
+
+
+<p><img src="http://backup/portal/images/breakout.jpeg" alt="" /></p>
+
+
+<p>Fontes - <a title="BreakoutPhaser.zip" href="http://backup/portal/../down/mobile/phaser/BreakoutPhaser.zip">BreakoutPhaser.zip</a></p>
+
+
+<p>Binários para Android - <a title="Breakout-release.apk" href="http://backup/portal/../down/mobile/phonegap/Breakout-release.apk">Breakout-release.apk</a></p>
+
+
+<p>Original com tutorial passo-a-passo - <a href="https://github.com/end3r/Gamedev-Phaser-Content-Kit">https://github.com/end3r/Gamedev-Phaser-Content-Kit</a></p>
+
+
+<p>Eu traduzi o tutorial acima de forma livre e <a title="phaser_breakout.pdf" href="http://backup/portal/../down/mobile/phaser/phaser_breakout.pdf">compartilho o PDF aqui</a>. Mas recomendo apenas para quem tiver grande dificuldade com inglês, pois como é um texto grande pode conter error. Sempre confira com o original, especialmente o código.</p>
+
+
+<p> </p>
+
+
+<p><strong>Invader</strong></p>
+
+
+<p><a title="InvaderPhaser.zip" href="http://backup/portal/../down/mobile/phaser/InvaderPhaser.zip">InvaderPhaser.zip - fontes</a></p>
+
+
+<p><img src="http://backup/portal/images/phaserex1.png" alt="" /></p>
+
+
+<p> </p>
+
+
+<p><strong>PixelWar</strong></p>
+
+
+<p><a title="PixelWar.zip" href="http://backup/portal/../down/mobile/phaser/PixelWar.zip">PixelWar.zip - fontes</a></p>
+
+
+<p><img src="http://backup/portal/images/phaserex2.png" alt="" /></p>
+
+
+<p>Executáveis do Android - <a title="PixelWar-release.apk" href="http://backup/portal/../down/mobile/phaser/PixelWar-release.apk">PixelWar-release.apk </a>(criado com o PhoneGap)</p>
+
+
+<p> </p>
+
+
+<p><a title="StarstrunckPhaser.zip" href="http://backup/portal/../down/mobile/phaser/StarstrunckPhaser.zip">StarstrunckPhaser.zip</a></p>
+
+
+<p> <img src="http://backup/portal/images/phaserex3.png" alt="" /></p>
+
+
+<p><strong>Phaser Squares</strong></p>
+
+
+<p>Pequeno e didático exemplo de game com Phaser</p>
+
+
+<p><img src="http://backup/portal/images/squares.jpeg" alt="" /><br />Tutorial - <a href="https://loonride.com/learn/phaser/getting-started">https://loonride.com/learn/phaser/getting-started</a> <br />Fontes - <a href="https://github.com/Loonride/phaser-squares">https://github.com/Loonride/phaser-squares</a></p>
+
+
+<p> </p>]]></description>
+			<category>Phaser</category>
+			<pubDate>Tue, 11 Jul 2017 16:32:44 -0300</pubDate>
+		</item>
+		<item>
+			<title>Phaser - Tutorial</title>
+			<link>http://backup/portal/mobile/phaser/phaser-tutorial.html</link>
+			<guid isPermaLink="true">http://backup/portal/mobile/phaser/phaser-tutorial.html</guid>
+			<description><![CDATA[<h4 style="text-align: justify;">Phaser - Tutorial</h4>
+<p style="text-align: justify;">Algo que agrada quando começamos a estudar o framework Phaser é a quantidade de material encontrada em seu site e na internet em geral. Tem muito material e xemplos disponível e isso facilita o aprendizado.</p>
+<p style="text-align: justify;"><strong>Detalhando separadamente cada recurso</strong></p>
+<p style="text-align: justify;">A maior parte foi adaptada de<br /><a href="https://end3r.github.io/Gamedev-Phaser-Content-Kit/tutorial">https://end3r.github.io/Gamedev-Phaser-Content-Kit/tutorial</a> <br />e de <a href="https://end3r.github.io/Gamedev-Phaser-Content-Kit/demos/">https://end3r.github.io/Gamedev-Phaser-Content-Kit/demos/</a> <br /><br /><strong>Site oficial</strong><br /><a href="http://phaser.io">http://phaser.io</a> <br /><br /><strong>Download</strong><br /><a href="http://phaser.io/download/stable">http://phaser.io/download/stable</a> <br /><br /><strong>Servidor Web</strong><br />Para que os nossos exemplos/testes funcionem localmente, precisamos ter um servidor web local funcionando.<br /><br /><strong>Inicialização - include do js e criação do objeto game</strong></p>
+<pre class="language-markup"><code>&lt;head&gt;
+&lt;meta charset="utf-8" /&gt;
+&lt;title&gt;Gamedev Phaser Workshop - lesson 02: Scaling&lt;/title&gt;
+&lt;style&gt;* { padding: 0; margin: 0; }&lt;/style&gt;
+&lt;script src="http://backup/portal/js/phaser282.min.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;script&gt;
+var game = new Phaser.Game(480, 320, Phaser.AUTO, null, {preload: preload, create: create, update: update});</code></pre>
+<p style="text-align: justify;"><br /><br />Ou assim:<br />var game = new Phaser.Game(480, 320, Phaser.AUTO, null, {<br /> preload: preload, create: create, update: update<br />});<br /><br />A linha acima cria uma região/canvas na tela com 480x320<br /><br />function preload() {}<br />function create() {}<br />function update() {}<br /><br />preload - carrega na memória inicialmente todo o seu conteúdo (imagens, sons, vídeos, etc) para a memória RAM<br />create - quando o preload() finaliza seu trabalho então o create será executado, mas somente uma única vez<br />update - após o create finalizar sua execução então o update executa seu código a cada frame (em loop) durante toda a fase/state do jogo</p>
+<p style="text-align: justify;">state - no fase, cada parte do jogo é um state. Quando o jogo tem mais de um state, ao final de cada state ele chama o próximo state com:<br /> this.state.start('nomeProxState');</p>
+<p style="text-align: justify;">CDN<br />&lt;script src="//cdn.jsdelivr.net/phaser/2.2.2/phaser.min.js"&gt;&lt;/script&gt;<br />&lt;script src="//cdn.jsdelivr.net/phaser/2.6.2/phaser.min.js"&gt;&lt;/script&gt;<br />&lt;script src="//cdn.jsdelivr.net/phaser/latest/phaser.min.js"&gt;&lt;/script&gt;<br /><br /><br /><strong>Cor de fundo do canvas</strong><br /> game.stage.backgroundColor = '#eee';<br /><br /><br /><strong>Mudando a Escala do Canvas</strong><br />function preload() {<br /> game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;<br /> game.scale.pageAlignHorizontally = true;<br /> game.scale.pageAlignVertically = true;<br />}<br /><br />Tipos de escala:<br /><br /> NO_SCALE<br /> EXACT_FIT<br /> SHOW_ALL<br /> RESIZE<br /> USER_SCALE<br />Detalhes sobre cada um- <a href="https://end3r.github.io/Gamedev-Phaser-Content-Kit/tutorial/article02.html">https://end3r.github.io/Gamedev-Phaser-Content-Kit/tutorial/article02.html</a> <br /><br /><br /><strong>Mostrar um sprite na tela</strong><br /><br />Criar a variável/objeto<br /><br />var ball;// Acima do método preload()<br /><br />Adicionar o sprite no método preload():<br /> game.load.image('ball', 'img/ball.png');<br /><br /> ball - nome dado ao sprite, que será a referência para o mesmo no código<br /> img/ball.png - caminho do sprite<br /><br />Adicionar ao método create()<br /> image = game.add.sprite(50, 50, 'ball');<br /><br /> 50, 50 - coordenadas do sprite no canvas<br /> ball - nome do sprite<br /><br /><br /><strong>Mover objeto usando a física</strong><br /><br />function create() {<br /> // Habilitar física ao canvas<br /> game.physics.startSystem(Phaser.Physics.ARCADE);<br /> // Posicionar o sprite 'ball' no ponto 50, 50<br /> ball = game.add.sprite(50, 50, 'ball');<br /> // Habilitar física para o objeto 'ball'<br /> game.physics.enable(ball, Phaser.Physics.ARCADE);<br /> // Setar a velocidade para o objeto<br /> ball.body.velocity.set(150, 150);<br />}<br /><br /><br /><strong>Movimento simples, sem física</strong><br /><br />function update() {<br /> ball.x += 1;<br /> ball.y += 1;<br />}<br /><br />Adiciona 1 para as coordenadas x e y da ball<br /><br /><br /><strong>Bola rebatendo nas bordas com física</strong><br /><br />function create() {<br /> // Habilitar física ao canvas<br /> game.physics.startSystem(Phaser.Physics.ARCADE);<br /><br /> // Posicionar o sprite 'ball' no ponto 50, 50<br /> ball = game.add.sprite(50, 50, 'ball');<br /><br /> // Habilitar física para o objeto 'ball'<br /> game.physics.enable(ball, Phaser.Physics.ARCADE);<br /><br /> // Setar a velocidade para o objeto<br /> ball.body.velocity.set(150, 150);<br /><br /> // Rebater nas bordas<br /> ball.body.collideWorldBounds = true;<br /><br /> // Fazer a bola parar ao bater<br /> ball.body.bounce.set(1);<br />}<br /><br /><br /><strong>Adicionar jogador/paddle (raquete)</strong><br />Que será movida ao mover o mouse<br /><br />var paddle;<br /><br />function preload() {<br /> game.load.image('paddle', 'img/paddle.png');<br />}<br /><br />function create(){<br /> // Posicionando a raquete/paddle<br /> paddle = game.add.sprite(game.world.width*0.5, game.world.height-5, 'paddle');<br />}<br /><br /><br /><strong>Centralizar paddle e outros recursos</strong><br /><br /></p>
+<pre class="language-javascript"><code>No create()
+paddle.anchor.set(0.5,1);
+
+Colidir com a ball, habilitar a física
+game.physics.enable(paddle, Phaser.Physics.ARCADE);
+
+Checar a detecção de colisão no update()
+game.physics.arcade.collide(ball, paddle);
+
+Tornar o paddle fixo:
+paddle.body.immovable = true;
+
+Adicionar ao update para poder mover o paddle ao mover o mouse:
+paddle.x = game.input.x || game.world.width*0.5;
+
+Código completo:
+&lt;script&gt;
+var game = new Phaser.Game(480, 320, Phaser.AUTO, null, {preload: preload, create: create, update: update});
+
+var ball;
+var paddle;
+
+function preload() {
+// Escala
+game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
+game.scale.pageAlignHorizontally = true;
+game.scale.pageAlignVertically = true;
+
+// Cor de fundo
+game.stage.backgroundColor = '#eee';
+
+// Carregar Sprites
+game.load.image('ball', 'img/ball.png');
+game.load.image('paddle', 'img/paddle.png');
+}
+function create() {
+//Física
+game.physics.startSystem(Phaser.Physics.ARCADE);
+ball = game.add.sprite(game.world.width*0.5, game.world.height-25, 'ball');
+ball.anchor.set(0.5);
+game.physics.enable(ball, Phaser.Physics.ARCADE);
+
+// Velocidade
+ball.body.velocity.set(150, -150);
+
+// Colisão
+ball.body.collideWorldBounds = true;
+
+// Para quando bater
+ball.body.bounce.set(1);
+
+paddle = game.add.sprite(game.world.width*0.5, game.world.height-5, 'paddle');
+paddle.anchor.set(0.5,1);
+
+// Habilitar física ao paddle
+game.physics.enable(paddle, Phaser.Physics.ARCADE);
+
+// Deixá-lo imobilizado
+paddle.body.immovable = true;
+}
+function update() {
+game.physics.arcade.collide(ball, paddle);
+paddle.x = game.input.x || game.world.width*0.5;
+}
+&lt;/script&gt;</code></pre>
+<p style="text-align: justify;"><br /><br /><strong>Posicionando os tijolos/bricks</strong><br /><br />Criar as variáveis<br />var bricks;<br />var newBrick;<br />var brickInfo;<br /><br />Adicionar ao preload():<br />game.load.image('brick', 'img/brick.png');<br /><br />Adicionar ao create():<br />initBricks();<br /><br />Criar uma nova função nno final do script:</p>
+<pre class="language-javascript"><code>function initBricks() {
+    brickInfo = {
+    width: 50,
+    height: 20,
+    count: {
+    row: 3,
+    col: 7
+    },
+    offset: {
+        top: 50,
+        left: 60
+    },
+    padding: 10
+    }
+    bricks = game.add.group();
+    for(c=0; c&lt;brickInfo.count.col; c++) {
+        for(r=0; r&lt;brickInfo.count.row; r++) {
+            var brickX = (c*(brickInfo.width+brickInfo.padding))+brickInfo.offset.left;
+            var brickY = (r*(brickInfo.height+brickInfo.padding))+brickInfo.offset.top;
+            newBrick = game.add.sprite(brickX, brickY, 'brick');
+            game.physics.enable(newBrick, Phaser.Physics.ARCADE);
+            newBrick.body.immovable = true;
+            newBrick.anchor.set(0.5);
+            bricks.add(newBrick);
+        }
+    }
+}</code></pre>
+<p style="text-align: justify;">Os dois for acima são os responsáveis principais pelo posicionamento de cada tijolo.<br />Ao final teremos 3 linhas por 7 colunas de tijolos na tela.<br /><br /><br /><strong>Detectando a colisão entre a bola e os tijolos e eliminar tijolos</strong><br /><br />Adicionar ao update():<br /> game.physics.arcade.collide(ball, bricks, ballHitBrick);<br /> paddle.x = game.input.x || game.world.width*0.5;<br /><br />Criar esta função no final do script:<br />function ballHitBrick(ball, brick) {<br /> brick.kill();<br />}<br /><br />Veja mais detalhes em:<br /><a href="https://end3r.github.io/Gamedev-Phaser-Content-Kit/tutorial/">https://end3r.github.io/Gamedev-Phaser-Content-Kit/tutorial/</a> <br /><a href="http://phaser.io/examples">http://phaser.io/examples</a> <br /><br />Podemos baixar todos os exemplos do Phaser:<br /><a href="https://github.com/photonstorm/phaser-examples">https://github.com/photonstorm/phaser-examples</a> <br /><br />Para testes offline. Basta criar um arquivo html na pasta examples, apontando para o respectivo exemplo e para um phaser.js local.<br /><br /><br /><strong>States</strong><br />Um state representa uma parte do jogo, um menu, o jogo, o game-over, etc.<br />Cada state no Phaser tem os métodos preload, create, update e o render.<br /><br />Dica: quando criar o jogo e se referir aos assets, o faça de forma relativa (sem a barra inicial), mas apenas relativa, para que funcione em quanquer servidor, inclusive localmente.<br /> /assets/teste.png - absoluto<br /> assets/teste.png - relativo<br /><br /><br /><strong>Controlar jogador pelas setas/teclado</strong><br /><br />Criar a variável<br />var cursors;<br /><br />Adicionar ao preload():<br />cursors = game.input.keyboard.createCursorKeys();<br /><br />Isto popula o objeto cursors com 4 propriedades: up, down, left, right, que são todas elas instências do objeto Phaser.Key. Então tudo que precisamos fazer é adicionar isso ao loop update(): <br /><br /></p>
+<pre class="language-javascript"><code> // Reset the players velocity (movement)
+player.body.velocity.x = 0;
+
+if (cursors.left.isDown)
+{
+// Move to the left
+player.body.velocity.x = -150;
+
+player.animations.play('left');
+}
+else if (cursors.right.isDown)
+{
+// Move to the right
+player.body.velocity.x = 150;
+
+player.animations.play('right');
+}
+else
+{
+// Stand still
+player.animations.stop();
+
+player.frame = 4;
+}
+
+// Allow the player to jump if they are touching the ground. Permitir que o jogador salte caso esteja tocando o solo
+if (cursors.up.isDown &amp;&amp; player.body.touching.down)
+{
+player.body.velocity.y = -350;
+}
+</code></pre>
+<p style="text-align: justify;"><br /><br /><strong>Sistema de Pontos/Score</strong><br /><br />Criar as variáveis<br />var scoreText;<br />var score = 0;<br /><br />Adicionar para o create():<br />scoreText = game.add.text(5, 5, 'Points: 0', { font: '18px Arial', fill: '#0095DD' });<br /><br />Adicionar ao update():<br />game.physics.arcade.collide(ball, bricks, ballHitBrick);<br /><br />Adicionar ao final do script:<br />function ballHitBrick(ball, brick) {<br /> brick.kill();// Destroi tijolo que a bola toca<br /> score += 10;<br /> scoreText.setText('Points: '+score);<br />}<br /><br /><br /><strong>Sistema de Vidas/Lives</strong><br /><br />Adicionar as variáveis na área de variáveis globais:</p>
+<pre class="language-javascript"><code>var lives = 3;
+var livesText;
+var lifeLostText;
+
+Adicionar ao create():
+textStyle = { font: '18px Arial', fill: '#0095DD' };
+scoreText = game.add.text(5, 5, 'Pontos: 0', textStyle);
+livesText = game.add.text(game.world.width-5, 5, 'Vidas: '+lives, textStyle);
+livesText.anchor.set(1,0);
+lifeLostText = game.add.text(game.world.width*0.5, game.world.height*0.5, 'Você perdeu uma vida. Clique para continuar', textStyle);
+lifeLostText.anchor.set(0.5);
+lifeLostText.visible = false;
+ball.events.onOutOfBounds.add(ballLeaveScreen, this);
+
+Adicionar ao final do script:
+function ballLeaveScreen() {
+lives--;
+if(lives) {
+livesText.setText('Vidas: '+lives);
+lifeLostText.visible = true;
+ball.reset(game.world.width*0.5, game.world.height-25);
+paddle.reset(game.world.width*0.5, game.world.height-5);
+game.input.onDown.addOnce(function(){
+lifeLostText.visible = false;
+ball.body.velocity.set(150, -150);
+}, this);
+}
+else {
+alert('Você perdeu, game over!');
+location.reload();
+}
+}</code></pre>
+<p style="text-align: justify;"><br /><br /><strong>Game Over</strong><br /><br />Adicionar ao create():<br />game.physics.arcade.checkCollision.down = false;<br />ball.checkWorldBounds = true;<br />ball.events.onOutOfBounds.add(function(){<br /> alert('Game over!');<br /> location.reload();<br />}, this);<br /><br /><br /><strong>Jogo Finalizado/Win the Game</strong><br /><br />Adicionar ao update():<br />game.physics.arcade.collide(ball, bricks, ballHitBrick);<br /><br /><br />adicionar ao final do script:</p>
+<p style="text-align: justify;"><br />function ballHitBrick(ball, brick) {<br /> brick.kill();<br /> score += 10;<br /> scoreText.setText('Points: '+score);<br /> if(score === brickInfo.count.row*brickInfo.count.col*10) {<br /> alert('You won the game, congratulations!');<br /> location.reload();<br /> }<br />}<br /><br /><strong>Mais dicas e recursos:</strong><br /><a href="https://end3r.github.io/Gamedev-Phaser-Content-Kit/tutorial/">https://end3r.github.io/Gamedev-Phaser-Content-Kit/tutorial/</a> <br /><br /></p>
+<p style="text-align: justify;"><strong>Se quizer consultar a API com detalhes:</strong><br /><a href="http://phaser.io/docs/2.6.2/index">http://phaser.io/docs/2.6.2/index</a></p>
+<p style="text-align: justify;"><br /><strong>Exemplos com rotinas simples para testes deste tutorial</strong><br /><a title="phaser_exs.zip" href="http://backup/portal/down/mobile/phaser/phaser_exs.zip">phaser_exs</a><br /><a title="phaser_exs2.zip" href="http://backup/portal/down/mobile/phaser/phaser_exs2.zip">phaser_exs2</a></p>
+<p style="text-align: justify;"> </p>]]></description>
+			<category>Phaser</category>
+			<pubDate>Tue, 11 Jul 2017 16:32:44 -0300</pubDate>
+		</item>
+	</channel>
+</rss>

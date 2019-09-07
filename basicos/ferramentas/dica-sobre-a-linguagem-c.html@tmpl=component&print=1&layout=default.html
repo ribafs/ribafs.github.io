@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br" dir="ltr">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <base href="" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Ribamar FS" />
+	<meta name="robots" content="noindex, nofollow" />
+	<meta name="description" content="Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros." />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>Dica sobre a linguagem C: - RibaFS Portal</title>
+	<link href="http://ribafs.org/portal/basicos/ferramentas/dica-sobre-a-linguagem-c.html?tmpl=component&amp;print=1&amp;layout=default" rel="canonical" />
+	<link href="../../templates/shaper_helix3/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../../favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<script src="../../media/jui/js/jquery.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../media/jui/js/jquery-noconflict.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../media/jui/js/jquery-migrate.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="http://backup/portal/media/system/js/caption.js?d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script type="text/javascript">
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+	</script>
+	<meta property="og:url" content="http://backup/portal/basicos/ferramentas/dica-sobre-a-linguagem-c.html" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Dica sobre a linguagem C:" />
+	<meta property="og:description" content="Dica sobre a linguagem C Precisei criar uma máquina virtual com o Windows dentro do VirtualBox no Linux para minha esposa usar o MS Office. Então para faci..." />
+
+   	<link rel="stylesheet" href="../../media/jui/css/bootstrap.min.css" type="text/css" />
+	<link rel="stylesheet" href="../../templates/shaper_helix3/css/frontend-edit.css" type="text/css" />
+    <link rel="stylesheet" href="../../templates/shaper_helix3/css/template.css" type="text/css" />
+</head>
+<body class="contentpane">
+	<div id="system-message-container">
+	</div>
+
+	
+
+<article class="item item-page" itemscope itemtype="http://schema.org/Article">
+	<meta itemprop="inLanguage" content="pt-BR" />
+	
+	
+
+	<div class="entry-header">
+		<span class="post-format"><i class="fa fa-thumb-tack"></i></span>
+		
+					<h2 itemprop="name">
+									Dica sobre a linguagem C:							</h2>
+												</div>
+
+						<div id="pop-print" class="btn hidden-print">
+				<a href="dica-sobre-a-linguagem-c.html#" onclick="window.print();return false;">			<span class="icon-print" aria-hidden="true"></span>
+		Imprimir	</a>			</div>
+				
+	
+	
+				
+	
+			<div itemprop="articleBody">
+		<h4>Dica sobre a linguagem C</h4>
+
+<p><br />Precisei criar uma máquina virtual com o Windows dentro do VirtualBox no Linux para minha esposa usar o MS Office.<br />Então para facilitar seu acesso criei um script shell que abre a máquina virtual e o coloquei na área de trabalho.<br />Acontece que ao clicar no script abre-se uma janela com 4 opções. Eu gostaria de que ao clicar já abrisse o VirtualBox com a VM.<br />Lembrei de criar um executável que chamasse o script e então fui pesquisar em como fazer isso na lnguagem C.<br /><br /><strong>Criei o script shell</strong><br /><br />nano win7.sh<br /><br />vboxmanage startvm Windows7</p>
+
+<p><strong>Setei permissão de execução</strong><br />chmod +x win7.sh<br /><br /><br /><strong>Criei o fonte em C:</strong><br /><br />nano windows7.c<br /><br />#include &lt;stdio.h&gt;<br />#include &lt;stdlib.h&gt;<br />int main(int argc, char const *argv[])<br />{<br />    puts("Executar o seguinte script :");<br />    puts("/home/ribafs/win7.sh");<br />    puts("Iniciando agora...");<br />    system("/home/ribafs/win7.sh");    //it will run the script inside the c code. <br />    return 0;<br />}<br /><br /><strong>Compilando</strong><br />g++ windows7.c -o windows7<br /><br /><strong>Executando:</strong><br /><br />./windows7<br /><br />Ou com um clique na área de trabalho.<br /><br />Beleza. Assim ele já abre com um único clique sem abrir janela de confirmação.<br />Obs.: abre com um único clique porque configurei o nemo para abrir com clique único.</p>
+
+<p> </p> 	</div>
+
+	
+	
+				
+	
+	
+	
+</article>
+
+</body>
+</html>

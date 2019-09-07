@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br" dir="ltr">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <base href="" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Ribamar FS" />
+	<meta name="robots" content="noindex, nofollow" />
+	<meta name="description" content="Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros." />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>Convenções do CakePHP - RibaFS Portal</title>
+	<link href="http://ribafs.org/portal/frameworks/cakephp-3/convencoes/convencoes-do-cakephp.html?tmpl=component&amp;print=1&amp;layout=default" rel="canonical" />
+	<link href="../../../templates/shaper_helix3/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../../../favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<script src="../../../media/jui/js/jquery.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery-noconflict.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery-migrate.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="http://backup/portal/media/system/js/caption.js?d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script type="text/javascript">
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+	</script>
+	<meta property="og:url" content="http://backup/portal/frameworks/cakephp-3/convencoes/convencoes-do-cakephp.html" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Convenções do CakePHP" />
+	<meta property="og:description" content="C o nvenç õ es A equipe do CakePHP é grande admiradora de convenção sobre configuração. Seguindo convenções você recebe funcionalidades gratuitamente e lib..." />
+
+   	<link rel="stylesheet" href="../../../media/jui/css/bootstrap.min.css" type="text/css" />
+	<link rel="stylesheet" href="../../../templates/shaper_helix3/css/frontend-edit.css" type="text/css" />
+    <link rel="stylesheet" href="../../../templates/shaper_helix3/css/template.css" type="text/css" />
+</head>
+<body class="contentpane">
+	<div id="system-message-container">
+	</div>
+
+	
+
+<article class="item item-page" itemscope itemtype="http://schema.org/Article">
+	<meta itemprop="inLanguage" content="pt-BR" />
+	
+	
+
+	<div class="entry-header">
+		<span class="post-format"><i class="fa fa-thumb-tack"></i></span>
+		
+					<h2 itemprop="name">
+									Convenções do CakePHP							</h2>
+												</div>
+
+						<div id="pop-print" class="btn hidden-print">
+				<a href="convencoes-do-cakephp.html#" onclick="window.print();return false;">			<span class="icon-print" aria-hidden="true"></span>
+		Imprimir	</a>			</div>
+				
+	
+	
+				
+	
+			<div itemprop="articleBody">
+		<p style="margin-right: -0.04cm; text-align: justify;"><strong>C</strong><strong>o</strong><strong>nvenç</strong><strong>õ</strong><strong>es</strong></p>
+
+<p style="margin-right: 0.64cm; text-align: justify;">A equipe do CakePHP é grande admiradora de convenção sobre configuração. Seguindo convenções você recebe funcionalidades gratuitamente e libera a si mesmo do pesadelo de manter arquivos de configuração.</p>
+
+<p style="margin-right: 0.75cm; text-align: justify;"><strong>Avi</strong><strong>so</strong> <strong>Important</strong><strong>e</strong>: Portanto, antes de começar a trabalhar com CakePHP é muito importante conhecer suas convenções para tirar delas enormes vantagens. Caso não as use o CakePHP não será de muita ajuda.</p>
+
+<p style="margin-right: -0.04cm; text-align: justify;"><br /> <strong>Controllers</strong></p>
+
+<p style="margin-right: 1.22cm; text-align: justify;">Nomes de classes tipo Controller devem estar no plural, ser CamelCase e terminarem com o sufixo Controller.</p>
+
+<p style="margin-right: -0.04cm; text-align: justify;">Exemplos: ClientesController, PeopleController e LatestArticlesController</p>
+
+<p style="margin-right: 0.7cm; text-align: justify;"><em><strong>Actions</strong></em> - Métodos public nos controllers são chamados de actions e se comunicam com views com mesmo nome que eles e extensão .ctp.</p>
+
+<p style="margin-right: 0.85cm; text-align: justify;">Um exemplo: o action Controller/ClientesController/index() é mapeado automaticamente para a view src/Template/Clientes/index.ctp.</p>
+
+<p style="margin-right: -0.04cm; text-align: justify;">Métodos protected ou private não podem ser acessados via Routing.</p>
+
+<p style="margin-right: -0.04cm; text-align: justify;"><strong>Considerações</strong> <strong>so</strong><strong>b</strong><strong>re</strong> <strong>URL</strong> <strong>para</strong> <strong>n</strong><strong>omes</strong> <strong>de</strong> <strong>control</strong><strong>l</strong><strong>ers</strong></p>
+
+<p style="margin-right: 2.33cm; text-align: justify;">O ClientesController que está no arquivo ClientesController.php é chamado pelo navegador com:</p>
+
+<p style="margin-right: -0.04cm; text-align: justify;">http://localhost/aplicacao/clientes</p>
+
+<p style="text-align: justify;"> </p>
+
+<p style="margin-right: 4.91cm; text-align: justify;">Nomes de controllers com palavras compostas podem ficar assim: • /redApples</p>
+
+<p style="margin-right: 14.73cm; text-align: justify;">• /RedApples • /Red_apples • /red_apples</p>
+
+<p style="margin-right: -0.04cm; text-align: justify;">Todos resolverão com o controller RedApples.</p>
+
+<p style="margin-right: -0.04cm; text-align: justify;">/red-apples/go-pick resolve para o action RedApplesController::goPick()</p>
+
+<p style="text-align: justify;"> </p>
+
+<p style="margin-right: -0.04cm; text-align: justify;"><em><strong>Criar</strong></em> <em><strong>links:</strong></em></p>
+
+<p style="margin-right: -0.04cm; text-align: justify;">$this-&gt;Html-&gt;link('link-title', [</p>
+
+<p style="margin-left: 1.25cm; margin-right: 9.17cm; text-align: justify;">'prefix' =&gt; 'MyPrefix' // CamelCased 'plugin' =&gt; 'MyPlugin', // CamelCased</p>
+
+<p style="margin-left: 1.25cm; margin-right: 7.34cm; text-align: justify;">'controller' =&gt; 'ControllerName', // CamelCased 'action' =&gt; 'actionName' // camelCased</p>
+
+<p style="margin-right: -0.04cm; text-align: justify;">]</p>
+
+<p style="margin-right: -0.04cm; text-align: justify;"><strong>Namespa</strong><strong>c</strong><strong>es</strong></p>
+
+<p style="margin-right: 1.7cm; text-align: justify;">Todas as classes do core do CakePHP agora (3.x) usam namespaces e seguem as especificações de autoload (auto-carregamento) do <strong>P</strong><strong>S</strong><strong>R-</strong><strong>4</strong>.</p>
+
+<p style="margin-right: 13.3cm; text-align: justify;">Por exemplo src/Cache/Cache.php</p>
+
+<p style="margin-right: 13.7cm; text-align: justify;">tem o namespace Cake\Cache\Cache</p>
+
+<p style="margin-right: 0.42cm; text-align: justify;">Constantes globais e métodos de helpers como __() e debug() não usam namespaces por questões de conveniência.</p>
+
+<p style="text-align: justify;"> </p>
+
+<p style="margin-right: -0.04cm; text-align: justify;"><strong>Nomes</strong> <strong>de</strong> <strong>arqu</strong><strong>i</strong><strong>vos</strong> <strong>e</strong> <strong>Cl</strong><strong>a</strong><strong>sses:</strong></p>
+
+<p style="margin-right: 2.26cm; text-align: justify;">Classe KissesAndHugsController está no arquivo KissesAnd-HugsController.php Classe ClientesController está no arquivo ClientesController.php.</p>
+
+<p style="margin-right: -0.04cm; text-align: justify;"><strong>Alguns exemplos de classes e seus arquivos:</strong></p>
+
+<p style="text-align: justify;">• O Controller class KissesAndHugsController deve estar no arquivo com nome - KissesAndHugsController.php</p>
+
+<p style="text-align: justify;">• O Component class MyHandyComponent deve estar no arquivo com nome - MyHandyComponent.php</p>
+
+<p style="text-align: justify;">• A Table class OptionValuesTable deve estar no arquivo com nome OptionValuesTable.php</p>
+
+<p style="text-align: justify;">• A Entity class OptionValue deve estar no arquivo com nome OptionValue.php</p>
+
+<p style="text-align: justify;">• O Behavior class EspeciallyFunkableBehavior deve estar no arquivo com nome EspeciallyFunkableBehavior.php</p>
+
+<p style="text-align: justify;">• A View class SuperSimpleView would deve estar no arquivo com nome SuperSimpleView.php</p>
+
+<p style="text-align: justify;">• O Helper class BestEverHelper deve estar no arquivo com nome BestEverHelper.php</p>
+
+<p style="margin-right: -0.04cm; text-align: justify;"> </p>
+
+<p style="margin-right: -0.04cm; text-align: justify;"><strong>Mod</strong><strong>e</strong><strong>l</strong> <strong>e</strong> <strong>Bancos</strong> <strong>d</strong><strong>e</strong> <strong>D</strong><strong>ados</strong></p>
+
+<p style="margin-right: -0.04cm; text-align: justify;"><em><strong>Nomes</strong></em> <em><strong>de</strong></em> <em><strong>clas</strong></em><em><strong>s</strong></em><em><strong>es</strong></em> <em><strong>T</strong></em><em><strong>a</strong></em><em><strong>ble</strong></em> - são no plural e CamelCase</p>
+
+<p style="margin-right: -0.04cm; text-align: justify;"><strong>Chave</strong> <strong>Pri</strong><strong>m</strong><strong>ária</strong></p>
+
+<p style="margin-right: 0.85cm; text-align: justify;">Toda tabela, obrigatoriamente deve ter uma chave primária e o nome da chave deve ser id.</p>
+
+<p style="margin-right: 3.41cm; text-align: justify;">O Cake tem um recurso online importante para mostrar o plural de nomes: <a href="http://inflector.cakephp.org/"><u>http://infle</u><u>c</u><u>to</u><u>r</u><u>.</u><u>c</u><u>a</u><u>k</u><u>e</u><u>p</u><u>hp.org/</u></a></p>
+
+<p style="margin-right: -0.04cm; text-align: justify;"><em><strong>Nomes</strong></em> <em><strong>v</strong></em><em><strong>álido</strong></em><em><strong>s</strong></em>: Clientes, Pelople, BigPeople e ReallyBigPeople</p>
+
+<p style="margin-right: 1.12cm; text-align: justify;"><em><strong>Nomes</strong></em> <em><strong>de</strong></em> <em><strong>tabe</strong></em><em><strong>l</strong></em><em><strong>as</strong></em> são em minúsculas, no plural e palavras compostas separadas por sublinhado. Nomes de tabelas para os acima:</p>
+
+<p style="margin-right: -0.04cm; text-align: justify;">clientes, people, big_people e really_big_people</p>
+
+<p style="margin-right: -0.04cm; text-align: justify;">A convenção é para usar tabelas e campos com nomes na língua inglesa.</p>
+
+<p style="margin-right: 0.94cm; text-align: justify;">Se por alguma razão precisar usar nomes de tabelas em outro idioma, então você deve usar a classe utility:</p>
+
+<p style="margin-right: -0.04cm; text-align: justify;">Cake\Utility\Inflector</p>
+
+<p style="margin-right: -0.04cm; text-align: justify;"><strong>Nomes</strong> <strong>de</strong> <strong>c</strong><strong>a</strong><strong>m</strong><strong>p</strong><strong>os</strong> compostos são separados por sublinhado: first_name.</p>
+
+<p style="text-align: justify;"> </p>
+
+<p style="margin-right: 0.44cm; text-align: justify;"><em><strong>Nomes</strong></em> <em><strong>de</strong></em> <em><strong>c</strong></em><em><strong>a</strong></em><em><strong>m</strong></em><em><strong>p</strong></em><em><strong>os</strong></em> são em minúsculas e quando compostos por palavras compostas são separados por sublinhado.</p>
+
+<p style="margin-right: 1.07cm; text-align: justify;">Se usarmos os <strong>c</strong><strong>a</strong><strong>m</strong><strong>p</strong><strong>os</strong> <strong>usern</strong><strong>a</strong><strong>me</strong> <strong>e</strong> <strong>p</strong><strong>a</strong><strong>ssword</strong> (com estes nomes) na tabela users, o Cake deve estar apto para auto-configurar muitas coisas para nós, quando implementando o user login.</p>
+
+<p style="margin-right: 1.01cm; text-align: justify;">Obs.: quando usar autenticação use o tamanho do campo password com varchar(255). Também ajuda adicionar um campo chamado role na tabela users.</p>
+
+<p style="text-align: justify;"> </p>
+
+<p style="margin-right: -0.04cm; text-align: justify;"><strong>Relacionamentos</strong></p>
+
+<p style="margin-right: 0.97cm; text-align: justify;">Chave estrangeira nos relacionamentos hasMany, belongsToou hasOne são reconhecidas por default com o nome (singular) da tabela relacionada seguida de "_id".</p>
+
+<p style="margin-right: 2.75cm; text-align: justify;">Exemplos: groups e users. Em users o campo group_id para relacionar. Relacionamento entre articles e users. Em articles adicionar o campo user_id.</p>
+
+<p style="margin-right: -0.04cm; text-align: justify;"><strong>Relacionamentos</strong></p>
+
+<p style="margin-right: -0.04cm; text-align: justify;">Um - Muitos - hasMany</p>
+
+<p style="margin-right: 2.92cm; text-align: justify;">Se relacionamos Articles com User, inserimos um campo user_id em articles. No model UsersTable</p>
+
+<p style="margin-right: 8.18cm; text-align: justify;">Um Users pode conter muitos (hasMany) Articles Muitos Articles belongsTo Users</p>
+
+<p style="margin-right: -0.04cm; text-align: justify;">Ver documentação para detalhes.</p>
+
+<p style="margin-left: 0.01cm; margin-right: -0.04cm; text-align: justify;"><strong>Relacionamento Muitos para Muitos</strong></p>
+
+<p style="margin-left: 0.01cm; margin-right: 0.5cm; text-align: justify;">Exemplo: Para relacionamento muitos para muitos de platillos com cocineros, criaremos a tabela</p>
+
+<p style="margin-left: 0.01cm; margin-right: -0.04cm; text-align: justify;">create table cocineros_platillos(</p>
+
+<p style="margin-left: 1.26cm; margin-right: 7.95cm; text-align: justify;">id int unsigned auto_increment primary key, cocinero_id int(11) not null,</p>
+
+<p style="margin-left: 0.01cm; margin-right: 11.59cm; text-align: justify;">platillo_id int(11) not null );</p>
+
+<p style="text-align: justify;"> </p>
+
+<p style="margin-left: 0.01cm; margin-right: -0.04cm; text-align: justify;"><strong>T</strong><strong>i</strong><strong>p</strong><strong>os</strong> <strong>de</strong> <strong>R</strong><strong>elaciona</strong><strong>m</strong><strong>en</strong><strong>t</strong><strong>os</strong></p>
+
+<table style="width: 465px;" cellspacing="0" cellpadding="0">
+
+<tbody>
+
+<tr>
+
+<td>
+
+<p style="margin-left: 0.06cm; margin-right: -0.04cm;">one to one</p>
+
+</td>
+
+<td>
+
+<p style="margin-left: 0.05cm; margin-right: -0.04cm;">hasOne</p>
+
+</td>
+
+<td>
+
+<p style="margin-left: 0.05cm; margin-right: -0.04cm;">Auser has one profile.</p>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<p style="margin-left: 0.06cm; margin-right: -0.04cm;">one to many</p>
+
+</td>
+
+<td>
+
+<p style="margin-left: 0.05cm; margin-right: -0.04cm;">hasMany</p>
+
+</td>
+
+<td>
+
+<p style="margin-left: 0.05cm; margin-right: -0.04cm;">Auser can have multiple articles.</p>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<p style="margin-left: 0.06cm; margin-right: -0.04cm;">many to one</p>
+
+</td>
+
+<td>
+
+<p style="margin-left: 0.05cm; margin-right: -0.04cm;">belongsTo</p>
+
+</td>
+
+<td>
+
+<p style="margin-left: 0.05cm; margin-right: -0.04cm;">Many articles belong to a user.</p>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<p style="margin-left: 0.06cm; margin-right: -0.04cm;">many to many</p>
+
+</td>
+
+<td>
+
+<p style="margin-left: 0.05cm; margin-right: -0.04cm;">belongsToMany</p>
+
+</td>
+
+<td>
+
+<p style="margin-left: 0.05cm; margin-right: -0.04cm;">Tags belong to many articles.</p>
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<p style="text-align: justify;"> </p>
+
+<p style="margin-left: 0.01cm; margin-right: -0.04cm; text-align: justify;">Para uma classe Bakers teremos uma chave estrangeira assim: baker_id.</p>
+
+<p style="margin-left: 0.01cm; margin-right: -0.04cm; text-align: justify;">Para uma tabela como category_types a chave estrangeira será category_type_id.</p>
+
+<p style="margin-left: 0.01cm; margin-right: 0.61cm; text-align: justify;">Nomes de campos especiais, que levam o Cake a tomar iniciativas importantes para nós:</p>
+
+<p style="margin-left: 0.01cm; margin-right: 15.77cm; text-align: justify;">title<br /> created<br /> modified</p>
+
+<p style="text-align: justify;"> </p>
+
+<p style="margin-left: 0.01cm; margin-right: -0.04cm; text-align: justify;"><strong>Convenções</strong> <strong>p</strong><strong>ara</strong> <strong>as</strong> <strong>Vi</strong><strong>ews</strong></p>
+
+<p style="margin-left: 0.01cm; margin-right: -0.04cm; text-align: justify;">As views tem nomes de arquivos em minúsculas com extensão .ctp.</p>
+
+<p style="margin-left: 0.01cm; margin-right: 1.48cm; text-align: justify;">O método getReady() do conroller PeopleController está associado ao template/view src/Template/People/get_ready.ctp.</p>
+
+<p style="margin-left: 0.01cm; margin-right: -0.04cm; text-align: justify;"><strong>Ex</strong><strong>e</strong><strong>m</strong><strong>p</strong><strong>lo</strong> <strong>gera</strong><strong>l</strong><strong>:</strong></p>
+
+<p style="margin-left: 0.01cm; margin-right: -0.04cm; text-align: justify;">• Database table: “people”</p>
+
+<p style="margin-left: 0.01cm; margin-right: 4.07cm; text-align: justify;">• Table class: “PeopleTable”, found at src/Model/Table/PeopleTable.php • Entity class: “Person”, found at src/Model/Entity/Person.php</p>
+
+<p style="margin-left: 0.01cm; margin-right: 2.06cm; text-align: justify;">• Controller class: “PeopleController”, found at src/Controller/PeopleController.php • View template, found at src/Template/People/index.ctp</p>
+
+<p style="margin-left: 0.01cm; margin-right: 0.71cm; text-align: justify;">Usando essas convenções o CakePHP sabe que uma requisição para <a href="http://localhost/aplicativo/people"><u>http://lo</u><u>c</u><u>alhost/ap</u><u>l</u><u>i</u><u>c</u><u>ati</u><u>v</u><u>o/p</u><u>e</u><u>ople</u> </a>mapeia para uma chamada da função index() do PeopleController, onde o model Person está automaticamente disponível (e automaticamente vinculado à tabela people do banco) e renderizada para um arquivo src/Template/People/index.ctp. Nenhum desses relacionamentos precisa ser configurado por qualquer meio mas apenas pela criação de arquivos e classes que precisamos criar sempre seguindo as convenções.</p>
+
+<p style="margin-left: 16.28cm; margin-right: -0.04cm; text-align: justify;"> </p>
+
+<p style="margin-right: -0.04cm; text-align: justify;"><strong>Arquivos</strong> <strong>da</strong> <strong>A</strong><strong>p</strong><strong>l</strong><strong>i</strong><strong>ca</strong><strong>ç</strong><strong>ão</strong></p>
+
+<p style="margin-right: -0.04cm; text-align: justify;">Todos os arquivos da aplicação que criamos ficam na pasta src.</p>
+
+<p style="margin-right: -0.04cm; text-align: justify;"><strong>Criptografia</strong></p>
+
+<p style="margin-right: -0.04cm; text-align: justify;">Por padrão o CakePHP 3.x usa a criptografia bcrypt para proteger as senhas.</p>
+
+<p style="margin-right: 7.55cm; text-align: justify;">Documentação oficial <a href="http://book.cakephp.org/3.0/pt/intro/conventions.html"><u>http://boo</u><u>k</u><u>.</u><u>c</u><u>a</u><u>k</u><u>e</u><u>php.org/3.0/pt</u><u>/</u><u>intro/</u><u>c</u><u>on</u><u>v</u><u>e</u><u>ntion</u><u>s</u><u>.html</u></a></p> 	</div>
+
+	
+	
+				
+	
+	
+	
+</article>
+
+</body>
+</html>

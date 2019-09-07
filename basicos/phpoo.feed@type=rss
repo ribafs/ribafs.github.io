@@ -1,0 +1,1345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="Joomla! - Open Source Content Management" -->
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>PHPOO - RibaFS Portal</title>
+		<description><![CDATA[Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros.]]></description>
+		<link>http://backup/portal/basicos/phpoo.html</link>
+		<lastBuildDate>Sat, 07 Sep 2019 18:50:56 -0300</lastBuildDate>
+		<generator>Joomla! - Open Source Content Management</generator>
+		<atom:link rel="self" type="application/rss+xml" href="http://backup/portal/basicos/phpoo.feed?type=rss"/>
+		<language>pt-br</language>
+		<item>
+			<title>Introdução ao PHPOO</title>
+			<link>http://backup/portal/basicos/phpoo/introducao-ao-phpoo.html</link>
+			<guid isPermaLink="true">http://backup/portal/basicos/phpoo/introducao-ao-phpoo.html</guid>
+			<description><![CDATA[<p style="text-align: justify;" align="center"><span style="font-size: large;"><b>Programação Orientada a Objetos com PHP<br /><br /></b></span></p>
+<p style="text-align: justify;">Programação orientada a objetos é um estilo de programação que permite aos desenvolvedores agruparem tarefas semelhantes em <strong>classes</strong>. Isso ajuda a manter dentro do princípio <a href="http://en.wikipedia.org/wiki/Don%27t_repeat_yourself">"don't repeat yourself" (DRY)</a> (em português, <em>não se repita</em>), além de facilitar a manutenção do código.</p>
+<p style="text-align: justify;"><b><br />Termos Principais da Orientação a Objetos em PHP</b></p>
+<p style="text-align: justify;"><b>Classe – </b><span style="font-weight: normal;">matriz de onde vêm os objetos (só uma e não se trabalha com classes, elas servem apenas para a criação dos objetos)</span></p>
+<p style="text-align: justify;"><b>Objeto – </b><span style="font-weight: normal;">instância da classe (é com estes que trabalhamos)</span></p>
+<p style="text-align: justify;"><b>Método – </b><span style="font-weight: normal;">é como uma função, mas é subordinado à classe</span></p>
+<p style="text-align: justify;"><b>Propriedade – </b><span style="font-weight: normal;">são como variáveis, mas também são subordinadas à classe</span></p>
+<p style="text-align: justify;"><b>Construtor</b><span style="font-weight: normal;"> – método iniciado automaticamente quando a classe é instanciada</span></p>
+<p style="text-align: justify;"><b>Destrutor</b><span style="font-weight: normal;"> – chamado logo que todas as referências a um objeto forem removidas</span></p>
+<p style="text-align: justify;"><b>$this-&gt; - </b><span style="font-weight: normal;">usado </span><span style="font-weight: normal;">para referenciar um método ou variável da classe atual</span></p>
+<p style="text-align: justify;"><b>parent:: - </b><span style="font-weight: normal;">usado para referenciar a classe pai (herança)</span></p>
+<p style="text-align: justify;"><b>extends –</b> <span style="font-weight: normal;">usado para indicar que a classe atual é “filha” de outra classe (herança)</span></p>
+<p style="text-align: justify;"><span style="font-weight: normal;">p</span><span style="font-weight: normal;">ublic, protected e private – visibilidade dos membros da classe</span></p>
+<p style="font-weight: normal; text-align: justify;"> </p>
+<p style="text-align: justify;"><b>Exemplo simples</b></p>
+<pre class="language-php"><code>&lt;?php
+
+class Classe1
+{
+
+    public function __construct()
+    {
+        print 'Construtor da classe pai&lt;br&gt;';
+    }
+
+    //private $propriedade1 = 'Variável 1';
+
+    public $propriedade1 = 'Variável 1';
+
+    public function funcao1()
+    {
+
+        return 'Função 1';
+    }
+
+    public function prop()
+    {
+
+        return $this-&gt;propriedade1;
+    }
+}
+
+$obj1 = new Classe1();
+
+print $obj1-&gt;funcao1(); // Método requer (), já propriedade, não
+
+//print $obj1-&gt;propriedade1;
+
+print "&lt;br&gt;" . $obj1-&gt;prop();
+
+class Classe2 extends Classe1
+{
+
+    private $propriedade2 = 'Variável da classe filha&lt;br&gt;';
+
+    public function funcao2()
+    {
+
+        print 'Função da classe filha&lt;br&gt;';
+    }
+
+    public function prop2()
+    {
+
+        print $this-&gt;propriedade2;
+    }
+}
+
+$obj2 = new Classe2();
+
+print $obj2-&gt;propriedade1;
+
+print $obj2-&gt;prop2();
+
+
+class Classe3 extends Classe1
+{
+
+    public function __construct()
+    {
+
+        parent::__construct();
+
+        print 'Construtor da classe filha&lt;br&gt;';
+    }
+
+    private $propriedade2 = 'Variável da classe filha';
+
+    public function funcao2()
+    {
+
+        return 'Função da classe filha';
+    }
+
+    public function prop2()
+    {
+
+        return $this-&gt;propriedade2;
+    }
+}
+
+$obj3 = new Classe3();
+
+print $obj3-&gt;prop2();
+</code></pre>
+<p style="font-weight: normal; text-align: justify;"> </p>
+<p style="margin-bottom: 0cm; line-height: 100%; text-align: justify;"><b>Exemplo didático</b></p>
+<pre class="western"><code class="western"></code></pre>
+<pre class="language-php"><code>&lt;?php
+class MyClass
+{
+    public $public = 'Public';
+    protected $protected = 'Protected';
+    private $private = 'Private';
+    function printHello()
+    {
+        echo $this-&gt;public;
+        echo $this-&gt;protected;
+        echo $this-&gt;private;
+    }
+}
+$obj = new MyClass();
+echo $obj-&gt;public; // Works echo $obj-&gt;protected; // Fatal Error echo $obj-&gt;private; // Fatal Error $obj-&gt;printHello(); // Shows Public, Protected and Private
+</code></pre>
+<pre class="western"><code class="western"><br /></code><code class="western"></code></pre>
+<p style="margin-bottom: 0cm; line-height: 100%; text-align: justify;"> </p>
+<p style="text-align: justify;"><b>Correspondência entre OO e Estruturada</b></p>
+<p style="text-align: justify;"><b>Classe – Arquivo</b></p>
+<p style="text-align: justify;"><b>Método – Função</b></p>
+<p style="text-align: justify;"><b>Propriedade - Variável</b></p>
+<p style="font-weight: normal; text-align: justify;">Orientação a Objetos não é linguagem de programação, mas sim um paradigma adotado por algumas linguagens de programação.</p>
+<p style="text-align: justify;"><br /> <b>Classes e Objetos</b></p>
+<p style="text-align: justify;">Classes são as matrizes dos objetos. O programador cria a classe uma única vez e depois trabalha somente com os objetos, que são a instância das classes.</p>
+<p style="text-align: justify;">O paradigma de orientação a objetos é muito popular atualmente, sendo implementado por praticamente todas as linguagens atuais. Como ele diz, é orientado a objetos, simulando o mundo real com seus objetos.</p>
+<p style="text-align: justify;">Vamos tomar como exemplo um carro, que todos conhecemos e vamos modelá-lo, criando algumas propriedades e métodos para ele. As propriedades são características, como cor, já os métodos são funcionalidades como correr, frear, etc (verbos).</p>
+<p style="text-align: justify;"><b>Criando uma Classe</b></p>
+<p style="text-align: justify;">&lt;?php</p>
+<p style="text-align: justify;">class Carro{</p>
+<p style="text-align: justify;">// Aqui fica o código da classe</p>
+<p style="text-align: justify;">}</p>
+<p style="text-align: justify;">?&gt;</p>
+<p style="text-align: justify;"><b>Instanciando a Classe</b></p>
+<p style="text-align: justify;">Instanciar a classe é armazená-la em uma variável objeto para então usar seus recursos.</p>
+<p style="text-align: justify;">$obj = new Carro(); // Também podemos usar assim: $obj = new Carro;</p>
+<p style="text-align: justify;">Nossa classe não tem conteúdo mas para visualizá-la podemos usar var_dump();</p>
+<p style="text-align: justify;">var_dump($obj);</p>
+<p style="text-align: justify;">Com isso aparece: object(Carro)#1 (0) { }</p>
+<p style="text-align: justify;">As classes são compostas de propriedades e métodos. Propriedades são similares às variáveis da linguagem procedural. Métodos são similares às funções. A grande diferença é que propriedades e métodos ficam dentro da classe e todo código OO fica dentro de classes.</p>
+<p style="text-align: justify;"> </p>
+<p style="text-align: justify;"><b>Propriedades</b></p>
+<p style="text-align: justify;">&lt;?php<br /> class Carro{<br /> public $cor = ‘Verde’;<br /> }</p>
+<p style="text-align: justify;">$obj = new Carro();<br /> print 'A cor do carro é ' . $obj-&gt;cor;</p>
+<p style="text-align: justify;"><b><br /> Modificadores de Acesso </b><b>ou de </b><b>Visibilidade</b></p>
+<p style="text-align: justify;">Em orientação a objetos existe um bom recurso para controlar a visibilidade dos métodos e propriedades (realizar um encapsulamento), ou seja, uma forma de controlar o acesso à classe.</p>
+<p style="text-align: justify;">public – este modificador permite que qualquer um possa acessar propriedades e métodos</p>
+<p style="text-align: justify;">private – este define que somente pode ser acessada dentro da classe que a criou.</p>
+<p style="text-align: justify;">protected – este diz que somente dentro da classe onde foi criado ou nas classes filhas.</p>
+<p style="text-align: justify;">Experimente no exemplo anterior mudar public para private ou protected.</p>
+<p style="text-align: justify;">Ou seja, se queremos que um membro da classe seja visto por todos o tornamos public, caso contrário escolhemos private ou protected.</p>
+<p style="text-align: justify;"><br /> <b>Métodos</b></p>
+<p style="text-align: justify;">Os métodos executam trechos de código em uma classe e retornam ou não algo e de algum tipo.</p>
+<pre class="language-php"><code>&lt;?php
+class Carro
+{
+    public $cor = "Verde";
+
+    public function frear()
+    {
+        return "Método frear";
+    }
+}
+
+$obj = new Carro();
+print $obj-&gt;frear();
+
+
+Outro Exemplo
+     &lt; ?php
+class Car
+ro{
+    public $cor = "Verde";
+
+    public function getCor
+    (){
+        return $this-&gt;cor;
+    }
+
+    public function setCor($novaCo
+    r){
+        $this-&gt;c o r=$novaCor;
+    }
+}
+
+$obj = new Carro();
+print 'Cor original   '.$obj-&gt;getCor();
+
+$obj-&gt;setCor('Vermelho');
+print '&lt;br&gt;Cor alterada, atual:   '.$obj-&gt;getCor();
+</code></pre>
+<p style="text-align: justify;"><b>Acessando Métodos e Propriedades</b></p>
+<p style="text-align: justify;">Obs.: Veja que para acessar propriedades e métodos de uma classe precisamos criar primeiro um objeto do tipo da classe, para depois, através da instância acessar métodos e propriedades públicos.</p>
+<p style="text-align: justify;">Usando a palavra reservada $this podemos referenciar métodos e propriedades de uma classe, mas somente estando dentro da classe. Usamos $this dentro da classe da mesma forma que usamos o nome do método ou propriedade fora da classe.</p>
+<p style="text-align: justify;">Podemos criar várias instâncias de uma classe. Seguindo o exemplo anterior:</p>
+<pre class="language-php"><code>&lt;?php
+class Carro
+{
+    public $cor = "Verde";
+
+    public function getCor()
+    {
+        return $this-&gt;cor;
+    }
+
+    public function setCor($novaCor)
+    {
+        $this-&gt;cor = $novaCor;
+    }
+}
+
+
+$obj = new Carro();
+print 'Cor original ' . $obj-&gt;getCor();
+$obj-&gt;setCor('Vermelho');
+print '&lt;br&gt;Cor alterada: ' . $obj-&gt;getCor();
+
+$obj2 = new Carro();
+$obj2-&gt;setCor('Azul');
+print '&lt;br&gt;Cor alterada, atual: ' . $obj2-&gt;getCor();
+</code></pre>
+<p style="text-align: justify;"><b>Métodos Mágicos</b></p>
+<p style="text-align: justify;">São métodos do PHP que são métodos especiais executados automaticamente sempre que alguma ação ocorre com objetos: __construct(), __destruct(), __toString(), etc. Ver outros: <a href="http://php.net/manual/pt_BR/language.oop5.magic.php">http://php.net/manual/pt_BR/language.oop5.magic.php</a></p>
+<p style="text-align: justify;">__construct() - executa todo o código em seu interior sempre que uma classe é instanciada.</p>
+<p style="text-align: justify;">__destruct() - será chamado assim que todas as referências a um objeto particular forem removidas ou quando o objeto for explicitamente destruído ou qualquer ordem na sequência de encerramento.</p>
+<p style="text-align: justify;">__toString() - converte o valor de um objeto em string.</p>
+<p style="text-align: justify;">Usemos estes métodos em um exemplo:</p>
+<pre class="language-php"><code>&lt;?php
+class Carro
+{
+    public $cor = "Verde";
+
+    public function __construct()
+    {
+        echo 'A classe ' . __CLASS__ . ' foi instanciada.&lt;br&gt;';
+    }
+
+    public function __destruct()
+    {
+        echo '&lt;br&gt;Todas as referências desta classe ' . __CLASS__ . ' foram encessadas!&lt;br&gt;';
+    }
+
+    public function __toString()
+    {
+        print 'Usando o método mágico toString: ';
+        return $this-&gt;getCor();
+    }
+
+    public function getCor()
+    {
+        return $this-&gt;cor;
+    }
+
+    public function setCor($novaCor)
+    {
+        $this-&gt;cor = $novaCor;
+    }
+}
+
+$obj = new Carro();
+echo $obj; // Permitido pela __toString();
+print '&lt;br&gt;Cor original ' . $obj-&gt;getCor();
+$obj-&gt;setCor('Vermelho');
+print '&lt;br&gt;Cor alterada: ' . $obj-&gt;getCor();
+</code></pre>
+<p style="text-align: justify;"><b>Herança de Classes</b></p>
+<p style="text-align: justify;">Assim como existe herança para o ser humano, em orientação a objetos também existe uma implementação que se inspira na dos seres humanos.</p>
+<p style="text-align: justify;">Para herdar métodos e propriedades de outra classe usamos a palavra-chave extends.</p>
+<p style="text-align: justify;">class Onibus extends Carro{<br /> // Código da classe Onibus<br /> }</p>
+<p style="line-height: 100%; page-break-before: auto; text-align: justify;">Assim, a classe Onibus herda todos os métodos e propriedades da classe Carro e também pode ainda definir seus próprios métodos e propriedades e ainda por cima pode sobrescrever os métodos e propriedades da classe Carro, que no caso é chamada de classe <b>pai</b>.</p>
+<p style="text-align: justify;">Exemplo:</p>
+<pre class="language-php"><code>&lt;?php
+class Carro
+{
+    private $cor = "Verde";
+    public function __construct()
+    {
+        echo 'A classe ' . __CLASS__ . ' foi instanciada.&lt;br&gt;';
+    }
+    public function getCor()
+    {
+        return $this→cor;
+    }
+    public function setCor($novaCor)
+    {
+        $this→cor = $novaCor;
+    }
+}
+
+class Onibus extends Carro
+{
+    public $pneus = 6;
+    public $combustivel = "Diesel";
+}
+
+$objeto = new Onibus();
+print $objeto-&gt;getCor();
+print "&lt;br&gt;";
+print $objeto-&gt;combustivel;
+</code></pre>
+<p style="text-align: justify;"><b>Observações importantes:</b></p>
+<p style="text-align: justify;">- Veja que o método __construct() foi executado automaticamente, sem nenhuma chamada a ele;<br /> - Observe que o método getCor() tem () ao final mas a propriedade não tem, combustivel.</p>
+<p style="text-align: justify;"><b>Sobrescrevendo Métodos e Propriedades</b></p>
+<p style="text-align: justify;">Quando uma classe herda de outra ela chama-se classe filha e a outra chama-se classe pai. A filha herda tudo da classe pai, todos os métodos e todas as propriedades, mas ela também pode sobrescrever qualquer um destes, bastando apenas que ela, a filha, declare novamente o que deseja sobrescrever. Se ela declarar um método ou propriedade que exista na classe pai, valerá o que a filha declarou, assim sobrescrevendo o da classe pai.</p>
+<p style="text-align: justify;">Veja:</p>
+<pre class="language-php"><code>&lt;?php
+class Carro
+{
+    private $cor = "Verde";
+    public function __construct()
+    {
+        echo 'A classe ' . __CLASS__ . ' foi instanciada.&lt;br&gt;';
+    }
+    public function getCor()
+    {
+        return $this-&gt;cor;
+    }
+    public function setCor($novaCor)
+    {
+        $this-&gt;cor = $novaCor;
+    }
+}
+
+class Onibus extends Carro
+{
+    public $pneus = 6;
+    public $combustivel = "Diesel";
+
+    public function __construct()
+    {
+        echo 'A classe ' . __CLASS__ . ' foi instanciada.&lt;br&gt;';
+    }
+}
+
+$obj = new Onibus();
+</code></pre>
+<p style="text-align: justify;">Veja que será executado o construtor da classe filha, Onibus e não o de Carro.</p>
+<p style="text-align: justify;">Herança é algo prático e não é engessado.</p>
+<p style="text-align: justify;"><b>Usando parent::</b></p>
+<p style="text-align: justify;">Sobrescrevendo um método e preservando seu conteúdo original.</p>
+<p style="text-align: justify;">Para adicionar uma nova funcionalidade a um método e ao mesmo tempo manter todas as funcionalidades originais intactas, use “parent::”. :: é o operador de resolução de escopo e parent é pai, principal.</p>
+<p style="text-align: justify;">Veja:</p>
+<pre class="language-php"><code>&lt;?php
+class Carro
+{
+    private $cor = "Verde";
+    public function __construct()
+    {
+        echo 'A classe ' . __CLASS__ . ' foi instanciada.&lt;br&gt;';
+    }
+    public function getCor()
+    {
+        return $this-&gt;cor;
+    }
+    public function setCor($novaCor)
+    {
+        $this-&gt;cor = $novaCor;
+    }
+}
+
+class Onibus extends Carro
+{
+    public $pneus = 6;
+    public $combustivel = "Diesel";
+
+    public function __construct()
+    {
+        parent::__construct(); // Invoca o construtor da classe pai
+        echo 'A classe ' . __CLASS__ . ' foi instanciada.&lt;br&gt;';
+    }
+}
+
+$obj = new Onibus();
+</code></pre>
+<p style="text-align: justify;"><b>Veja o que mostra agora:</b></p>
+<p style="text-align: justify;">A classe Carro foi instanciada.<br /> A classe Onibus foi instanciada.</p>
+<p style="text-align: justify;">Primeiro o construtor da classe pai e depois o da filha.</p>
+<p style="text-align: justify;"> </p>
+<p style="page-break-before: always; text-align: justify;"><b>Métodos e propriedades estáticas</b></p>
+<p style="text-align: justify;">É o tipo de método ou propriedade que é meio que global e ainda mais fácil de ser acessada, pois podem ser acessados sem mesmo instanciar a classe. Classes também podem ser static.</p>
+<p style="text-align: justify;">Exemplo de uso:</p>
+<pre class="language-php"><code>&lt;?php
+
+class Estatica
+{
+
+    public static $nome = "João";
+
+    public static $count = 0;
+
+    public static function maisUm()
+    {
+
+        return "O valor é " . ++self::$count . "&lt;br /&gt;";
+    }
+}
+
+print Estatica::$nome;
+print '&lt;br&gt;';
+print Estatica::maisUm();
+</code></pre>
+<p style="line-height: 100%; text-align: justify;"> </p>
+<p style="line-height: 100%; text-align: justify;">Existe muito mais recursos sobre Programação orientada a objetos no PHP, que você encontra em bons sites, livros e vídeo aulas, mas como o objetivo deste tutorial é de apenas mostrar o básico e de forma bem simplificada ficaremos por aqui. Se tiver se interessado pelo assunto faça uma boa busca sobre o assunto e procure bons recursos.</p>
+<p style="line-height: 100%; text-align: justify;">Usar um dos modernos CMS ou Framework é uma boa iniciativa para aprender Orientação a objetos.</p>
+<p style="line-height: 100%; text-align: justify;"> </p>
+<p style="line-height: 100%; text-align: justify;"> </p>]]></description>
+			<category>PHPOO</category>
+			<pubDate>Fri, 23 Jun 2017 13:17:36 -0300</pubDate>
+		</item>
+		<item>
+			<title>Introdução ao MVC</title>
+			<link>http://backup/portal/basicos/phpoo/introducao-ao-mvc.html</link>
+			<guid isPermaLink="true">http://backup/portal/basicos/phpoo/introducao-ao-mvc.html</guid>
+			<description><![CDATA[<p style="text-align: justify;"><strong>MVC - Model, View e Controller. É uma forma de programar dividindo o código em 3 camadas, para melhor organizar.</strong><br /> <br />Um exemplo bem organizado de uso do MVC é o a Framework CakePKP, que traz as 3 camadas bem definidas e organizadas. <br /> <br /><strong>Model</strong> - representa os dados. A parte do código que manipula os dados para ler e escrever no banco. <br /><strong>View</strong> - representa a visualização dos dados. A parte do código que mostra os dados para o usuário. <br /><strong>Controller</strong> - manipula e roteia as requisições dos usuários. A parte do código que recebe as requisições do usuário através de um site (exemplo), processa, roteia e envia para o model, se for o caso. Também é responsável por receber dados do banco e devolver para a View. <br /> <br /><strong>De forma mais completa o fluxo acontece assim no CakePHP:</strong> <br />- O usuário clica num link para editar um registro <br />- O dispatcher (expedidor) verifica a URL requisitada (/cakes/comprar) e redireciona ao controller correto; <br />- O controller executa a lógica específica da aplicação. Por exemplo, verifica se o Ricardo está logado e tem acesso ao site; <br />- O controller também usa os models para acessar os dados da sua aplicação. Muitas vezes, os models representam as tabelas do banco de dados, mas podem representar registros LDAP, feeds de RSS ou até mesmo arquivos do sistema.  <br />- Neste exemplo, o controller usa o model para trazer ao usuário as últimas compras do banco de dados; <br />- Depois que o controller fez sua mágica sobre os dados, ele repassa para a view. A view faz com que os dados fiquem prontos para a representação do usuário; <br />- Uma vez que a view tenha usado os dados provenientes do controller para construir a página, o conteúdo é retornado ao browser do usuário. <br /> <br /> <br /><strong>Benefícios</strong> <br /> <br />Por que usar MVC? Porque é um verdadeiro padrão de projeto (design pattern) e torna fácil a manutenção da sua aplicação, com pacotes modulares de rápido desenvolvimento. Elaborar tarefas divididas entre models, views e controllers faz com que sua aplicação fique leve e independente. Novas funcionalidades são facilmente adicionadas e pode-se dar nova cara nas características antigas num piscar de olhos. O design modular e separado também permite aos desenvolvedores e designers trabalharem simultaneamente, incluindo a habilidade de se construir um rápido protótipo. A separação também permite que os desenvolvedores alterem uma parte da aplicação sem afetar outras. <br /> <br />Se você nunca desenvolveu uma aplicação neste sentido, isso vai lhe agradar muito, mas estamos confiantes que depois de construir sua primeira aplicação em CakePHP, você não vai querer voltar atrás.</p>]]></description>
+			<category>PHPOO</category>
+			<pubDate>Fri, 23 Jun 2017 13:17:36 -0300</pubDate>
+		</item>
+		<item>
+			<title>PHPOO na Prática</title>
+			<link>http://backup/portal/basicos/phpoo/phpoo-na-pratica.html</link>
+			<guid isPermaLink="true">http://backup/portal/basicos/phpoo/phpoo-na-pratica.html</guid>
+			<description><![CDATA[<pre class="language-php"><code>&lt;?php
+
+// Tradicional classe inicial - olaMundo
+
+class OlaMundo {
+
+	function OlaMundo(){	
+
+		return "Olá Mundo do PHPOO!";
+
+	}
+
+}
+
+
+$ola = new OlaMundo();
+
+print $ola-&gt;OlaMundo();
+
+
+// Classe Pessoa
+
+class Pessoa {
+
+	private $nome;
+
+	function setNome($nome){
+
+		$this-&gt;nome = $nome;
+
+	}
+
+	function getNome(){
+
+		return $this-&gt;nome;
+	}
+}
+
+$joao = new Pessoa();
+$joao-&gt;setNome("João Brito");
+$pedro = new Pessoa();
+$pedro-&gt;setNome("Pedro Ribeiro");
+
+
+print '&lt;b&gt;&lt;br&gt;&lt;br&gt;Classe Pessoa:&lt;br&gt;&lt;/b&gt;';
+print $joao-&gt;getNome();
+print '&lt;br&gt;';
+print $pedro-&gt;getNome();
+
+
+class Construtor {
+
+   function __construct() {
+
+       print "No construtor da Classe";
+
+   }
+
+}
+
+print '&lt;b&gt;&lt;br&gt;&lt;br&gt;Classe Construtor:&lt;br&gt;&lt;/b&gt;';
+$obj = new Construtor();
+print $obj-&gt;Construtor;
+
+
+// Controle de acessos
+
+class Acessos{
+	public $variavelPublic = "Variável Pública&lt;br&gt;";
+	protected $variavelProtected = "Variável Protegida&lt;br&gt;";
+	private $variavelPrivate = "Variável Privada&lt;br&gt;";
+	
+	public function getPublic(){
+		return $this-&gt;variavelPublic; 		 			
+	}
+
+	public function getProtected(){
+		return $this-&gt;variavelProtected; 		 			
+	}
+	
+	public function getPrivate(){
+		return $this-&gt;variavelPrivate; 		 			
+	}
+	
+	public function getMetodoPrivate(){
+		return Acessos::getPrivate(); 		 			
+	}	
+	
+}  
+
+
+$especificacaoAcesso = new Acessos();
+echo $especificacaoAcesso-&gt;getPublic();
+echo $especificacaoAcesso-&gt;getMetodoPrivate(); 
+//echo $especificaAcesso-&gt;getPrivate(); // Dará um erro fatal
+
+// Variáveis e Métodos Static, onde podemos usar sem instanciar a classe
+
+class Estatica{ 
+	static $varStatic = "Variável Estática&lt;br&gt;"; 
+
+	static function getStatic(){
+		return Estatica::$varStatic;
+	} 
+} 
+
+
+// Ou chamando a variável diretamente "Estatica::$varStatic". 
+echo Estatica::getStatic();
+
+
+// Métodos Final
+class ClasseFinal{	
+	final function getFinal(){
+		echo "Método Final"; 
+	} 
+} 
+
+$classeFinal = new ClasseFinal(); 
+$classeFinal-&gt;getFinal();
+
+
+// Método Construtor e Destrutor
+
+class ContrutorDestrutor{ 
+
+	private $varMethod; 
+	function __construct(){ 
+		$this-&gt;varMethod = "Construtor()"; 
+		echo "Método {$this-&gt;varMethod}&lt;br&gt;"; 
+	} 
+
+	function __destruct(){ 
+		$this-&gt;varMethod = "Destrutor()"; 
+		echo "Método {$this-&gt;varMethod}&lt;br&gt;"; 
+	} 
+} 
+
+$contrutorDestrutor = new ContrutorDestrutor(); 
+unset($contrutorDestrutor); 
+
+class ContrutorDestrutorFilho extends ContrutorDestrutor{ 
+	function __construct(){ 
+		parent::__construct(); 
+		echo "Método Filho Construtor&lt;br&gt;"; 
+	} 
+
+	function __destruct(){ 
+		parent::__destruct(); 
+		echo "Método Filho Destrutor&lt;br&gt;"; 
+	} 
+} 
+
+echo "&lt;br&gt;"; 
+$contrutorDestrutorFilho = new ContrutorDestrutorFilho(); 
+
+
+// Constantes da Classe
+
+class Constante{ 
+	const constante = "Minha Constante"; 
+
+} 
+
+echo Constante::constante; 
+
+
+// Clonando Objetos
+class ClasseClonando{ 
+    public $varClone; 
+    function __construct(){ 
+        $this-&gt;varClone = "&lt;br&gt;Php5&lt;br&gt;"; 
+    } 
+
+    function __clone(){ 
+        $this-&gt;varClone = "Php5 Clone&lt;br&gt;"; 
+    } 
+} 
+
+
+$classeClonando = new ClasseClonando(); 
+$cloneClasseClonando = clone $classeClonando; 
+echo $classeClonando-&gt;varClone . "&lt;br&gt;" . $cloneClasseClonando-&gt;varClone;
+
+
+// InstanceOf (Testar se classe é instância de outra)
+
+class TesteInstanceOf 
+{ 
+//....
+} 
+
+
+class ClasseInstanceOf{ 
+    function __construct($obj){ 
+        if ($obj instanceof TesteInstanceOf) { 
+            echo "Objeto da classe(TesteInstanceOf)&lt;br&gt;"; 
+        } else { 
+            echo "Não é um objeto da classe(TesteInstanceOf)&lt;br&gt;"; 
+        } 
+    } 
+} 
+
+$testeInstanceOf = new TesteInstanceOf(); 
+$classeInstanceOf = new ClasseInstanceOf($testeInstanceOf); 
+
+
+
+//Classes Abstratas
+
+abstract class Abstrata{ 
+    public abstract function setNome($nome); 
+    public abstract function getNome(); 
+} 
+
+
+class ClasseAbstrata extends Abstrata{ 
+    private $nome; 
+    public function setNome($newNome){ 
+        $this-&gt;nome = $newNome; 
+    } 
+
+    public function getNome(){ 
+        return $this-&gt;nome; 
+    } 
+} 
+
+$classeAbstrata = new ClasseAbstrata(); 
+$classeAbstrata-&gt;setNome("Php5"); 
+echo $classeAbstrata-&gt;getNome()."&lt;br&gt;"; 
+
+
+// Interfaces
+interface IPessoa{ 
+    public function setNome($nome); 
+    public function getNome(); 
+} 
+
+
+interface IPessoaFisica{ 
+    public function setCpf($cpf); 
+    public function getCpf(); 
+} 
+
+
+interface IPessoaJuridica{ 
+    public function setCnpj($cnpj); 
+    public function getCnpj(); 
+} 
+
+
+class ClassePessoa implements IPessoa, IPessoaFisica, IPessoaJuridica{ 
+    function __construct($nome, $cpf, $cnpj){ 
+        ClassePessoa::setNome($nome); 
+        ClassePessoa::setCpf($cpf); 
+        ClassePessoa::setCnpj($cnpj); 
+    } 
+
+    /* Métodos Set */ 
+    public function setNome($nome){ 
+        $this-&gt;nome = $nome; 
+    } 
+    public function setCpf($cpf){ 
+        $this-&gt;cpf = $cpf; 
+    }
+    public function setCnpj($cnpj){ 
+        $this-&gt;cnpj = $cnpj; 
+    } 
+    /* Métodos Get */ 
+    public function getNome(){ 
+        return $this-&gt;nome; 
+    } 
+    public function getCpf(){ 
+        return $this-&gt;cpf; 
+    } 
+    public function getCnpj(){ 
+        return $this-&gt;cnpj; 
+    } 
+    function __destruct(){ 
+        echo ClassePessoa::getNome()."&lt;br&gt;".ClassePessoa::getCpf()."&lt;br&gt;".ClassePessoa::getCnpj(); 
+    } 
+} 
+
+$classePessoa = new ClassePessoa("Rodrigo", "324.541.588-98", "6545.2101/0001"); 
+
+
+// Tratamento de erros lógicos - Exceptions
+
+class BusinessException extends Exception{ 
+
+    function __construct($msg){ 
+
+        // Vai para a função construtora do Exception. 
+
+        parent::__construct($msg); 
+
+    } 
+
+} 
+
+
+
+class Excecao{ 
+
+    function __construct($nome){ 
+
+        try { 
+
+            if ($nome == "") { 
+
+                throw new BusinessException("Nome não pode ser em branco"); 
+
+            } elseif(strlen($nome) &lt; 5) { 
+
+                throw new BusinessException("Nome precisa ter no mínimo 5 letras"); 
+
+            } elseif(strtolower($nome) == "corinthians") { 
+
+                throw new BusinessException("Corinthians campeão"); 
+
+            } else { 
+
+                throw new BusinessException("Paramêtro inválido"); 
+
+            } 
+
+        } catch (BusinessException $businessException) { 
+
+            echo $businessException-&gt;getMessage(); 
+
+        } 
+
+    } 
+
+} 
+
+
+
+$excecao = new Excecao("Corinthians"); 
+
+
+
+// Singleton
+
+class Singleton { 
+
+    private static $instance = null; 
+
+
+
+    public static function getInstance(){ 
+
+        if (Singleton::$instance == null) { 
+
+            Singleton::$instance = new Singleton(); 
+
+        } 
+
+        return Singleton::$instance; 
+
+    } 
+
+} 
+
+
+
+$objA = Singleton::getInstance(); 
+
+$objB = Singleton::getInstance(); 
+
+if ($objA == $objB) { 
+
+    echo "&lt;br&gt;Instância única"; 
+
+} else { 
+
+    echo "&lt;br&gt;Instâncias diferentes"; 
+
+} 
+
+
+
+// Pattern Factory
+
+abstract class AbstractFactory 
+
+{ 
+
+    private $nome; 
+
+    private $rendaMensal; 
+
+
+
+    function __construct($nome, $rendaMensal){ 
+
+        $this-&gt;setNome($nome); 
+
+        $this-&gt;setRendaMensal($rendaMensal); 
+
+    } 
+
+
+
+    public function setNome($newNome){ 
+
+        $this-&gt;nome = $newNome; 
+
+    } 
+
+
+
+    public function setRendaMensal($newRendaMensal){ 
+
+        $this-&gt;rendaMensal = $newRendaMensal; 
+
+    } 
+
+
+
+    public function getNome(){ 
+
+        return $this-&gt;nome; 
+
+    } 
+
+
+
+    public function getRendaMensal(){ 
+
+        return $this-&gt;rendaMensal; 
+
+    } 
+
+
+
+    public abstract function analisarCredito(); // Boolean 
+
+    public abstract function getCategoria(); // String 
+
+} 
+
+
+
+class ClientePadrao extends AbstractFactory{ 
+
+    function __construct($nome, $rendaMensal){ 
+
+        parent::__construct($nome, $rendaMensal); 
+
+    } 
+
+
+
+    // Foi declarada no AbstractFactory 
+
+    public function analisarCredito(){ 
+
+        return true; 
+
+    } 
+
+
+
+    // Foi declarada no AbstractFactory
+
+    public function getCategoria(){ 
+
+        return "Cliente Padrão"; 
+
+    } 
+
+} 
+
+
+
+class ClienteRisco extends AbstractFactory{ 
+
+    function __construct($nome, $rendaMensal){ 
+
+        parent::__construct($nome, $rendaMensal); 
+
+    } 
+
+
+
+    // Foi declarada no AbstractFactory 
+
+    public function analisarCredito(){ 
+
+        return false; 
+
+    } 
+
+
+
+    // Foi declarada no AbstractFactory 
+
+    public function getCategoria(){ 
+
+        return "Cliente Risco"; 
+
+    } 
+
+} 
+
+
+
+class ClienteSeguro extends AbstractFactory{ 
+
+    function __construct($nome, $rendaMensal){ 
+
+        parent::__construct($nome, $rendaMensal); 
+
+    } 
+
+
+
+    // Foi declarada no AbstractFactory 
+
+    public function analisarCredito(){ 
+
+        return true; 
+
+    } 
+
+
+
+    // Foi declarada no AbstractFactory 
+
+    public function getCategoria(){ 
+
+        return "Cliente com alta credibilidade"; 
+
+    } 
+
+} 
+
+
+
+class SingletonFactory{ 
+
+    private static $rendaMedia = 500; 
+
+    private static $rendaBaixa = 240; 
+
+    private static $instance = null; 
+
+
+
+    public static function getCliente($nome, $rendaMensal){ 
+
+        if ($rendaMensal &lt;= SingletonFactory::$rendaBaixa) { 
+
+            SingletonFactory::$instance = new ClienteRisco($nome, $rendaMensal); 
+
+        } elseif ($rendaMensal &gt; SingletonFactory::$rendaBaixa and 
+
+				$rendaMensal &lt;= SingletonFactory::$rendaMedia) { 
+
+            SingletonFactory::$instance = new ClientePadrao($nome, $rendaMensal); 
+
+        } else { 
+
+            SingletonFactory::$instance = new ClienteSeguro($nome, $rendaMensal); 
+
+        } 
+
+
+
+        $clienteAprovacao = "reprovado"; 
+
+        if (SingletonFactory::$instance-&gt;analisarCredito()) { 
+
+            $clienteAprovacao = "aprovado"; 
+
+        } 
+
+
+
+        echo "&lt;br&gt;Cliente = ".SingletonFactory::$instance-&gt;getNome()."&lt;br&gt;"; 
+
+        echo "Categoria = ".SingletonFactory::$instance-&gt;getCategoria()."&lt;br&gt;"; 
+
+        echo "Crédito = ".$clienteAprovacao; 
+
+        echo "&lt;hr&gt;"; 
+
+    } 
+
+} 
+
+
+
+SingletonFactory::getCliente("Rodrigo", 1977); 
+
+SingletonFactory::getCliente("Corinthians", 350); 
+
+SingletonFactory::getCliente("John", 220); 
+
+
+
+// Listando os métodos de um Objeto
+
+
+
+class OlaMundo2 {
+
+   // constructor
+
+   function OlaMundo2(){
+
+       return(true);
+
+   }
+
+   // method 1
+
+   function funcao1(){
+
+       return(true);
+
+   }
+
+
+
+   // method 2
+
+   function funcao2(){
+
+       return(true);
+
+   }
+
+}
+
+
+
+$meus_objetos = new OlaMundo2();
+
+$metodos_classe = get_class_methods(get_class($meus_objetos));
+
+
+
+foreach ($metodos_classe as $nome_metodo) {
+
+   echo "$nome_metodo&lt;br&gt;";
+
+}
+
+
+
+// Listando as variáveis de uma classe
+
+
+
+class Variaveis {
+
+
+
+   var $variavel1; // esta não tem valor default...
+
+   var $variavel2 = "xyz";
+
+   var $variavel3 = 100;
+
+
+
+   // construtor
+
+   function Variaveis() {
+
+       // mudar algumas propriedades
+
+         $this-&gt;var1 = "foo";
+
+         $this-&gt;var2 = "bar";
+
+         return true;
+
+   }
+
+
+
+}
+
+
+
+$minha_classe = new Variaveis();
+
+$variaveis = get_class_vars(get_class($minha_classe));
+
+
+
+foreach ($variaveis as $nome =&gt; $value) {
+
+   echo "$nome = $value&lt;br&gt;";
+
+}
+
+
+
+// Listar variáveis de um objeto
+
+
+
+class Point2D {
+
+   var $x, $y;
+
+   var $label;
+
+
+
+   function Point2D($x, $y){
+
+       $this-&gt;x = $x;
+
+       $this-&gt;y = $y;
+
+   }
+
+
+
+   function setLabel($label){
+
+       $this-&gt;label = $label;
+
+   }
+
+
+
+   function getPoint(){
+
+       return array("x" =&gt; $this-&gt;x,
+
+                     "y" =&gt; $this-&gt;y,
+
+                     "label" =&gt; $this-&gt;label);
+
+   }
+
+}
+
+
+
+// "$label" is declared but not defined
+
+$p1 = new Point2D(1.233, 3.445);
+
+print_r(get_object_vars($p1));
+
+
+
+$p1-&gt;setLabel("point #1");
+
+print_r(get_object_vars($p1));
+
+
+
+// Testando existência de classe e subclasse
+
+class Foo { var $myVar; }
+
+
+
+class Foo_Bar extends Foo { var $myVar2;}
+
+
+
+echo class_exists('Foo')."&lt;br&gt;"; //true
+
+echo class_exists('foo')."&lt;br&gt;"; //true
+
+echo class_exists('Foo_Bar')."&lt;br&gt;"; // true
+
+echo get_parent_class('Foo_Bar')."&lt;br&gt;"; // foo (NOTE: NOT Foo!)
+
+
+
+// Devolver nome da classe pai para objeto ou classe
+
+class dad {
+
+   function dad(){
+
+   // implemente alguma lógica
+
+   }
+
+}
+
+
+
+class child extends dad {
+
+   function child(){
+
+       echo "Eu sou a classe &lt;b&gt;" , get_parent_class($this) , "'s &lt;/b&gt;filho&lt;br&gt;";
+
+   }
+
+}
+
+
+
+class child2 extends dad {
+
+   function child2(){
+
+       echo "Eu também sou a classe &lt;b&gt;" , get_parent_class('child2') , "'s &lt;/b&gt;filho&lt;br&gt;";
+
+   }
+
+}
+
+
+
+$foo = new child();
+
+$bar = new child2();
+
+
+
+// Checar se método da classe existe
+
+class Foo1 {
+
+  public function bar() {
+
+   echo "Eu sou private Foo1::bar()&lt;br&gt;";
+
+  }
+
+}
+
+
+
+class Foo2 {
+
+  private function bar() {
+
+   echo "Eu sou public Foo2::bar()&lt;br&gt;";
+
+  }
+
+}
+
+
+
+$f1=new Foo1;
+
+$f2=new Foo2;
+
+
+
+if(is_callable(array($f1,"bar"))) {
+
+   echo "Foo1::bar() é acessível&lt;br&gt;";
+
+} else {
+
+   echo "Foo1::bar() não é acessível&lt;br&gt;";
+
+}
+
+if(is_callable(array($f2,"bar"))) {
+
+   echo "Foo2::bar() é acessível&lt;br&gt;";
+
+} else {
+
+   echo "Foo2::bar() não é acessível&lt;br&gt;";
+
+}
+
+if(in_array("bar",get_class_methods($f1))) {
+
+   echo "Foo1::bar() é acessível&lt;br&gt;";
+
+} else {
+
+   echo "Foo1::bar() não é acessível&lt;br&gt;";
+
+}
+
+if(in_array("bar",get_class_methods($f2))) {
+
+   echo "Foo2::bar() é acessível&lt;br&gt;";
+
+} else {
+
+   echo "Foo2::bar() não é acessível&lt;br&gt;";
+
+}
+</code></pre>]]></description>
+			<category>PHPOO</category>
+			<pubDate>Fri, 23 Jun 2017 13:17:36 -0300</pubDate>
+		</item>
+	</channel>
+</rss>

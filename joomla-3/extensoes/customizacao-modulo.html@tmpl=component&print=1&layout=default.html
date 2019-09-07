@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br" dir="ltr">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <base href="" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Ribamar FS" />
+	<meta name="robots" content="noindex, nofollow" />
+	<meta name="description" content="Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros." />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>Customização de módulo do Joomla 3 - RibaFS Portal</title>
+	<link href="http://ribafs.org/portal/joomla-3/extensoes/customizacao-modulo.html?tmpl=component&amp;print=1&amp;layout=default" rel="canonical" />
+	<link href="../../templates/shaper_helix3/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../../favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<script src="../../media/jui/js/jquery.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../media/jui/js/jquery-noconflict.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../media/jui/js/jquery-migrate.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="http://backup/portal/media/system/js/caption.js?d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script type="text/javascript">
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+	</script>
+	<meta property="og:url" content="http://backup/portal/joomla-3/extensoes/customizacao-modulo.html" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Customização de módulo do Joomla 3" />
+	<meta property="og:description" content="Customização de módulo do Joomla 3 Não tem diferença customizar um módulo nativo e um de terceiros. Gosto muito de instalar dois módulos nativos do Joomla:..." />
+
+   	<link rel="stylesheet" href="../../media/jui/css/bootstrap.min.css" type="text/css" />
+	<link rel="stylesheet" href="../../templates/shaper_helix3/css/frontend-edit.css" type="text/css" />
+    <link rel="stylesheet" href="../../templates/shaper_helix3/css/template.css" type="text/css" />
+</head>
+<body class="contentpane">
+	<div id="system-message-container">
+	</div>
+
+	
+
+<article class="item item-page" itemscope itemtype="http://schema.org/Article">
+	<meta itemprop="inLanguage" content="pt-BR" />
+	
+	
+
+	<div class="entry-header">
+		<span class="post-format"><i class="fa fa-thumb-tack"></i></span>
+		
+					<h2 itemprop="name">
+									Customização de módulo do Joomla 3							</h2>
+												</div>
+
+						<div id="pop-print" class="btn hidden-print">
+				<a href="customizacao-modulo.html#" onclick="window.print();return false;">			<span class="icon-print" aria-hidden="true"></span>
+		Imprimir	</a>			</div>
+				
+	
+	
+				
+	
+			<div itemprop="articleBody">
+		<h4 style="text-align: justify;">Customização de módulo do Joomla 3</h4>
+
+<p style="text-align: justify;">Não tem diferença customizar um módulo nativo e um de terceiros.<br />Gosto muito de instalar dois módulos nativos do Joomla: novidades e populares. Eles facilitam as próximas navegações do visitante, para que não precise ficar verificando tudo novamente a procura de novidade. Ele vai direto no Novidades e vê no módulo as 5 últimas novidades (número que pode ser alterado). Populares também ajuda um pouco, principalmente para eu ficar sabendo do que mais estão gostando.<br /><br />Também gosto muito do framework Gantry como template e encontrei um ótimo templae com o Gantry, que foi o LearnMate:<br /><a href="https://joomlead.com/joomla-template/learnmate/">https://joomlead.com/joomla-template/learnmate/</a> <br /><br />Acontece que o estilo do LearnMate oculta os links destes dois módulos e inviabiliza seu uso.<br />Quando criei este site eu usei o Learnmate como template e tive que abdicar do novidades e populares.<br />Depois fiquei refletindo sobre uma forma de os usar. A primeira que encontrei foi editar o código do core do Joomla e mudar a cor de fundo de amos.<br />Funcionou mas não ficou muito natural. Detalhes abaixo:<br /><br /><em><strong>modules/modules_articles_latest/tmpl/default.php</strong></em> - novidades<br /><br />defined('_JEXEC') or die;<br />?&gt;<br />&lt;ul style="background-color:#88e898;"&gt;<br />&lt;!--&lt;ul class="latestnews&lt;?php echo $moduleclass_sfx; ?&gt;"&gt;--&gt;<br /><br />O outro fica em:<br /><em><strong>modules/modules_articles_popular/tmpl/default.php</strong></em> - populares<br /><br />Já dava para usar mas não fiquei satisfeito.<br />Então usando o Inspector do Navegador verifiquei onde ficava o CSS para a cor do link dos dois módulos.<br />Ele me mostrou. Como de praxe ele mostra o CSS e o arquivo onde o mesmo se encontra. Ao mover o mouse sobre o nome do arquivo ele mostra o path completo.<br /><br />Ele me mostrou que era no arquivo:<br />templates/learnmate_free/custom/css_compiled/learnmate_9.css<br /><br />É um arquivo compilado e de trabalhosa edição e usei uma alternativa cômoda, adicionar o código ao final, pois sobrescreverá o que existe antes.<br /><br />Ao final adicionei:<br /> a{ color: #000; }<br /><br /><strong>E adicionei um Sufixo de Classe do Módulo</strong></p>
+
+<p style="text-align: justify;">Chamado fundo. Nem existe, mas mesmo assim interfere deixando a região do módulo menor do que estava.<br /><br />Novidades - Avançado - Sufixo de Classe do Módulo - fundo</p>
+
+<p style="text-align: justify;"> </p> 	</div>
+
+	
+	
+				
+	
+	
+	
+</article>
+
+</body>
+</html>

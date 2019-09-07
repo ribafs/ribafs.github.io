@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br" dir="ltr">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <base href="" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Ribamar FS" />
+	<meta name="robots" content="noindex, nofollow" />
+	<meta name="description" content="Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros." />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>Segurança na Web - RibaFS Portal</title>
+	<link href="http://ribafs.org/portal/joomla-3/seguranca/seguranca-na-web.html?tmpl=component&amp;print=1&amp;layout=default" rel="canonical" />
+	<link href="../../templates/shaper_helix3/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../../favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<script src="../../media/jui/js/jquery.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../media/jui/js/jquery-noconflict.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../media/jui/js/jquery-migrate.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="http://backup/portal/media/system/js/caption.js?d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script type="text/javascript">
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+	</script>
+	<meta property="og:url" content="http://backup/portal/joomla-3/seguranca/seguranca-na-web.html" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Segurança na Web" />
+	<meta property="og:description" content="Segurança na Web Alterar permissões de arquivos: Alterar todos os arquivos para 644 e todas as pastas para 755 com: find . -type f -exec chmod 644 {} \; fi..." />
+
+   	<link rel="stylesheet" href="../../media/jui/css/bootstrap.min.css" type="text/css" />
+	<link rel="stylesheet" href="../../templates/shaper_helix3/css/frontend-edit.css" type="text/css" />
+    <link rel="stylesheet" href="../../templates/shaper_helix3/css/template.css" type="text/css" />
+</head>
+<body class="contentpane">
+	<div id="system-message-container">
+	</div>
+
+	
+
+<article class="item item-page" itemscope itemtype="http://schema.org/Article">
+	<meta itemprop="inLanguage" content="pt-BR" />
+	
+	
+
+	<div class="entry-header">
+		<span class="post-format"><i class="fa fa-thumb-tack"></i></span>
+		
+					<h2 itemprop="name">
+									Segurança na Web							</h2>
+												</div>
+
+						<div id="pop-print" class="btn hidden-print">
+				<a href="seguranca-na-web.html#" onclick="window.print();return false;">			<span class="icon-print" aria-hidden="true"></span>
+		Imprimir	</a>			</div>
+				
+	
+	
+				
+	
+			<div itemprop="articleBody">
+		<h4>Segurança na Web</h4>
+
+<p><strong>Alterar permissões de arquivos:</strong><br /><br />Alterar todos os arquivos para 644 e todas as pastas para 755 com:<br />find . -type f -exec chmod 644 {} \; <br />find . -type d -exec chmod 755 {} \; <br /><br />Depois criar algumas exceções...<br />configuration.php – 400<br />index.php do site – 400<br />index.php do template padrão – 400<br />Permissões de pastas:<br />includes e libraries – 500<br /><br /><br /><strong>Adicionar ao .htaccess:</strong><br /><br /># Block out any script trying to set a mosConfig value through the URL <br />RewriteCond %{QUERY_STRING} mosConfig_[a-zA-Z_]{1,21}(=|\%3D) [OR] <br /><br /># Block out any script trying to base64_encode crap to send via URL <br />RewriteCond %{QUERY_STRING} base64_encode.*\(.*\) [OR] <br /># Block out any script that includes a &lt;script&gt; tag in URL <br />RewriteCond %{QUERY_STRING} (\&lt;|%3C).*script.*(\&gt;|%3E) [NC,OR] <br /># Block out any script trying to set a PHP GLOBALS variable via URL <br />RewriteCond %{QUERY_STRING} GLOBALS(=|\[|\%[0-9A-Z]{0,2}) [OR] <br /># Block out any script trying to modify a _REQUEST variable via URL <br />RewriteCond %{QUERY_STRING} _REQUEST(=|\[|\%[0-9A-Z]{0,2}) <br /># Send all blocked request to homepage with 403 Forbidden error! <br />RewriteRule ^(.*)$ index.php [F,L] <br /><br /><br /><strong>Lembre que:</strong><br />O Joomla possui uma equipe que em 4 horas consegue lançar uma versão estável do produto após uma invasão.<br /><br />A maioria dos ataques ocorre pelo fato dos arquivos estarem com 777 ou usuário instalou componentes "não confiaveis".<br /><br />Existe o Security Strike no Joomla! que cuida somente deste assunto<br />https://docs.joomla.org/Security_Strike_Team<br />https://developer.joomla.org/security-centre.html<br />https://volunteers.joomla.org/teams/security-strike-team<br /><br />Para verificar sites que foram hackeados/defaced:<br /><a href="http://www.zone-h.org/archive?zh=1">http://www.zone-h.org/archive?zh=1</a> <br /><br /><br /><strong>Componente para criptografar senhas</strong><br /><br />Dá para notar seu trabalho.<br />Logo após digitar a senha e teclar Enter ou clicar em Acessar observe que ele enche a caixa da senha com bolinhas, mostrando que ele está enviando algo diferent do que digitamos.<br /><br />O componente<br />com_encrypt requer o módulo bcmath do php.<br /><br />Sempre que o usuário fizer login a senha será criptografada antes de ser enviada para o servidor.<br />Ao chegar ao servidor será descriptografada.<br /><br />O mesmo autor do componente criou vários plugins para outros módulos e extensões de terceiros:<br /><a href="http://www.ratmilwebsolutions.com/category/4-encryption-configuration-plugins.html">http://www.ratmilwebsolutions.com/category/4-encryption-configuration-plugins.html</a> <br /><br />Opcionalmente podemos gerar uma nova chave de criptografia, mas talvez não seja necessário pois uma é gerada automaticamente a cada 180 dias.<br />Também podemos alterar a frequência de geração de chaves e seu tamanho.<br /><br />O componente criptografa a senha de login do form de login do administrator por padrão e já vem com vários outros recursos marcados por padrão:<br />Back-end login, Back-end edit profile, Back-end edit profile repeat password, Update RSA private KEY, Joomla off-line login, Front-end login module, Front-end login, Create account,    Create account repeat password, Edit profile, Edit profile repeat password, Reset password e Reset password confirm<br /><br /><strong>Download</strong><br /><a href="http://www.ratmilwebsolutions.com/category/10-encryption-configuration.html">http://www.ratmilwebsolutions.com/category/10-encryption-configuration.html</a> <br /><br /><strong>Ajuda</strong><br /><a href="http://www.ratmilwebsolutions.com/documentation/47-encryptioncomponenthelp.html">http://www.ratmilwebsolutions.com/documentation/47-encryptioncomponenthelp.html</a> <br /><br /><br /><strong>Segurança no Joomla (parte 1)</strong><br /><br />Dicas de segurança no joomla.<br />Muitas pessoas utilizam o CMS Joomla, no entanto a maior parte destas "esquece-se" do fator segurança nos seus sites. Existem pequenos pormenores extremamente fáceis de implementar que aumentarão consideravelmente a segurança do teu site Joomla.<br /><br />Desligar os relatórios de erro<br /><br />Um deles é desligar os relatórios de erros, os relatórios de erros alem de diminuírem a velocidade do site indicarão também ao "hackers" falhas na segurança deste. Isto pode ser desativado em 'Configuração Geral -&gt; Sistema'.<br /><br />Depois de desativada esta função não te será permitido visualizar os erros gerados pelo Joomla, o que é uma coisa boa uma vez que o utilizador comum não os vê (o que não era muito profissional) e os hackers não podem forçar erros de forma a descobrirem métodos de comprometer o sistema.<br /><br />Utilizar um componente SEF<br /><br />A maioria dos hackers utilizam o comando 'inurl:' do Google para procurarem por falhas em websites. Uma boa solução para contrariar este potencial risco é instalar um componente que re-escreva os Url, aconselho o SH404SEF ou o Artio-JoomSef.<br /><br />O componente SEF irá trazer-lhe também bastantes vantagens a nível de SEO (rank mais elevado aos "olhos" do Google).<br /><br /> <br />Mover o ficheiro configuration.php para fora da raiz.<br />Mova simplesmente o ficheiro de configuração para qualquer pasta que você queira dentro do site e atribua-lhe um novo nome. No exemplo utilizei 'joom.conf'.<br />Crie um novo ficheiro de configuração na raiz com o nome de configuration.php contendo o seguinte código:<br /><br />&lt;?php<br />require( dirname( __FILE__ ) . '/../joom.conf' );<br />?&gt;<br /><br /><strong>Realize backups regulares</strong><br /><br />Esta tarefa pode ser feita através do Cpanel de qualquer conta de alojamento, no entanto existem também alguns componente muito bons que realizam esta tarefa. O meu favorito é o JoomlaPack. Um backup semanal caso atualize o seu site regularmente é uma boa opção, ou então backups mensais.<br /><br /> <br /><strong>Não mostrar que versões das extensões utiliza</strong><br /><br />Em primeiro lugar qualquer admin de um website deveria ter uma lista de todas as extensões que utiliza e fazer o update a estas quando sai-se uma nova versão. No entanto todos nos sabemos que o tempo não chega para tudo e muitas vezes fazer um update a uma extensão pode ser um bocado moroso. É então boa política remover a versão da extensão que utiliza a quando da instalação desta, isto pode ser feito editando os ficheiros da extensão com o notepad por exemplo.<br /><br /><br /><strong>Segunda parte</strong><br /><br />Um site em Joomla! é muito mais do que instalá-lo no servidor, mover alguns módulos de posição, instalar componentes, plugins e pronto! Já temos um site completo, feito em três dias e podemos ganhar mais de mil reais do nosso cliente. <br /><br />Sinceramente, pessoal, o Joomla é tão complicado de usar quanto se programar um site do zero. Claro que você não terá mais a necessidade de digitar todas as linhas de código, mas eventuais alterações serão necessárias e é importante saber o que, onde e por que está sendo feita aquela mudança.<br /><br />Além disso, a segurança é muito importante. Hoje existe uma gama enorme de componentes e módulos para Joomla, mas antes de usarem, perguntem-se: "este componente é seguro?". A maioria das invasões em sites Joomla! é feita através do próprio cms mal configurado ou de seus componentes desatualizados. Experiência própria: é muito mais difícil você contornar uma invasão do que prevenir que ela não aconteça.<br /><br />Trabalho com o Joomla há mais de três anos, desde a versão 1.0.12, e desde lá já aprendi muito, tomei muito na cabeça e hoje me viro tranqüilo, tanto é que tenho mais de 20 clientes em minha região e todos utilizam o Joomla!, mas a cada nova atualização de componentes, preciso dar atenção a estes sites, pois é a segurança dos dados e informações dos mesmos que estão em jogo.<br /><br />Por isso minha gente, tenho um sério conselho a dar a vocês: Estudem!<br /><br />Estudem muito o Joomla, pesquisem sobre servidores web (apache), sobre dicas de segurança no PHP, informações sobre servidores de e-mail, segurança de arquivo, permissões de acesso a pastas e arquivos, etc...<br /><br />Mostrei apenas o caminho das pedras, agora é Google na veia e tempo e disciplina para estudar. Hoje existem mil vezes mais materiais sobre esse assunto do que quando comecei. Inclusive a maioria mais detalhada e em português, no "meu tempo" os bons artigos e tutoriais eram em inglês.<br /><br />Este e-mail foi escrito como um alerta aos desavisados, para não saírem por ai usando o Joomla! sem considerar o uso de medidas sobre segurança. <br /><br />Isso evitará os seus sites de serem invadidos e assim o indivíduo não vai sair por ai xingando todo mundo em qualquer fórum destinado ao Joomla!, falando mal do sistema para qualquer um que aparecer, alegando que "não é seguro". <br /><br />Quem faz o Joomla ser seguro é você".<br />Escrito por Roberto Jonikaites para o Yahoogrupos – Curso de Design para Joomla! De Bruno Ávila.<br /><br />Este artigo foi encontrado no sitea baixo, mas não mais o encontrei em minha última tentativa de visita:<br /><a href="http://www.joomlarj.com.br/site/index.php?option=com_content&amp;view=article&amp;id=26:seguranca-no-joomla-parte-2&amp;catid=15:seguranca-no-joomla&amp;Itemid=15">http://www.joomlarj.com.br/site/index.php?option=com_content&amp;view=article&amp;id=26:seguranca-no-joomla-parte-2&amp;catid=15:seguranca-no-joomla&amp;Itemid=15</a> <br /><br /></p> 	</div>
+
+	
+	
+				
+	
+	
+	
+</article>
+
+</body>
+</html>

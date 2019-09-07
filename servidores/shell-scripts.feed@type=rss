@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="Joomla! - Open Source Content Management" -->
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Shell Scripts - RibaFS Portal</title>
+		<description><![CDATA[Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros.]]></description>
+		<link>http://backup/portal/servidores/shell-scripts.html</link>
+		<lastBuildDate>Sat, 07 Sep 2019 18:53:20 -0300</lastBuildDate>
+		<generator>Joomla! - Open Source Content Management</generator>
+		<atom:link rel="self" type="application/rss+xml" href="http://backup/portal/servidores/shell-scripts.feed?type=rss"/>
+		<language>pt-br</language>
+		<item>
+			<title>Backup do PostgreSQL</title>
+			<link>http://backup/portal/servidores/shell-scripts/backup-do-postgresql.html</link>
+			<guid isPermaLink="true">http://backup/portal/servidores/shell-scripts/backup-do-postgresql.html</guid>
+			<description><![CDATA[<p><img src="http://backup/portal/images/conectarnautilus.png" /></p><p><strong>Backup de Bancos do PostgreSQL</strong></p>
+
+
+<p>Este script é simples e flexível, pois faz o backup de todos os bancos, um esquema ou uma tabela.</p>
+
+
+<p><a title="pgback.sh" href="http://backup/portal/../down/servidores/pgback.sh" rel="alternate">pgback.sh</a></p>
+
+
+<p> </p>
+
+
+<p> </p>]]></description>
+			<category>Shell Scripts</category>
+			<pubDate>Sat, 24 Jun 2017 18:34:48 -0300</pubDate>
+		</item>
+		<item>
+			<title>Script Desenvolvedores</title>
+			<link>http://backup/portal/servidores/shell-scripts/script-desenvolvedores.html</link>
+			<guid isPermaLink="true">http://backup/portal/servidores/shell-scripts/script-desenvolvedores.html</guid>
+			<description><![CDATA[<p><img src="http://backup/portal/images/conectarnautilus.png" /></p><p><strong>Menu de uso do Ubuntu Server pelos desenvolvedores<br /></strong></p>
+<p>Este script é simples e flexível, podndo ser alterado/adaptado facilmente</p>
+<p><a title="devel.sh" href="http://backup/portal/down/servidores/devel.sh" rel="alternate">devel.sh</a></p>
+<p> </p>]]></description>
+			<category>Shell Scripts</category>
+			<pubDate>Sat, 24 Jun 2017 18:34:48 -0300</pubDate>
+		</item>
+		<item>
+			<title>Script Administradores</title>
+			<link>http://backup/portal/servidores/shell-scripts/script-administradores.html</link>
+			<guid isPermaLink="true">http://backup/portal/servidores/shell-scripts/script-administradores.html</guid>
+			<description><![CDATA[<p><img src="http://backup/portal/images/conectarnautilus.png" /></p><p><strong>Menu de uso do Ubuntu Server pelos administradores<br /></strong></p>
+<p>Este script é simples e flexível, podndo ser alterado/adaptado facilmente</p>
+<p><a title="admin.sh" href="http://backup/portal/down/servidores/admin.sh" rel="alternate">admin.sh</a></p>
+<p> </p>]]></description>
+			<category>Shell Scripts</category>
+			<pubDate>Sat, 24 Jun 2017 18:34:48 -0300</pubDate>
+		</item>
+	</channel>
+</rss>

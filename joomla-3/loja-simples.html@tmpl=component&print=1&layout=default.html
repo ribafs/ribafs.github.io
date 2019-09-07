@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br" dir="ltr">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <base href="" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Ribamar FS" />
+	<meta name="robots" content="noindex, nofollow" />
+	<meta name="description" content="Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros." />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>Loja Simples - RibaFS Portal</title>
+	<link href="http://ribafs.org/portal/joomla-3/loja-simples.html?tmpl=component&amp;print=1&amp;layout=default" rel="canonical" />
+	<link href="../templates/shaper_helix3/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<script src="../media/jui/js/jquery.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../media/jui/js/jquery-noconflict.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../media/jui/js/jquery-migrate.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="http://backup/portal/media/system/js/caption.js?d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script type="text/javascript">
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+	</script>
+	<meta property="og:url" content="http://backup/portal/joomla-3/loja-simples.html" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Loja Virtual Simples para Joomla" />
+	<meta property="og:description" content="Sem Virtuemart, apenas Joomla Criando uma pequena loja virtual somente com o Joomla, que permita pagamento direto via depósito ou transferência bancária, m..." />
+
+   	<link rel="stylesheet" href="../media/jui/css/bootstrap.min.css" type="text/css" />
+	<link rel="stylesheet" href="../templates/shaper_helix3/css/frontend-edit.css" type="text/css" />
+    <link rel="stylesheet" href="../templates/shaper_helix3/css/template.css" type="text/css" />
+</head>
+<body class="contentpane">
+	<div id="system-message-container">
+	</div>
+
+	
+
+<article class="item item-page" itemscope itemtype="http://schema.org/Article">
+	<meta itemprop="inLanguage" content="pt-BR" />
+	
+	
+
+	<div class="entry-header">
+		<span class="post-format"><i class="fa fa-thumb-tack"></i></span>
+		
+					<h2 itemprop="name">
+									Loja Virtual Simples para Joomla							</h2>
+												</div>
+
+						<div id="pop-print" class="btn hidden-print">
+				<a href="loja-simples.html#" onclick="window.print();return false;">			<span class="icon-print" aria-hidden="true"></span>
+		Imprimir	</a>			</div>
+				
+	
+	
+				
+	
+			<div itemprop="articleBody">
+		<h2 align="left">Sem Virtuemart, apenas Joomla</h2>
+
+<p><br />Criando uma pequena loja virtual somente com o Joomla, que permita pagamento direto via depósito ou transferência bancária, mas também que ofereça opções de compra pelos cartões de crédito Visa e MasterCard com o PayPal ou através do PagSeguro. Com botão de compra e Carrinho.</p>
+
+<p>Os softwares de loja virtual atualmente apresentam dificuldades, são complexos, especialmente para o gerenciamento da loja. Uma loja com o Joomla tem como grande virtude a facilidade de gerenciamento dos produtos, fazemos isso como se estivéssemos apenas criando um artigo.</p>
+
+<p>Este projeto cria uma loja virtual simples apenas com o Joomla 3.8 sem nenhuma extensão de terceiros. Instalei o Joomla somente para a loja com o template default.</p>
+
+<p><strong>Veja como ficou aqui quando criei a lojinha:<br /></strong></p>
+
+<p><strong><img src="../images/LojaSimplesJoomla.png" alt="" /></strong></p>
+
+<p><strong>E quando visualizamos um produto:</strong></p>
+
+<p><strong><img src="../images/LojaSimplesJoomla2.png" alt="" /></strong></p>
+
+<p>Não implementei o PayPal nem o depósito/transferência. Foi apenas para demonstrar.</p>
+
+<p><strong>Observações:</strong></p>
+
+<p>Instalar o Joomla do zero sem conteúdo de exemplos.<br />Instalar e tornar padrão o idioma pt-BR<br /><br /><strong>Temos duas alternativas:</strong><br />- Criar uma loja virtual em um site existente. Neste caso criamos uma categoria chamada loja e neta todo o conteúdo da mesma<br />- Instalar o Joomla inteiramente para a loja, então as categorias dirão respeito a cada produto ou categorias de produtos<br /><br />Vou considerar uma instalação inteiramente dedicada à loja.<br /><br /><br /><strong>Considerarei uma Sapataria com algumas categorias de produtos (estas serão as categorias):</strong><br />- Tênis<br />- Sapato social<br />- Meias<br />- Mochila<br /><br /><strong>Considerarei 3 formas de pagamentos:</strong><br />- Depósito ou transferência bancária<br />- PagSeguro<br />- PayPal, que aceita cartões VISA e MasterCard<br /><br /><strong>Desativar o Plugin</strong> <br />Conteúdo - Ocultar Email<br />Para evitar problemas com o script do PagSeguro<br /><br /><strong>Opções de Artigos</strong> (para evitar impedimento)<br /><br />Conteúdo - Artigos - Opções<br />Artigos:<br />Título como Link - Não<br />Categoria - Ocultar<br />Exibir Categoria pai - Exibir<br />Link Pai - Sim<br />Autor - Ocultar<br />Data da Publicação - Ocultar<br />Navegação - Ocultar<br />Exibir Título do Leia Mais - Ocultar<br />Ícones - ocultar todos<br />Salvar</p>
+
+<p><strong>Layoute da Página</strong><br />Menus - Main Menu - Clicar em Home/Início<br />Layout<br /><br />Artigos principais - 0<br />Introdução Artigos - 6<br />Colunas - 3<br />Links - 4<br /><br />Terá 3 colunas, no máximo 15 produtos por página e nenhum artigo destaque<br /><br /><strong>Teremos o seguinte layout para cada artigo:</strong><br /><br />Uma foto pequena do produto<br />Uma descrição do produto<br />Botão Comprar e Botão Carrinho<br /><br /><strong>Cada artigo de produto terá</strong><br />- Categoria<br />- Código do Artigo no Apelido<br />- Destaque - Sim<br />- Imagem miniatura<br />- Preço<br />- Leia mais<br />- Imagem normal<br />- Nome do produto<br />- Preço<br /><br /><br /><strong>Exemplo de Artigo</strong><br /><br />Título - Tênis Rainha preto<br />Apelido - tenraipt01 (no apelido coloco o código)<br />Categoria - Tênis<br />Destaque - Sim<br /><br />Inserir imagem mini do tênis<br />Descrição do respectivo tênis<br />Preço - R$ 65,00<br />Inserir o link do produto final na imagem mini para que ao clicar na imagem seja similar a clicar no botão Leia mais.<br /><br />Inserir um leia mais<br /><br />Inserir agora a imagem normal do tênis<br /><br />Descrição agora detalhada do respectivo tênis<br />(Melhor que esta descrição fique posicionada à esquerda da imagem)<br /><br />Usar uma tabela com uma linha e duas colunas:<br />Na primeira coluna insira a imagem normal e na segunda coluna a descrição.<br /><br />Inserir uma linha horizontal abaixo da descrição<br /><br /><br /><strong>Para que ao clicar em Leia Mais ele oculte a primeira parte</strong><br />Artigos - Opções<br />Artigos<br />Introdução - Ocultar<br />Salvar<br /><br />Inserir logo abaixo da imagem normal do primeiro artigo<br />uma tabela com 3 linhas e duas colunas, assim:<br /><br />Botão Pagseguro     Preço<br />Linha em branco<br />Botão do Carrinho</p>
+
+<p><strong>Sugestões:</strong><br />Também podemos adicionar um link de vídeo sobre o produto na página principal do mesmo.<br /><br />Assim podemos criar todos os artigos da loja.<br />Uma forma fácil de criar um artigo é abrindo ele no gerenciador de artigos e efetuando uma cópia. Então mudamos a categoria, se for o caso, o alias, as imagens, preço, descrição, etc.</p>
+
+<p><strong>Geração do Código dos Produtos</strong><br />Lembre de que cada produto deve ter seu botão criado no PagSeguro, pois tem um código próprio e que não deve ser alterado.</p>
+
+<p> </p>
+
+<p><strong>Créditos</strong></p>
+
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-weight: normal;">Sou grato ao pessoal do <a href="http://megaaula.com.br/">http://megaaula.com.br</a> que divulgou esta ótima ideia. </span><span style="font-weight: normal;">No site existem cursos online.</span></p>
+
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-weight: normal;">Vídeos</span> <span style="font-weight: normal;">no Youtube:</span></p>
+
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-weight: normal;"><a href="http://www.youtube.com/watch?v=0WesQSgdU-k">http://www.youtube.com/watch?v=0WesQSgdU-k</a> </span></p>
+
+<p style="margin-bottom: 0cm; line-height: 100%;"><a href="http://www.youtube.com/watch?v=Rkan6mhb-SM"><span style="font-weight: normal;">http://www.youtube.com/watch?v=Rkan6mhb-SM</span></a></p>
+
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-weight: normal;"><a href="http://www.youtube.com/watch?v=Glg-IIyAJSc">http://www.youtube.com/watch?v=Glg-IIyAJSc</a> </span></p>
+
+<p>Mas os autores removeram os vídeos e não mais consegui encontrar.</p> 	</div>
+
+	
+	
+				
+	
+	
+	
+</article>
+
+</body>
+</html>

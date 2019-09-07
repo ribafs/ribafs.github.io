@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br" dir="ltr">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <base href="" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Ribamar FS" />
+	<meta name="robots" content="noindex, nofollow" />
+	<meta name="description" content="Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros." />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>14 - Trabalhando com o Código do CakePHP 3 - RibaFS Portal</title>
+	<link href="http://ribafs.org/portal/curriculo/livros/cakephp/14-trabalhando-com-o-codigo-do-cakephp-3.html?tmpl=component&amp;print=1&amp;layout=default" rel="canonical" />
+	<link href="../../../templates/shaper_helix3/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../../../favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="http://backup/portal/media/plg_content_prismsyntaxhighlighter/css/prism-okaidia.css" rel="stylesheet" type="text/css" />
+	<link href="http://backup/portal/media/plg_content_prismsyntaxhighlighter/css/prism-linenumbers.css" rel="stylesheet" type="text/css" />
+	<script src="http://backup/portal/media/plg_content_prismsyntaxhighlighter/js/prism-tinymce.js" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery-noconflict.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery-migrate.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="http://backup/portal/media/system/js/caption.js?d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script type="text/javascript">
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+	</script>
+	<meta property="og:url" content="http://backup/portal/curriculo/livros/cakephp/14-trabalhando-com-o-codigo-do-cakephp-3.html" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="14 - Trabalhando com o Código do CakePHP 3" />
+	<meta property="og:description" content="14 - Trabalhando com o Código do CakePHP 3 Sorte é o que acontece quando a preparação encontra a oportunidade. Fluxo de Informações entre controllers, mode..." />
+
+   	<link rel="stylesheet" href="../../../media/jui/css/bootstrap.min.css" type="text/css" />
+	<link rel="stylesheet" href="../../../templates/shaper_helix3/css/frontend-edit.css" type="text/css" />
+    <link rel="stylesheet" href="../../../templates/shaper_helix3/css/template.css" type="text/css" />
+</head>
+<body class="contentpane">
+	<div id="system-message-container">
+	</div>
+
+	
+
+<article class="item item-page" itemscope itemtype="http://schema.org/Article">
+	<meta itemprop="inLanguage" content="pt-BR" />
+	
+	
+
+	<div class="entry-header">
+		<span class="post-format"><i class="fa fa-thumb-tack"></i></span>
+		
+					<h2 itemprop="name">
+									14 - Trabalhando com o Código do CakePHP 3							</h2>
+												</div>
+
+						<div id="pop-print" class="btn hidden-print">
+				<a href="14-trabalhando-com-o-codigo-do-cakephp-3.html#" onclick="window.print();return false;">			<span class="icon-print" aria-hidden="true"></span>
+		Imprimir	</a>			</div>
+				
+	
+	
+				
+	
+			<div itemprop="articleBody">
+		<h3>14 - Trabalhando com o Código do CakePHP 3</h3>
+<p style="text-align: right;"><br /><em><strong>Sorte é o que acontece quando a preparação encontra a oportunidade.</strong></em></p>
+<p><br /><br /><strong>Fluxo de Informações entre controllers, models e view/templates</strong><br /><br />Supondo que temos no aplicativo cliente, com apenas as tabelas users, groups e customers:<br /><br />Controller/CustomersController.php<br />Model/CustomersTable.php<br />Template/Customers/index.ctp<br /><br /><br /><strong>Criar em src/Model/CustomersTable.php a função:</strong></p>
+<pre class="language-php"><code>	public function teste(){
+		$query = $this-&gt;find('all', [
+			'order' =&gt; ['Customers.id' =&gt; 'ASC']
+		]);
+		$row = $query-&gt;first(); // Ou -&gt;last()
+		print "Model&lt;br&gt;";
+		return $row-&gt;name;
+	}</code></pre>
+<p><strong>Chamar no index() do src/Controller/CustomersController.php:</strong></p>
+<pre class="language-php"><code>    public function index()
+    {
+		// Adionar as 3 linhas abaixo
+		print "Controller&lt;br&gt;";
+		
+		// Mostrar o primeiro name:		
+  		print $this-&gt;Customers-&gt;teste();exit;
+
+        $customers = $this-&gt;paginate($this-&gt;Customers);
+
+        $this-&gt;set(compact('customers'));
+    }</code></pre>
+<p><strong>Chamar pela web</strong> <br /><br />http://localhost/clientes/users/index<br /><br />Mostrará, pois primeiro foi ao controller, depois foi ao model, voltou ao controller e mostrou na view:<br /><br />Controller<br />Model<br />Nome de um customer<br /><br /><br /><strong>Listagem de Users</strong><br /><br />View<br /><br /><strong>Veja a ordem:</strong><br /><br />1) O controller recebe a requisição do usuário para mostrar o customer:<br />http://localhost/clientes/customers/index<br /><br />2) O Controller envia para o Model pedindo o primeiro name <br /><br />3) O Model processa e devolve<br /><br />4) Então o controller envia para a view o primeiro name de customer<br /><br /><br /><strong>Para receber strings com segurança nos forms, usar a função h():</strong><br /><br />&lt;!-- File: src/Template/Articles/view.ctp --&gt;<br /><br />&lt;h1&gt;&lt;?= h($article-&gt;title) ?&gt;&lt;/h1&gt;<br />&lt;p&gt;&lt;?= h($article-&gt;body) ?&gt;&lt;/p&gt;<br /><br /><br /><strong>Testar se uma requisição é realmente post:</strong><br /><br />if ($this-&gt;request-&gt;is('post')) {<br /><br /><br /><strong>Debugar</strong><br /><br />dd($variavel);<br /><br /><strong>Carregar model que não é o default mas associado a este controller</strong><br />$cliente=$this-&gt;LoadModel('Clientes');<br /><br /><strong>Recebendo o nome da action atual</strong><br />$action=$this-&gt;request-&gt;getParam('action');<br />print $action;<br /><br />ou<br />use Cake\Routing\Router;<br />echo Router::getRequest()-&gt;params['action'];<br /><br /><strong>Recebendo nome do Controller atual</strong><br />$controller = $this-&gt;request-&gt;getParam('controller');<br />print $controller;<br />echo ucfirst(Router::getRequest()→params['controller']).'/'.Router::getRequest()→params['action'];<br /><br />ou<br />use Cake\Routing\Router;<br />print Router::getRequest()-&gt;params['controller'];<br /><br />Usando:<br />&lt;?php echo $title_for_layout .' - '. ucfirst(Router::getRequest()-&gt;params['controller']).'/'.Router::getRequest()-&gt;params['action']; ?&gt;<br /><br />$title_for_layout é definida no beforeFilter().<br /><br /><strong>Capturar nome do action atual:</strong><br />$this-&gt;request-&gt;action<br /><br /><strong>Capturar nome do controller:</strong><br />$this-&gt;request-&gt;controller<br /><br /><strong>Componente Flash</strong><br />Uma forma eficiente de enviar mensagens do controller para as views<br /><br />$this-&gt;Flash-&gt;msg    <br /><br />msg = success, set, error<br /><br />public function index()<br />{<br />$controller = $this-&gt;request-&gt;getParam('controller');<br />$this-&gt;Flash-&gt;success(__('O nome deste controller é: '.$controller));<br /><br /><br /><strong>Acesso a Banco de Dados</strong><br /><br />O trabalho com bancos de dados no Cake é feito com dois objetos Tables (lida com coleções da dados, tabela, por exemplo) e Entities (lida com apenas um registro).<br /><br /><br /><strong>Para trabalhar com Tabelas num controller</strong><br /><br />Carregar o objeto Table<br /><br />use Cake\ORM\TableRegistry;<br /><br />Carregar o respectivo objeto<br /><br />$clientes = TableRegistry::get('Clientes');<br /><br />Agora pode trabalhar com seu conteúdo.</p>
+<pre class="language-php"><code>use Cake\Datasource\ConnectionManager;
+
+$dsn = 'mysql://root:password@localhost/my_database';
+ConnectionManager::config('default', ['url' =&gt; $dsn]);
+$conn = ConnectionManager::get('default');
+
+$results = $conn-&gt;execute('SELECT * FROM articles')-&gt;fetchall('assoc');</code></pre>
+<p>Também podemos usar query builder.<br /><br /><strong>Redirecionamento para outras páginas</strong><br /><br />controller/action<br /><br />$this-&gt;redirect(['controller' =&gt; 'Clientes', 'action' =&gt; 'index'])<br /><br /><strong>URL</strong><br /><br />$this-&gt;redirect('http://ribafs.org')<br /><br />Action do controller atual<br /><br />$this-&gt;redirect(['action' =&gt; 'edit', $id]);<br /><br />ou<br />$this-&gt;setAction('index')<br /><br /><strong>Para o próprio link de onde veio</strong><br /><br />$this-&gt;redirect($this-&gt;referer());<br /><br /><br /><strong>Datasource</strong><br /><br />Se você precisar de mais controle sobre suas consultas, você pode fazer uso de instruções preparadas. Isso permite que você se comunique diretamente com o driver de banco de dados e enviar qualquer consulta personalizada que você queira:</p>
+<pre class="language-php"><code>$db = $this-&gt;getDataSource();
+$db-&gt;fetchAll(
+    'SELECT * from users where username = ? AND password = ?',
+    array('jhon', '12345')
+);
+$db-&gt;fetchAll(
+    'SELECT * from users where username = :username AND password = :password',
+    array('username' =&gt; 'jhon','password' =&gt; '12345')
+);
+
+
+Outro exemplo:
+
+$query = "SELECT * FROM user WHERE id=:user_id"
+$data = $this-&gt;getDataSource()-&gt;fetchAll($query, array("usery_id" =&gt; $user_id), array("cache" =&gt; false));
+
+Retornando os nomes de todas as tabelas do banco atual
+
+	$conn = ConnectionManager::get('default');
+	$driver = $conn-&gt;config()['driver'];
+
+	if($driver == 'Cake\Database\Driver\Postgres'){
+		$tables = $conn-&gt;execute("SELECT relname FROM pg_class WHERE relname !~ '^(pg_|sql_)' AND relkind = 'r';")-&gt;fetchAll();		
+	}elseif($driver=='Cake\Database\Driver\Mysql'){
+		$tables = $conn-&gt;execute("SHOW tables")-&gt;fetchAll();
+	}
+print $tables;
+
+
+Identificar SGBD (mysql ou postgres):
+
+Add ao início
+
+use Cake\Datasource\ConnectionManager;
+
+		$conn = ConnectionManager::get('default');
+		$driver = $conn-&gt;config()['driver']; // Outros: database, etc.		
+		if($driver == 'Cake\Database\Driver\Postgres'){
+		    $this-&gt;paginate = [
+		        'contain' =&gt; ['Users'],
+		        'conditions' =&gt; ['or' =&gt; [
+		            'Customers.name ilike' =&gt; '%' . $this-&gt;request-&gt;getQuery('search') . '%',
+		            'Customers.phone ilike' =&gt; '%' . $this-&gt;request-&gt;getQuery('search') . '%'
+		        ]],
+		        'order' =&gt; ['Customers.id' =&gt; 'DESC' ]
+		    ];
+		}elseif($driver=='Cake\Database\Driver\Mysql'){
+		    $this-&gt;paginate = [
+		        'contain' =&gt; ['Users'],
+		        'conditions' =&gt; ['or' =&gt; [
+		            'Customers.name like' =&gt; '%' . $this-&gt;request-&gt;getQuery('search') . '%',
+		            'Customers.phone like' =&gt; '%' . $this-&gt;request-&gt;getQuery('search') . '%'
+		        ]],
+		        'order' =&gt; ['Customers.id' =&gt; 'DESC' ]
+		    ];
+		}else{
+			print '&lt;h2&gt;Driver database dont supported!';
+			exit;
+		}</code></pre>
+<p> </p> 	</div>
+
+	
+	
+				
+	
+	
+	
+</article>
+
+</body>
+</html>

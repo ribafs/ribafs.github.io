@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="Joomla! - Open Source Content Management" -->
+<feed xmlns="http://www.w3.org/2005/Atom"  xml:lang="pt-br">
+	<title type="text">Diversos - RibaFS Portal</title>
+	<subtitle type="text">Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros.</subtitle>
+	<link rel="alternate" type="text/html" href="http://backup"/>
+	<id>http://backup/portal/blog/diversos.feed</id>
+	<updated>2019-09-07T19:04:59-03:00</updated>
+	<author>
+		<name>RibaFS Portal</name>
+	</author>
+	<generator uri="https://www.joomla.org">Joomla! - Open Source Content Management</generator>
+	<link rel="self" type="application/atom+xml" href="http://backup/portal/blog/diversos.feed?type=atom"/>
+	<entry>
+		<title>Tradução de sites de forma muito simples</title>
+		<link rel="alternate" type="text/html" href="http://backup/portal/blog/diversos/traducao-de-sites-de-forma-muito-simples.html"/>
+		<published>2019-08-29T21:34:37-03:00</published>
+		<updated>2019-08-29T21:34:37-03:00</updated>
+		<id>http://backup/portal/blog/diversos/traducao-de-sites-de-forma-muito-simples.html</id>
+		<author>
+			<name>Ribamar FS</name>
+		</author>
+		<summary type="html">&lt;h3&gt;Tradução para diversos idiomas&lt;/h3&gt;
+&lt;p&gt;Podemos usar o Google Translator ou o Bing para fazer isso.&lt;/p&gt;
+&lt;p&gt;Veja como fiz usando o Google Translator&lt;/p&gt;
+&lt;p&gt;Apenas coloco um aviso no topo do site, com um link para o Translator já com meu site traduzido, no meu caso para o inglês, assim:&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;Do you not speak Portuguese? Translate this site with &lt;a href=&quot;https://translate.google.com/translate?hl=pt-BR&amp;amp;sl=pt&amp;amp;tl=en&amp;amp;u=https://ribafs.org/portal&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Google Translator &lt;/a&gt;&lt;/b&gt;&lt;/p&gt;
+&lt;p&gt;O link é este abaixo, que pode trocar meu site ao final pelo seu:&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;https://translate.google.com/translate?hl=pt-BR&amp;amp;sl=pt&amp;amp;tl=en&amp;amp;u=https://ribafs.org/portal&lt;/b&gt;&lt;/p&gt;
+&lt;p&gt;Grato ao Edivaldo (https://www.edivaldobrito.com.br/&lt;a href=&quot;https://www.edivaldobrito.com.br/)&quot;&gt;)&lt;/a&gt; por mostrar isso e principalmente ao Google por nos oferecer mais este ótimo serviço.&lt;/p&gt;</summary>
+		<content type="html">&lt;h3&gt;Tradução para diversos idiomas&lt;/h3&gt;
+&lt;p&gt;Podemos usar o Google Translator ou o Bing para fazer isso.&lt;/p&gt;
+&lt;p&gt;Veja como fiz usando o Google Translator&lt;/p&gt;
+&lt;p&gt;Apenas coloco um aviso no topo do site, com um link para o Translator já com meu site traduzido, no meu caso para o inglês, assim:&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;Do you not speak Portuguese? Translate this site with &lt;a href=&quot;https://translate.google.com/translate?hl=pt-BR&amp;amp;sl=pt&amp;amp;tl=en&amp;amp;u=https://ribafs.org/portal&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Google Translator &lt;/a&gt;&lt;/b&gt;&lt;/p&gt;
+&lt;p&gt;O link é este abaixo, que pode trocar meu site ao final pelo seu:&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;https://translate.google.com/translate?hl=pt-BR&amp;amp;sl=pt&amp;amp;tl=en&amp;amp;u=https://ribafs.org/portal&lt;/b&gt;&lt;/p&gt;
+&lt;p&gt;Grato ao Edivaldo (https://www.edivaldobrito.com.br/&lt;a href=&quot;https://www.edivaldobrito.com.br/)&quot;&gt;)&lt;/a&gt; por mostrar isso e principalmente ao Google por nos oferecer mais este ótimo serviço.&lt;/p&gt;</content>
+		<category term="Diversos" />
+	</entry>
+	<entry>
+		<title>É possível viver sem o Google?</title>
+		<link rel="alternate" type="text/html" href="http://backup/portal/blog/diversos/e-possivel-viver-sem-o-google.html"/>
+		<published>2017-09-21T16:14:45-03:00</published>
+		<updated>2017-09-21T16:14:45-03:00</updated>
+		<id>http://backup/portal/blog/diversos/e-possivel-viver-sem-o-google.html</id>
+		<author>
+			<name>Ribamar FS</name>
+		</author>
+		<summary type="html">&lt;h2&gt;Ainda bem que sim!&lt;/h2&gt;
+
+&lt;p&gt;&lt;br /&gt;É possível imaginar o mundo atual sem o Google?&lt;br /&gt;E não falo somente do buscador, mas do Gmail, Calendar e Contatos, do Translator, do Maps, do Hangouts, do Drive, Android, Blogger, etc.&lt;br /&gt;&lt;br /&gt;Realmente é difícil imaginar o nosso mundo atual sem o Google e tenho que reconhecer que ele fez muito para que chegássemos onde chegamos, visto que é muito efiente nas buscas e em muitas outras ferramentas criadas pela empresa. &lt;br /&gt;&lt;br /&gt;O grande problema é o poder que o Google tem hoje e sua política que não protege nossas informações, ao contrário as usa e as vende a interessados.&lt;br /&gt;Isso me leva algumas vezes a experimentar alternativas e citarei abaixo algumas das alternativas que tenho usado.&lt;br /&gt;&lt;br /&gt;Rastros do Google tem sido encontrados em 75% dos maiores websites. Isto significa não somente que ele está rastreando o que buscamos mas também rastreando que sites visitamos e usando todos os seus dados para ads que seguem você pela internet. Seus dados pessoais também podem ser usados em intimações de advogados, inclusive por casos civis como divórcio. &lt;br /&gt;&lt;br /&gt;Quando visitamos um site de loja virtual e acessamos algum produto então oGoogle nos persegue oferecendo produtos similares por algum tempo. Isso deveria ser inconcebível.&lt;br /&gt;&lt;br /&gt;Mais e mais pessoas também estão acreditando que é perigoso confiar em uma empresa com tantas informações assim e tantos tentáculos, tanto poder.&lt;br /&gt;&lt;br /&gt;Mas existem alternativas ao mesmo e a todos os seus recursos, desde o buscador.&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Buscador do Google&lt;/strong&gt; -&amp;gt; DuckDuckGo (free) - &lt;a href=&quot;https://duckduckgo.com/&quot;&gt;https://duckduckgo.com/&lt;/a&gt; &lt;br /&gt;Ótimo instrumento de busca que não é invasivo.&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Gmail, Calendário e Contatos&lt;/strong&gt; -&amp;gt; GMX - &lt;a href=&quot;https://www.gmx.com/&quot;&gt;https://www.gmx.com/&lt;/a&gt; &lt;br /&gt;&lt;br /&gt;&lt;strong&gt;YouTube&lt;/strong&gt; -&amp;gt; Vimeo (free com opção paga) - &lt;a href=&quot;https://vimeo.com/&quot;&gt;https://vimeo.com/&lt;/a&gt; &lt;br /&gt;Para maior privacidade no Youtube use o domínio &quot;youtube-nocookie&quot;. Criar uma nova hospedagem de vídeo use Vimeo.&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Google Maps&lt;/strong&gt; -&amp;gt; Apple Maps (free), OpenStreetMap (free) - &lt;a href=&quot;http://www.openstreetmap.org/&quot;&gt;http://www.openstreetmap.org/&lt;/a&gt; &lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Google Drive&lt;/strong&gt; -&amp;gt; Resilio Sync (free with paid options) - &lt;a href=&quot;https://www.resilio.com/individuals/&quot;&gt;https://www.resilio.com/individuals/&lt;/a&gt; &lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Android&lt;/strong&gt; -&amp;gt; iOS (paid)&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Google Chrome&lt;/strong&gt; -&amp;gt; Safari (free), Firefox (free: &lt;a href=&quot;http://firefox.com&quot;&gt;http://firefox.com&lt;/a&gt;), Brave (free)&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Blogger -&amp;gt; Ghost&lt;/strong&gt; - &lt;a href=&quot;https://ghost.org/&quot;&gt;https://ghost.org/&lt;/a&gt; (pago), WordPress (free with paid options)&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Google Hangouts&lt;/strong&gt; -&amp;gt; Zoom (free with paid options), appear.in (free with paid option)&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Google Allo&lt;/strong&gt; -&amp;gt; Signal (free) - &lt;a href=&quot;https://whispersystems.org/&quot;&gt;https://whispersystems.org/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Google Translator&lt;/strong&gt; - &lt;a href=&quot;http://translate.reference.com/&quot;&gt;http://translate.reference.com/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Google Images&lt;/strong&gt; - &lt;a href=&quot;https://duckduckgo.com/&quot;&gt;https://duckduckgo.com/&lt;/a&gt; (ao efetuar uma busca, temos a opção de procurar imagens)&lt;br /&gt;&lt;br /&gt;Estas mudanças acarretarão aumento de privacidade!&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Algo importante&lt;/strong&gt;: mesmo que exista alguma ferramenta que consideremos inferior à sua alternativa do Google, ainda assim é importante fazer algum sacrifício para poder viver de forma menos invasiva que a atual. Tudo depende de suas prioridades. Tem mais, é muito poder nas mãos de uma empresa (minhas suspeitas são de que tem bem mais que dois garotos que criaram a empresa no fundo do quintal). Muito poder é muito perigoso.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;P.S.: Veja os comentários onde estou complementando e atualizando informações sobre o assunto.&lt;/strong&gt;&lt;/p&gt;</summary>
+		<content type="html">&lt;h2&gt;Ainda bem que sim!&lt;/h2&gt;
+
+&lt;p&gt;&lt;br /&gt;É possível imaginar o mundo atual sem o Google?&lt;br /&gt;E não falo somente do buscador, mas do Gmail, Calendar e Contatos, do Translator, do Maps, do Hangouts, do Drive, Android, Blogger, etc.&lt;br /&gt;&lt;br /&gt;Realmente é difícil imaginar o nosso mundo atual sem o Google e tenho que reconhecer que ele fez muito para que chegássemos onde chegamos, visto que é muito efiente nas buscas e em muitas outras ferramentas criadas pela empresa. &lt;br /&gt;&lt;br /&gt;O grande problema é o poder que o Google tem hoje e sua política que não protege nossas informações, ao contrário as usa e as vende a interessados.&lt;br /&gt;Isso me leva algumas vezes a experimentar alternativas e citarei abaixo algumas das alternativas que tenho usado.&lt;br /&gt;&lt;br /&gt;Rastros do Google tem sido encontrados em 75% dos maiores websites. Isto significa não somente que ele está rastreando o que buscamos mas também rastreando que sites visitamos e usando todos os seus dados para ads que seguem você pela internet. Seus dados pessoais também podem ser usados em intimações de advogados, inclusive por casos civis como divórcio. &lt;br /&gt;&lt;br /&gt;Quando visitamos um site de loja virtual e acessamos algum produto então oGoogle nos persegue oferecendo produtos similares por algum tempo. Isso deveria ser inconcebível.&lt;br /&gt;&lt;br /&gt;Mais e mais pessoas também estão acreditando que é perigoso confiar em uma empresa com tantas informações assim e tantos tentáculos, tanto poder.&lt;br /&gt;&lt;br /&gt;Mas existem alternativas ao mesmo e a todos os seus recursos, desde o buscador.&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Buscador do Google&lt;/strong&gt; -&amp;gt; DuckDuckGo (free) - &lt;a href=&quot;https://duckduckgo.com/&quot;&gt;https://duckduckgo.com/&lt;/a&gt; &lt;br /&gt;Ótimo instrumento de busca que não é invasivo.&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Gmail, Calendário e Contatos&lt;/strong&gt; -&amp;gt; GMX - &lt;a href=&quot;https://www.gmx.com/&quot;&gt;https://www.gmx.com/&lt;/a&gt; &lt;br /&gt;&lt;br /&gt;&lt;strong&gt;YouTube&lt;/strong&gt; -&amp;gt; Vimeo (free com opção paga) - &lt;a href=&quot;https://vimeo.com/&quot;&gt;https://vimeo.com/&lt;/a&gt; &lt;br /&gt;Para maior privacidade no Youtube use o domínio &quot;youtube-nocookie&quot;. Criar uma nova hospedagem de vídeo use Vimeo.&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Google Maps&lt;/strong&gt; -&amp;gt; Apple Maps (free), OpenStreetMap (free) - &lt;a href=&quot;http://www.openstreetmap.org/&quot;&gt;http://www.openstreetmap.org/&lt;/a&gt; &lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Google Drive&lt;/strong&gt; -&amp;gt; Resilio Sync (free with paid options) - &lt;a href=&quot;https://www.resilio.com/individuals/&quot;&gt;https://www.resilio.com/individuals/&lt;/a&gt; &lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Android&lt;/strong&gt; -&amp;gt; iOS (paid)&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Google Chrome&lt;/strong&gt; -&amp;gt; Safari (free), Firefox (free: &lt;a href=&quot;http://firefox.com&quot;&gt;http://firefox.com&lt;/a&gt;), Brave (free)&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Blogger -&amp;gt; Ghost&lt;/strong&gt; - &lt;a href=&quot;https://ghost.org/&quot;&gt;https://ghost.org/&lt;/a&gt; (pago), WordPress (free with paid options)&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Google Hangouts&lt;/strong&gt; -&amp;gt; Zoom (free with paid options), appear.in (free with paid option)&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Google Allo&lt;/strong&gt; -&amp;gt; Signal (free) - &lt;a href=&quot;https://whispersystems.org/&quot;&gt;https://whispersystems.org/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Google Translator&lt;/strong&gt; - &lt;a href=&quot;http://translate.reference.com/&quot;&gt;http://translate.reference.com/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Google Images&lt;/strong&gt; - &lt;a href=&quot;https://duckduckgo.com/&quot;&gt;https://duckduckgo.com/&lt;/a&gt; (ao efetuar uma busca, temos a opção de procurar imagens)&lt;br /&gt;&lt;br /&gt;Estas mudanças acarretarão aumento de privacidade!&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Algo importante&lt;/strong&gt;: mesmo que exista alguma ferramenta que consideremos inferior à sua alternativa do Google, ainda assim é importante fazer algum sacrifício para poder viver de forma menos invasiva que a atual. Tudo depende de suas prioridades. Tem mais, é muito poder nas mãos de uma empresa (minhas suspeitas são de que tem bem mais que dois garotos que criaram a empresa no fundo do quintal). Muito poder é muito perigoso.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;P.S.: Veja os comentários onde estou complementando e atualizando informações sobre o assunto.&lt;/strong&gt;&lt;/p&gt;</content>
+		<category term="Diversos" />
+	</entry>
+	<entry>
+		<title>Como fazer um teste de USB</title>
+		<link rel="alternate" type="text/html" href="http://backup/portal/blog/diversos/como-fazer-um-teste-usb.html"/>
+		<published>2017-09-18T12:47:42-03:00</published>
+		<updated>2017-09-18T12:47:42-03:00</updated>
+		<id>http://backup/portal/blog/diversos/como-fazer-um-teste-usb.html</id>
+		<author>
+			<name>Ribamar FS</name>
+		</author>
+		<summary type="html">&lt;h2&gt;Evitando a Queima de Pendrives&lt;/h2&gt;
+
+&lt;p&gt;Há alguns anos atraz eu criei um teste de USB para evitar queima de pendrives e o artigo era o mais popular do meu site.&lt;/p&gt;
+
+&lt;p&gt;Certa vez meu site foi invadido e em algumas mudanças de hospedagem acabei por perder o conteúdo. Por essas e outras atualmente faço backup com boa frequência.&lt;/p&gt;
+
+&lt;p&gt;Pesquisando a procura do artigo acabei encontrando mas encontrei outro ainda melhor que o meu e venho compartilhar aqui.&lt;/p&gt;
+
+&lt;p&gt;O objetivo é ter tipo um pendrive mas que de fato é um testador das portas USB do computador. Ele indica quando a porta está invertida e neste caso se você inserir o pendrive ele será queimado.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://passoapassopc.blogspot.com.br/2011/06/como-fazer-um-teste-usb.html&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;http://passoapassopc.blogspot.com.br/2011/06/como-fazer-um-teste-usb.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;</summary>
+		<content type="html">&lt;h2&gt;Evitando a Queima de Pendrives&lt;/h2&gt;
+
+&lt;p&gt;Há alguns anos atraz eu criei um teste de USB para evitar queima de pendrives e o artigo era o mais popular do meu site.&lt;/p&gt;
+
+&lt;p&gt;Certa vez meu site foi invadido e em algumas mudanças de hospedagem acabei por perder o conteúdo. Por essas e outras atualmente faço backup com boa frequência.&lt;/p&gt;
+
+&lt;p&gt;Pesquisando a procura do artigo acabei encontrando mas encontrei outro ainda melhor que o meu e venho compartilhar aqui.&lt;/p&gt;
+
+&lt;p&gt;O objetivo é ter tipo um pendrive mas que de fato é um testador das portas USB do computador. Ele indica quando a porta está invertida e neste caso se você inserir o pendrive ele será queimado.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://passoapassopc.blogspot.com.br/2011/06/como-fazer-um-teste-usb.html&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;http://passoapassopc.blogspot.com.br/2011/06/como-fazer-um-teste-usb.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;</content>
+		<category term="Diversos" />
+	</entry>
+</feed>

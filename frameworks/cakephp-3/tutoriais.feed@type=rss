@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="Joomla! - Open Source Content Management" -->
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Tutoriais - RibaFS Portal</title>
+		<description><![CDATA[Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros.]]></description>
+		<link>http://backup/portal/frameworks/cakephp-3/tutoriais.html</link>
+		<lastBuildDate>Sat, 07 Sep 2019 18:58:33 -0300</lastBuildDate>
+		<generator>Joomla! - Open Source Content Management</generator>
+		<atom:link rel="self" type="application/rss+xml" href="http://backup/portal/frameworks/cakephp-3/tutoriais.feed?type=rss"/>
+		<language>pt-br</language>
+		<item>
+			<title>Criação de Plugin para o CakePHP 3</title>
+			<link>http://backup/portal/frameworks/cakephp-3/tutoriais/criacao-plugin-cakephp.html</link>
+			<guid isPermaLink="true">http://backup/portal/frameworks/cakephp-3/tutoriais/criacao-plugin-cakephp.html</guid>
+			<description><![CDATA[<h4>Criação de Plugin para o CakePHP 3</h4>
+<p><br />Irei relatar como criei o plugin twbs-cake-css:<br /><a href="https://github.com/ribafs/twbs-cake-css">https://github.com/ribafs/twbs-cake-css</a> <br /><br />Eu criei um plugin que controla a autenticação em aplicativos do Cake, que é o<br /><a href="https://github.com/ribafs/cake-control-br">https://github.com/ribafs/cake-control-br</a> <br /><br />E neste plugin, para melhorar o aspecto, adicionei o plugin twbs-cake-plugin:<br /><a href="https://github.com/elboletaire/twbs-cake-plugin">https://github.com/elboletaire/twbs-cake-plugin</a> <br /><br />Acontece que o twbs-cake-plugin usa less ao invés de css puro e é meio lento. Então resolvi editar o mesmo e criar um que ficasse como eu queria, somente com CSS, mais simples e mais rápido. Resolvi usar o Bootstrap, apenas com CSS.<br /><br /><strong>Baixei o Bootstrap:</strong><br /><a href="http://getbootstrap.com/docs/4.0/getting-started/download/">http://getbootstrap.com/docs/4.0/getting-started/download/</a> <br />Eu ainda usei a versão 3, que vinha com as fontes glyphicons.<br /><br /><strong>Baixei o twbs-cake-plugin</strong><br /><br /><strong>Mudei o plugin acima para deixar como eu queria:</strong><br /><br />Comecei eliminando a pasta config com o arquivo bootstrap.php. Ele chama dois outros plugins que não usarei.<br /><br />Todo o conteúdo da pasta /src eu usarei como está sem nenhuma modificação, pois ela contém o template para que o bake gere o conteúdo com o CSS, apenas mudarei o layout default.ctp.<br /><br /><strong>Veja como ficou o layout default.ctp:</strong><br /><br /></p>
+<pre class="language-php"><code>&lt;?php
+/**
+* CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
+* Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
+*
+* Licensed under The MIT License
+* For full copyright and license information, please see the LICENSE.txt
+* Redistributions of files must retain the above copyright notice.
+*
+* @copyright Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
+* @link http://cakephp.org CakePHP(tm) Project
+* @since 0.10.0
+* @license http://www.opensource.org/licenses/mit-license.php MIT License
+*/
+
+$cakeDescription = 'CakePHP: the rapid development php framework';
+?&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;?= $this-&gt;Html-&gt;charset() ?&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+&lt;title&gt;
+&lt;?= $cakeDescription ?&gt;:
+&lt;?= $this-&gt;fetch('title') ?&gt;
+&lt;/title&gt;
+&lt;?= $this-&gt;Html-&gt;meta('icon') ?&gt;
+
+&lt;?= $this-&gt;Html-&gt;css('base.css') ?&gt;
+&lt;?= $this-&gt;Html-&gt;css('bootstrap.min.css') ?&gt;
+&lt;?= $this-&gt;Html-&gt;script('bootstrap.min') ?&gt;
+
+&lt;?= $this-&gt;fetch('meta') ?&gt;
+&lt;?= $this-&gt;fetch('css') ?&gt;
+&lt;?= $this-&gt;fetch('script') ?&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;style&gt;
+/* Remover as duas linhas abaixo, caso o texto do site fique com letras muito grandes */
+html { font-size: 14px; }
+body { font-size: 14px; }
+&lt;/style&gt;
+
+&lt;nav class="top-bar expanded" data-topbar role="navigation"&gt;
+&lt;ul class="title-area large-3 medium-4 columns"&gt;
+&lt;li class="name"&gt;
+&lt;h1&gt;&lt;a href="http://backup/portal/"&gt;&lt;?= $this-&gt;fetch('title') ?&gt;&lt;/a&gt;&lt;/h1&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="top-bar-section"&gt;
+&lt;ul class="right"&gt;
+&lt;li&gt;&lt;a target="_blank" href="http://book.cakephp.org/3.0/"&gt;Documentation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a target="_blank" href="http://api.cakephp.org/3.0/"&gt;API&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/nav&gt;
+&lt;?= $this-&gt;Flash-&gt;render() ?&gt;
+&lt;div class="container clearfix"&gt; &lt;!-- Assim &lt;div class="clearfix"&gt; ocupará toda a tela--&gt;
+&lt;?= $this-&gt;fetch('content') ?&gt;
+&lt;/div&gt;
+&lt;footer&gt;
+&lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p><strong>Agora vejamos como ficou o conteúdo da pasta /webroot:</strong><br /><br />/css<br /> bootstrap.min.css<br />/fonts<br /> glyphicons-halflings-regular.ttf<br />/js<br /> bootstrap.min.js<br /><br /><strong>Um arquivo muito importante é o composer.json, que contém informações para a instalação pelo composer:</strong><br /><br /></p>
+<pre class="language-php"><code>{
+    "name": "ribafs/twbs-cake-css",
+    "authors": [
+        {
+            "name": "Ribamar FS",
+            "email": "ribafs@gmail.com",
+            "homepage": "http://racotecnic.com",
+            "role": "Developer"
+        }
+    ],
+    "description": "Twitter Bootstrap Plugin for CakePHP 3",
+    "type": "cakephp-plugin",
+    "keywords": ["cakephp", "bootstrap", "plugin", "template"],
+    "license": "MIT",
+    "support": {
+        "issues": "https://github.com/ribafs/twbs-cake-css/issues",
+        "source": "https://github.com/ribafs/twbs-cake-css.git"
+    },
+    "homepage": "https://github.com/ribafs/twbs-cake-css",
+    "require": {
+        "cakephp/cakephp": "^3.3"
+    },
+        "autoload": {
+            "psr-4": {
+            "Bootstrap\\": "src"
+        }
+    }
+}</code></pre>
+<p><br /><br /><br /><strong>Outro arquivo importante, que no GitHub funciona como o index.html em sites, é o README.md</strong>. Ele geralmente contém o help ensinando a instalar e outras informações.<br /><br /><strong>README.md</strong><br /><br />Simple plugin to implement Bootstrap in CakePHP 3<br />===================================================<br /><br />This plugin is a fork of the Twitter Bootstrap Plugin<br />https://github.com/elboletaire/twbs-cake-plugin<br /><br />This plugin only use CSS, dont use Less.<br /><br />It also contains bake templates that will help you starting *twitter-bootstraped*<br />CakePHP webapps.<br /><br />General Features<br />----------------<br /><br />- Bake templates.<br />- Generic Bootstrap layout.<br /><br />Installation<br />------------<br /><br />### Adding the plugin<br /><br />You can easily install this plugin using composer as follows:<br /><br />```bash<br />composer require ribafs/twbs-cake-css<br />```<br /><br />### Enabling the plugin<br /><br />After adding the plugin remember to load it in your `config/bootstrap.php` file:<br /><br />```php<br />bin/cake plugin load Bootstrap<br />```<br /><br />This will load the CSS for you.<br /><br />### Add Template to src/Controller/AppController.php<br />```php<br /> public function beforeRender(Event $event)<br /> {<br /> $this-&gt;viewBuilder()-&gt;theme('Bootstrap');<br /> ...<br />``` <br /><br />### Baking views<br /><br />You can bake your views using the twitter bootstrap templates bundled with this<br />plugin. To do so, simply specify the `bootstrap` template when baking your files:<br /><br />```bash<br />bin/cake bake all amigos --theme Bootstrap<br />```<br /><br /><strong>License</strong><br />-------<br /><br />The MIT License (MIT)<br /><br /><br />Faltou apenas a licença, que mantive a mesma: MIT.<br /><br /></p>
+<p><strong>Caso tenha interesse pela publicação no Packgist veja o artigo:</strong><br /><a href="http://backup/portal/cakephp-3/tutoriais/projeto-no-github">http://ribafs.org/portal/cakephp-3/tutoriais/projeto-no-github</a></p>
+<p> </p>]]></description>
+			<category>Tutoriais</category>
+			<pubDate>Thu, 31 Aug 2017 21:23:29 -0300</pubDate>
+		</item>
+		<item>
+			<title>Criando um Projeto no GitHub</title>
+			<link>http://backup/portal/frameworks/cakephp-3/tutoriais/projeto-no-github.html</link>
+			<guid isPermaLink="true">http://backup/portal/frameworks/cakephp-3/tutoriais/projeto-no-github.html</guid>
+			<description><![CDATA[<p style="text-align: justify;"><strong>Como Criar um Projeto hospedado no GitHub e no Packagist</strong></p>
+
+<p style="text-align: justify;">Ainda tem um terceiro projeto envolvido, o Composer.<br /> O Composer funciona de forma transparente entre ambos, usado pelo Packagist.</p>
+
+<p style="text-align: justify;"><strong>Criando um arquivo compojer.json</strong></p>
+
+<p style="text-align: justify;">Projeto em PHP na dobradinha GitHub e Packagist</p>
+
+<p style="text-align: justify;">Ainda tem um terceiro projeto encolvido, o Composer.<br /> O Composer funciona de forma transparente entre ambos</p>
+
+<p style="text-align: justify;"><strong>GitHub</strong><br /> - Criar conta<br /> - Criar novo repositório<br /> - Enviar código fonte para o repositório<br /> <br /> 1) Crie seu projeto em PHP<br /> - Use um código existente<br /> - Crie um novo<br /> - Faça um fork de algum projeto do GitHub e customise</p>
+
+<p style="text-align: justify;">2) Criando a estrutura do seu projeto<br />     2.1) cd /var/www/html<br />          mkdir meu-projeto<br />          cd meu-projeto<br />          composer init</p>
+
+<p style="text-align: justify;"><strong>Responder as perguntas</strong></p>
+
+<p style="text-align: justify;">Package name (&lt;vendor&gt;/&lt;name&gt;) [ribafs/meu-projeto]: (apenas tecle enter para aceitar)</p>
+
+<p style="text-align: justify;">Description []: Meu Primeiro projeto com o Packageist</p>
+
+<p style="text-align: justify;">Author [, n to skip]: Ribamar FS &lt;ribafs@gmail.com&gt;    </p>
+
+<p style="text-align: justify;">Minimum Stability []: dev<br /> Opções: dev, alpha, beta, RC ou stable</p>
+
+<p style="text-align: justify;">Package Type (e.g. library, project, metapackage, composer-plugin) []: project</p>
+
+<p style="text-align: justify;">License []: MIT</p>
+
+<p style="text-align: justify;">Define your dependencies.</p>
+
+<p style="text-align: justify;">Would you like to define your dependencies (require) interactively [yes]? no<br /> (Nesta primeira etapa - no)</p>
+
+<p style="text-align: justify;">Would you like to define your dev dependencies (require-dev) interactively [yes]? no</p>
+
+<p style="text-align: justify;">{<br />     "name": "ribafs/meu-projeto",<br />     "description": "Meu Primeiro projeto com o Packageist",<br />     "type": "project",<br />     "license": "MIT",<br />     "authors": [<br />         {<br />             "name": "Ribamar FS",<br />             "email": "ribafs@gmail.com"<br />         }<br />     ],<br />     "minimum-stability": "dev",<br />     "require": {}<br /> }</p>
+
+<p style="text-align: justify;">Do you confirm generation [yes]?</p>
+
+<p style="text-align: justify;"><strong>Concluído</strong></p>
+
+<p style="text-align: justify;">Referência sobre o composer - https://getcomposer.org/doc/04-schema.md</p>
+
+<p style="text-align: justify;">A estrutura do projeto deve ficar assim (sugestão/recomendação):</p>
+
+<p style="text-align: justify;">/meu-projeto<br />     /src (código fonte do meu projeto)    <br />     /vendor (diretório criado pelo Composer para armazenar as dependências)<br />     composer.json<br />     README.md<br />     index.php</p>
+
+<p style="text-align: justify;">3) Abrigar meu-projeto no GitHub<br />     - Criar uma conta no GitHub - https://github.com/<br />     - Criar um repositório para meu-projeto</p>
+
+<p style="text-align: justify;"><strong>Adicionar uma chave SSH</strong></p>
+
+<p style="text-align: justify;"><strong>Em seu desktop Linux execute:</strong></p>
+
+<p style="text-align: justify;">cd<br /> ssh-keygen -t rsa -b 4096 -C "contato@ribafs.org"<br /> Enter<br /> Enter<br /> Enter</p>
+
+<p style="text-align: justify;">Checando a senha<br /> ls -al ~/.ssh</p>
+
+<p style="text-align: justify;"><strong>Capturando o hash da senha</strong></p>
+
+<p style="text-align: justify;">cat ~/.ssh/id_rsa.pub</p>
+
+<p style="text-align: justify;">Copie a chave mostrada desde ssh-rsa ... até seu e-mail, incluso.</p>
+
+<p style="text-align: justify;">Vá ate'o GitHub, faça login e clique acima em sua foto e Settings<br /> SSH and GPG keys<br /> New SSH key</p>
+
+<p style="text-align: justify;">Entre com um Title (Residência)</p>
+
+<p style="text-align: justify;">E cole na caixa Key abaixo</p>
+
+<p style="text-align: justify;">E clique em Add SSH key</p>
+
+<p style="text-align: justify;">Ao criar um repositório no GitHub ele recebe o estágio de desenvolvimento, com um nome:<br /> master-dev</p>
+
+<p style="text-align: justify;">Nesta fase informamos no composer.json assim:<br />     "minimum-stability": "dev",</p>
+
+<p style="text-align: justify;">Quando considerarmos que já está usável e queremos oferecer para o mundo, então</p>
+
+<p style="text-align: justify;">distribuimos assim:<br /> composer require ribafs/cake-control:dev-master</p>
+
+<p style="text-align: justify;">Ou<br /> editando o composer.json do raiz do aplicativo para adicionar a linha abaixo na seção require:<br />         "ribafs/cake-control": "master-dev"</p>
+
+<p style="text-align: justify;">No Packagist ele aparece como<br /> dev-master</p>
+
+<p style="text-align: justify;">Quando considerar que o projeto está estável crie um Release e dê um número para o mesmo.<br /> Agora pode oferecer duas versões: a estável e a em desenvolvimento, assim:</p>
+
+<p style="text-align: justify;">Dev<br /> composer require ribafs/cake-control:dev-master</p>
+
+<p style="text-align: justify;">Estável<br /> composer require ribafs/cake-control-twbs</p>
+
+<p style="text-align: justify;">Depois que configuramos o Packagist e sincrinizamos as atualizações somente precisamos interagir com<br /> nosso código no GitHub, o Packagist e o Composer ficam transparentes.</p>
+
+<p style="text-align: justify;">4) <strong>Enviar meu-projeto para o repositório do GitHub</strong><br />     cd /var/www/html/meu-projeto</p>
+
+<p style="text-align: justify;">git config --global user.email "contato@ribafs.org"<br /> git config --global user.name "Ribamar FS"<br /> git init<br /> git add .<br /> git commit -m "Primeiro commit"<br /> git remote add origin git@github.com:ribafs/cake-control.git<br /> git push -f origin master</p>
+
+<p style="text-align: justify;">Para enviar novamente após alterações<br /> remover a pasta .git<br /> e repetir os passos acima</p>
+
+<p style="text-align: justify;">O projeto está agora hospedado no GitHub e pronto para ser abrigado pelo Packagist.</p>
+
+<p style="text-align: justify;">5) <strong>Criando o Pacote no Packagist</strong></p>
+
+<p style="text-align: justify;">Acesse https://packagist.org/<br /> Crie uma conta<br /> Faça login<br /> Clique em Submit a Package</p>
+
+<p style="text-align: justify;">Cole a linha a seguir, lembrando que o nome do pacote deve ser em minúsculas, palavras compostas separadas por hífen:</p>
+
+<p style="text-align: justify;">git@github.com:ribafs/cake-control.git</p>
+
+<p style="text-align: justify;">E clique em Check</p>
+
+<p style="text-align: justify;">Se retornar correto aceite e faça o submit</p>
+
+<p style="text-align: justify;">6) <strong>Atualizações</strong></p>
+
+<p style="text-align: justify;">Cada vez que atualizar o projeto no GitHub precisa atualizar no Packageist<br /> - Vá para sua conta no packagist<br /> - Settings<br /> - My Packages<br /> - Clique no projeto<br /> - Clique em Update (botão verde)</p>
+
+<p style="text-align: justify;"><strong>Para tornar automáticas as atualizações</strong><br /> - Vá para seu repositório no GitHub<br /> - Clique em Settings<br /> - Integration &amp; services<br />     - Services - Add service - packagist    <br />     - User - ribafs<br />     - Token - o token da sua API (Acesse o site do packagist - login - Profile e copie o token gerado e cole aqui)<br />     - Domain - packagist.org<br />     - Marque Active<br />     Clique em Update service abaixo<br />     Clique acima e à direita em Test service<br />     Caso receba a mensagem "Okay, the test payload is on its way." já poderá ir ao Packagist e abrir seu projeto que não<br />     mais aparecerá a mensagem de que precisa atualizar.</p>
+
+<p style="text-align: justify;">Agora as atualizações foram automatizadas.</p>
+
+<p style="text-align: justify;">Você está pronto para compartilhar seu projeto com o mundo.</p>
+
+<p style="text-align: justify;">Para instalar um plugin (ex.: cake-control), crie um aplicativo em Cake com composer</p>
+
+<p style="text-align: justify;">cd aplicativo<br /> composer require ribafs/cake-control</p>
+
+<p style="text-align: justify;">Mas, desta forma somente será possível após criar um release do projeto no GitHub.<br /> Enquanto não conclue satisfatoriamente seu projeto, poderá divulgar para testes assim:</p>
+
+<p style="text-align: justify;">Editar o composer.json:</p>
+
+<p style="text-align: justify;">Adicionar na seção require-dev a linha</p>
+
+<p style="text-align: justify;">    "require-dev": {<br />         "psy/psysh": "@stable",<br />         "cakephp/debug_kit": "~3.2",<br />         "cakephp/bake": "~1.1",<br />         "ribafs/cake-control": "master-dev"<br />     },</p>
+
+<p style="text-align: justify;">Depois executar:</p>
+
+<p style="text-align: justify;">composer update</p>
+
+<p style="text-align: justify;">Ou então diretamente para linha de comando:</p>
+
+<p style="text-align: justify;">composer require ribafs/cake-control:dev-master</p>
+
+<p style="text-align: justify;"><br /> <strong>Como remover plugin:</strong></p>
+
+<p style="text-align: justify;">Removível somente se bem inicialmente.</p>
+
+<p style="text-align: justify;">composer remove cakephp/localized</p>
+
+<p style="text-align: justify;">Remover manualmente a linha no bootstrap.php e todo o código adicionado ao vendor<br /> além da linha respectiva no composer.json</p>
+
+<p style="text-align: justify;"><strong>Referências:</strong></p>
+
+<p style="text-align: justify;">Composer - <a href="https://getcomposer.org/doc/03-cli.md">https://getcomposer.org/doc/03-cli.md</a> <br /> http://blog.jgrossi.com/2013/creating-your-first-composer-packagist-package/ <br /> Markdown tutorial - <a href="http://www.markdowntutorial.com/">http://www.markdowntutorial.com/</a>  (a linguagem usada pelo GitHub)</p>
+
+<p style="text-align: justify;"><strong>Dicas úteis</strong><br /> https://gist.github.com/</p>]]></description>
+			<category>Tutoriais</category>
+			<pubDate>Sun, 25 Jun 2017 16:23:38 -0300</pubDate>
+		</item>
+		<item>
+			<title>Aplicativo de Exemplo</title>
+			<link>http://backup/portal/frameworks/cakephp-3/tutoriais/aplicativo-de-exemplo.html</link>
+			<guid isPermaLink="true">http://backup/portal/frameworks/cakephp-3/tutoriais/aplicativo-de-exemplo.html</guid>
+			<description><![CDATA[<p>Pequeno Aplicativo usando CakePHP 3 que contém código fora do padrão de um CRUD.</p>
+
+
+<p>Com comunicação entre Model, Controller e View.</p>
+
+
+<p>Aplicativo didático que mostra código de regra de negócios em pequeno aplicativo.</p>
+
+
+<p><a title="Finanças" href="https://github.com/ribafs/cake-financas" target="_blank" rel="alternate noopener noreferrer">financas</a></p>
+
+
+<p> </p>]]></description>
+			<category>Tutoriais</category>
+			<pubDate>Sun, 25 Jun 2017 16:23:38 -0300</pubDate>
+		</item>
+		<item>
+			<title>Componente cake-control-br</title>
+			<link>http://backup/portal/frameworks/cakephp-3/tutoriais/componente-cake-control-br.html</link>
+			<guid isPermaLink="true">http://backup/portal/frameworks/cakephp-3/tutoriais/componente-cake-control-br.html</guid>
+			<description><![CDATA[<p style="text-align: justify;"><strong>Usando o Componente cake-control-br para controlar o acesso ao aplicativo</strong></p>
+
+<p style="text-align: justify;"><strong>Criar app</strong><br /> composer create-project --prefer-dist cakephp/app control1</p>
+
+<p style="text-align: justify;"><strong>Instalar Plugin</strong></p>
+
+<p style="text-align: justify;">cd control1<br /> composer require ribafs/cake-control-br</p>
+
+<p style="text-align: justify;"><strong>Configurar banco de dados</strong><br /> Crie o banco e importe o script existente na pasta docs do plugin baixado. Depois edite config/app.php para configurar o banco.</p>
+
+<p style="text-align: justify;">Aproveite e configure também o controller default em config/routes.php para um de seu interesse.</p>
+
+<p style="text-align: justify;"><strong>Habilitar o plugin</strong><br /> bin/cake plugin load CakeControlBr --bootstrap</p>
+
+<p style="text-align: justify;"><strong>Download do plugin</strong><br /> https://github.com/ribafs/cake-control-br/archive/master.zip</p>
+
+<p style="text-align: justify;"><strong>Descompactar e abrir o diretório docs</strong></p>
+
+<p style="text-align: justify;">bootstrap_cli.php para a control1/config (Com isso o Bake gerarará Users com login e logout)<br /> AppController.php para control1/src/Controller<br /> <br /> <strong>Gerar código com template</strong></p>
+
+<p style="text-align: justify;">cd control1</p>
+
+<p style="text-align: justify;">bin/cake bake all groups -t CakeControlBr<br /> bin/cake bake all users -t CakeControlBr<br /> bin/cake bake all permissions -t CakeControlBr<br /> bin/cake bake all customers -t CakeControlBr</p>
+
+<p style="text-align: justify;"><strong>Usuários e permissões</strong></p>
+
+<p style="text-align: justify;">Existem 4 usuários, cada um com permissões diferentes:<br /> super - com senha super também tem total permissão em tudo.<br /> admin - com senha admin tem total permissão nas tabelas groups, users e permissions.<br /> manager - com senha manager tem total permissão somente nas tabelas diferentes de<br /> groups, users e permissions.<br /> user - com senha user não tem nenhuma permissão no aplicativo, apenas de efetuar login.</p>
+
+<p style="text-align: justify;">Em AppController.php você pode definir o controller default para usuários não administradores. Caso não use a tabela customers troque logo no início do AppController por uma de suas tabelas na linha:</p>
+
+<p style="text-align: justify;">    protected $noAdmins = 'Customers';</p>
+
+<p style="text-align: justify;"><strong>Mais detalhes em</strong></p>
+
+<p style="text-align: justify;"><a href="https://ribafs.github.io/cakephp/cake-control.pdf">https://ribafs.github.io/cakephp/cake-control.pdf</a></p>]]></description>
+			<category>Tutoriais</category>
+			<pubDate>Sun, 25 Jun 2017 16:11:30 -0300</pubDate>
+		</item>
+	</channel>
+</rss>

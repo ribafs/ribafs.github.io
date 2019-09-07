@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br" dir="ltr">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <base href="" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Ribamar FS" />
+	<meta name="robots" content="noindex, nofollow" />
+	<meta name="description" content="Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros." />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>Acesso a Bancos de Dados - RibaFS Portal</title>
+	<link href="http://ribafs.org/portal/frameworks/cakephp-3/dicas/acesso-a-bancos-de-dados.html?tmpl=component&amp;print=1&amp;layout=default" rel="canonical" />
+	<link href="../../../templates/shaper_helix3/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../../../favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<script src="../../../media/jui/js/jquery.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery-noconflict.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery-migrate.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="http://backup/portal/media/system/js/caption.js?d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script type="text/javascript">
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+	</script>
+	<meta property="og:url" content="http://backup/portal/frameworks/cakephp-3/dicas/acesso-a-bancos-de-dados.html" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Acesso a Bancos de Dados" />
+	<meta property="og:description" content="Acesso a Bancos de Dados no CakePHP 3 use Cake\Datasource\ConnectionManager; Conexão $connection = ConnectionManager::get('default'); Select $results = $co..." />
+
+   	<link rel="stylesheet" href="../../../media/jui/css/bootstrap.min.css" type="text/css" />
+	<link rel="stylesheet" href="../../../templates/shaper_helix3/css/frontend-edit.css" type="text/css" />
+    <link rel="stylesheet" href="../../../templates/shaper_helix3/css/template.css" type="text/css" />
+</head>
+<body class="contentpane">
+	<div id="system-message-container">
+	</div>
+
+	
+
+<article class="item item-page" itemscope itemtype="http://schema.org/Article">
+	<meta itemprop="inLanguage" content="pt-BR" />
+	
+	
+
+	<div class="entry-header">
+		<span class="post-format"><i class="fa fa-thumb-tack"></i></span>
+		
+					<h2 itemprop="name">
+									Acesso a Bancos de Dados							</h2>
+												</div>
+
+						<div id="pop-print" class="btn hidden-print">
+				<a href="acesso-a-bancos-de-dados.html#" onclick="window.print();return false;">			<span class="icon-print" aria-hidden="true"></span>
+		Imprimir	</a>			</div>
+				
+	
+	
+				
+	
+			<div itemprop="articleBody">
+		<p><strong>Acesso a Bancos de Dados no CakePHP 3</strong><br /><br />use Cake\Datasource\ConnectionManager;</p>
+
+
+<p><strong>Conexão</strong><br />$connection = ConnectionManager::get('default');</p>
+
+
+<p><strong>Select</strong><br />$results = $connection-&gt;execute('SELECT * FROM articles')-&gt;fetchAll('assoc');<br /><br />ou<br />$results = $connection-&gt;execute('SELECT * FROM articles WHERE id = :id', ['id' =&gt; 1])-&gt;fetchAll('assoc');<br /><br /><br /><strong>Insert</strong><br />use Cake\Datasource\ConnectionManager;<br /><br />$connection = ConnectionManager::get('default');<br />$connection-&gt;insert('articles', [<br />    'title' =&gt; 'A New Article',<br />    'created' =&gt; new DateTime('now')<br />], ['created' =&gt; 'datetime']);<br /><br /><strong>Update</strong><br />use Cake\Datasource\ConnectionManager;<br />$connection = ConnectionManager::get('default');<br />$connection-&gt;update('articles', ['title' =&gt; 'New title'], ['id' =&gt; 10]);<br /><br /><strong>Delete</strong><br />use Cake\Datasource\ConnectionManager;<br />$connection = ConnectionManager::get('default');<br />$connection-&gt;delete('articles', ['id' =&gt; 10]);<br /><br /><br />$stmt = $conn-&gt;query('UPDATE posts SET published = 1 WHERE id = 2');<br /><br />The query() method does not allow for additional parameters. If you need additional parameters you should use the execute() method, which allows for placeholders to be used:<br /><br />$stmt = $conn-&gt;execute(<br />    'UPDATE posts SET published = ? WHERE id = ?',<br />    [1, 2]<br />);<br /><br />$stmt = $conn-&gt;execute(<br />    'UPDATE posts SET published_date = ? WHERE id = ?',<br />    [new DateTime('now'), 2],<br />    ['date', 'integer']<br />);<br /><br />$stmt-&gt;execute();<br /><br /><strong>Ler um registro</strong><br />$row = $stmt-&gt;fetch('assoc');<br /><br /><strong>Ler todos os registros</strong><br />$rows = $stmt-&gt;fetchAll('assoc');<br /><br /><strong>Ler registros interagindo</strong><br />foreach ($rows as $row) {<br />    // Do work<br />}<br /><br />$rowCount = count($stmt);<br />$rowCount = $stmt-&gt;rowCount();<br /><br /><strong>Insert</strong><br />$query = $articles-&gt;query();<br />$query-&gt;insert(['title', 'body'])<br />    -&gt;values([<br />        'title' =&gt; 'First post',<br />        'body' =&gt; 'Some body text'<br />    ])<br />    -&gt;execute();<br /><br />$select = $articles-&gt;find()<br />    -&gt;select(['title', 'body', 'published'])<br />    -&gt;where(['id' =&gt; 3]);<br /><br />$query = $articles-&gt;query()<br />    -&gt;insert(['title', 'body', 'published'])<br />    -&gt;values($select)<br />    -&gt;execute()<br /><br /><strong>Update</strong><br />$query = $articles-&gt;query();<br />$query-&gt;update()<br />    -&gt;set(['published' =&gt; true])<br />    -&gt;where(['id' =&gt; $id])<br />    -&gt;execute();<br /><br /><strong>Delete</strong><br />$query = $articles-&gt;query();<br />$query-&gt;delete()<br />    -&gt;where(['id' =&gt; $id])<br />    -&gt;execute();<br /><br /><strong>Outras</strong><br />$matchingComment = $articles-&gt;association('Comments')-&gt;find()<br />    -&gt;select(['article_id'])<br />    -&gt;distinct()<br />    -&gt;where(['comment LIKE' =&gt; '%CakePHP%']);<br /><br />$query = $articles-&gt;find()<br />    -&gt;where(['id' =&gt; $matchingComment]);<br /><br /></p> 	</div>
+
+	
+	
+				
+	
+	
+	
+</article>
+
+</body>
+</html>

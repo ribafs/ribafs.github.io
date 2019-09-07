@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br" dir="ltr">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <base href="" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Ribamar FS" />
+	<meta name="robots" content="noindex, nofollow" />
+	<meta name="description" content="Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros." />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>Guia de Compactação para o Terminal do Linux - RibaFS Portal</title>
+	<link href="http://ribafs.org/portal/servidores/ubuntu-server/compactacao-linux.html?tmpl=component&amp;print=1&amp;layout=default" rel="canonical" />
+	<link href="../../templates/shaper_helix3/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../../favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<script src="../../media/jui/js/jquery.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../media/jui/js/jquery-noconflict.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../media/jui/js/jquery-migrate.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="http://backup/portal/media/system/js/caption.js?d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script type="text/javascript">
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+	</script>
+	<meta property="og:url" content="http://backup/portal/servidores/ubuntu-server/compactacao-linux.html" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Guia de Compactação para o Terminal do Linux" />
+	<meta property="og:description" content="Compactar e Descompactar Arquivos no Terminal do Linux Instalar compactadores para Linux: sudo apt-get install unace zip unzip p7zip-full p7zip-rar sharuti..." />
+
+   	<link rel="stylesheet" href="../../media/jui/css/bootstrap.min.css" type="text/css" />
+	<link rel="stylesheet" href="../../templates/shaper_helix3/css/frontend-edit.css" type="text/css" />
+    <link rel="stylesheet" href="../../templates/shaper_helix3/css/template.css" type="text/css" />
+</head>
+<body class="contentpane">
+	<div id="system-message-container">
+	</div>
+
+	
+
+<article class="item item-page" itemscope itemtype="http://schema.org/Article">
+	<meta itemprop="inLanguage" content="pt-BR" />
+	
+	
+
+	<div class="entry-header">
+		<span class="post-format"><i class="fa fa-thumb-tack"></i></span>
+		
+					<h2 itemprop="name">
+									Guia de Compactação para o Terminal do Linux							</h2>
+												</div>
+
+						<div id="pop-print" class="btn hidden-print">
+				<a href="compactacao-linux.html#" onclick="window.print();return false;">			<span class="icon-print" aria-hidden="true"></span>
+		Imprimir	</a>			</div>
+				
+	
+	
+				
+	
+			<div itemprop="articleBody">
+		<h4>Compactar e Descompactar Arquivos no Terminal do Linux</h4>
+
+<p><br /><strong>Instalar compactadores para Linux:</strong><br />sudo apt-get install unace zip unzip p7zip-full p7zip-rar sharutils uudeview mpack arj unrar rar lzma lha lzma-dev rar unrar-free ark ncompress<br /><br /><strong>zip</strong><br /><em><strong>Compactação</strong></em><br /><br />zip pacote.zip arquivoa.txt arquivob.txt arquivoc.odt<br />zip pacote.zip *.txt<br />zip -r documentos.zip /usr/*.txt<br /><br /><strong>Opções:</strong><br />-r recursivo<br />-1 rápido<br />-9 maior compactação<br />-D compactar somente arquivos, nada de diretório<br />-x arquivos - excluir da compactação alguns arquivos<br /><br /><em><strong>Descompactação</strong></em><br /><br />unzip nome.zip<br /><br />Em diretório específico<br />unzip nome.zip -d /tmp<br /><br /><strong>arj</strong></p>
+
+<p><em><strong>Compactar</strong></em><br />arj a pacote.arj arquivo.odt<br /><br /><em><strong>Descompactar</strong></em><br />arj x pacote.arj<br /><br /><br /><strong>tar</strong><br /><br /><em><strong>Compactar</strong></em><br />tar -czpvf pacote.tar arquivo1.gif memorando.htm carta.doc<br />tar -czpvf pacote.tar pasta<br /><br /><em><strong>Descompactar:</strong></em><br />tar -zxpvf nomedoarq.tar<br /><br /><br /><strong>tar.gz</strong></p>
+
+<p><em><strong>Compactar</strong></em><br />tar -czpvf pacote.tar.gz arquivo1.gif memorando.htm carta.doc<br />tar -czpvf pacote.tar.gz pasta<br /><br /><strong>Descompactar no diretório atual</strong><br />tar -zxpvf pacote.tar.gz -C /tmp<br /><br /><br /><strong>tar.bz2</strong><br />tar -jxpvf pacote.tar.bz2<br /><br /><strong>Descompactar</strong> apenas um arquivo de dentro do pacote<br />tar -xvf pacote.tar.gz foto1.png<br /><br /><strong>Lista de parâmetros do tar:</strong><br /><br />-c – cria um novo arquivo tar;<br />-M – cria, lista ou extrai um arquivo multivolume;<br />-p – mantém as permissões originais do(s) arquivo(s);<br />-r – acrescenta arquivos a um arquivo tar;<br />-t – exibe o conteúdo de um arquivo tar;<br />-v – exibe detalhes da operação;<br />-w – pede confirmação antes de cada ação;<br />-x – extrai arquivos de um arquivo tar;<br />-z – comprime ou extrai arquivos tar resultante com o gzip;<br />-j – comprime ou extrai arquivos tar resultante com o bz2;<br />-f – especifica o arquivo tar a ser usado;<br />-C – especifica o diretório dos arquivos a serem armazenados.<br /><br /><br /><strong>gzip</strong><br /><br /><em><strong>Compactar</strong></em><br />gzip documentos.odt<br /><br /><em><strong>Descompactar</strong></em><br />gunzip documentos.odt.gz<br /><br /><br /><strong>bzip2</strong><br /><br /><em><strong>Compactar</strong></em><br />bzip2 pacote.gz<br /><br /><em><strong>Descompactar</strong></em><br />bunzip2 pacote.bz2<br />bunzip2 pacote.tar.bz2<br /><br /><br /><strong>rar</strong><br /><br /><em><strong>Compactar</strong></em><br />rar a pacote.rar arquivoa arquivob<br />rar a pacote.rar /pasta<br /><br /><em><strong>Descompactar</strong></em><br />unrar x pacote.rar<br /><br /><br /><strong>7z</strong><br /><br /><em><strong>Compactar</strong></em><br />7za a pacote.7z arquivoa arquivob <br /><br /><em><strong>Descompactar</strong></em><br />7za x pacote.7z <br /><br /><br /><strong>lha</strong><br /><br /><em><strong>Compactar</strong></em><br />lha a pacote.lha arquivoa arquivob <br /><br /><em><strong>Descompactar</strong></em><br />lha x pacote.lha <br /><br /><br /><strong>zoo</strong><br /><br /><em><strong>Compactar</strong></em><br />zoo a pacote.zoo arquivoa arquivob <br /><br /><em><strong>Descompactar</strong></em><br />zoo x pacote.zoo <br /><br /><strong>Ajuda sobre um dos compactadores acima:</strong><br />man nome_compactador<br /><br />Ex:<br />man arj<br /><br /><strong>Referências:</strong><br /><a href="http://blog.kolaborativa.com/2011/10/compactar-e-descompactar-arquivos-zip-rar-tar-gz-bz2-tar-tar-bz2-pelo-terminal/">http://blog.kolaborativa.com/2011/10/compactar-e-descompactar-arquivos-zip-rar-tar-gz-bz2-tar-tar-bz2-pelo-terminal/</a> <br /><a href="https://linuxdicasesuporte.blogspot.com.br/2015/03/compactacao-de-arquivos-para-debian.html">https://linuxdicasesuporte.blogspot.com.br/2015/03/compactacao-de-arquivos-para-debian.html</a> <br /><br /></p> 	</div>
+
+	
+	
+				
+	
+	
+	
+</article>
+
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br" dir="ltr">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <base href="" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Ribamar FS" />
+	<meta name="robots" content="noindex, nofollow" />
+	<meta name="description" content="Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros." />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>14.1 - Repassando Informações Entre Controllers - RibaFS Portal</title>
+	<link href="http://ribafs.org/portal/curriculo/livros/cakephp/14-1-repassando-informacoes-entre-controllers.html?tmpl=component&amp;print=1&amp;layout=default" rel="canonical" />
+	<link href="../../../templates/shaper_helix3/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../../../favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="http://backup/portal/media/plg_content_prismsyntaxhighlighter/css/prism-okaidia.css" rel="stylesheet" type="text/css" />
+	<link href="http://backup/portal/media/plg_content_prismsyntaxhighlighter/css/prism-linenumbers.css" rel="stylesheet" type="text/css" />
+	<script src="http://backup/portal/media/plg_content_prismsyntaxhighlighter/js/prism-tinymce.js" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery-noconflict.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery-migrate.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="http://backup/portal/media/system/js/caption.js?d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script type="text/javascript">
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+	</script>
+	<meta property="og:url" content="http://backup/portal/curriculo/livros/cakephp/14-1-repassando-informacoes-entre-controllers.html" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="14.1 - Repassando Informações Entre Controllers" />
+	<meta property="og:description" content="14.1 - Repassando Informações Entre Controllers Um dos mais importantes ingredientes na fórmula do sucesso é saber como lidar com as pessoas. Como faço par..." />
+
+   	<link rel="stylesheet" href="../../../media/jui/css/bootstrap.min.css" type="text/css" />
+	<link rel="stylesheet" href="../../../templates/shaper_helix3/css/frontend-edit.css" type="text/css" />
+    <link rel="stylesheet" href="../../../templates/shaper_helix3/css/template.css" type="text/css" />
+</head>
+<body class="contentpane">
+	<div id="system-message-container">
+	</div>
+
+	
+
+<article class="item item-page" itemscope itemtype="http://schema.org/Article">
+	<meta itemprop="inLanguage" content="pt-BR" />
+	
+	
+
+	<div class="entry-header">
+		<span class="post-format"><i class="fa fa-thumb-tack"></i></span>
+		
+					<h2 itemprop="name">
+									14.1 - Repassando Informações Entre Controllers							</h2>
+												</div>
+
+						<div id="pop-print" class="btn hidden-print">
+				<a href="14-1-repassando-informacoes-entre-controllers.html#" onclick="window.print();return false;">			<span class="icon-print" aria-hidden="true"></span>
+		Imprimir	</a>			</div>
+				
+	
+	
+				
+	
+			<div itemprop="articleBody">
+		<h3>14.1 - Repassando Informações Entre Controllers</h3>
+<p style="text-align: right;"><br /><em><strong>Um dos mais importantes ingredientes na fórmula do sucesso é saber como lidar com as pessoas.</strong></em></p>
+<p><br /><strong>Como faço para repassar informações entre dois controllers.</strong></p>
+<p>Exemplo:<br /><br />Eu tenho no meu banco de dados duas tabelas, uma de usuários e outra de livros, aí eu seleciono um livro que está na tabela livros, pego seu id e tenho que atualizar essa informação na tabela do usuário..<br /><br /><strong>Eu tenho dois controllers, um de usuários e outro de livros, eu tenho que repassar o id do livro para o controller de usuários..</strong><br /><br />    Como passo essa informação entre controllers<br />    Como seleciono o id do usuário logado no sistema<br />    Qual o jeito correto de fazer essa atualização<br /><br /><br />Alguns actions típicos:</p>
+<p><strong>Autenticação de e-mail</strong><br /><br />Crédito:<br /><a href="https://www.youtube.com/watch?v=cEwf9PpbMcQ">https://www.youtube.com/watch?v=cEwf9PpbMcQ </a> <br /><br />config/app.php</p>
+<p> </p>
+<pre class="language-php"><code>...
+    'EmailTransport' =&gt; [
+        'default' =&gt; [
+            'className' =&gt; 'Mail',
+            // The following keys are used in SMTP transports
+            'host' =&gt; 'localhost',
+            'port' =&gt; 25,
+            'timeout' =&gt; 30,
+            'username' =&gt; 'user',
+            'password' =&gt; 'secret',
+            'client' =&gt; null,
+            'tls' =&gt; null,
+            'url' =&gt; env('EMAIL_TRANSPORT_DEFAULT_URL', null),
+        ],
+		'gmail' =&gt; [
+			'className' =&gt; 'Smtp',
+			'host' =&gt; 'ssl://smtp.gmail.com',
+			'port' =&gt; 465,
+			'timeout' =&gt; 30,
+			'username' =&gt; <span id="cloak5e07ed81eaf938459d4c8ea581b05702">Este endereço de email está sendo protegido de spambots. Você precisa do JavaScript ativado para vê-lo.</span><script type='text/javascript'>
+				document.getElementById('cloak5e07ed81eaf938459d4c8ea581b05702').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addy5e07ed81eaf938459d4c8ea581b05702 = '&#039;r&#105;b&#97;fs' + '&#64;';
+				addy5e07ed81eaf938459d4c8ea581b05702 = addy5e07ed81eaf938459d4c8ea581b05702 + 'gm&#97;&#105;l' + '&#46;' + 'c&#111;m';
+				var addy_text5e07ed81eaf938459d4c8ea581b05702 = '&#039;r&#105;b&#97;fs' + '&#64;' + 'gm&#97;&#105;l' + '&#46;' + 'c&#111;m';document.getElementById('cloak5e07ed81eaf938459d4c8ea581b05702').innerHTML += '<a ' + path + '\'' + prefix + ':' + addy5e07ed81eaf938459d4c8ea581b05702 + '\'>'+addy_text5e07ed81eaf938459d4c8ea581b05702+'<\/a>';
+		</script>',
+			'password' =&gt; 'zmxn1029g',
+			'client' =&gt; null,
+			'tls' =&gt; null,
+			'url' =&gt; env('EMAIL_TRANSPORT_DEFAULT_URL', null)
+    ],
+
+Profile
+
+'Email' =&gt; [
+        'default' =&gt; [
+            'transport' =&gt; 'default',
+            'from' =&gt; 'you@localhost',
+            //'charset' =&gt; 'utf-8',
+            //'headerCharset' =&gt; 'utf-8',
+        ],
+		'ribaportal' =&gt; [
+			'transport' =&gt; 'gmail',
+			'from' =&gt; [<span id="cloak5b0228c4e6566f35f16e21a7e50640ed">Este endereço de email está sendo protegido de spambots. Você precisa do JavaScript ativado para vê-lo.</span><script type='text/javascript'>
+				document.getElementById('cloak5b0228c4e6566f35f16e21a7e50640ed').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addy5b0228c4e6566f35f16e21a7e50640ed = '&#039;r&#105;b&#97;fs' + '&#64;';
+				addy5b0228c4e6566f35f16e21a7e50640ed = addy5b0228c4e6566f35f16e21a7e50640ed + 'gm&#97;&#105;l' + '&#46;' + 'c&#111;m';
+				var addy_text5b0228c4e6566f35f16e21a7e50640ed = '&#039;r&#105;b&#97;fs' + '&#64;' + 'gm&#97;&#105;l' + '&#46;' + 'c&#111;m';document.getElementById('cloak5b0228c4e6566f35f16e21a7e50640ed').innerHTML += '<a ' + path + '\'' + prefix + ':' + addy5b0228c4e6566f35f16e21a7e50640ed + '\'>'+addy_text5b0228c4e6566f35f16e21a7e50640ed+'<\/a>';
+		</script>'=&gt;'Portal do RibaFS'],
+		],
+    ],</code></pre>
+<p><strong>Criar classe mailler usando o bake</strong><br /><br />bin/cake bake mailer user<br /><br /><strong>Criar classes no controller e no model</strong><br /><br />Abrir src/Controller/Mailer/UserMailer.php<br /><br />Adicionar após a linha <br />static ...</p>
+<pre class="language-php"><code>	public function welcome($user)
+	{
+		$this-&gt;to($user-&gt;email)
+		-&gt;profile('ribaportal')
+		-&gt;emailFormat('html')
+		-&gt;template('welcome_email_template')
+		-&gt;layout('default')
+		-&gt;viewVars(['nome' =&gt; $user-&gt;name])
+		-&gt;subject(sprintf('Bem vindo, %s', $user-&gt;name));
+	}</code></pre>
+<p><strong>Criar o template para o e-mail</strong><br /><br />src/Template/Email/html/welcome_email_template.ctp<br /><br />&lt;h1&gt;Seja bem-vindo(a), &lt;?php echo $nome;?&gt;&lt;/h1&gt;<br />&lt;p&gt;<br />    Apenas um teste de envio de e-mail pelo CakePHP.<br />&lt;/p&gt;<br /><br /><strong>Para testar crie um novo usuário e veja se ele enviou o e-mail.</strong><br /><br /><br /><strong>Recuperação de senha</strong><br /><br /><a href="https://www.youtube.com/watch?v=cEwf9PpbMcQ">https://www.youtube.com/watch?v=cEwf9PpbMcQ </a> <br /><br /><strong>Capturar numa view dados do user logado:</strong><br /><br />Capturar o group_id:<br /><br />$gi=$this-&gt;request-&gt;session()-&gt;read('Auth.User.group_id');<br /><br />dd($gi);<br /><br /><br /><strong>Campos Virtuais</strong><br /><br />São campos que não vêm de tabelas e existem apenas nos formulários. Um bom exemplo é o de confirmação de senha.<br /><br />Também podemos criar um para calcular a idade de alguém ou para efetuar consultas a bancos de dados no model.<br /><br />Crédito e Detalhes:<br /><a href="http://www.naidim.org/cakephp-3-tutorial-11-virtual-fields">http://www.naidim.org/cakephp-3-tutorial-11-virtual-fields</a> </p> 	</div>
+
+	
+	
+				
+	
+	
+	
+</article>
+
+</body>
+</html>

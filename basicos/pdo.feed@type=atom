@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="Joomla! - Open Source Content Management" -->
+<feed xmlns="http://www.w3.org/2005/Atom"  xml:lang="pt-br">
+	<title type="text">PDO - RibaFS Portal</title>
+	<subtitle type="text">Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros.</subtitle>
+	<link rel="alternate" type="text/html" href="http://backup"/>
+	<id>http://backup/portal/basicos/pdo.feed</id>
+	<updated>2019-09-07T18:51:13-03:00</updated>
+	<author>
+		<name>RibaFS Portal</name>
+	</author>
+	<generator uri="https://www.joomla.org">Joomla! - Open Source Content Management</generator>
+	<link rel="self" type="application/atom+xml" href="http://backup/portal/basicos/pdo.feed?type=atom"/>
+	<entry>
+		<title>Introdução ao PDO</title>
+		<link rel="alternate" type="text/html" href="http://backup/portal/basicos/pdo/introducao-ao-pdo.html"/>
+		<published>2017-06-23T14:42:56-03:00</published>
+		<updated>2017-06-23T14:42:56-03:00</updated>
+		<id>http://backup/portal/basicos/pdo/introducao-ao-pdo.html</id>
+		<author>
+			<name>Ribamar FS</name>
+		</author>
+		<summary type="html">&lt;h3 style=&quot;text-align: justify;&quot;&gt;Introdução ao PDO&lt;/h3&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;PDO – PHP Data Objects&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;O PDO é uma camada de acesso a bancos de dados nativo do PHP e orientado a objetos. Me parece a melhor das alternativas nativas do PHP de acesso a múltiplos bancos de dados. Atualmente só temos duas alernativas, o PDO e o MySQLi. O MySQLi também pode ser orientado a objetos mas acessa somente o MySQL.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;SGBDs suportados atualmente pelo PDO:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;a href=&quot;http://php.net/manual/pt_BR/pdo.drivers.php&quot;&gt;PDO Drivers&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul style=&quot;text-align: justify;&quot;&gt;
+
+&lt;li&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://php.net/manual/pt_BR/ref.pdo-cubrid.php&quot;&gt;CUBRID (PDO)&lt;/a&gt; — CUBRID Functions (PDO_CUBRID)&lt;/p&gt;
+
+&lt;/li&gt;
+
+&lt;li&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://php.net/manual/pt_BR/ref.pdo-dblib.php&quot;&gt;MS SQL Server (PDO)&lt;/a&gt; — Microsoft SQL Server and Sybase Functions (PDO_DBLIB)&lt;/p&gt;
+
+&lt;/li&gt;
+
+&lt;li&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://php.net/manual/pt_BR/ref.pdo-firebird.php&quot;&gt;Firebird (PDO)&lt;/a&gt; — Firebird Functions (PDO_FIREBIRD)&lt;/p&gt;
+
+&lt;/li&gt;
+
+&lt;li&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://php.net/manual/pt_BR/ref.pdo-ibm.php&quot;&gt;IBM (PDO)&lt;/a&gt; — IBM Functions (PDO_IBM)&lt;/p&gt;
+
+&lt;/li&gt;
+
+&lt;li&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://php.net/manual/pt_BR/ref.pdo-informix.php&quot;&gt;Informix (PDO)&lt;/a&gt; — Informix Functions (PDO_INFORMIX)&lt;/p&gt;
+
+&lt;/li&gt;
+
+&lt;li&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://php.net/manual/pt_BR/ref.pdo-mysql.php&quot;&gt;MySQL (PDO)&lt;/a&gt; — MySQL Functions (PDO_MYSQL)&lt;/p&gt;
+
+&lt;/li&gt;
+
+&lt;li&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://php.net/manual/pt_BR/ref.pdo-sqlsrv.php&quot;&gt;MS SQL Server (PDO)&lt;/a&gt; — Microsoft SQL Server Functions (PDO_SQLSRV)&lt;/p&gt;
+
+&lt;/li&gt;
+
+&lt;li&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://php.net/manual/pt_BR/ref.pdo-oci.php&quot;&gt;Oracle (PDO)&lt;/a&gt; — Oracle Functions (PDO_OCI)&lt;/p&gt;
+
+&lt;/li&gt;
+
+&lt;li&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://php.net/manual/pt_BR/ref.pdo-odbc.php&quot;&gt;ODBC and DB2 (PDO)&lt;/a&gt; — ODBC and DB2 Functions (PDO_ODBC)&lt;/p&gt;
+
+&lt;/li&gt;
+
+&lt;li&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://php.net/manual/pt_BR/ref.pdo-pgsql.php&quot;&gt;PostgreSQL (PDO)&lt;/a&gt; — PostgreSQL Functions (PDO_PGSQL)&lt;/p&gt;
+
+&lt;/li&gt;
+
+&lt;li&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://php.net/manual/pt_BR/ref.pdo-sqlite.php&quot;&gt;SQLite (PDO)&lt;/a&gt; — SQLite Functions (PDO_SQLITE)&lt;/p&gt;
+
+&lt;/li&gt;
+
+&lt;li&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://php.net/manual/pt_BR/ref.pdo-4d.php&quot;&gt;4D (PDO)&lt;/a&gt; — 4D Functions (PDO_4D)&lt;/p&gt;
+
+&lt;/li&gt;
+
+&lt;/ul&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Nem todos estes drivers acima podem estar presentes em seu computador ou em seu servidor, pois precisa ter os drivers instalados e habilitados. Para saber que drivers estão disponíveis execute:&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;print_r(PDO::getAvailableDrivers());&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Ou&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;foreach(PDO::getAvailableDrivers() as $driver)&lt;br /&gt; {&lt;br /&gt; echo $driver.'&amp;lt;br /&amp;gt;';&lt;br /&gt; }&lt;/p&gt;
+
+&lt;h3 style=&quot;text-align: justify;&quot;&gt;Biblioteca de Funções PDO&lt;/h3&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Algumas funções que criei para PDO.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;No GitHub&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;a href=&quot;https://github.com/ribafs/pdolib&quot;&gt;https://github.com/ribafs/pdolib&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt; &lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Tornou-se Padrão&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;O trabalho com o PDO foi de forma que atualmente os grandes softwares em PHP (CMS, Frameworks, etc) adotaram o mesmo para lidar com bancos de dados. Dois exemplos: CMS Joomla e Framework CakePHP, entre outros.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt; &lt;/p&gt;</summary>
+		<content type="html">&lt;h3 style=&quot;text-align: justify;&quot;&gt;Introdução ao PDO&lt;/h3&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;PDO – PHP Data Objects&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;O PDO é uma camada de acesso a bancos de dados nativo do PHP e orientado a objetos. Me parece a melhor das alternativas nativas do PHP de acesso a múltiplos bancos de dados. Atualmente só temos duas alernativas, o PDO e o MySQLi. O MySQLi também pode ser orientado a objetos mas acessa somente o MySQL.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;SGBDs suportados atualmente pelo PDO:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;a href=&quot;http://php.net/manual/pt_BR/pdo.drivers.php&quot;&gt;PDO Drivers&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul style=&quot;text-align: justify;&quot;&gt;
+
+&lt;li&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://php.net/manual/pt_BR/ref.pdo-cubrid.php&quot;&gt;CUBRID (PDO)&lt;/a&gt; — CUBRID Functions (PDO_CUBRID)&lt;/p&gt;
+
+&lt;/li&gt;
+
+&lt;li&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://php.net/manual/pt_BR/ref.pdo-dblib.php&quot;&gt;MS SQL Server (PDO)&lt;/a&gt; — Microsoft SQL Server and Sybase Functions (PDO_DBLIB)&lt;/p&gt;
+
+&lt;/li&gt;
+
+&lt;li&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://php.net/manual/pt_BR/ref.pdo-firebird.php&quot;&gt;Firebird (PDO)&lt;/a&gt; — Firebird Functions (PDO_FIREBIRD)&lt;/p&gt;
+
+&lt;/li&gt;
+
+&lt;li&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://php.net/manual/pt_BR/ref.pdo-ibm.php&quot;&gt;IBM (PDO)&lt;/a&gt; — IBM Functions (PDO_IBM)&lt;/p&gt;
+
+&lt;/li&gt;
+
+&lt;li&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://php.net/manual/pt_BR/ref.pdo-informix.php&quot;&gt;Informix (PDO)&lt;/a&gt; — Informix Functions (PDO_INFORMIX)&lt;/p&gt;
+
+&lt;/li&gt;
+
+&lt;li&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://php.net/manual/pt_BR/ref.pdo-mysql.php&quot;&gt;MySQL (PDO)&lt;/a&gt; — MySQL Functions (PDO_MYSQL)&lt;/p&gt;
+
+&lt;/li&gt;
+
+&lt;li&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://php.net/manual/pt_BR/ref.pdo-sqlsrv.php&quot;&gt;MS SQL Server (PDO)&lt;/a&gt; — Microsoft SQL Server Functions (PDO_SQLSRV)&lt;/p&gt;
+
+&lt;/li&gt;
+
+&lt;li&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://php.net/manual/pt_BR/ref.pdo-oci.php&quot;&gt;Oracle (PDO)&lt;/a&gt; — Oracle Functions (PDO_OCI)&lt;/p&gt;
+
+&lt;/li&gt;
+
+&lt;li&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://php.net/manual/pt_BR/ref.pdo-odbc.php&quot;&gt;ODBC and DB2 (PDO)&lt;/a&gt; — ODBC and DB2 Functions (PDO_ODBC)&lt;/p&gt;
+
+&lt;/li&gt;
+
+&lt;li&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://php.net/manual/pt_BR/ref.pdo-pgsql.php&quot;&gt;PostgreSQL (PDO)&lt;/a&gt; — PostgreSQL Functions (PDO_PGSQL)&lt;/p&gt;
+
+&lt;/li&gt;
+
+&lt;li&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://php.net/manual/pt_BR/ref.pdo-sqlite.php&quot;&gt;SQLite (PDO)&lt;/a&gt; — SQLite Functions (PDO_SQLITE)&lt;/p&gt;
+
+&lt;/li&gt;
+
+&lt;li&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://php.net/manual/pt_BR/ref.pdo-4d.php&quot;&gt;4D (PDO)&lt;/a&gt; — 4D Functions (PDO_4D)&lt;/p&gt;
+
+&lt;/li&gt;
+
+&lt;/ul&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Nem todos estes drivers acima podem estar presentes em seu computador ou em seu servidor, pois precisa ter os drivers instalados e habilitados. Para saber que drivers estão disponíveis execute:&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;print_r(PDO::getAvailableDrivers());&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Ou&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;foreach(PDO::getAvailableDrivers() as $driver)&lt;br /&gt; {&lt;br /&gt; echo $driver.'&amp;lt;br /&amp;gt;';&lt;br /&gt; }&lt;/p&gt;
+
+&lt;h3 style=&quot;text-align: justify;&quot;&gt;Biblioteca de Funções PDO&lt;/h3&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Algumas funções que criei para PDO.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;No GitHub&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;a href=&quot;https://github.com/ribafs/pdolib&quot;&gt;https://github.com/ribafs/pdolib&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt; &lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Tornou-se Padrão&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;O trabalho com o PDO foi de forma que atualmente os grandes softwares em PHP (CMS, Frameworks, etc) adotaram o mesmo para lidar com bancos de dados. Dois exemplos: CMS Joomla e Framework CakePHP, entre outros.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt; &lt;/p&gt;</content>
+		<category term="PDO" />
+	</entry>
+	<entry>
+		<title>Exemplo pdoSimples</title>
+		<link rel="alternate" type="text/html" href="http://backup/portal/basicos/pdo/exemplo-pdosimples.html"/>
+		<published>2017-06-23T14:42:56-03:00</published>
+		<updated>2017-06-23T14:42:56-03:00</updated>
+		<id>http://backup/portal/basicos/pdo/exemplo-pdosimples.html</id>
+		<author>
+			<name>Ribamar FS</name>
+		</author>
+		<summary type="html">&lt;p&gt;&lt;strong&gt;Exemplo simples de uso do PDO&lt;/strong&gt;&lt;/p&gt;
+
+
+&lt;p&gt;&lt;a title=&quot;pdoSimples&quot; href=&quot;http://backup/portal/../down/basicos/pdo/pdoSimples.zip&quot; rel=&quot;alternate&quot;&gt;pdoSimples&lt;/a&gt;&lt;/p&gt;</summary>
+		<content type="html">&lt;p&gt;&lt;strong&gt;Exemplo simples de uso do PDO&lt;/strong&gt;&lt;/p&gt;
+
+
+&lt;p&gt;&lt;a title=&quot;pdoSimples&quot; href=&quot;http://backup/portal/../down/basicos/pdo/pdoSimples.zip&quot; rel=&quot;alternate&quot;&gt;pdoSimples&lt;/a&gt;&lt;/p&gt;</content>
+		<category term="PDO" />
+	</entry>
+</feed>

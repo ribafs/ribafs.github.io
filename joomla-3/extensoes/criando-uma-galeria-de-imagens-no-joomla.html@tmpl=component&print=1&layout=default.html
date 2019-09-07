@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br" dir="ltr">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <base href="" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Ribamar FS" />
+	<meta name="robots" content="noindex, nofollow" />
+	<meta name="description" content="Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros." />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>Criando uma Galeria de Imagens no Joomla - RibaFS Portal</title>
+	<link href="http://ribafs.org/portal/joomla-3/extensoes/criando-uma-galeria-de-imagens-no-joomla.html?tmpl=component&amp;print=1&amp;layout=default" rel="canonical" />
+	<link href="../../templates/shaper_helix3/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../../favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<script src="../../media/jui/js/jquery.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../media/jui/js/jquery-noconflict.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../media/jui/js/jquery-migrate.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="http://backup/portal/media/system/js/caption.js?d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script type="text/javascript">
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+	</script>
+	<meta property="og:url" content="http://backup/portal/joomla-3/extensoes/criando-uma-galeria-de-imagens-no-joomla.html" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Criando uma Galeria de Imagens no Joomla" />
+	<meta property="og:description" content="Criando uma Galeria de Imagens no Joomla O Phoca Gallery é um ótimo componente para a criação de galerias de imagens no Joomla. Tem muitos e bons recursos...." />
+
+   	<link rel="stylesheet" href="../../media/jui/css/bootstrap.min.css" type="text/css" />
+	<link rel="stylesheet" href="../../templates/shaper_helix3/css/frontend-edit.css" type="text/css" />
+    <link rel="stylesheet" href="../../templates/shaper_helix3/css/template.css" type="text/css" />
+</head>
+<body class="contentpane">
+	<div id="system-message-container">
+	</div>
+
+	
+
+<article class="item item-page" itemscope itemtype="http://schema.org/Article">
+	<meta itemprop="inLanguage" content="pt-BR" />
+	
+	
+
+	<div class="entry-header">
+		<span class="post-format"><i class="fa fa-thumb-tack"></i></span>
+		
+					<h2 itemprop="name">
+									Criando uma Galeria de Imagens no Joomla							</h2>
+												</div>
+
+						<div id="pop-print" class="btn hidden-print">
+				<a href="criando-uma-galeria-de-imagens-no-joomla.html#" onclick="window.print();return false;">			<span class="icon-print" aria-hidden="true"></span>
+		Imprimir	</a>			</div>
+				
+	
+	
+				
+	
+			<div itemprop="articleBody">
+		<h4 style="text-align: justify;">Criando uma Galeria de Imagens no Joomla</h4>
+
+<p style="text-align: justify;">O Phoca Gallery é um ótimo componente para a criação de galerias de imagens no Joomla. Tem muitos e bons recursos.<br />Como existem muitos detalhes na criação de galerias com ele então resolvi fazer este pequeno tutorial.<br /><br /><strong>Download</strong><br /><a href="https://www.phoca.cz/download/category/1-phoca-gallery-component">https://www.phoca.cz/download/category/1-phoca-gallery-component</a> <br />No site acima efetuar o download do componente e da tradução/language para pt-BR, ambos para a versão 3 do Joomla.<br /><br />Instalar ambos de forma padrão.<br /><br /><strong>Se na instalação do Phoca Gallery aparecer o erro:</strong><br />Erro<br />Houve um erro ao carregar este arquivo para o servidor.<br />Tamanho máximo de envio de arquivo PHP é muito pequeno: isso é definido no php. ini nas configurações upload_max_filesize e post_max_size suas do PHP (localizado nos arquivos php.ini e/ou .htaccess)<br />Não foi possível encontrar o pacote de instalação<br /><br />E não souber como proceder, leia o artigo Joomla\Dicas\Aumentando o tamanho dos uploads no php.ini aqui neste site.<br /><br />Vamos supor que desejamos criar duas galerias de imagens: uma para cada filho  e ambas aparecendo no site sob o menu Filhos.<br /><br /><strong>Criação dos diretórios para as imagens</strong><br />Criar o diretório filhos e dentro dele criar filho1 e filho2, tudo em images\phocagallery<br /><br /><strong>Dica: uma boa indicação para gerenciador de arquivos vai para o eXtplorer:</strong><br /><a href="http://extplorer.net/files">http://extplorer.net/files</a> <br />A vantagem é que fazemos tudo confortavelmente no próprio Joomla, sem precisar acessar o cPanel ou o servidor diretamente.<br />Com ele podemos criar os diretórios, enviar os arquivos por upload e muito, muito mais.<br /><br /><strong>Abra o eXtplorer em Componentes - eXtplorer</strong><br />Crie um diretório <strong>filhos</strong> em <br />images\phocagallery\filhos<br /><br /><strong>Criar dentro de filhos um subdiretório para cada filho:</strong><br />images\phocagallery\filhos\filho1<br />images\phocagallery\filhos\filho2<br /><br />Deve ficar assim:<br /><br /><img src="../../images/pasta.jpeg" alt="" /><br /><br /><strong>Upload das fotos</strong><br />Envie todas as imagens para cada diretório.<br /><br /><strong>Criar as 3 categorias no Phoca Gallery, filhos e dentro dela filho1 e filho1</strong><br />Filhos<br />    Filho1 - esta categoria é uma categoria filha da Filhos<br />    Filho2 - esta categoria é uma categoria filha da Filhos<br /><br />Componentes - Phoca Gallery<br />Categorias - Novo<br /><br />Título - Filhos<br />Diretório de álbum - Selecionar diretório - clicar na setinha verde em filhos<br />Salvar e Fechar<br /><br /><strong>Criar a subcategoria Filho1</strong><br /><br />Componentes - Phoca Gallery<br />Categorias - Novo<br /><br />Título - Filho1<br />Categoria pai - Filhos<br />Diretório de álbum - Selecionar diretório - clicar sobre a pasta filhos e então na setinha verde em filho1<br />Salvar e Fechar<br /><br /><strong>Criar a subcategoria Filho2</strong><br /><br />Componentes - Phoca Gallery<br />Categorias - Novo<br /><br />Título - Filho2<br />Categoria pai - Filhos<br />Diretório de álbum - Selecionar diretório - clicar sobre a pasta filhos e então na setinha verde em filho2<br />Salvar e Fechar<br /><br /><strong>Criar os thumbnails/miniaturas das Fotos para casa subcategoria</strong><br /><br /><strong>Filhos 1</strong><br /><br />Componentes - Phoca Gallery<br />Imagens - Multipla adição<br />Categoria - Filhos - Filho1<br />À direita clique no link filhos e depois marque o checkbox de filho1<br />Salvar e Fechar<br /><br /><strong>Filhos 2</strong><br /><br />Componentes - Phoca Gallery<br />Imagens - Multipla adição<br />Categoria - Filhos - Filho2<br />À direita clique no link filhos e depois marque o checkbox de filho2<br />Salvar e Fechar<br /><br />Nossas galerias estão prontas mas nada aparece no site ainda. Para que apareçam precisamos criar um item de menu adequado para as mesmas.<br /><br /><strong>Criarei um menu Filhos que abra as galerias do Phoca Gallery na categoria Filhos</strong><br /><br />Menus - Main Menu - Adicionar item de menu<br />Título - Filhos<br />Tipo de Item de Menu - clicar em Selecionar<br />Phoca Gallery Modulo de Imagem - Lista de albuns<br />Salvar e Fechar</p>
+
+<p style="text-align: justify;">Veja o detalhe do botão Selecionar:</p>
+
+<p style="text-align: justify;"><img src="../../images/menuphocagal.jpeg" alt="" /><br /><br />Agora veja como ficou no site:</p>
+
+<p style="text-align: justify;">Ao clicar no menu Filhas aparecem ambas as galerias</p>
+
+<p style="text-align: justify;"><img src="../../images/galerias.jpeg" alt="" /></p>
+
+<p style="text-align: justify;">Ao clicar em filho1 aparece a tela abaixo:</p>
+
+<p style="text-align: justify;"><img src="../../images/filho1.jpeg" alt="" width="836" height="362" /></p>
+
+<p style="text-align: justify;">Quando clicar em uma das fotos (foto4) ela aparece ao centro em destaque assim:</p>
+
+<p style="text-align: justify;"><img src="../../images/foto4.jpeg" alt="" /><br /><br />Trabalhando as Imagens<br />Antes de efetuar o download das fotos para o servidor redimensione-as de forma a ter o melhor desempenho, ou seja, deixe-as com a dimensão:<br /><br />650x460 px.<br /><br />Uma boa extensão para efetuar medidas de parte da tela é a MeasureIt, que funciona bem no Firefox.<br />Basta clicar no canto superior esquerdo e arrastar para o inferior direito e anotar as dimensões em pixel.<br /><br /></p> 	</div>
+
+	
+	
+				
+	
+	
+	
+</article>
+
+</body>
+</html>

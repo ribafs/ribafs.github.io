@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="Joomla! - Open Source Content Management" -->
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Dicas - RibaFS Portal</title>
+		<description><![CDATA[Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros.]]></description>
+		<link>http://backup/portal/mobile/dicas.html</link>
+		<lastBuildDate>Sat, 07 Sep 2019 19:04:36 -0300</lastBuildDate>
+		<generator>Joomla! - Open Source Content Management</generator>
+		<atom:link rel="self" type="application/rss+xml" href="http://backup/portal/mobile/dicas.feed?type=rss"/>
+		<language>pt-br</language>
+		<item>
+			<title>Mobile - Dicas</title>
+			<link>http://backup/portal/mobile/dicas/mobile-dicas.html</link>
+			<guid isPermaLink="true">http://backup/portal/mobile/dicas/mobile-dicas.html</guid>
+			<description><![CDATA[<p><strong>Dicas para Programação Mobile em Geral</strong></p>
+
+
+<p>PrimeUI - uma coleção de ricos widgets em JavaScript baseados no jQuery UI<br /><a href="https://www.primefaces.org/primeui/">https://www.primefaces.org/primeui/</a></p>
+
+
+<p> <strong>Debug para Javascript</strong><br /><a href="https://sourceforge.net/projects/xunbug/">https://sourceforge.net/projects/xunbug/</a></p>
+
+
+<p> <strong>Criação de Aplicativos/Jogos Mobile sem Código</strong><br /><a href="http://fabricadeaplicativos.com.br/">http://fabricadeaplicativos.com.br/</a></p>
+
+
+<p><a href="https://www.dropsource.com/">https://www.dropsource.com/</a></p>
+
+
+<p><a href="https://www.andromo.com/">https://www.andromo.com/</a></p>
+
+
+<p><strong>Tutoriais sobre criação de Apps e Jogos na Mozilla</strong><br /><a href="https://developer.mozilla.org/en-US/docs/Games/Index">https://developer.mozilla.org/en-US/docs/Games/Index</a></p>
+
+
+<p><strong>Exemplos do Phaser</strong><br /><a href="http://jojoee.github.io/phaser-examples/games/">http://jojoee.github.io/phaser-examples/games/</a></p>
+
+
+<p><strong>10 Open Source HTML 5 Games</strong><br /><a href="https://superdevresources.com/open-source-html5-games/">https://superdevresources.com/open-source-html5-games/</a></p>
+
+
+<p><strong>Make a Mario-Style Platformer with the Phaser Editor</strong><br /><a href="https://gamedevacademy.org/make-a-mario-style-platformer-with-the-phaser-editor/">https://gamedevacademy.org/make-a-mario-style-platformer-with-the-phaser-editor/</a><br />Fontes - <a href="https://github.com/boniatillo-com/PhaserEditor_Tutorial_Platformer_1">https://github.com/boniatillo-com/PhaserEditor_Tutorial_Platformer_1</a> </p>
+
+
+<p><strong>30 Amazing Games Made Only With HTML5</strong><br /><a href="https://tutorialzine.com/2015/02/30-amazing-games-made-only-with-html5">https://tutorialzine.com/2015/02/30-amazing-games-made-only-with-html5</a></p>
+
+
+<p><strong>Sons e Múdicas para Jogos</strong><br /><a href="https://www.playonloop.com/">https://www.playonloop.com/<br /></a><a href="https://freesound.org/browse/">https://freesound.org/browse/</a></p>
+
+
+<p><strong>Sprites Royalty Free para Jogos</strong><br /><a href="https://opengameart.org/" target="_blank" rel="noopener noreferrer">https://opengameart.org/</a><a title="https://opengameart.org/content/2d-complete-characters" href="https://opengameart.org/content/2d-complete-characters" target="_blank" rel="noopener noreferrer">https://opengameart.org/content/2d-complete-characters</a><br /><a title="http://www.gameart2d.com/" href="http://www.gameart2d.com/" target="_blank" rel="noopener noreferrer">http://www.gameart2d.com/</a><br /><a title="http://www.gameart2d.com/freebies.html" href="http://www.gameart2d.com/freebies.html" target="_blank" rel="noopener noreferrer">http://www.gameart2d.com/freebies.html</a><br /><a title="http://www.pixelprospector.com/the-big-list-of-royalty-free-graphics/" href="http://www.pixelprospector.com/the-big-list-of-royalty-free-graphics/" target="_blank" rel="noopener noreferrer">http://www.pixelprospector.com/the-big-list-of-royalty-free-graphics/</a><br /><a title="https://gameartpartners.com/" href="https://gameartpartners.com/" target="_blank" rel="noopener noreferrer">https://gameartpartners.com/<br /></a><a href="http://kenney.nl/assets">http://kenney.nl/assets</a></p>
+
+
+<p> </p>]]></description>
+			<category>Dicas</category>
+			<pubDate>Wed, 12 Jul 2017 10:22:18 -0300</pubDate>
+		</item>
+		<item>
+			<title>Editores de Código</title>
+			<link>http://backup/portal/mobile/dicas/editores-de-codigo.html</link>
+			<guid isPermaLink="true">http://backup/portal/mobile/dicas/editores-de-codigo.html</guid>
+			<description><![CDATA[<p><strong>Bons Editores para Programação Mobile</strong></p>
+
+
+<p>Praticamente qualquer editor pode ser usado para programar para mobile. Devemos tomar apenas um cuidado, o de usar um que suporte codificação de caracteres UNICODE, ou UTF-8.</p>
+
+
+<p> </p>
+
+
+<p><strong>Simples</strong></p>
+
+
+<p>gedit e similares no Linux</p>
+
+
+<p>Notepad++ no Windows - <a href="https://notepad-plus-plus.org/">https://notepad-plus-plus.org/</a></p>
+
+
+<p> </p>
+
+
+<p><strong>Mais recursos, mas também free:</strong></p>
+
+
+<p>VSCode - <a href="https://code.visualstudio.com/">https://code.visualstudio.com/</a></p>
+
+
+<p>Atom - <a href="https://atom.io/">https://atom.io/</a></p>
+
+
+<p> </p>]]></description>
+			<category>Dicas</category>
+			<pubDate>Wed, 12 Jul 2017 10:22:18 -0300</pubDate>
+		</item>
+	</channel>
+</rss>

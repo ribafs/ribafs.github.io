@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br" dir="ltr">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <base href="" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Ribamar FS" />
+	<meta name="robots" content="noindex, nofollow" />
+	<meta name="description" content="Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros." />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>4 - Instalação e pré-requisitos do CakePHP 3 - RibaFS Portal</title>
+	<link href="http://ribafs.org/portal/curriculo/livros/cakephp/4-instalacao-e-pre-requisitos-do-cakephp-3.html?tmpl=component&amp;print=1&amp;layout=default" rel="canonical" />
+	<link href="../../../templates/shaper_helix3/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../../../favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="http://backup/portal/media/plg_content_prismsyntaxhighlighter/css/prism-okaidia.css" rel="stylesheet" type="text/css" />
+	<link href="http://backup/portal/media/plg_content_prismsyntaxhighlighter/css/prism-linenumbers.css" rel="stylesheet" type="text/css" />
+	<script src="http://backup/portal/media/plg_content_prismsyntaxhighlighter/js/prism-tinymce.js" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery-noconflict.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery-migrate.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="http://backup/portal/media/system/js/caption.js?d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script type="text/javascript">
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+	</script>
+	<meta property="og:url" content="http://backup/portal/curriculo/livros/cakephp/4-instalacao-e-pre-requisitos-do-cakephp-3.html" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="4 - Instalação e pré-requisitos do CakePHP 3" />
+	<meta property="og:description" content="4 – Instalação e pré-requisitos do CakePHP 3 Talento ganha jogos, mas trabalho sério e inteligência ganha campeonato. Michael Jordan Pré-requisitos da vers..." />
+
+   	<link rel="stylesheet" href="../../../media/jui/css/bootstrap.min.css" type="text/css" />
+	<link rel="stylesheet" href="../../../templates/shaper_helix3/css/frontend-edit.css" type="text/css" />
+    <link rel="stylesheet" href="../../../templates/shaper_helix3/css/template.css" type="text/css" />
+</head>
+<body class="contentpane">
+	<div id="system-message-container">
+	</div>
+
+	
+
+<article class="item item-page" itemscope itemtype="http://schema.org/Article">
+	<meta itemprop="inLanguage" content="pt-BR" />
+	
+	
+
+	<div class="entry-header">
+		<span class="post-format"><i class="fa fa-thumb-tack"></i></span>
+		
+					<h2 itemprop="name">
+									4 - Instalação e pré-requisitos do CakePHP 3							</h2>
+												</div>
+
+						<div id="pop-print" class="btn hidden-print">
+				<a href="4-instalacao-e-pre-requisitos-do-cakephp-3.html#" onclick="window.print();return false;">			<span class="icon-print" aria-hidden="true"></span>
+		Imprimir	</a>			</div>
+				
+	
+	
+				
+	
+			<div itemprop="articleBody">
+		<h3>4 – Instalação e pré-requisitos do CakePHP 3</h3>
+<p align="right"><em><strong>Talento ganha jogos, mas trabalho sério e inteligência ganha campeonato.</strong></em></p>
+<p align="right">Michael Jordan</p>
+<p align="right"> </p>
+<p><strong>Pré-requisitos da versão 3.7</strong></p>
+<p>- Web server como Apache 2 com mod_rewrite ou Nginx ou IIS</p>
+<p>- PHP 5.6 ou superior</p>
+<p>- Extensões mbstring, intl, simplexml e PDO</p>
+<p>- Um dos SGBDs suportados: MySQL, PostgreSQL, MariaDB, Microsoft SQL Server e SQLite</p>
+<p>- Composer (opcional mas recomendado)</p>
+<p align="left"> </p>
+<p><strong>Instalação do Composer</strong></p>
+<p>- Se tens a versão 7 ou superior do PHP instale assim (no Debian ou derivada):</p>
+<p><em>sudo apt-get install composer</em></p>
+<p> </p>
+<p>- Para a versão 5.x assim:</p>
+<p>sudo su</p>
+<p>curl -sS https://getcomposer.org/installer | php</p>
+<p> </p>
+<p>Colocar no path do Linux na versão 5.x:</p>
+<p>mv composer.phar /usr/local/bin/composer</p>
+<p> </p>
+<p>- A instalação no Windows é feita baixando</p>
+<p><a href="https://getcomposer.org/Composer-Setup.exe">https://getcomposer.org/Composer-Setup.exe</a></p>
+<p> </p>
+<p><strong>Instalando o CakePHP</strong></p>
+<p align="justify">Para criar um aplicativo com o CakePHP 3, instalamos sua estrutura básica e completa através do composer para então criar o aplicativo usando o bake ou manualmente</p>
+<p align="justify"><em>composer create-project --prefer-dist cakephp/app nome_app</em></p>
+<p align="justify"> </p>
+<p align="justify">A vantagem de usar o Composer é que ele irá completar automaticamente um conjunto importante de tarefas, como configurar corretamente as permissões das pastas /tmp e /logs. criar o config/app.php para você e setar um salt único.</p>
+<p align="justify">Como o comando é grande e pode dar trabalho de memorizar, vamos criar um link (no Windows crie um bat com %1), no Linux para receber parâmetro é $1.</p>
+<p><em>sudo nano /usr/local/bin/cake</em></p>
+<p>No windows salve na pasta <a href="file:///backup/transp/Estudar/c:/windows">c:\windows</a> para que fique no path</p>
+<p><strong>Cole a linha</strong></p>
+<p><em>composer create-project --prefer-dist cakephp/app $1</em></p>
+<p> </p>
+<p><strong>No Windows</strong></p>
+<p>Crie um arquivo c:\windows\cake.bat</p>
+<p><em>composer create-project --prefer-dist cakephp/app %1</em></p>
+<p> </p>
+<p>Para instalar uma versão diferente da atual, a 3.5.13, por exemplo:</p>
+<p><em>composer create-project --prefer-dist cakephp/cakephp:3.5.13 blog</em></p>
+<p> </p>
+<p><strong>Execute assim com nosso script/batch criado:</strong></p>
+<p>cd /var/www/html</p>
+<p>cake cliente</p>
+<p> </p>
+<p>Ou</p>
+<p>cd c:\xampp\htdocs</p>
+<p>cake.bat cliente</p>
+<p> </p>
+<p align="justify">Ao finalizar o Cake já terá trazido todo o seu código para a pasta /var/www/html/cliente ou c:\xampp\htdocs\cliente.</p>
+<p>E já vem com um controller default para que vejamos algo.</p>
+<p><strong>Vejas as mensagens finais do instalador:</strong></p>
+<p><em>Writing lock file</em></p>
+<p><em>Generating autoload files</em></p>
+<p><em>&gt; Cake\Composer\Installer\PluginInstaller::postAutoloadDump</em></p>
+<p><em>&gt; App\Console\Installer::postInstall</em></p>
+<p><em>Created `config/app.php` file</em></p>
+<p><em>Created `/backup/www/cake/aclbr/tmp/cache/views` directory</em></p>
+<p><em>Set Folder Permissions ? (Default to Y) [Y,n]? </em></p>
+<p><em>Permissions set on /backup/www/cake/aclbr/tmp/cache</em></p>
+<p><em>Permissions set on /backup/www/cake/aclbr/tmp/cache/models</em></p>
+<p><em>Permissions set on /backup/www/cake/aclbr/tmp/cache/persistent</em></p>
+<p><em>Permissions set on /backup/www/cake/aclbr/tmp/cache/views</em></p>
+<p><em>Permissions set on /backup/www/cake/aclbr/tmp/sessions</em></p>
+<p><em>Permissions set on /backup/www/cake/aclbr/tmp/tests</em></p>
+<p><em>Permissions set on /backup/www/cake/aclbr/tmp</em></p>
+<p><em>Permissions set on /backup/www/cake/aclbr/logs</em></p>
+<p><em>Updated Security.salt value in config/app.php</em></p>
+<p> </p>
+<p>Ele criou o arquivo config/app.php</p>
+<p>Ajustou as permissões no /tmp e no /logs</p>
+<p>Atualizou o salt em config/app.php</p>
+<p> </p>
+<p><strong>Estrutura de diretórios do CakePHP 3.7.7:</strong></p>
+<p>/bin – contém todos os arquivos executáveis para a console do CakePHP</p>
+<p>/config – Contém os arquivos de configuração do usuário</p>
+<p>/logs – Contém os arquivos de log da aplicação</p>
+<p>/plugins – destinado a armazenar os plugins locais da aplicação</p>
+<p>/src – Contém os Controllers, Models, Templates e Views da aplicação</p>
+<p>/tests – Contém todos os seus arquivos de teste</p>
+<p>/tmp – Arquivos temporários são armazenados aqui</p>
+<p>/vendor – Contém todas as dependências do Cake e o próprio. Os instalados com</p>
+<p>composer ficam aqui</p>
+<p>/webroot – Contém todos os arquivos publicamente acessíveis</p>
+<p>composer.json – Arquivo do composer com a lista e versões dos arquivos que a aplicação</p>
+<p>depende</p>
+<p>composer.lock – Arquivo do composer que bloqueia específicas versões de pacotes de</p>
+<p>PHP instalados</p>
+<p>index.php - Arquivo inicial que chama o webroot</p>
+<p>phpunit.xml.dist – A ser usado pelo phpunit</p>
+<p>README.md – Informações do repositório para o GitHub</p>
+<p><strong>Mais Detalhes em:</strong></p>
+<p><a href="https://book.cakephp.org/3.0/pt/intro/cakephp-folder-structure.html">https://book.cakephp.org/3.0/pt/intro/cakephp-folder-structure.html</a></p>
+<p> </p>
+<p>Os diretórios tmp e logs precisam ter permissões adequadas para que possam ser alterados pelo seu servidor web. Se você usou o Composer na instalação, ele deve ter feito isso por você e confirmado com uma mensagem "Permissions set on &lt;folder&gt;". Se você ao invés disso, recebeu uma mensagem de erro ou se quiser fazê-lo manualmente, a melhor forma seria descobrir por qual usuário o seu servidor web é executado (&lt;?= 'whoami'; ?&gt;) e alterar o proprietário desses dois diretórios para este usuário. Os comandos finais a serem executados (em *nix) podem ser algo como:</p>
+<pre>chown -R www-data tmp
+chown -R www-data logs</pre>
+<p>Se por alguma razão o CakePHP não puder escrever nesses diretórios, você será informado por uma advertência enquanto não estiver em modo de produção.</p>
+<p><strong>Chame pelo navegador</strong></p>
+<p><a href="http://localhost/cliente">http://localhost/cliente</a></p>
+<p> </p>
+<p><strong>Configurações do banco de dados no config/app.php</strong></p>
+<p>Procure a seção Datasources e altere apenas:</p>
+<p>'username' =&gt; 'root',</p>
+<p>'password' =&gt; '',</p>
+<p>'database' =&gt; 'cliente',</p>
+<p> </p>
+<p>Crie o banco chamado cliente com a tabela cliente e importe o script abaixo:</p>
+<pre class="language-php"><code>CREATE TABLE IF NOT EXISTS `clientes` (
+`id` int(11) NOT NULL AUTO_INCREMENT,
+`nome` char(45) NOT NULL,
+`email` varchar(50) DEFAULT NULL,
+`data_nasc` date DEFAULT NULL,
+`cpf` char(11) NOT NULL,
+PRIMARY KEY (`id`)
+);
+
+INSERT INTO `clientes` (`id`, `nome`, `email`, `data_nasc`, `cpf`) VALUES
+(1, 'Erin Pate Skinner', <span id="cloak19981cc9d6377d7848e3107362a4ac48">Este endereço de email está sendo protegido de spambots. Você precisa do JavaScript ativado para vê-lo.</span><script type='text/javascript'>
+				document.getElementById('cloak19981cc9d6377d7848e3107362a4ac48').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addy19981cc9d6377d7848e3107362a4ac48 = '&#039;d&#111;l&#111;r.v&#105;t&#97;&#101;.d&#111;l&#111;r' + '&#64;';
+				addy19981cc9d6377d7848e3107362a4ac48 = addy19981cc9d6377d7848e3107362a4ac48 + 'm&#111;ll&#105;sv&#105;t&#97;&#101;p&#111;s&#117;&#101;r&#101;' + '&#46;' + 'c&#97;';
+				var addy_text19981cc9d6377d7848e3107362a4ac48 = '&#039;d&#111;l&#111;r.v&#105;t&#97;&#101;.d&#111;l&#111;r' + '&#64;' + 'm&#111;ll&#105;sv&#105;t&#97;&#101;p&#111;s&#117;&#101;r&#101;' + '&#46;' + 'c&#97;';document.getElementById('cloak19981cc9d6377d7848e3107362a4ac48').innerHTML += '<a ' + path + '\'' + prefix + ':' + addy19981cc9d6377d7848e3107362a4ac48 + '\'>'+addy_text19981cc9d6377d7848e3107362a4ac48+'<\/a>';
+		</script>', '2013-10-07', '74426302285'),
+(2, 'Leonard Martinez Hays', <span id="cloake732ad294cfed5b176744d8454b9f4f4">Este endereço de email está sendo protegido de spambots. Você precisa do JavaScript ativado para vê-lo.</span><script type='text/javascript'>
+				document.getElementById('cloake732ad294cfed5b176744d8454b9f4f4').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addye732ad294cfed5b176744d8454b9f4f4 = '&#039;d&#105;gn&#105;ss&#105;m.m&#97;gn&#97;.&#97;' + '&#64;';
+				addye732ad294cfed5b176744d8454b9f4f4 = addye732ad294cfed5b176744d8454b9f4f4 + 'd&#111;l&#111;rv&#105;t&#97;&#101;' + '&#46;' + '&#111;rg';
+				var addy_texte732ad294cfed5b176744d8454b9f4f4 = '&#039;d&#105;gn&#105;ss&#105;m.m&#97;gn&#97;.&#97;' + '&#64;' + 'd&#111;l&#111;rv&#105;t&#97;&#101;' + '&#46;' + '&#111;rg';document.getElementById('cloake732ad294cfed5b176744d8454b9f4f4').innerHTML += '<a ' + path + '\'' + prefix + ':' + addye732ad294cfed5b176744d8454b9f4f4 + '\'>'+addy_texte732ad294cfed5b176744d8454b9f4f4+'<\/a>';
+		</script>', '2012-08-22', '75278965048'),
+(3, 'Aladdin Curry French', <span id="cloak543c18ad8e0719b1ac854bb3e2b465d2">Este endereço de email está sendo protegido de spambots. Você precisa do JavaScript ativado para vê-lo.</span><script type='text/javascript'>
+				document.getElementById('cloak543c18ad8e0719b1ac854bb3e2b465d2').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addy543c18ad8e0719b1ac854bb3e2b465d2 = '&#039;&#101;&#117;.&#97;&#117;g&#117;&#101;' + '&#64;';
+				addy543c18ad8e0719b1ac854bb3e2b465d2 = addy543c18ad8e0719b1ac854bb3e2b465d2 + '&#101;&#117;t&#101;mp&#111;r&#101;r&#97;t' + '&#46;' + '&#111;rg';
+				var addy_text543c18ad8e0719b1ac854bb3e2b465d2 = '&#039;&#101;&#117;.&#97;&#117;g&#117;&#101;' + '&#64;' + '&#101;&#117;t&#101;mp&#111;r&#101;r&#97;t' + '&#46;' + '&#111;rg';document.getElementById('cloak543c18ad8e0719b1ac854bb3e2b465d2').innerHTML += '<a ' + path + '\'' + prefix + ':' + addy543c18ad8e0719b1ac854bb3e2b465d2 + '\'>'+addy_text543c18ad8e0719b1ac854bb3e2b465d2+'<\/a>';
+		</script>', '2012-10-28', '10376915676'),
+(4, 'Chloe Macdonald Dalton', <span id="cloakdf2a9b129b0669c8432e05a746eaba5a">Este endereço de email está sendo protegido de spambots. Você precisa do JavaScript ativado para vê-lo.</span><script type='text/javascript'>
+				document.getElementById('cloakdf2a9b129b0669c8432e05a746eaba5a').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addydf2a9b129b0669c8432e05a746eaba5a = '&#039;p&#97;rt&#117;r&#105;&#101;nt.m&#111;nt&#101;s' + '&#64;';
+				addydf2a9b129b0669c8432e05a746eaba5a = addydf2a9b129b0669c8432e05a746eaba5a + 'M&#97;&#117;r&#105;s' + '&#46;' + 'c&#97;';
+				var addy_textdf2a9b129b0669c8432e05a746eaba5a = '&#039;p&#97;rt&#117;r&#105;&#101;nt.m&#111;nt&#101;s' + '&#64;' + 'M&#97;&#117;r&#105;s' + '&#46;' + 'c&#97;';document.getElementById('cloakdf2a9b129b0669c8432e05a746eaba5a').innerHTML += '<a ' + path + '\'' + prefix + ':' + addydf2a9b129b0669c8432e05a746eaba5a + '\'>'+addy_textdf2a9b129b0669c8432e05a746eaba5a+'<\/a>';
+		</script>', '2013-05-12', '64444679077'),
+(5, 'Mallory Sweet Strong', <span id="cloak8912f20980a7cdb5857141969d4d3aad">Este endereço de email está sendo protegido de spambots. Você precisa do JavaScript ativado para vê-lo.</span><script type='text/javascript'>
+				document.getElementById('cloak8912f20980a7cdb5857141969d4d3aad').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addy8912f20980a7cdb5857141969d4d3aad = '&#039;l&#111;r&#101;m' + '&#64;';
+				addy8912f20980a7cdb5857141969d4d3aad = addy8912f20980a7cdb5857141969d4d3aad + 'fr&#105;ng&#105;ll&#97;p&#111;rtt&#105;t&#111;r' + '&#46;' + 'c&#97;';
+				var addy_text8912f20980a7cdb5857141969d4d3aad = '&#039;l&#111;r&#101;m' + '&#64;' + 'fr&#105;ng&#105;ll&#97;p&#111;rtt&#105;t&#111;r' + '&#46;' + 'c&#97;';document.getElementById('cloak8912f20980a7cdb5857141969d4d3aad').innerHTML += '<a ' + path + '\'' + prefix + ':' + addy8912f20980a7cdb5857141969d4d3aad + '\'>'+addy_text8912f20980a7cdb5857141969d4d3aad+'<\/a>';
+		</script>', '2013-05-19', '15687101505'),
+(6, 'Jermaine Pierce Woodward', <span id="cloak6bab4e7648685cd591143cfbeb88f951">Este endereço de email está sendo protegido de spambots. Você precisa do JavaScript ativado para vê-lo.</span><script type='text/javascript'>
+				document.getElementById('cloak6bab4e7648685cd591143cfbeb88f951').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addy6bab4e7648685cd591143cfbeb88f951 = '&#039;m&#105;.p&#101;d&#101;.n&#111;n&#117;mmy' + '&#64;';
+				addy6bab4e7648685cd591143cfbeb88f951 = addy6bab4e7648685cd591143cfbeb88f951 + 'm&#111;l&#101;st&#105;&#101;&#97;rc&#117;' + '&#46;' + 'c&#97;';
+				var addy_text6bab4e7648685cd591143cfbeb88f951 = '&#039;m&#105;.p&#101;d&#101;.n&#111;n&#117;mmy' + '&#64;' + 'm&#111;l&#101;st&#105;&#101;&#97;rc&#117;' + '&#46;' + 'c&#97;';document.getElementById('cloak6bab4e7648685cd591143cfbeb88f951').innerHTML += '<a ' + path + '\'' + prefix + ':' + addy6bab4e7648685cd591143cfbeb88f951 + '\'>'+addy_text6bab4e7648685cd591143cfbeb88f951+'<\/a>';
+		</script>', '2013-03-22', '36712502261'),
+(7, 'Bell Raymond Pruitt', <span id="cloakbfcf0806bc300c10ff3c4faa2bafc5ca">Este endereço de email está sendo protegido de spambots. Você precisa do JavaScript ativado para vê-lo.</span><script type='text/javascript'>
+				document.getElementById('cloakbfcf0806bc300c10ff3c4faa2bafc5ca').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addybfcf0806bc300c10ff3c4faa2bafc5ca = '&#039;d&#105;gn&#105;ss&#105;m.t&#101;mp&#111;r.&#97;rc&#117;' + '&#64;';
+				addybfcf0806bc300c10ff3c4faa2bafc5ca = addybfcf0806bc300c10ff3c4faa2bafc5ca + 'n&#117;nc&#97;c' + '&#46;' + '&#111;rg';
+				var addy_textbfcf0806bc300c10ff3c4faa2bafc5ca = '&#039;d&#105;gn&#105;ss&#105;m.t&#101;mp&#111;r.&#97;rc&#117;' + '&#64;' + 'n&#117;nc&#97;c' + '&#46;' + '&#111;rg';document.getElementById('cloakbfcf0806bc300c10ff3c4faa2bafc5ca').innerHTML += '<a ' + path + '\'' + prefix + ':' + addybfcf0806bc300c10ff3c4faa2bafc5ca + '\'>'+addy_textbfcf0806bc300c10ff3c4faa2bafc5ca+'<\/a>';
+		</script>', '2013-03-09', '64629428663'),
+(8, 'Lydia Bell Whitfield', <span id="cloak70f0835b6d93b504e6c228fa2b5cb8d1">Este endereço de email está sendo protegido de spambots. Você precisa do JavaScript ativado para vê-lo.</span><script type='text/javascript'>
+				document.getElementById('cloak70f0835b6d93b504e6c228fa2b5cb8d1').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addy70f0835b6d93b504e6c228fa2b5cb8d1 = '&#039;S&#101;d' + '&#64;';
+				addy70f0835b6d93b504e6c228fa2b5cb8d1 = addy70f0835b6d93b504e6c228fa2b5cb8d1 + 's&#101;mp&#101;r' + '&#46;' + 'c&#111;m';
+				var addy_text70f0835b6d93b504e6c228fa2b5cb8d1 = '&#039;S&#101;d' + '&#64;' + 's&#101;mp&#101;r' + '&#46;' + 'c&#111;m';document.getElementById('cloak70f0835b6d93b504e6c228fa2b5cb8d1').innerHTML += '<a ' + path + '\'' + prefix + ':' + addy70f0835b6d93b504e6c228fa2b5cb8d1 + '\'>'+addy_text70f0835b6d93b504e6c228fa2b5cb8d1+'<\/a>';
+		</script>', '2013-12-02', '41962749289'),
+(9, 'Tad Mason Graham', <span id="cloakbab8a1bcec7f3bddc0cb00724c538987">Este endereço de email está sendo protegido de spambots. Você precisa do JavaScript ativado para vê-lo.</span><script type='text/javascript'>
+				document.getElementById('cloakbab8a1bcec7f3bddc0cb00724c538987').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addybab8a1bcec7f3bddc0cb00724c538987 = '&#039;&#101;l&#105;t.&#101;r&#97;t' + '&#64;';
+				addybab8a1bcec7f3bddc0cb00724c538987 = addybab8a1bcec7f3bddc0cb00724c538987 + 'v&#101;st&#105;b&#117;l&#117;m' + '&#46;' + '&#101;d&#117;';
+				var addy_textbab8a1bcec7f3bddc0cb00724c538987 = '&#039;&#101;l&#105;t.&#101;r&#97;t' + '&#64;' + 'v&#101;st&#105;b&#117;l&#117;m' + '&#46;' + '&#101;d&#117;';document.getElementById('cloakbab8a1bcec7f3bddc0cb00724c538987').innerHTML += '<a ' + path + '\'' + prefix + ':' + addybab8a1bcec7f3bddc0cb00724c538987 + '\'>'+addy_textbab8a1bcec7f3bddc0cb00724c538987+'<\/a>';
+		</script>', '2012-06-08', '05642745964'),
+(10, 'Felix Bradshaw Mccray', <span id="cloak346dcc1a3d783ea154f46020ad355ccc">Este endereço de email está sendo protegido de spambots. Você precisa do JavaScript ativado para vê-lo.</span><script type='text/javascript'>
+				document.getElementById('cloak346dcc1a3d783ea154f46020ad355ccc').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addy346dcc1a3d783ea154f46020ad355ccc = '&#039;d&#117;&#105;' + '&#64;';
+				addy346dcc1a3d783ea154f46020ad355ccc = addy346dcc1a3d783ea154f46020ad355ccc + '&#101;l&#105;tC&#117;r&#97;b&#105;t&#117;rs&#101;d' + '&#46;' + '&#101;d&#117;';
+				var addy_text346dcc1a3d783ea154f46020ad355ccc = '&#039;d&#117;&#105;' + '&#64;' + '&#101;l&#105;tC&#117;r&#97;b&#105;t&#117;rs&#101;d' + '&#46;' + '&#101;d&#117;';document.getElementById('cloak346dcc1a3d783ea154f46020ad355ccc').innerHTML += '<a ' + path + '\'' + prefix + ':' + addy346dcc1a3d783ea154f46020ad355ccc + '\'>'+addy_text346dcc1a3d783ea154f46020ad355ccc+'<\/a>';
+		</script>', '2013-09-16', '82071617437'),
+(11, 'Idona Jensen Garrett', <span id="cloakc93dcd617079c8ee28da83ccba3f1852">Este endereço de email está sendo protegido de spambots. Você precisa do JavaScript ativado para vê-lo.</span><script type='text/javascript'>
+				document.getElementById('cloakc93dcd617079c8ee28da83ccba3f1852').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addyc93dcd617079c8ee28da83ccba3f1852 = '&#039;s&#101;m' + '&#64;';
+				addyc93dcd617079c8ee28da83ccba3f1852 = addyc93dcd617079c8ee28da83ccba3f1852 + 'Cr&#97;sv&#117;lp&#117;t&#97;t&#101;' + '&#46;' + 'c&#111;m';
+				var addy_textc93dcd617079c8ee28da83ccba3f1852 = '&#039;s&#101;m' + '&#64;' + 'Cr&#97;sv&#117;lp&#117;t&#97;t&#101;' + '&#46;' + 'c&#111;m';document.getElementById('cloakc93dcd617079c8ee28da83ccba3f1852').innerHTML += '<a ' + path + '\'' + prefix + ':' + addyc93dcd617079c8ee28da83ccba3f1852 + '\'>'+addy_textc93dcd617079c8ee28da83ccba3f1852+'<\/a>';
+		</script>', '2014-01-08', '07941004794'),
+(12, 'Wayne Ray Padilla', <span id="cloakb7db2920645065cf405356c0373234bd">Este endereço de email está sendo protegido de spambots. Você precisa do JavaScript ativado para vê-lo.</span><script type='text/javascript'>
+				document.getElementById('cloakb7db2920645065cf405356c0373234bd').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addyb7db2920645065cf405356c0373234bd = '&#039;l&#117;ct&#117;s.f&#101;l&#105;s.p&#117;r&#117;s' + '&#64;';
+				addyb7db2920645065cf405356c0373234bd = addyb7db2920645065cf405356c0373234bd + 'n&#111;nj&#117;st&#111;Pr&#111;&#105;n' + '&#46;' + '&#111;rg';
+				var addy_textb7db2920645065cf405356c0373234bd = '&#039;l&#117;ct&#117;s.f&#101;l&#105;s.p&#117;r&#117;s' + '&#64;' + 'n&#111;nj&#117;st&#111;Pr&#111;&#105;n' + '&#46;' + '&#111;rg';document.getElementById('cloakb7db2920645065cf405356c0373234bd').innerHTML += '<a ' + path + '\'' + prefix + ':' + addyb7db2920645065cf405356c0373234bd + '\'>'+addy_textb7db2920645065cf405356c0373234bd+'<\/a>';
+		</script>', '2014-04-03', '60934465323'),
+(13, 'Nelle Finch Cantu', <span id="cloak0fe3b94736402c5a89c5632692075768">Este endereço de email está sendo protegido de spambots. Você precisa do JavaScript ativado para vê-lo.</span><script type='text/javascript'>
+				document.getElementById('cloak0fe3b94736402c5a89c5632692075768').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addy0fe3b94736402c5a89c5632692075768 = '&#039;pl&#97;c&#101;r&#97;t.&#101;g&#101;t' + '&#64;';
+				addy0fe3b94736402c5a89c5632692075768 = addy0fe3b94736402c5a89c5632692075768 + 'D&#111;n&#101;c' + '&#46;' + 'c&#97;';
+				var addy_text0fe3b94736402c5a89c5632692075768 = '&#039;pl&#97;c&#101;r&#97;t.&#101;g&#101;t' + '&#64;' + 'D&#111;n&#101;c' + '&#46;' + 'c&#97;';document.getElementById('cloak0fe3b94736402c5a89c5632692075768').innerHTML += '<a ' + path + '\'' + prefix + ':' + addy0fe3b94736402c5a89c5632692075768 + '\'>'+addy_text0fe3b94736402c5a89c5632692075768+'<\/a>';
+		</script>', '2012-05-29', '64704574060'),
+(14, 'Maite Emerson Best', <span id="cloakc11cbcf22d6a115cada762f087c8fddb">Este endereço de email está sendo protegido de spambots. Você precisa do JavaScript ativado para vê-lo.</span><script type='text/javascript'>
+				document.getElementById('cloakc11cbcf22d6a115cada762f087c8fddb').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addyc11cbcf22d6a115cada762f087c8fddb = '&#039;d&#117;&#105;.&#97;&#117;g&#117;&#101;' + '&#64;';
+				addyc11cbcf22d6a115cada762f087c8fddb = addyc11cbcf22d6a115cada762f087c8fddb + 'q&#117;&#105;sd&#105;&#97;m' + '&#46;' + 'c&#111;m';
+				var addy_textc11cbcf22d6a115cada762f087c8fddb = '&#039;d&#117;&#105;.&#97;&#117;g&#117;&#101;' + '&#64;' + 'q&#117;&#105;sd&#105;&#97;m' + '&#46;' + 'c&#111;m';document.getElementById('cloakc11cbcf22d6a115cada762f087c8fddb').innerHTML += '<a ' + path + '\'' + prefix + ':' + addyc11cbcf22d6a115cada762f087c8fddb + '\'>'+addy_textc11cbcf22d6a115cada762f087c8fddb+'<\/a>';
+		</script>', '2014-04-01', '04531857574'),
+(15, 'Jada Holman Wilkins', <span id="cloak4aa58025867b701a9c568dfc8927ef5e">Este endereço de email está sendo protegido de spambots. Você precisa do JavaScript ativado para vê-lo.</span><script type='text/javascript'>
+				document.getElementById('cloak4aa58025867b701a9c568dfc8927ef5e').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addy4aa58025867b701a9c568dfc8927ef5e = '&#039;d&#111;l&#111;r' + '&#64;';
+				addy4aa58025867b701a9c568dfc8927ef5e = addy4aa58025867b701a9c568dfc8927ef5e + 'tr&#105;st&#105;q&#117;&#101;&#97;l&#105;q&#117;&#101;t' + '&#46;' + 'c&#111;m';
+				var addy_text4aa58025867b701a9c568dfc8927ef5e = '&#039;d&#111;l&#111;r' + '&#64;' + 'tr&#105;st&#105;q&#117;&#101;&#97;l&#105;q&#117;&#101;t' + '&#46;' + 'c&#111;m';document.getElementById('cloak4aa58025867b701a9c568dfc8927ef5e').innerHTML += '<a ' + path + '\'' + prefix + ':' + addy4aa58025867b701a9c568dfc8927ef5e + '\'>'+addy_text4aa58025867b701a9c568dfc8927ef5e+'<\/a>';
+		</script>', '2013-01-11', '88994190741'),
+(16, 'Beverly Lane Lindsay', <span id="cloakd5401d7aa1d2d835a53d51338ae9bdab">Este endereço de email está sendo protegido de spambots. Você precisa do JavaScript ativado para vê-lo.</span><script type='text/javascript'>
+				document.getElementById('cloakd5401d7aa1d2d835a53d51338ae9bdab').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addyd5401d7aa1d2d835a53d51338ae9bdab = '&#039;&#101;t.&#101;&#117;&#105;sm&#111;d' + '&#64;';
+				addyd5401d7aa1d2d835a53d51338ae9bdab = addyd5401d7aa1d2d835a53d51338ae9bdab + '&#97;m&#101;tf&#97;&#117;c&#105;b&#117;s&#117;t' + '&#46;' + 'c&#111;m';
+				var addy_textd5401d7aa1d2d835a53d51338ae9bdab = '&#039;&#101;t.&#101;&#117;&#105;sm&#111;d' + '&#64;' + '&#97;m&#101;tf&#97;&#117;c&#105;b&#117;s&#117;t' + '&#46;' + 'c&#111;m';document.getElementById('cloakd5401d7aa1d2d835a53d51338ae9bdab').innerHTML += '<a ' + path + '\'' + prefix + ':' + addyd5401d7aa1d2d835a53d51338ae9bdab + '\'>'+addy_textd5401d7aa1d2d835a53d51338ae9bdab+'<\/a>';
+		</script>', '2013-10-22', '40194697135'),
+(17, 'Hayden Clayton Foreman', <span id="cloak7cc568e7b4901a435b01160d8b548264">Este endereço de email está sendo protegido de spambots. Você precisa do JavaScript ativado para vê-lo.</span><script type='text/javascript'>
+				document.getElementById('cloak7cc568e7b4901a435b01160d8b548264').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addy7cc568e7b4901a435b01160d8b548264 = '&#039;&#101;n&#105;m' + '&#64;';
+				addy7cc568e7b4901a435b01160d8b548264 = addy7cc568e7b4901a435b01160d8b548264 + '&#97;l&#105;q&#117;&#97;m&#101;n&#105;mn&#101;c' + '&#46;' + '&#101;d&#117;';
+				var addy_text7cc568e7b4901a435b01160d8b548264 = '&#039;&#101;n&#105;m' + '&#64;' + '&#97;l&#105;q&#117;&#97;m&#101;n&#105;mn&#101;c' + '&#46;' + '&#101;d&#117;';document.getElementById('cloak7cc568e7b4901a435b01160d8b548264').innerHTML += '<a ' + path + '\'' + prefix + ':' + addy7cc568e7b4901a435b01160d8b548264 + '\'>'+addy_text7cc568e7b4901a435b01160d8b548264+'<\/a>';
+		</script>', '2013-04-16', '72583040904'),
+(18, 'Hadassah Leonard Key', <span id="cloak019b409eb2aa2daa21da94508b9524df">Este endereço de email está sendo protegido de spambots. Você precisa do JavaScript ativado para vê-lo.</span><script type='text/javascript'>
+				document.getElementById('cloak019b409eb2aa2daa21da94508b9524df').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addy019b409eb2aa2daa21da94508b9524df = '&#039;d&#117;&#105;.q&#117;&#105;s' + '&#64;';
+				addy019b409eb2aa2daa21da94508b9524df = addy019b409eb2aa2daa21da94508b9524df + '&#97;&#117;g&#117;&#101;&#105;d&#97;nt&#101;' + '&#46;' + 'c&#111;m';
+				var addy_text019b409eb2aa2daa21da94508b9524df = '&#039;d&#117;&#105;.q&#117;&#105;s' + '&#64;' + '&#97;&#117;g&#117;&#101;&#105;d&#97;nt&#101;' + '&#46;' + 'c&#111;m';document.getElementById('cloak019b409eb2aa2daa21da94508b9524df').innerHTML += '<a ' + path + '\'' + prefix + ':' + addy019b409eb2aa2daa21da94508b9524df + '\'>'+addy_text019b409eb2aa2daa21da94508b9524df+'<\/a>';
+		</script>', '2013-04-07', '72626859924'),
+(19, 'Adrian Ballard Peters', <span id="cloakbaaf2bc243d9e5ef36ab28a25858dc48">Este endereço de email está sendo protegido de spambots. Você precisa do JavaScript ativado para vê-lo.</span><script type='text/javascript'>
+				document.getElementById('cloakbaaf2bc243d9e5ef36ab28a25858dc48').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addybaaf2bc243d9e5ef36ab28a25858dc48 = '&#039;&#101;n&#105;m.C&#117;r&#97;b&#105;t&#117;r' + '&#64;';
+				addybaaf2bc243d9e5ef36ab28a25858dc48 = addybaaf2bc243d9e5ef36ab28a25858dc48 + 'f&#97;&#117;c&#105;b&#117;s' + '&#46;' + 'c&#111;m';
+				var addy_textbaaf2bc243d9e5ef36ab28a25858dc48 = '&#039;&#101;n&#105;m.C&#117;r&#97;b&#105;t&#117;r' + '&#64;' + 'f&#97;&#117;c&#105;b&#117;s' + '&#46;' + 'c&#111;m';document.getElementById('cloakbaaf2bc243d9e5ef36ab28a25858dc48').innerHTML += '<a ' + path + '\'' + prefix + ':' + addybaaf2bc243d9e5ef36ab28a25858dc48 + '\'>'+addy_textbaaf2bc243d9e5ef36ab28a25858dc48+'<\/a>';
+		</script>', '2012-07-13', '50918748283'),
+(20, 'Phyllis Richmond Wynn', <span id="cloakc1a97daeb2b3d0b3e1e1dccda1a37b69">Este endereço de email está sendo protegido de spambots. Você precisa do JavaScript ativado para vê-lo.</span><script type='text/javascript'>
+				document.getElementById('cloakc1a97daeb2b3d0b3e1e1dccda1a37b69').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addyc1a97daeb2b3d0b3e1e1dccda1a37b69 = '&#039;&#101;g&#101;t.l&#97;&#111;r&#101;&#101;t' + '&#64;';
+				addyc1a97daeb2b3d0b3e1e1dccda1a37b69 = addyc1a97daeb2b3d0b3e1e1dccda1a37b69 + 'j&#117;st&#111;&#101;&#117;&#97;rc&#117;' + '&#46;' + '&#111;rg';
+				var addy_textc1a97daeb2b3d0b3e1e1dccda1a37b69 = '&#039;&#101;g&#101;t.l&#97;&#111;r&#101;&#101;t' + '&#64;' + 'j&#117;st&#111;&#101;&#117;&#97;rc&#117;' + '&#46;' + '&#111;rg';document.getElementById('cloakc1a97daeb2b3d0b3e1e1dccda1a37b69').innerHTML += '<a ' + path + '\'' + prefix + ':' + addyc1a97daeb2b3d0b3e1e1dccda1a37b69 + '\'>'+addy_textc1a97daeb2b3d0b3e1e1dccda1a37b69+'<\/a>';
+		</script>', '2013-07-01', '62712888794'),
+(21, 'Amelia Baird Barrera', <span id="cloak76a0109b234454c81d41ef8c823cda6b">Este endereço de email está sendo protegido de spambots. Você precisa do JavaScript ativado para vê-lo.</span><script type='text/javascript'>
+				document.getElementById('cloak76a0109b234454c81d41ef8c823cda6b').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addy76a0109b234454c81d41ef8c823cda6b = '&#039;&#105;d.&#97;nt&#101;' + '&#64;';
+				addy76a0109b234454c81d41ef8c823cda6b = addy76a0109b234454c81d41ef8c823cda6b + 'd&#105;gn&#105;ss&#105;m' + '&#46;' + '&#111;rg';
+				var addy_text76a0109b234454c81d41ef8c823cda6b = '&#039;&#105;d.&#97;nt&#101;' + '&#64;' + 'd&#105;gn&#105;ss&#105;m' + '&#46;' + '&#111;rg';document.getElementById('cloak76a0109b234454c81d41ef8c823cda6b').innerHTML += '<a ' + path + '\'' + prefix + ':' + addy76a0109b234454c81d41ef8c823cda6b + '\'>'+addy_text76a0109b234454c81d41ef8c823cda6b+'<\/a>';
+		</script>', '2012-06-09', '12106836368'),
+(22, 'Whitney Mack Lamb', <span id="cloak747a3630b724f7e446f3baf0d93d6acb">Este endereço de email está sendo protegido de spambots. Você precisa do JavaScript ativado para vê-lo.</span><script type='text/javascript'>
+				document.getElementById('cloak747a3630b724f7e446f3baf0d93d6acb').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addy747a3630b724f7e446f3baf0d93d6acb = '&#039;q&#117;&#97;m.C&#117;r&#97;b&#105;t&#117;r.v&#101;l' + '&#64;';
+				addy747a3630b724f7e446f3baf0d93d6acb = addy747a3630b724f7e446f3baf0d93d6acb + 'Pr&#97;&#101;s&#101;ntl&#117;ct&#117;sC&#117;r&#97;b&#105;t&#117;r' + '&#46;' + '&#111;rg';
+				var addy_text747a3630b724f7e446f3baf0d93d6acb = '&#039;q&#117;&#97;m.C&#117;r&#97;b&#105;t&#117;r.v&#101;l' + '&#64;' + 'Pr&#97;&#101;s&#101;ntl&#117;ct&#117;sC&#117;r&#97;b&#105;t&#117;r' + '&#46;' + '&#111;rg';document.getElementById('cloak747a3630b724f7e446f3baf0d93d6acb').innerHTML += '<a ' + path + '\'' + prefix + ':' + addy747a3630b724f7e446f3baf0d93d6acb + '\'>'+addy_text747a3630b724f7e446f3baf0d93d6acb+'<\/a>';
+		</script>', '2012-06-26', '52403407001'),
+(23, 'Myra Mcmahon Valentine', <span id="cloakc09b214f122033187fa98e828a8ec35f">Este endereço de email está sendo protegido de spambots. Você precisa do JavaScript ativado para vê-lo.</span><script type='text/javascript'>
+				document.getElementById('cloakc09b214f122033187fa98e828a8ec35f').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addyc09b214f122033187fa98e828a8ec35f = '&#039;&#97;c.m&#105;' + '&#64;';
+				addyc09b214f122033187fa98e828a8ec35f = addyc09b214f122033187fa98e828a8ec35f + 'fr&#105;ng&#105;ll&#97;m&#105;' + '&#46;' + '&#101;d&#117;';
+				var addy_textc09b214f122033187fa98e828a8ec35f = '&#039;&#97;c.m&#105;' + '&#64;' + 'fr&#105;ng&#105;ll&#97;m&#105;' + '&#46;' + '&#101;d&#117;';document.getElementById('cloakc09b214f122033187fa98e828a8ec35f').innerHTML += '<a ' + path + '\'' + prefix + ':' + addyc09b214f122033187fa98e828a8ec35f + '\'>'+addy_textc09b214f122033187fa98e828a8ec35f+'<\/a>';
+		</script>', '2012-07-27', '42961419194');</code></pre>
+<p> </p>
+<p><strong>Routes</strong></p>
+<p>Para que ao abrir o aplicativo automaticamente ele mostra o controller Clientes, em config/routes.php altere a linha abaixo:</p>
+<p>Originalmente é assim a alinha:</p>
+<p>$routes-&gt;connect('/', ['controller' =&gt; 'Pages', 'action' =&gt; 'display', 'home']);</p>
+<p> </p>
+<p><strong>Mudei para</strong></p>
+<p>$routes-&gt;connect('/', ['controller' =&gt; 'Clientes', 'action' =&gt; 'index']);</p>
+<p> </p>
+<p><strong>Geração do Código do CRUD completo com o Bake</strong></p>
+<p>Depois de configurados o app.php e o routes.php, então execute:</p>
+<p>cd cliente</p>
+<p>bin/cake bake all clientes</p>
+<p align="left"><strong>Importante</strong>.: Lembre de mudar a barra / por \ se estiver usando o Windows.</p>
+<p align="left"> </p>
+<p align="left">Como saber a versão atual do CakePHP que está instalado?</p>
+<p align="left">bin/cake version</p>
+<p align="left"> </p>
+<p>Acesse novamente pelo Navegador</p>
+<p>Agora pode acessar seu aplicativo pelo navegador</p>
+<p><a href="http://localhost/cliente">http://localhost/</a><a href="http://localhost/cliente">cliente</a></p>
+<p>Aparece por default o Clientes/index, como configuramos no routes</p>
+<p align="left">Um CRUD completo e fundional com bons recursos.</p>
+<p align="left"> </p>
+<p align="left"><strong>Customizações</strong></p>
+<p align="justify">Agora já podemos melhorar seus recursos e também instalar o plugin cake-acl-br para implementar ACL com Bootstrap e outros bons recursos, ou se apenas deseja</p>
+<p align="justify">implementar o Bootstrap instale o plugin cake-bs-br:</p>
+<p align="left"><a href="https://github.com/ribafs/cake-acl-br">https://github.com/ribafs/cake-acl-br</a></p>
+<p align="left"><a href="https://github.com/ribafs/cake-bs-br">https://github.com/ribafs/cake-bs-br</a></p>
+<p align="left"> </p>
+<p align="left">O tutorial/README.md tem um bom tutorial que mostra diversas customizações do aplicativo.</p>
+<p align="left"><strong>Testando</strong></p>
+<p align="justify">Crie um novo registro e insira um e-mail inválido e então clique em SUBMIT. Veja que o Cake já criou o form usando HTML5, pois o campo para o e-mail é do tipo e-mail e o HTML5 não deixa inserir um e-mail inválido.</p>
+<p align="left"> </p>
+<p align="left">Tome cuidado com a criação do banco de dados</p>
+<p align="justify">O Cake faz isso com as informações que colhe do banco de dados e critica de acordo com as constraints presentes. Um exemplo é quando usamos o NOT NULL em um campo. Neste caso o Cake cria uma validação para obrigar o preenchimento do campo.</p>
+<p align="left"> </p>
+<p align="left"><strong>Problema com o mod_rewrite?</strong></p>
+<p align="left">Ocasionalmente, novos usuários irão se atrapalhar com problemas de mod_rewrite. Por exemplo, se a página de boas vindas do CakePHP parecer estranha (sem imagens ou estilos CSS). Isto provavelmente significa que o mod_rewrite não está funcionando em seu servidor. Por favor, verifique a seção <a href="https://book.cakephp.org/3.0/pt/installation.html#url-rewriting">Reescrita de URL</a> para obter ajuda e resolver qualquer problema relacionado.</p>
+<p align="left"><strong>Detalhes</strong></p>
+<p align="left"><a href="https://book.cakephp.org/3.0/en/installation.html">https://book.cakephp.org/3.0/en/installation.html</a></p>
+<p align="left"> </p>
+<h2><a name="__RefHeading___Toc24837_2925173334"></a><strong>4.1 - Algumas configurações</strong></h2>
+<p style="font-weight: normal;" align="left"> </p>
+<p align="left"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><b>config/app.php</b></span></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><b>Debug</b></p>
+<pre class="language-php"><code>
+    'debug' =&gt; filter_var(env('DEBUG', true), FILTER_VALIDATE_BOOLEAN),
+
+    'App' =&gt; [
+        'namespace' =&gt; 'App',
+        'encoding' =&gt; env('APP_ENCODING', 'UTF-8'),
+        'defaultLocale' =&gt; env('APP_DEFAULT_LOCALE', 'en_US'),
+        'defaultTimezone' =&gt; env('APP_DEFAULT_TIMEZONE', 'UTC'),
+        'base' =&gt; false,
+        'dir' =&gt; 'src',
+        'webroot' =&gt; 'webroot',
+        'wwwRoot' =&gt; WWW_ROOT,
+        //'baseUrl' =&gt; env('SCRIPT_NAME'),
+        'fullBaseUrl' =&gt; false,
+        'imageBaseUrl' =&gt; 'img/',
+        'cssBaseUrl' =&gt; 'css/',
+        'jsBaseUrl' =&gt; 'js/',
+        'paths' =&gt; [
+            'plugins' =&gt; [ROOT . DS . 'plugins' . DS],
+            'templates' =&gt; [APP . 'Template' . DS],
+            'locales' =&gt; [APP . 'Locale' . DS],
+        ],
+    ],
+
+    'Cache' =&gt; [
+        'default' =&gt; [
+            'className' =&gt; 'Cake\Cache\Engine\FileEngine',
+            'path' =&gt; CACHE,
+            'url' =&gt; env('CACHE_DEFAULT_URL', null),
+        ],
+
+        /**
+         * Configure the cache used for general framework caching.
+         * Translation cache files are stored with this configuration.
+         * Duration will be set to '+2 minutes' in bootstrap.php when debug = true
+         * If you set 'className' =&gt; 'Null' core cache will be disabled.
+         */
+        '_cake_core_' =&gt; [
+            'className' =&gt; 'Cake\Cache\Engine\FileEngine',
+            'prefix' =&gt; 'myapp_cake_core_',
+            'path' =&gt; CACHE . 'persistent/',
+            'serialize' =&gt; true,
+            'duration' =&gt; '+1 years',
+            'url' =&gt; env('CACHE_CAKECORE_URL', null),
+        ],
+
+        /**
+         * Configure the cache for model and datasource caches. This cache
+         * configuration is used to store schema descriptions, and table listings
+         * in connections.
+         * Duration will be set to '+2 minutes' in bootstrap.php when debug = true
+         */
+        '_cake_model_' =&gt; [
+            'className' =&gt; 'Cake\Cache\Engine\FileEngine',
+            'prefix' =&gt; 'myapp_cake_model_',
+            'path' =&gt; CACHE . 'models/',
+            'serialize' =&gt; true,
+            'duration' =&gt; '+1 years',
+            'url' =&gt; env('CACHE_CAKEMODEL_URL', null),
+        ],
+
+        /**
+         * Configure the cache for routes. The cached routes collection is built the
+         * first time the routes are processed via `config/routes.php`.
+         * Duration will be set to '+2 seconds' in bootstrap.php when debug = true
+         */
+        '_cake_routes_' =&gt; [
+            'className' =&gt; 'Cake\Cache\Engine\FileEngine',
+            'prefix' =&gt; 'myapp_cake_routes_',
+            'path' =&gt; CACHE,
+            'serialize' =&gt; true,
+            'duration' =&gt; '+1 years',
+            'url' =&gt; env('CACHE_CAKEROUTES_URL', null),
+        ],
+    ],
+
+    'Error' =&gt; [
+        'errorLevel' =&gt; E_ALL,
+        'exceptionRenderer' =&gt; 'Cake\Error\ExceptionRenderer',
+        'skipLog' =&gt; [],
+        'log' =&gt; true,
+        'trace' =&gt; true,
+    ],
+
+    'EmailTransport' =&gt; [
+        'default' =&gt; [
+            'className' =&gt; 'Cake\Mailer\Transport\MailTransport',
+            /*
+             * The following keys are used in SMTP transports:
+             */
+            'host' =&gt; 'localhost',
+            'port' =&gt; 25,
+            'timeout' =&gt; 30,
+            'username' =&gt; null,
+            'password' =&gt; null,
+            'client' =&gt; null,
+            'tls' =&gt; null,
+            'url' =&gt; env('EMAIL_TRANSPORT_DEFAULT_URL', null),
+        ],
+    ],
+
+    'Email' =&gt; [
+        'default' =&gt; [
+            'transport' =&gt; 'default',
+            'from' =&gt; 'you@localhost',
+            //'charset' =&gt; 'utf-8',
+            //'headerCharset' =&gt; 'utf-8',
+        ],
+    ],
+
+    'Datasources' =&gt; [
+        'default' =&gt; [
+            'className' =&gt; 'Cake\Database\Connection',
+            'driver' =&gt; 'Cake\Database\Driver\Mysql',
+            'persistent' =&gt; false,
+            'host' =&gt; 'localhost',
+            //'port' =&gt; 'non_standard_port_number',
+            'username' =&gt; 'root',
+            'password' =&gt; 'root',
+            'database' =&gt; 'admin_area',
+            //'encoding' =&gt; 'utf8mb4',
+            'timezone' =&gt; 'UTC',
+            'flags' =&gt; [],
+            'cacheMetadata' =&gt; true,
+            'log' =&gt; false,
+
+            'quoteIdentifiers' =&gt; false,
+
+            'url' =&gt; env('DATABASE_URL', null),
+        ],
+
+        /**
+         * The test connection is used during the test suite.
+         */
+        'test' =&gt; [
+            'className' =&gt; 'Cake\Database\Connection',
+            'driver' =&gt; 'Cake\Database\Driver\Mysql',
+            'persistent' =&gt; false,
+            'host' =&gt; 'localhost',
+            //'port' =&gt; 'non_standard_port_number',
+            'username' =&gt; 'my_app',
+            'password' =&gt; 'secret',
+            'database' =&gt; 'test_myapp',
+            //'encoding' =&gt; 'utf8mb4',
+            'timezone' =&gt; 'UTC',
+            'cacheMetadata' =&gt; true,
+            'quoteIdentifiers' =&gt; false,
+            'log' =&gt; false,
+            //'init' =&gt; ['SET GLOBAL innodb_stats_on_metadata = 0'],
+            'url' =&gt; env('DATABASE_TEST_URL', null),
+        ],
+    ],
+
+    'Log' =&gt; [
+        'debug' =&gt; [
+            'className' =&gt; 'Cake\Log\Engine\FileLog',
+            'path' =&gt; LOGS,
+            'file' =&gt; 'debug',
+            'url' =&gt; env('LOG_DEBUG_URL', null),
+            'scopes' =&gt; false,
+            'levels' =&gt; ['notice', 'info', 'debug'],
+        ],
+        'error' =&gt; [
+            'className' =&gt; 'Cake\Log\Engine\FileLog',
+            'path' =&gt; LOGS,
+            'file' =&gt; 'error',
+            'url' =&gt; env('LOG_ERROR_URL', null),
+            'scopes' =&gt; false,
+            'levels' =&gt; ['warning', 'error', 'critical', 'alert', 'emergency'],
+        ],
+        // To enable this dedicated query log, you need set your datasource's log flag to true
+        'queries' =&gt; [
+            'className' =&gt; 'Cake\Log\Engine\FileLog',
+            'path' =&gt; LOGS,
+            'file' =&gt; 'queries',
+            'url' =&gt; env('LOG_QUERIES_URL', null),
+            'scopes' =&gt; ['queriesLog'],
+        ],
+    ],
+
+    'Session' =&gt; [
+        'defaults' =&gt; 'php',
+    ],
+</code></pre>
+<p style="margin-bottom: 0cm; line-height: 100%;"> </p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><b>config/bootstrap.php</b></p>
+<p style="margin-bottom: 0cm; line-height: 100%;">* Setup detectors for mobile and tablet.</p>
+<p style="margin-bottom: 0cm; line-height: 100%;">*/</p>
+<p style="margin-bottom: 0cm; line-height: 100%;">ServerRequest::addDetector('mobile', function ($request) {</p>
+<p style="margin-bottom: 0cm; line-height: 100%;">$detector = new \Detection\MobileDetect();</p>
+<p style="margin-bottom: 0cm; line-height: 100%;">return $detector-&gt;isMobile();</p>
+<p style="margin-bottom: 0cm; line-height: 100%;">});</p>
+<p style="margin-bottom: 0cm; line-height: 100%;">ServerRequest::addDetector('tablet', function ($request) {</p>
+<p style="margin-bottom: 0cm; line-height: 100%;">$detector = new \Detection\MobileDetect();</p>
+<p style="margin-bottom: 0cm; line-height: 100%;">return $detector-&gt;isTablet();</p>
+<p style="margin-bottom: 0cm; line-height: 100%;">});</p>
+<p style="margin-bottom: 0cm; line-height: 100%;"> </p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><b>Também podemos configurar timezone</b> e formato de datas no bootstrap.php, veja:</p>
+<p style="margin-bottom: 0cm; line-height: 100%;">date_default_timezone_set('America/Fortaleza');</p>
+<pre class="language-php"><code>/**
+* Locale Formats
+*/
+
+\Cake\I18n\Time::setToStringFormat([IntlDateFormatter::MEDIUM, IntlDateFormatter::SHORT]);
+\Cake\I18n\Time::setToStringFormat('dd/MM/YYYY HH:mm');
+
+\Cake\Database\Type::build('date')-&gt;useLocaleParser()-&gt;setLocaleFormat('dd/MM/yyyy');
+
+\Cake\Database\Type::build('datetime')-&gt;useLocaleParser()-&gt;setLocaleFormat('dd/MM/yyyy HH:mm');
+
+\Cake\Database\Type::build('timestamp')-&gt;useLocaleParser()-&gt;setLocaleFormat('dd/MM/yyyy HH:mm');
+
+\Cake\Database\Type::build('decimal')-&gt;useLocaleParser();
+
+\Cake\Database\Type::build('float')-&gt;useLocaleParser();
+
+ini_set('intl.default_locale', 'pt_BR');
+
+/**
+* Default formats
+*/
+\Cake\I18n\Time::setToStringFormat('dd/MM/yyyy HH:mm:ss');
+\Cake\I18n\Date::setToStringFormat('dd/MM/yyyy');
+\Cake\I18n\FrozenTime::setToStringFormat('dd/MM/yyyy HH:mm:ss');
+\Cake\I18n\FrozenDate::setToStringFormat('dd/MM/yyyy');</code></pre>
+<p style="margin-bottom: 0cm; line-height: 100%;"> </p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><b>O código acima vem do plugin admin-br</b></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"> </p>
+<p style="margin-bottom: 0cm; line-height: 100%; page-break-before: always;"><b>config/bootstrap_cli.php</b></p>
+<p style="margin-bottom: 0cm; line-height: 100%;">Neste podemos alterar o comportamento default do bake. Vide admin-br.</p>
+<p style="margin-bottom: 0cm; line-height: 100%;"> </p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><b>config/requirements.php</b></p>
+<p style="margin-bottom: 0cm; line-height: 100%;">Neste ele verifica a versão mínima exigida do PHP e as duas extensões (intl e mbstring):</p>
+<p style="margin-bottom: 0cm; line-height: 100%;"> </p>
+<pre class="language-php"><code>&lt;?php
+if (version_compare(PHP_VERSION, '5.6.0') &lt; 0) {
+    trigger_error('Your PHP version must be equal or higher than 5.6.0 to use CakePHP.' . PHP_EOL, E_USER_ERROR);
+}
+
+/*
+ * You can remove this if you are confident you have intl installed.
+ */
+
+if (!extension_loaded('intl')) {
+    trigger_error('You must enable the intl extension to use CakePHP.' . PHP_EOL, E_USER_ERROR);
+}
+
+/*
+ * You can remove this if you are confident you have mbstring installed.
+ */
+
+if (!extension_loaded('mbstring')) {
+    trigger_error('You must enable the mbstring extension to use CakePHP.' . PHP_EOL, E_USER_ERROR);
+}
+</code></pre>
+<p style="margin-bottom: 0cm; line-height: 100%;"> </p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><b>config/routes.php</b></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><b>Neste ele verifica as rotas:</b></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"> </p>
+<pre class="language-php"><code>Router::scope('/', function (RouteBuilder $routes) {
+// Register scoped middleware for in scopes.
+$routes-&gt;registerMiddleware('csrf', new CsrfProtectionMiddleware([
+'httpOnly' =&gt; true
+]));
+
+/**
+* Apply a middleware to the current route scope.
+* Requires middleware to be registered via `Application::routes()` with `registerMiddleware()`
+*/
+
+$routes-&gt;applyMiddleware('csrf');
+...</code></pre>
+<p style="margin-bottom: 0cm; line-height: 100%;"> </p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><b>E define as rotas default e outras:</b></p>
+<p style="margin-bottom: 0cm; line-height: 100%;">$routes-&gt;connect('/', ['controller' =&gt; 'Users', 'action' =&gt; 'login']);</p>
+<p style="margin-bottom: 0cm; line-height: 100%;">$routes-&gt;connect('/pages/*', ['controller' =&gt; 'Pages', 'action' =&gt; 'display']);</p>
+<p style="margin-bottom: 0cm; line-height: 100%;"> </p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><b>Detalhes</b></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><a href="https://book.cakephp.org/3.0/en/development/configuration.html">https://book.cakephp.org/3.0/en/development/configuration.html</a></p> 	</div>
+
+	
+	
+				
+	
+	
+	
+</article>
+
+</body>
+</html>

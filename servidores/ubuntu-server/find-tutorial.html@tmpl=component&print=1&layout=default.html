@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br" dir="ltr">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <base href="" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Ribamar FS" />
+	<meta name="robots" content="noindex, nofollow" />
+	<meta name="description" content="Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros." />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>Find Tutorial - RibaFS Portal</title>
+	<link href="http://ribafs.org/portal/servidores/ubuntu-server/find-tutorial.html?tmpl=component&amp;print=1&amp;layout=default" rel="canonical" />
+	<link href="../../templates/shaper_helix3/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../../favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<script src="../../media/jui/js/jquery.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../media/jui/js/jquery-noconflict.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../media/jui/js/jquery-migrate.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="http://backup/portal/media/system/js/caption.js?d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script type="text/javascript">
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+	</script>
+	<meta property="og:url" content="http://backup/portal/servidores/ubuntu-server/find-tutorial.html" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Find Tutorial" />
+	<meta property="og:description" content="Procurando Arquivos pelo Terminal do Linux com find e locate Procurar arquivo no diretório atual: find -name "arquivo.zip" Procurar arquivo ignorando o cas..." />
+
+   	<link rel="stylesheet" href="../../media/jui/css/bootstrap.min.css" type="text/css" />
+	<link rel="stylesheet" href="../../templates/shaper_helix3/css/frontend-edit.css" type="text/css" />
+    <link rel="stylesheet" href="../../templates/shaper_helix3/css/template.css" type="text/css" />
+</head>
+<body class="contentpane">
+	<div id="system-message-container">
+	</div>
+
+	
+
+<article class="item item-page" itemscope itemtype="http://schema.org/Article">
+	<meta itemprop="inLanguage" content="pt-BR" />
+	
+	
+
+	<div class="entry-header">
+		<span class="post-format"><i class="fa fa-thumb-tack"></i></span>
+		
+					<h2 itemprop="name">
+									Find Tutorial							</h2>
+												</div>
+
+						<div id="pop-print" class="btn hidden-print">
+				<a href="find-tutorial.html#" onclick="window.print();return false;">			<span class="icon-print" aria-hidden="true"></span>
+		Imprimir	</a>			</div>
+				
+	
+	
+				
+	
+			<div itemprop="articleBody">
+		<h2>Procurando Arquivos pelo Terminal do Linux com find e locate</h2>
+
+<p><br /><strong>Procurar arquivo no diretório atual:</strong><br />find -name "arquivo.zip"<br /><br /><strong>Procurar arquivo ignorando o case:</strong><br />find -iname "Arquivo.zip"<br /><br /><strong>Procurar arquivos que não tenham um nome:</strong><br />find -not -name "nome-a-ignorar"<br /><br /><strong>Procurar arquivo pelo tipo:</strong><br />find -type tipo_descritor arquivo.txt<br /><br /><strong>tipo_descritor:</strong><br />    f: regular file<br />    d: directory<br />    l: symbolic link<br />    c: character devices<br />    b: block devices<br /><br /><strong>Procurar todos os arquivos tipo caractere no raiz:</strong><br />find / -type c<br /><br /><strong>Procurar todos os arquivos terminados com .conf:</strong><br />find / -type f -name "*.conf"</p>
+
+<p><strong>Mostrar os diretórios recursivamente até o terceiro nível de profundidade de /var/www</strong><br />find /var/www -maxdepth 3 -type d<br /><br /><strong>Procurando por tamanho/size:</strong><br />    c: bytes<br />    k: Kilobytes<br />    M: Megabytes<br />    G: Gigabytes<br />    b: 512-byte blocks<br /><br />find / -size 50c<br /><br /><strong>Procurar todos os arquivos menores que 50 bytes:</strong><br />find / -size -50c<br /><br /><strong>Procurar todos os arquivos maiores que 700MB:</strong><br />find / -size +700M<br /><br /><strong>Procurar arquivos de acordo com o tempo:</strong><br />    Access Time: Last time a file was read or written to. (-atime)<br />    Modification Time: Last time the contents of the file were modified.(-mtime)<br />    Change Time: Last time the file's inode meta-data was changed.(-ctime)<br /><br /><strong>Procurar arquivos que foram modificados há 1 dia:</strong><br />find / -mtime 1<br /><br /><strong>Procurar arquivos que foram acessados há menos de 1 dia:</strong><br />find / -atime -1<br /><br /><strong>Procurar arquivos que tiveram suas metainformações mudadas há mais de 3 dias:</strong><br />find / -ctime +3<br /><br /><strong>Arquivos que foram modificados há menos de 1 minuto:</strong><br />find / -mmin -1<br /><br /><strong>Procurar arquivos que tenham como dono o user syslog:</strong><br />find / -user syslog<br /><br /><strong>Procurar arquivos do grupo shadown:</strong><br />find / -group shadow<br /><br /><strong>Procurar arquivos com permissão 777:</strong><br />find . -type f -perm 0777 -print<br /><br /><strong>Procurar arquivos com permissão diferente de 777:</strong><br />find / -type f ! -perm 777<br /><br /><strong>Procurar todos os arquivos executáveis:</strong><br />find / -perm /a=x<br /><br /><strong>Procurar todos os arquivos com permissão 777 e mudar para 644:</strong><br />find / -type f -perm 0777 -print -exec chmod 644 {} \;<br /><br /><strong>Procurar diretórios com permissão 777 e mudar para 755:</strong><br />find / -type d -perm 777 -print -exec chmod 755 {} \;<br /><br /><strong>Procurar o arquivo tecmint.txt e removê-lo:</strong><br />find . -type f -name "tecmint.txt" -exec rm -f {} \;<br /><br /><strong>Procurar todos os arquivos .mp3 e removê-los:</strong><br />find . -type f -name "*.mp3" -exec rm -f {} \;<br /><br /><strong>Procurar todos os arquivos vazios:</strong><br />find /tmp -type f -empty<br /><br /><strong>Procurar todos os diretórios vazios:</strong><br />find /tmp -type d -empty<br /><br /><strong>Procurar todos os arquivos ocultos:</strong><br />find /tmp -type f -name ".*"<br /><br /><strong>Procurar todos os arquivos do usuário ribafs no diretório /home/ribafs:</strong><br />find /home/ribafs -user ribafs<br /><br /><strong>Procurar arquivos que tenham permissão igual a 666:</strong><br />find / -perm 666<br /><br /><strong>Procurar arquivos que tenham permissão igual a 777:</strong><br />find / -perm 777<br /><br /><strong>Contar os arquivos com certo nome no diretório atual:</strong><br />find -name file1 | wc -l<br /><br /><strong>Mudar as permissões do diretório /var/www/html recursivamente para 755 e de todos os arquivos para 644:</strong><br />find /var/www/html -type d -exec chmod 755 {} \;<br />find /var/www/html -type f -exec chmod 644 {} \;</p>
+
+<p><strong>Redimensionar todas as imagens jpg de um diretório para 300x300px (mantendo os nomes originais):</strong><br />find images -iname \*.jpg -exec convert -verbose -quality 80 -resize 300\&gt; "{}" "{}" \;<br /><br /><strong>Procurando com locate</strong><br /><br />sudo apt-get update<br />sudo apt-get install mlocate<br /><br />sudo updatedb<br /><br />locate nomearquivo<br /><br /><strong>Referências:</strong><br /><a href="https://www.digitalocean.com/community/tutorials/how-to-use-find-and-locate-to-search-for-files-on-a-linux-vps">https://www.digitalocean.com/community/tutorials/how-to-use-find-and-locate-to-search-for-files-on-a-linux-vps</a> <br /><a href="https://www.tecmint.com/35-practical-examples-of-linux-find-command/">https://www.tecmint.com/35-practical-examples-of-linux-find-command/</a></p>
+
+<p> </p> 	</div>
+
+	
+	
+				
+	
+	
+	
+</article>
+
+</body>
+</html>

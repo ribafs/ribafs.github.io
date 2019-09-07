@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br" dir="ltr">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <base href="" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Ribamar FS" />
+	<meta name="robots" content="noindex, nofollow" />
+	<meta name="description" content="Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros." />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>Permissões no Servidor Web - RibaFS Portal</title>
+	<link href="http://ribafs.org/portal/servidores/desktop/permissoes-no-servidor-web.html?tmpl=component&amp;print=1&amp;layout=default" rel="canonical" />
+	<link href="../../templates/shaper_helix3/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../../favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="http://backup/portal/media/plg_content_prismsyntaxhighlighter/css/prism-okaidia.css" rel="stylesheet" type="text/css" />
+	<link href="http://backup/portal/media/plg_content_prismsyntaxhighlighter/css/prism-linenumbers.css" rel="stylesheet" type="text/css" />
+	<script src="http://backup/portal/media/plg_content_prismsyntaxhighlighter/js/prism-tinymce.js" type="text/javascript"></script>
+	<script src="../../media/jui/js/jquery.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../media/jui/js/jquery-noconflict.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../media/jui/js/jquery-migrate.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="http://backup/portal/media/system/js/caption.js?d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script type="text/javascript">
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+	</script>
+	<meta property="og:url" content="http://backup/portal/servidores/desktop/permissoes-no-servidor-web.html" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Permissões no Servidor Web" />
+	<meta property="og:description" content="Permissões no Servidor Web Quando usamos um sistema como o Linux, o diretório web não oferece permissão de escrita para um usuário comum. Uma saída simples..." />
+
+   	<link rel="stylesheet" href="../../media/jui/css/bootstrap.min.css" type="text/css" />
+	<link rel="stylesheet" href="../../templates/shaper_helix3/css/frontend-edit.css" type="text/css" />
+    <link rel="stylesheet" href="../../templates/shaper_helix3/css/template.css" type="text/css" />
+</head>
+<body class="contentpane">
+	<div id="system-message-container">
+	</div>
+
+	
+
+<article class="item item-page" itemscope itemtype="http://schema.org/Article">
+	<meta itemprop="inLanguage" content="pt-BR" />
+	
+	
+
+	<div class="entry-header">
+		<span class="post-format"><i class="fa fa-thumb-tack"></i></span>
+		
+					<h2 itemprop="name">
+									Permissões no Servidor Web							</h2>
+												</div>
+
+						<div id="pop-print" class="btn hidden-print">
+				<a href="permissoes-no-servidor-web.html#" onclick="window.print();return false;">			<span class="icon-print" aria-hidden="true"></span>
+		Imprimir	</a>			</div>
+				
+	
+	
+				
+	
+			<div itemprop="articleBody">
+		<p style="text-align: justify;"><strong>Permissões no Servidor Web</strong></p>
+<p style="text-align: justify;">Quando usamos um sistema como o Linux, o diretório web não oferece permissão de escrita para um usuário comum.</p>
+<p style="text-align: justify;">Uma saída simples é adicionar o usuário comum para o grupo www-data (do apache) e mudar as permissões dos arquivos do /var/www/html. Isso quando somos apenas nós que usamos o computador.</p>
+<p style="text-align: justify;">Quando precisamos usar com uma equipe, então podemos criar um grupo e adicionar todos os usuários para este grupo e então adicionar o grupo para o www-data.</p>
+<p style="text-align: justify;">addgroup webdevel</p>
+<p style="text-align: justify;">adduser www-data webdevel</p>
+<p style="text-align: justify;">Criar script chamado perms no /usr/local/bin</p>
+<p style="text-align: justify;">sudo nano /usr/local/bin/perms</p>
+<pre class="language-markup"><code>#!/bin/sh
+clear;
+echo "Aguarde enquanto configuro as permissões do /var/www/html/$1";
+echo "";
+chown -R www-data:webdevel /var/www/html/$1;
+find /var/www/html/$1 -type d -exec chmod 2775 {} \;
+find /var/www/html/$1 -type f -exec chmod 2664 {} \;
+echo "";
+echo "Concluído!";</code></pre>
+<p>Dar permissão de execução</p>
+<p style="text-align: justify;">sudo chmod +x /usr/local/bin/perms</p>
+<p style="text-align: justify;">Assim podemos executar este script sempre que copiarmos ou descompactarmos um arquivo para o /var/www/html</p>
+<p style="text-align: justify;">Podemos varrer apenas um subdiretório do html com:</p>
+<p style="text-align: justify;">sudo perms joomla, quando joomla é um subdiretório de html.</p>
+<p style="text-align: justify;"> </p> 	</div>
+
+	
+	
+				
+	
+	
+	
+</article>
+
+</body>
+</html>

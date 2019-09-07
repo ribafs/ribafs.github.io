@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br" dir="ltr">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <base href="" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Ribamar FS" />
+	<meta name="robots" content="noindex, nofollow" />
+	<meta name="description" content="Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros." />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>Validações no Laravel - RibaFS Portal</title>
+	<link href="http://ribafs.org/portal/frameworks/laravel-5/dicas/validacoes-no-laravel.html?tmpl=component&amp;print=1&amp;layout=default" rel="canonical" />
+	<link href="../../../templates/shaper_helix3/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../../../favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<script src="../../../media/jui/js/jquery.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery-noconflict.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery-migrate.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="http://backup/portal/media/system/js/caption.js?d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script type="text/javascript">
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+	</script>
+	<meta property="og:url" content="http://backup/portal/frameworks/laravel-5/dicas/validacoes-no-laravel.html" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Validações no Laravel" />
+	<meta property="og:description" content="Validação de dados É importante validar todos os dados vindos de formulários. No método store (que é o form para Add Novo) do controller Clientes e no edit..." />
+
+   	<link rel="stylesheet" href="../../../media/jui/css/bootstrap.min.css" type="text/css" />
+	<link rel="stylesheet" href="../../../templates/shaper_helix3/css/frontend-edit.css" type="text/css" />
+    <link rel="stylesheet" href="../../../templates/shaper_helix3/css/template.css" type="text/css" />
+</head>
+<body class="contentpane">
+	<div id="system-message-container">
+	</div>
+
+	
+
+<article class="item item-page" itemscope itemtype="http://schema.org/Article">
+	<meta itemprop="inLanguage" content="pt-BR" />
+	
+	
+
+	<div class="entry-header">
+		<span class="post-format"><i class="fa fa-thumb-tack"></i></span>
+		
+					<h2 itemprop="name">
+									Validações no Laravel							</h2>
+												</div>
+
+						<div id="pop-print" class="btn hidden-print">
+				<a href="validacoes-no-laravel.html#" onclick="window.print();return false;">			<span class="icon-print" aria-hidden="true"></span>
+		Imprimir	</a>			</div>
+				
+	
+	
+				
+	
+			<div itemprop="articleBody">
+		<p><strong>Validação de dados</strong></p>
+
+
+<p>É importante validar todos os dados vindos de formulários.</p>
+
+
+<p><br />No método store (que é o form para Add Novo) do controller Clientes e no edit, que é o form de edição<br /><br />    public function store(Request $request)<br />    {<br />        <br />        $requestData = $request-&gt;all();<br /><br />        // Validação<br />         $this-&gt;validate($request, [<br />            'nome' =&gt; 'required|min:3|max:45',<br />            'cpf' =&gt; 'min:11|max:11|unique:clientes',<br />            'nascimento' =&gt; 'date|date_format:Y-m-d' // nullable| torna opcional<br />        ],[        // Mensagens<br />                'nome.required' =&gt; ' O nome é obrigatório.',<br />                'cpf.required' =&gt; ' O CPF é obrigatório.',<br />                'cpf.min' =&gt; ' O CPF precisa ter 11 dígitos.',<br />                'nascimento.date' =&gt; 'Nascimento precisa ter uma data válida e Y-m-d'<br />        ]);<br />        <br />        Cliente::create($requestData);<br /><br />        Session::flash('flash_message', 'Cliente added!');<br /><br />        return redirect('clientes');<br />    }<br /><br /><br />public function messages()<br />{<br />    return [<br />        'cpf.cpf' =&gt; 'CPF inválido'<br />    ];<br />}<br /><br /><br />public $rules = [<br />    'nome' =&gt; 'required|min:3|max:45',<br />    'cpf' =&gt; 'min:11|max:11|unique',<br />    'nascimento' =&gt; 'date|date_format:Y-m-d',<br />    'email' =&gt; 'required|email|unique:users, email,'.$id,<br />    'password' =&gt; 'required|same:confirm-password',<br />];<br /><br />numero =&gt; numeric<br />'email'            =&gt; 'required|email|unique:clientes',<br /><br /><br />Validação via rules<br /><br />Route::post('clientes', function()<br />{<br /><br />    // process the form here<br /><br />    // create the validation rules ------------------------<br />    $rules = array(<br />            'nome' =&gt; 'required|min:3|max:45',<br />            'cpf' =&gt; 'min:11|max:11|unique:clientes',<br />            'nascimento' =&gt; 'nullable|date|date_format:Y-m-d'<br />            'email' =&gt; 'required|email|unique:clientes',<br />    );<br /><br />    // do the validation ----------------------------------<br />    // validate against the inputs from our form<br />    $validator = Validator::make(Input::all(), $rules);<br /><br />    // check if the validator failed -----------------------<br />    if ($validator-&gt;fails()) {<br /><br />        // get the error messages from the validator<br />        $messages = $validator-&gt;messages();<br /><br />        // redirect our user back to the form with the errors from the validator<br />        return Redirect::to('clientes')<br />            -&gt;withErrors($validator);<br /><br />    } else {<br />        // validation successful ---------------------------<br /><br />        // our cliente has passed all tests!<br />        // let him enter the database<br /><br />        // create the data for our cliente<br />        $cliente = new Cliente;<br />        $cliente-&gt;nome     = Input::get('nome');<br />        $cliente-&gt;cpf    = Input::get('cpf');<br />        $cliente-&gt;nascimento     = Input::get('nascimento');<br />        $cliente-&gt;email    = Input::get('email');<br /><br /><br />        // save our cliente<br />        $cliente-&gt;save();<br /><br />        // redirect ----------------------------------------<br />        // redirect our user back to the form so they can do it all over again<br />        return Redirect::to('clientes');<br /><br />    }<br /><br />});</p> 	</div>
+
+	
+	
+				
+	
+	
+	
+</article>
+
+</body>
+</html>

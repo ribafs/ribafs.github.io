@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br" dir="ltr">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <base href="" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Ribamar FS" />
+	<meta name="robots" content="noindex, nofollow" />
+	<meta name="description" content="Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros." />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>Servidor Web Simples - RibaFS Portal</title>
+	<link href="http://ribafs.org/portal/mobile/phaser/servidor-web-simples.html?tmpl=component&amp;print=1&amp;layout=default" rel="canonical" />
+	<link href="../../templates/shaper_helix3/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../../favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<script src="../../media/jui/js/jquery.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../media/jui/js/jquery-noconflict.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../media/jui/js/jquery-migrate.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="http://backup/portal/media/system/js/caption.js?d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script type="text/javascript">
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+	</script>
+	<meta property="og:url" content="http://backup/portal/mobile/phaser/servidor-web-simples.html" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Servidor Web Simples" />
+	<meta property="og:description" content="Servidor Web Simples Para criar ou testar jogos web criados com Phaser ou outro framework em HTML 5, geralmente basta abrir a pasta e efetuar um duplo cliq..." />
+
+   	<link rel="stylesheet" href="../../media/jui/css/bootstrap.min.css" type="text/css" />
+	<link rel="stylesheet" href="../../templates/shaper_helix3/css/frontend-edit.css" type="text/css" />
+    <link rel="stylesheet" href="../../templates/shaper_helix3/css/template.css" type="text/css" />
+</head>
+<body class="contentpane">
+	<div id="system-message-container">
+	</div>
+
+	
+
+<article class="item item-page" itemscope itemtype="http://schema.org/Article">
+	<meta itemprop="inLanguage" content="pt-BR" />
+	
+	
+
+	<div class="entry-header">
+		<span class="post-format"><i class="fa fa-thumb-tack"></i></span>
+		
+					<h2 itemprop="name">
+									Servidor Web Simples							</h2>
+												</div>
+
+						<div id="pop-print" class="btn hidden-print">
+				<a href="servidor-web-simples.html#" onclick="window.print();return false;">			<span class="icon-print" aria-hidden="true"></span>
+		Imprimir	</a>			</div>
+				
+	
+	
+				
+	
+			<div itemprop="articleBody">
+		<h4 style="text-align: justify;">Servidor Web Simples</h4>
+
+<p style="text-align: justify;">Para criar ou testar jogos web criados com Phaser ou outro framework em HTML 5, geralmente basta abrir a pasta e efetuar um duplo clique no index.html. Mas tem jogo que somente funciona com Chrome ou outro navegador. Neste caso precisamos que o jogo rode sob um servidor web.</p>
+
+<p style="text-align: justify;">Mas aí basta ter apenas o Apache instalado ou qualquer outro servidor web. Não precisa ter suporte a PHP, Java, MySQL, etc.</p>
+
+<p style="text-align: justify;">Servidores web bem simples de instalar e sem qualquer configuração são alguns módulos do Node.js, instaláveis com o npm.</p>
+
+<p style="text-align: justify;">Atualmente boa parte dos programadores têm o node.js instalado e os que não têm ganharão ao instalar.<br /><br />O node.js tem alguns módulos de servidor web. São servidores simples, apenas para sites estáticos, ou seja, apenas HTML, CSS e JavaScript.<br />Mas são muito simples de instalar e de usar. Caso precise da URL do node.js veja ao final deste artigo.<br /><br />Um exemplo de código que não funciona no Firefox é quando o jogo/aplicativo usa o WebSQL/SQLite, nem mesmo que esteja no dirtório web. Precisa do Chrome.<br /><br />Para instalar em máquina sem servidor web fica mais simples que a instalação de um servidor web convencional, especialmente se for no Windows.<br /><br /><strong>Light-server</strong><br /><a href="https://github.com/johnpapa/lite-server">https://github.com/johnpapa/lite-server</a> <br /><br /><strong>Instalação no Ubuntu e derivados</strong><br />sudo npm install -g light-server <br /><br />No Windows - abrir o prompt e executar:<br />npm install -g light-server<br /><br /><strong>Usando</strong><br />light-server -s c:\xampp\htdocs\labirinto<br />Agora abra o navegador e digite:<br />http://localhost:4000<br /><br />Para receber ajuda sobre mais comandos e opções<br /><br />light-server -h<br /><br /><br /><strong>Live Server - Outro ainda mais simples e prático</strong><br /><a href="https://github.com/tapio/live-server">https://github.com/tapio/live-server</a></p>
+
+<p style="text-align: justify;"><strong>Instalação</strong><br />No Ubuntu<br />sudo npm install live-server -g<br /><br />Windows<br />npm install live-server -g<br /><br /><strong>Usando</strong><br />cd c:\xampp\htdocs\labirinto<br />live-server<br /><br />E ele já abre o index.html no navegador default<br /><br />Para abrir no navegador Chrome (quando ele não é o default):<br />live-server --browser=google-chrome<br /><br />Para abrir no chrome e numa pasta<br />live-server --browser=google-chrome --open=/var/www/html/labirinto</p>
+
+<p style="text-align: justify;"><strong>Simpleficando</strong><br />Para tornar isso mais prático e não precisar memorizar o comando, podemos criar um script para linux ou batch para windows.<br /><br />No Linux<br />sudo nano /usr/local/bin/live<br />live-server --browser=google-chrome --open=$1<br /><br />sudo chmod +x /usr/local/bin/live<br /><br />Usando<br />live /var/www/html/labirinto<br /><br />No windows<br />Iniciar - executar<br />notepad c:\windows\live.bat<br />live-server --browser=google-chrome --open=%1<br /><br />Usando<br />live c:\xampp\htdocs\labirinto<br /><br />Ajuda sobre o live-server<br />live-server -h<br /><br /><strong>Instalação do Node.js</strong><br />Faça o download e instale daqui<br /><a href="https://nodejs.org/">https://nodejs.org/</a></p>
+
+<p style="text-align: justify;"><strong>Debugando</strong><br /> Uma vantagem deste tipo de servidor é que ele mostra no terminal os logs e já podemos ver os erros, caso existam. Um exemplo é quando ele não encontra um arquivo e mostra o erro 404.<br /><br /><br /></p> 	</div>
+
+	
+	
+				
+	
+	
+	
+</article>
+
+</body>
+</html>

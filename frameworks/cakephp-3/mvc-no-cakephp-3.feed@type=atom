@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="Joomla! - Open Source Content Management" -->
+<feed xmlns="http://www.w3.org/2005/Atom"  xml:lang="pt-br">
+	<title type="text">MVC no CakePHP 3 - RibaFS Portal</title>
+	<subtitle type="text">Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros.</subtitle>
+	<link rel="alternate" type="text/html" href="http://backup"/>
+	<id>http://backup/portal/frameworks/cakephp-3/mvc-no-cakephp-3.feed</id>
+	<updated>2019-09-07T18:59:26-03:00</updated>
+	<author>
+		<name>RibaFS Portal</name>
+	</author>
+	<generator uri="https://www.joomla.org">Joomla! - Open Source Content Management</generator>
+	<link rel="self" type="application/atom+xml" href="http://backup/portal/frameworks/cakephp-3/mvc-no-cakephp-3.feed?type=atom"/>
+	<entry>
+		<title>Estrutura MVC</title>
+		<link rel="alternate" type="text/html" href="http://backup/portal/frameworks/cakephp-3/mvc-no-cakephp-3/estrutura-mvc.html"/>
+		<published>2017-06-25T16:11:30-03:00</published>
+		<updated>2017-06-25T16:11:30-03:00</updated>
+		<id>http://backup/portal/frameworks/cakephp-3/mvc-no-cakephp-3/estrutura-mvc.html</id>
+		<author>
+			<name>Ribamar FS</name>
+		</author>
+		<summary type="html">&lt;p style=&quot;margin-right: -0.04cm;&quot;&gt;&lt;strong&gt;Extrutura&lt;/strong&gt; &lt;strong&gt;MVC no CakePHP 3&lt;br /&gt;&lt;/strong&gt;&lt;/p&gt;
+
+
+&lt;p style=&quot;margin-right: -0.04cm;&quot;&gt;No Cake, o aplicativo criado pelo programador tem todo o seu código dentro do subdiretório src.&lt;/p&gt;
+
+
+&lt;p style=&quot;margin-right: -0.04cm;&quot;&gt;Aí temos as pastas&lt;/p&gt;
+
+
+&lt;p style=&quot;margin-right: -0.04cm;&quot;&gt;app\src\Controller&lt;/p&gt;
+
+
+&lt;p style=&quot;margin-right: -0.04cm;&quot;&gt;app\src\Model&lt;/p&gt;
+
+
+&lt;p style=&quot;margin-right: -0.04cm;&quot;&gt;app\src\Template&lt;/p&gt;
+
+
+&lt;p style=&quot;margin-right: -0.04cm;&quot;&gt;app\src\View&lt;/p&gt;
+
+
+&lt;p style=&quot;margin-right: -0.04cm;&quot;&gt;O CakePHP segue o padrão de projeto MVC.&lt;/p&gt;
+
+
+&lt;p&gt; &lt;/p&gt;
+
+
+&lt;p style=&quot;margin-right: -0.04cm;&quot;&gt;&lt;strong&gt;M&lt;/strong&gt;&lt;strong&gt;od&lt;/strong&gt;&lt;strong&gt;e&lt;/strong&gt;&lt;strong&gt;l&lt;/strong&gt;&lt;/p&gt;
+
+
+&lt;p style=&quot;margin-right: -0.04cm;&quot;&gt;A camada model é responsável por lidar com os dados.&lt;/p&gt;
+
+
+&lt;p style=&quot;margin-right: 1.48cm;&quot;&gt;A camada model contém vários elementos, &lt;strong&gt;B&lt;/strong&gt;&lt;strong&gt;ehavio&lt;/strong&gt;&lt;strong&gt;r&lt;/strong&gt;&lt;strong&gt;,&lt;/strong&gt; &lt;strong&gt;E&lt;/strong&gt;&lt;strong&gt;n&lt;/strong&gt;&lt;strong&gt;tit&lt;/strong&gt;&lt;strong&gt;y&lt;/strong&gt;&lt;strong&gt;,&lt;/strong&gt; &lt;strong&gt;T&lt;/strong&gt;&lt;strong&gt;a&lt;/strong&gt;&lt;strong&gt;b&lt;/strong&gt;&lt;strong&gt;l&lt;/strong&gt;&lt;strong&gt;e&lt;/strong&gt; &lt;strong&gt;e&lt;/strong&gt; &lt;strong&gt;OR&lt;/strong&gt;&lt;strong&gt;M&lt;/strong&gt;, que são importantes no Cake.&lt;/p&gt;
+
+
+&lt;p style=&quot;margin-right: -0.04cm;&quot;&gt;&lt;strong&gt;C&lt;/strong&gt;&lt;strong&gt;on&lt;/strong&gt;&lt;strong&gt;tr&lt;/strong&gt;&lt;strong&gt;ol&lt;/strong&gt;&lt;strong&gt;l&lt;/strong&gt;&lt;strong&gt;er&lt;/strong&gt;&lt;/p&gt;
+
+
+&lt;p style=&quot;margin-right: 0.75cm;&quot;&gt;O controller é quem controla as duas outras camadas. Recebe do usuário, passa para o model e devolve para a view. Contém um exemento importante e complementar, que é o &lt;strong&gt;comp&lt;/strong&gt;&lt;strong&gt;o&lt;/strong&gt;&lt;strong&gt;nent&lt;/strong&gt;.&lt;/p&gt;
+
+
+&lt;p style=&quot;margin-right: -0.04cm;&quot;&gt;&lt;strong&gt;V&lt;/strong&gt;&lt;strong&gt;i&lt;/strong&gt;&lt;strong&gt;ew&lt;/strong&gt;&lt;/p&gt;
+
+
+&lt;p style=&quot;margin-right: 1.79cm;&quot;&gt;É quem entrega para o usuário as informações num formato adequado. Contém os elementos Elements, Layouts e Helpers.&lt;/p&gt;
+
+
+&lt;p style=&quot;margin-right: 1.79cm;&quot;&gt;No cake 3 praticamente usamos o diretório Template ao invés do View.&lt;/p&gt;
+
+
+&lt;p style=&quot;margin-right: 1.79cm;&quot;&gt; &lt;/p&gt;</summary>
+		<content type="html">&lt;p style=&quot;margin-right: -0.04cm;&quot;&gt;&lt;strong&gt;Extrutura&lt;/strong&gt; &lt;strong&gt;MVC no CakePHP 3&lt;br /&gt;&lt;/strong&gt;&lt;/p&gt;
+
+
+&lt;p style=&quot;margin-right: -0.04cm;&quot;&gt;No Cake, o aplicativo criado pelo programador tem todo o seu código dentro do subdiretório src.&lt;/p&gt;
+
+
+&lt;p style=&quot;margin-right: -0.04cm;&quot;&gt;Aí temos as pastas&lt;/p&gt;
+
+
+&lt;p style=&quot;margin-right: -0.04cm;&quot;&gt;app\src\Controller&lt;/p&gt;
+
+
+&lt;p style=&quot;margin-right: -0.04cm;&quot;&gt;app\src\Model&lt;/p&gt;
+
+
+&lt;p style=&quot;margin-right: -0.04cm;&quot;&gt;app\src\Template&lt;/p&gt;
+
+
+&lt;p style=&quot;margin-right: -0.04cm;&quot;&gt;app\src\View&lt;/p&gt;
+
+
+&lt;p style=&quot;margin-right: -0.04cm;&quot;&gt;O CakePHP segue o padrão de projeto MVC.&lt;/p&gt;
+
+
+&lt;p&gt; &lt;/p&gt;
+
+
+&lt;p style=&quot;margin-right: -0.04cm;&quot;&gt;&lt;strong&gt;M&lt;/strong&gt;&lt;strong&gt;od&lt;/strong&gt;&lt;strong&gt;e&lt;/strong&gt;&lt;strong&gt;l&lt;/strong&gt;&lt;/p&gt;
+
+
+&lt;p style=&quot;margin-right: -0.04cm;&quot;&gt;A camada model é responsável por lidar com os dados.&lt;/p&gt;
+
+
+&lt;p style=&quot;margin-right: 1.48cm;&quot;&gt;A camada model contém vários elementos, &lt;strong&gt;B&lt;/strong&gt;&lt;strong&gt;ehavio&lt;/strong&gt;&lt;strong&gt;r&lt;/strong&gt;&lt;strong&gt;,&lt;/strong&gt; &lt;strong&gt;E&lt;/strong&gt;&lt;strong&gt;n&lt;/strong&gt;&lt;strong&gt;tit&lt;/strong&gt;&lt;strong&gt;y&lt;/strong&gt;&lt;strong&gt;,&lt;/strong&gt; &lt;strong&gt;T&lt;/strong&gt;&lt;strong&gt;a&lt;/strong&gt;&lt;strong&gt;b&lt;/strong&gt;&lt;strong&gt;l&lt;/strong&gt;&lt;strong&gt;e&lt;/strong&gt; &lt;strong&gt;e&lt;/strong&gt; &lt;strong&gt;OR&lt;/strong&gt;&lt;strong&gt;M&lt;/strong&gt;, que são importantes no Cake.&lt;/p&gt;
+
+
+&lt;p style=&quot;margin-right: -0.04cm;&quot;&gt;&lt;strong&gt;C&lt;/strong&gt;&lt;strong&gt;on&lt;/strong&gt;&lt;strong&gt;tr&lt;/strong&gt;&lt;strong&gt;ol&lt;/strong&gt;&lt;strong&gt;l&lt;/strong&gt;&lt;strong&gt;er&lt;/strong&gt;&lt;/p&gt;
+
+
+&lt;p style=&quot;margin-right: 0.75cm;&quot;&gt;O controller é quem controla as duas outras camadas. Recebe do usuário, passa para o model e devolve para a view. Contém um exemento importante e complementar, que é o &lt;strong&gt;comp&lt;/strong&gt;&lt;strong&gt;o&lt;/strong&gt;&lt;strong&gt;nent&lt;/strong&gt;.&lt;/p&gt;
+
+
+&lt;p style=&quot;margin-right: -0.04cm;&quot;&gt;&lt;strong&gt;V&lt;/strong&gt;&lt;strong&gt;i&lt;/strong&gt;&lt;strong&gt;ew&lt;/strong&gt;&lt;/p&gt;
+
+
+&lt;p style=&quot;margin-right: 1.79cm;&quot;&gt;É quem entrega para o usuário as informações num formato adequado. Contém os elementos Elements, Layouts e Helpers.&lt;/p&gt;
+
+
+&lt;p style=&quot;margin-right: 1.79cm;&quot;&gt;No cake 3 praticamente usamos o diretório Template ao invés do View.&lt;/p&gt;
+
+
+&lt;p style=&quot;margin-right: 1.79cm;&quot;&gt; &lt;/p&gt;</content>
+		<category term="MVC no CakePHP 3" />
+	</entry>
+</feed>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br" dir="ltr">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <base href="" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Ribamar FS" />
+	<meta name="robots" content="noindex, nofollow" />
+	<meta name="description" content="Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros." />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>Tinker com Laravel - RibaFS Portal</title>
+	<link href="http://ribafs.org/portal/frameworks/laravel-5/dicas/tinker-com-laravel.html?tmpl=component&amp;print=1&amp;layout=default" rel="canonical" />
+	<link href="../../../templates/shaper_helix3/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../../../favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<script src="../../../media/jui/js/jquery.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery-noconflict.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery-migrate.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="http://backup/portal/media/system/js/caption.js?d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script type="text/javascript">
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+	</script>
+	<meta property="og:url" content="http://backup/portal/frameworks/laravel-5/dicas/tinker-com-laravel.html" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Tinker com Laravel" />
+	<meta property="og:description" content="Tinker é um programa do PHP, que cria um shell para execução de comandos PHP. Console interativa do php Executar: php artisan tinker Exemplos de Comandos u..." />
+
+   	<link rel="stylesheet" href="../../../media/jui/css/bootstrap.min.css" type="text/css" />
+	<link rel="stylesheet" href="../../../templates/shaper_helix3/css/frontend-edit.css" type="text/css" />
+    <link rel="stylesheet" href="../../../templates/shaper_helix3/css/template.css" type="text/css" />
+</head>
+<body class="contentpane">
+	<div id="system-message-container">
+	</div>
+
+	
+
+<article class="item item-page" itemscope itemtype="http://schema.org/Article">
+	<meta itemprop="inLanguage" content="pt-BR" />
+	
+	
+
+	<div class="entry-header">
+		<span class="post-format"><i class="fa fa-thumb-tack"></i></span>
+		
+					<h2 itemprop="name">
+									Tinker com Laravel							</h2>
+												</div>
+
+						<div id="pop-print" class="btn hidden-print">
+				<a href="tinker-com-laravel.html#" onclick="window.print();return false;">			<span class="icon-print" aria-hidden="true"></span>
+		Imprimir	</a>			</div>
+				
+	
+	
+				
+	
+			<div itemprop="articleBody">
+		<p><strong>Tinker é um programa do PHP, que cria um shell para execução de comandos PHP.</strong></p>
+
+
+<p><strong>Console interativa do php</strong></p>
+
+
+<p>Executar:<br />php artisan tinker</p>
+
+
+<p><strong>Exemplos de Comandos</strong><br />use App\Post;<br />Post::create(['title'=&gt;'Título do Post', 'content'=&gt;'Conteúdo do Post']);<br /><br />Post::create(['title'=&gt;'Título do Post2', 'content'=&gt;'Conteúdo do Post2']);<br /><br />use App\Comment;<br />Comment::create(['post_id'=&gt;1, 'comment'=&gt;'Comentário']);<br /><br />$p = Post::find(1);<br /><br />$p-&gt;comments; //Lista comentários do post acima, pois estão relacionados<br /><br />$c = Comment::find(1);<br /><br />$c-&gt;post // Trará o post relacionado com o comentário</p>
+
+
+<p><br />$user = App\User::find(1);<br /><br /><br />$c-&gt;post-&gt;title;<br /><br />// see the count of all users<br />App\User::count();<br /><br />// find a specific user and see their attributes<br />App\User::where('username', 'samuel')-&gt;first();<br /><br />// find the relationships of a user<br />$user = App\User::with('posts')-&gt;first();<br />$user-&gt;posts;<br /><br />App\User::all();<br /><br /><strong>Criar novo user</strong><br />$user = new App\User;<br />$user-&gt;name = "Wruce Bayne";<br />$user-&gt;email = "<span id="cloakbcfa34fb373177b34d88679a7e0232b9">Este endereço de email está sendo protegido de spambots. Você precisa do JavaScript ativado para vê-lo.</span><script type='text/javascript'>
+				document.getElementById('cloakbcfa34fb373177b34d88679a7e0232b9').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addybcfa34fb373177b34d88679a7e0232b9 = '&#105;&#97;mb&#97;tm&#97;n' + '&#64;';
+				addybcfa34fb373177b34d88679a7e0232b9 = addybcfa34fb373177b34d88679a7e0232b9 + 's&#97;v&#101;g&#111;th&#97;m' + '&#46;' + 'c&#111;m';
+				var addy_textbcfa34fb373177b34d88679a7e0232b9 = '&#105;&#97;mb&#97;tm&#97;n' + '&#64;' + 's&#97;v&#101;g&#111;th&#97;m' + '&#46;' + 'c&#111;m';document.getElementById('cloakbcfa34fb373177b34d88679a7e0232b9').innerHTML += '<a ' + path + '\'' + prefix + ':' + addybcfa34fb373177b34d88679a7e0232b9 + '\'>'+addy_textbcfa34fb373177b34d88679a7e0232b9+'<\/a>';
+		</script>";<br />$user-&gt;password = Hash::make('123456');<br />$user-&gt;save();<br /><br /><strong>Deletando</strong><br />$user = App\User::find(1);<br />$user-&gt;delete();<br /><br /><strong>class Order extends Eloquent {}</strong><br />$order = new Order;<br />$order-&gt;title = 'Xbox One';<br />$order-&gt;save();<br /><br />echo Config::get('app.url');<br /><br />use App\Role;<br />$r = new Role;<br /><br />$r-&gt;name = 'Admin';<br />$r-&gt;slug = 'admin';<br />$r-&gt;description = 'manager admin privilege';<br />$r-&gt;save();<br /><br />Atualização<br />$r = new Role();<br />$r-&gt;update(['id' =&gt;1,'description'=&gt;'manage super privilege']);<br /><br /> use App\Role;<br />$r = Role::create(['id'=&gt;2, 'name'=&gt;'Manager', 'slug'=&gt;'manager','description'=&gt;'manager manager privilege']);</p> 	</div>
+
+	
+	
+				
+	
+	
+	
+</article>
+
+</body>
+</html>

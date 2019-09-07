@@ -1,0 +1,1818 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br" dir="ltr">
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+                <!-- head -->
+        <base href="" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Ribamar FS" />
+	<meta name="description" content="Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros." />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>Programando em C# para Unity 3D - RibaFS Portal</title>
+	<link href="http://ribafs.org/portal/mobile/unity-3d/programando-em-c-para-unity-3d.html" rel="canonical" />
+	<link href="../../templates/shaper_helix3/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../../favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,300italic,regular,italic,600,600italic,700,700italic,800,800italic&amp;subset=latin" rel="stylesheet" type="text/css" />
+	<link href="http://fonts.googleapis.com/css?family=Amarante:regular&amp;subset=latin-ext" rel="stylesheet" type="text/css" />
+	<link href="../../cache/com_templates/templates/shaper_helix3/89f5542569bc2d8a7bb4667857dd5775.css" rel="stylesheet" type="text/css" />
+	<style type="text/css">
+body{font-family:Open Sans, sans-serif; font-size:16px; font-weight:normal; }h1{font-family:Open Sans, sans-serif; font-weight:800; }h2{font-family:Open Sans, sans-serif; font-weight:600; }h3{font-family:Open Sans, sans-serif; font-weight:normal; }h4{font-family:Open Sans, sans-serif; font-weight:normal; }h5{font-family:Open Sans, sans-serif; font-weight:600; }h6{font-family:Open Sans, sans-serif; font-weight:600; }.sp-megamenu-parent{font-family:Amarante, sans-serif; font-size:16px; font-weight:normal; }.sp-megamenu-parent > li.active > a, 
+.sp-megamenu-parent .sp-dropdown li.sp-menu-item.active > a { color: red; }
+#offcanvas-toggler > i { color: red !important; }
+#sp-top-bar{ background-color:#093d09;color:#999999; }#sp-top-bar a{color:#ceebe9;}#sp-header{ background-color:#54a859; }#sp-header a{color:#022e05;}#sp-page-title a{color:#e8f7f7;}#sp-main-body{ background-color:#fefffa; }
+	</style>
+	<script type="application/json" class="joomla-script-options new">{"csrf.token":"796296c0a9019553ed4bbba150ad5a40","system.paths":{"root":"\/portal","base":"\/portal"},"joomla.jtext":{"COM_COMMENT_PLEASE_FILL_IN_ALL_REQUIRED_FIELDS":"Favor preencher todos os campos obrigat\u00f3rios.","COM_COMMENT_ANONYMOUS":"An\u00f4nimo","JLIB_FORM_FIELD_INVALID":"Campo inv\u00e1lido:&#160;"},"system.keepalive":{"interval":840000,"uri":"\/portal\/component\/ajax\/?format=json"}}</script>
+	<script src="../../cache/com_templates/templates/shaper_helix3/b74bfabf7739a9fadfbbda80f713414b.js" type="text/javascript"></script>
+	<script type="text/javascript">
+jQuery(function($){ initTooltips(); $("body").on("subform-row-add", initTooltips); function initTooltips (event, container) { container = container || document;$(container).find(".hasTooltip").tooltip({"html": true,"container": "body"});} });jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+var sp_preloader = '0';
+
+var sp_gotop = '1';
+
+var sp_offanimation = 'default';
+
+	</script>
+	<meta property="og:url" content="http://backup/portal/mobile/unity-3d/programando-em-c-para-unity-3d.html" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Programando em C# para Unity 3D" />
+	<meta property="og:description" content="Programando em C# para Unity Help Ao trabalhar ou estudar sobre programação no Unity mantenha sempre esta janela aberta: http://docs.unity3d.com/ScriptRefe..." />
+
+            </head>
+
+    <body class="site com-content view-article no-layout no-task itemid-159 pt-br ltr  sticky-header layout-fluid off-canvas-menu-init">
+
+        <div class="body-wrapper">
+            <div class="body-innerwrapper">
+                <section id="sp-top-bar"><div class="container"><div class="row"><div id="sp-top1" class="col-sm-12 col-md-12"><div class="sp-column "><div class="sp-module "><div class="sp-module-content"><!-- https://www.clubedohardware.com.br/artigos/redes/colocando-um-mecanismo-de-busca-em-seu-site-r34327/ -->
+<FORM class="form-inline" method="GET" action="http://www.google.com/search">
+<div class="form-group">
+<input type="hidden" name="sitesearch" value="ribafs.github.io">
+<input style="height:20px" class="form-control" type="text" name="q" size="20" placeholder="Pesquisar...">
+</div>
+</FORM>
+
+</div></div><ul class="sp-contact-info"><li class="sp-contact-email"><i class="fa fa-envelope" aria-hidden="true"></i> <a href="mailto:ribafs@gmail.com">ribafs@gmail.com</a></li></ul></div></div></div></div></section><section id="sp-section-2"><div class="container"><div class="row"><div id="sp-top2" class="col-sm-12 col-md-12"><div class="sp-column "><div class="sp-module "><div class="sp-module-content">
+
+<div class="custom"  >
+	<p style="text-align: center;"><b>Don't you speak portuguese? Translate this site with <a href="https://translate.google.com/translate?hl=pt-BR&amp;sl=pt&amp;tl=en&amp;u=https://ribafs.org/portal" target="_blank" rel="noopener noreferrer">Google Translator </a></b></p></div>
+</div></div></div></div></div></div></section><header id="sp-header"><div class="container"><div class="row"><div id="sp-logo" class="col-xs-8 col-sm-2 col-md-2"><div class="sp-column "><h1 class="logo"> <a href="../../index.html">RibaFS Portal</a></h1></div></div><div id="sp-menu" class="col-xs-4 col-sm-10 col-md-10"><div class="sp-column ">			<div class='sp-megamenu-wrapper'>
+				<a id="offcanvas-toggler" class="visible-sm visible-xs" aria-label="Helix Megamenu Options" href="programando-em-c-para-unity-3d.html#"><i class="fa fa-bars" aria-hidden="true" title="Helix Megamenu Options"></i></a>
+				<ul class="sp-megamenu-parent menu-fade hidden-sm hidden-xs"><li class="sp-menu-item"><a  href="../../index.html"  >Início</a></li><li class="sp-menu-item sp-has-child"><a  href="../../basicos.html"  >Básicos</a><div class="sp-dropdown sp-dropdown-main sp-menu-right" style="width: 240px;"><div class="sp-dropdown-inner"><ul class="sp-dropdown-items"><li class="sp-menu-item"><a  href="../../basicos/html.html"  >HTML</a></li><li class="sp-menu-item"><a  href="../../basicos/javascript.html"  >JavaScript</a></li><li class="sp-menu-item"><a  href="../../basicos/css.html"  >CSS</a></li><li class="sp-menu-item"><a  href="../../basicos/jquery.html"  >jQuery</a></li><li class="sp-menu-item"><a  href="../../basicos/bootstrap.html"  >Bootstrap</a></li><li class="sp-menu-item"><a  href="../../basicos/php.html"  >PHP</a></li><li class="sp-menu-item"><a  href="../../basicos/phpoo.html"  >PHPOO</a></li><li class="sp-menu-item"><a  href="../../basicos/pdo.html"  >PDO</a></li><li class="sp-menu-item"><a  href="../../basicos/ferramentas.html"  >Ferramentas</a></li><li class="sp-menu-item"><a  href="../../basicos/outros.html"  >Outros</a></li></ul></div></div></li><li class="sp-menu-item sp-has-child"><a  href="../../servidores.html"  >Servidores</a><div class="sp-dropdown sp-dropdown-main sp-menu-right" style="width: 240px;"><div class="sp-dropdown-inner"><ul class="sp-dropdown-items"><li class="sp-menu-item"><a  href="../../servidores/desktop.html"  >Desktop</a></li><li class="sp-menu-item"><a  href="../../servidores/ubuntu-server.html"  >Ubuntu Server</a></li><li class="sp-menu-item"><a  href="../../servidores/shell-scripts.html"  >Shell Scripts</a></li><li class="sp-menu-item"><a  href="../../servidores/servidor-web.html"  >Servidor Web</a></li><li class="sp-menu-item"><a  href="../../servidores/servidor-sgbd.html"  >Servidor SGBD</a></li><li class="sp-menu-item sp-has-child"><a  href="../../servidores/postgresql.html"  >PostgreSQL</a><div class="sp-dropdown sp-dropdown-sub sp-menu-right" style="width: 240px;"><div class="sp-dropdown-inner"><ul class="sp-dropdown-items"><li class="sp-menu-item"><a  href="../../servidores/postgresql/introducao-ao-postgresql.html"  >Introdução</a></li><li class="sp-menu-item"><a  href="../../servidores/postgresql/projeto.html"  >Projeto</a></li><li class="sp-menu-item"><a  href="../../servidores/postgresql/dimensionamento.html"  >Dimensionamento</a></li></ul></div></div></li></ul></div></div></li><li class="sp-menu-item sp-has-child"><a  href="../../joomla-3.html"  >Joomla 3</a><div class="sp-dropdown sp-dropdown-main sp-menu-right" style="width: 240px;"><div class="sp-dropdown-inner"><ul class="sp-dropdown-items"><li class="sp-menu-item"><a  href="../../joomla-3/introducao.html"  >Introdução</a></li><li class="sp-menu-item"><a  href="../../joomla-3/seguranca.html"  >Segurança</a></li><li class="sp-menu-item"><a  href="../../joomla-3/instalacao.html"  >Instalação do Joomla</a></li><li class="sp-menu-item"><a  href="../../joomla-3/administracao.html"  >Administração</a></li><li class="sp-menu-item"><a  href="../../joomla-3/extensoes.html"  >Extensões</a></li><li class="sp-menu-item"><a  href="../../joomla-3/loja-simples.html"  >Loja Simples</a></li><li class="sp-menu-item"><a  href="../../joomla-3/dicas.html"  >Dicas</a></li></ul></div></div></li><li class="sp-menu-item sp-has-child"><a  href="javascript:void(0);"  >Frameworks</a><div class="sp-dropdown sp-dropdown-main sp-dropdown-mega sp-menu-right" style="width: 600px;"><div class="sp-dropdown-inner"><div class="row"><div class="col-sm-6"><ul class="sp-mega-group"><li class="sp-menu-item sp-has-child"><a class="sp-group-title" href="../../frameworks/cakephp-3.html"  >CakePHP 3</a><ul class="sp-mega-group-child sp-dropdown-items"><li class="sp-menu-item"><a  href="../../frameworks/cakephp-3/introducao.html"  >Introdução</a></li><li class="sp-menu-item"><a  href="../../frameworks/cakephp-3/instalacao.html"  >Instalação</a></li><li class="sp-menu-item"><a  href="../../frameworks/cakephp-3/configuracoes.html"  >Configurações</a></li><li class="sp-menu-item"><a  href="../../frameworks/cakephp-3/convencoes.html"  >Convenções</a></li><li class="sp-menu-item"><a  href="../../frameworks/cakephp-3/tutoriais.html"  >Tutoriais</a></li><li class="sp-menu-item"><a  href="../../frameworks/cakephp-3/dicas.html"  >Dicas</a></li><li class="sp-menu-item"><a  href="../../frameworks/cakephp-3/seguranca.html"  >Segurança</a></li><li class="sp-menu-item"><a  href="../../frameworks/cakephp-3/mvc-no-cakephp-3.html"  >MVC no CakePHP 3</a></li></ul></li></ul></div><div class="col-sm-6"><ul class="sp-mega-group"><li class="sp-menu-item sp-has-child"><a class="sp-group-title" href="../../frameworks/laravel-5.html"  >Laravel 5</a><ul class="sp-mega-group-child sp-dropdown-items"><li class="sp-menu-item"><a  href="../../frameworks/laravel-5/introducao.html"  >Introdução</a></li><li class="sp-menu-item"><a  href="../../frameworks/laravel-5/instalacao.html"  >Instalação</a></li><li class="sp-menu-item"><a  href="../../frameworks/laravel-5/configuracoes.html"  >Configurações</a></li><li class="sp-menu-item"><a  href="../../frameworks/laravel-5/routes.html"  >Routes</a></li><li class="sp-menu-item"><a  href="../../frameworks/laravel-5/dicas.html"  >Dicas</a></li><li class="sp-menu-item"><a  href="../../frameworks/laravel-5/tutoriais.html"  >Tutoriais</a></li></ul></li></ul></div></div></div></div></li><li class="sp-menu-item sp-has-child active"><a  href="../../mobile.html"  >Mobile</a><div class="sp-dropdown sp-dropdown-main sp-menu-right" style="width: 240px;"><div class="sp-dropdown-inner"><ul class="sp-dropdown-items"><li class="sp-menu-item"><a  href="../introducao.html"  >Introdução</a></li><li class="sp-menu-item"><a  href="../ambiente.html"  >Ambiente</a></li><li class="sp-menu-item"><a  href="../phaser.html"  >Phaser</a></li><li class="sp-menu-item"><a  href="../monaca.html"  >Monaca</a></li><li class="sp-menu-item"><a  href="../phonegap.html"  >PhoneGap</a></li><li class="sp-menu-item"><a  href="../app-inventor.html"  >App Inventor</a></li><li class="sp-menu-item current-item active"><a  href="../unity-3d.html"  >Unity 3D</a></li><li class="sp-menu-item"><a  href="../intel-xdk.html"  >Intel XDK</a></li><li class="sp-menu-item"><a  href="../outros.html"  >Outros</a></li><li class="sp-menu-item"><a  href="../dicas.html"  >Dicas</a></li></ul></div></div></li><li class="sp-menu-item sp-has-child"><a  href="../../blog.html"  >Blog</a><div class="sp-dropdown sp-dropdown-main sp-menu-right" style="width: 240px;"><div class="sp-dropdown-inner"><ul class="sp-dropdown-items"><li class="sp-menu-item"><a  href="../../blog/reflexoes.html"  >Reflexões</a></li><li class="sp-menu-item"><a  href="../../blog/saude.html"  >Saúde</a></li><li class="sp-menu-item"><a  href="../../blog/diversos.html"  >Diversos</a></li><li class="sp-menu-item"><a  href="../../blog/estudos.html"  >Estudos</a></li></ul></div></div></li><li class="sp-menu-item sp-has-child"><a  href="../../curriculo.html"  >Sobre</a><div class="sp-dropdown sp-dropdown-main sp-menu-right" style="width: 240px;"><div class="sp-dropdown-inner"><ul class="sp-dropdown-items"><li class="sp-menu-item"><a  href="https://github.com/ribafs?tab=repositories" rel="noopener noreferrer" target="_blank" >Projetos</a></li><li class="sp-menu-item"><a  href="../../curriculo/livros.html"  >Livros</a></li><li class="sp-menu-item"><a  href="../../curriculo/curriculo.html"  >Currículo</a></li><li class="sp-menu-item"><a  href="../../curriculo/contato.html"  >Contato</a></li><li class="sp-menu-item"><a  href="../../curriculo/mapa-do-site.html"  >Mapa</a></li></ul></div></div></li></ul>			</div>
+		</div></div></div></div></header><section id="sp-page-title"><div class="row"><div id="sp-title" class="col-sm-12 col-md-12"><div class="sp-column "></div></div></div></section><section id="sp-main-body"><div class="container"><div class="row"><div id="sp-left" class="col-sm-3 col-md-3"><div class="sp-column custom-class"><div class="sp-module "><h3 class="sp-module-title">Novidades</h3><div class="sp-module-content"><div class="latestnews">
+	<div itemscope itemtype="http://schema.org/Article">
+		<a href="../../blog/diversos/traducao-de-sites-de-forma-muito-simples.html" itemprop="url">
+			<span itemprop="name">
+				Tradução de sites de forma muito simples			</span>
+		</a>
+		<small>29 Agosto 2019</small>
+	</div>
+	<div itemscope itemtype="http://schema.org/Article">
+		<a href="../../servidores/desktop/recuperar-senha-do-root.html" itemprop="url">
+			<span itemprop="name">
+				Recuperar senha do root			</span>
+		</a>
+		<small>23 Agosto 2019</small>
+	</div>
+	<div itemscope itemtype="http://schema.org/Article">
+		<a href="../../blog/reflexoes/quer-ficar-rico.html" itemprop="url">
+			<span itemprop="name">
+				Quer ficar rico?			</span>
+		</a>
+		<small>19 Agosto 2019</small>
+	</div>
+	<div itemscope itemtype="http://schema.org/Article">
+		<a href="../../basicos/php/cuidado-com-floats-em-linguagens.html" itemprop="url">
+			<span itemprop="name">
+				Cuidado com floats em Linguagens			</span>
+		</a>
+		<small>19 Julho 2019</small>
+	</div>
+	<div itemscope itemtype="http://schema.org/Article">
+		<a href="../../servidores/servidor-web/setando-permissoes.html" itemprop="url">
+			<span itemprop="name">
+				Setando Permissões			</span>
+		</a>
+		<small>12 Julho 2019</small>
+	</div>
+</div>
+</div></div><div class="sp-module "><h3 class="sp-module-title">Pensamento do Dia</h3><div class="sp-module-content"><div>Esquecer - se da morte e dos mortos é prestar um péssimo serviço à vida e aos vivos. (Philippe Ariès)
+</div>
+</div></div></div></div><div id="sp-component" class="col-sm-6 col-md-6"><div class="sp-column "><div id="system-message-container">
+	</div>
+
+
+<article class="item item-page" itemscope itemtype="http://schema.org/Article">
+	<meta itemprop="inLanguage" content="pt-BR" />
+	
+	
+
+	<div class="entry-header has-post-format">
+		<span class="post-format"><i class="fa fa-thumb-tack"></i></span>
+						<dl class="article-info">
+
+		
+			<dt class="article-info-term"></dt>	
+				
+							<dd class="createdby" itemprop="author" itemscope itemtype="http://schema.org/Person">
+	<i class="fa fa-user"></i>
+					<span itemprop="name" data-toggle="tooltip" title="Escrito por ">Ribamar FS</span>	</dd>			
+			
+							<dd class="category-name">
+	<i class="fa fa-folder-open-o"></i>
+				<a href="../unity-3d.html" itemprop="genre" data-toggle="tooltip" title="Categoria do Artigo">Unity 3D</a>	</dd>			
+			
+							<dd class="published">
+	<i class="fa fa-calendar-o"></i>
+	<time datetime="2017-07-11T14:30:24-03:00" itemprop="datePublished" data-toggle="tooltip" title="Data de Publicação">
+		11 Julho 2017	</time>
+</dd>			
+		
+					
+			
+							<dd class="hits">
+	<span class="fa fa-eye"></span>
+	<meta itemprop="interactionCount" content="UserPageVisits:991" />
+	Acessos: 991</dd>					
+		
+
+	</dl>
+		
+					<h2 itemprop="name">
+									Programando em C# para Unity 3D							</h2>
+												</div>
+
+						
+<div class="icons">
+	
+					<div class="btn-group pull-right">
+				<button class="btn dropdown-toggle" type="button" id="dropdownMenuButton-130" aria-label="Ferramentas de usuário"
+				data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					<span class="icon-cog" aria-hidden="true"></span>
+					<span class="caret" aria-hidden="true"></span>
+				</button>
+								<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton-130">
+											<li class="print-icon"> <a href="programando-em-c-para-unity-3d.html@tmpl=component&amp;print=1&amp;layout=default.html" title="Imprimir o artigo < Programando em C# para Unity 3D >" onclick="window.open(this.href,'win2','status=no,toolbar=no,scrollbars=yes,titlebar=no,menubar=no,resizable=yes,width=640,height=480,directories=no,location=no'); return false;" rel="nofollow">			<span class="icon-print" aria-hidden="true"></span>
+		Imprimir	</a> </li>
+																<li class="email-icon"> <a href="../../component/mailto/index.html@tmpl=component&amp;template=shaper_helix3&amp;link=f6733a97f293be976e8ac29985c3939cf6017d98.html" title="Envie este link a um amigo" onclick="window.open(this.href,'win2','width=400,height=450,menubar=yes,resizable=yes'); return false;" rel="nofollow">			<span class="icon-envelope" aria-hidden="true"></span>
+		Email	</a> </li>
+														</ul>
+			</div>
+		
+	</div>
+				
+	
+	
+				
+	
+			<div itemprop="articleBody">
+		<p style="margin-bottom: 0cm; text-align: justify;" align="center"><span style="font-size: large;"><b>Programando em C# para Unity</b></span></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Help</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Ao trabalhar ou estudar sobre programação no Unity mantenha sempre esta janela aberta: <a href="http://docs.unity3d.com/ScriptReference/">http://docs.unity3d.com/ScriptReference/</a></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Use e abuse da busca para encontrar detalhes sobre a programação.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Também fique atento às dicas do Editor quando autocompleta o código.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>GameObject</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">O comportamento dos GameObjects é controlado pelos componentes que são anexados a eles. O Unity considera os script como componentes e estes dão interatividade aos objetos do jogo.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Script</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Criar uma pasta chamada Scripts em Assets:</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Clicar em Assets</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Do lado direito clicar com o botão direito – Create – Folder (com nome Scripts)</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Abrir a pasta criada com um duplo clique</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Clicar com botão direito do mouse na área livre</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Create – C# Script com nome JogadorScript</p>
+
+<p style="text-align: justify;">O Unity suporta nativamente 3 linguagens de programação. Quando criamos um script precisamos especificar que linguagem ele usará. Podemos usar JavaScript, CSharp ou Boo.</p>
+
+<p style="text-align: justify;">Quando criamos um script em C# ou Boo e o abrimos no editor, ele já nos mostra uma pequena estrutura com uma classe e a definição de duas funções: Start() e Update(). Se for JavaScript ele não tem classe, apenas as funções.</p>
+
+<p style="text-align: justify;">Recomenda-se que cada script contenha somente uma classe e seja somente sobre um único assunto.</p>
+
+<p style="text-align: justify;">Cada script somente pode usar uma linguagem de programação, mas nós podemos usar scripts das 3 linguagens se quisermos em um único jogo, o que não é comum nem recomendado.</p>
+
+<p style="text-align: justify;">Neste tutorial iremos utilizar a linguagem C# (Csharp).</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Inicialização de Variáveis Públicas do tipo GameObject</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Estas variáveis devem ser completadas pelo Inspector, arrastando para elas um GameObject da Hierarquia ou um Prefab do Assets.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Anexar o Script à Main Camera</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Como estes scripts iniciais usarão apenas comandos da Console, anexaremos à Main Camera. Arraste o nome do script e solte sobre a Main Camera na Hierarquia.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Boa Prática</b></p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;">Nomear as variáveis tipo GameObject com o sufixo Prefab:</p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;">public GameObject balaPrefab;</p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; page-break-before: always; text-align: justify;"><b>Tecla de Atalho para Help Online no Monodevelop</b></p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;">Selecione a palavra sobre a qual quer ajuda e tecle</p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;">Ctrl + '<br /><br /></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Orientação a Objetos</b></p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;">Objetos são instanciados (clonados) de classes. Uma classe é justamente um arquivo que traz as definições de seu objeto.</p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;">Quando rodamos nosso jogo no Unity cada inimigo deve ser equipado com uma cópia do objeto.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Abrir o Script no Editor</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Ao efetuar um duplo clique no nome do script ele é aberto no editor Monodevelop. O Unity, para facilitar nossa vida, já mostra um template de script com alguns comandos como abaixo:</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">using UnityEngine;</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">using System.Collections;</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">public class JogadorScript : MonoBehaviour {</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">// Use this for initialization</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">void Start () {</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">}</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">// Update is called once per frame</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">void Update () {</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">}</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">}</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Renomear Script</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Quando criamos um script o Unity dá o nome NewBehaviourScript a ele.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Devemos renomer o mesmo antes que perca o foco. Caso demoremos a fazer isso, após renomear e quando abrir o nome da classe estará como o nome original do script, ou seja, NewBehaviourScript. Precisará renomear a classe para que tenha o mesmo nome do script e funcione corretamente.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Includes</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">As duas primeiras linhas:</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">using UnityEngine;</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">using System.Collections;</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Incluem as bibliotecas do Unity para que fiquem disponíveis no script.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Classe</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">A linha:</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">public class JogadorScript : MonoBehaviour {</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Cria uma classe que herda da MonoBehaviour.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Toda script tem uma classe criada obrigatoriamente com o mesmo nome do script.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Base para a Linguagem C#</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">As bases de uma linguagem orientada a objetos são as variáveis e os métodos. Em CSharp qualquer código deve ficar dentro de uma classe.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Orientação a Objetos</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Como C# é uma linguagem orientada a objetos é mais coerente usarmos o termo método no lugar de função.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Variáveis</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">É uma pequena seção da memória do computador onde guardamos valores. Podemos comparar as variáveis a gavetas. Cada gaveta guarda o nome da variável, o tipo, a visibilidade e o valor.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><img src="../../images/progcs.jpeg" alt="" /> <br clear="left" /> <b>Definição/Criação de Variável</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">private int velocidade;</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">public int espaco;</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Inicializando Variável</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">velocidade = 60;</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">espaco = 2;</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Usando/Chamando Variável</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">tempo = espaco / velocidade;</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Final de Linha</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Toda linha de código em C# termina com ponto e vírgula (;).</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Exemplo:</p>
+
+<p style="text-align: justify;">public int number1 = 2;</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">O C# exige que uma variável seja inicializada (receba valor) antes de ser usada.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Visibilidade/Modificadores de Acesso</b></p>
+
+<p style="text-align: justify;">public – são variáveis que podem ser acessadas também por outros scripts. Aparecem no Inspector para atribuição e alteração</p>
+
+<p style="text-align: justify;">private – são acessíveis somente no script onde são criadas. Não aparecem no Inspector</p>
+
+<p style="text-align: justify;">local – são acessíveis somente dentro da função onde foram criadas. Não aparecem no Inspector</p>
+
+<p style="text-align: justify;">Quando não especificamos a visibilidade é assumida private, que é a default.</p>
+
+<p style="text-align: justify;">No JavaScript, para ser public, basta que seja criada fora de função.</p>
+
+<p style="text-align: justify;">Exemplo:</p>
+
+<p style="text-align: justify;">public int nomeVariavel = 3;</p>
+
+<p style="text-align: justify;">ou</p>
+
+<p style="text-align: justify;">public void Start()</p>
+
+<p style="text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Comentários</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">// Comentários de linha única</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">/* Comentários</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">para várias</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">linhas</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">*/</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Indentação</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Importante para a organização e legibilidade do código</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">void Start(){</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">    if(x == 0){</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">        y = 3;</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">    }</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">}</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Editar Script</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Edite o script e adicione as variáveis abaixo da linha da definição da Classe. Assim:</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">using UnityEngine;</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">using System.Collections;</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">public class VeriaveisScript : MonoBehaviour {</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b> // Definição das variáveis</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">public int velocidade;</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">public int distancia;</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">public int tempo;</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">void Start () {</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b> // Inicialização</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">distancia = 120;</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">tempo = 2;</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b> // Usando</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">velocidade = distancia / tempo;</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">print (“A velocidade é de “ + velocidade);</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">}</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">}</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">O comando print é mostrado apenas na barra de status e na janela Console.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Selecionar a janela Console e clicar em Play.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">public class MetodoScript : MonoBehaviour {</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">public int arma = 0;</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">// Use this for initialization</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">void Start () {</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">SacarArma ();</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">}</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">// Update is called once per frame</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">void SacarArma () {</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">// Armas com codigo: 1-espada, 2-flecha, 3-revolver, 4-rifle</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">arma = Random.Range (1, 5);</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">switch(arma){</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">case 1:</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">print ("Voce encontrou a espada");</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">break;</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">case 2:</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">print ("Voce encontrou a flecha");</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">break;</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">case 3:</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">print ("Voce encontrou o revolver");</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">break;</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">case 4:</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">print ("Voce encontrou o rifle");</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">break;</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">default:</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">print ("Voce nao encontrou nada");</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">break;</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">}</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">}</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">}</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Execute algumas vezes.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;"><b>Tipos de Dados</b></span></span></p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;">int – inteiros</span></span></p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;">float – ponto flutuante, são números decimais. Em C# devem ter seus valores escritos com um f ao final, para distinguir dos inteiros. Ex: float speed = 3.2f;</span></span></p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;">string – são dados do tipo texto</span></span></p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;">Visibilidade – Níveis de Acesso</span></span></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;"><b>Nomes de Variáveis e Métodos</b></span></span></p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;">Alguns nomes são proibidos, pois tem seu uso reservado pelo Unity, como é o caso de algumas letras:</span></span></p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;">x, y, z</span></span></p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;">Que são usadas internamente pelo transform.</span></span></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; page-break-before: always; text-align: justify;"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;"><b>Expressões e Precedência</b></span></span></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;">Precisamos aprender a manipular as expressões em programação, assim como em Matemática. Aprender sobre a ordem de precedência, quem é executado primeiro, quem depois, etc. </span></span></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;">Exemplo:</span></span></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;">int variavelInt;</span></span></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;">float variavelInt2;</span></span></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;">variavelInt2 = 3;</span></span></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;">variavelInt = 10 + 3 * variavelInt2;</span></span></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;">Melhor é fazer assim, usando parêntesis, caso contrário dará um resultado errado:</span></span></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;">variavelInt = (10 + 3) * variavelInt2;</span></span></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Comando Condicional - if</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Criar um script chamado IfScript. Remova o script Variaveis da Main Camera e anexe este.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">A mais comum forma de tomar decisões é usando o comando if.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Operador NOT</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">if(!variavel)...</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">using UnityEngine;</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">using System.Collections;</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">public class IfScript : MonoBehaviour {</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">// Definição das variáveis</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">public int velocidade;</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">public int distancia;</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">public int tempo;</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">// Use this for initialization</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">void Start () {</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">// Inicialização</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">distancia = 180;</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">tempo = 10;</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">velocidade = distancia / tempo;</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">if(velocidade &gt; 70){</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">print (“Desacelere, pois sua velocidade é de “ + velocidade);</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">}</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">}</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">}</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Execute.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Atribuição</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">= é usado para atribuir, para gravar um valor em uma variável. Exemplo:</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">velocidade = 5; // Diz que a variável recebeu 5, agora tem 5 armazenado nela</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">== usado nas comparações com if, para comparar uma variável com um valor ou com outra variável. Exemplo:</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">if (x == 3)</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">ou</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">if ( x == z)</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Operadores </b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Operadores de Comparação</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">==, &gt;, &lt;, &gt;=, &lt;=, !=</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Operadores Lógicos</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">&amp;&amp; - AND</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">|| - OR</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">! - NOT</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Operadores Matemáticos</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">+, -, *, /, %, ++, --</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">*=, +=, /=, -=, %=</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Comando Switch - </b><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;"><span lang="pt-PT">Instruções switch agem como condicionais if. Elas serão úteis para quando você quiser comparar uma única variável contra uma série de constantes.</span></span></span></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Este comando substitui vários ifs em algumas vezes.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Crie um script SwitchScript contendo:</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">using UnityEngine;</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">using System.Collections;</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">public class SwitchScript : MonoBehaviour {</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">public int arma = 0;</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">void Start () {</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">// Armas com codigo: 1-espada, 2-flecha, 3-revolver, 4-rifle</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">arma = Random.Range (1, 5);</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">switch(arma){</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">case 1:</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">print ("Voce encontrou a espada");</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">break;</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">case 2:</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">print ("Voce encontrou a flecha");</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">break;</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">case 3:</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">print ("Voce encontrou o revolver");</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">break;</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">case 4:</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">print ("Voce encontrou o rifle");</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">break;</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">default:</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">print ("Voce nao encontrou nada");</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">break;</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">}</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">}</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">}</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Execute várias vezes.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Métodos</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">É onde acontecem as ações. Um método contem um trecho de código, é um pequeno programa dentro do script.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Geralmente o código nos scripts é executado uma linha por vez.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Quando criamos nosso código geralmente queremos executá-lo mais de uma vez e queremos poder executar apenas um trecho de código.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">O código dos métodos inicia na próxima linha após o início da chave e termina na linha imediatamente anterior ao final da chave.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Métodos são usados para oferecer comportamento aos GameObjects e também para reutilizar código.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Todo código executável em scripts está dentro de métodos.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Se nosso código executa algumas tarefas várias vezes ele está nos dizendo que devemos criar um método e apenas chamá-lo sempre que quisermos executar o código.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Exemplo: precisamos multiplicar dois números em várias partes do código. Então criamos um pequeno método chamado ProdutoDois() e apenas o chamamos quando precisarmos multiplicar os dois numeros.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Editar o script e adicionar duas variáveis:</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">public int numberOne = 2;</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">public int numberTwo = 9;</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Insira no método Update():</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">if (Input.GetKeyUp(KeyCode.Return)) // Quando teclar Enter</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">ProductTwo(); // irá processar o método</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Adicionar abaixo do método Update():</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">void ProductTwo(){</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Debug.Log(numberOne * numberTwo);</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">}</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Um método também quando chamado ele processa todo o código do seu conteúdo.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Métodos tem duas chaves, no início uma chave abrindo e ao final fechando a chave.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Os métodos que criamos somente serão executados quando forem chamados. Os métodos do Unity Start e Update são executados automaticamente pelo próprio Unity.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Chamando/executando um Método</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">ProductTwo();</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Um método pode ter muitas linhas de código em seu interior. Um método é chamado um pequeno programa dentro de outro.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Tipos de Métodos:</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Simples</b>, apenas executando um trecho de código:</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">void ProductTwo(){</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Debug.Log(numberOne * numberTwo);</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">}</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Método que recebe parâmetros</b> – recebe variáveis e processa em seu conteúdo</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">void ProductTwo(int x, int y){</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Debug.Log(x * y);</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">}</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Método que Retorna valores</b> – pode receber variáveis e retorna o valor de uma variável de certo tipo</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">public int ProductTwo(int x, int y){</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">int produto = (x * y);</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">return produto;</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">}</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Nomes de Métodos</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">-visibilidade</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">-tipo de dados que o método retornará</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">-nome do método, CamelCase e seguido de ()</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">-código delimitado por chaves { }</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">visibilidade tipoDeRetorno NomeMetodo(){</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">corpo do método;</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">}</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">void – usado quando o método não retorna nada.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Parâmetros – usados na definição da função: firstNumber e secondNumber.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Argumentos – usados na chamada da função: 3 e 4.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">O comando return deve ser o último comando da função.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Estruturas de Laço</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Laço for</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Crie um script chamado ForScript contendo:</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">using UnityEngine;</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">using System.Collections;</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">public class ForScript : MonoBehaviour {</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">void Start () {</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">BuscaInimigo ();</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">}</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">// Update is called once per frame</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">void BuscaInimigo () {</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">for (int i=0; i &lt; 5; i++) {</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">print ("Valor de i " + i);</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">}</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">}</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">}</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;"><b>foreach – laço que mostra os elementos de um array</b></span></span></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<pre class="western"><code class="western"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;">using UnityEngine;</span></span></code> <code class="western"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;">using System.Collections;</span></span></code> <code class="western"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;">public class ForeachLoop : MonoBehaviour {<br />   </span></span></code> <code class="western">    </code><code class="western"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;">void Start ()  {<br /></span></span></code> <code class="western">        </code><code class="western"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;">string[] strings = new string[3];</span></span></code><br /> <code class="western">        </code> <code class="western">        </code><code class="western"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;">strings[0] = "First string";</span></span></code><br /> <code class="western">        </code><code class="western"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;">strings[1] = "Second string";<br /></span></span></code> <code class="western">        </code><code class="western"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;">strings[2] = "Third string";<br /></span></span></code> <code class="western">        </code> <code class="western">        </code><code class="western"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;">foreach(string item in strings) {<br /></span></span></code> <code class="western">            </code><code class="western"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;">print (item);</span></span></code><br /> <code class="western">        </code><code class="western"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;">}<br /></span></span></code> <code class="western">    </code><code class="western"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;">}</span></span></code> <br /><code class="western"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;">}</span></span></code></pre>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Execute e veja o resultado.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; page-break-before: always; text-align: justify;"><b>Arrays/Matrizes</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Um array é tipo uma variável e é uma forma de uma variável conter mais de um tipo de dados.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Criar 3 empty GameObjects chamados:</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">gato, cachorro e porco</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Criar a tag Inimigo</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Selecionar os 3 e adicionar a tag a eles</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Exemplo:</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">public GameObject[ ] players;</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">using UnityEngine;</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">using System.Collections;</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">public class ArrayScript : MonoBehaviour</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">{</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">public GameObject[] players;</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">void Start (){</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">players = GameObject.FindGameObjectsWithTag("Inimigo");</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">for(int i = 0; i &lt; players.Length; i++){</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Debug.Log("Inimigo numero "+i+" tem o nome "+players[i].name);</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">}</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">}</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">}</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Classes</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Classes contém variáveis e métodos e processam seus dados.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Em Unity praticamente não lidamos com a classe pois ele já cria para nós, mas todo script já vem com uma classe, cujo nome é o mesmo do script.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;"><span lang="pt-PT">Como usar classes para armazenar e organizar suas informações e como criar construtores para trabalhar com partes de sua classe</span></span></span></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; page-break-before: always; text-align: justify;"><b>Componente Script</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Lembrar que um script é um componente no Unity que deve ser anexado a um GameObject para funcionar. Ao anexar o nome do script aparece ao final das propriedades do Objeto no Inspector. Também aparecem as variáveis public.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Os scripts é que dão interatividade e vida aos jogos.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Variáveis armazenam dados.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Métodos permitem a execução de tarefas.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Sintaxe dos pontos</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">transform.position.x;</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Alterações das Propriedades</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Podemos alterar as propriedades do Inspector tanto na cena quanto quando o jogo está executando. Alterações quando executando aparecem imediatamente mas se perdem logo que o jogo é parado.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">O valor entrado nas variáveis no Inspector sobrescreve o valor original do script.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Resetando Mudanças</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Para desfazer mudanças feitas nas variáveis de um objeto, melhor de um componente, basta clicar com o botão direito na pequena roldana à direita do nome do componente e clicar em Reset.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Nomes de Variáveis</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Crie nomes simples e claros para suas variáveis.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Lembre da convenção:</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">-quando formado por uma única palavra, ele deve ser toda em minúscula:</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">private int speed;</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">-quando palavra composta, a primeira é com tudo minúsculo e a segunda iniciada com maiúscula, camelCase:</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">private int speedPlayer;</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Nomes de Métodos</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Seguem as mesmas regras, apenas com () ao final, mas assim CamelCase, diferente das variáveis devem iniciar com maiúscula como Start().</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Nomes de Classes</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Estes também devem ser CamelCase mas com inicial maiúscula.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Onde Declarar Variáveis</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">O local do código onde a variável é declarada é importante em termos de visibilidade.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Variáveis declaradas no início do script, logo abaixo da declaração da classe</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; page-break-before: always; text-align: justify;"><b>Escopo das Variáveis</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">using UnityEngine;</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">using System.Collections;</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">public class LearningScript : MonoBehaviour {// --------Bloco 1</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">public string block1 = "Bloco 1";</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">// Use this for initialization</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">void Start () { // -------- Bloco 2</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Debug.Log (block1);</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">string block2 = "Bloco 2";</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Debug.Log (block2);</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">{// --------- Bloco 3</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Debug.Log (block1);</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Debug.Log (block2);</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">string block3 = "Bloco 3";</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">} // Final Bloco 3</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">} // Final Bloco 2</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">void Metodo(){// --- Bloco 4</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">string block4 = "Bloco 4";</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Debug.Log (block4);</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">}// Final Bloco 4</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">} // Final Bloco 1</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Bloco 3 – criado apenas com as chaves.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Tente mostrar a variével block3 no segundo bloco ou a block4 no bloco 3 e veja que o editor já reclama.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">O escopo é determinado pela chaves dos blocos. As chaves limitam um bloco de código.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Variável é o primeiro bloco de código em C#.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Método é o segundo.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Editor</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Quando tentamos trabalhar com uma variável ou método que ainda não foi declarado o editor já nos alerta mudando a cor do mesmo para vermelho. Logo que corrigimos fica preto.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Sintaxe do Ponto</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">GameObject.Component</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">GameObject.Component.variavel ou metodo</p>
+
+<p style="margin-bottom: 0.5cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; page-break-before: always; text-align: justify;"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;"><b>Funções de Inicialização</b></span></span></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;">As funções que são executadas automaticamente pelo Unity, sem interferência do programador.</span></span></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Método Start()</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Chamado pelo Unity somente uma vez a cada execução do jogo. Primariamente usado para inicializar ou configurar as variáveis.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Método Update()</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">A maioria do código dos scripts vai dentro deste método. A cena é mostrada várias vezes por segundo, que é chamado de Frames por Segundo – FPS. Após a exibição de cada frame, o método Update() é chamado pelo Unity para executar seu código.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Permite ao jogo detectar entradas (inputs), cliques do mouse, teclas pressionadas, a cada frame.</p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;">O método Update() é adequado para uso de movimentação através de teclas.</span></span></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;"><b>awake() e start()</b></span></span></p>
+
+<p style="text-align: justify;"> </p>
+
+<p lang="pt-PT" style="margin-bottom: 0cm; text-align: justify;"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;"><b>Update() e FixedUpdate()</b></span></span></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><a name="result_box2"></a><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;"><span lang="pt-PT">Como efetuar mudanças a cada frame/quadro com a atualização usando as funções Update e FixedUpdate e suas diferenças.</span> </span></span></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; page-break-before: always; text-align: justify;"><b>Mostrando os métodos de Inicialização em Ação</b></p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;">Debug.Log("ExecutionOrder::global");</p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;">void Awake() {</p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;">Debug.Log("ExecutionOrder::Awake");</p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;">}</p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;">void Start () {</p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;">Debug.Log("ExecutionOrder::Start");</p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;">}</p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;">void Update () {</p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;">Debug.Log("ExecutionOrder::Update");</p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;">}</p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;">void FixedUpdate() {</p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;">Debug.Log("ExecutionOrder::FixedUpdate");</p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;">}</p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;">void LateUpdate() {</p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;">Debug.Log("ExecutionOrder::LateUpdate");</p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;">}</p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;">void OnRenderObject() {</p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;">Debug.Log("ExecutionOrder::OnRenderObject");</p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;">}</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Objetos Internos do Unity</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Um script unity é escrito em uma linguagem de programação, com seus recursos básicos e também conta com classes e funções/métodos da biblioeca do Unity. Um script em C# tem diferenças básicas de um script em JavaScript mas tem em comum os recursos da biblioteca do Unity que ambas utilizam.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>transform</b></p>
+
+<pre class="western" style="margin-bottom: 0.5cm;">transform.Translate(1, 1, 1);<br />
+
+
+
+
+
+transform.Translate(<a href="http://docs.unity3d.com/ScriptReference/Vector3-forward.html">Vector3.forward</a> * <a href="http://docs.unity3d.com/ScriptReference/Time-deltaTime.html">Time.deltaTime</a>);<br />
+
+
+
+
+
+transform.Translate(<a href="http://docs.unity3d.com/ScriptReference/Vector3-up.html">Vector3.up</a> * <a href="http://docs.unity3d.com/ScriptReference/Time-deltaTime.html">Time.deltaTime</a>, <a href="http://docs.unity3d.com/ScriptReference/Space.World.html">Space.World</a>);</pre>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Vector2</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Vector2(float x, float y);</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Instantiate</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">var spawnPoint = new Vector2(Random.Range(x1, x2), transform.position.y);</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Instantiate(asteroidePrefab, spawnPoint, Quaternion.identity);</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Quaternion</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Quaternion(float x, float y, float z, float w);</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Ver a referência completa dos objetos do Unity aqui:</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><a href="http://docs.unity3d.com/ScriptReference/">http://docs.unity3d.com/ScriptReference/</a></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Quando acessamos esta página acima, à direita e acima aparecem as 3 linguagens para que selecionemos a que queremos perquisar.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; page-break-before: always; text-align: justify;"><b>Quaternions - </b>É a posição e o ângulo de um objeto a ser rotacionado. Para realizar a rotação de objetos no espaço tridimensional são utilizados quaterniões.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Para representar a direção que um objeto aponta no espaço não basta apenas representar sua posição, é necessário atribuir um ângulo a ela. Em jogos quando um objeto é criado, é definida a sua posição e um ângulo inicial a ele. Quando desejamos fazer alguma rotação nesse objeto, realizamos com base em sua posição e seu ângulo atual, ou seja, em seu quaternião.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Destroy </b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Destroy(gameObject, 20); // Destroi objeto após 20 segundos</p>
+
+<p style="margin-bottom: 0.5cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0.5cm; text-align: justify;"><span style="font-family: Arial,sans-serif;"><span style="font-size: large;"><b> Exemplos de Scripts para Jogos</b></span></span><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;"><b><br /> <br /> Movimento</b></span></span></p>
+
+<p style="margin-bottom: 0.5cm; text-align: justify;"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;"><b>Tiro</b></span></span></p>
+
+<p style="margin-bottom: 0.5cm; text-align: justify;"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;"><b>Limitando na Tela</b></span></span></p>
+
+<p style="margin-bottom: 0.5cm; text-align: justify;"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;"><b>Criando um Labirinto via Código</b></span></span></p>
+
+<p style="margin-bottom: 0.5cm; text-align: justify;"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;">using UnityEngine;<br /> using System.Collections;<br /> <br /> public class Grade : MonoBehaviour {<br /> // Referência - http://docs.unity3d.com/Manual/InstantiatingPrefabs.html<br /> public GameObject cubo;<br /> private int x,y;<br /> <br /> void Start() {<br /> LabirintoX(-9, 9, -5, -4);<br /> LabirintoX(-9, 9, 0, 4);<br /> LabirintoY(-4, 4, 0, 9);<br /> LabirintoY(-4, 4, 0, -9);<br /> LabirintoY(-4, 3, 0, -6);<br /> LabirintoX(-5, 3, 0, 3);<br /> LabirintoX(-5, 3, 0, 2);<br /> LabirintoX(1, 5, 0, -3);<br /> LabirintoX(1, 5, 0, -2);<br /> LabirintoX(1, 5, 0, -1);<br /> LabirintoX(1, 5, 0, 0);<br /> LabirintoX(-4, 3, 0, -3);<br /> LabirintoX(-4, -1, 0, -2);<br /> LabirintoX(-4, -1, 0, -1);<br /> LabirintoX(-4, -1, 0, 0);<br /> //LabirintoX(-4, 0, 0, -1);<br /> /*<br /> y = -4;<br /> for(x=-9;x &lt;=9;x++){<br /> if(x == -6) continue;<br /> Instantiate(cubo, new Vector3(x, y, 0), Quaternion.identity);<br /> }*/<br /> }<br /> <br /> void LabirintoX(int x1, int x2, int pulo, int y){<br /> for(x=x1;x &lt;=x2;x++){<br /> if(pulo != 0 &amp;&amp; x == pulo) continue; <br /> Instantiate(cubo, new Vector3(x, y, 0), Quaternion.identity);<br /> }<br /> }<br /> <br /> void LabirintoY(int y1, int y2, int pulo, int x){<br /> for(y=y1;y &lt;=y2;y++){<br /> if(pulo != 0 &amp;&amp; y == pulo) continue; <br /> Instantiate(cubo, new Vector3(x, y, 0), Quaternion.identity);<br /> }<br /> }<br /> }<br /> </span></span></p>
+
+<p style="text-align: justify;"><b>Corrigindo Erros/Debugando</b></p>
+
+<p style="text-align: justify;"><i><b>Editor Monodevelop</b></i></p>
+
+<p style="text-align: justify;">O editor Monodevelop ajuda muito na correção de erros. Alguns erros ele acusa logo no script. Tão logo digitemos o nome de uma variável para usá-la e antes de a definir, ele nós alerta deixando o nome em vermelho. Isso significa que ele exige que toda variável só pode ser usada quando definida/criada antes.</p>
+
+<p style="margin-bottom: 0.5cm; text-align: justify;"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;">Ele também nos ajuda auto-completando a sintaxe de métodos e objetos internos do Unity.</span></span></p>
+
+<p style="margin-bottom: 0.5cm; text-align: justify;"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;"><i><b>Unity<br /> </b></i><span style="font-style: normal;"><span style="font-weight: normal;">Quando salvamos um script e voltamos para o Unity geralmente, havendo erro no script, o Unity avisa do erro com mais detalhes que o editor. Ele mostra o erro, o script e a linha, além de outras informações úteis e isso em vermelho na barra de status. </span></span></span></span></p>
+
+<p style="margin-bottom: 0.5cm; text-align: justify;"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;"><span style="font-style: normal;"><span style="font-weight: normal;">Algumas vezes ele não mostra detalhes sobre o erro, apenas a mensagem. Quando isso acontecer devemos acessar a Console e clicar na mensagem para receber mais detalhes.<br /> <br /> </span></span><i><b>Ferramentas<br /> </b></i><span style="font-style: normal;"><span style="font-weight: normal;">A console ajuda muito na correção de erros.<br /> Podemos usar o comando Debug.Log para mostrar uma mensagem em uma região do script que desconfiamos de erro, ou mostrar o valor de uma variável.<br /> Exemplos:<br /> Debug.Log(“Teste”);</span></span></span></span></p>
+
+<p style="margin-bottom: 0.5cm; font-style: normal; font-weight: normal; text-align: justify;"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;">Debug.Log(“Velocidade vale: ” + speed);</span></span></p>
+
+<p style="margin-bottom: 0.5cm; text-align: justify;"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;"><i><b>Variáveis public</b></i></span></span></p>
+
+<p style="margin-bottom: 0.5cm; text-align: justify;"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;">Quando declaramos uma variável public e do tipo GameObject no script, precisamos atribuir um prefab ou objeto a ela pelo Inspector do Unity. Quando esquecemos de fazer isso recebemos a mensagem: <b>Null Reference Exception</b></span></span></p>
+
+<p style="margin-bottom: 0.5cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0.5cm; text-align: justify;"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;"><b>Pacote com Scripts em C#</b></span></span></p>
+
+<p style="margin-bottom: 0.5cm; text-align: justify;"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;"><a title="scripts.zip" href="http://backup/down/mobile/unity3d/scripts.zip">scripts.zip</a></span></span></p> 	</div>
+
+	
+	
+	<ul class="pager pagenav">
+	<li class="previous">
+		<a class="hasTooltip" title="Input Manager" aria-label="Artigo anterior: Input Manager" href="input-manager.html" rel="prev">
+			<span class="icon-chevron-left" aria-hidden="true"></span> <span aria-hidden="true">Ant</span>		</a>
+	</li>
+	<li class="next">
+		<a class="hasTooltip" title="Sprite Editor" aria-label="Próximo artigo: Sprite Editor" href="sprite-editor.html" rel="next">
+			<span aria-hidden="true">Próximo</span> <span class="icon-chevron-right" aria-hidden="true"></span>		</a>
+	</li>
+</ul>
+				
+	
+	<script type="text/x-template" id="ccomment-pagination">
+	<nav class="pagination text-center" v-if="pagination.last_page > 0">
+		<ul >
+			<li v-if="showPrevious()" :class="{ 'disabled' : pagination.current_page <= 1 }">
+				<span v-if="pagination.current_page <= 1">
+					<span aria-hidden="true">Ant</span>
+				</span>
+				<a href="programando-em-c-para-unity-3d.html#" v-if="pagination.current_page > 1 " :aria-label="config.ariaPrevioius"
+				   @click.prevent="changePage(pagination.current_page - 1)">
+					<span aria-hidden="true">Ant</span>
+				</a>
+			</li>
+			<li v-for="num in array" :class="{ 'active': num === pagination.current_page }">
+				<a href="programando-em-c-para-unity-3d.html#" @click.prevent="changePage(num)">{{ num }}</a>
+			</li>
+			<li v-if="showNext()"
+			    :class="{ 'disabled' : pagination.current_page === pagination.last_page || pagination.last_page === 0 }">
+				<span v-if="pagination.current_page === pagination.last_page || pagination.last_page === 0">
+					<span aria-hidden="true">Próximo</span>
+				</span>
+				<a href="programando-em-c-para-unity-3d.html#" v-if="pagination.current_page < pagination.last_page" :aria-label="config.ariaNext"
+				   @click.prevent="changePage(pagination.current_page + 1)">
+					<span aria-hidden="true">Próximo</span>
+				</a>
+			</li>
+		</ul>
+	</nav>
+</script>
+	<script type="text/x-template" id="ccomment-avatar">
+		<div class="ccomment-avatar">
+			<a v-if="profileLink" v-bind:href="profileLink">
+				<img v-bind:src="avatar"/>
+			</a>
+			<img v-else v-bind:src="avatar"/>
+		</div>
+	</script>
+
+	<script type="text/x-template" id="ccomment-user-name">
+		<a v-if="profileLink" :href="profileLink">
+			<span class="ccomment-author">{{name}}</span>
+		</a>
+		<span v-else class="ccomment-author">{{name}}</span>
+	</script>
+
+	<script type="text/x-template" id="ccomment-created">
+		<a :href="'#!/ccomment-comment=' + id" class="muted ccomment-created">
+			{{date}}
+		</a>
+	</script>
+
+	<div id="ccomment-token" style="display:none;">
+		<input type="hidden" name="796296c0a9019553ed4bbba150ad5a40" value="1" />	</div>
+
+	
+<script type="text/x-template" id="ccomment-customfields">
+	<div class="ccomment-customfields" v-if="customfields">
+		<strong>Campos personalizados</strong>
+		<dl class="dl-horizontal">
+			<template v-for="customfield in customfields">
+				<dt>{{customfield.title}}</dt>
+				<dd>{{customfield.value}}</dd>
+			</template>
+		</dl>
+	</div>
+</script>
+
+<script type="text/x-template" id="ccomment-template">
+	<li v-bind:class="model.class+' ccomment-level-'+model.level">
+		<div class="ccomment-comment-content" v-bind:id="'ccomment-comment-'+model.id">
+			<div class="ccomment-data">
+									<ccomment-avatar
+							v-bind:avatar="model.avatar"
+							v-bind:profileLink="model.profileLink"/>
+								<div class="ccomment-content">
+					<div class="ccomment-meta">
+						<ccomment-user-name v-bind:name="model.name" v-bind:profileLink="model.profileLink"></ccomment-user-name>
+						<ccomment-created v-bind:date="model.date" v-bind:id="model.id"></ccomment-created>
+					</div>
+
+					<div v-html="model.comment">
+					</div>
+
+
+					<div v-if="model.galleria" class="js-ccomment-galleria galleria ccomment-galleria"></div>
+
+					<ccomment-customfields v-bind:customfields="model.customfields"></ccomment-customfields>
+					<div class="ccomment-actions">
+													<span class="muted">
+					{{model.votes}}
+					<i class="ccomment-thumbs-up ccomment-voting" v-on:click="vote(+1, model.id)"></i>
+					<i class="ccomment-thumbs-down ccomment-voting" v-on:click="vote(-1, model.id)"></i>
+				</span>
+						
+													<button class="btn btn-small ccomment-quote btn-link" v-on:click="quote(model.id)">
+								Citar							</button>
+						
+						
+						<div class="pull-right ccomment-moderation">
+							<button v-if="model.commentModerator" class="btn btn-mini btn-ccomment-edit" v-on:click="edit(model.id)">
+								Editar							</button>
+
+													</div>
+					</div>
+				</div>
+			</div>
+
+
+			<keep-alive>
+				<ccomment-form v-if="reply" :ref="'form-'+model.id" v-bind:focus="true">
+					<input slot="parent-id" name="jform[parentid]" type="hidden" v-bind:value="model.id"/>
+				</ccomment-form>
+			</keep-alive>
+		</div>
+
+		<ul v-if="hasChildren">
+			<ccomment-comment class="item" v-for="model in getChild()" v-bind:key="model.id" v-bind:model="model">
+			</ccomment-comment>
+		</ul>
+	</li>
+
+</script>
+	
+	
+
+		<script type="text/x-template" id="ccomment-form">
+			<form class="ccomment-form" v-on:submit.prevent="onSubmit">
+				<div class="ccomment-error-form row-fluid  margin-bottom" v-if="error">
+					<div class="alert alert-error">
+						{{errorMessage}}
+					</div>
+				</div>
+				<div class="ccomment-info-form row-fluid  margin-bottom" v-if="info">
+					<div class="alert alert-info">
+						{{infoMessage}}
+					</div>
+				</div>
+				<div class="row-fluid margin-bottom">
+											<div class="span1 hidden-phone">
+							<ccomment-avatar v-bind:avatar="getAvatar"></ccomment-avatar>
+						</div>
+					
+					<div class="span11">
+						<textarea v-on:focus="toggle"
+								  name="jform[comment]"
+								  class='js-ccomment-textarea ccomment-textarea span12 required'
+								  placeholder="Deixe um comentário"
+						></textarea>
+
+						<div v-show="uploadImage">
+							
+<div class="fileupload">
+	<!-- The fileupload-buttonbar contains buttons to add/delete files and start/cancel the upload -->
+	<div class="row fileupload-buttonbar">
+		<input type="file" name="files[]" class="js-ccomment-file-upload-real ccomment-file-upload-real" multiple/>
+		<div class="">
+			<!-- The global file processing state -->
+			<span class="fileupload-process"><span class="fa fa-spinner fa-pulse"></span></span>
+			Attach images by dragging & dropping or <span type="button" class="js-file-upload-fake ccomment-file-upload-fake btn-link"> by selecting them.</span>			<br/>
+			<small class="muted">The maximum file size for uploads is <strong>MB</strong>.				Only <strong></strong> files are allowed.</small>
+
+			<!-- The global progress state -->
+			<div class="fileupload-progress fade hide">
+				<!-- The global progress bar -->
+				<div class="progress progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+					<div class="progress-bar progress-bar-success" style="width:0%;"></div>
+				</div>
+				<!-- The extended global progress state -->
+				<div class="progress-extended">&nbsp;</div>
+			</div>
+			<div class="ccomment-file-list">
+				<div class="alert alert-error hide compojoom-max-number-files">
+					The maximum number of 3 allowed files to upload has been reached. If you want to upload more files you have to delete one of the existing uploaded files first.				</div>
+				<table role="presentation" class="table table-striped">
+					<thead></thead>
+					<tbody class="files"></tbody>
+				</table>
+				<div class="alert alert-error hide compojoom-max-number-files">
+					The maximum number of 3 allowed files to upload has been reached. If you want to upload more files you have to delete one of the existing uploaded files first.				</div>
+			</div>
+		</div>
+	</div>
+</div>
+						</div>
+
+						<div v-show="active">
+							<div class="span4 muted small">
+								Postando como																	<button type="button"
+											v-on:click="display = !display"
+											class="btn-link btn-small ccomment-posting-as">{{getDefaultName}}
+									</button>
+															</div>
+															<label class="checkbox pull-right small ccomment-notify">
+									<input type="checkbox" value="1" name="jform[notify]ƒ"
+										   v-on:click="notify = !notify"/>
+									<span class="muted">
+										Notificar-me de futuros comentários via e-mail									</span>
+								</label>
+							
+
+						</div>
+					</div>
+											<div v-show="display"
+							 class="row-fluid ccomment-user-info offset1					span11">
+							<div class="span6">
+								<input name="jform[name]"
+									   class="ccomment-name span12 no-margin "
+									   type='text'
+									   v-bind:value="getName"
+									   v-on:input="updateDefaultName"
+																			   placeholder="Informe seu nome"
+									   tabindex="2"
+																	/>
+								<span class="help-block pull-right small muted">
+								Exibido ao lado de seus comentários.							</span>
+							</div>
+
+															<div class="span6">
+									<input name='jform[email]'
+										   class="ccomment-email span12 no-margin "
+										   type='text'
+										   v-bind:value='getEmail'
+										   v-on:input="updateUserEmail"
+										   placeholder="Informe seu email"
+																				   tabindex="3"
+																			/>
+									<p class="help-block small pull-right muted">
+										Não exibido publicamente.																					<span class='gravatar'>
+											<a href='http://gravatar.com' target='_blank'>Gravatar</a> habilitado										</span>
+																			</p>
+								</div>
+													</div>
+					
+
+					
+					
+
+					<div class="row-fluid ccomment-actions" v-show="active">
+													<div class="pull-left muted small ccomment-undergo-moderation offset1">
+								Comentários serão submetidos a moderação antes de serem publicados.							</div>
+												<div class="pull-right">
+							<button v-on:click="reset()"
+									type="button"
+									class="btn ccomment-cancel">
+								Cancelar</button>
+							<button type="submit" class='btn btn-primary ccomment-send'
+									tabindex="7"
+									name='bsend'>
+								<span v-if="isSending">
+									Salvando...								</span>
+								<span v-else>
+									Enviar								</span>
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<input type="hidden" name="jform[contentid]" v-bind:value="itemConfig.contentid"/>
+				<input type="hidden" name="jform[component]" v-bind:value="itemConfig.component"/>
+				<input type="hidden" name="jform[page]" v-bind:value="page"/>
+				<slot name="parent-id"></slot>
+			</form>
+		</script>
+
+	
+
+
+
+
+<!-- The template to display files available for upload -->
+<script id="template-upload" type="text/x-tmpl">
+{% for (var i=0, file; file=o.files[i]; i++) { %}
+    <tr class="template-upload fade">
+        <td>
+            <span class="preview"></span>
+        </td>
+        <td>
+         <span class="name"><i>{%=file.name%}</i></span>
+            <div class="compojoom-single-file-progress">
+	            <div class="progress progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+	                <div class="progress-bar progress-bar-success" style="width:0%;"></div>
+	            </div>
+	           <small><strong class="size">Processing...</strong></small>
+			</div>
+        </td>
+        <td>
+            {% if (!i && !o.options.autoUpload) { %}
+                <button class="btn btn-default btn-xs start" disabled>
+                    <i class="fa fa-upload"></i>
+                    <span>Start</span>
+                </button>
+            {% } %}
+            {% if (!i) { %}
+                <button class="btn btn-default btn-xs btn-xs cancel pull-left">
+                    <i class="fa fa-stop"></i>
+                    <span>Cancel</span>
+                </button>
+            {% } %}
+        </td>
+    </tr>
+{% } %}
+</script>
+
+<!-- The template to display files available for download -->
+<script id="template-download" type="text/x-tmpl">
+{% for (var i=0, file; file=o.files[i]; i++) { %}
+    <tr class="template-download fade">
+        <td style="">
+        {% if (file.thumbnailUrl) { %}
+            <span class="preview">
+                {% if (file.url) { %}
+					<a href="http://backup/portal/{%=file.url%}" title="{%=file.name%}" download="{%=file.name%}" data-gallery>
+						<img src='http://backup/portal/mobile/unity-3d/{%=file.thumbnailUrl%}'>
+					</a>
+				{% } else { %}
+					<img src='http://backup/portal/mobile/unity-3d/{%=file.thumbnailUrl%}'>
+				{% } %}
+            </span>
+		{% } %}
+        </td>
+        <td>
+        {% if (!file.error) { %}
+	        <div class="file-meta">
+			    <div class="row">
+			        <div class="col-lg-4">
+			           <input type="text" class="form-control"
+			                placeholder="Title"
+							name="jform[picture_data][{%=file.name%}][title]"
+					        value="{%=file.title%}" />
+			        </div>
+			        <div class="col-lg-8">
+			            <input type="text" placeholder="Description" class="form-control"
+					                name="jform[picture_data][{%=file.name%}][description]"
+
+					                value="{%=file.description%}" />
+			        </div>
+			    </div>
+	        </div>
+		 {% } %}
+        {% if (file.error) { %}
+            <div><span class="label label-danger">Error</span> {%=file.error%}</div>
+        {% } %}
+        </td>
+        <td style="text-align: center">
+            {% if (file.deleteUrl) { %}
+                            {% } else { %}
+                 <button class="btn btn-default btn-xs btn-xs cancel">
+                    <i class="fa fa-stop"></i>
+                    <span>Cancel</span>
+                </button>
+            {% }%}
+            {% if (!file.error) { %}
+            <input type="hidden" name="jform[picture][]" value="{%=file.name%}" />
+            {% } %}
+        </td>
+    </tr>
+{% } %}
+</script>
+	
+<script type="text/x-template" id="ccomment-menu">
+	<div class="row-fluid ccomment-menu">
+		<h4 class="pull-left">
+			Comentários			(<span class="ccomment-comment-counter">{{pagination.total_with_children}}</span>)
+		</h4>
+		<div class="pull-right">
+							<button
+						v-on:click="newComment"
+						class="ccomment-add-new btn btn-mini" title='Adicionar Novo'>
+					Adicionar Novo				</button>
+														</div>
+	</div>
+</script>
+
+	<!-- the ccomment root element -->
+	<div class="ccomment" id="ccomment">
+
+		<ccomment-menu></ccomment-menu>
+
+		
+		
+		<ul class="ccomment-comments-list">
+			<ccomment-comment v-for="item in comments"
+							  v-if="item.parentid === -1"
+							  class="item"
+							  v-bind:key="item.id"
+							  v-bind:model="item">
+			</ccomment-comment>
+		</ul>
+
+					<pagination v-if="pagination.last_page > 1" :pagination="pagination" :callback="loadData" :options="paginationOptions"></pagination>
+		
+					<ccomment-form></ccomment-form>
+		
+			<div class="row-fluid small muted ccomment-powered">
+		<p class="text-center">
+			Comments fornecido por <a href='https://compojoom.com' rel='nofollow' target='_blank'>CComment</a>		</p>
+	</div>
+	</div>
+
+	<script type="text/javascript">
+		window.compojoom = compojoom = window.compojoom || {};
+		compojoom.ccomment = {
+			user: {"loggedin":false,"avatar":"http:\/\/backup\/portal\/media\/com_comment\/images\/noavatar.png"},
+			item: {"contentid":130,"component":"com_content","count":0},
+			config: {"comments_per_page":0,"sort":0,"tree":0,"use_name":0,"tree_depth":5,"form_position":0,"voting":1,"copyright":1,"pagination_position":0,"avatars":0,"gravatar":1,"support_ubb":1,"support_emoticons":0,"support_picture":0,"name_required":0,"email_required":0,"baseUrl":"http:\/\/backup\/portal\/","langCode":null,"file_upload":{"url":"http:\/\/backup\/portal\/index.php?option=com_comment&amp;task=multimedia.doIt","formControl":"jform","fieldName":"picture","maxNumberOfFiles":3,"fileTypes":null,"maxSize":null,"component":"com_comment","imageSize":{"x":"2400","y":"1800"}}}		};
+	</script>
+
+<script data-inline type="text/javascript" src="../../media/com_comment/cache/8e12eb270706cd6b2c8483104bf89b54.min.js"></script>
+			<div class="article-footer-wrap">
+			<div class="article-footer-top">
+									<div class="helix-social-share">
+		<div class="helix-social-share-icon">
+			<ul>
+				
+				<li>
+					<div class="facebook" data-toggle="tooltip" data-placement="top" title="Share On Facebook">
+
+						<a class="facebook" onClick="window.open('http://www.facebook.com/sharer.php?u=http://backup/portal/mobile/unity-3d/programando-em-c-para-unity-3d.html','Facebook','width=600,height=300,left='+(screen.availWidth/2-300)+',top='+(screen.availHeight/2-150)+''); return false;" href="http://www.facebook.com/sharer.php?u=http://backup/portal/mobile/unity-3d/programando-em-c-para-unity-3d.html">
+
+							<i class="fa fa-facebook"></i>
+						</a>
+
+					</div>
+				</li>
+				<li>
+					<div class="twitter"  data-toggle="tooltip" data-placement="top" title="Share On Twitter">
+						
+						<a class="twitter" onClick="window.open('http://twitter.com/share?url=http://backup/portal/mobile/unity-3d/programando-em-c-para-unity-3d.html&amp;text=Programando%20em%20C#%20para%20Unity%203D','Twitter share','width=600,height=300,left='+(screen.availWidth/2-300)+',top='+(screen.availHeight/2-150)+''); return false;" href="http://twitter.com/share?url=http://backup/portal/mobile/unity-3d/programando-em-c-para-unity-3d.html&amp;text=Programando%20em%20C#%20para%20Unity%203D">
+							<i class="fa fa-twitter"></i>
+						</a>
+
+					</div>
+				</li>
+				<li>
+					<div class="google-plus">
+						<a class="gplus" data-toggle="tooltip" data-placement="top" title="Share On Google Plus" onClick="window.open('https://plus.google.com/share?url=http://backup/portal/mobile/unity-3d/programando-em-c-para-unity-3d.html','Google plus','width=585,height=666,left='+(screen.availWidth/2-292)+',top='+(screen.availHeight/2-333)+''); return false;" href="https://plus.google.com/share?url=http://backup/portal/mobile/unity-3d/programando-em-c-para-unity-3d.html" >
+						<i class="fa fa-google-plus"></i></a>
+					</div>
+				</li>
+				
+				<li>
+					<div class="linkedin">
+						<a class="linkedin" data-toggle="tooltip" data-placement="top" title="Share On Linkedin" onClick="window.open('http://www.linkedin.com/shareArticle?mini=true&url=http://backup/portal/mobile/unity-3d/programando-em-c-para-unity-3d.html','Linkedin','width=585,height=666,left='+(screen.availWidth/2-292)+',top='+(screen.availHeight/2-333)+''); return false;" href="http://www.linkedin.com/shareArticle?mini=true&url=http://backup/portal/mobile/unity-3d/programando-em-c-para-unity-3d.html" >
+							
+						<i class="fa fa-linkedin-square"></i></a>
+					</div>
+				</li>
+			</ul>
+		</div>		
+	</div> <!-- /.helix-social-share -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			</div>
+					</div>
+	
+</article>
+</div></div><div id="sp-right" class="col-sm-3 col-md-3"><div class="sp-column class2"><div class="sp-module pop"><h3 class="sp-module-title">Populares</h3><div class="sp-module-content"><ul class="mostreadpop mod-list">
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="http://backup/portal/mobile/phaser/atualizar-o-node-js.html" itemprop="url">
+			<span itemprop="name">
+				Atualizar o Node.JS			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../../joomla-3/dicas/melhorando-a-velocidade-do-site.html" itemprop="url">
+			<span itemprop="name">
+				Melhorando a velocidade do site			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="http://backup/portal/mobile/unity-3d/boas-vindas.html" itemprop="url">
+			<span itemprop="name">
+				Boas Vindas!			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../../joomla-3/instalacao.html" itemprop="url">
+			<span itemprop="name">
+				Instalação do Joomla			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../../blog/diversos/e-possivel-viver-sem-o-google.html" itemprop="url">
+			<span itemprop="name">
+				É possível viver sem o Google?			</span>
+		</a>
+	</li>
+</ul>
+</div></div><div class="sp-module "><h3 class="sp-module-title">Novo Testamento</h3><div class="sp-module-content">Então entenderam os discípulos que lhes falara de João o Batista.
+
+<br>(Mt, 17:13) 
+</div></div><div class="sp-module "><h3 class="sp-module-title">Rotas no Mapa do Google</h3><div class="sp-module-content"><a href="https://www.google.com/maps/dir///@-3.7294526,-38.5422647,15z" target="_blank">Abrir o Mapa</a>
+</div></div></div></div></div></div></section><footer id="sp-footer"><div class="container"><div class="row"><div id="sp-footer1" class="col-sm-12 col-md-12"><div class="sp-column "><span class="sp-copyright">© 2015 Ribamar FS. All Rights Reserved. Designed By JoomShaper</span></div></div></div></div></footer>            </div> <!-- /.body-innerwrapper -->
+        </div> <!-- /.body-innerwrapper -->
+
+        <!-- Off Canvas Menu -->
+        <div class="offcanvas-menu">
+            <a href="programando-em-c-para-unity-3d.html#" class="close-offcanvas" aria-label="Close"><i class="fa fa-remove" aria-hidden="true" title="HELIX_CLOSE_MENU"></i></a>
+            <div class="offcanvas-inner">
+                                  <div class="sp-module _menu"><h3 class="sp-module-title">Menu Principal</h3><div class="sp-module-content"><ul class="nav menu">
+<li class="item-101"><a href="../../index.html" > Início</a></li><li class="item-107  deeper parent"><a href="../../basicos.html" > Básicos</a><span class="offcanvas-menu-toggler collapsed" data-toggle="collapse" data-target="#collapse-menu-107"><i class="open-icon fa fa-angle-down"></i><i class="close-icon fa fa-angle-up"></i></span><ul class="collapse" id="collapse-menu-107"><li class="item-112"><a href="../../basicos/html.html" > HTML</a></li><li class="item-113"><a href="../../basicos/javascript.html" > JavaScript</a></li><li class="item-114"><a href="../../basicos/css.html" > CSS</a></li><li class="item-116"><a href="../../basicos/jquery.html" > jQuery</a></li><li class="item-117"><a href="../../basicos/bootstrap.html" > Bootstrap</a></li><li class="item-118"><a href="../../basicos/php.html" > PHP</a></li><li class="item-119"><a href="../../basicos/phpoo.html" > PHPOO</a></li><li class="item-120"><a href="../../basicos/pdo.html" > PDO</a></li><li class="item-157"><a href="../../basicos/ferramentas.html" > Ferramentas</a></li><li class="item-287"><a href="../../basicos/outros.html" > Outros</a></li></ul></li><li class="item-108  deeper parent"><a href="../../servidores.html" > Servidores</a><span class="offcanvas-menu-toggler collapsed" data-toggle="collapse" data-target="#collapse-menu-108"><i class="open-icon fa fa-angle-down"></i><i class="close-icon fa fa-angle-up"></i></span><ul class="collapse" id="collapse-menu-108"><li class="item-121"><a href="../../servidores/desktop.html" > Desktop</a></li><li class="item-122"><a href="../../servidores/ubuntu-server.html" > Ubuntu Server</a></li><li class="item-123"><a href="../../servidores/shell-scripts.html" > Shell Scripts</a></li><li class="item-124"><a href="../../servidores/servidor-web.html" > Servidor Web</a></li><li class="item-156"><a href="../../servidores/servidor-sgbd.html" > Servidor SGBD</a></li><li class="item-193  deeper parent"><a href="../../servidores/postgresql.html" > PostgreSQL</a><span class="offcanvas-menu-toggler collapsed" data-toggle="collapse" data-target="#collapse-menu-193"><i class="open-icon fa fa-angle-down"></i><i class="close-icon fa fa-angle-up"></i></span><ul class="collapse" id="collapse-menu-193"><li class="item-232"><a href="../../servidores/postgresql/introducao-ao-postgresql.html" > Introdução</a></li><li class="item-233"><a href="../../servidores/postgresql/projeto.html" > Projeto</a></li><li class="item-234"><a href="../../servidores/postgresql/dimensionamento.html" > Dimensionamento</a></li></ul></li></ul></li><li class="item-148  deeper parent"><a href="../../joomla-3.html" > Joomla 3</a><span class="offcanvas-menu-toggler collapsed" data-toggle="collapse" data-target="#collapse-menu-148"><i class="open-icon fa fa-angle-down"></i><i class="close-icon fa fa-angle-up"></i></span><ul class="collapse" id="collapse-menu-148"><li class="item-149"><a href="../../joomla-3/introducao.html" > Introdução</a></li><li class="item-231"><a href="../../joomla-3/seguranca.html" > Segurança</a></li><li class="item-199"><a href="../../joomla-3/instalacao.html" > Instalação do Joomla</a></li><li class="item-152"><a href="../../joomla-3/administracao.html" > Administração</a></li><li class="item-153"><a href="../../joomla-3/extensoes.html" > Extensões</a></li><li class="item-154"><a href="../../joomla-3/loja-simples.html" > Loja Simples</a></li><li class="item-155"><a href="../../joomla-3/dicas.html" > Dicas</a></li></ul></li><li class="item-310  divider deeper parent"><a class="separator ">Frameworks</a>
+<span class="offcanvas-menu-toggler collapsed" data-toggle="collapse" data-target="#collapse-menu-310"><i class="open-icon fa fa-angle-down"></i><i class="close-icon fa fa-angle-up"></i></span><ul class="collapse" id="collapse-menu-310"><li class="item-138  deeper parent"><a href="../../frameworks/cakephp-3.html" > CakePHP 3</a><span class="offcanvas-menu-toggler collapsed" data-toggle="collapse" data-target="#collapse-menu-138"><i class="open-icon fa fa-angle-down"></i><i class="close-icon fa fa-angle-up"></i></span><ul class="collapse" id="collapse-menu-138"><li class="item-139"><a href="../../frameworks/cakephp-3/introducao.html" > Introdução</a></li><li class="item-140"><a href="../../frameworks/cakephp-3/instalacao.html" > Instalação</a></li><li class="item-172"><a href="../../frameworks/cakephp-3/configuracoes.html" > Configurações</a></li><li class="item-141"><a href="../../frameworks/cakephp-3/convencoes.html" > Convenções</a></li><li class="item-142"><a href="../../frameworks/cakephp-3/tutoriais.html" > Tutoriais</a></li><li class="item-144"><a href="../../frameworks/cakephp-3/dicas.html" > Dicas</a></li><li class="item-145"><a href="../../frameworks/cakephp-3/seguranca.html" > Segurança</a></li><li class="item-147"><a href="../../frameworks/cakephp-3/mvc-no-cakephp-3.html" > MVC no CakePHP 3</a></li></ul></li><li class="item-171  deeper parent"><a href="../../frameworks/laravel-5.html" > Laravel 5</a><span class="offcanvas-menu-toggler collapsed" data-toggle="collapse" data-target="#collapse-menu-171"><i class="open-icon fa fa-angle-down"></i><i class="close-icon fa fa-angle-up"></i></span><ul class="collapse" id="collapse-menu-171"><li class="item-173"><a href="../../frameworks/laravel-5/introducao.html" > Introdução</a></li><li class="item-174"><a href="../../frameworks/laravel-5/instalacao.html" > Instalação</a></li><li class="item-175"><a href="../../frameworks/laravel-5/configuracoes.html" > Configurações</a></li><li class="item-176"><a href="../../frameworks/laravel-5/routes.html" > Routes</a></li><li class="item-178"><a href="../../frameworks/laravel-5/dicas.html" > Dicas</a></li><li class="item-177"><a href="../../frameworks/laravel-5/tutoriais.html" > Tutoriais</a></li></ul></li></ul></li><li class="item-158  active deeper parent"><a href="../../mobile.html" > Mobile</a><span class="offcanvas-menu-toggler collapsed" data-toggle="collapse" data-target="#collapse-menu-158"><i class="open-icon fa fa-angle-down"></i><i class="close-icon fa fa-angle-up"></i></span><ul class="collapse" id="collapse-menu-158"><li class="item-179"><a href="../introducao.html" > Introdução</a></li><li class="item-180"><a href="../ambiente.html" > Ambiente</a></li><li class="item-188"><a href="../phaser.html" > Phaser</a></li><li class="item-187"><a href="../monaca.html" > Monaca</a></li><li class="item-181"><a href="../phonegap.html" > PhoneGap</a></li><li class="item-182"><a href="../app-inventor.html" > App Inventor</a></li><li class="item-159  current active"><a href="../unity-3d.html" > Unity 3D</a></li><li class="item-160"><a href="../intel-xdk.html" > Intel XDK</a></li><li class="item-161"><a href="../outros.html" > Outros</a></li><li class="item-163"><a href="../dicas.html" > Dicas</a></li></ul></li><li class="item-168  deeper parent"><a href="../../blog.html" > Blog</a><span class="offcanvas-menu-toggler collapsed" data-toggle="collapse" data-target="#collapse-menu-168"><i class="open-icon fa fa-angle-down"></i><i class="close-icon fa fa-angle-up"></i></span><ul class="collapse" id="collapse-menu-168"><li class="item-196"><a href="../../blog/reflexoes.html" > Reflexões</a></li><li class="item-197"><a href="../../blog/saude.html" > Saúde</a></li><li class="item-238"><a href="../../blog/diversos.html" > Diversos</a></li><li class="item-271"><a href="../../blog/estudos.html" > Estudos</a></li></ul></li><li class="item-215  deeper parent"><a href="../../curriculo.html" > Sobre</a><span class="offcanvas-menu-toggler collapsed" data-toggle="collapse" data-target="#collapse-menu-215"><i class="open-icon fa fa-angle-down"></i><i class="close-icon fa fa-angle-up"></i></span><ul class="collapse" id="collapse-menu-215"><li class="item-167">		<a href="https://github.com/ribafs?tab=repositories" rel="noopener noreferrer" target="_blank" > Projetos</a></li><li class="item-164"><a href="../../curriculo/livros.html" > Livros</a></li><li class="item-257"><a href="../../curriculo/curriculo.html" > Currículo</a></li><li class="item-110"><a href="../../curriculo/contato.html" > Contato</a></li><li class="item-251"><a href="../../curriculo/mapa-do-site.html" > Mapa</a></li></ul></li></ul>
+</div></div>
+                            </div> <!-- /.offcanvas-inner -->
+        </div> <!-- /.offcanvas-menu -->
+
+        
+        
+        
+        <!-- Preloader -->
+        
+
+        <!-- Go to top -->
+                    <a href="javascript:void(0)" class="scrollup" aria-label="Go To Top">&nbsp;</a>
+        
+    </body>
+</html>

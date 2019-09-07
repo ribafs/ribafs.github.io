@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br" dir="ltr">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <base href="" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Ribamar FS" />
+	<meta name="robots" content="noindex, nofollow" />
+	<meta name="description" content="Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros." />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>Código Padrão - RibaFS Portal</title>
+	<link href="http://ribafs.org/portal/frameworks/cakephp-3/dicas/codigo-padrao.html?tmpl=component&amp;print=1&amp;layout=default" rel="canonical" />
+	<link href="../../../templates/shaper_helix3/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../../../favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="http://backup/portal/media/plg_content_prismsyntaxhighlighter/css/prism-okaidia.css" rel="stylesheet" type="text/css" />
+	<link href="http://backup/portal/media/plg_content_prismsyntaxhighlighter/css/prism-linenumbers.css" rel="stylesheet" type="text/css" />
+	<script src="http://backup/portal/media/plg_content_prismsyntaxhighlighter/js/prism-tinymce.js" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery-noconflict.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery-migrate.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="http://backup/portal/media/system/js/caption.js?d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script type="text/javascript">
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+	</script>
+	<meta property="og:url" content="http://backup/portal/frameworks/cakephp-3/dicas/codigo-padrao.html" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Código Padrão" />
+	<meta property="og:description" content="Código padrão de aplicativo do CakePHP 3 Controller <?php class ArticlesController extends AppController { public function initialize() { parent::initializ..." />
+
+   	<link rel="stylesheet" href="../../../media/jui/css/bootstrap.min.css" type="text/css" />
+	<link rel="stylesheet" href="../../../templates/shaper_helix3/css/frontend-edit.css" type="text/css" />
+    <link rel="stylesheet" href="../../../templates/shaper_helix3/css/template.css" type="text/css" />
+</head>
+<body class="contentpane">
+	<div id="system-message-container">
+	</div>
+
+	
+
+<article class="item item-page" itemscope itemtype="http://schema.org/Article">
+	<meta itemprop="inLanguage" content="pt-BR" />
+	
+	
+
+	<div class="entry-header">
+		<span class="post-format"><i class="fa fa-thumb-tack"></i></span>
+		
+					<h2 itemprop="name">
+									Código Padrão							</h2>
+												</div>
+
+						<div id="pop-print" class="btn hidden-print">
+				<a href="codigo-padrao.html#" onclick="window.print();return false;">			<span class="icon-print" aria-hidden="true"></span>
+		Imprimir	</a>			</div>
+				
+	
+	
+				
+	
+			<div itemprop="articleBody">
+		<p><strong>Código padrão de aplicativo do CakePHP 3</strong></p>
+<p>Controller<br /><br /></p>
+<pre class="language-php"><code>&lt;?php
+class ArticlesController extends AppController
+{
+
+    public function initialize()
+    {
+        parent::initialize();
+        // Requerido
+        $this-&gt;loadComponent('Flash'); // Include the FlashComponent
+    }
+
+    public function index()
+    {
+        $articles = $this-&gt;Articles-&gt;find('all');
+        $this-&gt;set(compact('articles'));
+    }
+
+    public function view($id = null)
+    {
+        $article = $this-&gt;Articles-&gt;get($id);
+        $this-&gt;set(compact('article'));
+    }
+
+    public function add()
+    {
+        $article = $this-&gt;Articles-&gt;newEntity();
+        if ($this-&gt;request-&gt;is('post')) {
+            $article = $this-&gt;Articles-&gt;patchEntity($article, $this-&gt;request-&gt;data);
+            if ($this-&gt;Articles-&gt;save($article)) {
+                $this-&gt;Flash-&gt;success(__('Your article has been saved.'));
+                return $this-&gt;redirect(['action' =&gt; 'index']);
+            }
+            $this-&gt;Flash-&gt;error(__('Unable to add your article.'));
+        }
+        $this-&gt;set('article', $article);
+    }
+
+    public function edit($id = null)
+    {
+        $article = $this-&gt;Articles-&gt;get($id);
+        if ($this-&gt;request-&gt;is(['post', 'put'])) {
+            $this-&gt;Articles-&gt;patchEntity($article, $this-&gt;request-&gt;data);
+            if ($this-&gt;Articles-&gt;save($article)) {
+                $this-&gt;Flash-&gt;success(__('Your article has been updated.'));
+                return $this-&gt;redirect(['action' =&gt; 'index']);
+            }
+            $this-&gt;Flash-&gt;error(__('Unable to update your article.'));
+        }
+
+        $this-&gt;set('article', $article);
+    }
+
+    public function delete($id)
+    {
+        $this-&gt;request-&gt;allowMethod(['post', 'delete']);
+
+        $article = $this-&gt;Articles-&gt;get($id);
+        if ($this-&gt;Articles-&gt;delete($article)) {
+            $this-&gt;Flash-&gt;success(__('The article with id: {0} has been deleted.', h($id)));
+            return $this-&gt;redirect(['action' =&gt; 'index']);
+        }
+    }
+}
+
+Template/view index.ctp
+
+&lt;!-- File: src/Template/Articles/index.ctp  (edit links added) --&gt;
+
+&lt;h1&gt;Blog articles&lt;/h1&gt;
+&lt;p&gt;&lt;?= $this-&gt;Html-&gt;link("Add Article", ['action' =&gt; 'add']) ?&gt;&lt;/p&gt;
+&lt;table&gt;
+
+    &lt;tr&gt;
+
+        &lt;th&gt;Id&lt;/th&gt;
+
+        &lt;th&gt;Title&lt;/th&gt;
+
+        &lt;th&gt;Created&lt;/th&gt;
+
+        &lt;th&gt;Action&lt;/th&gt;
+
+    &lt;/tr&gt;
+
+
+
+&lt;!-- Here's where we iterate through our $articles query object, printing out article info --&gt;
+
+
+
+&lt;?php foreach ($articles as $article): ?&gt;
+
+    &lt;tr&gt;
+
+        &lt;td&gt;&lt;?= $article-&gt;id ?&gt;&lt;/td&gt;
+
+        &lt;td&gt;
+
+            &lt;?= $this-&gt;Html-&gt;link($article-&gt;title, ['action' =&gt; 'view', $article-&gt;id]) ?&gt;
+
+        &lt;/td&gt;
+
+        &lt;td&gt;
+
+            &lt;?= $article-&gt;created-&gt;format(DATE_RFC850) ?&gt;
+
+        &lt;/td&gt;
+
+        &lt;td&gt;
+
+            &lt;?= $this-&gt;Html-&gt;link('Edit', ['action' =&gt; 'edit', $article-&gt;id]) ?&gt;
+
+        &lt;/td&gt;
+
+        &lt;td&gt;
+
+            &lt;?= $this-&gt;Form-&gt;postLink(
+
+                'Delete',
+
+                ['action' =&gt; 'delete', $article-&gt;id],
+
+                ['confirm' =&gt; 'Are you sure?'])
+
+            ?&gt;
+
+            &lt;?= $this-&gt;Html-&gt;link('Edit', ['action' =&gt; 'edit', $article-&gt;id]) ?&gt;
+
+        &lt;/td&gt;
+
+    &lt;/tr&gt;
+
+&lt;?php endforeach; ?&gt;
+
+
+
+&lt;/table&gt;
+
+
+
+&lt;!-- File: src/Template/Articles/view.ctp --&gt;
+
+
+
+&lt;h1&gt;&lt;?= h($article-&gt;title) ?&gt;&lt;/h1&gt;
+
+&lt;p&gt;&lt;?= h($article-&gt;body) ?&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;small&gt;Created: &lt;?= $article-&gt;created-&gt;format(DATE_RFC850) ?&gt;&lt;/small&gt;&lt;/p&gt;
+
+
+
+&lt;!-- File: src/Template/Articles/add.ctp --&gt;
+
+
+
+&lt;h1&gt;Add Article&lt;/h1&gt;
+
+&lt;?php
+
+    echo $this-&gt;Form-&gt;create($article);
+
+    echo $this-&gt;Form-&gt;input('title');
+
+    echo $this-&gt;Form-&gt;input('body', ['rows' =&gt; '3']);
+
+    echo $this-&gt;Form-&gt;button(__('Save Article'));
+
+    echo $this-&gt;Form-&gt;end();
+
+?&gt;
+
+
+
+&lt;!-- File: src/Template/Articles/edit.ctp --&gt;
+
+
+
+&lt;h1&gt;Edit Article&lt;/h1&gt;
+
+&lt;?php
+
+    echo $this-&gt;Form-&gt;create($article);
+
+    echo $this-&gt;Form-&gt;input('title');
+
+    echo $this-&gt;Form-&gt;input('body', ['rows' =&gt; '3']);
+
+    echo $this-&gt;Form-&gt;button(__('Save Article'));
+
+    echo $this-&gt;Form-&gt;end();
+
+?&gt;
+
+    &lt;?= $this-&gt;Form-&gt;create($articles, [
+
+          'url'   =&gt; [
+
+               'controller' =&gt; 'Articles','action' =&gt; 'busca'
+
+           ],
+
+          'id'    =&gt; 'web-form',
+
+          'class' =&gt;'panel-body wrapper-lg'
+
+       ]
+
+    ) 
+
+?&gt;</code></pre> 	</div>
+
+	
+	
+				
+	
+	
+	
+</article>
+
+</body>
+</html>

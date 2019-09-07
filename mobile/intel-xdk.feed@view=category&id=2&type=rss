@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="Joomla! - Open Source Content Management" -->
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Intel XDK - RibaFS Portal</title>
+		<description><![CDATA[Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros.]]></description>
+		<link>http://backup/portal/mobile/intel-xdk.html?view=category&amp;id=2</link>
+		<lastBuildDate>Sat, 07 Sep 2019 19:26:00 -0300</lastBuildDate>
+		<generator>Joomla! - Open Source Content Management</generator>
+		<atom:link rel="self" type="application/rss+xml" href="http://backup/portal/mobile/intel-xdk.feed?view=category&amp;id=2&amp;type=rss"/>
+		<language>pt-br</language>
+		<item>
+			<title>Contato</title>
+			<link>http://backup/portal/mobile/intel-xdk.html?view=article&amp;id=238&amp;catid=2</link>
+			<guid isPermaLink="true">http://backup/portal/mobile/intel-xdk.html?view=article&amp;id=238&amp;catid=2</guid>
+			<description><![CDATA[<h3>Contato</h3>
+
+<p>Caso queira me contactar use o e-mail abaixo.</p>
+
+<p>Os espaços devem ser removidos, pois são apenas para evitar spams.</p>
+
+<p>ribafs @ gmail.com</p>
+
+<p> </p>]]></description>
+			<category>Generica</category>
+			<pubDate>Tue, 30 Jan 2018 16:27:22 -0300</pubDate>
+		</item>
+		<item>
+			<title>Suporte Nacional e Internacional para o PostgreSQL</title>
+			<link>http://backup/portal/mobile/intel-xdk.html?view=article&amp;id=218&amp;catid=2</link>
+			<guid isPermaLink="true">http://backup/portal/mobile/intel-xdk.html?view=article&amp;id=218&amp;catid=2</guid>
+			<description><![CDATA[<p><strong>Quem oferece Suporte ao PostgreSQL no Brasil e quem o usa</strong><br /><br /><strong>Empresas que Patrocinam o PostgreSQL:</strong> <br />- InterpriseDB <br />- Fijitsu <br />- RedHat <br />- Skype <br />- Sun <br /><br />Lista completa - <a href="http://www.postgresql.org/about/sponsors">http://www.postgresql.org/about/sponsors</a>  <br /><br />Oferecem Suporte ao PostgreSQL (consultores individuais e empresas): <br />Lista completa: <a href="http://www.postgresql.org/support/professional_support">http://www.postgresql.org/support/professional_support</a>  <br /><br />Mais empresas e consutores que oferecem suporte ao PostgreSQL: <br /><a href="http://www.opensourcexperts.com/Index/index_html/PostgreSQL/index.html">http://www.opensourcexperts.com/Index/index_html/PostgreSQL/index.html</a>  <br /><br /><strong>Oferecem Suporte ao PostgreSQL (no Brasil):</strong> <br />- Carlos Smanioto (Bauru) <br />- dbExperts (SP) <br />- Dextra (Campinas) <br />- Flexsolutions Consultores (Goiânia) <br />- Locadata (Belo Horizonte) <br />- Mosman Consultoria e Desenvolvimento (São Pedro - SP) <br />- Studio Server Hospedagem de Sites (Santos) <br /><br />Detalhes e Lista completa: <a href="http://www.postgresql.org/support/professional_support_southamerica">http://www.postgresql.org/support/professional_support_southamerica</a>  <br /><br /><strong>Algumas Empresas que usam o PostgreSQL (internacionais):</strong> <br />- Apple <br />- BASF <br />- Cisco <br />- OMS (Organização Mundial de Saúde) <br /><br /><strong>Algumas Empresas que usam o PostgreSQL (nacionais):</strong> <br />- FAB (Força Aérea Brasileira) <br />- Prefeitura Municipal de Sobral <br />- Vivo <br />- DNOCS <br />- Governo do Estado do Ceará adotou o PostgreSQL como SDGB oficial.<br />- O DETRAN-CE migrou de Oracle para PostgreSQL</p>]]></description>
+			<category>Generica</category>
+			<pubDate>Tue, 29 Aug 2017 21:59:06 -0300</pubDate>
+		</item>
+		<item>
+			<title>Boas Vindas!</title>
+			<link>http://backup/portal/mobile/intel-xdk.html?view=article&amp;id=2&amp;catid=2</link>
+			<guid isPermaLink="true">http://backup/portal/mobile/intel-xdk.html?view=article&amp;id=2&amp;catid=2</guid>
+			<description><![CDATA[<p>Olá como vai? AQUI</p>
+
+<p>Seja sinceramente bem vindo(a)!</p>
+
+<p style="text-align: justify;">Este site está com todo o seu conteúdo atualizado e com alguns novos.<br />Agora temos as versões 3 do Joomla e do CakePHP e também alguns assuntos que não havia, como Laravel 5 e várias ferramentas Mobile.</p>
+
+<p style="text-align: justify;">Os principais assuntos compartilhados aqui são os mostrados nos menus acima.<br />Também, de vez em quando, publico algum artigo na seção Blog, sobre saúde ou alguma reflexão sobre a vida.<br /><br />O foco do conteúdo deste site fica em Linux, Windows, Web (online) e Mobile (especificamente Android).<br />O destaque do conteúdo fica com o PostgreSQL (que começei a adicionar o conteúdo mas tem muita coisa) e a programação Mobile, especialmente por ter encontrado e compartilhado algumas ferramentas que facilitam a vida do programador, como o Phaser, PhoneGap e o Monaca.</p>
+
+<p>Para as versões anteriores do Cake e do Joomla, além de Virtualização de Servidores Linux veja meu aite anterior <a href="http://ribafs.16mb.com/">http://ribafs.16mb.com/</a> <br /><br />Meus livros agora estão todos no GitHub (todos gratuitos) - <a title="https://github.com/ribafs/livros" href="https://github.com/ribafs/livros" target="_blank" rel="noopener noreferrer">https://github.com/ribafs/livros</a></p>
+
+<p>Meus projetos no GitHub - <a href="https://github.com/ribafs?tab=repositories" target="_blank" rel="noopener noreferrer">https://github.com/ribafs?tab=repositories</a> <br /><br />Caso tenha encontrado algum erro ou tenha alguma sugestão para melhorar qualquer um dos artigos, por favor acesse o item Contato em Sobre e me envie um e-mail.<br /><br />Muito grato.<br />Ribamar FS, 12 de julho de 2017</p>
+
+<p> </p>]]></description>
+			<category>Generica</category>
+			<pubDate>Thu, 22 Jun 2017 14:58:41 -0300</pubDate>
+		</item>
+	</channel>
+</rss>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br" dir="ltr">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <base href="" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Ribamar FS" />
+	<meta name="robots" content="noindex, nofollow" />
+	<meta name="description" content="Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros." />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>Jogo do Phaser em Mobile - RibaFS Portal</title>
+	<link href="http://ribafs.org/portal/mobile/phaser/phaser-em-mobile.html?tmpl=component&amp;print=1&amp;layout=default" rel="canonical" />
+	<link href="../../templates/shaper_helix3/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../../favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<script src="../../media/jui/js/jquery.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../media/jui/js/jquery-noconflict.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../media/jui/js/jquery-migrate.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="http://backup/portal/media/system/js/caption.js?d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script type="text/javascript">
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+	</script>
+	<meta property="og:url" content="http://backup/portal/mobile/phaser/phaser-em-mobile.html" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Jogo do Phaser em Mobile" />
+	<meta property="og:description" content="Phaser em Mobile Configurando um jogo para web criado com o Phaser para que se adapte automaticamente em dispositivo móvel. Adicionar estas 3 linhas de esc..." />
+
+   	<link rel="stylesheet" href="../../media/jui/css/bootstrap.min.css" type="text/css" />
+	<link rel="stylesheet" href="../../templates/shaper_helix3/css/frontend-edit.css" type="text/css" />
+    <link rel="stylesheet" href="../../templates/shaper_helix3/css/template.css" type="text/css" />
+</head>
+<body class="contentpane">
+	<div id="system-message-container">
+	</div>
+
+	
+
+<article class="item item-page" itemscope itemtype="http://schema.org/Article">
+	<meta itemprop="inLanguage" content="pt-BR" />
+	
+	
+
+	<div class="entry-header">
+		<span class="post-format"><i class="fa fa-thumb-tack"></i></span>
+		
+					<h2 itemprop="name">
+									Jogo do Phaser em Mobile							</h2>
+												</div>
+
+						<div id="pop-print" class="btn hidden-print">
+				<a href="phaser-em-mobile.html#" onclick="window.print();return false;">			<span class="icon-print" aria-hidden="true"></span>
+		Imprimir	</a>			</div>
+				
+	
+	
+				
+	
+			<div itemprop="articleBody">
+		<h4>Phaser em Mobile</h4>
+
+
+<p><strong>Configurando um jogo para web criado com o Phaser para que se adapte automaticamente em dispositivo móvel.</strong><br /><br /><strong>Adicionar estas 3 linhas de escala ao início do método preload():</strong><br /><br />    preload: function(){<br />        game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;<br />        game.scale.pageAlignHorizontally = true;<br />        game.scale.pageAlignVertically = true;<br /><br />Com isso a visualização pelo navegador já muda. Ele enche a tela se adaptando ao seu tamanho.<br /><br />Como verificar com facilidade, se realmente se adapta aos dispositivos móveis?<br />Uma forma simples é instalar a extensão Ripple, que é emulador mobile.<br /><br /><strong>Baixar o emulador Ripper para o Chrome</strong><br /><br />Acesse com o Chrome<br /><a href="https://chrome.google.com/webstore/detail/ripple-emulator-beta/geelfhphabnejjhdalkjhgipohgpdnoc">https://chrome.google.com/webstore/detail/ripple-emulator-beta/geelfhphabnejjhdalkjhgipohgpdnoc</a> <br /><br />Instale a extensão<br /><br />Agora abra o endereço do jogo pelo navegador Chrome, mas somente com o servidor web:<br /><a href="http://localhost/labirinto">http://localhost/labirinto</a> <br /><br />Clique no pequeno ícone azul acima e à esquerda<br />E Habilite para Phonegap<br /><br />Finalmente, podemos pensar em instalar nosso jogo em celulares.<br />Para isso conheço dois serviços simples:<br /><a href="http://build.phonegap.com">http://build.phonegap.com</a> <br /><a href="http://monaca.io">http://monaca.io</a> <br /><br />Precisamos criar um projeto em um destes e adaptar o projeto criado para o código do nosso jogo.<br />Veja na seção sobre <a title="http://ribafs.org/portal/mobile/phonegap" href="http://ribafs.org/portal/mobile/phonegap" target="_blank" rel="noopener noreferrer">PhoneGap</a> ou <a title="http://ribafs.org/portal/mobile/monaca" href="http://ribafs.org/portal/mobile/monaca" target="_blank" rel="noopener noreferrer">Monaca</a> sobre como efetuar o build e publicar seu jogo.</p>
+
+
+<p> </p> 	</div>
+
+	
+	
+				
+	
+	
+	
+</article>
+
+</body>
+</html>

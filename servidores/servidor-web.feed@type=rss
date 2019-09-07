@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="Joomla! - Open Source Content Management" -->
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Servidor Web - RibaFS Portal</title>
+		<description><![CDATA[Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros.]]></description>
+		<link>http://backup/portal/servidores/servidor-web.html</link>
+		<lastBuildDate>Sat, 07 Sep 2019 18:53:36 -0300</lastBuildDate>
+		<generator>Joomla! - Open Source Content Management</generator>
+		<atom:link rel="self" type="application/rss+xml" href="http://backup/portal/servidores/servidor-web.feed?type=rss"/>
+		<language>pt-br</language>
+		<item>
+			<title>Setando Permissões</title>
+			<link>http://backup/portal/servidores/servidor-web/setando-permissoes.html</link>
+			<guid isPermaLink="true">http://backup/portal/servidores/servidor-web/setando-permissoes.html</guid>
+			<description><![CDATA[<h3>Setando Permissões num Servidor Web com Linux</h3>
+<p>Algumas vezes já aconteceu comigo de enviar os arquivos de um site para a hospedagem e após configurar e tentar acessar receber o erro:</p>
+<h1>500 Internal Server Error</h1>
+<p>Uma das principais causas e que sempre resolveu comigo é mudar as permissões de todos os arquivos da pasta como segue. Também já vi colegas reclamando do mesmo erro em hospedagens compartilhadas.</p>
+<p>Criei na minha pasta home um arquivo chamado</p>
+<p><em><strong>perms.sh</strong></em></p>
+<p>Contendo:</p>
+<pre class="language-php"><code># Correção do erro 500 na hospedagem
+# Detalhes em: https://www.weblink.com.br/blog/artigos/o-que-e-e-como-corrigir-o-erro-500/
+# Sintaxe:
+# sh perms.sh diretorioOUarquivo
+find $1 -type d -exec chmod 755 {} \;
+find $1 -type f -exec chmod 644 {} \;</code></pre>
+<p> </p>
+<p><strong>Mais detalhes sobre este erro:</strong></p>
+<p><a href="https://www.weblink.com.br/blog/artigos/o-que-e-e-como-corrigir-o-erro-500/">https://www.weblink.com.br/blog/artigos/o-que-e-e-como-corrigir-o-erro-500/</a></p>
+<p> </p>
+<p>E executei:</p>
+<p><strong><em>sh perms.sh site</em></strong></p>
+<p>Supondo que a pasta seja site.</p>
+<p>Quando terminar de configurar as permissões, compacto novamente e mando para o servidor.</p>
+<p>Agora o site funciona legal.</p>
+<p> </p>
+<p>Sugestão para os colegas que usam Windows: criem uma máquina virtual com o VirtualBox (meu preferido) ou outro, de um linux, sugiro o Linux Mint última versão (agora o 19.1. Este quase não tem diferença em relação ao Windows) para esta tarefa e outras e ir se acostumando com o Linux, que é o sistema operacional usado na maioria dos servidores.</p>
+<p> </p>]]></description>
+			<category>Servidor Web</category>
+			<pubDate>Fri, 12 Jul 2019 15:36:28 -0300</pubDate>
+		</item>
+		<item>
+			<title>Permissões no diretório web</title>
+			<link>http://backup/portal/servidores/servidor-web/permissoes-no-diretorio-web.html</link>
+			<guid isPermaLink="true">http://backup/portal/servidores/servidor-web/permissoes-no-diretorio-web.html</guid>
+			<description><![CDATA[<h4>Permissões no diretório web</h4>
+<p>A ideia é ter um grupo de desenvolvedores trabalhando num servidor web e todos com permissão total sobre o /var/www/html<br /><br />No Linux por padrão, quando alguém cria um arquivo ele é dono do mesmo e ninguém mais mexe, exceto o root.<br /><br />A idéia aqui é quando um criar ou alterar um arquivo os demais continuam com o mesmo acesso, pois as permissões serão setadas para o grupo.<br /><br /><strong>Criar o grupo webdevel</strong><br /><br />sudo addgroup webdevel<br /><br /><strong>Adicionar o www-data ao webdevel</strong><br />sudo adduser www-data webdevel<br /><br />Adicionar cada usuário do grupo de desenvolvedores ao grupo webdevel<br />sudo adduser ribafs webdevel<br /><br /><br />Usando o umask para que mantenha permissões de escrita para o dono e o grupo por default<br /><br />umask 002<br /><br />Adicionar ao ~/.bashrc de cada desenvolvedor<br />su - ribafs<br />nano .bashrc<br />Adicionar ao final<br />umask 002<br /><br />Efetuar logout para que tenha efeito<br /><br />Para ajustar a permissões dos arquivos e pastas existentes executar o script abaixo<br /><br /></p>
+<pre class="language-markup"><code>#!/bin/sh
+clear;
+echo "Aguarde enquanto configuro as permissões do /var/www/html/$1";
+echo "";
+chown -R www-data:webdevel /var/www/html/$1;
+chmod -R g+s /var/www/html/$1;
+find /var/www/html/$1 -type d -exec chmod ug+rwx,o+rx {} \;
+find /var/www/html/$1 -type f -exec chmod ug+rw,o+r {} \;
+echo "";
+echo "Concluído!";</code></pre>
+<p><br /><br />Com este script tanto podemos varrer todo o diretório html com:<br />sudo perms<br /><br />Quanto podemos varrer apenas um sundiretório do html com:<br />sudo perms diretorio1<br /><br />Para configurar manualmente e eventualmente as permissões do diretório web<br /><br /><a href="http://www.zzee.com/solutions/unix-permissions.shtml">http://www.zzee.com/solutions/unix-permissions.shtml</a> <br /><br /><strong>Melhor Solução que Encontrei até Agora</strong><br /><br />A melhor solução para problemas de permissões do sistema de arquivos do servidor web para trabalho em grupo, foi o uso de um software como uma camada intermediária para envio de arquivos do desktop para o servidor. No caso foi o eXtplorer.net, que é um excelente gerenciador de arquivos tanto para o Joomla (componente) quanto para ser usado independentemente. Como o envio e a descompactação dos arquivos é feita pelo apache, já chegam no servidor com as permissões adequadas, as do www-data.<br /><br /></p>]]></description>
+			<category>Servidor Web</category>
+			<pubDate>Mon, 28 Aug 2017 17:22:44 -0300</pubDate>
+		</item>
+		<item>
+			<title>Acessar site antes da propagação do DNS</title>
+			<link>http://backup/portal/servidores/servidor-web/acessar-site-antes-do-dns.html</link>
+			<guid isPermaLink="true">http://backup/portal/servidores/servidor-web/acessar-site-antes-do-dns.html</guid>
+			<description><![CDATA[<h4>Acessar site antes da propagação do DNS</h4>
+
+<p>Quando contratamos uma hospedagem e mudamos e DNS para apontar para a nova hospedagem ele aidna demora um pouco para ser propagado, desde alguns minutos até 72 horas.<br /><br />Neste intervalo para poder visualizar o site na nova hospedagem através do IP, precisamos ajustar o hosts do nosso computador desktop.<br />Isso funciona em qualquer sistema operacional. Aqui vou mostrar no Linux<br /><br />Precisamos adicionar o IP da nova hospedagem apontando para o domínio:<br /><br />sudo nano /etc/hosts<br /><br />153.92.35.30     ribafs.org<br /><br />Agora basta chamar pelo navegador usando o domínio:<br /><br /><a href="http://backup/portal/../">http://ribafs.org</a> <br /><br />Que ao invés de procurar este dominio na web irá procurar aqui no hosts.<br /><br />Dica encotnrada em:<br /><a href="https://www.youtube.com/watch?v=WPDti-R39zA">https://www.youtube.com/watch?v=WPDti-R39zA</a> </p>]]></description>
+			<category>Servidor Web</category>
+			<pubDate>Mon, 28 Aug 2017 14:11:20 -0300</pubDate>
+		</item>
+		<item>
+			<title>Introdução ao Servidor Web</title>
+			<link>http://backup/portal/servidores/servidor-web/introducao-ao-servidor-web.html</link>
+			<guid isPermaLink="true">http://backup/portal/servidores/servidor-web/introducao-ao-servidor-web.html</guid>
+			<description><![CDATA[<p><img src="http://backup/portal/images/conectarnautilus.png" /></p><p><strong>Introdução ao Servidor Web Linux<br /></strong></p>
+
+
+<p>Dica: Evitar os arquivos de desenvolvimento sempre que possível, para não instalar bibliotecas e compiladores, por cotna de segurança.</p>
+
+
+<p><strong>RedHat e Clones</strong></p>
+
+
+<p>Módulos do Apache<br /> Descomentar se comentados em:<br /> nano /etc/httpd/conf/httpd.conf<br /> service httpd restart</p>
+
+
+<p>nano /etc/apache2/apache2.conf<br /> Adicione ao final do arquivo:<br /> ServerName localhost</p>
+
+
+<p><br /> Referência para o SELinux<br /> chcon -R --reference=/var/www/html /var/www/html/Joomla</p>
+
+
+<p><br /> <strong>Debian e clones</strong></p>
+
+
+<p>apt-get update<br /> apt-get install -y apache2</p>
+
+
+<p>apt-get install -y php5 libapache2-mod-php5 php5-gd php5-mysql php5-pgsql php5-imap php-pear curl php-auth php5-ming php5-snmp php5-xmlrpc php5-xsl<br /> apt-get install -y phpmyadmin<br /> apt-get install vlogger webalizer awstats geoip-database libclass-dbi-mysql-perl</p>
+
+
+<p>Criar um usuário no MySQL que acesse o SGBD somente da estação do DBA e o mesmo para o PostgreSQL</p>
+
+
+<p><br /> <strong>Esconder versão do Apache</strong><br /> Editar o httpd.conf no RedHat</p>
+
+
+<p>E no Debian em<br /> nano /etc/apache2/conf-available/security.conf</p>
+
+
+<p>mudando as duas linhas abaixo:</p>
+
+
+<p>ServerTokens ProductOnly<br /> ServerSignature Off</p>
+
+
+<p><br /> <strong>Habilitar o mod_rewrite</strong><br /> a2enmod rewrite</p>
+
+
+<p><strong>Caso queira Desabilitar o módulo</strong><br /> a2dismod rewrite</p>
+
+
+<p><strong>Habilitar site</strong><br /> a2ensite gnuteca</p>
+
+
+<p><strong>Se necessário remover o link do site, exemplo:</strong><br /> rm /etc/apache2/sites-enabled/gnuteca</p>
+
+
+<p><strong>Habilitar a porta 443 (Habiltiada por default):</strong></p>
+
+
+<p>Editar /etc/apache2/ports.conf<br /> Listen 80<br /> Listen 443</p>
+
+
+<p> </p>]]></description>
+			<category>Servidor Web</category>
+			<pubDate>Sat, 24 Jun 2017 18:34:48 -0300</pubDate>
+		</item>
+		<item>
+			<title>VirtualHost no Ubuntu</title>
+			<link>http://backup/portal/servidores/servidor-web/virtualhost-no-ubuntu.html</link>
+			<guid isPermaLink="true">http://backup/portal/servidores/servidor-web/virtualhost-no-ubuntu.html</guid>
+			<description><![CDATA[<p><img src="http://backup/portal/images/conectarnautilus.png" /></p><h3><strong>Virtual Host no ubuntu</strong></h3>
+<p>Adaptado de:</p>
+<p><a href="https://www.vivaolinux.com.br/topico/Apache-Web-Server/virtualHost-1">https://www.vivaolinux.com.br/topico/Apache-Web-Server/virtualHost-1</a></p>
+<p>Muito útil para quem precisa executar um site no raiz web e que precisa de vários sites, todos no raiz.</p>
+<p><strong>/etc/hosts</strong><br /> 127.0.0.1 ribafs<br /> 127.0.0.1 local</p>
+<p>sudo cp /etc/apache2/sites-available/000-default.conf /etc/apache2/sites-available/ribafs.conf</p>
+<p><strong>Apagar tudo o existente e adicionar:</strong></p>
+<p>sudo nano /etc/apache2/sites-available/ribafs.conf</p>
+<pre class="language-markup"><code>&lt;VirtualHost *:80&gt;
+ServerAdmin ribafs@gmail.com
+ServerName ribafs
+DirectoryIndex index.php
+DocumentRoot /var/www/ribafs
+LogLevel warn
+ErrorLog ${APACHE_LOG_DIR}/error.log
+CustomLog ${APACHE_LOG_DIR}/access.log combined
+&lt;Directory /var/www/ribafs/&gt;
+Options Indexes FollowSymLinks
+AllowOverride All
+Require all granted
+DirectoryIndex index.html index.php
+&lt;/Directory&gt;
+&lt;/VirtualHost&gt;</code></pre>
+<p>sudo cp /etc/apache2/sites-available/000-default.conf /etc/apache2/sites-available/local.conf</p>
+<p><strong>Apagar tudo e adicionar:</strong></p>
+<p>sudo nano /etc/apache2/sites-available/local.conf</p>
+<pre class="language-markup"><code>&lt;VirtualHost *:80&gt;
+ServerAdmin ribafs@gmail.com
+ServerName local
+DirectoryIndex index.php
+DocumentRoot /var/www/local
+LogLevel warn
+ErrorLog ${APACHE_LOG_DIR}/error.log
+CustomLog ${APACHE_LOG_DIR}/access.log combined
+&lt;Directory /var/www/local/&gt;
+Options Indexes FollowSymLinks
+AllowOverride All
+Require all granted
+DirectoryIndex index.html index.php
+&lt;/Directory&gt;
+&lt;/VirtualHost&gt;</code></pre>
+<p><strong>Habilitar o novo site</strong></p>
+<p>sudo a2ensite ribafs<br /> sudo a2ensite local</p>
+<p><strong>Testar a configuração do Apache<br /></strong><br />sudo apachectl configtest</p>
+<p><strong><br />Reiniciar o Apache</strong><br />sudo service apache2 reload<br />sudo service apache2 restart</p>
+<p><strong>Lembrando que já temos o localhost, que é em torno de:</strong></p>
+<pre class="language-markup"><code>&lt;VirtualHost *:80&gt;
+ServerAdmin ribafs@gmail.com
+ServerName localhost
+DirectoryIndex index.php
+DocumentRoot /var/www/html
+LogLevel warn
+ErrorLog ${APACHE_LOG_DIR}/error.log
+CustomLog ${APACHE_LOG_DIR}/access.log combined
+&lt;Directory /var/www/html/&gt;
+Options Indexes FollowSymLinks
+AllowOverride All
+Require all granted
+DirectoryIndex index.html index.php
+&lt;/Directory&gt;
+&lt;/VirtualHost&gt;</code></pre>
+<p><b>Para o caso de Desabilitar o local2</b></p>
+<p>sudo a2dissite local<br />sudo service apache2 restart</p>
+<p><strong>Referências:</strong></p>
+<div id="inner">
+<div id="container2">
+<div id="container1">
+<div id="content" class="single-post">
+<p>How to Set Up an Apache Virtual Host on Linux Mint - <a href="https://hibbard.eu/how-to-set-up-an-apache-virtual-host-on-linux-mint/">https://hibbard.eu/how-to-set-up-an-apache-virtual-host-on-linux-mint/</a></p>
+<p class="post-title entry-title">Setup Apache Virtual Hosts In LinuxMint / Ubuntu / Debian - <a href="http://www.2daygeek.com/setup-apache-virtual-hosts-in-linuxmint-ubuntu-debian/">http://www.2daygeek.com/setup-apache-virtual-hosts-in-linuxmint-ubuntu-debian/</a></p>
+<h1 class="post-title entry-title"> </h1>
+</div>
+</div>
+</div>
+</div>]]></description>
+			<category>Servidor Web</category>
+			<pubDate>Sat, 24 Jun 2017 18:34:48 -0300</pubDate>
+		</item>
+	</channel>
+</rss>

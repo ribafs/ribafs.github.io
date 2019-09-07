@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br" dir="ltr">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <base href="" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Ribamar FS" />
+	<meta name="robots" content="noindex, nofollow" />
+	<meta name="description" content="Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros." />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>Configurando o .htaccess - RibaFS Portal</title>
+	<link href="http://ribafs.org/portal/joomla-3/seguranca/configurando-o-htaccess.html?tmpl=component&amp;print=1&amp;layout=default" rel="canonical" />
+	<link href="../../templates/shaper_helix3/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../../favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<script src="../../media/jui/js/jquery.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../media/jui/js/jquery-noconflict.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../media/jui/js/jquery-migrate.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="http://backup/portal/media/system/js/caption.js?d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script type="text/javascript">
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+	</script>
+	<meta property="og:url" content="http://backup/portal/joomla-3/seguranca/configurando-o-htaccess.html" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Configurando o .htaccess" />
+	<meta property="og:description" content="Configurando o .htaccess Referências https://httpd.apache.org/docs/current/pt-br/howto/htaccess.html https://my.justhost.com/cgi/help/htaccess http://www.d..." />
+
+   	<link rel="stylesheet" href="../../media/jui/css/bootstrap.min.css" type="text/css" />
+	<link rel="stylesheet" href="../../templates/shaper_helix3/css/frontend-edit.css" type="text/css" />
+    <link rel="stylesheet" href="../../templates/shaper_helix3/css/template.css" type="text/css" />
+</head>
+<body class="contentpane">
+	<div id="system-message-container">
+	</div>
+
+	
+
+<article class="item item-page" itemscope itemtype="http://schema.org/Article">
+	<meta itemprop="inLanguage" content="pt-BR" />
+	
+	
+
+	<div class="entry-header">
+		<span class="post-format"><i class="fa fa-thumb-tack"></i></span>
+		
+					<h2 itemprop="name">
+									Configurando o .htaccess							</h2>
+												</div>
+
+						<div id="pop-print" class="btn hidden-print">
+				<a href="configurando-o-htaccess.html#" onclick="window.print();return false;">			<span class="icon-print" aria-hidden="true"></span>
+		Imprimir	</a>			</div>
+				
+	
+	
+				
+	
+			<div itemprop="articleBody">
+		<h4>Configurando o .htaccess</h4>
+
+<p><br /><strong>Referências</strong><br /><a href="https://httpd.apache.org/docs/current/pt-br/howto/htaccess.html">https://httpd.apache.org/docs/current/pt-br/howto/htaccess.html</a> <br /><a href="https://my.justhost.com/cgi/help/htaccess">https://my.justhost.com/cgi/help/htaccess</a> <br /><a href="http://www.devin.com.br/htaccess/">http://www.devin.com.br/htaccess/</a> <br /><br />No geral, você nunca deve usar arquivos .htaccess a não ser que você não tenha acesso ao arquivo de configuração principal do Apache.<br /><br />Arquivos .htaccess devem ser usados em casos onde os provedores de conteúdo do site precisem fazer mudanças na configuração do servidor por-diretório, mas não tem acesso root ao sistema do servidor. Caso o administrador do servidor não esteja disposto a fazer mudanças freqüentes nas configurações do servidor, é desejável permitir que os usuários possam fazer essas mudanças através de arquivos .htaccess eles mesmos. Isso é particularmente verdade, por exemplo, em casos onde provedores estão fornecendo múltiplos sites para usuários em apenas uma máquina, e querem que seus usuários possam alterar suas configurações.<br /><br />É o caso dos servidores de hospedagem compartilhada.<br /><br />No entanto, de modo geral, o uso de arquivos .htaccess deve ser evitado quando possível. Quaisquer configurações que você considerar acrescentar em um arquivo .htaccess, podem ser efetivamente colocadas em uma seção &lt;Directory&gt; no arquivo principal de configuração de seu servidor.<br /><br /><strong>Existem duas razões principais para evitar o uso de arquivos .htaccess.</strong><br /><br />A primeira delas é a performance. Quando AllowOverride é configurado para permitir o uso de arquivos .htaccess, o Apache procura em todos diretórios por arquivos .htaccess.<br /><br />A segunda consideração é relativa à segurança. Você está permitindo que os usuários modifiquem as configurações do servidor, o que pode resultar em mudanças que podem fugir ao seu controle. Considere com cuidado se você quer ou não dar aos seus usuários esses privilégios. Note também que dar aos usuários menos privilégios que eles precisam, acarreta em pedidos de suporte técnico adicionais.<br /><br />O uso de arquivos .<strong>htaccess</strong> pode ser totalmente <strong>desabilitado</strong>, ajustando a diretriz AllowOverride na seção &lt;Directory&gt; para none:<br />AllowOverride None<br /><br /><strong>Para habilitar:</strong><br />AllowOverride All<br /><br />Definir os arquivos de índice<br /><br />.htaccess<br /><br />DirectoryIndex index.php index.html<br /><br /><strong>Criando páginas de erro customizadas:</strong><br /><br />ErrorDocument 404 /404.html<br /><br />Páginas de erro:<br />        401 - Authorization Required<br />        400 - Bad request<br />        403 - Forbidden<br />        500 - Internal Server Error<br />        404 - Wrong page<br /><br /><strong>Permitir que arquivos de diretório sejam listados:</strong><br />Options All +Indexes<br /><br /><strong>Impedir a listagem de diretório:</strong><br />Options ExecCGI Includes IncludesNOEXEC SymLinksIfOwnerMatch -Indexes<br /><br />ou<br />## No directory listings<br />&lt;IfModule autoindex&gt;<br />  IndexIgnore *<br />&lt;/IfModule&gt;<br /><br /><strong>Bloquear certos IPs:</strong><br />        order allow,deny<br />        deny from 123.123.123.123 #specify a specific address<br />        deny from 123.123.123.123/30 #specify a subnet range<br />        deny from 123.123.* #specify an IP address wildcard<br />        allow from all<br /><br /><strong>Permitir certos IPs:</strong><br />        order deny,allow<br />        allow from 123.123.123.123 #specify a specific address<br />        allow from 123.123.123.123/30 #specify a subnet range<br />        allow from 123.123.* #specify an IP address wildcard<br />        deny from all<br /><br /><strong>Redirecionar de um arquivo para outro:</strong><br />Redirect /redirect_from.html http://www.newsite.com/folder/redirect_to.html<br /><br /><strong>Redirecionar de uma pasta para outra:</strong><br />Redirect /redirect_from http://www.newsite.com/redirect_to<br /><br /><strong># Deixa a Intranet acessar</strong><br />Order allow,deny<br />allow from 192.168.0.<br />deny from all<br /><br /><strong># Deixa todo mundo acessar, menos o IP 192.168.0.25</strong><br />Order deny,allow<br />deny from 192.168.0.25<br />allow from all<br /><br />ErrorDocument 401 /erros/falhaautorizacao.html<br />ErrorDocument 404 /erros/naoencontrado.html<br />ErrorDocument 403 /erros/acessonegado.html<br />ErrorDocument 500 /erros/errointerno.html<br /><br /><strong>Redirecionar páginas de erro 404 para a index do site:</strong><br /><br />Supondo que o site está na pasta /joomla<br /><br />1) Criar no raiz a pasta<br /><br />erros<br /><br />2) Dentro da pasta criar o arquivo 404.php contendo:<br /><br />&lt;?php<br />header('location: /joomla/index.php');<br /><br />3) Criar o arquivo .htaccess na pasta do site contendo:<br /><br />ErrorDocument 404 /erros/404.php<br /><br /></p> 	</div>
+
+	
+	
+				
+	
+	
+	
+</article>
+
+</body>
+</html>

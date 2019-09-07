@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br" dir="ltr">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <base href="" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Ribamar FS" />
+	<meta name="robots" content="noindex, nofollow" />
+	<meta name="description" content="Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros." />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>Migrations no Laravel - RibaFS Portal</title>
+	<link href="http://ribafs.org/portal/frameworks/laravel-5/tutoriais/migrations-no-laravel.html?tmpl=component&amp;print=1&amp;layout=default" rel="canonical" />
+	<link href="../../../templates/shaper_helix3/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../../../favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<script src="../../../media/jui/js/jquery.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery-noconflict.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery-migrate.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="http://backup/portal/media/system/js/caption.js?d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script type="text/javascript">
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+	</script>
+	<meta property="og:url" content="http://backup/portal/frameworks/laravel-5/tutoriais/migrations-no-laravel.html" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Migrations no Laravel" />
+	<meta property="og:description" content="Migrations é um recurso que cria a estrutura das tabelas em código e após um comando ele cria as tabelas no banco. Também permite remover as tabelas do ban..." />
+
+   	<link rel="stylesheet" href="../../../media/jui/css/bootstrap.min.css" type="text/css" />
+	<link rel="stylesheet" href="../../../templates/shaper_helix3/css/frontend-edit.css" type="text/css" />
+    <link rel="stylesheet" href="../../../templates/shaper_helix3/css/template.css" type="text/css" />
+</head>
+<body class="contentpane">
+	<div id="system-message-container">
+	</div>
+
+	
+
+<article class="item item-page" itemscope itemtype="http://schema.org/Article">
+	<meta itemprop="inLanguage" content="pt-BR" />
+	
+	
+
+	<div class="entry-header">
+		<span class="post-format"><i class="fa fa-thumb-tack"></i></span>
+		
+					<h2 itemprop="name">
+									Migrations no Laravel							</h2>
+												</div>
+
+						<div id="pop-print" class="btn hidden-print">
+				<a href="migrations-no-laravel.html#" onclick="window.print();return false;">			<span class="icon-print" aria-hidden="true"></span>
+		Imprimir	</a>			</div>
+				
+	
+	
+				
+	
+			<div itemprop="articleBody">
+		<p><strong>Migrations é um recurso que cria a estrutura das tabelas em código e após um comando ele cria as tabelas no banco.</strong></p>
+
+
+<p>Também permite remover as tabelas do banco e recriar com grande flexibilidade.</p>
+
+
+<p>No Laravel 5 as migrations ficam no diretório<br />/database/migrations<br /><br /><strong>Detalhes:</strong><br /><a href="https://laravel.com/docs/5.4/migrations">https://laravel.com/docs/5.4/migrations</a> <br /><br /><strong>Criar a migrate já com a estrutura básica</strong><br />php artisan make:migration create_users_table --create=users<br /><br />Criar a primeira tabela<br />php artisan make:migration create_produto_table<br /><br />php artisan migrate:reset - <strong>apagar todas as tabelas</strong><br /><br />php artisan migrate:refresh - <strong>recriar e popular todas as tabelas</strong><br /><br />php artisan migrate:rollback --step-1<br /><br /><strong>Após o comando mirgation, edite o arquivo gerado em database/migrations e adicione os campos da tabela.</strong><br />Abrir o arquivo e criar os campos no método up:<br /><br />    Schema::create('produto', function(Blueprint $table){<br />        $table-&gt;increments('id');<br />        $table-&gt;string('name', 100);<br />        $table-&gt;integer('number');<br />        $table-&gt;boolean('active');<br />        $table-&gt;string('image', 200)-&gt;nullable();        <br />        $table-&gt;enum('category', ['eletronicos', 'moveis', 'limpeza', 'banho']);<br />        $table-&gt;text('description');<br />        $table-&gt;timestamps();<br />        $table-&gt;softDeletes(); //só marca para deleção<br />    });<br /><br />Campos date usar nullable();<br /><br />Método down()<br /><br />    Schema::drop('produto');<br /><br /><br />Criar migration e mudar nome<br />php artisan miration create_telefones_table --create telefones<br /><br />Criar as tabelas no banco a partir da migration<br />php artisan migrate<br /><br />Após efetuar alterações na estrutura da tabela da migration executar:<br />php artisan migrate:refresh (apaga tudo e recria)<br /><br /><br /><strong>Seeds - popular banco de dados</strong></p>
+
+
+<p>Estes populam as tabelas com dados de teste e ficam no diretório:<br />database/seeds<br /><br /><strong>Detalhes:</strong><br /><a href="https://laravel.com/docs/5.4/seeding">https://laravel.com/docs/5.4/seeding</a></p>
+
+
+<p>Sintaxe:<br />php artisan make:seeder UserTableSeeder<br /><br /><br />use App\User;<br /><br />public function run(){<br />    User::create([<br />        'name' =&gt; 'Carlos Ferreira',<br />        'email' =&gt; <span id="cloak3ca4662cdfa7becf394466b5e20d7c7b">Este endereço de email está sendo protegido de spambots. Você precisa do JavaScript ativado para vê-lo.</span><script type='text/javascript'>
+				document.getElementById('cloak3ca4662cdfa7becf394466b5e20d7c7b').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addy3ca4662cdfa7becf394466b5e20d7c7b = '&#039;c&#97;rl&#111;s' + '&#64;';
+				addy3ca4662cdfa7becf394466b5e20d7c7b = addy3ca4662cdfa7becf394466b5e20d7c7b + 'c&#97;rl&#111;s' + '&#46;' + 'c&#111;m';
+				var addy_text3ca4662cdfa7becf394466b5e20d7c7b = '&#039;c&#97;rl&#111;s' + '&#64;' + 'c&#97;rl&#111;s' + '&#46;' + 'c&#111;m';document.getElementById('cloak3ca4662cdfa7becf394466b5e20d7c7b').innerHTML += '<a ' + path + '\'' + prefix + ':' + addy3ca4662cdfa7becf394466b5e20d7c7b + '\'>'+addy_text3ca4662cdfa7becf394466b5e20d7c7b+'<\/a>';
+		</script>',<br />        'password' =&gt; bcrypt('123456')<br />    ])<br />}<br /><br />Editar o arquivo<br />seeds/DatabaseSeeder.php<br /><br />E mudar a linha:<br />$this-&gt;call(UserTableSeeder::class);<br /><br /><strong>Criar o seed (popula todas as tabelas criadas):</strong><br />php artisan db:seed<br /><br />Criar o model e a migration, já com parte do método up<br />php artisan make:model Produtos -m<br /><br />php artisan help make:migration<br /><br />Para apagar as tabelas criadas<br />php artisan migrate:reset<br /><br />Criar as tabelas novamente<br />php artisan migrate:refresh<br /><br />    public function up()<br />    {<br />        Schema::create('livros', function(Blueprint $table) {<br />            $table-&gt;increments('id');<br />            $table-&gt;string('isbn',20);<br />            $table-&gt;integer('autore_id')-&gt;unsigned();<br />            $table-&gt;string('titulo',40);<br />            $table-&gt;timestamps();<br />            $table-&gt;foreign('autore_id')-&gt;references('id')-&gt;on('autores')-&gt;onDelete('cascade')-&gt;onUpdate('cascade');<br />        });<br />    }<br /><br /><strong>Seed somente para uma tabela/classe</strong><br />php artisan db:seed --class=UserTableSeeder<br /><br />Ao deletar um autor deleta todos os livros relacionados a ele (onDelete('cascade')).<br /><br />            $table-&gt;foreign('user_id')-&gt;references('id')-&gt;on('users')<br />                -&gt;onUpdate('cascade')<br />                -&gt;onDelete('cascade');<br /><br />            $table-&gt;foreign('classroom_id')-&gt;references('id')-&gt;on('classrooms')<br />                -&gt;onUpdate('cascade')<br />                -&gt;onDelete('set null');<br /><br />class CreateRolesPermissionsTables extends Migration<br />{<br />    /**<br />     * Run the migrations.<br />     *<br />     * @return void<br />     */<br />    public function up()<br />    {<br />        Schema::create('roles', function (Blueprint $table) {<br />            $table-&gt;increments('id');<br />            $table-&gt;string('name');<br />            $table-&gt;string('label')-&gt;nullable();<br />            $table-&gt;timestamps();<br />        });<br /><br />        Schema::create('permissions', function (Blueprint $table) {<br />            $table-&gt;increments('id');<br />            $table-&gt;string('name');<br />            $table-&gt;string('label')-&gt;nullable();<br />            $table-&gt;timestamps();<br />        });<br /><br />        Schema::create('permission_role', function (Blueprint $table) {<br />            $table-&gt;integer('permission_id')-&gt;unsigned();<br />            $table-&gt;integer('role_id')-&gt;unsigned();<br /><br />            $table-&gt;foreign('permission_id')<br />                -&gt;references('id')<br />                -&gt;on('permissions')<br />                -&gt;onDelete('cascade');<br /><br />            $table-&gt;foreign('role_id')<br />                -&gt;references('id')<br />                -&gt;on('roles')<br />                -&gt;onDelete('cascade');<br /><br />            $table-&gt;primary(['permission_id', 'role_id']);<br />        });<br /><br />        Schema::create('role_user', function (Blueprint $table) {<br />            $table-&gt;integer('role_id')-&gt;unsigned();<br />            $table-&gt;integer('user_id')-&gt;unsigned();<br /><br />            $table-&gt;foreign('role_id')<br />                -&gt;references('id')<br />                -&gt;on('roles')<br />                -&gt;onDelete('cascade');<br /><br />            $table-&gt;foreign('user_id')<br />                -&gt;references('id')<br />                -&gt;on('users')<br />                -&gt;onDelete('cascade');<br /><br />            $table-&gt;primary(['role_id', 'user_id']);<br />        });<br />    }<br /><br />    /**<br />     * Reverse the migrations.<br />     *<br />     * @return void<br />     */<br />    public function down()<br />    {<br />        Schema::drop('permission_role');<br />        Schema::drop('role_user');<br />        Schema::drop('roles');<br />        Schema::drop('permissions');<br />    }<br />}</p> 	</div>
+
+	
+	
+				
+	
+	
+	
+</article>
+
+</body>
+</html>

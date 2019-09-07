@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br" dir="ltr">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <base href="" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Ribamar FS" />
+	<meta name="robots" content="noindex, nofollow" />
+	<meta name="description" content="Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros." />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>13.5 - Aplicativo Finanças Pessoais - RibaFS Portal</title>
+	<link href="http://ribafs.org/portal/curriculo/livros/cakephp/13-5-aplicativo-financas-pessoais.html?tmpl=component&amp;print=1&amp;layout=default" rel="canonical" />
+	<link href="../../../templates/shaper_helix3/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../../../favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="http://backup/portal/media/plg_content_prismsyntaxhighlighter/css/prism-okaidia.css" rel="stylesheet" type="text/css" />
+	<link href="http://backup/portal/media/plg_content_prismsyntaxhighlighter/css/prism-linenumbers.css" rel="stylesheet" type="text/css" />
+	<script src="http://backup/portal/media/plg_content_prismsyntaxhighlighter/js/prism-tinymce.js" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery-noconflict.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery-migrate.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="http://backup/portal/media/system/js/caption.js?d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script type="text/javascript">
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+	</script>
+	<meta property="og:url" content="http://backup/portal/curriculo/livros/cakephp/13-5-aplicativo-financas-pessoais.html" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="13.5 - Aplicativo Finanças Pessoais" />
+	<meta property="og:description" content="13.5 - Aplicativo Finanças Pessoais Cada um de nós tem um fogo no coração para alguma coisa. É nossa meta na vida encontrá-lo e mantê-lo aceso. (Mary Lou R..." />
+
+   	<link rel="stylesheet" href="../../../media/jui/css/bootstrap.min.css" type="text/css" />
+	<link rel="stylesheet" href="../../../templates/shaper_helix3/css/frontend-edit.css" type="text/css" />
+    <link rel="stylesheet" href="../../../templates/shaper_helix3/css/template.css" type="text/css" />
+</head>
+<body class="contentpane">
+	<div id="system-message-container">
+	</div>
+
+	
+
+<article class="item item-page" itemscope itemtype="http://schema.org/Article">
+	<meta itemprop="inLanguage" content="pt-BR" />
+	
+	
+
+	<div class="entry-header">
+		<span class="post-format"><i class="fa fa-thumb-tack"></i></span>
+		
+					<h2 itemprop="name">
+									13.5 - Aplicativo Finanças Pessoais							</h2>
+												</div>
+
+						<div id="pop-print" class="btn hidden-print">
+				<a href="13-5-aplicativo-financas-pessoais.html#" onclick="window.print();return false;">			<span class="icon-print" aria-hidden="true"></span>
+		Imprimir	</a>			</div>
+				
+	
+	
+				
+	
+			<div itemprop="articleBody">
+		<h3>13.5 - Aplicativo Finanças Pessoais<br /><br /></h3>
+<p style="text-align: right;"><em><strong>Cada um de nós tem um fogo no coração para alguma coisa. É nossa meta na vida encontrá-lo e mantê-lo aceso. (Mary Lou Retton)</strong></em></p>
+<p><br /><strong>Este aplicativo tem como objetivo principal efetuar operações entre os elementos do MVC (Controller, Model e View) para um simplificada aplicação de controle de receitas e despesas pessoais.</strong><br /><br />Procurarei simplificar outras operações, focando apenas na codificação.<br /><br />Versão com CakePHP 3.6.1<br /><br />- Criar um Aplicativo com o CakePHP 3.6.1<br />- Para gerenciamento de finanças pessoais.<br />- Apenas com as tabelas despesas e receitas<br /><br /><strong>Importante:</strong> este código customizado funciona apenas no CakePHP 3.6 ou superior<br />Criando behaviors para executar o código da camada de negócios nos models<br />Criando components para executar o código da camada de negócios nos controllers<br /><br /><strong>- Criar o aplicativo</strong><br /><br />cd /var/www/html<br />composer create-project --prefer-dist cakephp/app financas<br /><br /><strong>- Criar o banco de dados</strong><br /><br />Usaremos como SGBD o MySQL<br /><br />Criar o banco financas contendo:</p>
+<pre class="language-php"><code>CREATE TABLE `despesas` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `descricao` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `valor` int(11) DEFAULT NULL,
+  `mes` char(8) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `created` date DEFAULT NULL,
+  `modified` date DEFAULT NULL,
+  `receita_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+INSERT INTO `despesas` (`id`, `descricao`, `valor`, `mes`, `created`, `modified`, `receita_id`) VALUES
+(1,	'Mercantil',	500,	'05/2017',	'2017-05-11',	'2017-05-15',	1),
+(2,	'Condomínio',	100,	'05/2017',	'2017-05-11',	'2017-05-15',	1),
+(3,	'Teste',	300,	'06/2017',	'2017-05-11',	'2017-05-11',	2);
+
+CREATE TABLE `receitas` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `descricao` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `mes` char(7) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `valor` int(11) DEFAULT NULL,
+  `created` date DEFAULT NULL,
+  `modified` date DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+INSERT INTO `receitas` (`id`, `descricao`, `mes`, `valor`, `created`, `modified`) VALUES
+(1,	'Salário',	'05/2017',	3000,	'2017-05-11',	'2017-05-15'),
+(2,	'Extra',	'05/2017',	100,	'2017-05-11',	'2017-05-15');</code></pre>
+<p>Observe acima que o mês é tipo texto para que seja inserido algo com mes/ano<br /><br />- Configurar o banco de dados em config/app.php<br />e o <br />config/routes.php para Despesas/index<br /><br /><br /><strong>Gerar o código dos dois CRUDs com o Bake</strong><br /><br />cd /var/www/html/financas<br />bin/cake bake all despesas<br />bin/cake bake all receitas<br /><br /><br /><strong>Veja pelo navegador</strong><br /><br />http://localhost/financas<br /><br /><strong>Já temos um CRUD básico para as despesas e para as receitas</strong><br /><br />Mas o importante de um aplicativo deste tipo são o código personalidado, chamado de lógica de negócio, que é por exemplo somar todas as despesas de um mês e subtrair as receitas do mês do total de despesas. Isso o CakePHP não faz e precisamos fazer. Também precisamos criar código nos tempaltes adicionando um formulário<br /><br /><br /><strong>Agora a parte interessante</strong><br /><br />O código da camada de negócios<br />Observe que o mês tem um formato próprio, texto sendo dia/ano (dd/aaaa).<br /><br /><br /><strong>Vamos criar uma função em DespesasTable.php, que retorne a soma das despesas do mês:</strong><br /><br />Adicionar ao início:</p>
+<pre class="language-php"><code>use Cake\ORM\TableRegistry;
+
+Adicionar:
+
+	public function despesasMes($mes){
+
+		$despesas = TableRegistry::get('Despesas')-&gt;find();
+		$res = $despesas-&gt;select(['total_sum' =&gt;$despesas-&gt;func()-&gt;sum('Despesas.valor')])
+		-&gt;where(['Despesas.mes' =&gt; $mes])-&gt;first();
+		$total = $res-&gt;total_sum;
+
+		return $total;
+	}</code></pre>
+<p><strong>Criar duas funções no DespesasController.php, que retornem o resultado das funções acima:</strong><br /><br />Adicionar ao início do DespesasController<br /><br />use Cake\ORM\TableRegistry;<br /><br />Mais abaixo</p>
+<pre class="language-php"><code>	public function despesasMes()
+	{
+		$mes = $this-&gt;request-&gt;data('mes');
+		$despesas = TableRegistry::get('Despesas');
+		$total = $despesas-&gt;despesasMes($mes);
+		$this-&gt;set('total',$total); 
+		$this-&gt;set('mes',$mes);
+	}
+
+	public function saldoMes()
+	{
+		$mes = $this-&gt;request-&gt;data('mes');
+		$this-&gt;LoadModel('Receitas');
+		$receitas = $this-&gt;Receitas-&gt;receitaMes($mes);
+
+		$despesas = TableRegistry::get('Despesas');
+		$total = $despesas-&gt;despesasMes($mes);
+
+		$saldo = $receitas - $total;
+		$this-&gt;set('saldo',$saldo); 
+		$this-&gt;set('mes',$mes);
+	}
+
+
+Agora criaremos uma função no ReceitasTable.php, que retorne a soma das receitas do mês:
+
+Adicionar ao início:
+
+use Cake\ORM\TableRegistry;
+
+Mais abaixo:
+
+	public function receitaMes($mes){
+		$receitas = TableRegistry::get('Receitas')-&gt;find();
+		$res = $receitas-&gt;select(['total_sum' =&gt;$receitas-&gt;func()-&gt;sum('Receitas.valor')])
+		-&gt;where(['Receitas.mes' =&gt; $mes])
+		-&gt;first(); //perform the sum operation 
+		$total = $res-&gt;total_sum;
+
+		return $total;
+	}
+
+Veja que existe grande semelhança entre esta e a das despesas.
+
+
+Vamos customizar a src/Template/Despesas e criar duas views novas:
+
+src/Template/Despesas/despesas_mes.ctp:
+
+&lt;?php ?&gt;
+&lt;nav class="large-3 medium-4 columns" id="actions-sidebar"&gt;
+    &lt;ul class="side-nav"&gt;
+    &lt;h3&gt;&lt;?= __('Despesas') ?&gt;&lt;/h3&gt;
+&lt;?php
+print '&lt;b&gt;Mês: &lt;/b&gt;'.$mes. '&lt;br&gt;&lt;b&gt;Total: &lt;/b&gt;'. $total;
+?&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;li&gt;&lt;?= $this-&gt;Html-&gt;link(__('Voltar'), ['action' =&gt; 'index']) ?&gt;&lt;/li&gt;
+
+&lt;/nav&gt;
+
+src/Template/Despesas/saldo_mes.ctp:
+
+&lt;?php ?&gt;
+&lt;nav class="large-3 medium-4 columns" id="actions-sidebar"&gt;
+    &lt;ul class="side-nav"&gt;
+    &lt;h3&gt;&lt;?= __('Despesas') ?&gt;&lt;/h3&gt;
+&lt;?php
+print '&lt;b&gt;Mês: &lt;/b&gt;'.$mes. '&lt;br&gt;&lt;b&gt;Saldol: &lt;/b&gt;'. $saldo;
+?&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;li&gt;&lt;?= $this-&gt;Html-&gt;link(__('Voltar'), ['action' =&gt; 'index']) ?&gt;&lt;/li&gt;
+&lt;/nav&gt;
+
+Agora vejamos a customização do index.ctp
+
+Logo abaixo da linha:
+
+&lt;li&gt;&lt;?= $this-&gt;Html-&gt;link(__('New Receita'), ['controller' =&gt; 'Receitas', 'action' =&gt; 'add']) ?&gt;&lt;/li&gt;
+
+Adicione os dois pequenos forms:
+
+        &lt;b&gt;Despesas de um mês&lt;/b&gt;
+        &lt;?php
+           echo $this-&gt;Form-&gt;create("Despesas",['url'=&gt;'/despesas/despesas_mes']);
+           echo $this-&gt;Form-&gt;input('mes');
+           echo $this-&gt;Form-&gt;button('Submit');
+           echo $this-&gt;Form-&gt;end();
+        ?&gt;
+        &lt;b&gt;Saldo de um mês&lt;/b&gt;
+        &lt;?php
+           echo $this-&gt;Form-&gt;create("Saldo",['url'=&gt;'/despesas/saldo_mes']);
+           echo $this-&gt;Form-&gt;input('mes');
+           echo $this-&gt;Form-&gt;button('Submit');
+           echo $this-&gt;Form-&gt;end();
+        ?&gt;
+</code></pre>
+<p><strong>Depois de pronto podemos efetuar as operações através dos pequenos forms.</strong><br /><br />- O form chama o action do controller<br />- O controller chama o model para que devolva o resultado de uma função<br />- Recebendo o resultado o controller devolve para a view/template respectiva<br /><br /><br /><strong>Testando</strong><br /><br />Agora acesse pela web<br />http://localhost/financas<br /><br />Pesquise o total das despesas do mês de 05/2017 ou outro que você tenha cadastrado.<br />Pesquise qual o saldo de um mês<br /><br />Isso dá para começar a mexer no código e ir em frente.<br /><br /><br /><br /><strong>Fluxo das informações</strong><br /><br />- O usuário acessa o aplicativo pela URL:<br />http://localhost/financas<br />- Então ele cai em (pela configuração do routes):<br />http://localhost/financas/despesas/index<br /><br />- Na view Despesas/index.ctp ele consulta a despesa total de um certo mês pelo formulário Despesas de um mês<br /><br />- Este form o direciona para o action DespesasController/despesasMes() através do comando do form: $this-&gt;Form-&gt;create("Despesas",['url'=&gt;'/despesas/despesas_mes'])<br /><br />- O controller então registra o DespesasTable e chama através do seu método despesasMes() para saber o total das despesas do referido mês<br /><br />- O DespesasTable, através do seu método despesasMes() prepara uma consulta e a envia ao banco de dados.<br /><br />- O banco de dados retorna o resultado para o método despesasMes() do DespesasTable.<br /><br />- O método do DespesasTable retorna o valor para o DespesasController, em seu método despesasMes()<br /><br />- O método despesasMes() do DespesasController envia através do método set() o mês e o total de despesas do referido mês para a view com o mesmo nome dele, que é a Despesas/despesas_mes.ctp<br /><br />- Finalmente o usuário é redirecionado para a view despesas_mes.ctp onde recebe o resultado de sua consulta<br /><a href="http://localhost/financas/despesas/despesas_mes">http://localhost/financas/despesas/despesas_mes </a></p>
+<p> </p> 	</div>
+
+	
+	
+				
+	
+	
+	
+</article>
+
+</body>
+</html>

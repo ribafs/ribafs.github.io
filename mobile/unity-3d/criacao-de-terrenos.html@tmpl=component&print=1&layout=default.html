@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br" dir="ltr">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <base href="" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Ribamar FS" />
+	<meta name="robots" content="noindex, nofollow" />
+	<meta name="description" content="Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros." />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>Criação de Terrenos - RibaFS Portal</title>
+	<link href="http://ribafs.org/portal/mobile/unity-3d/criacao-de-terrenos.html?tmpl=component&amp;print=1&amp;layout=default" rel="canonical" />
+	<link href="../../templates/shaper_helix3/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../../favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<script src="../../media/jui/js/jquery.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../media/jui/js/jquery-noconflict.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../media/jui/js/jquery-migrate.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="http://backup/portal/media/system/js/caption.js?d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script type="text/javascript">
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+	</script>
+	<meta property="og:url" content="http://backup/portal/mobile/unity-3d/criacao-de-terrenos.html" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Criação de Terrenos" />
+	<meta property="og:description" content="Criação de Terrenos no Unity 3D Terrenos criam um background para jogos 3D no Unity. O Unity 3D traz ferramentas que tornam fácil a criação de terrenos com..." />
+
+   	<link rel="stylesheet" href="../../media/jui/css/bootstrap.min.css" type="text/css" />
+	<link rel="stylesheet" href="../../templates/shaper_helix3/css/frontend-edit.css" type="text/css" />
+    <link rel="stylesheet" href="../../templates/shaper_helix3/css/template.css" type="text/css" />
+</head>
+<body class="contentpane">
+	<div id="system-message-container">
+	</div>
+
+	
+
+<article class="item item-page" itemscope itemtype="http://schema.org/Article">
+	<meta itemprop="inLanguage" content="pt-BR" />
+	
+	
+
+	<div class="entry-header">
+		<span class="post-format"><i class="fa fa-thumb-tack"></i></span>
+		
+					<h2 itemprop="name">
+									Criação de Terrenos							</h2>
+												</div>
+
+						<div id="pop-print" class="btn hidden-print">
+				<a href="criacao-de-terrenos.html#" onclick="window.print();return false;">			<span class="icon-print" aria-hidden="true"></span>
+		Imprimir	</a>			</div>
+				
+	
+	
+				
+	
+			<div itemprop="articleBody">
+		<p style="margin-bottom: 0cm; text-align: justify;" align="center"><span style="font-size: large;"><b>Criação de Terrenos no Unity 3D<br /></b></span></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Terrenos criam um background para jogos 3D no Unity.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">O Unity 3D traz ferramentas que tornam fácil a criação de terrenos com um terreno, elevações, platôs, árvores, gramas, etc.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Criação de Terreno no Unity 3D 4.5.3:</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">GameObject – Create Other – Terrain</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Ele aparece assim:</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><img src="../../images/terreno1.png" alt="" /> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; page-break-before: always; text-align: justify;">Com ele selecionado, no Inspector aparece um componente Terrain (Script).</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Clique no último botão, Terrain Settings para visualizar as configurações do Terreno. Originalmente são estas:</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><img src="../../images/terreno2.png" alt="" /> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; page-break-before: always; text-align: justify;"><b>Configurações </b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Para trabalhar com mais conforto, vamos alterar Terrain Width para 200 e Terrain Length também para 200.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Agora rolamos o botão do meio do mouse para aumentar o zoom até aparecerem as limitações do terreno, como abaixo:</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><img src="../../images/terreno3a.png" alt="" /> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Alterando o Terreno</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">As Ferramentas de construção do terreno:</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><img src="../../images/uterreno1.png" alt="" /></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Pela ordem as ferramentas são:</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Raise / Lower</b> (ao clicar na primeira temos)</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><img src="../../images/uterreno2.png" alt="" /></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Temos várias brochas e podemos alterar o Size e a Opacidade delas.</p>
+
+<p style="margin-bottom: 0cm; page-break-before: always; text-align: justify;">A característica principal desta é que podemos arrastar para criar alguma elevação e se mantiver o botão pressionado a elevação continua sem limites.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Vejamos exemplos:</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><img src="../../images/terreno4.png" alt="" /> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Antes de começar a construir o terreno adicione uma luz direcional.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Posição da Câmera</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">É muito importante deixar a câmara numa posição que faça nosso terreno aparecer quando o play for pressionado, quando o jogo começar.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">O terreno precisa ficar numa região coberta pela Main Camera.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Clique na Main Camera e se ela não aparecer tecle F. Ela aparecerá. Então clique no botão Move (das 4 setas) e mova a câmara para uma posição acima e à esquerda do terreno.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Se o tereno desaparecer faça o mesmo: clique em Terrain na hierarquia e tecle F.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Então mova ou mude o zoom do mesmo com o mouse.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Interessante é girar a luz para uma posição de maior destaque. Gire e execute para ver no que dá.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Paint Height</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><img src="../../images/uterreno3.png" alt="" /></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">A diferença deste para o Raise/Lower é que tem mais um parâmetro, o height. Isso permite limitar a altura dos montes e picos, criando platôs. Reduza um pouco o Height e crie um monte:</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Posso reduzir os existente e criar novos com a altura máxima escolhida.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><img src="../../images/terreno5.png" alt="" /> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Segurando o Control</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Segurando o control o mouse sai deformando as elevações e destruindo até apagar.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Smooth Height</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><img src="../../images/uterreno4.png" alt="" /></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Esta suavisa as formas das elevações. Podemos alterar size e opacidade.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Ao arrastar o mouse sobre as superfícies ele sai suavizando.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Opacity maior suavisa mais.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; page-break-before: always; text-align: justify;"><b>Paint Texture</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Com esta podemos importar uma textura existente ou várias e pintar a cor de uma sobre outra com uma das brochas e ainda podemos escolher a a força da pintura com o Target Strength.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><img src="../../images/uterreno5.png" alt="" /></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Para importar Textura clique em Edite Textures – Add Texture.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Se observar em um projeto limpo não encontrará nenhuma textura para adicionar.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Adicionar Pacote de Terreno</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Clicar em Assets com o botão direito do mouse – Import Package – Terrain Assets</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><strong>Import</strong></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Ele criará uma pasta Standard Assets na pasta Assets. Nesta pasta existem várias texturas para trabalhar com terreno.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Vamos novamente tentar importar a textura para o terreno.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Selecione o terreno na hierarquia – No Inspector clicar no Paint Textura (pincel) - Edite Textures – Add Texture – Texture - Select. Escolha uma textura e efetue um duplo clique sobre a mesma e depois clique em Add.</p>
+
+<p style="margin-bottom: 0cm; page-break-before: always; text-align: justify;">Veja que nosso terreno já está todo coberto com a textura que selecionamos.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><img src="../../images/terreno6.png" alt="" /> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Podemos importar uma segunda e mais outras para pintar o terreno atual e seus elementos. Veja</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><img src="../../images/terreno7.png" alt="" /> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">A sua criatividade é quem determina os limites.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Place Tree</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Com esta adicionamos árvores para nosso terreno.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><img src="../../images/uterreno6.png" alt="" /></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Clique em Edit Trees – Add Tree</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><img src="../../images/uterreno7.png" alt="" /></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Clicar no pequeno círculo à direita de None (Game Object)</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">e selecionar Palm.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Efetuar um duplo clique em Palm e Add.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Agora configure o Size da Brush, a densidade, cor altura das árvores, etc. Então desenhe as árvores no terreno.</p>
+
+<p style="margin-bottom: 0cm; page-break-before: always; text-align: justify;">Veja um exemplo:</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><img src="../../images/terreno8.png" alt="" /> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Ventos</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Nossas árvores sofrem até influência dos ventos, balançando seus galhos. Podemos configurar as características do vento mexendo nas configurações do componente Terain (Script) em Wind Settings.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Paint Details</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Com esta podemos adicionar grama, pedras, etc.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><img src="../../images/uterreno8.png" alt="" /></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Veja</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><img src="../../images/terreno9.png" alt="" /> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Podemos também importar texturas e objetos de terceiros.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><span style="font-size: large;"><b>SkyBox</b></span></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Adicionar o ceu acima do terreno.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Para isso precisamos mexer em duas propriedades da Main Camera:</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Clear Flags e Back Ground Color</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Um exemplo é alterar de Skybox para Cor sólida e alterar a cor no Back Ground Color.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Criar Skybox</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Selecionar a Main Camera</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Component – Rendering – Skybox</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Ele adiciona o componente ao final das propriedades da Main Camera.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Adicionar o pacote Skybox</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Precisamos adicionar este pacote que tem o material do ceu.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Assets – Import Package – Skyboxes – Import</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Selecionar Main Camera</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Inspector ao final Skybox</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Clicar no pequeno círculo à direita de Custom Skybox e selecionar Sunny1 SkyBox ou Sunny2 SkyBox.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Execuo o jogo no play para ver o ceu acima.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Existem materiais para noite enluarada entre outros.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; page-break-before: always; text-align: justify;"><b>Salvando o material do Skybox</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Para que um material escolhido para o Skybox fique definitivamente, precisamos avisar ao renderizador:</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Edit – Render Settings – Skybox Material – indicar o mesmo da Main Camera.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Problemas</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">-Caso a grid do terreno desapareça, ficando todo brando (com luz), então não poderemos desenhar nada sobre o terreno. Volte para o estado com a grid (Ctrl+Z) ou refaça tudo.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">-A Main Camera deve estar posocionada adequadamente para que possamos desenhar os elementos do terreno.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">-A grama não pode ser desenhada em qualquer local no terreno.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">-Cuidado com o btão Flatten (Paint height), pois elimina todas as elevações do terreno.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Colisão em Árvores</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Selecione a árvore</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Adicione a colisão Capsula Collider</p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;"> </p> 	</div>
+
+	
+	
+				
+	
+	
+	
+</article>
+
+</body>
+</html>

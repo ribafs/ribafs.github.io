@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br" dir="ltr">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <base href="" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Ribamar FS" />
+	<meta name="robots" content="noindex, nofollow" />
+	<meta name="description" content="Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros." />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>9.3.2 - htmlHelper - RibaFS Portal</title>
+	<link href="http://ribafs.org/portal/curriculo/livros/cakephp/9-3-2-htmlhelper.html?tmpl=component&amp;print=1&amp;layout=default" rel="canonical" />
+	<link href="../../../templates/shaper_helix3/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../../../favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="http://backup/portal/media/plg_content_prismsyntaxhighlighter/css/prism-okaidia.css" rel="stylesheet" type="text/css" />
+	<link href="http://backup/portal/media/plg_content_prismsyntaxhighlighter/css/prism-linenumbers.css" rel="stylesheet" type="text/css" />
+	<script src="http://backup/portal/media/plg_content_prismsyntaxhighlighter/js/prism-tinymce.js" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery-noconflict.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery-migrate.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="http://backup/portal/media/system/js/caption.js?d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script type="text/javascript">
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+	</script>
+	<meta property="og:url" content="http://backup/portal/curriculo/livros/cakephp/9-3-2-htmlhelper.html" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="9.3.2 - htmlHelper" />
+	<meta property="og:description" content="9.3.2 – htmlHelper Não perca a motivação só porque as coisas não estão correndo como o previsto. Adversidade gera sabedoria e é isso que levará você ao suc..." />
+
+   	<link rel="stylesheet" href="../../../media/jui/css/bootstrap.min.css" type="text/css" />
+	<link rel="stylesheet" href="../../../templates/shaper_helix3/css/frontend-edit.css" type="text/css" />
+    <link rel="stylesheet" href="../../../templates/shaper_helix3/css/template.css" type="text/css" />
+</head>
+<body class="contentpane">
+	<div id="system-message-container">
+	</div>
+
+	
+
+<article class="item item-page" itemscope itemtype="http://schema.org/Article">
+	<meta itemprop="inLanguage" content="pt-BR" />
+	
+	
+
+	<div class="entry-header">
+		<span class="post-format"><i class="fa fa-thumb-tack"></i></span>
+		
+					<h2 itemprop="name">
+									9.3.2 - htmlHelper							</h2>
+												</div>
+
+						<div id="pop-print" class="btn hidden-print">
+				<a href="9-3-2-htmlhelper.html#" onclick="window.print();return false;">			<span class="icon-print" aria-hidden="true"></span>
+		Imprimir	</a>			</div>
+				
+	
+	
+				
+	
+			<div itemprop="articleBody">
+		<h3>9.3.2 – htmlHelper</h3>
+<p align="right"><em><strong>Não perca a motivação só porque as coisas não estão correndo como o previsto. Adversidade gera sabedoria e é isso que levará você ao sucesso.</strong></em><br /> </p>
+<p>class <tt>Cake\View\Helper\HtmlHelper</tt>(View $view, array $config =[])</p>
+<p lang="pt-PT"><a name="result_box7"></a> <span style="font-family: Times New Roman, serif;">O papel do HtmlHelper no CakePHP é fazer opções relacionados a HTML mais fácil, mais rápido e mais resistente à mudança. Usando este helper permitirá que sua aplicação seja mais luz em seus pés, e mais flexível de onde ele é colocado em relação à raiz de um domínio.</span></p>
+<p><span style="font-family: Times New Roman, serif;"><span lang="pt-PT">Você deve ter notado o uso de um objeto chamado </span></span><code class="western"><span style="font-family: Times New Roman, serif;"><span lang="pt-PT">$this-&gt;Html</span></span></code><span style="font-family: Times New Roman, serif;"><span lang="pt-PT">, uma instância da classe </span></span><code class="western"><a href="https://book.cakephp.org/3.0/pt/views/helpers/html.html#Cake%5CView%5CHelper%5CHtmlHelper"><span style="font-family: Times New Roman, serif;"><span lang="pt-PT">Cake\View\Helper\HtmlHelper</span></span></a></code><span style="font-family: Times New Roman, serif;"><span lang="pt-PT"> do CakePHP. O CakePHP vem com um conjunto de view helpers que simplificam tarefas como gerar links e formulários. Você pode aprender como usá-los em </span></span><a href="https://book.cakephp.org/3.0/pt/views/helpers.html">Helpers (Facilitadores)</a><span style="font-family: Times New Roman, serif;"><span lang="pt-PT">, mas aqui é importante notar que o método </span></span><code class="western"><span style="font-family: Times New Roman, serif;"><span lang="pt-PT">link()</span></span></code><span style="font-family: Times New Roman, serif;"><span lang="pt-PT"> irá gerar um link HTML com o referido título (primeiro parâmetro) e URL (segundo parâmetro).</span></span><span style="font-family: Times New Roman, serif;"><span lang="pt-PT"><br /> <br /> Muitos métodos HtmlHelper incluem um parâmetro $at</span></span><span style="font-family: Times New Roman, serif;"><span lang="pt-PT">t</span></span><span style="font-family: Times New Roman, serif;"><span lang="pt-PT">ribut</span></span><span style="font-family: Times New Roman, serif;"><span lang="pt-PT">es</span></span><span style="font-family: Times New Roman, serif;"><span lang="pt-PT">, que lhe permitem aderência em quaisquer atributo extras em suas tags. Aqui estão alguns exemplos de como usar o </span></span><span style="font-family: Times New Roman, serif;"><span lang="pt-PT">parâmetro </span></span><span style="font-family: Times New Roman, serif;"><span lang="pt-PT">$at</span></span><span style="font-family: Times New Roman, serif;"><span lang="pt-PT">t</span></span><span style="font-family: Times New Roman, serif;"><span lang="pt-PT">ribut</span></span><span style="font-family: Times New Roman, serif;"><span lang="pt-PT">te</span></span><span style="font-family: Times New Roman, serif;"><span lang="pt-PT">s:</span></span></p>
+<pre class="western"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><i>Desired attributes: &lt;tag class="someClass" /&gt;</i></span></span>
+<span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><i>Array parameter: ['class' =&gt; 'someClass']</i></span></span>
+
+<span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><i>Desired attributes: &lt;tag name="foo" value="bar" /&gt;</i></span></span>
+<span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><i>Array parameter:  ['name' =&gt; 'foo', 'value' =&gt; 'bar']</i></span></span></pre>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><b>Inserindo Elementos Bem Formatados</b></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><a name="result_box12"></a> <span style="font-family: Times New Roman, serif;"><span lang="pt-PT">A tarefa mais importante que o HtmlHelper realiza é a criação de marcação bem formado. Esta seção irá cobrir alguns dos métodos do HtmlHelper e como usá-los.</span> </span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><b>Criando a tag Charset</b></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><tt class="western"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><i>Cake\View\Helper\HtmlHelper::charset</i></span></span></tt><span style="font-family: Times New Roman, serif;"><span style="font-size: large;"><i>(</i></span></span><em><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><i>$charset=null</i></span></span></em><span style="font-family: Times New Roman, serif;"><span style="font-size: large;"><i>)</i></span></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;">Usado para criar a meta tag especificando o charset do documento. O default valor é UTF-8. Veja um exemplo:</span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><i>echo $this-&gt;Html-&gt;charset();</i></span></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;">Uma alternativa:</span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><i>echo $this-&gt;Html-&gt;charset('ISO-8859-1');</i></span></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"> </p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><b>Linkando para Arquivos CSS</b></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><tt class="western"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><i>Cake\View\Helper\HtmlHelper::css</i></span></span></tt><span style="font-family: Times New Roman, serif;"><span style="font-size: large;"><i>(</i></span></span><em><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><i>mixed $path</i></span></span></em><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><i>, </i></span></span><em><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><i>array $options =</i></span></span></em><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><i>[]</i></span></span><span style="font-family: Times New Roman, serif;"><span style="font-size: large;"><i>)</i></span></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;">Cria um link para um CSS. Caso o bloco option seja configurado para true, a tag link é adicionada para o bloco CSS que você pode imprimir dentro da tag head do documento.</span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;">Este método de inclusão do CSS assume que o CSS especificado reside dentro do webroot/css e não inicia com '/':</span></p>
+<pre class="western"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><i>echo $this-&gt;Html-&gt;css('forms');</i></span></span></pre>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;">Deve gerar:</span></p>
+<pre class="western"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><i>&lt;link rel="stylesheet" href="/css/forms.css" /&gt;</i></span></span></pre>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;">O primeiro parâmetro deve ser um array para incluir múltiplos arquivos:</span></p>
+<pre class="western"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><i>echo $this-&gt;Html-&gt;css(['forms', 'tables', 'menu']);</i></span></span></pre>
+<p style="margin-bottom: 0cm; line-height: 100%;"> </p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;">Saída:</span></p>
+<pre class="western"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><i>&lt;link rel="stylesheet" href="/css/forms.css" /&gt;</i></span></span>
+<span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><i>&lt;link rel="stylesheet" href="/css/tables.css" /&gt;</i></span></span>
+<span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><i>&lt;link rel="stylesheet" href="/css/menu.css" /&gt;</i></span></span></pre>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;">Adicionando CSS de um Plugin:</span></p>
+<pre class="western"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><i>echo $this-&gt;Html-&gt;css('DebugKit.toolbar.css');</i></span></span></pre>
+<p style="margin-bottom: 0cm; line-height: 100%;"> </p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><b>Criando Meta tags</b></span></p>
+<pre class="language-php"><code>&lt;?= $this-&gt;Html-&gt;meta(
+    'favicon.ico',
+    '/favicon.ico',
+    ['type' =&gt; 'icon']
+);
+?&gt;
+&lt;?= $this-&gt;Html-&gt;meta(
+    'keywords',
+    'enter any meta keyword here'
+);
+?&gt;
+&lt;?= $this-&gt;Html-&gt;meta(
+    'description',
+    'enter any meta description here'
+);
+?&gt;</code></pre>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><b>Linkando para Imagens</b></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><tt class="western"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><i>Cake\View\Helper\HtmlHelper::image</i></span></span></tt><span style="font-family: Times New Roman, serif;"><span style="font-size: large;"><i>(</i></span></span><em><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><i>string $path</i></span></span></em><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><i>, </i></span></span><em><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><i>array $options =</i></span></span></em><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><i>[]</i></span></span><span style="font-family: Times New Roman, serif;"><span style="font-size: large;"><i>)</i></span></span></p>
+<pre class="western"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><i>echo $this-&gt;Html-&gt;image('cake_logo.png', ['alt' =&gt; 'CakePHP']);</i></span></span></pre>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><i>Gera:</i></span></span></p>
+<pre class="western"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><i>&lt;img src="/img/cake_logo.png" alt="CakePHP" /&gt;</i></span></span></pre>
+<p style="margin-bottom: 0cm; line-height: 100%;"> </p>
+<pre class="western"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><i>echo $this-&gt;Html-&gt;image("recipes/6.jpg", [</i></span></span>
+    <span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><i>"alt" =&gt; "Brownies",</i></span></span>
+    <span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><i>'url' =&gt; ['controller' =&gt; 'Recipes', 'action' =&gt; 'view', 6]</i></span></span>
+<span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><i>]);</i></span></span></pre>
+<p style="margin-bottom: 0cm; line-height: 100%;"><strong><span style="font-family: Times New Roman, serif;">Plugin:</span></strong></p>
+<pre class="western"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><i>echo $this-&gt;Html-&gt;image('DebugKit.icon.png');</i></span></span></pre>
+<p style="margin-bottom: 0cm; line-height: 100%;"> </p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><b>Criando Links</b></span></p>
+<pre class="language-php"><code>echo $this-&gt;Html-&gt;link(
+    'Enter',
+    '/pages/home',
+    ['class' =&gt; 'button', 'target' =&gt; '_blank']
+);
+echo $this-&gt;Html-&gt;link(
+    'Dashboard',
+    ['controller' =&gt; 'Dashboards', 'action' =&gt; 'index', '_full' =&gt; true]
+);
+echo $this-&gt;Html-&gt;link(
+    'Delete',
+    ['controller' =&gt; 'Recipes', 'action' =&gt; 'delete', 6],
+    ['confirm' =&gt; 'Are you sure you wish to delete this recipe?'],
+);
+echo $this-&gt;Html-&gt;link('View image', [
+    'controller' =&gt; 'Images',
+    'action' =&gt; 'view',
+    1,
+    '?' =&gt; ['height' =&gt; 400, 'width' =&gt; 500]
+]);
+</code></pre>
+<p style="margin-bottom: 0cm; line-height: 100%; page-break-before: always;"><span style="font-family: Times New Roman, serif;"><b>Linkando Vídeos</b></span></p>
+<pre class="western"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><i>&lt;?= $this-&gt;Html-&gt;media('audio.mp3') ?&gt;</i></span></span>
+ <span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><i>// Output</i></span></span>
+ <span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><i>&lt;audio src="/files/audio.mp3"&gt;&lt;/audio&gt;</i></span></span>
+
+ <span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><i>&lt;?= $this-&gt;Html-&gt;media('video.mp4', [</i></span></span>
+     <span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><i>'fullBase' =&gt; true,</i></span></span>
+     <span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><i>'text' =&gt; 'Fallback text'</i></span></span>
+ <span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><i>]) ?&gt;</i></span></span>
+<span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><i>&lt;?= $this-&gt;Html-&gt;media(</i></span></span>
+     <span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><i>['video.mp4', ['src' =&gt; 'video.ogg', 'type' =&gt; "video/ogg; codecs='theora, vorbis'"]],</i></span></span>
+     <span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><i>['autoplay']</i></span></span>
+ <span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><i>) ?&gt;</i></span></span></pre>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><b>Link para Imagens</b></span></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><i>Cake\View\Helper\HtmlHelper::image(string $path, array $options = [])</i></span></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><i>Creates a formatted image tag. The path supplied should be relative to webroot/img/.</i></span></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><i>echo $this-&gt;Html-&gt;image('cake_logo.png', ['alt' =&gt; 'CakePHP']);</i></span></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"> </p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;">Irá mostrar:</span></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><i>&lt;img src="/img/cake_logo.png" alt="CakePHP" /&gt;</i></span></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"> </p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><b>CSS </b><b>CakePHP</b></span></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;">Customizar CSS do bootstrap numa view</span></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><i>echo $this-&gt;Form-&gt;input('grupo',['style'=&gt;'width: 200px']);</i></span></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"> </p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><b>Tipos de Campos</b></span></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><i>input[type="text"],</i></span></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><i>input[type="password"],</i></span></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><i>input[type="email"],</i></span></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><i>input[type="tel"],</i></span></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><i>input[type="select"] {</i></span></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><i>max-width: 280px;</i></span></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><i>}</i></span></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"> </p>
+<p style="margin-bottom: 0cm; line-height: 100%; page-break-before: always;"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><b>Usando num template login.ctp</b></span></span></p>
+<pre class="language-markup"><code>&lt;div class="users form"&gt;
+&lt;?= $this-&gt;Flash-&gt;render('auth') ?&gt;    
+    &lt;?= $this-&gt;Form-&gt;create() ?&gt;
+    &lt;div align="center"&gt;
+    &lt;fieldset&gt;
+        &lt;legend&gt;&lt;?= __('&lt;h3&gt;&lt;b&gt;Favor entrar seu com login e senha&lt;/b&gt;&lt;/h3&gt;') ?&gt;&lt;/legend&gt;
+        &lt;?= $this-&gt;Form-&gt;input('username', ['label'=&gt;'Login', 'class'=&gt;'col4']) ?&gt;
+        &lt;?= $this-&gt;Form-&gt;input('password',['label'=&gt;'Senha', 'class'=&gt;'col4']) ?&gt;
+    &lt;/fieldset&gt;
+    &lt;?= $this-&gt;Form-&gt;button(__('Acessar')); ?&gt;
+    &lt;?= $this-&gt;Form-&gt;end() ?&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+
+No arquivo  webroot/css/custom.css
+
+/* Para a customização da largura dos campos de form: echo $this-&gt;Form-&gt;input('grupo',['class'=&gt;'col2']); */
+.col1{
+    width:50px;
+}
+
+.col2{
+    width:100px;
+}
+
+.col3{
+    width:150px;
+}
+
+.col4{
+    width:200px;
+}
+
+.col5{
+    width:250px;
+}
+
+.col6{
+    width:300px;
+}
+
+.col7{
+    width:350px;
+}
+
+.col8{
+    width:400px;
+}
+
+.col9{
+    width:950px;
+}
+
+JavaScript em View/Template
+
+&lt;div class="actions columns col-lg-2 col-md-3"&gt;
+    &lt;h3&gt;&lt;?= __('Ações') ?&gt;&lt;/h3&gt;
+    &lt;ul class="nav nav-stacked nav-pills"&gt;
+        &lt;li class="active disabled"&gt;&lt;?= $this-&gt;Html-&gt;link(__('Novo Materiai'), ['action' =&gt; 'add']) ?&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;?= $this-&gt;Html-&gt;link(__('Listar Materiais'), ['action' =&gt; 'index']) ?&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;script type="text/javascript"&gt;
+
+function grupoFocus() { 
+    // conta_grupo receber o valor da combo grupo
+    var elt = document.getElementById('grupo');
+    var selection=elt.options[elt.selectedIndex].innerHTML;
+    document.getElementById('conta').value = selection;
+    // Foco na descrição
+    document.getElementById('descricao').focus();
+}
+&lt;/script&gt;
+
+&lt;div class="materiais form col-lg-10 col-md-9 columns"&gt;
+    &lt;?= $this-&gt;Form-&gt;create($materiai); ?&gt;
+    &lt;fieldset&gt;
+        &lt;legend&gt;&lt;?= __('Add Materiai') ?&gt;&lt;/legend&gt;
+        &lt;?php
+            echo $this-&gt;Form-&gt;input('codigo', ['autofocus'=&gt;'autofocus']);
+            echo $this-&gt;Form-&gt;input('grupo', ['label'=&gt;'','id'=&gt;'grupo','readonly' =&gt; true,'options' =&gt; $grupos, 'empty'=&gt;'Selecione o grupo', 'onchange'=&gt;'grupoFocus()']);
+            echo $this-&gt;Form-&gt;input('conta_grupo',['id'=&gt;'conta', 'readonly'=&gt;true]);
+            echo $this-&gt;Form-&gt;input('descricao',['id'=&gt;'descricao']);
+            echo $this-&gt;Form-&gt;input('uid_inclusao');
+            echo $this-&gt;Form-&gt;input('uid_data_inclusao');
+            echo $this-&gt;Form-&gt;input('uid_alteracao');
+            echo $this-&gt;Form-&gt;input('uid_data_alteracao');
+            echo $this-&gt;Form-&gt;input('status');
+        ?&gt;
+    &lt;/fieldset&gt;
+    &lt;?= $this-&gt;Form-&gt;button(__('Enviar'), ['class' =&gt; 'btn-success']) ?&gt;
+    &lt;?= $this-&gt;Form-&gt;end() ?&gt;
+&lt;/div&gt;</code></pre>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><b>Mais detalhes em:</b></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><a href="http://book.cakephp.org/3.0/en/views/helpers/html.html">http://book.cakephp.org/3.0/en/views/helpers/html.html</a> </span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><a href="http://book.cakephp.org/3.0/en/views/helpers/paginator.html"><span style="font-family: Times New Roman, serif;">http://book.cakephp.org/3.0/en/views/helpers/paginator.html</span></a></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><a href="http://book.cakephp.org/3.0/en/views/helpers/form.html"><span style="font-family: Times New Roman, serif;">http://book.cakephp.org/3.0/en/views/helpers/form.html</span></a></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><a href="http://book.cakephp.org/3.0/en/views.html"><span style="font-family: Times New Roman, serif;">http://book.cakephp.org/3.0/en/views.html</span></a></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><a href="http://book.cakephp.org/3.0/en/core-libraries/form.html"><span style="font-family: Times New Roman, serif;">http://book.cakephp.org/3.0/en/core-libraries/form.html</span></a></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><a href="http://book.cakephp.org/3.0/en/core-libraries/email.html"><span style="font-family: Times New Roman, serif;">http://book.cakephp.org/3.0/en/core-libraries/email.html</span></a></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><a href="http://book.cakephp.org/3.0/en/views/helpers.html"><span style="font-family: Times New Roman, serif;">http://book.cakephp.org/3.0/en/views/helpers.html</span></a></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"> </p> 	</div>
+
+	
+	
+				
+	
+	
+	
+</article>
+
+</body>
+</html>

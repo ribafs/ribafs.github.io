@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br" dir="ltr">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <base href="" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Ribamar FS" />
+	<meta name="robots" content="noindex, nofollow" />
+	<meta name="description" content="Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros." />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>Remasterização para Ubuntu ou Mint - RibaFS Portal</title>
+	<link href="http://ribafs.org/portal/servidores/desktop/remasterizacao-para-ubuntu-ou-mint.html?tmpl=component&amp;print=1&amp;layout=default" rel="canonical" />
+	<link href="../../templates/shaper_helix3/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../../favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="http://backup/portal/media/plg_content_prismsyntaxhighlighter/css/prism-okaidia.css" rel="stylesheet" type="text/css" />
+	<link href="http://backup/portal/media/plg_content_prismsyntaxhighlighter/css/prism-linenumbers.css" rel="stylesheet" type="text/css" />
+	<script src="http://backup/portal/media/plg_content_prismsyntaxhighlighter/js/prism-tinymce.js" type="text/javascript"></script>
+	<script src="../../media/jui/js/jquery.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../media/jui/js/jquery-noconflict.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../media/jui/js/jquery-migrate.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="http://backup/portal/media/system/js/caption.js?d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script type="text/javascript">
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+	</script>
+	<meta property="og:url" content="http://backup/portal/servidores/desktop/remasterizacao-para-ubuntu-ou-mint.html" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Remasterização para Ubuntu ou Mint" />
+	<meta property="og:description" content="Customizando uma Instalação do Ubuntu, Mint ou Debian Útil para guardar um backup customizado do sistema operacional, para levar para outro computador, num..." />
+
+   	<link rel="stylesheet" href="../../media/jui/css/bootstrap.min.css" type="text/css" />
+	<link rel="stylesheet" href="../../templates/shaper_helix3/css/frontend-edit.css" type="text/css" />
+    <link rel="stylesheet" href="../../templates/shaper_helix3/css/template.css" type="text/css" />
+</head>
+<body class="contentpane">
+	<div id="system-message-container">
+	</div>
+
+	
+
+<article class="item item-page" itemscope itemtype="http://schema.org/Article">
+	<meta itemprop="inLanguage" content="pt-BR" />
+	
+	
+
+	<div class="entry-header">
+		<span class="post-format"><i class="fa fa-thumb-tack"></i></span>
+		
+					<h2 itemprop="name">
+									Remasterização para Ubuntu ou Mint							</h2>
+												</div>
+
+						<div id="pop-print" class="btn hidden-print">
+				<a href="remasterizacao-para-ubuntu-ou-mint.html#" onclick="window.print();return false;">			<span class="icon-print" aria-hidden="true"></span>
+		Imprimir	</a>			</div>
+				
+	
+	
+				
+	
+			<div itemprop="articleBody">
+		<h2>Customizando uma Instalação do Ubuntu, Mint ou Debian</h2>
+<p><br />Útil para guardar um backup customizado do sistema operacional, para levar para outro computador, num curso, palestra, etc.<br /><br />Com estes passos, criamos um ambiente isolado com a iso baixada e onde podemos instalar novos pacotes e remover os desejados e assim criar uma iso customizada a gosto. Esta forma também é mais flexível que usando o Remastersys, pois podemos criar a ISO enquanto trabalhamos.<br /><br />Nos passos abaixo apenas estou querendo customizar adicionando os softwares que geralmente instalo após a instalação do Linux. Quem estiver interessado em customizaar o sistema do Linux, seu desktop, etc deve então ler a texto original em:<br /><a href="http://www.915tx.com/remaster/">http://www.915tx.com/remaster/</a> <br /><br />Google+ do autor https://plus.google.com/+PeteNavarro/posts, onde deseja receber comentários.<br /><br />Existia um bom programa que fazia isso (Remastersys) com simplicidade mas foi descontinuado e os que existem são instáveis.<br /><br />Explicação detalhada de cada comando:<br /><a href="https://forums.linuxmint.com/viewtopic.php?f=42&amp;t=107350">https://forums.linuxmint.com/viewtopic.php?f=42&amp;t=107350</a> <br /><br />Nota: alguns comandos ocupam mais de uma linha. Cuidado, sempre execute o comando completo.<br /><br /><br /><strong>Instalação dos softwares necessários:</strong><br /><br />sudo apt-get install squashfs-tools genisoimage resolvconf<br /><br />Baixar a iso do Ubuntu ou do Mint:<br /><a href="http://www.ubuntu.com/download">http://www.ubuntu.com/download</a> <br /><a href="http://www.linuxmint.com/download.php">http://www.linuxmint.com/download.php</a> <br /><br />Mover a iso baixada para sua pasta /home/usuario<br /><br /><br /><strong>Configurando e Criando a ISO customizada</strong><br /><br />Abra o terminal e digite ou copie/cole:<br /><br />mkdir ~/livecdtmp<br /><br />cd ~/livecdtmp<br /><br />mkdir extract-cd mnt<br /><br />sudo mount -o loop ~/INSIRA_SUA_ISO_AQUI.iso mnt<br /><br />sudo rsync --exclude=/casper/filesystem.squashfs -a mnt/ extract-cd<br /><br />sudo unsquashfs mnt/casper/filesystem.squashfs<br />Aguarde...<br /><br />sudo mv squashfs-root edit<br /><br />sudo cp /etc/resolv.conf edit/etc/<br /><br />sudo mount --bind /dev/ edit/dev<br /><br />Entrar no ambiente chroot:<br />sudo chroot edit<br /><br />mount -t proc none /proc &amp;&amp; mount -t sysfs none /sys &amp;&amp; mount -t devpts none /dev/pts<br /><br />export HOME=/root &amp;&amp; export LC_ALL=C<br /><br />cd /etc/skel<br /><br />mkdir Desktop Documents Downloads Music Pictures Public Templates Videos<br /><br />cd /<br /><br /><br /><strong>Seu projeto está pronto para as alterações, adicionando e removendo softwares.</strong><br /><br />Eu basicamente executei o seguinte:<br /><br />apt update<br />apt upgrade<br />exit<br />sudo reboot<br /><br />Após voltar executei:<br />cd livecdtmp<br /><br />sudo mount --bind /dev/ edit/dev<br /><br />sudo chroot edit<br /><br />mount -t proc none /proc &amp;&amp; mount -t sysfs none /sys &amp;&amp; mount -t devpts none /dev/pts<br /><br />No tutorial original existem sugestões de configurar o sistema, personalizar o desktop entre outras.<br /><br />apt-get clean<br /><br />apt-get autoremove<br /><br />rm -rf /tmp/* ~/.bash_history<br /><br /><strong>Agora eu instalei tudo que geralmente instalo após instalar do zero (altere a gosto):</strong><br /><br /></p>
+<pre class="language-c"><code>apt-get -y install aptitude ntp ntpdate git samba
+apt-get -y install apache2 libapache2-mod-php7.0
+a2enmod rewrite
+apt-get -y install postgresql postgresql-contrib mysql-server sqlite3
+apt-get -y install php7.0-bcmath php7.0 mcrypt php7.0-mcrypt php7.0-gd php7.0-mysql php7.0-sqlite3 php7.0-pgsql php7.0-ldap
+apt-get -y install php7.0-mcrypt php-pear php7.0-xsl curl php7.0-curl phpunit php-xdebug php7.0-intl composer
+apt-get -y install php7.0-zip php7.0-mbstring php-gettext php-mbstring php7.0-fpm php-auth phpmyadmin
+apt-get install php-curl php-mcrypt php-gd
+phpenmod mbstring
+apt-get -y install php-apcu
+wget http://ftp.ussg.iu.edu/linux/ubuntu/pool/main/m/memcached/memcached_1.4.25-2ubuntu1_amd64.deb
+dpkg -i memcached_1.4.25-2ubuntu1_amd64.deb
+apt-get -y install php-memcache
+apt-get -y install msttcorefonts
+apt-get -y install rar unrar zip unzip p7zip-full aptitude ubuntu-restricted-extras k3b kolourpaint4 gnome-search-tool
+#Instalar Java
+sudo add-apt-repository ppa:webupd8team/java
+sudo apt-get update
+sudo apt-get install oracle-java8-installer
+#Módulo de Segurança para o Banco do Brasil
+sudo apt-get install libnss3-tools libcurl3
+wget https://cloud.gastecnologia.com.br/bb/downloads/ws/warsaw_setup64.deb -O warsaw.deb
+sudo dpkg -i warsaw.deb
+rm warsaw.deb
+apt-get -y update
+apt-get -y upgrade</code></pre>
+<p><br /><br /><strong>Sair do ambiente chroot</strong><br /><br />umount /proc<br /><br />umount /sys<br /><br />umount /dev/pts<br /><br />exit<br /><br />sudo umount edit/dev<br /><br /><br /><strong>Agora vamos construir a ISO ou volte e faça alterações.</strong><br />Idealmente reinicie seu computador agora, especialmente se tiver pouca RAM (&lt;= 4GB).<br /><br />sudo rm ~/livecdtmp/extract-cd/casper/filesystem.squashfs (somente se reconstruindo um projeto)<br /><br />cd livecdtmp<br /><br />sudo mksquashfs edit extract-cd/casper/filesystem.squashfs<br />Aguarde...<br /><br />sudo nano extract-cd/README.diskdefines<br /><br />cd extract-cd<br /><br />find -type f -print0 | sudo xargs -0 md5sum | grep -v isolinux/boot.cat | sudo tee md5sum.txt<br /><br />cd ..<br /><br />sudo mkisofs -r -V "REMASTER" -cache-inodes -J -l -b isolinux/isolinux.bin -c isolinux/boot.cat -no-emul-boot -boot-load-size 4 -boot-info-table -o ../REMASTER.iso extract-cd<br /><br />cd ..<br /><br />sudo chmod 777 REMASTER.iso<br /><br /><br /><strong>Está pronto para testar.</strong><br />Para isso criei uma VM no VirtualBox com praticamente tudo default, exceto no HD que mudei para 20GB, pois exige mais que os 10 reservados por default pelo VirtualBox. A VM foi criada com sucesso e tudo correu bem. Testei todos os softwares que instalei e estavam lá: apache, php, mysql, etc.<br /><br />Referência<br /><a href="http://www.915tx.com/remaster/">http://www.915tx.com/remaster/</a></p> 	</div>
+
+	
+	
+				
+	
+	
+	
+</article>
+
+</body>
+</html>

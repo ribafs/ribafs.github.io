@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="Joomla! - Open Source Content Management" -->
+<feed xmlns="http://www.w3.org/2005/Atom"  xml:lang="pt-br">
+	<title type="text">jQuery - RibaFS Portal</title>
+	<subtitle type="text">Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros.</subtitle>
+	<link rel="alternate" type="text/html" href="http://backup"/>
+	<id>http://backup/portal/basicos/jquery.feed</id>
+	<updated>2019-09-07T18:49:49-03:00</updated>
+	<author>
+		<name>RibaFS Portal</name>
+	</author>
+	<generator uri="https://www.joomla.org">Joomla! - Open Source Content Management</generator>
+	<link rel="self" type="application/atom+xml" href="http://backup/portal/basicos/jquery.feed?type=atom"/>
+	<entry>
+		<title>Introdução ao jQuery</title>
+		<link rel="alternate" type="text/html" href="http://backup/portal/basicos/jquery/introducao-ao-jquery.html"/>
+		<published>2017-06-22T20:25:21-03:00</published>
+		<updated>2017-06-22T20:25:21-03:00</updated>
+		<id>http://backup/portal/basicos/jquery/introducao-ao-jquery.html</id>
+		<author>
+			<name>Ribamar FS</name>
+		</author>
+		<summary type="html">&lt;h3 style=&quot;text-align: justify;&quot;&gt;Introdução ao Framework jQuery&lt;/h3&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;Adaptação da apostila da Caelum – Introdução à web:&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;a href=&quot;https://www.caelum.com.br/download/caelum-html-css-javascript-php.pdf&quot;&gt;https://www.caelum.com.br/download/caelum-html-css-javascript-php.pdf&lt;/a&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;A principal vantagem na adoção de uma biblioteca de JavaScript é permitir uma maior compatibilidade de um mesmo código com diversos navegadores. Uma maneira de se atingir esse objetivo é criando funções que verificam quaisquer características necessárias e permitam que o programador escreva um código único para todos os navegadores.&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;Além dessa vantagem, o jQuery, que é hoje a biblioteca padrão na programação front-end para Web, traz uma sintaxe mais “fluida” nas tarefas mais comuns ao programador que são: selecionar um elemento do documento e alterar suas características.&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;Com ela é possível selecionar elementos com maior facilidade, maior compatibilidade, e com menos código.&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;Por exemplo. Veja a diferença dos códigos:&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;// JavaScript &quot;puro&quot;&lt;/strong&gt;&lt;/p&gt;
+&lt;div style=&quot;color: #d4d4d4; background-color: #1e1e1e; font-family: 'Fira Code','Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'; font-weight: normal; font-size: 14px; line-height: 19px; white-space: pre;&quot;&gt;
+&lt;div&gt;&lt;span style=&quot;color: #569cd6;&quot;&gt;var&lt;/span&gt; &lt;span style=&quot;color: #9cdcfe;&quot;&gt;cabecalho&lt;/span&gt; &lt;span style=&quot;color: #d4d4d4;&quot;&gt;=&lt;/span&gt; &lt;span style=&quot;color: #9cdcfe;&quot;&gt;document&lt;/span&gt;&lt;span style=&quot;color: #d4d4d4;&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color: #dcdcaa;&quot;&gt;getElementById&lt;/span&gt;&lt;span style=&quot;color: #d4d4d4;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #ce9178;&quot;&gt;&quot;cabecalho&quot;&lt;/span&gt;&lt;span style=&quot;color: #d4d4d4;&quot;&gt;);&lt;/span&gt;&lt;/div&gt;
+&lt;br /&gt;
+&lt;div&gt;&lt;span style=&quot;color: #c586c0;&quot;&gt;if&lt;/span&gt;&lt;span style=&quot;color: #d4d4d4;&quot;&gt; (&lt;/span&gt;&lt;span style=&quot;color: #9cdcfe;&quot;&gt;cabecalho&lt;/span&gt;&lt;span style=&quot;color: #d4d4d4;&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color: #9cdcfe;&quot;&gt;attachEvent&lt;/span&gt;&lt;span style=&quot;color: #d4d4d4;&quot;&gt;) {&lt;/span&gt;&lt;/div&gt;
+&lt;br /&gt;
+&lt;div&gt;&lt;span style=&quot;color: #9cdcfe;&quot;&gt;cabecalho&lt;/span&gt;&lt;span style=&quot;color: #d4d4d4;&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color: #dcdcaa;&quot;&gt;attachEvent&lt;/span&gt;&lt;span style=&quot;color: #d4d4d4;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #ce9178;&quot;&gt;&quot;onclick&quot;&lt;/span&gt;&lt;span style=&quot;color: #d4d4d4;&quot;&gt;, &lt;/span&gt;&lt;span style=&quot;color: #569cd6;&quot;&gt;function&lt;/span&gt;&lt;span style=&quot;color: #d4d4d4;&quot;&gt; (&lt;/span&gt;&lt;span style=&quot;color: #9cdcfe;&quot;&gt;event&lt;/span&gt;&lt;span style=&quot;color: #d4d4d4;&quot;&gt;) {&lt;/span&gt;&lt;/div&gt;
+&lt;br /&gt;
+&lt;div&gt;&lt;span style=&quot;color: #dcdcaa;&quot;&gt;alert&lt;/span&gt;&lt;span style=&quot;color: #d4d4d4;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #ce9178;&quot;&gt;&quot;Você clicou no cabeçalho, usuário do IE!&quot;&lt;/span&gt;&lt;span style=&quot;color: #d4d4d4;&quot;&gt;);&lt;/span&gt;&lt;/div&gt;
+&lt;br /&gt;
+&lt;div&gt;&lt;span style=&quot;color: #d4d4d4;&quot;&gt; });&lt;/span&gt;&lt;/div&gt;
+&lt;br /&gt;
+&lt;div&gt;&lt;span style=&quot;color: #d4d4d4;&quot;&gt;} &lt;/span&gt;&lt;span style=&quot;color: #c586c0;&quot;&gt;else&lt;/span&gt; &lt;span style=&quot;color: #c586c0;&quot;&gt;if&lt;/span&gt;&lt;span style=&quot;color: #d4d4d4;&quot;&gt; (&lt;/span&gt;&lt;span style=&quot;color: #9cdcfe;&quot;&gt;cabecalho&lt;/span&gt;&lt;span style=&quot;color: #d4d4d4;&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color: #9cdcfe;&quot;&gt;addEventListener&lt;/span&gt;&lt;span style=&quot;color: #d4d4d4;&quot;&gt;) {&lt;/span&gt;&lt;/div&gt;
+&lt;br /&gt;
+&lt;div&gt;&lt;span style=&quot;color: #9cdcfe;&quot;&gt;cabecalho&lt;/span&gt;&lt;span style=&quot;color: #d4d4d4;&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color: #dcdcaa;&quot;&gt;addEventListener&lt;/span&gt;&lt;span style=&quot;color: #d4d4d4;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #ce9178;&quot;&gt;&quot;click&quot;&lt;/span&gt;&lt;span style=&quot;color: #d4d4d4;&quot;&gt;, &lt;/span&gt;&lt;span style=&quot;color: #569cd6;&quot;&gt;function&lt;/span&gt;&lt;span style=&quot;color: #d4d4d4;&quot;&gt; (&lt;/span&gt;&lt;span style=&quot;color: #9cdcfe;&quot;&gt;event&lt;/span&gt;&lt;span style=&quot;color: #d4d4d4;&quot;&gt;) {&lt;/span&gt;&lt;/div&gt;
+&lt;br /&gt;
+&lt;div&gt;&lt;span style=&quot;color: #dcdcaa;&quot;&gt;alert&lt;/span&gt;&lt;span style=&quot;color: #d4d4d4;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #ce9178;&quot;&gt;&quot;Você clicou no cabeçalho!&quot;&lt;/span&gt;&lt;span style=&quot;color: #d4d4d4;&quot;&gt;)&lt;/span&gt;&lt;/div&gt;
+&lt;br /&gt;
+&lt;div&gt;&lt;span style=&quot;color: #d4d4d4;&quot;&gt; }, &lt;/span&gt;&lt;span style=&quot;color: #569cd6;&quot;&gt;false&lt;/span&gt;&lt;span style=&quot;color: #d4d4d4;&quot;&gt;);&lt;/span&gt;&lt;/div&gt;
+&lt;br /&gt;
+&lt;div&gt;&lt;span style=&quot;color: #d4d4d4;&quot;&gt;}&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;// jQuery&lt;/strong&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;$(&quot;#cabecalho&quot;).click(function (event) {&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;alert(&quot;Você clicou no cabeçalho!&quot;);&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;});&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;O jQuery é uma biblioteca de Javascript “leve”, fácil de utilizar no sentido “escrever menos, fazer mais”. Esta biblioteca foi desenvolvida por John Resig, um programador de Javascript. O site oficial do JQuery fica em &lt;a title=&quot;JQuery, biblioteca Javascript, site oficial&quot; href=&quot;http://www.jquery.com/&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;www.jQuery.com&lt;/a&gt;.&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;Atualmente o jQuery é praticamente onipresente em qualquer site da web. Diretamente ou mais ainda em forma de plugin.&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt; &lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Plugins com jQuery&lt;/strong&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;17 plugins - &lt;a href=&quot;http://www.creativebloq.com/jquery/top-jquery-plugins-6133175&quot;&gt;http://www.creativebloq.com/jquery/top-jquery-plugins-6133175&lt;/a&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;5500 plugins - &lt;a href=&quot;http://www.jqueryrain.com/&quot;&gt;http://www.jqueryrain.com/&lt;/a&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt; &lt;/p&gt;
+&lt;h3 style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Exemplo em jQuery e JavaScript&lt;/strong&gt;&lt;/h3&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;Um código em Javascript puro, para atribuir o valor &quot;5&quot; em um elemento qualquer.&lt;/p&gt;
+&lt;div class=&quot;mw-highlight mw-content-ltr&quot; dir=&quot;ltr&quot; style=&quot;text-align: justify;&quot;&gt;
+&lt;div style=&quot;color: #d4d4d4; background-color: #1e1e1e; font-family: 'Fira Code','Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'; font-weight: normal; font-size: 14px; line-height: 19px; white-space: pre;&quot;&gt;
+&lt;div&gt;&lt;span style=&quot;color: #9cdcfe;&quot;&gt;document&lt;/span&gt;&lt;span style=&quot;color: #d4d4d4;&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color: #dcdcaa;&quot;&gt;getElementById&lt;/span&gt;&lt;span style=&quot;color: #d4d4d4;&quot;&gt;( &lt;/span&gt;&lt;span style=&quot;color: #ce9178;&quot;&gt;'Teste'&lt;/span&gt;&lt;span style=&quot;color: #d4d4d4;&quot;&gt; ).&lt;/span&gt;&lt;span style=&quot;color: #9cdcfe;&quot;&gt;value&lt;/span&gt; &lt;span style=&quot;color: #d4d4d4;&quot;&gt;=&lt;/span&gt; &lt;span style=&quot;color: #b5cea8;&quot;&gt;5&lt;/span&gt;&lt;span style=&quot;color: #d4d4d4;&quot;&gt;;&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;pre&gt;
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;O mesmo código em jQuery.&lt;/p&gt;
+&lt;div class=&quot;mw-highlight mw-content-ltr&quot; dir=&quot;ltr&quot;&gt;
+&lt;div style=&quot;color: #d4d4d4; background-color: #1e1e1e; font-family: 'Fira Code','Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'; font-weight: normal; font-size: 14px; line-height: 19px; white-space: pre;&quot;&gt;
+&lt;div&gt;&lt;span style=&quot;color: #dcdcaa;&quot;&gt;$&lt;/span&gt;&lt;span style=&quot;color: #d4d4d4;&quot;&gt;( &lt;/span&gt;&lt;span style=&quot;color: #ce9178;&quot;&gt;'#Teste'&lt;/span&gt;&lt;span style=&quot;color: #d4d4d4;&quot;&gt; ).&lt;/span&gt;&lt;span style=&quot;color: #dcdcaa;&quot;&gt;val&lt;/span&gt;&lt;span style=&quot;color: #d4d4d4;&quot;&gt;( &lt;/span&gt;&lt;span style=&quot;color: #b5cea8;&quot;&gt;5&lt;/span&gt;&lt;span style=&quot;color: #d4d4d4;&quot;&gt; );&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;pre&gt; &lt;/pre&gt;
+&lt;/div&gt;</summary>
+		<content type="html">&lt;h3 style=&quot;text-align: justify;&quot;&gt;Introdução ao Framework jQuery&lt;/h3&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;Adaptação da apostila da Caelum – Introdução à web:&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;a href=&quot;https://www.caelum.com.br/download/caelum-html-css-javascript-php.pdf&quot;&gt;https://www.caelum.com.br/download/caelum-html-css-javascript-php.pdf&lt;/a&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;A principal vantagem na adoção de uma biblioteca de JavaScript é permitir uma maior compatibilidade de um mesmo código com diversos navegadores. Uma maneira de se atingir esse objetivo é criando funções que verificam quaisquer características necessárias e permitam que o programador escreva um código único para todos os navegadores.&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;Além dessa vantagem, o jQuery, que é hoje a biblioteca padrão na programação front-end para Web, traz uma sintaxe mais “fluida” nas tarefas mais comuns ao programador que são: selecionar um elemento do documento e alterar suas características.&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;Com ela é possível selecionar elementos com maior facilidade, maior compatibilidade, e com menos código.&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;Por exemplo. Veja a diferença dos códigos:&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;// JavaScript &quot;puro&quot;&lt;/strong&gt;&lt;/p&gt;
+&lt;div style=&quot;color: #d4d4d4; background-color: #1e1e1e; font-family: 'Fira Code','Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'; font-weight: normal; font-size: 14px; line-height: 19px; white-space: pre;&quot;&gt;
+&lt;div&gt;&lt;span style=&quot;color: #569cd6;&quot;&gt;var&lt;/span&gt; &lt;span style=&quot;color: #9cdcfe;&quot;&gt;cabecalho&lt;/span&gt; &lt;span style=&quot;color: #d4d4d4;&quot;&gt;=&lt;/span&gt; &lt;span style=&quot;color: #9cdcfe;&quot;&gt;document&lt;/span&gt;&lt;span style=&quot;color: #d4d4d4;&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color: #dcdcaa;&quot;&gt;getElementById&lt;/span&gt;&lt;span style=&quot;color: #d4d4d4;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #ce9178;&quot;&gt;&quot;cabecalho&quot;&lt;/span&gt;&lt;span style=&quot;color: #d4d4d4;&quot;&gt;);&lt;/span&gt;&lt;/div&gt;
+&lt;br /&gt;
+&lt;div&gt;&lt;span style=&quot;color: #c586c0;&quot;&gt;if&lt;/span&gt;&lt;span style=&quot;color: #d4d4d4;&quot;&gt; (&lt;/span&gt;&lt;span style=&quot;color: #9cdcfe;&quot;&gt;cabecalho&lt;/span&gt;&lt;span style=&quot;color: #d4d4d4;&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color: #9cdcfe;&quot;&gt;attachEvent&lt;/span&gt;&lt;span style=&quot;color: #d4d4d4;&quot;&gt;) {&lt;/span&gt;&lt;/div&gt;
+&lt;br /&gt;
+&lt;div&gt;&lt;span style=&quot;color: #9cdcfe;&quot;&gt;cabecalho&lt;/span&gt;&lt;span style=&quot;color: #d4d4d4;&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color: #dcdcaa;&quot;&gt;attachEvent&lt;/span&gt;&lt;span style=&quot;color: #d4d4d4;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #ce9178;&quot;&gt;&quot;onclick&quot;&lt;/span&gt;&lt;span style=&quot;color: #d4d4d4;&quot;&gt;, &lt;/span&gt;&lt;span style=&quot;color: #569cd6;&quot;&gt;function&lt;/span&gt;&lt;span style=&quot;color: #d4d4d4;&quot;&gt; (&lt;/span&gt;&lt;span style=&quot;color: #9cdcfe;&quot;&gt;event&lt;/span&gt;&lt;span style=&quot;color: #d4d4d4;&quot;&gt;) {&lt;/span&gt;&lt;/div&gt;
+&lt;br /&gt;
+&lt;div&gt;&lt;span style=&quot;color: #dcdcaa;&quot;&gt;alert&lt;/span&gt;&lt;span style=&quot;color: #d4d4d4;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #ce9178;&quot;&gt;&quot;Você clicou no cabeçalho, usuário do IE!&quot;&lt;/span&gt;&lt;span style=&quot;color: #d4d4d4;&quot;&gt;);&lt;/span&gt;&lt;/div&gt;
+&lt;br /&gt;
+&lt;div&gt;&lt;span style=&quot;color: #d4d4d4;&quot;&gt; });&lt;/span&gt;&lt;/div&gt;
+&lt;br /&gt;
+&lt;div&gt;&lt;span style=&quot;color: #d4d4d4;&quot;&gt;} &lt;/span&gt;&lt;span style=&quot;color: #c586c0;&quot;&gt;else&lt;/span&gt; &lt;span style=&quot;color: #c586c0;&quot;&gt;if&lt;/span&gt;&lt;span style=&quot;color: #d4d4d4;&quot;&gt; (&lt;/span&gt;&lt;span style=&quot;color: #9cdcfe;&quot;&gt;cabecalho&lt;/span&gt;&lt;span style=&quot;color: #d4d4d4;&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color: #9cdcfe;&quot;&gt;addEventListener&lt;/span&gt;&lt;span style=&quot;color: #d4d4d4;&quot;&gt;) {&lt;/span&gt;&lt;/div&gt;
+&lt;br /&gt;
+&lt;div&gt;&lt;span style=&quot;color: #9cdcfe;&quot;&gt;cabecalho&lt;/span&gt;&lt;span style=&quot;color: #d4d4d4;&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color: #dcdcaa;&quot;&gt;addEventListener&lt;/span&gt;&lt;span style=&quot;color: #d4d4d4;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #ce9178;&quot;&gt;&quot;click&quot;&lt;/span&gt;&lt;span style=&quot;color: #d4d4d4;&quot;&gt;, &lt;/span&gt;&lt;span style=&quot;color: #569cd6;&quot;&gt;function&lt;/span&gt;&lt;span style=&quot;color: #d4d4d4;&quot;&gt; (&lt;/span&gt;&lt;span style=&quot;color: #9cdcfe;&quot;&gt;event&lt;/span&gt;&lt;span style=&quot;color: #d4d4d4;&quot;&gt;) {&lt;/span&gt;&lt;/div&gt;
+&lt;br /&gt;
+&lt;div&gt;&lt;span style=&quot;color: #dcdcaa;&quot;&gt;alert&lt;/span&gt;&lt;span style=&quot;color: #d4d4d4;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #ce9178;&quot;&gt;&quot;Você clicou no cabeçalho!&quot;&lt;/span&gt;&lt;span style=&quot;color: #d4d4d4;&quot;&gt;)&lt;/span&gt;&lt;/div&gt;
+&lt;br /&gt;
+&lt;div&gt;&lt;span style=&quot;color: #d4d4d4;&quot;&gt; }, &lt;/span&gt;&lt;span style=&quot;color: #569cd6;&quot;&gt;false&lt;/span&gt;&lt;span style=&quot;color: #d4d4d4;&quot;&gt;);&lt;/span&gt;&lt;/div&gt;
+&lt;br /&gt;
+&lt;div&gt;&lt;span style=&quot;color: #d4d4d4;&quot;&gt;}&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;// jQuery&lt;/strong&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;$(&quot;#cabecalho&quot;).click(function (event) {&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;alert(&quot;Você clicou no cabeçalho!&quot;);&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;});&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;O jQuery é uma biblioteca de Javascript “leve”, fácil de utilizar no sentido “escrever menos, fazer mais”. Esta biblioteca foi desenvolvida por John Resig, um programador de Javascript. O site oficial do JQuery fica em &lt;a title=&quot;JQuery, biblioteca Javascript, site oficial&quot; href=&quot;http://www.jquery.com/&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;www.jQuery.com&lt;/a&gt;.&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;Atualmente o jQuery é praticamente onipresente em qualquer site da web. Diretamente ou mais ainda em forma de plugin.&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt; &lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Plugins com jQuery&lt;/strong&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;17 plugins - &lt;a href=&quot;http://www.creativebloq.com/jquery/top-jquery-plugins-6133175&quot;&gt;http://www.creativebloq.com/jquery/top-jquery-plugins-6133175&lt;/a&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;5500 plugins - &lt;a href=&quot;http://www.jqueryrain.com/&quot;&gt;http://www.jqueryrain.com/&lt;/a&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt; &lt;/p&gt;
+&lt;h3 style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Exemplo em jQuery e JavaScript&lt;/strong&gt;&lt;/h3&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;Um código em Javascript puro, para atribuir o valor &quot;5&quot; em um elemento qualquer.&lt;/p&gt;
+&lt;div class=&quot;mw-highlight mw-content-ltr&quot; dir=&quot;ltr&quot; style=&quot;text-align: justify;&quot;&gt;
+&lt;div style=&quot;color: #d4d4d4; background-color: #1e1e1e; font-family: 'Fira Code','Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'; font-weight: normal; font-size: 14px; line-height: 19px; white-space: pre;&quot;&gt;
+&lt;div&gt;&lt;span style=&quot;color: #9cdcfe;&quot;&gt;document&lt;/span&gt;&lt;span style=&quot;color: #d4d4d4;&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color: #dcdcaa;&quot;&gt;getElementById&lt;/span&gt;&lt;span style=&quot;color: #d4d4d4;&quot;&gt;( &lt;/span&gt;&lt;span style=&quot;color: #ce9178;&quot;&gt;'Teste'&lt;/span&gt;&lt;span style=&quot;color: #d4d4d4;&quot;&gt; ).&lt;/span&gt;&lt;span style=&quot;color: #9cdcfe;&quot;&gt;value&lt;/span&gt; &lt;span style=&quot;color: #d4d4d4;&quot;&gt;=&lt;/span&gt; &lt;span style=&quot;color: #b5cea8;&quot;&gt;5&lt;/span&gt;&lt;span style=&quot;color: #d4d4d4;&quot;&gt;;&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;pre&gt;
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;O mesmo código em jQuery.&lt;/p&gt;
+&lt;div class=&quot;mw-highlight mw-content-ltr&quot; dir=&quot;ltr&quot;&gt;
+&lt;div style=&quot;color: #d4d4d4; background-color: #1e1e1e; font-family: 'Fira Code','Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'; font-weight: normal; font-size: 14px; line-height: 19px; white-space: pre;&quot;&gt;
+&lt;div&gt;&lt;span style=&quot;color: #dcdcaa;&quot;&gt;$&lt;/span&gt;&lt;span style=&quot;color: #d4d4d4;&quot;&gt;( &lt;/span&gt;&lt;span style=&quot;color: #ce9178;&quot;&gt;'#Teste'&lt;/span&gt;&lt;span style=&quot;color: #d4d4d4;&quot;&gt; ).&lt;/span&gt;&lt;span style=&quot;color: #dcdcaa;&quot;&gt;val&lt;/span&gt;&lt;span style=&quot;color: #d4d4d4;&quot;&gt;( &lt;/span&gt;&lt;span style=&quot;color: #b5cea8;&quot;&gt;5&lt;/span&gt;&lt;span style=&quot;color: #d4d4d4;&quot;&gt; );&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;pre&gt; &lt;/pre&gt;
+&lt;/div&gt;</content>
+		<category term="jQuery" />
+	</entry>
+</feed>

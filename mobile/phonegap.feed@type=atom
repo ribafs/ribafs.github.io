@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="Joomla! - Open Source Content Management" -->
+<feed xmlns="http://www.w3.org/2005/Atom"  xml:lang="pt-br">
+	<title type="text">PhoneGap - RibaFS Portal</title>
+	<subtitle type="text">Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros.</subtitle>
+	<link rel="alternate" type="text/html" href="http://backup"/>
+	<id>http://backup/portal/mobile/phonegap.feed</id>
+	<updated>2019-09-07T19:02:30-03:00</updated>
+	<author>
+		<name>RibaFS Portal</name>
+	</author>
+	<generator uri="https://www.joomla.org">Joomla! - Open Source Content Management</generator>
+	<link rel="self" type="application/atom+xml" href="http://backup/portal/mobile/phonegap.feed?type=atom"/>
+	<entry>
+		<title>PhoneGap - Exemplos</title>
+		<link rel="alternate" type="text/html" href="http://backup/portal/mobile/phonegap/phonegap-exemplo.html"/>
+		<published>2017-07-12T10:22:18-03:00</published>
+		<updated>2017-07-12T10:22:18-03:00</updated>
+		<id>http://backup/portal/mobile/phonegap/phonegap-exemplo.html</id>
+		<author>
+			<name>Ribamar FS</name>
+		</author>
+		<summary type="html">&lt;p&gt;&lt;strong&gt;PhoheGap - Exemplo Simples&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Adaptado das vídeo aulas do Youtube - Cadastro de Clientes com PhoneGap&lt;br /&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=pxAAIbU3X9c&quot;&gt;https://www.youtube.com/watch?v=pxAAIbU3X9c&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Simplifiquei e criei apenas uma agenda com id e nome &lt;br /&gt; &lt;br /&gt;&lt;strong&gt;Criar app&lt;/strong&gt; &lt;br /&gt; &lt;br /&gt;phonegap create agenda org.ribafs.agenda Agenda&lt;/p&gt;
+&lt;p&gt;O Phonegap criará uma aplicação básica, tipo Hello World, que precisamos modificar para nos atender.&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;strong&gt;cd agenda&lt;/strong&gt; &lt;br /&gt;Editar o www/index.html &lt;br /&gt; &lt;br /&gt;Remover tudo entre &amp;lt;body&amp;gt; e &amp;lt;/body&amp;gt; &lt;br /&gt; &lt;br /&gt;&amp;lt;head&amp;gt; &lt;br /&gt;&amp;lt;link rel=&quot;stylesheet&quot; href=&quot;http://backup/portal/js/jquery.mobile-1.4.5.min.css&quot; /&amp;gt; &lt;br /&gt;&amp;lt;/head&amp;gt; &lt;br /&gt;&amp;lt;body&amp;gt; &lt;br /&gt; &amp;lt;form id=&quot;formCliente&quot;&amp;gt; &lt;br /&gt; ID &amp;lt;input type=&quot;text&quot; name=&quot;id&quot;&amp;gt;&amp;lt;br&amp;gt; &lt;br /&gt; Nome &amp;lt;input type=&quot;text&quot; name=&quot;nome&quot;&amp;gt;&amp;lt;br&amp;gt; &lt;br /&gt; &amp;lt;button onClick=&quot;salvar();&quot; type=&quot;submit&quot;&amp;gt;Enviar&amp;lt;/button&amp;gt; &lt;br /&gt; &amp;lt;/form&amp;gt; &lt;br /&gt; &lt;br /&gt;&amp;lt;script src=&quot;http://backup/portal/js/jquery-1.11.1.min.js&quot;&amp;gt;&amp;lt;/script&amp;gt; &lt;br /&gt;&amp;lt;script src=&quot;http://backup/portal/js/jquery.mobile-1.4.5.min.js&quot;&amp;gt;&amp;lt;/script&amp;gt; &lt;br /&gt; &lt;br /&gt;&amp;lt;/body&amp;gt; &lt;br /&gt; &lt;br /&gt;&lt;strong&gt;Efetuar deploy para o build na nuvem&lt;/strong&gt; &lt;br /&gt;cd app &lt;br /&gt;phonegap remote run android &lt;br /&gt;Ao final ele gera um QRCode e exibe na tela. &lt;br /&gt; &lt;br /&gt;Criar banco&lt;br /&gt;Criar o banco agenda com uma tabela contatos e os campos id e nome apenas. &lt;br /&gt; &lt;br /&gt;&lt;strong&gt;Editar o www/index.html e adicionar ao final:&lt;/strong&gt; &lt;br /&gt; &lt;/p&gt;
+&lt;pre class=&quot;language-markup&quot;&gt;&lt;code&gt;&amp;lt;!DOCTYPE html&amp;gt;
+
+&amp;lt;html&amp;gt;
+&amp;lt;head&amp;gt;
+&amp;lt;meta charset=&quot;utf-8&quot; /&amp;gt;
+&amp;lt;meta name=&quot;format-detection&quot; content=&quot;telephone=no&quot; /&amp;gt;
+&amp;lt;meta name=&quot;msapplication-tap-highlight&quot; content=&quot;no&quot; /&amp;gt;
+&amp;lt;!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 --&amp;gt;
+&amp;lt;meta name=&quot;viewport&quot; content=&quot;user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi&quot; /&amp;gt;
+&amp;lt;link rel=&quot;stylesheet&quot; href=&quot;http://backup/portal/css/jquery.mobile-1.4.5.min.css&quot; /&amp;gt;
+&amp;lt;style&amp;gt;
+.margem{
+margin: 10px;
+}
+&amp;lt;/style&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+
+&amp;lt;div data-role=&quot;page&quot;&amp;gt;
+&amp;lt;div data-role=&quot;header&quot;&amp;gt;
+&amp;lt;h1&amp;gt;Agenda de Contatos&amp;lt;/h1&amp;gt;
+&amp;lt;/div&amp;gt;&amp;lt;!-- /header --&amp;gt;
+
+&amp;lt;form id=&quot;formContatos&quot;&amp;gt;
+&amp;amp;nbsp;ID&amp;lt;span&amp;gt; &amp;lt;input type=&quot;text&quot; name=&quot;id&quot;&amp;gt;
+&amp;amp;nbsp;Nome &amp;lt;input type=&quot;text&quot; name=&quot;nome&quot;&amp;gt;
+&amp;lt;button onClick=&quot;salvar();&quot; type=&quot;submit&quot;&amp;gt;Enviar&amp;lt;/button&amp;gt;
+&amp;lt;/form&amp;gt;
+
+&amp;lt;script src=&quot;http://backup/portal/js/jquery-1.11.1.min.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&quot;http://backup/portal/js/jquery.mobile-1.4.5.min.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
+
+&amp;lt;script type=&quot;text/javascript&quot; src=&quot;http://backup/portal/cordova.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script type=&quot;text/javascript&quot; src=&quot;http://backup/portal/js/index.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script type=&quot;text/javascript&quot;&amp;gt;
+app.initialize();
+&amp;lt;/script&amp;gt;
+&amp;lt;/div&amp;gt; &lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;AJAX para pegar informações do servidor externo&lt;/strong&gt; &lt;br /&gt; &lt;/p&gt;
+&lt;pre class=&quot;language-markup&quot;&gt;&lt;code&gt;&amp;lt;script&amp;gt;
+function salvar(){
+var formula = $('formContatos').serialize(); // Trazer todos os campos do form para a variável formula
+$.ajax({
+type: 'POST',
+data: formula,
+url: 'http://localhost/agenda/cadastro.php', // Mudar depois para a URL do app externo
+success: function(data){
+if(data == '' || data == 0){
+alert('Ocorreu erro no banco!');
+window.location = &quot;&quot;; // para refresh
+}
+if(data == 1){
+alert('Registro salvo com sucesso!');
+window.location = &quot;&quot;;
+}
+}
+});
+}
+&amp;lt;/script&amp;gt;
+
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt; &lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt; &lt;br /&gt;Por padrão um app do Phonegap não funciona em servidor externno, apenas localmente. &lt;br /&gt;Para que funcione em servidor externo precisamos configurar no config.xml.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Criando a aplicação externa em PHP com MySQL&lt;/strong&gt;&lt;br /&gt; &lt;br /&gt;Criar os arquivos: &lt;br /&gt; &lt;br /&gt;conexao.php &lt;br /&gt;cadastro.php &lt;br /&gt;tabela.php &lt;br /&gt; &lt;br /&gt;&lt;strong&gt;conexao.php&lt;/strong&gt; &lt;br /&gt; &lt;/p&gt;
+&lt;pre class=&quot;language-php&quot;&gt;&lt;code&gt;&amp;lt;?php
+$dsn = 'mysql:host=localhost;dbname=agenda';
+$user = 'root';
+$pass = 'mysql';
+
+$conexao = new PDO($dsn, $user, $pass);
+
+$stml = $conexao-&amp;gt;query(&quot;SELECT * from contatos ORDER BY id DESC&quot;);
+?&amp;gt; &lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt; &lt;br /&gt;&lt;strong&gt;cadastro.php&lt;/strong&gt; &lt;br /&gt; &lt;/p&gt;
+&lt;pre class=&quot;language-php&quot;&gt;&lt;code&gt;&amp;lt;?php
+include_once('./conexao.php');
+
+$nome = mysql_real_escape_string($_REQUEST['nome']);
+
+$sql = &quot;INSERT INTO contatos (nome) VALUES ('$nome')&quot;;
+$res = mysql_query($sql);
+
+if($res == TRUE){
+$cadastro = 1;
+}else{
+$cadastro = 0;
+}
+
+echo (json_encode($cadastro));
+
+tabela.php
+&amp;lt;?php
+include_once('./conexao.php');
+?&amp;gt;
+&amp;lt;table align=&quot;center&quot; border=&quot;1&quot;&amp;gt;
+&amp;lt;thead&amp;gt;
+&amp;lt;tr&amp;gt;
+&amp;lt;th&amp;gt;ID&amp;lt;/th&amp;gt;&amp;lt;th&amp;gt;Nome&amp;lt;/th&amp;gt;
+&amp;lt;/th&amp;gt;
+&amp;lt;/thead&amp;gt;
+
+&amp;lt;tbody&amp;gt;
+&amp;lt;?php foreach($stml as $valor){ ?&amp;gt;
+&amp;lt;tr&amp;gt;
+&amp;lt;td&amp;gt;&amp;lt;?=$valor['id']?&amp;gt;&amp;lt;/td&amp;gt;&amp;lt;td&amp;gt;&amp;lt;?=$valor['nome']?&amp;gt;&amp;lt;/td&amp;gt;
+&amp;lt;/tr&amp;gt;
+&amp;lt;?php } ?&amp;gt;
+&amp;lt;/tbody&amp;gt;
+&amp;lt;/table&amp;gt; &lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt; &lt;br /&gt;Aplicação acessando aplicativo PHP+MySQL externo &lt;br /&gt; &lt;br /&gt;&lt;strong&gt;Mudar a url do ajax na index.html&lt;/strong&gt; &lt;br /&gt;Criar banco e arquivos no servidor externo (conexao, cadastro e tabela). &lt;br /&gt;Mudar os dados do banco de dados, de acordo com o server exteerno. &lt;br /&gt; &lt;br /&gt;&lt;strong&gt;Mudar no config.xml:&lt;/strong&gt; &lt;br /&gt; &lt;br /&gt;&amp;lt;preference name=&quot;permissions&quot; value=&quot;true&quot;/&amp;gt; &lt;br /&gt; &lt;br /&gt;&amp;lt;access origin=&quot;http://URLservidorexterno.org&quot;/&amp;gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Jogo Breakout com Phaser&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Fontes - &lt;a title=&quot;breakout_phonegap.zip&quot; href=&quot;http://backup/portal/down/mobile/phonegap/breakout_phonegap.zip&quot;&gt;breakout_phonegap.zip&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Android - &lt;a title=&quot;Breakout-release.apk&quot; href=&quot;http://backup/portal/down/mobile/phonegap/Breakout-release.apk&quot;&gt;Breakout-release.apk&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Nova versão - &lt;a title=&quot;phonegap.apk&quot; href=&quot;http://backup/portal/down/mobile/phonegap/breakout.apk&quot;&gt;phonegap.apk&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;</summary>
+		<content type="html">&lt;p&gt;&lt;strong&gt;PhoheGap - Exemplo Simples&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Adaptado das vídeo aulas do Youtube - Cadastro de Clientes com PhoneGap&lt;br /&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=pxAAIbU3X9c&quot;&gt;https://www.youtube.com/watch?v=pxAAIbU3X9c&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Simplifiquei e criei apenas uma agenda com id e nome &lt;br /&gt; &lt;br /&gt;&lt;strong&gt;Criar app&lt;/strong&gt; &lt;br /&gt; &lt;br /&gt;phonegap create agenda org.ribafs.agenda Agenda&lt;/p&gt;
+&lt;p&gt;O Phonegap criará uma aplicação básica, tipo Hello World, que precisamos modificar para nos atender.&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;strong&gt;cd agenda&lt;/strong&gt; &lt;br /&gt;Editar o www/index.html &lt;br /&gt; &lt;br /&gt;Remover tudo entre &amp;lt;body&amp;gt; e &amp;lt;/body&amp;gt; &lt;br /&gt; &lt;br /&gt;&amp;lt;head&amp;gt; &lt;br /&gt;&amp;lt;link rel=&quot;stylesheet&quot; href=&quot;http://backup/portal/js/jquery.mobile-1.4.5.min.css&quot; /&amp;gt; &lt;br /&gt;&amp;lt;/head&amp;gt; &lt;br /&gt;&amp;lt;body&amp;gt; &lt;br /&gt; &amp;lt;form id=&quot;formCliente&quot;&amp;gt; &lt;br /&gt; ID &amp;lt;input type=&quot;text&quot; name=&quot;id&quot;&amp;gt;&amp;lt;br&amp;gt; &lt;br /&gt; Nome &amp;lt;input type=&quot;text&quot; name=&quot;nome&quot;&amp;gt;&amp;lt;br&amp;gt; &lt;br /&gt; &amp;lt;button onClick=&quot;salvar();&quot; type=&quot;submit&quot;&amp;gt;Enviar&amp;lt;/button&amp;gt; &lt;br /&gt; &amp;lt;/form&amp;gt; &lt;br /&gt; &lt;br /&gt;&amp;lt;script src=&quot;http://backup/portal/js/jquery-1.11.1.min.js&quot;&amp;gt;&amp;lt;/script&amp;gt; &lt;br /&gt;&amp;lt;script src=&quot;http://backup/portal/js/jquery.mobile-1.4.5.min.js&quot;&amp;gt;&amp;lt;/script&amp;gt; &lt;br /&gt; &lt;br /&gt;&amp;lt;/body&amp;gt; &lt;br /&gt; &lt;br /&gt;&lt;strong&gt;Efetuar deploy para o build na nuvem&lt;/strong&gt; &lt;br /&gt;cd app &lt;br /&gt;phonegap remote run android &lt;br /&gt;Ao final ele gera um QRCode e exibe na tela. &lt;br /&gt; &lt;br /&gt;Criar banco&lt;br /&gt;Criar o banco agenda com uma tabela contatos e os campos id e nome apenas. &lt;br /&gt; &lt;br /&gt;&lt;strong&gt;Editar o www/index.html e adicionar ao final:&lt;/strong&gt; &lt;br /&gt; &lt;/p&gt;
+&lt;pre class=&quot;language-markup&quot;&gt;&lt;code&gt;&amp;lt;!DOCTYPE html&amp;gt;
+
+&amp;lt;html&amp;gt;
+&amp;lt;head&amp;gt;
+&amp;lt;meta charset=&quot;utf-8&quot; /&amp;gt;
+&amp;lt;meta name=&quot;format-detection&quot; content=&quot;telephone=no&quot; /&amp;gt;
+&amp;lt;meta name=&quot;msapplication-tap-highlight&quot; content=&quot;no&quot; /&amp;gt;
+&amp;lt;!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 --&amp;gt;
+&amp;lt;meta name=&quot;viewport&quot; content=&quot;user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi&quot; /&amp;gt;
+&amp;lt;link rel=&quot;stylesheet&quot; href=&quot;http://backup/portal/css/jquery.mobile-1.4.5.min.css&quot; /&amp;gt;
+&amp;lt;style&amp;gt;
+.margem{
+margin: 10px;
+}
+&amp;lt;/style&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+
+&amp;lt;div data-role=&quot;page&quot;&amp;gt;
+&amp;lt;div data-role=&quot;header&quot;&amp;gt;
+&amp;lt;h1&amp;gt;Agenda de Contatos&amp;lt;/h1&amp;gt;
+&amp;lt;/div&amp;gt;&amp;lt;!-- /header --&amp;gt;
+
+&amp;lt;form id=&quot;formContatos&quot;&amp;gt;
+&amp;amp;nbsp;ID&amp;lt;span&amp;gt; &amp;lt;input type=&quot;text&quot; name=&quot;id&quot;&amp;gt;
+&amp;amp;nbsp;Nome &amp;lt;input type=&quot;text&quot; name=&quot;nome&quot;&amp;gt;
+&amp;lt;button onClick=&quot;salvar();&quot; type=&quot;submit&quot;&amp;gt;Enviar&amp;lt;/button&amp;gt;
+&amp;lt;/form&amp;gt;
+
+&amp;lt;script src=&quot;http://backup/portal/js/jquery-1.11.1.min.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&quot;http://backup/portal/js/jquery.mobile-1.4.5.min.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
+
+&amp;lt;script type=&quot;text/javascript&quot; src=&quot;http://backup/portal/cordova.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script type=&quot;text/javascript&quot; src=&quot;http://backup/portal/js/index.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script type=&quot;text/javascript&quot;&amp;gt;
+app.initialize();
+&amp;lt;/script&amp;gt;
+&amp;lt;/div&amp;gt; &lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;AJAX para pegar informações do servidor externo&lt;/strong&gt; &lt;br /&gt; &lt;/p&gt;
+&lt;pre class=&quot;language-markup&quot;&gt;&lt;code&gt;&amp;lt;script&amp;gt;
+function salvar(){
+var formula = $('formContatos').serialize(); // Trazer todos os campos do form para a variável formula
+$.ajax({
+type: 'POST',
+data: formula,
+url: 'http://localhost/agenda/cadastro.php', // Mudar depois para a URL do app externo
+success: function(data){
+if(data == '' || data == 0){
+alert('Ocorreu erro no banco!');
+window.location = &quot;&quot;; // para refresh
+}
+if(data == 1){
+alert('Registro salvo com sucesso!');
+window.location = &quot;&quot;;
+}
+}
+});
+}
+&amp;lt;/script&amp;gt;
+
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt; &lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt; &lt;br /&gt;Por padrão um app do Phonegap não funciona em servidor externno, apenas localmente. &lt;br /&gt;Para que funcione em servidor externo precisamos configurar no config.xml.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Criando a aplicação externa em PHP com MySQL&lt;/strong&gt;&lt;br /&gt; &lt;br /&gt;Criar os arquivos: &lt;br /&gt; &lt;br /&gt;conexao.php &lt;br /&gt;cadastro.php &lt;br /&gt;tabela.php &lt;br /&gt; &lt;br /&gt;&lt;strong&gt;conexao.php&lt;/strong&gt; &lt;br /&gt; &lt;/p&gt;
+&lt;pre class=&quot;language-php&quot;&gt;&lt;code&gt;&amp;lt;?php
+$dsn = 'mysql:host=localhost;dbname=agenda';
+$user = 'root';
+$pass = 'mysql';
+
+$conexao = new PDO($dsn, $user, $pass);
+
+$stml = $conexao-&amp;gt;query(&quot;SELECT * from contatos ORDER BY id DESC&quot;);
+?&amp;gt; &lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt; &lt;br /&gt;&lt;strong&gt;cadastro.php&lt;/strong&gt; &lt;br /&gt; &lt;/p&gt;
+&lt;pre class=&quot;language-php&quot;&gt;&lt;code&gt;&amp;lt;?php
+include_once('./conexao.php');
+
+$nome = mysql_real_escape_string($_REQUEST['nome']);
+
+$sql = &quot;INSERT INTO contatos (nome) VALUES ('$nome')&quot;;
+$res = mysql_query($sql);
+
+if($res == TRUE){
+$cadastro = 1;
+}else{
+$cadastro = 0;
+}
+
+echo (json_encode($cadastro));
+
+tabela.php
+&amp;lt;?php
+include_once('./conexao.php');
+?&amp;gt;
+&amp;lt;table align=&quot;center&quot; border=&quot;1&quot;&amp;gt;
+&amp;lt;thead&amp;gt;
+&amp;lt;tr&amp;gt;
+&amp;lt;th&amp;gt;ID&amp;lt;/th&amp;gt;&amp;lt;th&amp;gt;Nome&amp;lt;/th&amp;gt;
+&amp;lt;/th&amp;gt;
+&amp;lt;/thead&amp;gt;
+
+&amp;lt;tbody&amp;gt;
+&amp;lt;?php foreach($stml as $valor){ ?&amp;gt;
+&amp;lt;tr&amp;gt;
+&amp;lt;td&amp;gt;&amp;lt;?=$valor['id']?&amp;gt;&amp;lt;/td&amp;gt;&amp;lt;td&amp;gt;&amp;lt;?=$valor['nome']?&amp;gt;&amp;lt;/td&amp;gt;
+&amp;lt;/tr&amp;gt;
+&amp;lt;?php } ?&amp;gt;
+&amp;lt;/tbody&amp;gt;
+&amp;lt;/table&amp;gt; &lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt; &lt;br /&gt;Aplicação acessando aplicativo PHP+MySQL externo &lt;br /&gt; &lt;br /&gt;&lt;strong&gt;Mudar a url do ajax na index.html&lt;/strong&gt; &lt;br /&gt;Criar banco e arquivos no servidor externo (conexao, cadastro e tabela). &lt;br /&gt;Mudar os dados do banco de dados, de acordo com o server exteerno. &lt;br /&gt; &lt;br /&gt;&lt;strong&gt;Mudar no config.xml:&lt;/strong&gt; &lt;br /&gt; &lt;br /&gt;&amp;lt;preference name=&quot;permissions&quot; value=&quot;true&quot;/&amp;gt; &lt;br /&gt; &lt;br /&gt;&amp;lt;access origin=&quot;http://URLservidorexterno.org&quot;/&amp;gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Jogo Breakout com Phaser&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Fontes - &lt;a title=&quot;breakout_phonegap.zip&quot; href=&quot;http://backup/portal/down/mobile/phonegap/breakout_phonegap.zip&quot;&gt;breakout_phonegap.zip&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Android - &lt;a title=&quot;Breakout-release.apk&quot; href=&quot;http://backup/portal/down/mobile/phonegap/Breakout-release.apk&quot;&gt;Breakout-release.apk&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Nova versão - &lt;a title=&quot;phonegap.apk&quot; href=&quot;http://backup/portal/down/mobile/phonegap/breakout.apk&quot;&gt;phonegap.apk&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;</content>
+		<category term="PhoneGap" />
+	</entry>
+	<entry>
+		<title>PhoneGap - Referências</title>
+		<link rel="alternate" type="text/html" href="http://backup/portal/mobile/phonegap/phonegap-referencias.html"/>
+		<published>2017-07-12T10:22:18-03:00</published>
+		<updated>2017-07-12T10:22:18-03:00</updated>
+		<id>http://backup/portal/mobile/phonegap/phonegap-referencias.html</id>
+		<author>
+			<name>Ribamar FS</name>
+		</author>
+		<summary type="html">&lt;p&gt;&lt;strong&gt;PhoheGap - Referências&lt;/strong&gt;&lt;/p&gt;
+
+
+&lt;p&gt; &lt;/p&gt;
+
+
+&lt;p&gt;Bom Tutorial sobre o PhoneGap - &lt;a href=&quot;http://www.tutorialspoint.com/phonegap/&quot;&gt;http://www.tutorialspoint.com/phonegap/&lt;/a&gt;&lt;/p&gt;
+
+
+&lt;p&gt; Criando seu primeiro app - &lt;a href=&quot;https://www.youtube.com/watch?v=mKm_J2Y0UF8&quot;&gt;https://www.youtube.com/watch?v=mKm_J2Y0UF8&lt;/a&gt;&lt;/p&gt;
+
+
+&lt;p&gt; Developing a PhoneGap Application - &lt;a href=&quot;http://coenraets.org/blog/phonegap-tutorial/&quot;&gt;http://coenraets.org/blog/phonegap-tutorial/&lt;/a&gt;&lt;/p&gt;
+
+
+&lt;p&gt;A Complete Phonegap Tutorial - &lt;a href=&quot;https://codesundar.com/phonegap-tutorial/&quot;&gt;https://codesundar.com/phonegap-tutorial/&lt;/a&gt;&lt;/p&gt;
+
+
+&lt;p&gt;PhoneGap Tutorial - &lt;a href=&quot;http://www.w3ii.com/pt/phonegap/default.html&quot;&gt;http://www.w3ii.com/pt/phonegap/default.html&lt;/a&gt;&lt;/p&gt;
+
+
+&lt;p&gt;PhoneGap From Scratch - &lt;a href=&quot;https://code.tutsplus.com/tutorials/phonegap-from-scratch-introduction--mobile-9171&quot;&gt;https://code.tutsplus.com/tutorials/phonegap-from-scratch-introduction--mobile-9171&lt;/a&gt;&lt;/p&gt;
+
+
+&lt;p&gt;Advanced PhoneGap Tutorial - &lt;a href=&quot;https://hollyschinsky.github.io/ConferenceTracker/install-ionic.html&quot;&gt;https://hollyschinsky.github.io/ConferenceTracker/install-ionic.html&lt;/a&gt;&lt;/p&gt;
+
+
+&lt;p&gt;Emulador para Chrome - &lt;a href=&quot;http://emulate.phonegap.com/&quot;&gt;http://emulate.phonegap.com/&lt;br /&gt;https://chrome.google.com/webstore/detail/ripple-emulator-beta/geelfhphabnejjhdalkjhgipohgpdnoc &lt;/a&gt;&lt;/p&gt;
+
+
+&lt;p&gt; &lt;/p&gt;</summary>
+		<content type="html">&lt;p&gt;&lt;strong&gt;PhoheGap - Referências&lt;/strong&gt;&lt;/p&gt;
+
+
+&lt;p&gt; &lt;/p&gt;
+
+
+&lt;p&gt;Bom Tutorial sobre o PhoneGap - &lt;a href=&quot;http://www.tutorialspoint.com/phonegap/&quot;&gt;http://www.tutorialspoint.com/phonegap/&lt;/a&gt;&lt;/p&gt;
+
+
+&lt;p&gt; Criando seu primeiro app - &lt;a href=&quot;https://www.youtube.com/watch?v=mKm_J2Y0UF8&quot;&gt;https://www.youtube.com/watch?v=mKm_J2Y0UF8&lt;/a&gt;&lt;/p&gt;
+
+
+&lt;p&gt; Developing a PhoneGap Application - &lt;a href=&quot;http://coenraets.org/blog/phonegap-tutorial/&quot;&gt;http://coenraets.org/blog/phonegap-tutorial/&lt;/a&gt;&lt;/p&gt;
+
+
+&lt;p&gt;A Complete Phonegap Tutorial - &lt;a href=&quot;https://codesundar.com/phonegap-tutorial/&quot;&gt;https://codesundar.com/phonegap-tutorial/&lt;/a&gt;&lt;/p&gt;
+
+
+&lt;p&gt;PhoneGap Tutorial - &lt;a href=&quot;http://www.w3ii.com/pt/phonegap/default.html&quot;&gt;http://www.w3ii.com/pt/phonegap/default.html&lt;/a&gt;&lt;/p&gt;
+
+
+&lt;p&gt;PhoneGap From Scratch - &lt;a href=&quot;https://code.tutsplus.com/tutorials/phonegap-from-scratch-introduction--mobile-9171&quot;&gt;https://code.tutsplus.com/tutorials/phonegap-from-scratch-introduction--mobile-9171&lt;/a&gt;&lt;/p&gt;
+
+
+&lt;p&gt;Advanced PhoneGap Tutorial - &lt;a href=&quot;https://hollyschinsky.github.io/ConferenceTracker/install-ionic.html&quot;&gt;https://hollyschinsky.github.io/ConferenceTracker/install-ionic.html&lt;/a&gt;&lt;/p&gt;
+
+
+&lt;p&gt;Emulador para Chrome - &lt;a href=&quot;http://emulate.phonegap.com/&quot;&gt;http://emulate.phonegap.com/&lt;br /&gt;https://chrome.google.com/webstore/detail/ripple-emulator-beta/geelfhphabnejjhdalkjhgipohgpdnoc &lt;/a&gt;&lt;/p&gt;
+
+
+&lt;p&gt; &lt;/p&gt;</content>
+		<category term="PhoneGap" />
+	</entry>
+	<entry>
+		<title>Framework PhoneGap</title>
+		<link rel="alternate" type="text/html" href="http://backup/portal/mobile/phonegap/framework-phonegap.html"/>
+		<published>2017-07-11T12:32:02-03:00</published>
+		<updated>2017-07-11T12:32:02-03:00</updated>
+		<id>http://backup/portal/mobile/phonegap/framework-phonegap.html</id>
+		<author>
+			<name>Ribamar FS</name>
+		</author>
+		<summary type="html">&lt;p&gt;&lt;img src=&quot;http://backup/portal/images/PhoneGap_Video2_APP.jpg&quot; /&gt;&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;PhoneGap&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;O PhoneGap é uma distribuição do Apache Cordova. O Cordova foi originalmente criado pela Nitobi, que foi então adquirida pela Adobe em 2011. O projeto foi doado para a Apache Software Foundation (ASF) ainda no mesmo ano para manter uma transparente e aberta governança e prover um mecanismo para que outras grandes organizações contribuissem. Apache Cordova é o motor que torna poderoso o Adobe PhoneGap. O PgoneGap adicionou serviços e funcionalidades que o Cordova não tem, como PhoneGap Developer App, the PhoneGap Desktop App, PhoneGap Build e PhoneGap Enterprise..&lt;br /&gt;&lt;br /&gt;O Phonegap traz um bom conjunto de ferrametnas para a construção de aplicativos mobile híbridos, com suporte a Android, iOS, Blackberry e Windows Phone.&lt;br /&gt;É um projeto open source, baseado no Cordova e nos oferece um framework, com interface de linha de comando (Linux, Windows e Mac) contendo todos os seus principais recursos, um aplicativo desktop para Windows e Mac, que cria e executa aplicativos.&lt;br /&gt;&lt;br /&gt;Com o PhoneGap a instalação e configuração do Android fica apenas no seu servidor nas nuvens, que realiza o build para nós. Assim a criação de apps fica muito simplificada.&lt;br /&gt;&lt;br /&gt;Com apenas um único código de app podemos criar aplicativos para as várias plataformas. Podemos pegar sites ou aplicativos web existentes e adaptar para que funcionem em dispositivos móveis.&lt;br /&gt;&lt;br /&gt;A exigência para criar aplicativos no Phonegap é conhecer HTML, CSS e JavaScript.&lt;br /&gt;&lt;br /&gt;Através dos plugins do Phonegap podemos acessar os recursos do hardware dos dispositivos móveis como:  Accelerometer, camera, compass, contacts, geolocation, notification (alert / sound / vibration, storage, media e network), etc. Nem todos disponíveis para todas as plataformas, para isso precisamos consultar a documentação do plugin no site do Phonegap:&lt;br /&gt;&lt;a href=&quot;http://docs.phonegap.com/references/plugin-apis/&quot;&gt;http://docs.phonegap.com/references/plugin-apis/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Algumas seções do Site&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;&lt;a href=&quot;http://phonegap.com&quot;&gt;http://phonegap.com&lt;/a&gt; &lt;br /&gt;&lt;a href=&quot;http://build.phonegap.com&quot;&gt;http://build.phonegap.com&lt;/a&gt; &lt;br /&gt;&lt;a href=&quot;http://docs.phonegap.com/&quot;&gt;http://docs.phonegap.com/&lt;/a&gt; &lt;br /&gt;&lt;a href=&quot;http://docs.phonegap.com/references/phonegap-cli/&quot;&gt;http://docs.phonegap.com/references/phonegap-cli/&lt;/a&gt; &lt;br /&gt;&lt;a href=&quot;http://docs.phonegap.com/references/phonegap-cli/install/&quot;&gt;http://docs.phonegap.com/references/phonegap-cli/install/&lt;/a&gt; &lt;br /&gt;&lt;a href=&quot;http://docs.phonegap.com/phonegap-build/&quot;&gt;http://docs.phonegap.com/phonegap-build/&lt;/a&gt; &lt;br /&gt;&lt;a href=&quot;https://phonegap.com/app/&quot;&gt;https://phonegap.com/app/&lt;/a&gt; &lt;br /&gt;&lt;a href=&quot;http://docs.phonegap.com/references/developer-app/&quot;&gt;http://docs.phonegap.com/references/developer-app/&lt;/a&gt; &lt;br /&gt;&lt;a href=&quot;http://configap.com/&quot;&gt;http://configap.com/&lt;/a&gt; &lt;br /&gt;&lt;br /&gt;Requisitos:&lt;br /&gt;nodejs - &lt;a href=&quot;https://nodejs.org/en/&quot;&gt;https://nodejs.org/en/&lt;/a&gt; &lt;br /&gt;&lt;br /&gt;Requisitos de conhecimento&lt;br /&gt;Precisamos conhecer apenas HTML, CSS e Javascript e os comandos do PhoneGap.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;&lt;br /&gt;Roteiro Resumido para a criação completa de uma app&lt;br /&gt;Nno Linux e no Windows&lt;br /&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Instalar o PhoneGap no Linux (Debian e derivadas)&lt;/strong&gt;&lt;br /&gt;curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -&lt;br /&gt;sudo apt-get install -y nodejs&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;sudo npm install -g cordova phonegap&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Instalar o PhoneGap no Windows&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Download - &lt;a href=&quot;https://nodejs.org&quot;&gt;https://nodejs.org&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Instale e execute no prompt&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;npm install -g cordova phonegap&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Criação do app (semelhante para ambos os SOs)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;cd /var/www/html&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;phonegap create aplicativo1 org.ribafs.aplicativo1 Aplicativo1&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;cd aplicativo1 (este é um helloworld do Phonegap)&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Edite o aplicativo gerado, na pasta aplicativo1/www e abra no navegador:&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;http://localhost/aplicativo1&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Acessar o site &lt;a href=&quot;http://build.phonegap.com&quot;&gt;http://build.phonegap.com&lt;/a&gt; e criar uma conta&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Edite o arquivo aplicativo1/config.xml e faça os devidos ajustes. Depois precisa substituir os ícones e splash screens, nas pastas&lt;br /&gt;aplicativo1/www/res/icon e aplicativo1/www/res/screen. Veja:&lt;br /&gt;&lt;a href=&quot;http://docs.phonegap.com/en/4.0.0/config_ref_images.md.html&quot;&gt;http://docs.phonegap.com/en/4.0.0/config_ref_images.md.html&lt;/a&gt; &lt;br /&gt;&lt;a href=&quot;https://ionicframework.com/docs/cli/cordova/resources/&quot;&gt;https://ionicframework.com/docs/cli/cordova/resources/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Após concluir o aplicativo e estiver do jeito que deseja, vamos fazer o build&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;phonegap login&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;phonegap remote build android&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Gerar a chave&lt;br /&gt;keytool -genkey -v -keystore Aplicativo1.keystore -alias aplicativo1 -keyalg RSA -keysize 2048 -validity 10000&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Agora já podemos acessar o site do build, associar o app à chave gerada, desbloquear e baixar o APK e o APPX.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;img src=&quot;http://backup/portal/images/PhoneGap_Video2_APP.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;br /&gt;&lt;strong&gt;Detalhes sobre o PhoneGap&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;Instalação do PhoneGap Desktop App&lt;br /&gt;&lt;br /&gt;Phonegap Desktop App&lt;br /&gt;&lt;a href=&quot;https://github.com/phonegap/phonegap-app-desktop/releases&quot;&gt;https://github.com/phonegap/phonegap-app-desktop/releases&lt;/a&gt; &lt;br /&gt;&lt;br /&gt;Windows 7 e 8.1 usar a versão 0.3.5&lt;br /&gt;Windows 10 suporta a última versão, que é a 0.4.4&lt;br /&gt;&lt;br /&gt;O phonegap cria aplicativos localmente e gera o build na nuvel (build.phonegap.com), sem necessidade de instalar o Android localmente.&lt;br /&gt;Este site é um serviço nas nuvens que armazena os build que criamos dos aplicativos.&lt;br /&gt;Isso torna a criação de aplicativos mobile muito mais simples, sem necessidade da trabalheira de instalar e configurar o android localmente.&lt;br /&gt;&lt;br /&gt;O Phonegap tem uma interface para a linha de comando para Linux, Windows e Mac e uma IDE somente para Windows e Mac mas apenas com recursos de criação e execução no navegador e diversos outros recursos em seu site.&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Instalar o Phonegap&lt;/strong&gt;&lt;br /&gt;npm install -g phonegap&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Criar um aplicativo&lt;/strong&gt; (requer conexão à internet, pois baixa o esqueleto do servidor)&lt;br /&gt;phonegap create agenda org.ribafs.agenda Agenda&lt;br /&gt;&lt;br /&gt;Outras variações&lt;br /&gt;phonegap create path/to/myApp&lt;br /&gt;phonegap create path/to/myApp &quot;com.example.app&quot; &quot;My App&quot;&lt;br /&gt;phonegap create path/to/myApp --id &quot;com.example.app&quot; --name &quot;My App&quot;&lt;br /&gt;phonegap create path/to/myApp --template hello-world&lt;br /&gt;phonegap create path/to/myApp --copy-from ../myOtherApp&lt;br /&gt;phonegap create path/to/myApp -src ../myOtherApp&lt;br /&gt;phonegap create path/to/myApp --id &quot;com.example.app&quot; --name &quot;My App&quot; --copy-from ~/myOtherApp&lt;br /&gt;phonegap create path/to/myApp --link-to ../myOtherApp&lt;br /&gt;&lt;br /&gt;phonegap create pasta pacote NomeApp&lt;br /&gt;phonegap create hello org.ribafs.hello HelloWorld&lt;br /&gt;&lt;br /&gt;phonegap create agenda org.ribafs.agenda Agenda&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Estrutura de diretórios&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;hooks - scripts adicionais&lt;br /&gt;platforms - código do build de plataformas&lt;br /&gt;plugins - código dos plugins usados&lt;br /&gt;www - código fonte da app&lt;br /&gt;config.xml - &lt;br /&gt;&lt;br /&gt;Cadastrar-se em&lt;br /&gt;https://build.phonegap.com/&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Emulador para Chrome&lt;/strong&gt;&lt;br /&gt;http://emulate.phonegap.com&lt;br /&gt;Acesse e instale no chrome (somente).&lt;br /&gt;&lt;br /&gt;Instalar servidor web (para criar aplicativo com PhoneGap com PHP e MySQL)&lt;br /&gt;&lt;br /&gt;http://localhost/app1&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Build remoto&lt;/strong&gt;&lt;br /&gt;&lt;a href=&quot;https://build.phonegap.com/apps&quot;&gt;https://build.phonegap.com/apps&lt;/a&gt; &lt;br /&gt;&lt;br /&gt;cd app1&lt;br /&gt;phonegap remote login&lt;br /&gt;&lt;br /&gt;phonegap remote build android&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Emulando com Celular&lt;/strong&gt;&lt;br /&gt;ou (com celular conectado via cabo USB e usando a app do PhoneGap)&lt;br /&gt;Também devemos habilitar o modo de debug no celular Android&lt;br /&gt;phonegap run android --verbose&lt;br /&gt;&lt;br /&gt;phonegap remote run android&lt;br /&gt;&lt;br /&gt;phonegap run android --device=&amp;lt;codigo&amp;gt;&lt;br /&gt;&lt;br /&gt;Ver os códigos dos dispositivos conectados ao computador&lt;br /&gt;adb devices&lt;br /&gt;&lt;br /&gt;Após o deploy podemos instalar o aplicativo nos dispositivos reais.&lt;br /&gt;Basta acessar o site build, baixar o apk e instalar manualmente no aparelho.&lt;br /&gt;Podemos baixá-la via QRCode (mais prático).&lt;br /&gt;&lt;br /&gt;Também podemos compactar toda a pasta do app e fazer o upload no site build.&lt;br /&gt;Em Private - Upload a zip file.&lt;br /&gt;&lt;br /&gt;Para excluir um app clicar no ícone - Settings e ao final Delete.&lt;br /&gt;Após excluir requer Refresh no navegador para permitir upload de nova app.&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Download do apk&lt;/strong&gt;&lt;br /&gt;No site build clique sobre o ícone da aplicação&lt;br /&gt;Abaixo aparece um ícone azul para download do APK&lt;br /&gt;Talbém aparece um botão Install abaixo do QRcode onde podemos baixar o APK&lt;br /&gt;&lt;br /&gt;No site build podemos efetuar alterações nas configurações e depois clicar no botão Build para atualizar&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Gerando uma keystore&lt;/strong&gt;&lt;br /&gt;keytool -genkey -v -keystore [keystore_name].keystore -alias [alias_name] -keyalg RSA -keysize 2048 -validity 10000&lt;br /&gt;&lt;br /&gt;Exemplo&lt;br /&gt;keytool -genkey -v -keystore Agenda.keystore -alias agenda -keyalg RSA -keysize 2048 -validity 10000&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Emulando no celular, via app&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;Para que funcione precisamos instalar um acelerador gráfico via sdkmanager&lt;br /&gt;android-studio/bin/studio.sh&lt;br /&gt;Configurações/SDK&lt;br /&gt;Sdk/Extras, o último da lista&lt;br /&gt;Intel x86 Emulator Accelerator  &lt;br /&gt;&lt;br /&gt;phonegap emulate android&lt;br /&gt;&lt;br /&gt;phonegap remote logout&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Existe um app emulador&lt;/strong&gt;&lt;br /&gt;http://docs.phonegap.com/references/developer-app/ ou buscando phonegap pelo celular&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Testar aplicativos em emulador&lt;/strong&gt;&lt;br /&gt;phonegap serve [options] (no windows desabilitar o firewall ou permitir este)&lt;br /&gt;&lt;br /&gt;--port, -p &amp;lt;n&amp;gt;       port for web server (default: 3000)&lt;br /&gt;--autoreload         enable app refresh on file changes (default: true)&lt;br /&gt;--no-autoreload      disable app refresh on file changes&lt;br /&gt;--browser            enable desktop browser support (default: true)&lt;br /&gt;--no-browser         disable desktop browser support&lt;br /&gt;--localtunnel        enable a local tunnel for public access (default: false)&lt;br /&gt;&lt;br /&gt;Após abrir o aplicativo apenas execute:&lt;br /&gt;cd pastaapp&lt;br /&gt;phonegap serve&lt;br /&gt;&lt;br /&gt;As alterações fetias no código fonte no computador são percebidas automaticamente no app do celular&lt;br /&gt;&lt;br /&gt;Ambos, celular e computador devem estar na mesma rede&lt;br /&gt;&lt;br /&gt;Neste caso o app aparece no celular.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Vídeo aulas sobre Cadastro de Clientes&lt;/strong&gt;&lt;br /&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=CgidH4qFxiM&amp;amp;index=1&amp;amp;list=PLTmK6lyvWo8g3v40gJADMdUUTt8p2t5G3&quot;&gt;https://www.youtube.com/watch?v=CgidH4qFxiM&amp;amp;index=1&amp;amp;list=PLTmK6lyvWo8g3v40gJADMdUUTt8p2t5G3&lt;/a&gt; &lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Listar plataformas disponíveis&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;phonegap platform&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Adicionar suporte para a plataforma android&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;phonegap platform add android&lt;br /&gt;Com isso ele cria uma pasta com o projeto na nossa pasta platform. Este projeto criado pode ser importado pelo Android Studio.&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;App Controle de Estoque&lt;/strong&gt;&lt;br /&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=XHOh0F9HLKo&amp;amp;index=15&amp;amp;list=PLTmK6lyvWo8g3v40gJADMdUUTt8p2t5G3&quot;&gt;https://www.youtube.com/watch?v=XHOh0F9HLKo&amp;amp;index=15&amp;amp;list=PLTmK6lyvWo8g3v40gJADMdUUTt8p2t5G3&lt;/a&gt; &lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Emulador do Blackberry no navegador - Ripple&lt;/strong&gt;&lt;br /&gt;sudo npm install -g ripple-emulator&lt;br /&gt;&lt;a href=&quot;https://chrome.google.com/webstore/detail/ripple-emulator-beta/geelfhphabnejjhdalkjhgipohgpdnoc&quot;&gt;https://chrome.google.com/webstore/detail/ripple-emulator-beta/geelfhphabnejjhdalkjhgipohgpdnoc&lt;/a&gt; &lt;br /&gt;&lt;br /&gt;ripple emulate&lt;br /&gt;&lt;br /&gt;Para que funcione requer adição do android como plataforma&lt;br /&gt;phonegap platform add android&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Debugando com Gapdebug (Win e Mac)&lt;/strong&gt;&lt;br /&gt;http://genuitec.com/products/gapdebug&lt;br /&gt;&lt;br /&gt;Debugar no navegador de aplicativo no celular&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Plugin Bateria&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;Instalar Phonegap&lt;br /&gt;Criar o app&lt;br /&gt;Instalar plugin&lt;br /&gt;phonegap create bateria org.ribafs.bateria StatusBateria&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Ver documentação no site do cordova&lt;/strong&gt;&lt;br /&gt;&lt;a href=&quot;https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-battery-status/index.html&quot;&gt;https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-battery-status/index.html&lt;/a&gt; &lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Atualizar o cordova&lt;/strong&gt;&lt;br /&gt;sudo npm install -g cordova&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Instalar o plugin&lt;/strong&gt;&lt;br /&gt;cordova plugin add cordova-plugin-battery-status&lt;br /&gt;&lt;br /&gt;Ao instalar ele cria uma pasta com os fontes para cada uma das plataformas suportadas.&lt;br /&gt;&lt;br /&gt;Mudar o início da tag &amp;lt;body&amp;gt; em www/index.html para:&lt;br /&gt;&lt;br /&gt;&amp;lt;body&amp;gt;&lt;br /&gt;    &amp;lt;div class=&quot;app&quot;&amp;gt;&lt;br /&gt;        &amp;lt;h1&amp;gt;Exemplo Plugin Bateria&amp;lt;/h1&amp;gt;&lt;br /&gt;        &amp;lt;div id=&quot;deviceready&quot; class=&quot;blink&quot;&amp;gt;&lt;br /&gt;            &amp;lt;p&amp;gt;Porcentagem Bateria&amp;lt;span id=&quot;level&quot;&amp;gt;%&amp;lt;/span&amp;gt;&amp;lt;/p&amp;gt;&lt;br /&gt;            &amp;lt;p&amp;gt;Dispositivo plugado&amp;lt;span id=&quot;isPluged&quot;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/p&amp;gt;&lt;br /&gt;        &amp;lt;/div&amp;gt;&lt;br /&gt;    &amp;lt;/div&amp;gt;&lt;br /&gt;&lt;br /&gt;Em js/index.js&lt;br /&gt;&lt;br /&gt;Mudar este evento:&lt;br /&gt;&lt;br /&gt;    receivedEvent: function(id) {&lt;br /&gt;        window.addEventListener(&quot;batterystatus&quot;, onBatteryStatus, false);&lt;br /&gt;&lt;br /&gt;        function onBatteryStatus(status) {&lt;br /&gt;            console.log(&quot;Level: &quot; + status.level + &quot; isPlugged: &quot; + status.isPlugged);&lt;br /&gt;        }&lt;br /&gt;    }&lt;br /&gt;&lt;br /&gt;Testando este app. O teste só irá funcionar bem em aparelhos reais de celular ou tablet.&lt;br /&gt;&lt;br /&gt;Lembrando: este evento somente é disparado quando o estado da bateria muda ou quando o isPlugged muda, portanto a melhor alternativa é o ripple.&lt;br /&gt;&lt;br /&gt;Lembrando que para que o ripple funcione requer que o android seja adicionado ao app.&lt;br /&gt;&lt;br /&gt;phonegap platform add android&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Também precisa estar no diretório web.&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Plugin Device&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;Acessar informações sobre o aparelho: SO, versão, versão do cordova, marca, etc.&lt;br /&gt;&lt;a href=&quot;https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-device/index.html&quot;&gt;https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-device/index.html&lt;/a&gt; &lt;br /&gt;&lt;br /&gt;App&lt;br /&gt;phonegap create device org.ribafs.device DevicePlugin&lt;br /&gt;&lt;br /&gt;Instalação&lt;br /&gt;cordova plugin add cordova-plugin-device&lt;br /&gt;&lt;br /&gt;O objeto do plugin device tem escopo global e pode ser chamado de qualquer parte do app.&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Plugin Dialogs&lt;/strong&gt;&lt;br /&gt;Recomendado para todas as aplicações.&lt;br /&gt;&lt;a href=&quot;https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-dialogs/index.html&quot;&gt;https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-dialogs/index.html&lt;/a&gt; &lt;br /&gt;&lt;br /&gt;App&lt;br /&gt;phonegap create dialogos org.ribafs.dialogos PluginDialogs&lt;br /&gt;&lt;br /&gt;Instalar&lt;br /&gt;cordova plugin add cordova-plugin-dialogs&lt;br /&gt;&lt;br /&gt;Obs.: estes exemplos com plugins não funcionam no navegador, nem no emulador ripple, somente no dispositivo real.&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;jQuery Mobile para a camada view&lt;br /&gt;&lt;br /&gt;Podemos criar um app ou um site e fornecer a URL para o cliente.&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Templates do Phonegap&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;phonegap template list&lt;br /&gt;&lt;br /&gt;phonegap create dialogos org.ribafs.dialogos PluginDialogs --template nometemplate&lt;br /&gt;&lt;br /&gt;Criar app usando template jquerymobile&lt;br /&gt;&lt;br /&gt;phonegap create my-app --template URL&lt;br /&gt;&lt;br /&gt;phonegap create my-app --template https://github.com/loiane/jquerymobile-phonegap-template (para isso requer git instalado na máquina)&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Publicar uma app do Android no build para o Google Play&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;Criar a app&lt;br /&gt;Criar a chave com:&lt;br /&gt;cd appname&lt;br /&gt;Efetuar o build pela linha de comando&lt;br /&gt;keytool -genkey -v -keystore Agenda.keystore -alias agenda -keyalg RSA -keysize 2048 -validity 10000&lt;br /&gt;Gerará o arquivo Agenda.keystore no raiz do aplicativo&lt;br /&gt;&lt;br /&gt;Dica: use a mesma senha no começo e no final para facilitar.&lt;br /&gt;&lt;br /&gt;Ir até o site do build -  &lt;a href=&quot;https://build.phonegap.com&quot;&gt;https://build.phonegap.com&lt;/a&gt; &lt;br /&gt;- Clicar no ícone do app&lt;br /&gt;- Clicar em No key selected à direita do ícone do android abaixo&lt;br /&gt;- Clicar em add a key...&lt;br /&gt;    Entrar com um nome para o aplicativo: DNOCS - Agenda&lt;br /&gt;    Entrar com o alias usado na criação da chave. Precisa ser o mesmo da chave: agenda&lt;br /&gt;    Indicar o arquivo da chave, que é Agenda.keystore, na pasta do app agenda&lt;br /&gt;    Clicar no pequeno cadeado amarelo (indica que está bloqueado)&lt;br /&gt;    Clicar no botão Rebuild e aguarde que reconstrua com a chave&lt;br /&gt;Agora está pronto para publicar no Google Play - https://play.google.com/apps/publish&lt;br /&gt;&lt;br /&gt;Ao efetuar o build de uma app ele aparece no site do build.phonegap.com como de debug.&lt;br /&gt;Mesmo assim este APK pode ser instalado manualmente sem problema. Não dá é para publicar no Google Play. Para isso precisa da chave.&lt;br /&gt;&lt;br /&gt;Dica: esta chave/arquivo pode ser usado para outros aplicativos.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Bom Curso Gratuito com Certificado sobre Phonegap&lt;/strong&gt;&lt;br /&gt;&lt;a href=&quot;http://loiane.training/curso/phonegap-apache-cordova/&quot;&gt;http://loiane.training/curso/phonegap-apache-cordova/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt; &lt;/p&gt;</summary>
+		<content type="html">&lt;p&gt;&lt;img src=&quot;http://backup/portal/images/PhoneGap_Video2_APP.jpg&quot; /&gt;&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;PhoneGap&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;O PhoneGap é uma distribuição do Apache Cordova. O Cordova foi originalmente criado pela Nitobi, que foi então adquirida pela Adobe em 2011. O projeto foi doado para a Apache Software Foundation (ASF) ainda no mesmo ano para manter uma transparente e aberta governança e prover um mecanismo para que outras grandes organizações contribuissem. Apache Cordova é o motor que torna poderoso o Adobe PhoneGap. O PgoneGap adicionou serviços e funcionalidades que o Cordova não tem, como PhoneGap Developer App, the PhoneGap Desktop App, PhoneGap Build e PhoneGap Enterprise..&lt;br /&gt;&lt;br /&gt;O Phonegap traz um bom conjunto de ferrametnas para a construção de aplicativos mobile híbridos, com suporte a Android, iOS, Blackberry e Windows Phone.&lt;br /&gt;É um projeto open source, baseado no Cordova e nos oferece um framework, com interface de linha de comando (Linux, Windows e Mac) contendo todos os seus principais recursos, um aplicativo desktop para Windows e Mac, que cria e executa aplicativos.&lt;br /&gt;&lt;br /&gt;Com o PhoneGap a instalação e configuração do Android fica apenas no seu servidor nas nuvens, que realiza o build para nós. Assim a criação de apps fica muito simplificada.&lt;br /&gt;&lt;br /&gt;Com apenas um único código de app podemos criar aplicativos para as várias plataformas. Podemos pegar sites ou aplicativos web existentes e adaptar para que funcionem em dispositivos móveis.&lt;br /&gt;&lt;br /&gt;A exigência para criar aplicativos no Phonegap é conhecer HTML, CSS e JavaScript.&lt;br /&gt;&lt;br /&gt;Através dos plugins do Phonegap podemos acessar os recursos do hardware dos dispositivos móveis como:  Accelerometer, camera, compass, contacts, geolocation, notification (alert / sound / vibration, storage, media e network), etc. Nem todos disponíveis para todas as plataformas, para isso precisamos consultar a documentação do plugin no site do Phonegap:&lt;br /&gt;&lt;a href=&quot;http://docs.phonegap.com/references/plugin-apis/&quot;&gt;http://docs.phonegap.com/references/plugin-apis/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Algumas seções do Site&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;&lt;a href=&quot;http://phonegap.com&quot;&gt;http://phonegap.com&lt;/a&gt; &lt;br /&gt;&lt;a href=&quot;http://build.phonegap.com&quot;&gt;http://build.phonegap.com&lt;/a&gt; &lt;br /&gt;&lt;a href=&quot;http://docs.phonegap.com/&quot;&gt;http://docs.phonegap.com/&lt;/a&gt; &lt;br /&gt;&lt;a href=&quot;http://docs.phonegap.com/references/phonegap-cli/&quot;&gt;http://docs.phonegap.com/references/phonegap-cli/&lt;/a&gt; &lt;br /&gt;&lt;a href=&quot;http://docs.phonegap.com/references/phonegap-cli/install/&quot;&gt;http://docs.phonegap.com/references/phonegap-cli/install/&lt;/a&gt; &lt;br /&gt;&lt;a href=&quot;http://docs.phonegap.com/phonegap-build/&quot;&gt;http://docs.phonegap.com/phonegap-build/&lt;/a&gt; &lt;br /&gt;&lt;a href=&quot;https://phonegap.com/app/&quot;&gt;https://phonegap.com/app/&lt;/a&gt; &lt;br /&gt;&lt;a href=&quot;http://docs.phonegap.com/references/developer-app/&quot;&gt;http://docs.phonegap.com/references/developer-app/&lt;/a&gt; &lt;br /&gt;&lt;a href=&quot;http://configap.com/&quot;&gt;http://configap.com/&lt;/a&gt; &lt;br /&gt;&lt;br /&gt;Requisitos:&lt;br /&gt;nodejs - &lt;a href=&quot;https://nodejs.org/en/&quot;&gt;https://nodejs.org/en/&lt;/a&gt; &lt;br /&gt;&lt;br /&gt;Requisitos de conhecimento&lt;br /&gt;Precisamos conhecer apenas HTML, CSS e Javascript e os comandos do PhoneGap.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;&lt;br /&gt;Roteiro Resumido para a criação completa de uma app&lt;br /&gt;Nno Linux e no Windows&lt;br /&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Instalar o PhoneGap no Linux (Debian e derivadas)&lt;/strong&gt;&lt;br /&gt;curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -&lt;br /&gt;sudo apt-get install -y nodejs&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;sudo npm install -g cordova phonegap&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Instalar o PhoneGap no Windows&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Download - &lt;a href=&quot;https://nodejs.org&quot;&gt;https://nodejs.org&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Instale e execute no prompt&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;npm install -g cordova phonegap&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Criação do app (semelhante para ambos os SOs)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;cd /var/www/html&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;phonegap create aplicativo1 org.ribafs.aplicativo1 Aplicativo1&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;cd aplicativo1 (este é um helloworld do Phonegap)&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Edite o aplicativo gerado, na pasta aplicativo1/www e abra no navegador:&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;http://localhost/aplicativo1&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Acessar o site &lt;a href=&quot;http://build.phonegap.com&quot;&gt;http://build.phonegap.com&lt;/a&gt; e criar uma conta&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Edite o arquivo aplicativo1/config.xml e faça os devidos ajustes. Depois precisa substituir os ícones e splash screens, nas pastas&lt;br /&gt;aplicativo1/www/res/icon e aplicativo1/www/res/screen. Veja:&lt;br /&gt;&lt;a href=&quot;http://docs.phonegap.com/en/4.0.0/config_ref_images.md.html&quot;&gt;http://docs.phonegap.com/en/4.0.0/config_ref_images.md.html&lt;/a&gt; &lt;br /&gt;&lt;a href=&quot;https://ionicframework.com/docs/cli/cordova/resources/&quot;&gt;https://ionicframework.com/docs/cli/cordova/resources/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Após concluir o aplicativo e estiver do jeito que deseja, vamos fazer o build&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;phonegap login&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;phonegap remote build android&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Gerar a chave&lt;br /&gt;keytool -genkey -v -keystore Aplicativo1.keystore -alias aplicativo1 -keyalg RSA -keysize 2048 -validity 10000&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Agora já podemos acessar o site do build, associar o app à chave gerada, desbloquear e baixar o APK e o APPX.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;img src=&quot;http://backup/portal/images/PhoneGap_Video2_APP.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;br /&gt;&lt;strong&gt;Detalhes sobre o PhoneGap&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;Instalação do PhoneGap Desktop App&lt;br /&gt;&lt;br /&gt;Phonegap Desktop App&lt;br /&gt;&lt;a href=&quot;https://github.com/phonegap/phonegap-app-desktop/releases&quot;&gt;https://github.com/phonegap/phonegap-app-desktop/releases&lt;/a&gt; &lt;br /&gt;&lt;br /&gt;Windows 7 e 8.1 usar a versão 0.3.5&lt;br /&gt;Windows 10 suporta a última versão, que é a 0.4.4&lt;br /&gt;&lt;br /&gt;O phonegap cria aplicativos localmente e gera o build na nuvel (build.phonegap.com), sem necessidade de instalar o Android localmente.&lt;br /&gt;Este site é um serviço nas nuvens que armazena os build que criamos dos aplicativos.&lt;br /&gt;Isso torna a criação de aplicativos mobile muito mais simples, sem necessidade da trabalheira de instalar e configurar o android localmente.&lt;br /&gt;&lt;br /&gt;O Phonegap tem uma interface para a linha de comando para Linux, Windows e Mac e uma IDE somente para Windows e Mac mas apenas com recursos de criação e execução no navegador e diversos outros recursos em seu site.&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Instalar o Phonegap&lt;/strong&gt;&lt;br /&gt;npm install -g phonegap&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Criar um aplicativo&lt;/strong&gt; (requer conexão à internet, pois baixa o esqueleto do servidor)&lt;br /&gt;phonegap create agenda org.ribafs.agenda Agenda&lt;br /&gt;&lt;br /&gt;Outras variações&lt;br /&gt;phonegap create path/to/myApp&lt;br /&gt;phonegap create path/to/myApp &quot;com.example.app&quot; &quot;My App&quot;&lt;br /&gt;phonegap create path/to/myApp --id &quot;com.example.app&quot; --name &quot;My App&quot;&lt;br /&gt;phonegap create path/to/myApp --template hello-world&lt;br /&gt;phonegap create path/to/myApp --copy-from ../myOtherApp&lt;br /&gt;phonegap create path/to/myApp -src ../myOtherApp&lt;br /&gt;phonegap create path/to/myApp --id &quot;com.example.app&quot; --name &quot;My App&quot; --copy-from ~/myOtherApp&lt;br /&gt;phonegap create path/to/myApp --link-to ../myOtherApp&lt;br /&gt;&lt;br /&gt;phonegap create pasta pacote NomeApp&lt;br /&gt;phonegap create hello org.ribafs.hello HelloWorld&lt;br /&gt;&lt;br /&gt;phonegap create agenda org.ribafs.agenda Agenda&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Estrutura de diretórios&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;hooks - scripts adicionais&lt;br /&gt;platforms - código do build de plataformas&lt;br /&gt;plugins - código dos plugins usados&lt;br /&gt;www - código fonte da app&lt;br /&gt;config.xml - &lt;br /&gt;&lt;br /&gt;Cadastrar-se em&lt;br /&gt;https://build.phonegap.com/&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Emulador para Chrome&lt;/strong&gt;&lt;br /&gt;http://emulate.phonegap.com&lt;br /&gt;Acesse e instale no chrome (somente).&lt;br /&gt;&lt;br /&gt;Instalar servidor web (para criar aplicativo com PhoneGap com PHP e MySQL)&lt;br /&gt;&lt;br /&gt;http://localhost/app1&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Build remoto&lt;/strong&gt;&lt;br /&gt;&lt;a href=&quot;https://build.phonegap.com/apps&quot;&gt;https://build.phonegap.com/apps&lt;/a&gt; &lt;br /&gt;&lt;br /&gt;cd app1&lt;br /&gt;phonegap remote login&lt;br /&gt;&lt;br /&gt;phonegap remote build android&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Emulando com Celular&lt;/strong&gt;&lt;br /&gt;ou (com celular conectado via cabo USB e usando a app do PhoneGap)&lt;br /&gt;Também devemos habilitar o modo de debug no celular Android&lt;br /&gt;phonegap run android --verbose&lt;br /&gt;&lt;br /&gt;phonegap remote run android&lt;br /&gt;&lt;br /&gt;phonegap run android --device=&amp;lt;codigo&amp;gt;&lt;br /&gt;&lt;br /&gt;Ver os códigos dos dispositivos conectados ao computador&lt;br /&gt;adb devices&lt;br /&gt;&lt;br /&gt;Após o deploy podemos instalar o aplicativo nos dispositivos reais.&lt;br /&gt;Basta acessar o site build, baixar o apk e instalar manualmente no aparelho.&lt;br /&gt;Podemos baixá-la via QRCode (mais prático).&lt;br /&gt;&lt;br /&gt;Também podemos compactar toda a pasta do app e fazer o upload no site build.&lt;br /&gt;Em Private - Upload a zip file.&lt;br /&gt;&lt;br /&gt;Para excluir um app clicar no ícone - Settings e ao final Delete.&lt;br /&gt;Após excluir requer Refresh no navegador para permitir upload de nova app.&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Download do apk&lt;/strong&gt;&lt;br /&gt;No site build clique sobre o ícone da aplicação&lt;br /&gt;Abaixo aparece um ícone azul para download do APK&lt;br /&gt;Talbém aparece um botão Install abaixo do QRcode onde podemos baixar o APK&lt;br /&gt;&lt;br /&gt;No site build podemos efetuar alterações nas configurações e depois clicar no botão Build para atualizar&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Gerando uma keystore&lt;/strong&gt;&lt;br /&gt;keytool -genkey -v -keystore [keystore_name].keystore -alias [alias_name] -keyalg RSA -keysize 2048 -validity 10000&lt;br /&gt;&lt;br /&gt;Exemplo&lt;br /&gt;keytool -genkey -v -keystore Agenda.keystore -alias agenda -keyalg RSA -keysize 2048 -validity 10000&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Emulando no celular, via app&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;Para que funcione precisamos instalar um acelerador gráfico via sdkmanager&lt;br /&gt;android-studio/bin/studio.sh&lt;br /&gt;Configurações/SDK&lt;br /&gt;Sdk/Extras, o último da lista&lt;br /&gt;Intel x86 Emulator Accelerator  &lt;br /&gt;&lt;br /&gt;phonegap emulate android&lt;br /&gt;&lt;br /&gt;phonegap remote logout&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Existe um app emulador&lt;/strong&gt;&lt;br /&gt;http://docs.phonegap.com/references/developer-app/ ou buscando phonegap pelo celular&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Testar aplicativos em emulador&lt;/strong&gt;&lt;br /&gt;phonegap serve [options] (no windows desabilitar o firewall ou permitir este)&lt;br /&gt;&lt;br /&gt;--port, -p &amp;lt;n&amp;gt;       port for web server (default: 3000)&lt;br /&gt;--autoreload         enable app refresh on file changes (default: true)&lt;br /&gt;--no-autoreload      disable app refresh on file changes&lt;br /&gt;--browser            enable desktop browser support (default: true)&lt;br /&gt;--no-browser         disable desktop browser support&lt;br /&gt;--localtunnel        enable a local tunnel for public access (default: false)&lt;br /&gt;&lt;br /&gt;Após abrir o aplicativo apenas execute:&lt;br /&gt;cd pastaapp&lt;br /&gt;phonegap serve&lt;br /&gt;&lt;br /&gt;As alterações fetias no código fonte no computador são percebidas automaticamente no app do celular&lt;br /&gt;&lt;br /&gt;Ambos, celular e computador devem estar na mesma rede&lt;br /&gt;&lt;br /&gt;Neste caso o app aparece no celular.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Vídeo aulas sobre Cadastro de Clientes&lt;/strong&gt;&lt;br /&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=CgidH4qFxiM&amp;amp;index=1&amp;amp;list=PLTmK6lyvWo8g3v40gJADMdUUTt8p2t5G3&quot;&gt;https://www.youtube.com/watch?v=CgidH4qFxiM&amp;amp;index=1&amp;amp;list=PLTmK6lyvWo8g3v40gJADMdUUTt8p2t5G3&lt;/a&gt; &lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Listar plataformas disponíveis&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;phonegap platform&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Adicionar suporte para a plataforma android&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;phonegap platform add android&lt;br /&gt;Com isso ele cria uma pasta com o projeto na nossa pasta platform. Este projeto criado pode ser importado pelo Android Studio.&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;App Controle de Estoque&lt;/strong&gt;&lt;br /&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=XHOh0F9HLKo&amp;amp;index=15&amp;amp;list=PLTmK6lyvWo8g3v40gJADMdUUTt8p2t5G3&quot;&gt;https://www.youtube.com/watch?v=XHOh0F9HLKo&amp;amp;index=15&amp;amp;list=PLTmK6lyvWo8g3v40gJADMdUUTt8p2t5G3&lt;/a&gt; &lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Emulador do Blackberry no navegador - Ripple&lt;/strong&gt;&lt;br /&gt;sudo npm install -g ripple-emulator&lt;br /&gt;&lt;a href=&quot;https://chrome.google.com/webstore/detail/ripple-emulator-beta/geelfhphabnejjhdalkjhgipohgpdnoc&quot;&gt;https://chrome.google.com/webstore/detail/ripple-emulator-beta/geelfhphabnejjhdalkjhgipohgpdnoc&lt;/a&gt; &lt;br /&gt;&lt;br /&gt;ripple emulate&lt;br /&gt;&lt;br /&gt;Para que funcione requer adição do android como plataforma&lt;br /&gt;phonegap platform add android&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Debugando com Gapdebug (Win e Mac)&lt;/strong&gt;&lt;br /&gt;http://genuitec.com/products/gapdebug&lt;br /&gt;&lt;br /&gt;Debugar no navegador de aplicativo no celular&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Plugin Bateria&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;Instalar Phonegap&lt;br /&gt;Criar o app&lt;br /&gt;Instalar plugin&lt;br /&gt;phonegap create bateria org.ribafs.bateria StatusBateria&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Ver documentação no site do cordova&lt;/strong&gt;&lt;br /&gt;&lt;a href=&quot;https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-battery-status/index.html&quot;&gt;https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-battery-status/index.html&lt;/a&gt; &lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Atualizar o cordova&lt;/strong&gt;&lt;br /&gt;sudo npm install -g cordova&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Instalar o plugin&lt;/strong&gt;&lt;br /&gt;cordova plugin add cordova-plugin-battery-status&lt;br /&gt;&lt;br /&gt;Ao instalar ele cria uma pasta com os fontes para cada uma das plataformas suportadas.&lt;br /&gt;&lt;br /&gt;Mudar o início da tag &amp;lt;body&amp;gt; em www/index.html para:&lt;br /&gt;&lt;br /&gt;&amp;lt;body&amp;gt;&lt;br /&gt;    &amp;lt;div class=&quot;app&quot;&amp;gt;&lt;br /&gt;        &amp;lt;h1&amp;gt;Exemplo Plugin Bateria&amp;lt;/h1&amp;gt;&lt;br /&gt;        &amp;lt;div id=&quot;deviceready&quot; class=&quot;blink&quot;&amp;gt;&lt;br /&gt;            &amp;lt;p&amp;gt;Porcentagem Bateria&amp;lt;span id=&quot;level&quot;&amp;gt;%&amp;lt;/span&amp;gt;&amp;lt;/p&amp;gt;&lt;br /&gt;            &amp;lt;p&amp;gt;Dispositivo plugado&amp;lt;span id=&quot;isPluged&quot;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/p&amp;gt;&lt;br /&gt;        &amp;lt;/div&amp;gt;&lt;br /&gt;    &amp;lt;/div&amp;gt;&lt;br /&gt;&lt;br /&gt;Em js/index.js&lt;br /&gt;&lt;br /&gt;Mudar este evento:&lt;br /&gt;&lt;br /&gt;    receivedEvent: function(id) {&lt;br /&gt;        window.addEventListener(&quot;batterystatus&quot;, onBatteryStatus, false);&lt;br /&gt;&lt;br /&gt;        function onBatteryStatus(status) {&lt;br /&gt;            console.log(&quot;Level: &quot; + status.level + &quot; isPlugged: &quot; + status.isPlugged);&lt;br /&gt;        }&lt;br /&gt;    }&lt;br /&gt;&lt;br /&gt;Testando este app. O teste só irá funcionar bem em aparelhos reais de celular ou tablet.&lt;br /&gt;&lt;br /&gt;Lembrando: este evento somente é disparado quando o estado da bateria muda ou quando o isPlugged muda, portanto a melhor alternativa é o ripple.&lt;br /&gt;&lt;br /&gt;Lembrando que para que o ripple funcione requer que o android seja adicionado ao app.&lt;br /&gt;&lt;br /&gt;phonegap platform add android&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Também precisa estar no diretório web.&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Plugin Device&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;Acessar informações sobre o aparelho: SO, versão, versão do cordova, marca, etc.&lt;br /&gt;&lt;a href=&quot;https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-device/index.html&quot;&gt;https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-device/index.html&lt;/a&gt; &lt;br /&gt;&lt;br /&gt;App&lt;br /&gt;phonegap create device org.ribafs.device DevicePlugin&lt;br /&gt;&lt;br /&gt;Instalação&lt;br /&gt;cordova plugin add cordova-plugin-device&lt;br /&gt;&lt;br /&gt;O objeto do plugin device tem escopo global e pode ser chamado de qualquer parte do app.&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Plugin Dialogs&lt;/strong&gt;&lt;br /&gt;Recomendado para todas as aplicações.&lt;br /&gt;&lt;a href=&quot;https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-dialogs/index.html&quot;&gt;https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-dialogs/index.html&lt;/a&gt; &lt;br /&gt;&lt;br /&gt;App&lt;br /&gt;phonegap create dialogos org.ribafs.dialogos PluginDialogs&lt;br /&gt;&lt;br /&gt;Instalar&lt;br /&gt;cordova plugin add cordova-plugin-dialogs&lt;br /&gt;&lt;br /&gt;Obs.: estes exemplos com plugins não funcionam no navegador, nem no emulador ripple, somente no dispositivo real.&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;jQuery Mobile para a camada view&lt;br /&gt;&lt;br /&gt;Podemos criar um app ou um site e fornecer a URL para o cliente.&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Templates do Phonegap&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;phonegap template list&lt;br /&gt;&lt;br /&gt;phonegap create dialogos org.ribafs.dialogos PluginDialogs --template nometemplate&lt;br /&gt;&lt;br /&gt;Criar app usando template jquerymobile&lt;br /&gt;&lt;br /&gt;phonegap create my-app --template URL&lt;br /&gt;&lt;br /&gt;phonegap create my-app --template https://github.com/loiane/jquerymobile-phonegap-template (para isso requer git instalado na máquina)&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Publicar uma app do Android no build para o Google Play&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;Criar a app&lt;br /&gt;Criar a chave com:&lt;br /&gt;cd appname&lt;br /&gt;Efetuar o build pela linha de comando&lt;br /&gt;keytool -genkey -v -keystore Agenda.keystore -alias agenda -keyalg RSA -keysize 2048 -validity 10000&lt;br /&gt;Gerará o arquivo Agenda.keystore no raiz do aplicativo&lt;br /&gt;&lt;br /&gt;Dica: use a mesma senha no começo e no final para facilitar.&lt;br /&gt;&lt;br /&gt;Ir até o site do build -  &lt;a href=&quot;https://build.phonegap.com&quot;&gt;https://build.phonegap.com&lt;/a&gt; &lt;br /&gt;- Clicar no ícone do app&lt;br /&gt;- Clicar em No key selected à direita do ícone do android abaixo&lt;br /&gt;- Clicar em add a key...&lt;br /&gt;    Entrar com um nome para o aplicativo: DNOCS - Agenda&lt;br /&gt;    Entrar com o alias usado na criação da chave. Precisa ser o mesmo da chave: agenda&lt;br /&gt;    Indicar o arquivo da chave, que é Agenda.keystore, na pasta do app agenda&lt;br /&gt;    Clicar no pequeno cadeado amarelo (indica que está bloqueado)&lt;br /&gt;    Clicar no botão Rebuild e aguarde que reconstrua com a chave&lt;br /&gt;Agora está pronto para publicar no Google Play - https://play.google.com/apps/publish&lt;br /&gt;&lt;br /&gt;Ao efetuar o build de uma app ele aparece no site do build.phonegap.com como de debug.&lt;br /&gt;Mesmo assim este APK pode ser instalado manualmente sem problema. Não dá é para publicar no Google Play. Para isso precisa da chave.&lt;br /&gt;&lt;br /&gt;Dica: esta chave/arquivo pode ser usado para outros aplicativos.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Bom Curso Gratuito com Certificado sobre Phonegap&lt;/strong&gt;&lt;br /&gt;&lt;a href=&quot;http://loiane.training/curso/phonegap-apache-cordova/&quot;&gt;http://loiane.training/curso/phonegap-apache-cordova/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt; &lt;/p&gt;</content>
+		<category term="PhoneGap" />
+	</entry>
+</feed>

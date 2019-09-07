@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br" dir="ltr">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <base href="" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Ribamar FS" />
+	<meta name="robots" content="noindex, nofollow" />
+	<meta name="description" content="Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros." />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>Routes no Laravel - RibaFS Portal</title>
+	<link href="http://ribafs.org/portal/frameworks/laravel-5/routes/routes-no-laravel.html?tmpl=component&amp;print=1&amp;layout=default" rel="canonical" />
+	<link href="../../../templates/shaper_helix3/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../../../favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<script src="../../../media/jui/js/jquery.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery-noconflict.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery-migrate.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="http://backup/portal/media/system/js/caption.js?d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script type="text/javascript">
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+	</script>
+	<meta property="og:url" content="http://backup/portal/frameworks/laravel-5/routes/routes-no-laravel.html" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Routes no Laravel" />
+	<meta property="og:description" content="Routes - são rotas entre uma URL no navegador e um recurso do laravel (texto, view, etc) Detalhes em: https://laravel.com/docs/5.4/routing e https://www.yo..." />
+
+   	<link rel="stylesheet" href="../../../media/jui/css/bootstrap.min.css" type="text/css" />
+	<link rel="stylesheet" href="../../../templates/shaper_helix3/css/frontend-edit.css" type="text/css" />
+    <link rel="stylesheet" href="../../../templates/shaper_helix3/css/template.css" type="text/css" />
+</head>
+<body class="contentpane">
+	<div id="system-message-container">
+	</div>
+
+	
+
+<article class="item item-page" itemscope itemtype="http://schema.org/Article">
+	<meta itemprop="inLanguage" content="pt-BR" />
+	
+	
+
+	<div class="entry-header">
+		<span class="post-format"><i class="fa fa-thumb-tack"></i></span>
+		
+					<h2 itemprop="name">
+									Routes no Laravel							</h2>
+												</div>
+
+						<div id="pop-print" class="btn hidden-print">
+				<a href="routes-no-laravel.html#" onclick="window.print();return false;">			<span class="icon-print" aria-hidden="true"></span>
+		Imprimir	</a>			</div>
+				
+	
+	
+				
+	
+			<div itemprop="articleBody">
+		<p style="text-align: justify;"><strong>Routes - são rotas entre uma URL no navegador e um recurso do laravel (texto, view, etc)</strong><br /><br />Detalhes em:<br /><a href="https://laravel.com/docs/5.4/routing">https://laravel.com/docs/5.4/routing</a> <br />e<br /><a href="https://www.youtube.com/watch?v=0Y6l7n791q4&amp;list=PLVSNL1PHDWvTQnUQjhBEzY2ZSzJTR9zcZ&amp;index=7">https://www.youtube.com/watch?v=0Y6l7n791q4&amp;list=PLVSNL1PHDWvTQnUQjhBEzY2ZSzJTR9zcZ&amp;index=7</a> <br /><br /><strong>Rotas</strong><br /><br /><strong>Tipos de routes</strong><br /><br /><strong>HTTP    Ação</strong><br />get        leitura<br />post    gravação<br />put        atualização<br />delete    delete<br /><br />No Laravel 5 as rotas ficam no diretório routes (no raiz), basicamente no arquivo web.php<br /><br />Exemplo padrão<br />routes/web.php<br /><br />Route::get('/', function () {<br />    return view('welcome');<br />});<br /><br />http://localhost:8000/contato<br /><br />Route::get('/', function () {<br />    return view('contato');<br />});<br /><br />http://localhost:8000/empresa<br /><br />Route::get('/', function () {<br />    return view('empresa');<br />});<br /><br />http://localhost:8000/especializacao<br /><br />Route::get('/', function () {<br />    return view('especializacao');<br />});<br /><br /><br />Actions Handled By Resource Controller<br /><br />Verb     URI     Action     Route Name<br /><br />GET     /photos             index     photos.index<br />GET     /photos/create         create     photos.create<br />POST     /photos             store     photos.store<br />GET     /photos/{photo}     show     photos.show<br />GET     /photos/{photo}/edit edit     photos.edit<br />PUT/PATCH     /photos/{photo} update     photos.update<br />DELETE     /photos/{photo}     destroy     photos.destroy<br /><br />Route::resource('photo', 'PhotoController', ['only' =&gt; [<br />    'index', 'show'<br />]]);<br /><br />Route::resource('photo', 'PhotoController', ['except' =&gt; [<br />    'create', 'store', 'update', 'destroy'<br />]]);<br /><br />Route::resource('photo', 'PhotoController', ['names' =&gt; [<br />    'create' =&gt; 'photo.build'<br />]]);<br /><br />Adicionar ao arquivo web acima:<br /><br />Route::get('foo', function () {<br />    return 'Hello World';<br />});<br /><br />Chamar pelo navegador<br />http://127.0.0.1:8000/foo<br /><br />Retornará<br />Hello World<br /><br />Se o return fosse:<br />    return view('welcome');<br />Ele chamaria o arquivo resources/views/welcome.blade.php<br /><br />Controllers - app/Http/Controllers<br />Models - app/<br />Views - Resources/views<br />Routes - routes/web.php<br /><br />Existe relação entre rotas e views<br /><br />'middleware' =&gt; 'auth' - força o login<br /><br />Criar a view index.blade.php em:<br />resources/views/painel/home<br /><br />Com apenas:<br />&lt;h1&gt;Entrada do Painel&lt;/h1&gt;<br /><br />Criar view similar para os outros routes.<br /><br />Criar a view index.blade.php em:<br />resources/views/painel/financeiro<br /><br />Com apenas:<br />&lt;h1&gt;Financeiro do Painel&lt;/h1&gt;<br /><br />Criar a view index.blade.php em:<br />resources/views/painel/usuarios<br /><br />Com apenas:<br />&lt;h1&gt;Usuários do Painel&lt;/h1&gt;<br /><br />Chamar assim:<br /><br />http://127.0.0.1:8000/painel/home<br />http://127.0.0.1:8000/painel/financeiro<br />http://127.0.0.1:8000/painel/usuarios<br /><br />Com auth<br /><br />Route::get('/auth/login', function(){<br />    return 'Form de Login';<br />})<br /><br />http://127.0.0.1:8000/auth/login<br /><br />Neste caso quando o usuário abrir o raiz do site retornará a view welcome.<br /><br />A view welcome.blade.php encontra-se em:<br />resources/views<br /><br />Criar view de teste<br />resources/views/teste.blade.php<br /><br />Contendo:<br />&lt;h1&gt;Apenas um teste&lt;/h1&gt;<br /><br />Alterar o route para que chame a view "teste" ao invés de welcome.<br /><br />Podemos retornar um texto ao invés de uma view<br />Route::get('/', function () {<br />    return 'Olá, como vai?';<br />});<br /><br />Rota com seleção de tipo<br /><br />Route::match['post', 'get'], '/match', function(){<br />    return 'Minha rota';<br />});<br /><br />Rota para receber qualquer tipo<br />Route::any('any', function () {<br />    return 'Rota qualquer';<br />});<br /><br />Route::get('produtos', function () {<br />    return 'Listagem dos produtos';<br />});<br /><br /><br />Editar o routes/web.php e adicionar:<br />Criar um diretório "painel" em views e as views abaixo.<br /><br />Route::group(['prefix' =&gt; 'painel', 'middleware' =&gt; 'auth'], function((){<br />    Route::get('/', function(){<br />        return view('painel.home.index');<br />    })<br />    Route::get('financeiro', function(){<br />        return view('painel.financeiro.index');<br />    })<br />    Route::get('usuarios', function(){<br />        return view('painel.usuarios.index');<br />    })<br /><br />});<br /><br />'middleware' =&gt; 'auth' - restringir acesso somente via login<br /><br />Passando parâmetro<br /><br />Route::get('produto/editar/{id}', function ($id) {<br />    return "Editar o produto {$id}";<br />});<br /><br />Valores default<br />Route::get('produto/deletar/{id?}', function ($id * '') {<br />    return "Deletar o produto {$id}";<br />});<br /><br /><strong>Normalmente usamos na prática  routes com controllers.</strong><br />Route::get('profile', 'UserController@show')-&gt;middleware('auth');<br /><br />Route::get('produtos', 'ProdutosController@index');<br />Route::get('produtos/create', 'ProdutosController@create');</p>
+
+<p style="text-align: justify;">// Para store<br />Route::post('produtos/create', 'ProdutosController@store');<br />Route::get('produtos/{idProd}', 'ProdutosController@show');<br />Route::get('produtos/{idProd}/{idProd2}', 'ProdutosController@showTwo');<br />Route::get('produtos/edit/{idProd}', 'ProdutosController@edit');<br /><br />Route::controller('/carros', 'CarrosController');</p>
+
+<p style="text-align: justify;"> </p> 	</div>
+
+	
+	
+				
+	
+	
+	
+</article>
+
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br" dir="ltr">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <base href="" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Ribamar FS" />
+	<meta name="robots" content="noindex, nofollow" />
+	<meta name="description" content="Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros." />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>Instalação - RibaFS Portal</title>
+	<link href="http://ribafs.org/portal/frameworks/cakephp-3/instalacao.html?tmpl=component&amp;print=1&amp;layout=default" rel="canonical" />
+	<link href="../../templates/shaper_helix3/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../../favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<script src="../../media/jui/js/jquery.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../media/jui/js/jquery-noconflict.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../media/jui/js/jquery-migrate.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="http://backup/portal/media/system/js/caption.js?d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script type="text/javascript">
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+	</script>
+	<meta property="og:url" content="http://backup/portal/frameworks/cakephp-3/instalacao.html" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Instalação do CakePHP" />
+	<meta property="og:description" content="Instalação com Composer A instalação do CakePHP 3 basicamente é feita usando-se o composer. A instalação baixando o pacote não é mais suportada. Pré-requis..." />
+
+   	<link rel="stylesheet" href="../../media/jui/css/bootstrap.min.css" type="text/css" />
+	<link rel="stylesheet" href="../../templates/shaper_helix3/css/frontend-edit.css" type="text/css" />
+    <link rel="stylesheet" href="../../templates/shaper_helix3/css/template.css" type="text/css" />
+</head>
+<body class="contentpane">
+	<div id="system-message-container">
+	</div>
+
+	
+
+<article class="item item-page" itemscope itemtype="http://schema.org/Article">
+	<meta itemprop="inLanguage" content="pt-BR" />
+	
+	
+
+	<div class="entry-header">
+		<span class="post-format"><i class="fa fa-thumb-tack"></i></span>
+		
+					<h2 itemprop="name">
+									Instalação do CakePHP							</h2>
+												</div>
+
+						<div id="pop-print" class="btn hidden-print">
+				<a href="instalacao.html#" onclick="window.print();return false;">			<span class="icon-print" aria-hidden="true"></span>
+		Imprimir	</a>			</div>
+				
+	
+	
+				
+	
+			<div itemprop="articleBody">
+		<p style="text-align: justify;"><strong>Instalação com Composer<br /><br /></strong></p>
+
+<p style="text-align: justify;">A instalação do CakePHP 3 basicamente é feita usando-se o composer.<br />A instalação baixando o pacote não é mais suportada.</p>
+
+<p style="text-align: justify;"><strong>Pré-requisitos para instalar o CakePHP 3.4</strong></p>
+
+<p style="text-align: justify;">Um servidor web, Apache, por exemplo</p>
+
+<p style="text-align: justify;">O <strong>mod_rewrite</strong> não é obrigatório mas desejável</p>
+
+<p style="text-align: justify;">PHP 5.6 ou superior (incluindo PHP 7.1)</p>
+
+<p style="text-align: justify;">Extensões:</p>
+
+<p style="text-align: justify;">- mbstring (somente se usando PHP 7)</p>
+
+<p style="text-align: justify;">- intl</p>
+
+<p style="text-align: justify;"><strong>Geralmente os aplicativos usam bancos de dados. O Cake suporta:</strong></p>
+
+<p style="text-align: justify;">- MySQL 5.1.10 ou superior</p>
+
+<p style="text-align: justify;">- PostgreSQL</p>
+
+<p style="text-align: justify;">- MS SQL Server 2008 ou superior</p>
+
+<p style="text-align: justify;">- SQLite 3</p>
+
+<p style="text-align: justify;"> </p>
+
+<p style="text-align: justify;"><strong>Instalar composer</strong></p>
+
+<p style="text-align: justify;">No php7<br /> sudo apt-get install composer</p>
+
+<p style="text-align: justify;">php5<br /> sudo su<br /> curl -sS https://getcomposer.org/installer | php</p>
+
+<p style="text-align: justify;"><strong>Colocar no path do Linux</strong><br /> mv composer.phar /usr/local/bin/composer</p>
+
+<p style="text-align: justify;"><strong>Criar App</strong><br /> composer create-project --prefer-dist cakephp/app nome_ap</p>
+
+<p style="text-align: justify;"><strong>Criar um script para Facilitar a criação de App</strong><br /> sudo nano /usr/local/bin/comp</p>
+
+<p style="text-align: justify;">Conteúdo a linha abaixo:</p>
+
+<p style="text-align: justify;">composer create-project --prefer-dist cakephp/app $1</p>
+
+<p style="text-align: justify;"><strong>Tornando executável</strong></p>
+
+<p style="text-align: justify;">sudo chmod +x /usr/local/bin/comp</p>
+
+<p style="text-align: justify;"><strong>Criando aplicativo</strong></p>
+
+<p style="text-align: justify;">comp aplicativo1</p>
+
+<p style="text-align: justify;"> </p>
+
+<p style="margin-right: 6.16cm; text-align: justify;"><strong>Desabilitando</strong> <strong>o</strong> <strong>xdebug</strong> <strong>(como</strong> <strong>recomen</strong><strong>d</strong><strong>ado)</strong> <strong>no</strong> <strong>L</strong><strong>i</strong><strong>nux:</strong> sudo php5dismod -s cli xdebug</p>
+
+<p style="margin-right: -0.04cm; text-align: justify;">A execução do composer com o xdebug habilitado torna-se muito lenta, por isso recomenda-se desabilitar o xdebug.</p>
+
+<p style="margin-right: -0.04cm; text-align: justify;">Desabilitar xdebug no php7:</p>
+
+<p style="margin-right: -0.04cm; text-align: justify;">sudo nano /etc/php/7.0/cli/conf.d/20-xdebug.ini</p>
+
+<p style="margin-right: -0.04cm; text-align: justify;">Apenas comente a linha</p>
+
+<p style="margin-right: -0.04cm; text-align: justify;"> </p> 	</div>
+
+	
+	
+				
+	
+	
+	
+</article>
+
+</body>
+</html>

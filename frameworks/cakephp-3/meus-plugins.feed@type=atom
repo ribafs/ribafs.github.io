@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="Joomla! - Open Source Content Management" -->
+<feed xmlns="http://www.w3.org/2005/Atom"  xml:lang="pt-br">
+	<title type="text">CakePHP 3 - RibaFS Portal</title>
+	<subtitle type="text">Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros.</subtitle>
+	<link rel="alternate" type="text/html" href="http://backup"/>
+	<id>http://backup/portal/frameworks/cakephp-3/meus-plugins.feed</id>
+	<updated>2019-09-07T19:19:28-03:00</updated>
+	<author>
+		<name>RibaFS Portal</name>
+	</author>
+	<generator uri="https://www.joomla.org">Joomla! - Open Source Content Management</generator>
+	<link rel="self" type="application/atom+xml" href="http://backup/portal/frameworks/cakephp-3/meus-plugins.feed?type=atom"/>
+	<entry>
+		<title>Plugin cake-control-br para CakePHP 3</title>
+		<link rel="alternate" type="text/html" href="http://backup/portal/frameworks/cakephp-3/meus-plugins/plugin-cake-control-br-para-cakephp-3.html"/>
+		<published>2017-08-31T21:16:46-03:00</published>
+		<updated>2017-08-31T21:16:46-03:00</updated>
+		<id>http://backup/portal/frameworks/cakephp-3/meus-plugins/plugin-cake-control-br-para-cakephp-3.html</id>
+		<author>
+			<name>Ribamar FS</name>
+		</author>
+		<summary type="html">&lt;h4&gt;Plugin para Controle de Acesso com CakePHP 3&lt;/h4&gt;
+
+&lt;p&gt;URL deste projeto - &lt;a href=&quot;https://github.com/ribafs/cake-control-br/&quot;&gt;https://github.com/ribafs/cake-control-br/&lt;/a&gt; &lt;br /&gt;&lt;br /&gt;Este plugin inclue os plugins lessjs e parsers less.php e permite que você desenvolva facilmente aplicativos com o CakePHP e (Twitter) Bootstrap e também inclui a estrutura do plugin twbs-cake-plugin para criar este plugin como um fork.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Principais recursos&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;Template do bake traduzido para pt_BR&lt;br /&gt;Element topmenu&lt;br /&gt;Editor TinyMCE&lt;br /&gt;Busca com paginação&lt;br /&gt;Senhas criptografadas com Bcrypt&lt;br /&gt;Controle de Acesso Admin/Panel&lt;br /&gt;Parsers less&lt;br /&gt;LessHelper&lt;br /&gt;Layout default com o Bootstrap&lt;br /&gt;Utilitários do BootstrapUI plugin&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Instalação e uso&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;Criar app:&lt;br /&gt;composer create-project --prefer-dist cakephp/app control1&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Instalar Plugin&lt;/strong&gt;&lt;br /&gt;cd control1&lt;br /&gt;composer require ribafs/cake-control-br&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Configurar banco&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;Crie o banco e importe o script existente na pasta docs do plugin baixado. Depois edite config/app.php para configurar o banco.&lt;br /&gt;Aproveite e configure também o controller default em config/routes.php para um de seu interesse.&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Habilitar o plugin&lt;/strong&gt;&lt;br /&gt;bin/cake plugin load CakeControlBr --bootstrap&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Download do plugin&lt;/strong&gt;&lt;br /&gt;&lt;a href=&quot;https://github.com/ribafs/cake-control-br/archive/master.zip&quot;&gt;https://github.com/ribafs/cake-control-br/archive/master.zip&lt;/a&gt; &lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Descompactar e abrir o diretório docs, então copiar:&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt; bootstrap_cli.php para a control1/config (Com isso o Bake gerarará Users com login e logout)&lt;br /&gt;&lt;br /&gt; AppController.php para control1/src/Controller&lt;br /&gt;&lt;br /&gt;cd control1&lt;br /&gt;bin/cake bake all groups -t CakeControlBr&lt;br /&gt;bin/cake bake all users -t CakeControlBr&lt;br /&gt;bin/cake bake all permissions -t CakeControlBr&lt;br /&gt;bin/cake bake all customers -t CakeControlBr&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Existem 4 usuários, cada um com permissões diferentes:&lt;/strong&gt;&lt;br /&gt;super - com senha super também tem total permissão em tudo.&lt;br /&gt;admin - com senha admin tem total permissão nas tabelas groups, users e permissions.&lt;br /&gt;manager - com senha manager tem total permissão somente nas tabelas diferentes de groups, users e permissions.&lt;br /&gt;user - com senha user não tem nenhuma permissão no aplicativo, apenas de efetuar login.&lt;br /&gt;&lt;br /&gt;Em AppController.php você pode definir o controller default para usuários não administradores. Caso não use a tabela customers troque logo no início do AppController por uma de suas tabelas na linha:&lt;br /&gt;&lt;br /&gt;protected $noAdmins = 'Customers';&lt;br /&gt;&lt;br /&gt;Sugestões, colaborações e forks serão muto bem vindos:&lt;br /&gt;&lt;br /&gt; Erros: português&lt;br /&gt; PHP&lt;br /&gt; CakePHP&lt;br /&gt; ControlComponent.php&lt;br /&gt; etc&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;License&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;The MIT License (MIT)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Este plugin encontra-se no GitHub&lt;/strong&gt;&lt;br /&gt;&lt;a href=&quot;https://github.com/ribafs/cake-control-br&quot;&gt;https://github.com/ribafs/cake-control-br&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;</summary>
+		<content type="html">&lt;h4&gt;Plugin para Controle de Acesso com CakePHP 3&lt;/h4&gt;
+
+&lt;p&gt;URL deste projeto - &lt;a href=&quot;https://github.com/ribafs/cake-control-br/&quot;&gt;https://github.com/ribafs/cake-control-br/&lt;/a&gt; &lt;br /&gt;&lt;br /&gt;Este plugin inclue os plugins lessjs e parsers less.php e permite que você desenvolva facilmente aplicativos com o CakePHP e (Twitter) Bootstrap e também inclui a estrutura do plugin twbs-cake-plugin para criar este plugin como um fork.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Principais recursos&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;Template do bake traduzido para pt_BR&lt;br /&gt;Element topmenu&lt;br /&gt;Editor TinyMCE&lt;br /&gt;Busca com paginação&lt;br /&gt;Senhas criptografadas com Bcrypt&lt;br /&gt;Controle de Acesso Admin/Panel&lt;br /&gt;Parsers less&lt;br /&gt;LessHelper&lt;br /&gt;Layout default com o Bootstrap&lt;br /&gt;Utilitários do BootstrapUI plugin&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Instalação e uso&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;Criar app:&lt;br /&gt;composer create-project --prefer-dist cakephp/app control1&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Instalar Plugin&lt;/strong&gt;&lt;br /&gt;cd control1&lt;br /&gt;composer require ribafs/cake-control-br&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Configurar banco&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;Crie o banco e importe o script existente na pasta docs do plugin baixado. Depois edite config/app.php para configurar o banco.&lt;br /&gt;Aproveite e configure também o controller default em config/routes.php para um de seu interesse.&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Habilitar o plugin&lt;/strong&gt;&lt;br /&gt;bin/cake plugin load CakeControlBr --bootstrap&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Download do plugin&lt;/strong&gt;&lt;br /&gt;&lt;a href=&quot;https://github.com/ribafs/cake-control-br/archive/master.zip&quot;&gt;https://github.com/ribafs/cake-control-br/archive/master.zip&lt;/a&gt; &lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Descompactar e abrir o diretório docs, então copiar:&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt; bootstrap_cli.php para a control1/config (Com isso o Bake gerarará Users com login e logout)&lt;br /&gt;&lt;br /&gt; AppController.php para control1/src/Controller&lt;br /&gt;&lt;br /&gt;cd control1&lt;br /&gt;bin/cake bake all groups -t CakeControlBr&lt;br /&gt;bin/cake bake all users -t CakeControlBr&lt;br /&gt;bin/cake bake all permissions -t CakeControlBr&lt;br /&gt;bin/cake bake all customers -t CakeControlBr&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Existem 4 usuários, cada um com permissões diferentes:&lt;/strong&gt;&lt;br /&gt;super - com senha super também tem total permissão em tudo.&lt;br /&gt;admin - com senha admin tem total permissão nas tabelas groups, users e permissions.&lt;br /&gt;manager - com senha manager tem total permissão somente nas tabelas diferentes de groups, users e permissions.&lt;br /&gt;user - com senha user não tem nenhuma permissão no aplicativo, apenas de efetuar login.&lt;br /&gt;&lt;br /&gt;Em AppController.php você pode definir o controller default para usuários não administradores. Caso não use a tabela customers troque logo no início do AppController por uma de suas tabelas na linha:&lt;br /&gt;&lt;br /&gt;protected $noAdmins = 'Customers';&lt;br /&gt;&lt;br /&gt;Sugestões, colaborações e forks serão muto bem vindos:&lt;br /&gt;&lt;br /&gt; Erros: português&lt;br /&gt; PHP&lt;br /&gt; CakePHP&lt;br /&gt; ControlComponent.php&lt;br /&gt; etc&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;License&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;The MIT License (MIT)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Este plugin encontra-se no GitHub&lt;/strong&gt;&lt;br /&gt;&lt;a href=&quot;https://github.com/ribafs/cake-control-br&quot;&gt;https://github.com/ribafs/cake-control-br&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;</content>
+		<category term="Meus Plugins" />
+	</entry>
+	<entry>
+		<title>Plugin twbs-cake-css para CakePHP 3</title>
+		<link rel="alternate" type="text/html" href="http://backup/portal/frameworks/cakephp-3/meus-plugins/twbs-cake-css.html"/>
+		<published>2017-08-31T21:08:54-03:00</published>
+		<updated>2017-08-31T21:08:54-03:00</updated>
+		<id>http://backup/portal/frameworks/cakephp-3/meus-plugins/twbs-cake-css.html</id>
+		<author>
+			<name>Ribamar FS</name>
+		</author>
+		<summary type="html">&lt;h4&gt;Simple plugin to implement Bootstrap in CakePHP 3&lt;/h4&gt;
+
+&lt;p&gt;Este plugin é um fork do Twitter Bootstrap Plugin&lt;br /&gt;&lt;a href=&quot;https://github.com/elboletaire/twbs-cake-plugin&quot;&gt;https://github.com/elboletaire/twbs-cake-plugin&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Este plugin somente usa CSS, não usa Less.&lt;/p&gt;
+
+&lt;p&gt;Ele também contém templates para o bake que devem ajudar na criação dos aplicativos com o bootstrap.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Características Gerais&lt;br /&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+
+&lt;li&gt;Bake templates.&lt;/li&gt;
+
+&lt;li&gt;Generic Bootstrap layout.&lt;/li&gt;
+
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a id=&quot;user-content-installation&quot; class=&quot;anchor&quot; href=&quot;https://github.com/ribafs/twbs-cake-css#installation&quot;&gt;&lt;/a&gt;&lt;strong&gt;Installation&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a id=&quot;user-content-adding-the-plugin&quot; class=&quot;anchor&quot; href=&quot;https://github.com/ribafs/twbs-cake-css#adding-the-plugin&quot;&gt;&lt;/a&gt;&lt;strong&gt;Adding the plugin&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Você pode facilmente instalar este plugin usando o cmposer:&lt;/p&gt;
+
+&lt;div class=&quot;highlight highlight-source-shell&quot;&gt;
+
+&lt;p&gt;composer require ribafs/twbs-cake-css&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Habilitando o plugin&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlight highlight-text-html-php&quot;&gt;
+
+&lt;p&gt;&lt;span class=&quot;pl-s1&quot;&gt;&lt;span class=&quot;pl-c1&quot;&gt;bin&lt;/span&gt;&lt;span class=&quot;pl-k&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;pl-c1&quot;&gt;cake&lt;/span&gt; &lt;span class=&quot;pl-c1&quot;&gt;plugin&lt;/span&gt; &lt;span class=&quot;pl-c1&quot;&gt;load&lt;/span&gt; &lt;span class=&quot;pl-c1&quot;&gt;Bootstrap&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;Isto deve carregar o CSS para você.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Adicionar o template para o src/Controller/AppController.php&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlight highlight-text-html-php&quot;&gt;
+
+&lt;p&gt;&lt;span class=&quot;pl-s1&quot;&gt; &lt;span class=&quot;pl-k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;pl-k&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;pl-en&quot;&gt;beforeRender&lt;/span&gt;(&lt;span class=&quot;pl-c1&quot;&gt;Event&lt;/span&gt; &lt;span class=&quot;pl-smi&quot;&gt;$event&lt;/span&gt;)&lt;/span&gt; &lt;span class=&quot;pl-s1&quot;&gt; {&lt;/span&gt;&lt;br /&gt;    &lt;span class=&quot;pl-s1&quot;&gt;&lt;span class=&quot;pl-smi&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;pl-k&quot;&gt;-&amp;gt;&lt;/span&gt;viewBuilder()&lt;span class=&quot;pl-k&quot;&gt;-&amp;gt;&lt;/span&gt;theme(&lt;span class=&quot;pl-s&quot;&gt;&lt;span class=&quot;pl-pds&quot;&gt;'&lt;/span&gt;Bootstrap&lt;span class=&quot;pl-pds&quot;&gt;'&lt;/span&gt;&lt;/span&gt;);&lt;br /&gt;&lt;span class=&quot;pl-k&quot;&gt;...&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Gerando as Views&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Gerar as views usando o template embutido com este plugin.&lt;/p&gt;
+
+&lt;div class=&quot;highlight highlight-source-shell&quot;&gt;
+
+&lt;p&gt;bin/cake bake all amigos --theme Bootstrap&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;h2&gt;&lt;strong&gt;Licença:&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;The MIT License (MIT)&lt;/p&gt;
+
+&lt;p&gt;Este plugin encotnra-se no GitHub:&lt;br /&gt;&lt;a href=&quot;https://github.com/ribafs/twbs-cake-css&quot;&gt;https://github.com/ribafs/twbs-cake-css&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;</summary>
+		<content type="html">&lt;h4&gt;Simple plugin to implement Bootstrap in CakePHP 3&lt;/h4&gt;
+
+&lt;p&gt;Este plugin é um fork do Twitter Bootstrap Plugin&lt;br /&gt;&lt;a href=&quot;https://github.com/elboletaire/twbs-cake-plugin&quot;&gt;https://github.com/elboletaire/twbs-cake-plugin&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Este plugin somente usa CSS, não usa Less.&lt;/p&gt;
+
+&lt;p&gt;Ele também contém templates para o bake que devem ajudar na criação dos aplicativos com o bootstrap.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Características Gerais&lt;br /&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+
+&lt;li&gt;Bake templates.&lt;/li&gt;
+
+&lt;li&gt;Generic Bootstrap layout.&lt;/li&gt;
+
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a id=&quot;user-content-installation&quot; class=&quot;anchor&quot; href=&quot;https://github.com/ribafs/twbs-cake-css#installation&quot;&gt;&lt;/a&gt;&lt;strong&gt;Installation&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a id=&quot;user-content-adding-the-plugin&quot; class=&quot;anchor&quot; href=&quot;https://github.com/ribafs/twbs-cake-css#adding-the-plugin&quot;&gt;&lt;/a&gt;&lt;strong&gt;Adding the plugin&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Você pode facilmente instalar este plugin usando o cmposer:&lt;/p&gt;
+
+&lt;div class=&quot;highlight highlight-source-shell&quot;&gt;
+
+&lt;p&gt;composer require ribafs/twbs-cake-css&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Habilitando o plugin&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlight highlight-text-html-php&quot;&gt;
+
+&lt;p&gt;&lt;span class=&quot;pl-s1&quot;&gt;&lt;span class=&quot;pl-c1&quot;&gt;bin&lt;/span&gt;&lt;span class=&quot;pl-k&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;pl-c1&quot;&gt;cake&lt;/span&gt; &lt;span class=&quot;pl-c1&quot;&gt;plugin&lt;/span&gt; &lt;span class=&quot;pl-c1&quot;&gt;load&lt;/span&gt; &lt;span class=&quot;pl-c1&quot;&gt;Bootstrap&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;Isto deve carregar o CSS para você.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Adicionar o template para o src/Controller/AppController.php&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlight highlight-text-html-php&quot;&gt;
+
+&lt;p&gt;&lt;span class=&quot;pl-s1&quot;&gt; &lt;span class=&quot;pl-k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;pl-k&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;pl-en&quot;&gt;beforeRender&lt;/span&gt;(&lt;span class=&quot;pl-c1&quot;&gt;Event&lt;/span&gt; &lt;span class=&quot;pl-smi&quot;&gt;$event&lt;/span&gt;)&lt;/span&gt; &lt;span class=&quot;pl-s1&quot;&gt; {&lt;/span&gt;&lt;br /&gt;    &lt;span class=&quot;pl-s1&quot;&gt;&lt;span class=&quot;pl-smi&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;pl-k&quot;&gt;-&amp;gt;&lt;/span&gt;viewBuilder()&lt;span class=&quot;pl-k&quot;&gt;-&amp;gt;&lt;/span&gt;theme(&lt;span class=&quot;pl-s&quot;&gt;&lt;span class=&quot;pl-pds&quot;&gt;'&lt;/span&gt;Bootstrap&lt;span class=&quot;pl-pds&quot;&gt;'&lt;/span&gt;&lt;/span&gt;);&lt;br /&gt;&lt;span class=&quot;pl-k&quot;&gt;...&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Gerando as Views&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Gerar as views usando o template embutido com este plugin.&lt;/p&gt;
+
+&lt;div class=&quot;highlight highlight-source-shell&quot;&gt;
+
+&lt;p&gt;bin/cake bake all amigos --theme Bootstrap&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;h2&gt;&lt;strong&gt;Licença:&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;The MIT License (MIT)&lt;/p&gt;
+
+&lt;p&gt;Este plugin encotnra-se no GitHub:&lt;br /&gt;&lt;a href=&quot;https://github.com/ribafs/twbs-cake-css&quot;&gt;https://github.com/ribafs/twbs-cake-css&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;</content>
+		<category term="Meus Plugins" />
+	</entry>
+</feed>

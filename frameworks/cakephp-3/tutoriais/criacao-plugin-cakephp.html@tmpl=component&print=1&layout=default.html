@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br" dir="ltr">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <base href="" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Ribamar FS" />
+	<meta name="robots" content="noindex, nofollow" />
+	<meta name="description" content="Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros." />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>Criação de Plugin para o CakePHP 3 - RibaFS Portal</title>
+	<link href="http://ribafs.org/portal/frameworks/cakephp-3/tutoriais/criacao-plugin-cakephp.html?tmpl=component&amp;print=1&amp;layout=default" rel="canonical" />
+	<link href="../../../templates/shaper_helix3/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../../../favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="http://backup/portal/media/plg_content_prismsyntaxhighlighter/css/prism-okaidia.css" rel="stylesheet" type="text/css" />
+	<link href="http://backup/portal/media/plg_content_prismsyntaxhighlighter/css/prism-linenumbers.css" rel="stylesheet" type="text/css" />
+	<script src="http://backup/portal/media/plg_content_prismsyntaxhighlighter/js/prism-tinymce.js" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery-noconflict.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery-migrate.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="http://backup/portal/media/system/js/caption.js?d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script type="text/javascript">
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+	</script>
+	<meta property="og:url" content="http://backup/portal/frameworks/cakephp-3/tutoriais/criacao-plugin-cakephp.html" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Criação de Plugin para o CakePHP 3" />
+	<meta property="og:description" content="Criação de Plugin para o CakePHP 3 Irei relatar como criei o plugin twbs-cake-css: https://github.com/ribafs/twbs-cake-css Eu criei um plugin que controla..." />
+
+   	<link rel="stylesheet" href="../../../media/jui/css/bootstrap.min.css" type="text/css" />
+	<link rel="stylesheet" href="../../../templates/shaper_helix3/css/frontend-edit.css" type="text/css" />
+    <link rel="stylesheet" href="../../../templates/shaper_helix3/css/template.css" type="text/css" />
+</head>
+<body class="contentpane">
+	<div id="system-message-container">
+	</div>
+
+	
+
+<article class="item item-page" itemscope itemtype="http://schema.org/Article">
+	<meta itemprop="inLanguage" content="pt-BR" />
+	
+	
+
+	<div class="entry-header">
+		<span class="post-format"><i class="fa fa-thumb-tack"></i></span>
+		
+					<h2 itemprop="name">
+									Criação de Plugin para o CakePHP 3							</h2>
+												</div>
+
+						<div id="pop-print" class="btn hidden-print">
+				<a href="criacao-plugin-cakephp.html#" onclick="window.print();return false;">			<span class="icon-print" aria-hidden="true"></span>
+		Imprimir	</a>			</div>
+				
+	
+	
+				
+	
+			<div itemprop="articleBody">
+		<h4>Criação de Plugin para o CakePHP 3</h4>
+<p><br />Irei relatar como criei o plugin twbs-cake-css:<br /><a href="https://github.com/ribafs/twbs-cake-css">https://github.com/ribafs/twbs-cake-css</a> <br /><br />Eu criei um plugin que controla a autenticação em aplicativos do Cake, que é o<br /><a href="https://github.com/ribafs/cake-control-br">https://github.com/ribafs/cake-control-br</a> <br /><br />E neste plugin, para melhorar o aspecto, adicionei o plugin twbs-cake-plugin:<br /><a href="https://github.com/elboletaire/twbs-cake-plugin">https://github.com/elboletaire/twbs-cake-plugin</a> <br /><br />Acontece que o twbs-cake-plugin usa less ao invés de css puro e é meio lento. Então resolvi editar o mesmo e criar um que ficasse como eu queria, somente com CSS, mais simples e mais rápido. Resolvi usar o Bootstrap, apenas com CSS.<br /><br /><strong>Baixei o Bootstrap:</strong><br /><a href="http://getbootstrap.com/docs/4.0/getting-started/download/">http://getbootstrap.com/docs/4.0/getting-started/download/</a> <br />Eu ainda usei a versão 3, que vinha com as fontes glyphicons.<br /><br /><strong>Baixei o twbs-cake-plugin</strong><br /><br /><strong>Mudei o plugin acima para deixar como eu queria:</strong><br /><br />Comecei eliminando a pasta config com o arquivo bootstrap.php. Ele chama dois outros plugins que não usarei.<br /><br />Todo o conteúdo da pasta /src eu usarei como está sem nenhuma modificação, pois ela contém o template para que o bake gere o conteúdo com o CSS, apenas mudarei o layout default.ctp.<br /><br /><strong>Veja como ficou o layout default.ctp:</strong><br /><br /></p>
+<pre class="language-php"><code>&lt;?php
+/**
+* CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
+* Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
+*
+* Licensed under The MIT License
+* For full copyright and license information, please see the LICENSE.txt
+* Redistributions of files must retain the above copyright notice.
+*
+* @copyright Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
+* @link http://cakephp.org CakePHP(tm) Project
+* @since 0.10.0
+* @license http://www.opensource.org/licenses/mit-license.php MIT License
+*/
+
+$cakeDescription = 'CakePHP: the rapid development php framework';
+?&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;?= $this-&gt;Html-&gt;charset() ?&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+&lt;title&gt;
+&lt;?= $cakeDescription ?&gt;:
+&lt;?= $this-&gt;fetch('title') ?&gt;
+&lt;/title&gt;
+&lt;?= $this-&gt;Html-&gt;meta('icon') ?&gt;
+
+&lt;?= $this-&gt;Html-&gt;css('base.css') ?&gt;
+&lt;?= $this-&gt;Html-&gt;css('bootstrap.min.css') ?&gt;
+&lt;?= $this-&gt;Html-&gt;script('bootstrap.min') ?&gt;
+
+&lt;?= $this-&gt;fetch('meta') ?&gt;
+&lt;?= $this-&gt;fetch('css') ?&gt;
+&lt;?= $this-&gt;fetch('script') ?&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;style&gt;
+/* Remover as duas linhas abaixo, caso o texto do site fique com letras muito grandes */
+html { font-size: 14px; }
+body { font-size: 14px; }
+&lt;/style&gt;
+
+&lt;nav class="top-bar expanded" data-topbar role="navigation"&gt;
+&lt;ul class="title-area large-3 medium-4 columns"&gt;
+&lt;li class="name"&gt;
+&lt;h1&gt;&lt;a href="/portal/"&gt;&lt;?= $this-&gt;fetch('title') ?&gt;&lt;/a&gt;&lt;/h1&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="top-bar-section"&gt;
+&lt;ul class="right"&gt;
+&lt;li&gt;&lt;a target="_blank" href="http://book.cakephp.org/3.0/"&gt;Documentation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a target="_blank" href="http://api.cakephp.org/3.0/"&gt;API&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/nav&gt;
+&lt;?= $this-&gt;Flash-&gt;render() ?&gt;
+&lt;div class="container clearfix"&gt; &lt;!-- Assim &lt;div class="clearfix"&gt; ocupará toda a tela--&gt;
+&lt;?= $this-&gt;fetch('content') ?&gt;
+&lt;/div&gt;
+&lt;footer&gt;
+&lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p><strong>Agora vejamos como ficou o conteúdo da pasta /webroot:</strong><br /><br />/css<br /> bootstrap.min.css<br />/fonts<br /> glyphicons-halflings-regular.ttf<br />/js<br /> bootstrap.min.js<br /><br /><strong>Um arquivo muito importante é o composer.json, que contém informações para a instalação pelo composer:</strong><br /><br /></p>
+<pre class="language-php"><code>{
+    "name": "ribafs/twbs-cake-css",
+    "authors": [
+        {
+            "name": "Ribamar FS",
+            "email": "<span id="cloakf11aa927dc8582d4f0b86aeaf52e55e1">Este endereço de email está sendo protegido de spambots. Você precisa do JavaScript ativado para vê-lo.</span><script type='text/javascript'>
+				document.getElementById('cloakf11aa927dc8582d4f0b86aeaf52e55e1').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addyf11aa927dc8582d4f0b86aeaf52e55e1 = 'r&#105;b&#97;fs' + '&#64;';
+				addyf11aa927dc8582d4f0b86aeaf52e55e1 = addyf11aa927dc8582d4f0b86aeaf52e55e1 + 'gm&#97;&#105;l' + '&#46;' + 'c&#111;m';
+				var addy_textf11aa927dc8582d4f0b86aeaf52e55e1 = 'r&#105;b&#97;fs' + '&#64;' + 'gm&#97;&#105;l' + '&#46;' + 'c&#111;m';document.getElementById('cloakf11aa927dc8582d4f0b86aeaf52e55e1').innerHTML += '<a ' + path + '\'' + prefix + ':' + addyf11aa927dc8582d4f0b86aeaf52e55e1 + '\'>'+addy_textf11aa927dc8582d4f0b86aeaf52e55e1+'<\/a>';
+		</script>",
+            "homepage": "http://racotecnic.com",
+            "role": "Developer"
+        }
+    ],
+    "description": "Twitter Bootstrap Plugin for CakePHP 3",
+    "type": "cakephp-plugin",
+    "keywords": ["cakephp", "bootstrap", "plugin", "template"],
+    "license": "MIT",
+    "support": {
+        "issues": "https://github.com/ribafs/twbs-cake-css/issues",
+        "source": "https://github.com/ribafs/twbs-cake-css.git"
+    },
+    "homepage": "https://github.com/ribafs/twbs-cake-css",
+    "require": {
+        "cakephp/cakephp": "^3.3"
+    },
+        "autoload": {
+            "psr-4": {
+            "Bootstrap\\": "src"
+        }
+    }
+}</code></pre>
+<p><br /><br /><br /><strong>Outro arquivo importante, que no GitHub funciona como o index.html em sites, é o README.md</strong>. Ele geralmente contém o help ensinando a instalar e outras informações.<br /><br /><strong>README.md</strong><br /><br />Simple plugin to implement Bootstrap in CakePHP 3<br />===================================================<br /><br />This plugin is a fork of the Twitter Bootstrap Plugin<br />https://github.com/elboletaire/twbs-cake-plugin<br /><br />This plugin only use CSS, dont use Less.<br /><br />It also contains bake templates that will help you starting *twitter-bootstraped*<br />CakePHP webapps.<br /><br />General Features<br />----------------<br /><br />- Bake templates.<br />- Generic Bootstrap layout.<br /><br />Installation<br />------------<br /><br />### Adding the plugin<br /><br />You can easily install this plugin using composer as follows:<br /><br />```bash<br />composer require ribafs/twbs-cake-css<br />```<br /><br />### Enabling the plugin<br /><br />After adding the plugin remember to load it in your `config/bootstrap.php` file:<br /><br />```php<br />bin/cake plugin load Bootstrap<br />```<br /><br />This will load the CSS for you.<br /><br />### Add Template to src/Controller/AppController.php<br />```php<br /> public function beforeRender(Event $event)<br /> {<br /> $this-&gt;viewBuilder()-&gt;theme('Bootstrap');<br /> ...<br />``` <br /><br />### Baking views<br /><br />You can bake your views using the twitter bootstrap templates bundled with this<br />plugin. To do so, simply specify the `bootstrap` template when baking your files:<br /><br />```bash<br />bin/cake bake all amigos --theme Bootstrap<br />```<br /><br /><strong>License</strong><br />-------<br /><br />The MIT License (MIT)<br /><br /><br />Faltou apenas a licença, que mantive a mesma: MIT.<br /><br /></p>
+<p><strong>Caso tenha interesse pela publicação no Packgist veja o artigo:</strong><br /><a href="http://backup/portal/cakephp-3/tutoriais/projeto-no-github">http://ribafs.org/portal/cakephp-3/tutoriais/projeto-no-github</a></p>
+<p> </p> 	</div>
+
+	
+	
+				
+	
+	
+	
+</article>
+
+</body>
+</html>

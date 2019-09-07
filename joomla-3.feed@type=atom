@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="Joomla! - Open Source Content Management" -->
+<feed xmlns="http://www.w3.org/2005/Atom"  xml:lang="pt-br">
+	<title type="text">Joomla 3 - RibaFS Portal</title>
+	<subtitle type="text">Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros.</subtitle>
+	<link rel="alternate" type="text/html" href="http://backup"/>
+	<id>http://backup/portal/joomla-3.feed</id>
+	<updated>2019-09-07T18:55:04-03:00</updated>
+	<author>
+		<name>RibaFS Portal</name>
+	</author>
+	<generator uri="https://www.joomla.org">Joomla! - Open Source Content Management</generator>
+	<link rel="self" type="application/atom+xml" href="http://backup/portal/joomla-3.feed?type=atom"/>
+	<entry>
+		<title>Instalação do Joomla</title>
+		<link rel="alternate" type="text/html" href="http://backup/portal/joomla-3/instalacao.html"/>
+		<published>2017-06-26T14:08:06-03:00</published>
+		<updated>2017-06-26T14:08:06-03:00</updated>
+		<id>http://backup/portal/joomla-3/instalacao.html</id>
+		<author>
+			<name>Ribamar FS</name>
+		</author>
+		<summary type="html">&lt;h4 align=&quot;center&quot;&gt;Instalação do Joomla 3.7.3&lt;/h4&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Download&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://downloads.joomla.org/&quot;&gt;https://downloads.joomla.org/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Criar uma pasta no diretório web (criarei a pasta portal)&lt;/p&gt;
+&lt;p&gt;portal&lt;/p&gt;
+&lt;p&gt;Descompactar o Joomla dentro da pasta portal. Se certifique que ele não criou outra pasta dentro de portal, mas sim que descompactou todo o seu conteúdo dentro de portal.&lt;/p&gt;
+&lt;p&gt;Se for uma instalação local nem precisa criar o banco, pois o joomla o criará, desde que você use o super usuário root. Mas se estiver instalando em um servidor de hospedagem ou outro não usará o root. Então precisará criar o banco, criar um usuário e dar permissões ao usuário para usar o banco. Vou considerar a instalação local.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Chamando pelo Navegador&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://localhost/portal&quot;&gt;http://localhost/portal2&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Configuração&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://backup/portal/images/jinstalacao1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Mude o idioma para Português do Brasil&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Nome do Site – Meu site&lt;/p&gt;
+&lt;p&gt;Descrição – Meu site com Joomla 3.7.3&lt;/p&gt;
+&lt;p&gt;E-mail do administrador – ribafs@gmail.com&lt;/p&gt;
+&lt;p&gt;Nome do Administrador – admin&lt;/p&gt;
+&lt;p&gt;Senha do Administrador – admin&lt;/p&gt;
+&lt;p&gt;Confirmar Senha do Administrador – admin&lt;/p&gt;
+&lt;p&gt;Obs.: facilita o uso um usuário e senha simples e pequeno &quot;admin&quot;.&lt;/p&gt;
+&lt;p&gt;Clique em Próximo&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Banco de Dados&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://backup/portal/images/jinstalacao2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Precisa dos dados do MySQL. Entre com usuário, senha e nome do banco.&lt;/p&gt;
+&lt;p&gt;Clique em Próximo&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Visão Geral&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;Se considerar que é o primeiro site criado com Joomla, então escolha com conteúdo de exemplo.&lt;br /&gt;Clique em Conteúdo de exemplo Aprenda Joomla, em inglês e então clique em Instalar.&lt;/p&gt;
+&lt;p&gt;Para criar um site que você irá usar eu recomendo instalar sem conteúdo de exemplo, que fica menos trabalhoso, pois não precisará remover nada.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://backup/portal/images/jinstalacao3.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Aguarde que o banco seja criado e receba conteúdo.&lt;/p&gt;
+&lt;p&gt;Clique em Finalizar&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Joomla Instalado&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://backup/portal/images/jinstalacao4.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Clique em Remover o diretório installation.&lt;/p&gt;
+&lt;p&gt;Então clique em Administrador para acessar o admin. Uma instalação do Joomla é constituída de dois sites: o administrator e o site visto pelos visitantes.&lt;/p&gt;
+&lt;p&gt;Aparecerá a tela de login. Entre com admin e admin.&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://backup/portal/images/jinstalacao5.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Administrator&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://backup/portal/images/jinstalacao6.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;Agora veja a cara do site padrão criado pelo Joomla&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://backup/portal/images/jinstalacao7.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;É um template bem simples, que geralmente não satisfaz quem instala o Joomla e cria outro ou procura por um gratuito ou pago na internet.&lt;/p&gt;
+&lt;p&gt;Precisaremos instalar algumas extensões nativas e outras de terceiros.&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Veja detalhes na seção de Administração.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Conceitos do Joomla&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;O Joomla tem algumas extensões com que trabalha, módulos, componentes, plugins e templates.&lt;/p&gt;
+&lt;p&gt;Um pouco sobre os elementos do Joomla e seus conceitos:&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;- Módulos – Os módulos são as extensões do Joomla mais simples.&lt;/p&gt;
+&lt;p&gt;Cada página do Joomla dividi-se em regiões, pedaços. E estas regiões chamam-se módulos. Temos a região do topo, onde podem ser mostrados alguns módulos. Um deles é a logomarca, outro é o menu. Também aí podemos exibir o breadcrumbs.&lt;/p&gt;
+&lt;p&gt;A região central é reservada para exibir o conteúdo, os artigos.&lt;/p&gt;
+&lt;p&gt;A quantidade de regiões de uma página Joomla depende do template. Temos módulos na lateral esquerda, na lateral direita, entre o topo e o conteúdo, no rodapé, etc.&lt;/p&gt;
+&lt;p&gt;Detalhes - &lt;a href=&quot;https://docs.joomla.org/Module&quot;&gt;https://docs.joomla.org/Module&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;Componentes – Geralmente os componentes são as extensões maiores e mais complexas. São uma pequena aplicação dentro do Joomla. Um exemplo de componente de terceiros é o extPlorer, que conta com diversas funcionalidades. Um exemplo de componente nativo é o Contato. Quando abrimos um componente sempre ele é executado na parte central da página. Este é o comportamento dos componentes.&lt;/p&gt;
+&lt;p&gt;Detalhes - &lt;a href=&quot;https://docs.joomla.org/Component/pt-br&quot;&gt;https://docs.joomla.org/Component/pt-br&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;Plugins – Plugins são extensões que disparam código quando acontece um dos eventos do Joomla. Os eventos são divididos em categorias. Temos eventos de editor, de conteúdo, de sistema de usuário, etc.&lt;/p&gt;
+&lt;p&gt;Detalhes - &lt;a href=&quot;https://docs.joomla.org/Plugin/pt-br&quot;&gt;https://docs.joomla.org/Plugin/pt-br&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;Templates – São as extensões que cuidam da aparência das páginas, cores, posições, etc. Atualmente existem extensões mais complexas, que reúnem duas ou mais extensões e são chamadas de frameworks para templates. A finalidade é oferecer mais recursos para a criação de templates. Um exemplo é o &lt;a href=&quot;http://gantry.org/&quot;&gt;http://gantry.org/&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Detalhes - &lt;a href=&quot;https://docs.joomla.org/Template/pt-br&quot;&gt;https://docs.joomla.org/Template/pt-br&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;</summary>
+		<content type="html">&lt;h4 align=&quot;center&quot;&gt;Instalação do Joomla 3.7.3&lt;/h4&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Download&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://downloads.joomla.org/&quot;&gt;https://downloads.joomla.org/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Criar uma pasta no diretório web (criarei a pasta portal)&lt;/p&gt;
+&lt;p&gt;portal&lt;/p&gt;
+&lt;p&gt;Descompactar o Joomla dentro da pasta portal. Se certifique que ele não criou outra pasta dentro de portal, mas sim que descompactou todo o seu conteúdo dentro de portal.&lt;/p&gt;
+&lt;p&gt;Se for uma instalação local nem precisa criar o banco, pois o joomla o criará, desde que você use o super usuário root. Mas se estiver instalando em um servidor de hospedagem ou outro não usará o root. Então precisará criar o banco, criar um usuário e dar permissões ao usuário para usar o banco. Vou considerar a instalação local.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Chamando pelo Navegador&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://localhost/portal&quot;&gt;http://localhost/portal2&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Configuração&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://backup/portal/images/jinstalacao1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Mude o idioma para Português do Brasil&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Nome do Site – Meu site&lt;/p&gt;
+&lt;p&gt;Descrição – Meu site com Joomla 3.7.3&lt;/p&gt;
+&lt;p&gt;E-mail do administrador – ribafs@gmail.com&lt;/p&gt;
+&lt;p&gt;Nome do Administrador – admin&lt;/p&gt;
+&lt;p&gt;Senha do Administrador – admin&lt;/p&gt;
+&lt;p&gt;Confirmar Senha do Administrador – admin&lt;/p&gt;
+&lt;p&gt;Obs.: facilita o uso um usuário e senha simples e pequeno &quot;admin&quot;.&lt;/p&gt;
+&lt;p&gt;Clique em Próximo&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Banco de Dados&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://backup/portal/images/jinstalacao2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Precisa dos dados do MySQL. Entre com usuário, senha e nome do banco.&lt;/p&gt;
+&lt;p&gt;Clique em Próximo&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Visão Geral&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;Se considerar que é o primeiro site criado com Joomla, então escolha com conteúdo de exemplo.&lt;br /&gt;Clique em Conteúdo de exemplo Aprenda Joomla, em inglês e então clique em Instalar.&lt;/p&gt;
+&lt;p&gt;Para criar um site que você irá usar eu recomendo instalar sem conteúdo de exemplo, que fica menos trabalhoso, pois não precisará remover nada.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://backup/portal/images/jinstalacao3.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Aguarde que o banco seja criado e receba conteúdo.&lt;/p&gt;
+&lt;p&gt;Clique em Finalizar&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Joomla Instalado&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://backup/portal/images/jinstalacao4.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Clique em Remover o diretório installation.&lt;/p&gt;
+&lt;p&gt;Então clique em Administrador para acessar o admin. Uma instalação do Joomla é constituída de dois sites: o administrator e o site visto pelos visitantes.&lt;/p&gt;
+&lt;p&gt;Aparecerá a tela de login. Entre com admin e admin.&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://backup/portal/images/jinstalacao5.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Administrator&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://backup/portal/images/jinstalacao6.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;Agora veja a cara do site padrão criado pelo Joomla&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://backup/portal/images/jinstalacao7.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;É um template bem simples, que geralmente não satisfaz quem instala o Joomla e cria outro ou procura por um gratuito ou pago na internet.&lt;/p&gt;
+&lt;p&gt;Precisaremos instalar algumas extensões nativas e outras de terceiros.&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Veja detalhes na seção de Administração.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Conceitos do Joomla&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;O Joomla tem algumas extensões com que trabalha, módulos, componentes, plugins e templates.&lt;/p&gt;
+&lt;p&gt;Um pouco sobre os elementos do Joomla e seus conceitos:&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;- Módulos – Os módulos são as extensões do Joomla mais simples.&lt;/p&gt;
+&lt;p&gt;Cada página do Joomla dividi-se em regiões, pedaços. E estas regiões chamam-se módulos. Temos a região do topo, onde podem ser mostrados alguns módulos. Um deles é a logomarca, outro é o menu. Também aí podemos exibir o breadcrumbs.&lt;/p&gt;
+&lt;p&gt;A região central é reservada para exibir o conteúdo, os artigos.&lt;/p&gt;
+&lt;p&gt;A quantidade de regiões de uma página Joomla depende do template. Temos módulos na lateral esquerda, na lateral direita, entre o topo e o conteúdo, no rodapé, etc.&lt;/p&gt;
+&lt;p&gt;Detalhes - &lt;a href=&quot;https://docs.joomla.org/Module&quot;&gt;https://docs.joomla.org/Module&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;Componentes – Geralmente os componentes são as extensões maiores e mais complexas. São uma pequena aplicação dentro do Joomla. Um exemplo de componente de terceiros é o extPlorer, que conta com diversas funcionalidades. Um exemplo de componente nativo é o Contato. Quando abrimos um componente sempre ele é executado na parte central da página. Este é o comportamento dos componentes.&lt;/p&gt;
+&lt;p&gt;Detalhes - &lt;a href=&quot;https://docs.joomla.org/Component/pt-br&quot;&gt;https://docs.joomla.org/Component/pt-br&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;Plugins – Plugins são extensões que disparam código quando acontece um dos eventos do Joomla. Os eventos são divididos em categorias. Temos eventos de editor, de conteúdo, de sistema de usuário, etc.&lt;/p&gt;
+&lt;p&gt;Detalhes - &lt;a href=&quot;https://docs.joomla.org/Plugin/pt-br&quot;&gt;https://docs.joomla.org/Plugin/pt-br&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;Templates – São as extensões que cuidam da aparência das páginas, cores, posições, etc. Atualmente existem extensões mais complexas, que reúnem duas ou mais extensões e são chamadas de frameworks para templates. A finalidade é oferecer mais recursos para a criação de templates. Um exemplo é o &lt;a href=&quot;http://gantry.org/&quot;&gt;http://gantry.org/&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Detalhes - &lt;a href=&quot;https://docs.joomla.org/Template/pt-br&quot;&gt;https://docs.joomla.org/Template/pt-br&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;</content>
+		<category term="Joomla 3" />
+	</entry>
+</feed>

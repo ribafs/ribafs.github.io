@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br" dir="ltr">
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+                <!-- head -->
+        <base href="" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Ribamar FS" />
+	<meta name="description" content="Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros." />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>Unity 3D - Navegação - RibaFS Portal</title>
+	<link href="http://ribafs.org/portal/mobile/unity-3d/unity-3d-navegacao.html" rel="canonical" />
+	<link href="../../templates/shaper_helix3/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../../favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,300italic,regular,italic,600,600italic,700,700italic,800,800italic&amp;subset=latin" rel="stylesheet" type="text/css" />
+	<link href="http://fonts.googleapis.com/css?family=Amarante:regular&amp;subset=latin-ext" rel="stylesheet" type="text/css" />
+	<link href="../../cache/com_templates/templates/shaper_helix3/89f5542569bc2d8a7bb4667857dd5775.css" rel="stylesheet" type="text/css" />
+	<style type="text/css">
+body{font-family:Open Sans, sans-serif; font-size:16px; font-weight:normal; }h1{font-family:Open Sans, sans-serif; font-weight:800; }h2{font-family:Open Sans, sans-serif; font-weight:600; }h3{font-family:Open Sans, sans-serif; font-weight:normal; }h4{font-family:Open Sans, sans-serif; font-weight:normal; }h5{font-family:Open Sans, sans-serif; font-weight:600; }h6{font-family:Open Sans, sans-serif; font-weight:600; }.sp-megamenu-parent{font-family:Amarante, sans-serif; font-size:16px; font-weight:normal; }.sp-megamenu-parent > li.active > a, 
+.sp-megamenu-parent .sp-dropdown li.sp-menu-item.active > a { color: red; }
+#offcanvas-toggler > i { color: red !important; }
+#sp-top-bar{ background-color:#093d09;color:#999999; }#sp-top-bar a{color:#ceebe9;}#sp-header{ background-color:#54a859; }#sp-header a{color:#022e05;}#sp-page-title a{color:#e8f7f7;}#sp-main-body{ background-color:#fefffa; }
+	</style>
+	<script type="application/json" class="joomla-script-options new">{"csrf.token":"796296c0a9019553ed4bbba150ad5a40","system.paths":{"root":"\/portal","base":"\/portal"},"joomla.jtext":{"COM_COMMENT_PLEASE_FILL_IN_ALL_REQUIRED_FIELDS":"Favor preencher todos os campos obrigat\u00f3rios.","COM_COMMENT_ANONYMOUS":"An\u00f4nimo","JLIB_FORM_FIELD_INVALID":"Campo inv\u00e1lido:&#160;"},"system.keepalive":{"interval":840000,"uri":"\/portal\/component\/ajax\/?format=json"}}</script>
+	<script src="../../cache/com_templates/templates/shaper_helix3/b74bfabf7739a9fadfbbda80f713414b.js" type="text/javascript"></script>
+	<script type="text/javascript">
+jQuery(function($){ initTooltips(); $("body").on("subform-row-add", initTooltips); function initTooltips (event, container) { container = container || document;$(container).find(".hasTooltip").tooltip({"html": true,"container": "body"});} });jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+var sp_preloader = '0';
+
+var sp_gotop = '1';
+
+var sp_offanimation = 'default';
+
+	</script>
+	<meta property="og:url" content="http://backup/portal/mobile/unity-3d/unity-3d-navegacao.html" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Unity 3D - Navegação" />
+	<meta property="og:description" content="Unity - Navegação Instalação do Unity Requisitos da versão 5 do Unity 3D Para desenvolvimento OS : Windows XP SP2+, 7 SP1+, 8; Mac OS X 10.6+. Não há supor..." />
+
+            </head>
+
+    <body class="site com-content view-article no-layout no-task itemid-159 pt-br ltr  sticky-header layout-fluid off-canvas-menu-init">
+
+        <div class="body-wrapper">
+            <div class="body-innerwrapper">
+                <section id="sp-top-bar"><div class="container"><div class="row"><div id="sp-top1" class="col-sm-12 col-md-12"><div class="sp-column "><div class="sp-module "><div class="sp-module-content"><!-- https://www.clubedohardware.com.br/artigos/redes/colocando-um-mecanismo-de-busca-em-seu-site-r34327/ -->
+<FORM class="form-inline" method="GET" action="http://www.google.com/search">
+<div class="form-group">
+<input type="hidden" name="sitesearch" value="ribafs.github.io">
+<input style="height:20px" class="form-control" type="text" name="q" size="20" placeholder="Pesquisar...">
+</div>
+</FORM>
+
+</div></div><ul class="sp-contact-info"><li class="sp-contact-email"><i class="fa fa-envelope" aria-hidden="true"></i> <a href="mailto:ribafs@gmail.com">ribafs@gmail.com</a></li></ul></div></div></div></div></section><section id="sp-section-2"><div class="container"><div class="row"><div id="sp-top2" class="col-sm-12 col-md-12"><div class="sp-column "><div class="sp-module "><div class="sp-module-content">
+
+<div class="custom"  >
+	<p style="text-align: center;"><b>Don't you speak portuguese? Translate this site with <a href="https://translate.google.com/translate?hl=pt-BR&amp;sl=pt&amp;tl=en&amp;u=https://ribafs.org/portal" target="_blank" rel="noopener noreferrer">Google Translator </a></b></p></div>
+</div></div></div></div></div></div></section><header id="sp-header"><div class="container"><div class="row"><div id="sp-logo" class="col-xs-8 col-sm-2 col-md-2"><div class="sp-column "><h1 class="logo"> <a href="../../index.html">RibaFS Portal</a></h1></div></div><div id="sp-menu" class="col-xs-4 col-sm-10 col-md-10"><div class="sp-column ">			<div class='sp-megamenu-wrapper'>
+				<a id="offcanvas-toggler" class="visible-sm visible-xs" aria-label="Helix Megamenu Options" href="unity-3d-navegacao.html#"><i class="fa fa-bars" aria-hidden="true" title="Helix Megamenu Options"></i></a>
+				<ul class="sp-megamenu-parent menu-fade hidden-sm hidden-xs"><li class="sp-menu-item"><a  href="../../index.html"  >Início</a></li><li class="sp-menu-item sp-has-child"><a  href="../../basicos.html"  >Básicos</a><div class="sp-dropdown sp-dropdown-main sp-menu-right" style="width: 240px;"><div class="sp-dropdown-inner"><ul class="sp-dropdown-items"><li class="sp-menu-item"><a  href="../../basicos/html.html"  >HTML</a></li><li class="sp-menu-item"><a  href="../../basicos/javascript.html"  >JavaScript</a></li><li class="sp-menu-item"><a  href="../../basicos/css.html"  >CSS</a></li><li class="sp-menu-item"><a  href="../../basicos/jquery.html"  >jQuery</a></li><li class="sp-menu-item"><a  href="../../basicos/bootstrap.html"  >Bootstrap</a></li><li class="sp-menu-item"><a  href="../../basicos/php.html"  >PHP</a></li><li class="sp-menu-item"><a  href="../../basicos/phpoo.html"  >PHPOO</a></li><li class="sp-menu-item"><a  href="../../basicos/pdo.html"  >PDO</a></li><li class="sp-menu-item"><a  href="../../basicos/ferramentas.html"  >Ferramentas</a></li><li class="sp-menu-item"><a  href="../../basicos/outros.html"  >Outros</a></li></ul></div></div></li><li class="sp-menu-item sp-has-child"><a  href="../../servidores.html"  >Servidores</a><div class="sp-dropdown sp-dropdown-main sp-menu-right" style="width: 240px;"><div class="sp-dropdown-inner"><ul class="sp-dropdown-items"><li class="sp-menu-item"><a  href="../../servidores/desktop.html"  >Desktop</a></li><li class="sp-menu-item"><a  href="../../servidores/ubuntu-server.html"  >Ubuntu Server</a></li><li class="sp-menu-item"><a  href="../../servidores/shell-scripts.html"  >Shell Scripts</a></li><li class="sp-menu-item"><a  href="../../servidores/servidor-web.html"  >Servidor Web</a></li><li class="sp-menu-item"><a  href="../../servidores/servidor-sgbd.html"  >Servidor SGBD</a></li><li class="sp-menu-item sp-has-child"><a  href="../../servidores/postgresql.html"  >PostgreSQL</a><div class="sp-dropdown sp-dropdown-sub sp-menu-right" style="width: 240px;"><div class="sp-dropdown-inner"><ul class="sp-dropdown-items"><li class="sp-menu-item"><a  href="../../servidores/postgresql/introducao-ao-postgresql.html"  >Introdução</a></li><li class="sp-menu-item"><a  href="../../servidores/postgresql/projeto.html"  >Projeto</a></li><li class="sp-menu-item"><a  href="../../servidores/postgresql/dimensionamento.html"  >Dimensionamento</a></li></ul></div></div></li></ul></div></div></li><li class="sp-menu-item sp-has-child"><a  href="../../joomla-3.html"  >Joomla 3</a><div class="sp-dropdown sp-dropdown-main sp-menu-right" style="width: 240px;"><div class="sp-dropdown-inner"><ul class="sp-dropdown-items"><li class="sp-menu-item"><a  href="../../joomla-3/introducao.html"  >Introdução</a></li><li class="sp-menu-item"><a  href="../../joomla-3/seguranca.html"  >Segurança</a></li><li class="sp-menu-item"><a  href="../../joomla-3/instalacao.html"  >Instalação do Joomla</a></li><li class="sp-menu-item"><a  href="../../joomla-3/administracao.html"  >Administração</a></li><li class="sp-menu-item"><a  href="../../joomla-3/extensoes.html"  >Extensões</a></li><li class="sp-menu-item"><a  href="../../joomla-3/loja-simples.html"  >Loja Simples</a></li><li class="sp-menu-item"><a  href="../../joomla-3/dicas.html"  >Dicas</a></li></ul></div></div></li><li class="sp-menu-item sp-has-child"><a  href="javascript:void(0);"  >Frameworks</a><div class="sp-dropdown sp-dropdown-main sp-dropdown-mega sp-menu-right" style="width: 600px;"><div class="sp-dropdown-inner"><div class="row"><div class="col-sm-6"><ul class="sp-mega-group"><li class="sp-menu-item sp-has-child"><a class="sp-group-title" href="../../frameworks/cakephp-3.html"  >CakePHP 3</a><ul class="sp-mega-group-child sp-dropdown-items"><li class="sp-menu-item"><a  href="../../frameworks/cakephp-3/introducao.html"  >Introdução</a></li><li class="sp-menu-item"><a  href="../../frameworks/cakephp-3/instalacao.html"  >Instalação</a></li><li class="sp-menu-item"><a  href="../../frameworks/cakephp-3/configuracoes.html"  >Configurações</a></li><li class="sp-menu-item"><a  href="../../frameworks/cakephp-3/convencoes.html"  >Convenções</a></li><li class="sp-menu-item"><a  href="../../frameworks/cakephp-3/tutoriais.html"  >Tutoriais</a></li><li class="sp-menu-item"><a  href="../../frameworks/cakephp-3/dicas.html"  >Dicas</a></li><li class="sp-menu-item"><a  href="../../frameworks/cakephp-3/seguranca.html"  >Segurança</a></li><li class="sp-menu-item"><a  href="../../frameworks/cakephp-3/mvc-no-cakephp-3.html"  >MVC no CakePHP 3</a></li></ul></li></ul></div><div class="col-sm-6"><ul class="sp-mega-group"><li class="sp-menu-item sp-has-child"><a class="sp-group-title" href="../../frameworks/laravel-5.html"  >Laravel 5</a><ul class="sp-mega-group-child sp-dropdown-items"><li class="sp-menu-item"><a  href="../../frameworks/laravel-5/introducao.html"  >Introdução</a></li><li class="sp-menu-item"><a  href="../../frameworks/laravel-5/instalacao.html"  >Instalação</a></li><li class="sp-menu-item"><a  href="../../frameworks/laravel-5/configuracoes.html"  >Configurações</a></li><li class="sp-menu-item"><a  href="../../frameworks/laravel-5/routes.html"  >Routes</a></li><li class="sp-menu-item"><a  href="../../frameworks/laravel-5/dicas.html"  >Dicas</a></li><li class="sp-menu-item"><a  href="../../frameworks/laravel-5/tutoriais.html"  >Tutoriais</a></li></ul></li></ul></div></div></div></div></li><li class="sp-menu-item sp-has-child active"><a  href="../../mobile.html"  >Mobile</a><div class="sp-dropdown sp-dropdown-main sp-menu-right" style="width: 240px;"><div class="sp-dropdown-inner"><ul class="sp-dropdown-items"><li class="sp-menu-item"><a  href="../introducao.html"  >Introdução</a></li><li class="sp-menu-item"><a  href="../ambiente.html"  >Ambiente</a></li><li class="sp-menu-item"><a  href="../phaser.html"  >Phaser</a></li><li class="sp-menu-item"><a  href="../monaca.html"  >Monaca</a></li><li class="sp-menu-item"><a  href="../phonegap.html"  >PhoneGap</a></li><li class="sp-menu-item"><a  href="../app-inventor.html"  >App Inventor</a></li><li class="sp-menu-item current-item active"><a  href="../unity-3d.html"  >Unity 3D</a></li><li class="sp-menu-item"><a  href="../intel-xdk.html"  >Intel XDK</a></li><li class="sp-menu-item"><a  href="../outros.html"  >Outros</a></li><li class="sp-menu-item"><a  href="../dicas.html"  >Dicas</a></li></ul></div></div></li><li class="sp-menu-item sp-has-child"><a  href="../../blog.html"  >Blog</a><div class="sp-dropdown sp-dropdown-main sp-menu-right" style="width: 240px;"><div class="sp-dropdown-inner"><ul class="sp-dropdown-items"><li class="sp-menu-item"><a  href="../../blog/reflexoes.html"  >Reflexões</a></li><li class="sp-menu-item"><a  href="../../blog/saude.html"  >Saúde</a></li><li class="sp-menu-item"><a  href="../../blog/diversos.html"  >Diversos</a></li><li class="sp-menu-item"><a  href="../../blog/estudos.html"  >Estudos</a></li></ul></div></div></li><li class="sp-menu-item sp-has-child"><a  href="../../curriculo.html"  >Sobre</a><div class="sp-dropdown sp-dropdown-main sp-menu-right" style="width: 240px;"><div class="sp-dropdown-inner"><ul class="sp-dropdown-items"><li class="sp-menu-item"><a  href="https://github.com/ribafs?tab=repositories" rel="noopener noreferrer" target="_blank" >Projetos</a></li><li class="sp-menu-item"><a  href="../../curriculo/livros.html"  >Livros</a></li><li class="sp-menu-item"><a  href="../../curriculo/curriculo.html"  >Currículo</a></li><li class="sp-menu-item"><a  href="../../curriculo/contato.html"  >Contato</a></li><li class="sp-menu-item"><a  href="../../curriculo/mapa-do-site.html"  >Mapa</a></li></ul></div></div></li></ul>			</div>
+		</div></div></div></div></header><section id="sp-page-title"><div class="row"><div id="sp-title" class="col-sm-12 col-md-12"><div class="sp-column "></div></div></div></section><section id="sp-main-body"><div class="container"><div class="row"><div id="sp-left" class="col-sm-3 col-md-3"><div class="sp-column custom-class"><div class="sp-module "><h3 class="sp-module-title">Novidades</h3><div class="sp-module-content"><div class="latestnews">
+	<div itemscope itemtype="http://schema.org/Article">
+		<a href="../../blog/diversos/traducao-de-sites-de-forma-muito-simples.html" itemprop="url">
+			<span itemprop="name">
+				Tradução de sites de forma muito simples			</span>
+		</a>
+		<small>29 Agosto 2019</small>
+	</div>
+	<div itemscope itemtype="http://schema.org/Article">
+		<a href="../../servidores/desktop/recuperar-senha-do-root.html" itemprop="url">
+			<span itemprop="name">
+				Recuperar senha do root			</span>
+		</a>
+		<small>23 Agosto 2019</small>
+	</div>
+	<div itemscope itemtype="http://schema.org/Article">
+		<a href="../../blog/reflexoes/quer-ficar-rico.html" itemprop="url">
+			<span itemprop="name">
+				Quer ficar rico?			</span>
+		</a>
+		<small>19 Agosto 2019</small>
+	</div>
+	<div itemscope itemtype="http://schema.org/Article">
+		<a href="../../basicos/php/cuidado-com-floats-em-linguagens.html" itemprop="url">
+			<span itemprop="name">
+				Cuidado com floats em Linguagens			</span>
+		</a>
+		<small>19 Julho 2019</small>
+	</div>
+	<div itemscope itemtype="http://schema.org/Article">
+		<a href="../../servidores/servidor-web/setando-permissoes.html" itemprop="url">
+			<span itemprop="name">
+				Setando Permissões			</span>
+		</a>
+		<small>12 Julho 2019</small>
+	</div>
+</div>
+</div></div><div class="sp-module "><h3 class="sp-module-title">Pensamento do Dia</h3><div class="sp-module-content"><div>Se conheces o inimigo e te conheces a ti mesmo, não precisas de temer o resultado de cem batalhas. Se te conheces a ti mesmo, mas não conheces o inimigo, por cada vitória sofrerás também uma derrota. Se não te conheces a ti mesmo nem conheces o inimigo, perderás todas as batalhas. (Sun Tzu, A Arte da Guerra)
+</div>
+</div></div></div></div><div id="sp-component" class="col-sm-6 col-md-6"><div class="sp-column "><div id="system-message-container">
+	</div>
+
+
+<article class="item item-page" itemscope itemtype="http://schema.org/Article">
+	<meta itemprop="inLanguage" content="pt-BR" />
+	
+	
+
+	<div class="entry-header has-post-format">
+		<span class="post-format"><i class="fa fa-thumb-tack"></i></span>
+						<dl class="article-info">
+
+		
+			<dt class="article-info-term"></dt>	
+				
+							<dd class="createdby" itemprop="author" itemscope itemtype="http://schema.org/Person">
+	<i class="fa fa-user"></i>
+					<span itemprop="name" data-toggle="tooltip" title="Escrito por ">Ribamar FS</span>	</dd>			
+			
+							<dd class="category-name">
+	<i class="fa fa-folder-open-o"></i>
+				<a href="../unity-3d.html" itemprop="genre" data-toggle="tooltip" title="Categoria do Artigo">Unity 3D</a>	</dd>			
+			
+							<dd class="published">
+	<i class="fa fa-calendar-o"></i>
+	<time datetime="2017-07-11T13:32:44-03:00" itemprop="datePublished" data-toggle="tooltip" title="Data de Publicação">
+		11 Julho 2017	</time>
+</dd>			
+		
+					
+			
+							<dd class="hits">
+	<span class="fa fa-eye"></span>
+	<meta itemprop="interactionCount" content="UserPageVisits:573" />
+	Acessos: 573</dd>					
+		
+
+	</dl>
+		
+					<h2 itemprop="name">
+									Unity 3D - Navegação							</h2>
+												</div>
+
+						
+<div class="icons">
+	
+					<div class="btn-group pull-right">
+				<button class="btn dropdown-toggle" type="button" id="dropdownMenuButton-125" aria-label="Ferramentas de usuário"
+				data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					<span class="icon-cog" aria-hidden="true"></span>
+					<span class="caret" aria-hidden="true"></span>
+				</button>
+								<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton-125">
+											<li class="print-icon"> <a href="unity-3d-navegacao.html@tmpl=component&amp;print=1&amp;layout=default.html" title="Imprimir o artigo < Unity 3D - Navegação >" onclick="window.open(this.href,'win2','status=no,toolbar=no,scrollbars=yes,titlebar=no,menubar=no,resizable=yes,width=640,height=480,directories=no,location=no'); return false;" rel="nofollow">			<span class="icon-print" aria-hidden="true"></span>
+		Imprimir	</a> </li>
+																<li class="email-icon"> <a href="../../component/mailto/index.html@tmpl=component&amp;template=shaper_helix3&amp;link=bfa334ac5be1ba7636d7f834b683dbd24a105c80.html" title="Envie este link a um amigo" onclick="window.open(this.href,'win2','width=400,height=450,menubar=yes,resizable=yes'); return false;" rel="nofollow">			<span class="icon-envelope" aria-hidden="true"></span>
+		Email	</a> </li>
+														</ul>
+			</div>
+		
+	</div>
+				
+	
+	
+				
+	
+			<div itemprop="articleBody">
+		<p style="margin-bottom: 0cm; text-align: justify;" align="center"><span style="font-size: x-large;"><b>Unity - Navegação</b></span></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;" align="left"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;" align="left"><span style="font-size: large;"><b>Instalação do Unity</b></span></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;" align="left"> </p>
+
+<h3 style="margin-bottom: 0cm; text-align: justify;" align="left"><span style="font-size: large;"><b>Requisitos da versão 5 do Unity 3D<br /></b></span></h3>
+
+<h4 class="western" style="text-align: justify;"><strong>Para desenvolvimento</strong></h4>
+
+<p style="text-align: justify;"><b>OS</b>: Windows XP SP2+, 7 SP1+, 8; Mac OS X 10.6+.</p>
+
+<p style="text-align: justify;"><span style="font-size: small;">Não há suporte para o Windows Vista e as versões de servidor do Windows &amp; OS X não foram testadas.</span></p>
+
+<p style="text-align: justify;"><b>GPU</b>: placa gráfica com recursos do DX9 (Shader Model 2.0). Qualquer placa fabricada a partir de 2004 deve funcionar.</p>
+
+<p style="text-align: justify;">O restante depende mais da complexidade dos seus projetos.</p>
+
+<h4 class="western" style="text-align: justify;">Outros requisitos de desenvolvimento de plataforma:</h4>
+
+<p style="margin-bottom: 0cm; text-align: justify;">iOS: computador com Mac e Xcode 4.3.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Android: Android SDK e Java Development Kit (JDK).</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Windows Store Apps / Windows Phone: Windows 8 Pro de 64 bits e Visual Studio 2012+.</p>
+
+<p style="text-align: justify;">Blackberry: Java Runtime (JRE) de 32 bits.</p>
+
+<h4 class="western" style="text-align: justify;"><strong>Para executar jogos Unity</strong></h4>
+
+<p style="text-align: justify;">Em geral, o conteúdo desenvolvido com o Unity pode funcionar muito bem em qualquer lugar; isso vai depender da complexidade do seu projeto. Mais detalhes dos requisitos:</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Desktop:</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">OS: Windows XP+, Mac OS X 10.6+, Ubuntu 10.10+, SteamOS+</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Placa gráfica: recursos do DX9 (Shader Model 2.0); em geral, qualquer placa fabricada a partir de 2004 deve funcionar.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">CPU: suporte para o conjunto de instruções SSE2.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">O Web Player é compatível com IE, Chrome, Firefox, Safari e outros.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">iOS: requer iOS 4.3 ou posterior.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Android: OS 2.3.1 ou posterior; ARMv7 (Cortex) CPU; OpenGL ES 2.0 ou posterior.</p>
+
+<p style="text-align: justify;">Blackberry: OS 10 ou posterior.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><a href="https://unity3d.com/pt/unity/system-requirements">https://unity3d.com/pt/unity/system-requirements</a></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;" align="left"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Download</b></p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;"><a href="http://unity3d.com/unity/download">http://unity3d.com/unity/download</a> (hoje, 27/10/2014, está na versão 4.5.5)</p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;">Para instalar basta executar o arquivo baixado, sem dificuldades.</p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;">Na primeira execução exigirá um cadastro (gratuito) e escolha a versão free.</p>
+
+<p style="text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>A tela do Unity é dividida em paineis:</b></p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;"><b>Hierarchy</b> – onde ficam todos os objetos de uma cena. Uma lista dos GameObjects da cena.</p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;"><b>Inspector</b> – onde aparecem as propriedades de um objeto/asset selecionado</p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;"><b>Project</b> – onde ficam todos os assets: imagens, sprites, cenas, etc a disposição do jogo. Lista de assets, que age como uma biblioeca.</p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;"><b>Scene</b> – Tela onde adicionamos os objetos que comporão o jogo e são exibidos. Aqui é onde o jogo é construído, como uma fase do jogo ou menu.</p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;"><b>Game</b> – onde aparecerá o jogo em execução</p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;"><b>Console</b> – aqui são exibidas as mensagens de erro e também na barra de status</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; page-break-before: always; text-align: justify;"><b>Assets</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">É qualquer recurso utilizado ou que poderá ser usado no jogo e fica no painel Project.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Assets 3D precisam ser criados externamente. O Unity3d aceita vindos do Maya, do 3D Studio Max, do Blender e do FilmBox.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Imagens: png, jpeg, tiff e psd.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Áudio: wav, aif, mp3 e ogg</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">O Unity tem uma loja que vende assets e também oferece gratuitamente:</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><a href="https://www.assetstore.unity3d.com/en/">https://www.assetstore.unity3d.com/en/</a></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Sprite</b> – é uma imagem 2D para jogos, que pode ser simples ou múltipla, quando contém outras sub imagens. <span style="font-weight: normal;">Sprite Renderer</span> é um componente exclusivo de sprites.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Texturas</b> – são imagens em geral no Unity. As imagens importadas para o Unity devem ter dimensões na potência de 2: 64x64, 128x128, 516x516, etc.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Licença</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Desenvolvedor Indie – grátis (somente para pessoa física e empresas com lucro anual menor que US$ 100,000)</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Versão Pro de teste para 30 dias grátis</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Edição Pro – US$ 1,500.00 (licença permanente e não tem limites quanto ao que fazer com os jogos criados).</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">A versão free permite criar jogos de forma completa sem problema, não é uma versão que expira, inclusive publica para desktop, web, para Android e iOS sem pagar um centavo.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Detalhes:</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><a href="http://unity3d.com/unity/licenses">http://unity3d.com/unity/licenses</a></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; page-break-before: always; text-align: justify;" align="center"><b>Navegação em ambiente 2D</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Zoom</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Para aumentar ou reduzir o zoom da cena inteira, aperte o botão do meio do mouse e gire para a frente ou para traz, tanto em ambiente 2D quanto 3D.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Transform</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Um dos recursos mais importantes para trabalhar com os objetos na cena é o Transform.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Selecionando a mãozinha podemos clicar com o botão esquerdo do mouse e <b>arrastar a cena completa</b>, com todos os objetos dela.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Propositalmente as teclas de atalho seguem a ordem das teclas do teclado: QWERty, ou seja, a ordem das ferramentas é a mesma das teclas QWER do teclado tipo Querty.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Selecionando a cruz poderemos <b>mover</b> ou selecionar o objeto selecionado. Quando o objeto está pequeno não aparecem as setas nas bordas para redimensionar. Então ampliamos o zoom, rolando para a frente o botão do meio do mouse, até que apareçam os 4 pontos azuis nos cantos. Então podemos usar os pontos azuis ou mesmo em qualquer posição intermediária. Podemos clicar sobre o objeto, no centro e arrastar o mesmo pela cena.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">O terceiro botão, com as duas setas curvas, é usado na <b>rotação</b> do objeto selecionado.</p>
+
+<p style="margin-bottom: 0cm; page-break-before: always; text-align: justify;">Veja a seguir o mesmo objeto da imagem anterior mas com rotações sobre o mesmo. </p>
+
+<p style="margin-bottom: 0cm; page-break-before: always; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Redimensionamos</b> o objeto selecionado com o último botão. Após selecionar este botão e selecionar o objeto veja abaixo que aparecem dois pequenos quadrados verdes, um na vertical e outro na horizontal. Clicamos no quadrado da vertical e arrastamos para ambliar o objeto nesta direção. Veja o mesmo objeto anterior redimensionado abaixo:</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Inspector</b></p>
+
+<p style="text-align: justify;">Também podemos fazer alterações nos objetos usando o Inspector, entrando números diretamente nas respectivas caixas de texto. Tomemos o objeto anterior, vamos fazê-lo voltar ao estado anterior usando o Inspector:</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Alteremos no Inspector para:</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Position – (0,-4,0)</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Rotation – (0,0,0)</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Scale – (1,1,1)</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Alterando valores de X, Y e Z nas caixas de texto do Position, no Inspector</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Ao passar o ponteiro do mouse por cima de X, Y ou Z nas caixas de texto aparecem duas setinhas, uma para a esquerda e outra para a direita. Basta então que pressionemos o botão esquerdo e arrastemos para a esquerda ou para a direita para aumentar ou reduzir o valor.</p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; page-break-before: always; text-align: justify;"><b>Play</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Iniciar/Parar o Jogo</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Executar o Jogo</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Para executar o jogo podemos usar o atalho Ctrl+P.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Paineis Scene e Game</b> – Alternar entre Cena ou Design e Game ou Execução</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Scene</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>No painel de Cena</b>/Scene é onde são arrumados todos os assets do jogo em sua posição final. A cena é para onde arrastamos os assets para arrumar a nosso gosto.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Scenes</b> – uma cena é basicamente um nível do jogo ou um menu.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Criar uma nova cena</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">File – New Scene ou teclar Ctrl+S</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Painel de Hierarquia</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>O painel de Hierarquia</b> é onde os assets ficam organizados em uma cena. Onde ficam os objetos que já estão na cena e já fazem parte do jogo.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Inspector/Propriedades</b> – aparecem as propriedades quando um objeto está selecionado no painel de Hierarquia</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>O painel Inspector</b> deixa você inspecionar e ajustar todos os atributos de um asset selecionado no painel de Hierarquia. Desde posição, rotação, gravidade, cor, componentes, etc.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Projeto</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>O painel do Projeto</b> é onde ficam todos os Assets que são ou podem ser usados no projeto.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Araste Fino</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Ao arrastar objeto na cena teclar V para ajuste fino.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Foco</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Em cenas com muitos objetos a visualização de algum sai da cena algumas vezes. Para deixar um objeto isolado com o foco na cena selecionamos ele na Hierarquia e teclamos F. Ele terá o foco na cena. Outra forma é efetuar um duplo clique sobre o nome do objeto na Hierarquia.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Arrastar a Cena</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">A mãozinha é usada para arrastar toda a cena. O botão do meio do mouse também pode ser utilizado para isso. Pressionar e arrastar para arrastar a cena.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Mover</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Selecione um objeto e clique no botão de movimento, aquele com 4 setas no Transformer.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Então clique numa das setas e arraste para mover na direção da seta.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Redimensionar</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Selecione o botão Scale e faça o mesmo, sendo que agora aumentando ou reduzindo o objeto.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Rotação</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Clique no botão Rotação e gire o objeto clicando e num dos círculos coloridos e arrastando.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Gizmo</b><span style="font-weight: normal;"> – bússola 3D, que mostra a orientação da câmera na cena e possibilita mudar a orientação da visão, bastando clicar em seus vértices. Mas use com cuidado. Caso perca o controle sem saber como voltar tecle Ctrl+Z.</span></p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; page-break-before: always; text-align: justify;"><b>Layout</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Uma sugestão de layout, que ajuda bastante, visto que em tempo real já mostra as alterações da cena no painel Game abaixo.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">O Unity é muito flexível para a criação de layouts dos paineis. Podemos escolher uma das opções em layout ou podemos criar o nosso apenas arrastando cada painel para a posição desejada. Para isso clicar na aba com o nome do painel e arrastar para a posição desejada.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Algo que dá um pouco de trabalho é posicionar um personagem em uma cena/terreno 3D. Usando o layout acima fica bem mais simples.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Resetar o layout para o layout original:</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Barra de ferramentas -&gt; Window -&gt;Layouts-&gt;Revert Factory Settings</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Pasta Assets e Layout</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">A pasta assets é uma superpasta ou pasta raiz do projeto, que contem as demais pastas.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Alguns layouts não mostram a pasta Assets, mesmo ela estando lá, como é o caso do One-column e do Two-columns.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;" align="left"> </p> 	</div>
+
+	
+	
+	<ul class="pager pagenav">
+	<li class="previous">
+		<a class="hasTooltip" title="Engine Unity 3D" aria-label="Artigo anterior: Engine Unity 3D" href="engine-unity-3d.html" rel="prev">
+			<span class="icon-chevron-left" aria-hidden="true"></span> <span aria-hidden="true">Ant</span>		</a>
+	</li>
+</ul>
+				
+	
+	<script type="text/x-template" id="ccomment-pagination">
+	<nav class="pagination text-center" v-if="pagination.last_page > 0">
+		<ul >
+			<li v-if="showPrevious()" :class="{ 'disabled' : pagination.current_page <= 1 }">
+				<span v-if="pagination.current_page <= 1">
+					<span aria-hidden="true">Ant</span>
+				</span>
+				<a href="unity-3d-navegacao.html#" v-if="pagination.current_page > 1 " :aria-label="config.ariaPrevioius"
+				   @click.prevent="changePage(pagination.current_page - 1)">
+					<span aria-hidden="true">Ant</span>
+				</a>
+			</li>
+			<li v-for="num in array" :class="{ 'active': num === pagination.current_page }">
+				<a href="unity-3d-navegacao.html#" @click.prevent="changePage(num)">{{ num }}</a>
+			</li>
+			<li v-if="showNext()"
+			    :class="{ 'disabled' : pagination.current_page === pagination.last_page || pagination.last_page === 0 }">
+				<span v-if="pagination.current_page === pagination.last_page || pagination.last_page === 0">
+					<span aria-hidden="true">Próximo</span>
+				</span>
+				<a href="unity-3d-navegacao.html#" v-if="pagination.current_page < pagination.last_page" :aria-label="config.ariaNext"
+				   @click.prevent="changePage(pagination.current_page + 1)">
+					<span aria-hidden="true">Próximo</span>
+				</a>
+			</li>
+		</ul>
+	</nav>
+</script>
+	<script type="text/x-template" id="ccomment-avatar">
+		<div class="ccomment-avatar">
+			<a v-if="profileLink" v-bind:href="profileLink">
+				<img v-bind:src="avatar"/>
+			</a>
+			<img v-else v-bind:src="avatar"/>
+		</div>
+	</script>
+
+	<script type="text/x-template" id="ccomment-user-name">
+		<a v-if="profileLink" :href="profileLink">
+			<span class="ccomment-author">{{name}}</span>
+		</a>
+		<span v-else class="ccomment-author">{{name}}</span>
+	</script>
+
+	<script type="text/x-template" id="ccomment-created">
+		<a :href="'#!/ccomment-comment=' + id" class="muted ccomment-created">
+			{{date}}
+		</a>
+	</script>
+
+	<div id="ccomment-token" style="display:none;">
+		<input type="hidden" name="796296c0a9019553ed4bbba150ad5a40" value="1" />	</div>
+
+	
+<script type="text/x-template" id="ccomment-customfields">
+	<div class="ccomment-customfields" v-if="customfields">
+		<strong>Campos personalizados</strong>
+		<dl class="dl-horizontal">
+			<template v-for="customfield in customfields">
+				<dt>{{customfield.title}}</dt>
+				<dd>{{customfield.value}}</dd>
+			</template>
+		</dl>
+	</div>
+</script>
+
+<script type="text/x-template" id="ccomment-template">
+	<li v-bind:class="model.class+' ccomment-level-'+model.level">
+		<div class="ccomment-comment-content" v-bind:id="'ccomment-comment-'+model.id">
+			<div class="ccomment-data">
+									<ccomment-avatar
+							v-bind:avatar="model.avatar"
+							v-bind:profileLink="model.profileLink"/>
+								<div class="ccomment-content">
+					<div class="ccomment-meta">
+						<ccomment-user-name v-bind:name="model.name" v-bind:profileLink="model.profileLink"></ccomment-user-name>
+						<ccomment-created v-bind:date="model.date" v-bind:id="model.id"></ccomment-created>
+					</div>
+
+					<div v-html="model.comment">
+					</div>
+
+
+					<div v-if="model.galleria" class="js-ccomment-galleria galleria ccomment-galleria"></div>
+
+					<ccomment-customfields v-bind:customfields="model.customfields"></ccomment-customfields>
+					<div class="ccomment-actions">
+													<span class="muted">
+					{{model.votes}}
+					<i class="ccomment-thumbs-up ccomment-voting" v-on:click="vote(+1, model.id)"></i>
+					<i class="ccomment-thumbs-down ccomment-voting" v-on:click="vote(-1, model.id)"></i>
+				</span>
+						
+													<button class="btn btn-small ccomment-quote btn-link" v-on:click="quote(model.id)">
+								Citar							</button>
+						
+						
+						<div class="pull-right ccomment-moderation">
+							<button v-if="model.commentModerator" class="btn btn-mini btn-ccomment-edit" v-on:click="edit(model.id)">
+								Editar							</button>
+
+													</div>
+					</div>
+				</div>
+			</div>
+
+
+			<keep-alive>
+				<ccomment-form v-if="reply" :ref="'form-'+model.id" v-bind:focus="true">
+					<input slot="parent-id" name="jform[parentid]" type="hidden" v-bind:value="model.id"/>
+				</ccomment-form>
+			</keep-alive>
+		</div>
+
+		<ul v-if="hasChildren">
+			<ccomment-comment class="item" v-for="model in getChild()" v-bind:key="model.id" v-bind:model="model">
+			</ccomment-comment>
+		</ul>
+	</li>
+
+</script>
+	
+	
+
+		<script type="text/x-template" id="ccomment-form">
+			<form class="ccomment-form" v-on:submit.prevent="onSubmit">
+				<div class="ccomment-error-form row-fluid  margin-bottom" v-if="error">
+					<div class="alert alert-error">
+						{{errorMessage}}
+					</div>
+				</div>
+				<div class="ccomment-info-form row-fluid  margin-bottom" v-if="info">
+					<div class="alert alert-info">
+						{{infoMessage}}
+					</div>
+				</div>
+				<div class="row-fluid margin-bottom">
+											<div class="span1 hidden-phone">
+							<ccomment-avatar v-bind:avatar="getAvatar"></ccomment-avatar>
+						</div>
+					
+					<div class="span11">
+						<textarea v-on:focus="toggle"
+								  name="jform[comment]"
+								  class='js-ccomment-textarea ccomment-textarea span12 required'
+								  placeholder="Deixe um comentário"
+						></textarea>
+
+						<div v-show="uploadImage">
+							
+<div class="fileupload">
+	<!-- The fileupload-buttonbar contains buttons to add/delete files and start/cancel the upload -->
+	<div class="row fileupload-buttonbar">
+		<input type="file" name="files[]" class="js-ccomment-file-upload-real ccomment-file-upload-real" multiple/>
+		<div class="">
+			<!-- The global file processing state -->
+			<span class="fileupload-process"><span class="fa fa-spinner fa-pulse"></span></span>
+			Attach images by dragging & dropping or <span type="button" class="js-file-upload-fake ccomment-file-upload-fake btn-link"> by selecting them.</span>			<br/>
+			<small class="muted">The maximum file size for uploads is <strong>MB</strong>.				Only <strong></strong> files are allowed.</small>
+
+			<!-- The global progress state -->
+			<div class="fileupload-progress fade hide">
+				<!-- The global progress bar -->
+				<div class="progress progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+					<div class="progress-bar progress-bar-success" style="width:0%;"></div>
+				</div>
+				<!-- The extended global progress state -->
+				<div class="progress-extended">&nbsp;</div>
+			</div>
+			<div class="ccomment-file-list">
+				<div class="alert alert-error hide compojoom-max-number-files">
+					The maximum number of 3 allowed files to upload has been reached. If you want to upload more files you have to delete one of the existing uploaded files first.				</div>
+				<table role="presentation" class="table table-striped">
+					<thead></thead>
+					<tbody class="files"></tbody>
+				</table>
+				<div class="alert alert-error hide compojoom-max-number-files">
+					The maximum number of 3 allowed files to upload has been reached. If you want to upload more files you have to delete one of the existing uploaded files first.				</div>
+			</div>
+		</div>
+	</div>
+</div>
+						</div>
+
+						<div v-show="active">
+							<div class="span4 muted small">
+								Postando como																	<button type="button"
+											v-on:click="display = !display"
+											class="btn-link btn-small ccomment-posting-as">{{getDefaultName}}
+									</button>
+															</div>
+															<label class="checkbox pull-right small ccomment-notify">
+									<input type="checkbox" value="1" name="jform[notify]ƒ"
+										   v-on:click="notify = !notify"/>
+									<span class="muted">
+										Notificar-me de futuros comentários via e-mail									</span>
+								</label>
+							
+
+						</div>
+					</div>
+											<div v-show="display"
+							 class="row-fluid ccomment-user-info offset1					span11">
+							<div class="span6">
+								<input name="jform[name]"
+									   class="ccomment-name span12 no-margin "
+									   type='text'
+									   v-bind:value="getName"
+									   v-on:input="updateDefaultName"
+																			   placeholder="Informe seu nome"
+									   tabindex="2"
+																	/>
+								<span class="help-block pull-right small muted">
+								Exibido ao lado de seus comentários.							</span>
+							</div>
+
+															<div class="span6">
+									<input name='jform[email]'
+										   class="ccomment-email span12 no-margin "
+										   type='text'
+										   v-bind:value='getEmail'
+										   v-on:input="updateUserEmail"
+										   placeholder="Informe seu email"
+																				   tabindex="3"
+																			/>
+									<p class="help-block small pull-right muted">
+										Não exibido publicamente.																					<span class='gravatar'>
+											<a href='http://gravatar.com' target='_blank'>Gravatar</a> habilitado										</span>
+																			</p>
+								</div>
+													</div>
+					
+
+					
+					
+
+					<div class="row-fluid ccomment-actions" v-show="active">
+													<div class="pull-left muted small ccomment-undergo-moderation offset1">
+								Comentários serão submetidos a moderação antes de serem publicados.							</div>
+												<div class="pull-right">
+							<button v-on:click="reset()"
+									type="button"
+									class="btn ccomment-cancel">
+								Cancelar</button>
+							<button type="submit" class='btn btn-primary ccomment-send'
+									tabindex="7"
+									name='bsend'>
+								<span v-if="isSending">
+									Salvando...								</span>
+								<span v-else>
+									Enviar								</span>
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<input type="hidden" name="jform[contentid]" v-bind:value="itemConfig.contentid"/>
+				<input type="hidden" name="jform[component]" v-bind:value="itemConfig.component"/>
+				<input type="hidden" name="jform[page]" v-bind:value="page"/>
+				<slot name="parent-id"></slot>
+			</form>
+		</script>
+
+	
+
+
+
+
+<!-- The template to display files available for upload -->
+<script id="template-upload" type="text/x-tmpl">
+{% for (var i=0, file; file=o.files[i]; i++) { %}
+    <tr class="template-upload fade">
+        <td>
+            <span class="preview"></span>
+        </td>
+        <td>
+         <span class="name"><i>{%=file.name%}</i></span>
+            <div class="compojoom-single-file-progress">
+	            <div class="progress progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+	                <div class="progress-bar progress-bar-success" style="width:0%;"></div>
+	            </div>
+	           <small><strong class="size">Processing...</strong></small>
+			</div>
+        </td>
+        <td>
+            {% if (!i && !o.options.autoUpload) { %}
+                <button class="btn btn-default btn-xs start" disabled>
+                    <i class="fa fa-upload"></i>
+                    <span>Start</span>
+                </button>
+            {% } %}
+            {% if (!i) { %}
+                <button class="btn btn-default btn-xs btn-xs cancel pull-left">
+                    <i class="fa fa-stop"></i>
+                    <span>Cancel</span>
+                </button>
+            {% } %}
+        </td>
+    </tr>
+{% } %}
+</script>
+
+<!-- The template to display files available for download -->
+<script id="template-download" type="text/x-tmpl">
+{% for (var i=0, file; file=o.files[i]; i++) { %}
+    <tr class="template-download fade">
+        <td style="">
+        {% if (file.thumbnailUrl) { %}
+            <span class="preview">
+                {% if (file.url) { %}
+					<a href="http://backup/portal/{%=file.url%}" title="{%=file.name%}" download="{%=file.name%}" data-gallery>
+						<img src='http://backup/portal/mobile/unity-3d/{%=file.thumbnailUrl%}'>
+					</a>
+				{% } else { %}
+					<img src='http://backup/portal/mobile/unity-3d/{%=file.thumbnailUrl%}'>
+				{% } %}
+            </span>
+		{% } %}
+        </td>
+        <td>
+        {% if (!file.error) { %}
+	        <div class="file-meta">
+			    <div class="row">
+			        <div class="col-lg-4">
+			           <input type="text" class="form-control"
+			                placeholder="Title"
+							name="jform[picture_data][{%=file.name%}][title]"
+					        value="{%=file.title%}" />
+			        </div>
+			        <div class="col-lg-8">
+			            <input type="text" placeholder="Description" class="form-control"
+					                name="jform[picture_data][{%=file.name%}][description]"
+
+					                value="{%=file.description%}" />
+			        </div>
+			    </div>
+	        </div>
+		 {% } %}
+        {% if (file.error) { %}
+            <div><span class="label label-danger">Error</span> {%=file.error%}</div>
+        {% } %}
+        </td>
+        <td style="text-align: center">
+            {% if (file.deleteUrl) { %}
+                            {% } else { %}
+                 <button class="btn btn-default btn-xs btn-xs cancel">
+                    <i class="fa fa-stop"></i>
+                    <span>Cancel</span>
+                </button>
+            {% }%}
+            {% if (!file.error) { %}
+            <input type="hidden" name="jform[picture][]" value="{%=file.name%}" />
+            {% } %}
+        </td>
+    </tr>
+{% } %}
+</script>
+	
+<script type="text/x-template" id="ccomment-menu">
+	<div class="row-fluid ccomment-menu">
+		<h4 class="pull-left">
+			Comentários			(<span class="ccomment-comment-counter">{{pagination.total_with_children}}</span>)
+		</h4>
+		<div class="pull-right">
+							<button
+						v-on:click="newComment"
+						class="ccomment-add-new btn btn-mini" title='Adicionar Novo'>
+					Adicionar Novo				</button>
+														</div>
+	</div>
+</script>
+
+	<!-- the ccomment root element -->
+	<div class="ccomment" id="ccomment">
+
+		<ccomment-menu></ccomment-menu>
+
+		
+		
+		<ul class="ccomment-comments-list">
+			<ccomment-comment v-for="item in comments"
+							  v-if="item.parentid === -1"
+							  class="item"
+							  v-bind:key="item.id"
+							  v-bind:model="item">
+			</ccomment-comment>
+		</ul>
+
+					<pagination v-if="pagination.last_page > 1" :pagination="pagination" :callback="loadData" :options="paginationOptions"></pagination>
+		
+					<ccomment-form></ccomment-form>
+		
+			<div class="row-fluid small muted ccomment-powered">
+		<p class="text-center">
+			Comments fornecido por <a href='https://compojoom.com' rel='nofollow' target='_blank'>CComment</a>		</p>
+	</div>
+	</div>
+
+	<script type="text/javascript">
+		window.compojoom = compojoom = window.compojoom || {};
+		compojoom.ccomment = {
+			user: {"loggedin":false,"avatar":"http:\/\/backup\/portal\/media\/com_comment\/images\/noavatar.png"},
+			item: {"contentid":125,"component":"com_content","count":0},
+			config: {"comments_per_page":0,"sort":0,"tree":0,"use_name":0,"tree_depth":5,"form_position":0,"voting":1,"copyright":1,"pagination_position":0,"avatars":0,"gravatar":1,"support_ubb":1,"support_emoticons":0,"support_picture":0,"name_required":0,"email_required":0,"baseUrl":"http:\/\/backup\/portal\/","langCode":null,"file_upload":{"url":"http:\/\/backup\/portal\/index.php?option=com_comment&amp;task=multimedia.doIt","formControl":"jform","fieldName":"picture","maxNumberOfFiles":3,"fileTypes":null,"maxSize":null,"component":"com_comment","imageSize":{"x":"2400","y":"1800"}}}		};
+	</script>
+
+<script data-inline type="text/javascript" src="../../media/com_comment/cache/8e12eb270706cd6b2c8483104bf89b54.min.js"></script>
+			<div class="article-footer-wrap">
+			<div class="article-footer-top">
+									<div class="helix-social-share">
+		<div class="helix-social-share-icon">
+			<ul>
+				
+				<li>
+					<div class="facebook" data-toggle="tooltip" data-placement="top" title="Share On Facebook">
+
+						<a class="facebook" onClick="window.open('http://www.facebook.com/sharer.php?u=http://backup/portal/mobile/unity-3d/unity-3d-navegacao.html','Facebook','width=600,height=300,left='+(screen.availWidth/2-300)+',top='+(screen.availHeight/2-150)+''); return false;" href="http://www.facebook.com/sharer.php?u=http://backup/portal/mobile/unity-3d/unity-3d-navegacao.html">
+
+							<i class="fa fa-facebook"></i>
+						</a>
+
+					</div>
+				</li>
+				<li>
+					<div class="twitter"  data-toggle="tooltip" data-placement="top" title="Share On Twitter">
+						
+						<a class="twitter" onClick="window.open('http://twitter.com/share?url=http://backup/portal/mobile/unity-3d/unity-3d-navegacao.html&amp;text=Unity%203D%20-%20Navegação','Twitter share','width=600,height=300,left='+(screen.availWidth/2-300)+',top='+(screen.availHeight/2-150)+''); return false;" href="http://twitter.com/share?url=http://backup/portal/mobile/unity-3d/unity-3d-navegacao.html&amp;text=Unity%203D%20-%20Navegação">
+							<i class="fa fa-twitter"></i>
+						</a>
+
+					</div>
+				</li>
+				<li>
+					<div class="google-plus">
+						<a class="gplus" data-toggle="tooltip" data-placement="top" title="Share On Google Plus" onClick="window.open('https://plus.google.com/share?url=http://backup/portal/mobile/unity-3d/unity-3d-navegacao.html','Google plus','width=585,height=666,left='+(screen.availWidth/2-292)+',top='+(screen.availHeight/2-333)+''); return false;" href="https://plus.google.com/share?url=http://backup/portal/mobile/unity-3d/unity-3d-navegacao.html" >
+						<i class="fa fa-google-plus"></i></a>
+					</div>
+				</li>
+				
+				<li>
+					<div class="linkedin">
+						<a class="linkedin" data-toggle="tooltip" data-placement="top" title="Share On Linkedin" onClick="window.open('http://www.linkedin.com/shareArticle?mini=true&url=http://backup/portal/mobile/unity-3d/unity-3d-navegacao.html','Linkedin','width=585,height=666,left='+(screen.availWidth/2-292)+',top='+(screen.availHeight/2-333)+''); return false;" href="http://www.linkedin.com/shareArticle?mini=true&url=http://backup/portal/mobile/unity-3d/unity-3d-navegacao.html" >
+							
+						<i class="fa fa-linkedin-square"></i></a>
+					</div>
+				</li>
+			</ul>
+		</div>		
+	</div> <!-- /.helix-social-share -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			</div>
+					</div>
+	
+</article>
+</div></div><div id="sp-right" class="col-sm-3 col-md-3"><div class="sp-column class2"><div class="sp-module pop"><h3 class="sp-module-title">Populares</h3><div class="sp-module-content"><ul class="mostreadpop mod-list">
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="http://backup/portal/mobile/phaser/atualizar-o-node-js.html" itemprop="url">
+			<span itemprop="name">
+				Atualizar o Node.JS			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../../joomla-3/dicas/melhorando-a-velocidade-do-site.html" itemprop="url">
+			<span itemprop="name">
+				Melhorando a velocidade do site			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="http://backup/portal/mobile/unity-3d/boas-vindas.html" itemprop="url">
+			<span itemprop="name">
+				Boas Vindas!			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../../joomla-3/instalacao.html" itemprop="url">
+			<span itemprop="name">
+				Instalação do Joomla			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../../blog/diversos/e-possivel-viver-sem-o-google.html" itemprop="url">
+			<span itemprop="name">
+				É possível viver sem o Google?			</span>
+		</a>
+	</li>
+</ul>
+</div></div><div class="sp-module "><h3 class="sp-module-title">Novo Testamento</h3><div class="sp-module-content">Ele, porém, passando pelo meio deles, retirou-se.
+
+<br>(Lc, 4:30) 
+</div></div><div class="sp-module "><h3 class="sp-module-title">Rotas no Mapa do Google</h3><div class="sp-module-content"><a href="https://www.google.com/maps/dir///@-3.7294526,-38.5422647,15z" target="_blank">Abrir o Mapa</a>
+</div></div></div></div></div></div></section><footer id="sp-footer"><div class="container"><div class="row"><div id="sp-footer1" class="col-sm-12 col-md-12"><div class="sp-column "><span class="sp-copyright">© 2015 Ribamar FS. All Rights Reserved. Designed By JoomShaper</span></div></div></div></div></footer>            </div> <!-- /.body-innerwrapper -->
+        </div> <!-- /.body-innerwrapper -->
+
+        <!-- Off Canvas Menu -->
+        <div class="offcanvas-menu">
+            <a href="unity-3d-navegacao.html#" class="close-offcanvas" aria-label="Close"><i class="fa fa-remove" aria-hidden="true" title="HELIX_CLOSE_MENU"></i></a>
+            <div class="offcanvas-inner">
+                                  <div class="sp-module _menu"><h3 class="sp-module-title">Menu Principal</h3><div class="sp-module-content"><ul class="nav menu">
+<li class="item-101"><a href="../../index.html" > Início</a></li><li class="item-107  deeper parent"><a href="../../basicos.html" > Básicos</a><span class="offcanvas-menu-toggler collapsed" data-toggle="collapse" data-target="#collapse-menu-107"><i class="open-icon fa fa-angle-down"></i><i class="close-icon fa fa-angle-up"></i></span><ul class="collapse" id="collapse-menu-107"><li class="item-112"><a href="../../basicos/html.html" > HTML</a></li><li class="item-113"><a href="../../basicos/javascript.html" > JavaScript</a></li><li class="item-114"><a href="../../basicos/css.html" > CSS</a></li><li class="item-116"><a href="../../basicos/jquery.html" > jQuery</a></li><li class="item-117"><a href="../../basicos/bootstrap.html" > Bootstrap</a></li><li class="item-118"><a href="../../basicos/php.html" > PHP</a></li><li class="item-119"><a href="../../basicos/phpoo.html" > PHPOO</a></li><li class="item-120"><a href="../../basicos/pdo.html" > PDO</a></li><li class="item-157"><a href="../../basicos/ferramentas.html" > Ferramentas</a></li><li class="item-287"><a href="../../basicos/outros.html" > Outros</a></li></ul></li><li class="item-108  deeper parent"><a href="../../servidores.html" > Servidores</a><span class="offcanvas-menu-toggler collapsed" data-toggle="collapse" data-target="#collapse-menu-108"><i class="open-icon fa fa-angle-down"></i><i class="close-icon fa fa-angle-up"></i></span><ul class="collapse" id="collapse-menu-108"><li class="item-121"><a href="../../servidores/desktop.html" > Desktop</a></li><li class="item-122"><a href="../../servidores/ubuntu-server.html" > Ubuntu Server</a></li><li class="item-123"><a href="../../servidores/shell-scripts.html" > Shell Scripts</a></li><li class="item-124"><a href="../../servidores/servidor-web.html" > Servidor Web</a></li><li class="item-156"><a href="../../servidores/servidor-sgbd.html" > Servidor SGBD</a></li><li class="item-193  deeper parent"><a href="../../servidores/postgresql.html" > PostgreSQL</a><span class="offcanvas-menu-toggler collapsed" data-toggle="collapse" data-target="#collapse-menu-193"><i class="open-icon fa fa-angle-down"></i><i class="close-icon fa fa-angle-up"></i></span><ul class="collapse" id="collapse-menu-193"><li class="item-232"><a href="../../servidores/postgresql/introducao-ao-postgresql.html" > Introdução</a></li><li class="item-233"><a href="../../servidores/postgresql/projeto.html" > Projeto</a></li><li class="item-234"><a href="../../servidores/postgresql/dimensionamento.html" > Dimensionamento</a></li></ul></li></ul></li><li class="item-148  deeper parent"><a href="../../joomla-3.html" > Joomla 3</a><span class="offcanvas-menu-toggler collapsed" data-toggle="collapse" data-target="#collapse-menu-148"><i class="open-icon fa fa-angle-down"></i><i class="close-icon fa fa-angle-up"></i></span><ul class="collapse" id="collapse-menu-148"><li class="item-149"><a href="../../joomla-3/introducao.html" > Introdução</a></li><li class="item-231"><a href="../../joomla-3/seguranca.html" > Segurança</a></li><li class="item-199"><a href="../../joomla-3/instalacao.html" > Instalação do Joomla</a></li><li class="item-152"><a href="../../joomla-3/administracao.html" > Administração</a></li><li class="item-153"><a href="../../joomla-3/extensoes.html" > Extensões</a></li><li class="item-154"><a href="../../joomla-3/loja-simples.html" > Loja Simples</a></li><li class="item-155"><a href="../../joomla-3/dicas.html" > Dicas</a></li></ul></li><li class="item-310  divider deeper parent"><a class="separator ">Frameworks</a>
+<span class="offcanvas-menu-toggler collapsed" data-toggle="collapse" data-target="#collapse-menu-310"><i class="open-icon fa fa-angle-down"></i><i class="close-icon fa fa-angle-up"></i></span><ul class="collapse" id="collapse-menu-310"><li class="item-138  deeper parent"><a href="../../frameworks/cakephp-3.html" > CakePHP 3</a><span class="offcanvas-menu-toggler collapsed" data-toggle="collapse" data-target="#collapse-menu-138"><i class="open-icon fa fa-angle-down"></i><i class="close-icon fa fa-angle-up"></i></span><ul class="collapse" id="collapse-menu-138"><li class="item-139"><a href="../../frameworks/cakephp-3/introducao.html" > Introdução</a></li><li class="item-140"><a href="../../frameworks/cakephp-3/instalacao.html" > Instalação</a></li><li class="item-172"><a href="../../frameworks/cakephp-3/configuracoes.html" > Configurações</a></li><li class="item-141"><a href="../../frameworks/cakephp-3/convencoes.html" > Convenções</a></li><li class="item-142"><a href="../../frameworks/cakephp-3/tutoriais.html" > Tutoriais</a></li><li class="item-144"><a href="../../frameworks/cakephp-3/dicas.html" > Dicas</a></li><li class="item-145"><a href="../../frameworks/cakephp-3/seguranca.html" > Segurança</a></li><li class="item-147"><a href="../../frameworks/cakephp-3/mvc-no-cakephp-3.html" > MVC no CakePHP 3</a></li></ul></li><li class="item-171  deeper parent"><a href="../../frameworks/laravel-5.html" > Laravel 5</a><span class="offcanvas-menu-toggler collapsed" data-toggle="collapse" data-target="#collapse-menu-171"><i class="open-icon fa fa-angle-down"></i><i class="close-icon fa fa-angle-up"></i></span><ul class="collapse" id="collapse-menu-171"><li class="item-173"><a href="../../frameworks/laravel-5/introducao.html" > Introdução</a></li><li class="item-174"><a href="../../frameworks/laravel-5/instalacao.html" > Instalação</a></li><li class="item-175"><a href="../../frameworks/laravel-5/configuracoes.html" > Configurações</a></li><li class="item-176"><a href="../../frameworks/laravel-5/routes.html" > Routes</a></li><li class="item-178"><a href="../../frameworks/laravel-5/dicas.html" > Dicas</a></li><li class="item-177"><a href="../../frameworks/laravel-5/tutoriais.html" > Tutoriais</a></li></ul></li></ul></li><li class="item-158  active deeper parent"><a href="../../mobile.html" > Mobile</a><span class="offcanvas-menu-toggler collapsed" data-toggle="collapse" data-target="#collapse-menu-158"><i class="open-icon fa fa-angle-down"></i><i class="close-icon fa fa-angle-up"></i></span><ul class="collapse" id="collapse-menu-158"><li class="item-179"><a href="../introducao.html" > Introdução</a></li><li class="item-180"><a href="../ambiente.html" > Ambiente</a></li><li class="item-188"><a href="../phaser.html" > Phaser</a></li><li class="item-187"><a href="../monaca.html" > Monaca</a></li><li class="item-181"><a href="../phonegap.html" > PhoneGap</a></li><li class="item-182"><a href="../app-inventor.html" > App Inventor</a></li><li class="item-159  current active"><a href="../unity-3d.html" > Unity 3D</a></li><li class="item-160"><a href="../intel-xdk.html" > Intel XDK</a></li><li class="item-161"><a href="../outros.html" > Outros</a></li><li class="item-163"><a href="../dicas.html" > Dicas</a></li></ul></li><li class="item-168  deeper parent"><a href="../../blog.html" > Blog</a><span class="offcanvas-menu-toggler collapsed" data-toggle="collapse" data-target="#collapse-menu-168"><i class="open-icon fa fa-angle-down"></i><i class="close-icon fa fa-angle-up"></i></span><ul class="collapse" id="collapse-menu-168"><li class="item-196"><a href="../../blog/reflexoes.html" > Reflexões</a></li><li class="item-197"><a href="../../blog/saude.html" > Saúde</a></li><li class="item-238"><a href="../../blog/diversos.html" > Diversos</a></li><li class="item-271"><a href="../../blog/estudos.html" > Estudos</a></li></ul></li><li class="item-215  deeper parent"><a href="../../curriculo.html" > Sobre</a><span class="offcanvas-menu-toggler collapsed" data-toggle="collapse" data-target="#collapse-menu-215"><i class="open-icon fa fa-angle-down"></i><i class="close-icon fa fa-angle-up"></i></span><ul class="collapse" id="collapse-menu-215"><li class="item-167">		<a href="https://github.com/ribafs?tab=repositories" rel="noopener noreferrer" target="_blank" > Projetos</a></li><li class="item-164"><a href="../../curriculo/livros.html" > Livros</a></li><li class="item-257"><a href="../../curriculo/curriculo.html" > Currículo</a></li><li class="item-110"><a href="../../curriculo/contato.html" > Contato</a></li><li class="item-251"><a href="../../curriculo/mapa-do-site.html" > Mapa</a></li></ul></li></ul>
+</div></div>
+                            </div> <!-- /.offcanvas-inner -->
+        </div> <!-- /.offcanvas-menu -->
+
+        
+        
+        
+        <!-- Preloader -->
+        
+
+        <!-- Go to top -->
+                    <a href="javascript:void(0)" class="scrollup" aria-label="Go To Top">&nbsp;</a>
+        
+    </body>
+</html>

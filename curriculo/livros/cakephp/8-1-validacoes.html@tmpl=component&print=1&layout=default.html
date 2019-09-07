@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br" dir="ltr">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <base href="" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Ribamar FS" />
+	<meta name="robots" content="noindex, nofollow" />
+	<meta name="description" content="Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros." />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>8.1 - Validações - RibaFS Portal</title>
+	<link href="http://ribafs.org/portal/curriculo/livros/cakephp/8-1-validacoes.html?tmpl=component&amp;print=1&amp;layout=default" rel="canonical" />
+	<link href="../../../templates/shaper_helix3/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../../../favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="http://backup/portal/media/plg_content_prismsyntaxhighlighter/css/prism-okaidia.css" rel="stylesheet" type="text/css" />
+	<link href="http://backup/portal/media/plg_content_prismsyntaxhighlighter/css/prism-linenumbers.css" rel="stylesheet" type="text/css" />
+	<script src="http://backup/portal/media/plg_content_prismsyntaxhighlighter/js/prism-tinymce.js" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery-noconflict.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery-migrate.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="http://backup/portal/media/system/js/caption.js?d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script type="text/javascript">
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+	</script>
+	<meta property="og:url" content="http://backup/portal/curriculo/livros/cakephp/8-1-validacoes.html" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="8.1 - Validações" />
+	<meta property="og:description" content="8.1 – Validações Escolhe um trabalho de que você goste e não terá que trabalhar nem um dia na sua vida. Confúcio (Mas se não encontrar um de que você goste..." />
+
+   	<link rel="stylesheet" href="../../../media/jui/css/bootstrap.min.css" type="text/css" />
+	<link rel="stylesheet" href="../../../templates/shaper_helix3/css/frontend-edit.css" type="text/css" />
+    <link rel="stylesheet" href="../../../templates/shaper_helix3/css/template.css" type="text/css" />
+</head>
+<body class="contentpane">
+	<div id="system-message-container">
+	</div>
+
+	
+
+<article class="item item-page" itemscope itemtype="http://schema.org/Article">
+	<meta itemprop="inLanguage" content="pt-BR" />
+	
+	
+
+	<div class="entry-header">
+		<span class="post-format"><i class="fa fa-thumb-tack"></i></span>
+		
+					<h2 itemprop="name">
+									8.1 - Validações							</h2>
+												</div>
+
+						<div id="pop-print" class="btn hidden-print">
+				<a href="8-1-validacoes.html#" onclick="window.print();return false;">			<span class="icon-print" aria-hidden="true"></span>
+		Imprimir	</a>			</div>
+				
+	
+	
+				
+	
+			<div itemprop="articleBody">
+		<h3>8.1 – Validações</h3>
+<p align="left"> </p>
+<p align="right"><em><strong>Escolhe um trabalho de que você goste e não terá que trabalhar nem um dia na sua vida.</strong></em></p>
+<p align="right">Confúcio</p>
+<p align="right"><strong>(Mas se não encontrar um de que você goste, empenhe-se no que você tem no momento e fique atento para encontrar um de que gosta)</strong></p>
+<p align="right">Ribamar FS</p>
+<p align="justify"><strong>A validação no Cake é feita no Model, mais especificamente na classe Table</strong></p>
+<p align="left">Exemplo, o nosso aplicativo cliente:</p>
+<pre class="language-php"><code>src\Model\Table\ClientesTable.php
+
+…
+    public function validationDefault(Validator $validator)
+    {
+        $validator
+            -&gt;integer('id')
+            -&gt;allowEmptyString('id', 'create');
+
+        $validator
+            -&gt;scalar('nome')
+            -&gt;maxLength('nome', 45)
+            -&gt;requirePresence('nome', 'create')
+            -&gt;allowEmptyString('nome', false);
+
+        $validator
+            -&gt;email('email')
+            -&gt;requirePresence('email', 'create')
+            -&gt;allowEmptyString('email', false);
+
+        $validator
+            -&gt;date('data_nasc')
+            -&gt;requirePresence('data_nasc', 'create')
+            -&gt;allowEmptyDate('data_nasc', false);
+
+        $validator
+            -&gt;scalar('cpf')
+            -&gt;maxLength('cpf', 11)
+            -&gt;requirePresence('cpf', 'create')
+            -&gt;allowEmptyString('cpf', false);
+
+        return $validator;
+    }
+
+    /**
+     * Returns a rules checker object that will be used for validating
+     * application integrity.
+     *
+     * @param \Cake\ORM\RulesChecker $rules The rules object to be modified.
+     * @return \Cake\ORM\RulesChecker
+     */
+    public function buildRules(RulesChecker $rules)
+    {
+        $rules-&gt;add($rules-&gt;isUnique(['email']));
+
+        return $rules;
+    }
+…
+</code></pre>
+<p> </p>
+<p align="left">O método validationDefault() diz ao CakePHP como validar seus dados quando o método save() no action no controller for solicitado.</p>
+<p align="left"> </p>
+<p align="left"><strong>Observações:</strong></p>
+<p align="left">- Vejamos o campo nome:</p>
+<p align="left">-&gt;maxLength('nome', 45)</p>
+<p align="left">-&gt;requirePresence('nome', 'create')</p>
+<p align="left">-&gt;allowEmptyString('nome', false);</p>
+<p align="left"> </p>
+<p align="left">De onde o Cake tirou este tamanho máximo de 45?</p>
+<p align="left">Da nossa tabela. Veja que lá temos varchar(45).</p>
+<p align="left"> </p>
+<p align="left">De onde ele tirou que deve requerer a presença na criação de novos registros?</p>
+<p align="justify">Também da tabela, onde viu NOT NULL, o que assegura a linha abaixo para não permitir vazio.</p>
+<p align="justify"> </p>
+<p align="justify">Desde que tenhamos usado o método Cake\View\Helper\FormHelper::input() do FormHelper para criar nossos elementos, nossas mensagens de alerta da validação serão exibidas automaticamente.</p>
+<p align="left"> </p>
+<p align="left"><strong>Validação para o CPF</strong></p>
+<p align="left">Baixar o repositório para a validação de:</p>
+<p align="left"><a href="https://github.com/gspaiva/cpfvalidator">https://github.com/gspaiva/cpfvalidator</a></p>
+<p align="left">Ajustar num campo cujo nome seja "cpf" para que nossa ClientesModel seja:</p>
+<pre class="language-php"><code>&lt;?php
+namespace App\Model\Table;
+
+use Cake\ORM\Query;
+use Cake\ORM\RulesChecker;
+use Cake\ORM\Table;
+use Cake\Validation\Validator;
+class ClientesTable extends Table
+{
+    public function initialize(array $config)
+    {
+        parent::initialize($config);
+
+        $this-&gt;setTable('clientes');
+        $this-&gt;setDisplayField('id');
+        $this-&gt;setPrimaryKey('id');
+    }
+
+    public function validationDefault(Validator $validator)
+    {
+        $validator
+            -&gt;integer('id')
+            -&gt;allowEmptyString('id', 'create');
+
+        $validator
+            -&gt;scalar('nome')
+            -&gt;maxLength('nome', 45)
+            -&gt;requirePresence('nome', 'create')
+            -&gt;allowEmptyString('nome', false);
+
+        $validator
+            -&gt;email('email')
+            -&gt;requirePresence('email', 'create')
+            -&gt;allowEmptyString('email', false);
+
+        $validator
+            -&gt;date('data_nasc')
+            -&gt;requirePresence('data_nasc', 'create')
+            -&gt;allowEmptyDate('data_nasc', false);
+
+        $validator
+            -&gt;scalar('cpf')
+            -&gt;maxLength('cpf', 11)
+            -&gt;requirePresence('cpf', 'create')
+            -&gt;allowEmptyString('cpf', false);
+
+       $validator
+            -&gt;add('cpf','custom',
+                ['rule'=&gt;
+                    function($cpf)
+                    {   
+                         // Verifica se um número foi informado
+                        if(empty($cpf)) {
+                            return false;
+                        }
+                     
+                        // Elimina possivel mascara
+                        $cpf = preg_replace('[^0-9]', '', $cpf);
+                        $cpf = str_pad($cpf, 11, '0', STR_PAD_LEFT);
+                         
+                        // Verifica se o numero de digitos informados é igual a 11 
+                        if (strlen($cpf) != 11) {
+                            return false;
+                        }
+                        // Verifica se nenhuma das sequências invalidas abaixo foi digitada
+                        else if ($cpf == '00000000000' || 
+                            $cpf == '11111111111' || 
+                            $cpf == '22222222222' || 
+                            $cpf == '33333333333' || 
+                            $cpf == '44444444444' || 
+                            $cpf == '55555555555' || 
+                            $cpf == '66666666666' || 
+                            $cpf == '77777777777' || 
+                            $cpf == '88888888888' || 
+                            $cpf == '99999999999') {
+                            return false;
+                         // Calcula os digitos verificadores para verificar se o cpf é valido
+                         } else {   
+                             
+                            for ($t = 9; $t &lt; 11; $t++) {
+                                 
+                                for ($d = 0, $c = 0; $c &lt; $t; $c++) {
+                                    $d += $cpf{$c} * (($t + 1) - $c);
+                                }
+                                $d = ((10 * $d) % 11) % 10;
+                                if ($cpf{$c} != $d) {
+                                    return false;
+                                }
+                            }
+                     
+                            return true;
+                        }                        
+                    },
+                    // Caso retorne falso ele vai retornar uma mensagem falando que é inválido
+                    'message'=&gt;'=== CPF INVÁLIDO ==='
+                ]); 
+        return $validator;
+    }
+
+    public function buildRules(RulesChecker $rules)
+    {
+        $rules-&gt;add($rules-&gt;isUnique(['email']));
+        return $rules;
+    }
+}</code></pre>
+<p align="left"><strong>Customizando as mensagens de erro do Cake</strong></p>
+<p align="left">Caso ache necessário pode customizar o design das mensagens de erro.</p>
+<p align="left">Edite o arquivo:</p>
+<p align="left">webroot/css/style.css</p>
+<p align="left">E altere o código de do seletor .form .error-message para este:</p>
+<p align="left">.form .error-message {</p>
+<p align="left">display: block;</p>
+<p align="left">padding: 0.375rem 0.5625rem 0.5625rem;</p>
+<p align="left">margin-top: -1px;</p>
+<p align="left">margin-bottom: 1rem;</p>
+<p align="left">font-size: 1rem;</p>
+<p align="left">font-weight: normal;</p>
+<p align="left">font-style: italic;</p>
+<p align="left">color: #FF0000;</p>
+<p align="left">}</p>
+<p align="left"> </p>
+<p align="left"><strong>Outras Validações Customizadas</strong></p>
+<pre class="language-php"><code>$validator-&gt;add('nascimento',[
+	        'notEmptyCheck'=&gt;[
+    		    'rule'=&gt;[$this,'notEmptyNascimento'],
+    		    'provider'=&gt;'table',
+    		    'message'=&gt;'Favor selecionar uma data de nascimento'
+    		 ]
+         ]);
+
+        return $validator;
+    }
+
+    public function notEmptyNascimento($value,$context){
+        if(empty($context['data']['nascimento'])) {
+            return false;
+        } else {
+            return true;
+        }
+    }</code></pre>
+<p><strong>Validação nos Forms</strong></p>
+<p>Para tirar proveito dos recursos de validação do Cake, você vai precisar usar o Form helper em suas views para criar formulários e nunca criar diretamente código HTML. O <a href="https://book.cakephp.org/3.0/pt/views/helpers/form.html#Cake%5CView%5CHelper%5CFormHelper">Cake\View\Helper\FormHelper</a> está disponível por padrão em todas as views pelo uso do $this-&gt;Form.</p>
+<p>Basta usar $this-&gt;Form-&gt;...</p>
+<p> </p>
+<p align="left"><strong>Cuidados com o banco de dados</strong></p>
+<p align="left">Uma preocupação com a segurança deve levar a um cuidado com a criação das tabelas no banco de dados com vários detalhes:</p>
+<p align="left">- Relacionamentos sempre que for importante</p>
+<p align="left">- Tipo de dados de cada campo selecionado com critério</p>
+<p align="left">- Tamanho dos campos</p>
+<p align="left">- Quantidade de campos</p>
+<p align="left">- Constraints de cada campo</p>
+<p align="left"> </p>
+<p align="left"><strong>Criando nossas próprias regras de validação</strong></p>
+<p align="left">O sistema de validação do Cake é rico e flexível e ainda permite que criemos nossas próprias regras de validação. Uma forma simples é usando Expressões Regulares.</p>
+<p align="left">Desde que estejamos usando o método Cake\View\Helper\FormHelper::control() do FormHelper para criar os elementos do form, nossas mensagens de erro de validação serão mostradas automaticamente.</p>
+<p align="left">Para tirar proveito dos recursos de validação do Cake, você vai precisar usar o Form helper em suas views.</p>
+<p align="left"> </p>
+<p align="left"><strong>Validações Customizadas</strong></p>
+<p align="left"> </p>
+<p align="left">Validação de senha:</p>
+<pre class="language-php"><code>/**
+     * Checks password for a single instance of each:
+     * number, uppercase, lowercase, and special character
+     *
+     * @param type $password
+     * @param array $context
+     * @return boolean
+     */
+    public function checkCharacters($password, array $context)
+    {
+        // number
+        if (!preg_match("#[0-9]#", $password)) {
+            return false;
+        }
+        // Uppercase
+        if (!preg_match("#[A-Z]#", $password)) {
+            return false;
+        }
+        // lowercase
+        if (!preg_match("#[a-z]#", $password)) {
+            return false;
+        }
+        // special characters
+        if (!preg_match("#\W+#", $password) ) {
+            return false;
+        }
+        return true;
+    }
+        $validator
+            -&gt;requirePresence('password', 'create')
+            -&gt;notEmpty('password', 'You must enter a password', 'create')
+                -&gt;add('password', [
+                    'length' =&gt; [
+                    'rule' =&gt; ['minLength', 8],
+                    'message' =&gt; 'Passwords must be at least 8 characters long.',
+                ]
+            ])
+            -&gt;add('password', 'custom', [
+                'rule' =&gt; [$this, 'checkCharacters'],
+                'message' =&gt; 'The password must contain 1 number, 1 uppercase, 1 lowercase, and 1 special character'
+            ]);</code></pre>
+<p style="margin-bottom: 0cm; font-style: normal; line-height: 100%;" align="left"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><b>Validação Condicional</b></span></span></p>
+<p style="margin-bottom: 0cm; font-style: normal; font-weight: normal; line-height: 100%;" align="left"> </p>
+<p style="margin-bottom: 0cm; font-style: normal; font-weight: normal; line-height: 100%;" align="left"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;">Baseado no Entity</span></span></p>
+<pre class="language-php"><code>$rules-&gt;add(function ($entity, $options) use($rules) {
+    if ($entity-&gt;role == 'admin') {
+        $rule = $rules-&gt;existsIn('user_id', 'Admins');
+
+        return $rule($entity, $options);
+    }
+    if ($entity-&gt;role == 'user') {
+        $rule = $rules-&gt;existsIn('user_id', 'Users');
+
+        return $rule($entity, $options);
+    }
+
+    return false;
+}, 'userExists');</code></pre>
+<p style="margin-bottom: 0cm; font-style: normal; line-height: 100%;" align="left"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><b>Detalhes em</b></span></span></p>
+<p style="margin-bottom: 0cm; font-style: normal; font-weight: normal; line-height: 100%;" align="left"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><a href="https://book.cakephp.org/3.0/en/orm/validation.html">https://book.cakephp.org/3.0/en/orm/validation.html</a></span></span></p>
+<p style="margin-bottom: 0cm; font-style: normal; font-weight: normal; line-height: 100%;" align="left"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><a href="https://book.cakephp.org/3.0/pt/orm/validation.html">https://book.cakephp.org/3.0/pt/orm/validation.html</a></span></span></p> 	</div>
+
+	
+	
+				
+	
+	
+	
+</article>
+
+</body>
+</html>

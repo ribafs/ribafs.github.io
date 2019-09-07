@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="Joomla! - Open Source Content Management" -->
+<feed xmlns="http://www.w3.org/2005/Atom"  xml:lang="pt-br">
+	<title type="text">Configurações - RibaFS Portal</title>
+	<subtitle type="text">Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros.</subtitle>
+	<link rel="alternate" type="text/html" href="http://backup"/>
+	<id>http://backup/portal/frameworks/laravel-5/configuracoes.feed</id>
+	<updated>2019-09-07T18:59:44-03:00</updated>
+	<author>
+		<name>RibaFS Portal</name>
+	</author>
+	<generator uri="https://www.joomla.org">Joomla! - Open Source Content Management</generator>
+	<link rel="self" type="application/atom+xml" href="http://backup/portal/frameworks/laravel-5/configuracoes.feed?type=atom"/>
+	<entry>
+		<title>Configurações do Laravel</title>
+		<link rel="alternate" type="text/html" href="http://backup/portal/frameworks/laravel-5/configuracoes/configuracoes-do-laravel.html"/>
+		<published>2017-06-25T21:08:35-03:00</published>
+		<updated>2017-06-25T21:08:35-03:00</updated>
+		<id>http://backup/portal/frameworks/laravel-5/configuracoes/configuracoes-do-laravel.html</id>
+		<author>
+			<name>Ribamar FS</name>
+		</author>
+		<summary type="html">&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Configurações de aplicativos com Laravel 5&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;As principais configurações de aplicativos no Laravel 5 ficam no arquivo .env do raiz (oculto no Linux). Veja seu conteúdo e o que basicamente podemos configurar com ele:&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;APP_NAME=Laravel&lt;br /&gt;APP_ENV=local&lt;br /&gt;APP_KEY=base64:bLPhehH02SqrtfdYSIxesut/AZTtAoZsGrdxf5nxJG0=&lt;br /&gt;APP_DEBUG=true&lt;br /&gt;APP_LOG_LEVEL=debug&lt;br /&gt;APP_URL=http://localhost&lt;br /&gt;&lt;br /&gt;DB_CONNECTION=mysql&lt;br /&gt;DB_HOST=127.0.0.1&lt;br /&gt;DB_PORT=3306&lt;br /&gt;DB_DATABASE=estoque&lt;br /&gt;DB_USERNAME=root&lt;br /&gt;DB_PASSWORD=mysql&lt;br /&gt;&lt;br /&gt;BROADCAST_DRIVER=log&lt;br /&gt;CACHE_DRIVER=file&lt;br /&gt;SESSION_DRIVER=file&lt;br /&gt;QUEUE_DRIVER=sync&lt;br /&gt;&lt;br /&gt;REDIS_HOST=127.0.0.1&lt;br /&gt;REDIS_PASSWORD=null&lt;br /&gt;REDIS_PORT=6379&lt;br /&gt;&lt;br /&gt;MAIL_DRIVER=smtp&lt;br /&gt;MAIL_HOST=smtp.mailtrap.io&lt;br /&gt;MAIL_PORT=2525&lt;br /&gt;MAIL_USERNAME=null&lt;br /&gt;MAIL_PASSWORD=null&lt;br /&gt;MAIL_ENCRYPTION=null&lt;br /&gt;&lt;br /&gt;PUSHER_APP_ID=&lt;br /&gt;PUSHER_APP_KEY=&lt;br /&gt;PUSHER_APP_SECRET=&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt; &lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Aqui geralmente configuramos, no mínimoo, o banco de dados, mas tem muita coisa que pode ser configurada.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Caso nem toquemos neste arquivo, o Laravel então procurar as configurações no diretório &lt;strong&gt;config&lt;/strong&gt;. O Banco no arquivo &lt;strong&gt;database&lt;/strong&gt;.php.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Mas é mais prático já configurar no .env.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt; &lt;/p&gt;</summary>
+		<content type="html">&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Configurações de aplicativos com Laravel 5&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;As principais configurações de aplicativos no Laravel 5 ficam no arquivo .env do raiz (oculto no Linux). Veja seu conteúdo e o que basicamente podemos configurar com ele:&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;APP_NAME=Laravel&lt;br /&gt;APP_ENV=local&lt;br /&gt;APP_KEY=base64:bLPhehH02SqrtfdYSIxesut/AZTtAoZsGrdxf5nxJG0=&lt;br /&gt;APP_DEBUG=true&lt;br /&gt;APP_LOG_LEVEL=debug&lt;br /&gt;APP_URL=http://localhost&lt;br /&gt;&lt;br /&gt;DB_CONNECTION=mysql&lt;br /&gt;DB_HOST=127.0.0.1&lt;br /&gt;DB_PORT=3306&lt;br /&gt;DB_DATABASE=estoque&lt;br /&gt;DB_USERNAME=root&lt;br /&gt;DB_PASSWORD=mysql&lt;br /&gt;&lt;br /&gt;BROADCAST_DRIVER=log&lt;br /&gt;CACHE_DRIVER=file&lt;br /&gt;SESSION_DRIVER=file&lt;br /&gt;QUEUE_DRIVER=sync&lt;br /&gt;&lt;br /&gt;REDIS_HOST=127.0.0.1&lt;br /&gt;REDIS_PASSWORD=null&lt;br /&gt;REDIS_PORT=6379&lt;br /&gt;&lt;br /&gt;MAIL_DRIVER=smtp&lt;br /&gt;MAIL_HOST=smtp.mailtrap.io&lt;br /&gt;MAIL_PORT=2525&lt;br /&gt;MAIL_USERNAME=null&lt;br /&gt;MAIL_PASSWORD=null&lt;br /&gt;MAIL_ENCRYPTION=null&lt;br /&gt;&lt;br /&gt;PUSHER_APP_ID=&lt;br /&gt;PUSHER_APP_KEY=&lt;br /&gt;PUSHER_APP_SECRET=&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt; &lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Aqui geralmente configuramos, no mínimoo, o banco de dados, mas tem muita coisa que pode ser configurada.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Caso nem toquemos neste arquivo, o Laravel então procurar as configurações no diretório &lt;strong&gt;config&lt;/strong&gt;. O Banco no arquivo &lt;strong&gt;database&lt;/strong&gt;.php.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Mas é mais prático já configurar no .env.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt; &lt;/p&gt;</content>
+		<category term="Configurações" />
+	</entry>
+</feed>

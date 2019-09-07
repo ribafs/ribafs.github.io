@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br" dir="ltr">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <base href="" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Ribamar FS" />
+	<meta name="robots" content="noindex, nofollow" />
+	<meta name="description" content="Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros." />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>3 - Convenções sobre Configurações - RibaFS Portal</title>
+	<link href="http://ribafs.org/portal/curriculo/livros/cakephp/3-convencoes-sobre-configuracoes.html?tmpl=component&amp;print=1&amp;layout=default" rel="canonical" />
+	<link href="../../../templates/shaper_helix3/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../../../favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="http://backup/portal/media/plg_content_prismsyntaxhighlighter/css/prism-okaidia.css" rel="stylesheet" type="text/css" />
+	<link href="http://backup/portal/media/plg_content_prismsyntaxhighlighter/css/prism-linenumbers.css" rel="stylesheet" type="text/css" />
+	<script src="http://backup/portal/media/plg_content_prismsyntaxhighlighter/js/prism-tinymce.js" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery-noconflict.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery-migrate.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="http://backup/portal/media/system/js/caption.js?d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script type="text/javascript">
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+	</script>
+	<meta property="og:url" content="http://backup/portal/curriculo/livros/cakephp/3-convencoes-sobre-configuracoes.html" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="3 - Convenções sobre Configurações" />
+	<meta property="og:description" content="3 - Convenções sobre Configurações Você erra todo arremesso que não tenta. Michal Jordan A equipe do CakePHP é grande admiradora de convenção sobre configu..." />
+
+   	<link rel="stylesheet" href="../../../media/jui/css/bootstrap.min.css" type="text/css" />
+	<link rel="stylesheet" href="../../../templates/shaper_helix3/css/frontend-edit.css" type="text/css" />
+    <link rel="stylesheet" href="../../../templates/shaper_helix3/css/template.css" type="text/css" />
+</head>
+<body class="contentpane">
+	<div id="system-message-container">
+	</div>
+
+	
+
+<article class="item item-page" itemscope itemtype="http://schema.org/Article">
+	<meta itemprop="inLanguage" content="pt-BR" />
+	
+	
+
+	<div class="entry-header">
+		<span class="post-format"><i class="fa fa-thumb-tack"></i></span>
+		
+					<h2 itemprop="name">
+									3 - Convenções sobre Configurações							</h2>
+												</div>
+
+						<div id="pop-print" class="btn hidden-print">
+				<a href="3-convencoes-sobre-configuracoes.html#" onclick="window.print();return false;">			<span class="icon-print" aria-hidden="true"></span>
+		Imprimir	</a>			</div>
+				
+	
+	
+				
+	
+			<div itemprop="articleBody">
+		<h1>3 - Convenções sobre Configurações</h1>
+<p> </p>
+<p align="right"><em><strong>Você erra todo arremesso que não tenta.</strong></em></p>
+<p align="right">Michal Jordan</p>
+<p> </p>
+<p align="justify">A equipe do CakePHP é grande admiradora de convenção sobre configuração. Seguindo as convenções definidas pelo Cake você recebe funcionalidades gratuitamente e libera a si mesmo de manter arquivos de configuração e com isso economizamos tempo e esforço.</p>
+<p align="justify">Aderir às convenções vai lhe poupar tempo.</p>
+<p align="justify">Aviso Importante: Antes de começar a trabalhar com CakePHP é importante conhecer suas convenções para tirar delas as devidas vantagens. Caso não as use o CakePHP não será de muita ajuda.</p>
+<p align="justify"> </p>
+<p align="justify"><strong>Controllers</strong></p>
+<p align="justify">Nomes de classes tipo Controller devem estar no plural, ser CamelCase e terminarem com o sufixo Controller.</p>
+<p align="justify">Exemplos de classes controller:</p>
+<p align="justify">ClientesController, PeopleController e UltimosArtigosController</p>
+<p align="justify"> </p>
+<p align="justify"><strong>Actions</strong> – Os actions são os métodos dos Controllers, com visibilidade public e se comunicam com views com mesmo nome que eles e extensão .ctp.</p>
+<p align="justify">Um exemplo: action index() - view index.ctp</p>
+<p align="justify">o action Controller/ClientesController/index() é mapeado automaticamente para a view src/Template/Clientes/index.ctp.</p>
+<p align="justify">Métodos protected ou private não podem ser acessados via Routing.</p>
+<p align="justify"> </p>
+<p align="justify">Considerações sobre URL para nomes de controllers</p>
+<p align="justify">O ClientesController que está no arquivo ClientesController.php é chamado pelo navegador com:</p>
+<p align="justify"><a href="http://localhost/aplicacao/clientes">http://localhost/aplicacao/clientes</a></p>
+<p align="justify">Nomes de controllers com palavras compostas podem ficar assim:</p>
+<p align="justify">• /vermelhaMacas</p>
+<p align="justify">• /VermelhaMacas</p>
+<p align="justify">• /Vermelha_macas</p>
+<p align="justify">• /vermelha_macas</p>
+<p align="justify">Todos resolverão com o controller VermelhaMacas.</p>
+<p align="justify"> </p>
+<p align="justify"><strong>Namespaces</strong></p>
+<p align="justify">Todas as classes do core do CakePHP agora (3.x) usam namespaces e seguem as especificações de autoload (auto-carregamento) do PSR-4.</p>
+<p align="justify">Por exemplo: (troca src por Cake e troca as barras)</p>
+<p align="justify">src/Cache/Cache.php</p>
+<p align="justify">tem o namespace</p>
+<p align="justify">Cake\Cache\Cache</p>
+<p align="justify"> </p>
+<p align="justify">Constantes globais e métodos de helpers como __() e debug() não usam namespaces por questões de conveniência.</p>
+<p align="justify"> </p>
+<p align="justify"><strong>Nomes de arquivos e Classes:</strong></p>
+<p align="justify">Classe KissesAndHugsController está no arquivo KissesAndHugsController.php</p>
+<p align="justify">Classe ClientesController está no arquivo ClientesController.php.</p>
+<p align="justify"> </p>
+<p align="justify"><strong>Model e Bancos de Dados</strong></p>
+<p align="justify">Nomes de classes Table - são no plural e CamelCase</p>
+<p>Ao nomear nosso objeto como ArticlesTable, o CakePHP automaticamente deduz que o mesmo utilize o ArticlesController e seja relacionado à tabela articles e aos Template\Articles.</p>
+<p>O CakePHP criará automaticamente um objeto model se não puder encontrar um arquivo correspondente em src/Model/Table. Se você nomear incorretamente seu arquivo (isto é, artciclestable.php ou ArticleTable.php), o CakePHP não reconhecerá suas definições e usará o model gerado como alternativa.</p>
+<p> </p>
+<p><strong>Chave Primária</strong></p>
+<p align="justify">Toda tabela, obrigatoriamente deve ter uma chave primária e o nome da chave deve ser id para usufruir das vantagens do CakePHP.</p>
+<p align="justify"> </p>
+<p align="justify">Lembrando que o cake trabalha com nomes em inglês. Ele tem um recurso online importante para mostrar o plural de nomes:</p>
+<p align="justify"><a href="http://inflector.cakephp.org/">http://inflector.cakephp.org/</a></p>
+<p align="justify"> </p>
+<p align="justify"><strong>Nomes válidos</strong>: Clientes, Populacao, GrandePopulacao e RealmenteGrandePopulacao.</p>
+<p align="justify">Pesquisando no site acima por Clientes e People, vemos que já estão no plural e seu singular é Cliente e Person</p>
+<p align="justify"> </p>
+<p align="justify"><strong>Nomes de tabelas</strong> são em minúsculas, no plural e palavras compostas separadas por sublinhado. Nomes de tabelas para os acima:</p>
+<p align="justify"><br /> clientes, populacao, grande_populacao e realmente_grande_populacao</p>
+<p align="justify">A convenção é para usar tabelas e campos com nomes na língua inglesa.</p>
+<p align="justify"> </p>
+<p align="justify"><strong>Nomes de campos</strong> em minúsculas e compostos são separados por sublinhado: name, first_name.</p>
+<p align="justify">Se usarmos os campos username e password (com estes nomes) na tabela users, o Cake deve estar apto para auto-configurar algumas coisas para nós, quando implementando o user login.</p>
+<p align="justify"><strong>Obs</strong>.: quando usar autenticação use o tamanho do campo password com varchar(255).</p>
+<p align="justify">Também ajuda adicionar um campo chamado role na tabela users.</p>
+<p align="justify"> </p>
+<p align="justify">Por default o Cake espera identificar o user pelos campos com nome 'username' e 'password'. Caso deseje mudar isto faça as alterações no AppController:</p>
+<p align="justify">Adicione ao initialize():</p>
+<p align="justify"> </p>
+<pre class="language-php"><code>$this-&gt;loadComponent('Auth', [
+    'authorize' =&gt; ['Controller'],
+    'logoutRedirect' =&gt; [
+        'controller' =&gt; 'Users',
+        'action' =&gt; 'login',
+        'home',
+    ],
+//'unauthorizedRedirect' =&gt; $this-&gt;referer()
+    'unauthorizedRedirect' =&gt; [
+        'controller' =&gt; 'Users',
+        'action' =&gt; 'login',
+        'prefix' =&gt; false,
+    ],
+    'authError' =&gt; 'Você não tem permissão para acessar esta área!',
+    'flash' =&gt; [
+        'element' =&gt; 'error',
+    ],
+    'authenticate' =&gt; [
+        'Form' =&gt; [ // THIS IS WHERE YOU CHANGE THE DEFAULT FIELDS
+            'fields' =&gt; ['username' =&gt; 'novoUsername', 'password' =&gt; 'novoPassword'],
+        ],
+    ],
+]);
+</code></pre>
+<p align="justify"> </p>
+<p align="justify"><strong>Relacionamentos</strong></p>
+<p align="justify">Chave estrangeira nos relacionamentos hasMany, belongsTo ou hasOne são reconhecidas por default com:</p>
+<p align="justify">nome da tabela relacionada no singular seguida de "_id".</p>
+<p align="justify"> </p>
+<p align="justify">Exemplos: groups e users. Em users o campo group_id para relacionar.</p>
+<p align="justify">Relacionamento entre articles e users. Em articles adicionar o campo user_id.</p>
+<p align="justify"> </p>
+<p align="justify"><strong>Relacionamento Muitos para Muitos</strong></p>
+<p align="justify">Exemplo: Para relacionamento muitos para muitos das tabelas pratos com cozinheiros, criaremos uma tabela intermediária para relacionar pratos com cozinheiros:</p>
+<p align="justify">create table cozinheiros_pratos(</p>
+<p align="justify">id int unsigned auto_increment primary key,</p>
+<p align="justify">cocinero_id int(11) not null,</p>
+<p align="justify">platillo_id int(11) not null</p>
+<p align="justify">);</p>
+<p align="justify"> </p>
+<p align="justify"><strong>Tipos de Relacionamentos</strong></p>
+<table style="width: 567px;" cellspacing="1" cellpadding="2">
+<tbody>
+<tr valign="top">
+<td style="width: 122px;">
+<p align="justify">one to one</p>
+</td>
+<td style="width: 95.2167px;">
+<p align="justify">hasOne</p>
+</td>
+<td style="width: 322.783px;">
+<p align="justify">Um usuario tem um perfil.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 122px;">
+<p align="justify">one to many</p>
+</td>
+<td style="width: 95.2167px;">
+<p align="justify">hasMany</p>
+</td>
+<td style="width: 322.783px;">
+<p align="justify">Um usuario pode ter múltiplos artigos.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 122px;">
+<p align="justify">many to one</p>
+</td>
+<td style="width: 95.2167px;">
+<p align="justify">belongsTo</p>
+</td>
+<td style="width: 322.783px;">
+<p align="justify">Muitos artigos pertencem a um usuario</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 122px;">
+<p align="justify">many to many</p>
+</td>
+<td style="width: 95.2167px;">
+<p align="justify">belongsToMany</p>
+</td>
+<td style="width: 322.783px;">
+<p align="justify">Várias Tags pertencem a muitos artigos.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p align="justify"> </p>
+<p align="justify">Para uma classe Bakers teremos uma chave estrangeira assim: baker_id.</p>
+<p align="justify">Para uma tabela como category_types a chave estrangeira será category_type_id.</p>
+<p align="justify">Nomes de campos especiais, que levam o Cake a tomar iniciativas importantes a nosso favor:</p>
+<p align="justify">title</p>
+<p align="justify">name</p>
+<p align="justify">created</p>
+<p align="justify">modified</p>
+<p align="justify"> </p>
+<p align="justify"><strong>Convenções para as Views</strong></p>
+<p align="justify">As views tem nomes de arquivos em minúsculas com extensão .ctp.</p>
+<p align="justify">O método getReady() do conroller PeopleController está associado ao template/view</p>
+<p align="justify">src/Template/People/get_ready.ctp.</p>
+<p align="justify"> </p>
+<p>O método index() do controller ClientesController está associado a</p>
+<p>src/Template/Clientes/index.ctp.</p>
+<p> </p>
+<p><strong>Arquivos da Aplicação</strong></p>
+<p>Todos os arquivos da aplicação que criamos ficam na pasta src.</p>
+<p> </p>
+<p><strong>Criptografia</strong></p>
+<p>Por padrão o CakePHP 3.x usa a criptografia bcrypt para proteger as senhas. Uma recomendação, quando usamos bcrypt é que o tamanho do campo password deve ter 255 caracteres na tabela, para que suporte o tamanho do hash gerado.</p>
+<p> </p>
+<p><strong>Arquivos da Aplicação</strong></p>
+<p>Todos os arquivos da aplicação que criamos ficam na pasta src.</p>
+<p>Por padrão o CakePHP 3.x usa a criptografia bcrypt para proteger as senhas.</p>
+<p> </p>
+<p><strong>Alterando convenções</strong></p>
+<p>Recomenda-se evitar, mas caso necessite veja abaixo um exemplo</p>
+<pre class="language-php"><code>&lt;?php
+
+namespace App\Model\Table;
+use Cake\ORM\Table;
+
+class ClientesTable extends Table
+{
+    public function initialize(array $config)
+    {
+        parent::initialize($config);
+
+        $this-&gt;table('clientes'); // Nome da tabela. Se ausente a convenção assume uma versão em minúsculas do prefixo deste arquivo: ClientesTable.php
+
+        $this-&gt;displayField('cpf'); // campo usado por default na exibição em models associados, se ausente é assumido 'id'
+
+        $this-&gt;primaryKey('id'); // Campo Primary key da table, se ausente a convenção assume que seja o campo 'id'
+
+        $this-&gt;addBehavior('Timestamp'); // Permite ao model gravar timestamp na creation/modification dos registros
+    }
+}
+</code></pre>
+<p> </p>
+<p><strong>Documentação oficial</strong></p>
+<p><a href="http://book.cakephp.org/3.0/pt/intro/conventions.html">http://book.cakephp.org/3.0/pt/intro/conventions.html</a></p>
+<p align="left"> </p> 	</div>
+
+	
+	
+				
+	
+	
+	
+</article>
+
+</body>
+</html>

@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br" dir="ltr">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <base href="" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Ribamar FS" />
+	<meta name="robots" content="noindex, nofollow" />
+	<meta name="description" content="Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros." />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>11.3 - Criação do plugin cake-acl-br - RibaFS Portal</title>
+	<link href="http://ribafs.org/portal/curriculo/livros/cakephp/11-3-criacao-do-plugin-cake-acl-br.html?tmpl=component&amp;print=1&amp;layout=default" rel="canonical" />
+	<link href="../../../templates/shaper_helix3/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../../../favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="http://backup/portal/media/plg_content_prismsyntaxhighlighter/css/prism-okaidia.css" rel="stylesheet" type="text/css" />
+	<link href="http://backup/portal/media/plg_content_prismsyntaxhighlighter/css/prism-linenumbers.css" rel="stylesheet" type="text/css" />
+	<script src="http://backup/portal/media/plg_content_prismsyntaxhighlighter/js/prism-tinymce.js" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery-noconflict.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery-migrate.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="http://backup/portal/media/system/js/caption.js?d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script type="text/javascript">
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+	</script>
+	<meta property="og:url" content="http://backup/portal/curriculo/livros/cakephp/11-3-criacao-do-plugin-cake-acl-br.html" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="11.3 - Criação do plugin cake-acl-br" />
+	<meta property="og:description" content="11.3 - Criação do plugin cake-acl-br Não importa se seu sonho vai se realizar hoje ou amanhã, mas sim que você trabalhe para o alcançar todos os dias. O pl..." />
+
+   	<link rel="stylesheet" href="../../../media/jui/css/bootstrap.min.css" type="text/css" />
+	<link rel="stylesheet" href="../../../templates/shaper_helix3/css/frontend-edit.css" type="text/css" />
+    <link rel="stylesheet" href="../../../templates/shaper_helix3/css/template.css" type="text/css" />
+</head>
+<body class="contentpane">
+	<div id="system-message-container">
+	</div>
+
+	
+
+<article class="item item-page" itemscope itemtype="http://schema.org/Article">
+	<meta itemprop="inLanguage" content="pt-BR" />
+	
+	
+
+	<div class="entry-header">
+		<span class="post-format"><i class="fa fa-thumb-tack"></i></span>
+		
+					<h2 itemprop="name">
+									11.3 - Criação do plugin cake-acl-br							</h2>
+												</div>
+
+						<div id="pop-print" class="btn hidden-print">
+				<a href="11-3-criacao-do-plugin-cake-acl-br.html#" onclick="window.print();return false;">			<span class="icon-print" aria-hidden="true"></span>
+		Imprimir	</a>			</div>
+				
+	
+	
+				
+	
+			<div itemprop="articleBody">
+		<h3>11.3 - Criação do plugin cake-acl-br</h3>
+<p> </p>
+<p align="right"><em><strong>Não importa se seu sonho vai se realizar hoje ou amanhã, mas sim que você trabalhe para o alcançar todos os dias.</strong></em></p>
+<p> </p>
+<p><strong>O plugin cake-acl-br foi criado vindo de outros 3 plugins.</strong></p>
+<p>Primeito criei o twbs-cake-css - <a href="https://github.com/ribafs/twbs-cake-css">https://github.com/ribafs/twbs-cake-css</a>, depois criei o cake-control, que já removi do GitHub, depois o cake-control-br - <a href="https://github.com/ribafs/cake-control-br">https://github.com/ribafs/cake-control-br</a> e finalmente este, o cake-acl-br, que já está no release 1.30, ou seja, já o atualizei 30 vezes.</p>
+<p> </p>
+<p><strong>Seus recursos principais são:</strong></p>
+<p>• Menu de topo com o element topmenu <br />• Uso do framework Bootstrap<br />• Busca com paginação <br />• Senhas criptografadas com Bcrypt <br />• Controle de Acesso tipo ACL com administração web <br />• Dois Layouts: admin e default com cor de fundo que os diferencia<br />• Datas formatadas para pt-br (veja em Customers)<br />• Tradução do template do Bake para pt-br<br />• Customização do bootstrap_cli adicionando os campos login e logout na geração do Bake<br />• Validação via frontend no login com pattern e minlenght, para exigir senha forte, com pelo menos 8 dígitos, uma maiúscula, uma minúscula e um símbolo. Também com recomendações para validação semelhante pelo CakePHP no<br />UsersTable.php</p>
+<p>Geralmente quando vou criar um novo aplicativo eu uso o cake-acl-br, pois o considero muito útil.</p>
+<p>Vou esquecer a criação dos plugins do qual ele deriva e me focar apenas na criação do cake-acl-br – <a href="https://github.com/ribafs/cake-acl-br">https://github.com/ribafs/cake-acl-br</a>.</p>
+<p> </p>
+<p><strong>Um pouco de como implementei os recursos</strong></p>
+<p align="justify">- Framework bootstrap juntamente com o template do bake para implementar o Bootstrap no código, especialmente nas views. Estes recursos vieram do plugin <a href="https://github.com/elboletaire/twbs-cake-plugin">https://github.com/elboletaire/twbs-cake-plugin</a></p>
+<p>- Busca com Paginação. Este veio do Tayron:</p>
+<p><a href="http://www.tayron.com.br/blog/121/criando-um-formulario-de-pesquisa-com-cakephp3">http://www.tayron.com.br/blog/121/criando-um-formulario-de-pesquisa-com-cakephp3</a>. O código para implantar a busca encontra-se no plugin, mas comentado. Para habilitar basta descomentar no action e na view.</p>
+<p align="justify">- Depois resolvi traduzir as strings do template do bake para que ele gerasse o código traduzido. Esta tradução encontra-se basicamente nos arquivos da pasta src/Template/Bake</p>
+<p align="justify">- Também adicionei no docs/bootstrap_cli.php código para que ao gerar o código com bake já seja gerado o código para login e logout</p>
+<p align="left">- Criei um element (topmenu) com um menu de topo e já o incorporei ao plugin em src/Template/Element/topmenu.ctp</p>
+<p align="left">- Implementei a criptografia com Bcrypt e incorporei ao plugin em src/Template/Bake/Model/entity.ctp</p>
+<p align="justify">- Criei um componente para controlar o acesso do aplicativo, que faz o principal trabalho de ACL (ControlComponent) e inseri em</p>
+<p>src/Controller/Component/ControlComponent.php</p>
+<p>- Criei um segundo layout, o primeiro para usuários administradores e o outro para os dois restantes e adicionei em</p>
+<p>src/Template/Layout</p>
+<p>- Adicionei ao código do componente ControlComponent suporte para MySQL e PostgreSQL e já ofereci dois scripts .sql para cada um</p>
+<p>- Criei um tratamento de erro para o PDO em docs/pdo_error.ctp e deve ser copiado para o aplicativo/src/Tempalte/Error</p>
+<p>- Criei um pequeno estilo em CSS para ajustes no CSS do BootStrap, que está em docs/custom.css e deve ser copiado para webroot/css</p>
+<p align="justify">- A parte mais trabalhosa foi encontrar o código correto para lidar com o componente Auth no AppController. Neste controller tem muito código importante para o plugin.</p>
+<p align="justify">- Finalmente adicionei validação ao login. No frontend com HTML5 e no backend com validação no model, de forma que exija senhas com pelo menos um caratere maiúsculo, um minúsculo, um número, um símbolo e 8 dígitos.</p>
+<p> </p>
+<p><strong>Começando pra valer</strong></p>
+<p>Irei começar do plugin cake-control-br, esquecendo que iniciei com o twbs-cake-plugin.</p>
+<p>Fazendo o download do cake-acl-br:</p>
+<p><a href="https://github.com/ribafs/cake-acl-br">https://github.com/ribafs/cake-</a><a href="https://github.com/ribafs/cake-acl-br">ac</a><a href="https://github.com/ribafs/cake-acl-br">l-br</a></p>
+<p> </p>
+<p>Não vou mostrar detalhes do php na construção do componente, mas apenas detalhes do CakePHP na criação do plugin, que considero relevantes.</p>
+<p> </p>
+<p><strong>Detalhes</strong></p>
+<p><a href="https://github.com/ribafs/cake-acl-br">https://github.com/ribafs/cake-acl-br</a></p>
+<p> </p>
+<p><strong>Observação importante</strong></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><code class="western"><span style="font-family: Times New Roman, serif;">O pluigin cake-acl-br
+foi descontinuado e <a title="https://github.com/ribafs/admin-br" href="https://github.com/ribafs/admin-br" target="_blank" rel="noopener noreferrer">admin-br</a> continua de onde cake-acl-br parou.</span></code></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><code class="western"></code></p>
+<p style="margin-bottom: 0cm; line-height: 100%; page-break-before: always;"><code class="western"><span style="font-family: Times New Roman, serif;"><b>A
+estrutura de diretórios ficou assim:</b></span></code></p>
+<pre class="language-markup"><code>/config
+	bootstrap.php	
+/docs
+	 /dicas
+    AppController.php
+    bootstrap_cli.php
+    cake-acl-br-my.sql
+    cake-acl-br-pg.sql
+    custom.css
+    pdo_error.ctp	
+/src
+	/Controller
+		/Component
+			ControlComponent.php
+	/Template
+		/Bake
+			/Element
+				/Controller
+					 add.ctp
+                delete.ctp
+                edit.ctp
+                index.ctp
+                login.ctp
+                logout.ctp
+                view.ctp
+				form.ctp
+			/Model
+				entity.ctp
+			/Template
+		                add.ctp
+		                edit.ctp
+		                index.ctp
+		                login.ctp
+		                view.ctp                
+		/Element
+			topmenu.ctp
+		/Layout
+			admin.ctp
+			default.ctp
+/webroot
+	/css
+		bootstrap.min.css
+		bootstrap.min.css.map		
+	/fonts
+		glyphicons-halflings-regular.ttf
+	/js
+		bootstrap.min.js
+		jquery.min.js
+composer.json
+LICENSE
+README.md</code></pre>
+<p style="margin-bottom: 0cm; line-height: 100%;"><code class="western"><span style="font-family: Times New Roman, serif;"><b>Detalhando
+alguns arquivos</b></span></code></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><code class="western"><span style="font-family: Times New Roman, serif;"><b>config/bootstrap.php</b></span></code></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><code class="western"><span style="font-family: Times New Roman, serif;">Neste
+arquivo são chamados o BootstrapUI e o código que lida com a
+formatação das datas:</span></code></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><code class="western"></code></p>
+<pre class="language-php"><code>&lt;?php
+use Cake\Core\Plugin;
+
+Plugin::load('BootstrapUI');
+
+// Habilita o parseamento de datas localizadas
+date_default_timezone_set('America/Fortaleza');
+
+/**
+ * Locale Formats
+ */
+\Cake\I18n\Time::setToStringFormat([IntlDateFormatter::MEDIUM, IntlDateFormatter::SHORT]);
+\Cake\I18n\Time::setToStringFormat('dd/MM/YYYY HH:mm');
+
+\Cake\Database\Type::build('date')
+    -&gt;useLocaleParser()
+    -&gt;setLocaleFormat('dd/MM/yyyy');
+
+\Cake\Database\Type::build('datetime')
+    -&gt;useLocaleParser()
+    -&gt;setLocaleFormat('dd/MM/yyyy HH:mm');
+
+\Cake\Database\Type::build('timestamp')
+    -&gt;useLocaleParser()
+    -&gt;setLocaleFormat('dd/MM/yyyy HH:mm');
+
+\Cake\Database\Type::build('decimal')
+    -&gt;useLocaleParser();
+
+\Cake\Database\Type::build('float')
+    -&gt;useLocaleParser();
+
+ini_set('intl.default_locale', 'pt_BR');
+
+/**
+ * Default formats
+ */
+\Cake\I18n\Time::setToStringFormat('dd/MM/yyyy HH:mm:ss');
+\Cake\I18n\Date::setToStringFormat('dd/MM/yyyy');
+\Cake\I18n\FrozenTime::setToStringFormat('dd/MM/yyyy HH:mm:ss');
+\Cake\I18n\FrozenDate::setToStringFormat('dd/MM/yyyy');
+
+
+docs/AppController.php (resumido)
+
+&lt;?php
+namespace App\Controller;
+
+use Cake\Controller\Controller;
+use Cake\Event\Event;
+
+class AppController extends Controller
+{
+	// Controller default para usuários não admins em 
+	protected $noAdmins = 'Customers';
+		
+	public $helpers = [
+		'BootstrapUI.Form',
+		'BootstrapUI.Html',
+		'BootstrapUI.Flash',
+		'BootstrapUI.Paginator'
+	];	
+
+    public function initialize()
+    {
+        parent::initialize();
+
+        $this-&gt;loadComponent('RequestHandler');
+        $this-&gt;loadComponent('Flash');
+		$this-&gt;loadComponent('CakeAclBr.Control');
+        $this-&gt;loadComponent('Auth', [
+            'loginRedirect' =&gt; [
+                'controller' =&gt; 'Permissions',
+                'action' =&gt; 'index',
+				'base' =&gt; false
+            ],
+            'loginAction' =&gt; [
+                'plugin' =&gt; false,
+                'controller' =&gt; 'Users',
+                'action' =&gt; 'login'
+            ],                    
+            'logoutRedirect' =&gt; [
+                'controller' =&gt; 'Users',
+                'action' =&gt; 'login'
+            ],
+    		'unauthorizedRedirect' =&gt; [
+    		'controller' =&gt; 'Users',
+    		'action' =&gt; 'login',
+    		'prefix' =&gt; false
+    	   ],
+    	    'authError' =&gt; 'Sem permissão para acessar esta área!',
+              'flash' =&gt; [
+                  'element' =&gt; 'error'
+              ]
+        ]);		
+
+        $this-&gt;set('titulo', 'Título do Aplicativo');
+	    
+			$user = $this-&gt;request-&gt;getSession()-&gt;read('Auth.User');
+			$loguser = $user['username'];
+			$this-&gt;set('loguser',$loguser);
+		
+			$group=$user['group_id'];
+			$this-&gt;set('group',$group);
+		
+			$controller = $this-&gt;request-&gt;getParam('controller');
+			$this-&gt;set('controller',$controller);	   
+		
+			$action = $this-&gt;request-&gt;getParam('action');
+		// Via url: users/login?temp=default
+		// $layout=$this-&gt;request-&gt;query('temp');
+    	// $this-&gt;set('template',$layout);
+
+		if($loguser == 'user' || $loguser == 'manager'){
+			$this-&gt;viewBuilder()-&gt;setLayout('CakeAclBr.default');
+		}else{
+			$this-&gt;viewBuilder()-&gt;setLayout('CakeAclBr.admin');
+		}
+
+		// Descomente para acesso total aos actions abaixo
+//		$this-&gt;Auth-&gt;allow(['index','add','edit']);
+		
+		if(isset($group)){
+			// Popula a tabela permissions
+			// Após o primeiro login pode comentar as 3 linhas abaixo
+			$this-&gt;Control-&gt;populate(1);// Full permissions in all tables to users from Supers group			
+			$this-&gt;Control-&gt;populate(2);// Full only in groups, users and permissions tables to users from Admins group			
+			$this-&gt;Control-&gt;populate(3);// All in all tables that are not groups, users and permissions to all users from group Managers
+
+			// Enviar o controller atual para o element topmenu.ctp
+			$this-&gt;set('supers',$this-&gt;Control-&gt;tables($controller,$action,1));
+			$this-&gt;set('admins',$this-&gt;Control-&gt;tables($controller,$action,2));
+			$this-&gt;set('managers',$this-&gt;Control-&gt;tables($controller,$action,3));
+			$this-&gt;set('users',$this-&gt;Control-&gt;tables($controller,$action,4));
+		}
+
+		if($action != 'login' &amp;&amp; $action != 'logout'){
+			if(isset($group) &amp;&amp; $this-&gt;Control-&gt;access($controller,$action,$group)==false){	
+				$this-&gt;Flash-&gt;error(__('Como usuário "'.$user['username'].'", você não tem permissão de acesso a '.$controller.'/'.$action));
+				return $this-&gt;redirect($this-&gt;referer());
+			}
+		}
+    }
+
+	public function isAuthorized($user)
+	{
+		$requestedUserId=$this-&gt;request-&gt;pass[0];
+
+		if ($user['group_id']==1){
+		    return true;
+		} else if ($user['group_id']!=1 || $user['group_id']!=2) {
+			if (!($this-&gt;request-&gt;action == 'index')) {
+				if($userid==$user['id']) {
+				    return true;
+				}
+			}
+	    	return false;
+		}
+		return parent::isAuthorized($user);
+	}
+
+    public function beforeRender(Event $event)
+    {	    
+        if (!array_key_exists('_serialize', $this-&gt;viewVars) &amp;&amp; in_array($this-&gt;response-&gt;getType(), ['application/json', 'application/xml'])) {
+            $this-&gt;set('_serialize', true);
+        }
+    }
+}
+
+
+Um arquivo vital do plugin é o de configuração:
+
+composer.json
+
+{
+    "name": "ribafs/cake-acl-br",
+    "authors": [
+        {
+            "name": "Ribamar FS",
+            "email": "<span id="cloak1beef390a9d03a07ed7298f6ffd36420">Este endereço de email está sendo protegido de spambots. Você precisa do JavaScript ativado para vê-lo.</span><script type='text/javascript'>
+				document.getElementById('cloak1beef390a9d03a07ed7298f6ffd36420').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addy1beef390a9d03a07ed7298f6ffd36420 = 'r&#105;b&#97;fs' + '&#64;';
+				addy1beef390a9d03a07ed7298f6ffd36420 = addy1beef390a9d03a07ed7298f6ffd36420 + 'gm&#97;&#105;l' + '&#46;' + 'c&#111;m';
+				var addy_text1beef390a9d03a07ed7298f6ffd36420 = 'r&#105;b&#97;fs' + '&#64;' + 'gm&#97;&#105;l' + '&#46;' + 'c&#111;m';document.getElementById('cloak1beef390a9d03a07ed7298f6ffd36420').innerHTML += '<a ' + path + '\'' + prefix + ':' + addy1beef390a9d03a07ed7298f6ffd36420 + '\'>'+addy_text1beef390a9d03a07ed7298f6ffd36420+'<\/a>';
+		</script>",
+            "homepage": "http://ribafs.org",
+            "role": "Developer"
+        }
+    ],
+    "description": "Plugin para implementar controle de acesso com bons recursos: busca, bcrypt, template do bake em português, bootstrap",
+    "type": "cakephp-plugin",
+    "keywords": ["cakephp", "acl","bootstrap", "plugin", "busca", "admin", "painel", "bcrypt", "portugues", "controle de acesso"],
+    "license": "MIT",
+    "require": {
+        "php": "&gt;=7.0",
+        "cakephp/cakephp": "~3.0",
+        "friendsofcake/bootstrap-ui": "1.4.1"        
+    },
+    "autoload": {
+        "psr-4": {
+            "CakeAclBr\\": "src"
+        }
+    }
+}</code></pre>
+<p style="margin-bottom: 0cm; line-height: 100%;" align="justify"><code class="western"><span style="font-family: Times New Roman, serif;">Veja
+que este arquivo contém diversas informações importantes sobre o
+plugin: nome do plugin, autor, descrição, dependências, licença,
+autoload, etc.</span></code></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><code class="western"><span style="font-family: Times New Roman, serif;"><b>Outro
+arquivo importante é o README.md</b></span></code></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><code class="western"><span style="font-family: Times New Roman, serif;">Como
+o README.md deste plugin é bem grande, não o incluirei aqui, mas
+veja em:</span></code></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><code class="western"><a href="https://github.com/ribafs/cake-acl-br"><span style="font-family: Times New Roman, serif;">https://github.com/ribafs/cake-acl-br</span></a></code></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"> </p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><code class="western"><span style="font-family: Times New Roman, serif;">Após
+concluir empacotei tudo no formato zip.</span></code></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><code class="western"><span style="font-family: Times New Roman, serif;"><b>Envio
+para o GitHib e publicação no Packagist</b></span></code></p>
+<p style="margin-bottom: 0cm; line-height: 100%;" align="justify"><code class="western"><span style="font-family: Times New Roman, serif;">Como
+em casa uso internet tipo ADSL, não posso enviar o código para o
+GitHub usando Git e SSH na porta 22, que é a usada no GitHub. Então
+procurei uma alternativa: enviar para a minha hospedagem, onde tenho
+acesso SSH e de lá enviar via Git para o GitHub. Ou usar algum outro
+servidor free que tenha suporte ao Git. Minhas alternativas são o
+Google Cloud (<a href="https://cloud.google.com/">https://cloud.google.com</a>),
+mas neste somente usando o Google Chrome. Ou usando o CodeAnyWhere
+(<a href="https://codeanywhere.com/">https://codeanywhere.com/</a>).</span></code></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><code class="western"><span style="font-family: Times New Roman, serif;">Depois
+disso cadastrar o repositório no Packagist (<a href="https://packagist.org/">https://packagist.org/</a>).</span></code></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><code class="western"><span style="font-family: Times New Roman, serif;">Caso
+precise de ajuda para criar o repositório no GitHub e publicar no
+Packagist, para que possa instalar localmente via composer, então
+confira o tutorial:</span></code></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><code class="western"><a href="http://backup/portal/cakephp-3/tutoriais/projeto-no-github.html"><span style="font-family: Times New Roman, serif;">https://ribafs.org/portal/cakephp-3/tutoriais/projeto-no-github.html</span></a></code></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"> </p>
+<p style="margin-bottom: 0cm; line-height: 100%; page-break-before: always;"><span style="font-family: Arial, serif;"><span style="font-size: medium;"><code class="western"><span style="font-family: Times New Roman, serif;"><b>Remover
+plugin</b></span></code></span></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Arial, serif;"><span style="font-size: medium;"><code class="western"><span style="font-family: Times New Roman, serif;">composer
+remove ribafs/cake-acl-br</span></code></span></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"> </p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Arial, serif;"><span style="font-size: medium;"><code class="western"><span style="font-family: Times New Roman, serif;"><b>Instalar
+a versão em desenvolvimento</b></span></code></span></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Arial, serif;"><span style="font-size: medium;"><code class="western"><span style="font-family: Times New Roman, serif;">composer
+require ribafs/cake-acl-br:dev-</span></code><code class="western"><span style="font-family: Times New Roman, serif;">master</span></code></span></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"> </p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Arial, serif;"><span style="font-size: medium;"><code class="western"><span style="font-family: Times New Roman, serif;"><b>Instalar
+uma certa versão</b></span></code></span></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Arial, serif;"><span style="font-size: medium;"><code class="western"><span style="font-family: Times New Roman, serif;">composer
+require ribafs/cake-acl-br:1.30</span></code></span></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"> </p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Arial, serif;"><span style="font-size: medium;"><code class="western"><span style="font-family: Times New Roman, serif;"><b>Carga
+de Plugins </b></span></code><code class="western"><span style="font-family: Times New Roman, serif;"><b>(exemplo)</b></span></code></span></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><code class="western"><span style="font-family: Times New Roman, serif;">$this-&gt;addPlugin(</span></code><code class="western"><span style="font-family: Times New Roman, serif;">'autoload'
+=&gt; true, 'bootstrap' =&gt; false, 'routes' =&gt; true</span></code><code class="western"><span style="font-family: Times New Roman, serif;">);</span></code></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"> </p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><code class="western"><span style="font-family: Times New Roman, serif;"><b>Recomendações
+para o README de plugins</b></span></code></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><code class="western"><span style="font-family: Times New Roman, serif;"><a href="https://gist.github.com/josegonzalez/903066">https://gist.github.com/josegonzalez/903066</a>
+</span></code></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><code class="western"></code></p>
+<p style="margin-bottom: 0cm; line-height: 100%; page-break-before: always;"><code class="western"></code></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><code class="western"></code></p> 	</div>
+
+	
+	
+				
+	
+	
+	
+</article>
+
+</body>
+</html>

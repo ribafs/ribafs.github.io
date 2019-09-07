@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br" dir="ltr">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <base href="" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Ribamar FS" />
+	<meta name="robots" content="noindex, nofollow" />
+	<meta name="description" content="Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros." />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>Laravel - Auth - RibaFS Portal</title>
+	<link href="http://ribafs.org/portal/frameworks/laravel-5/dicas/laravel-auth.html?tmpl=component&amp;print=1&amp;layout=default" rel="canonical" />
+	<link href="../../../templates/shaper_helix3/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../../../favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<script src="../../../media/jui/js/jquery.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery-noconflict.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery-migrate.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="http://backup/portal/media/system/js/caption.js?d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script type="text/javascript">
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+	</script>
+	<meta property="og:url" content="http://backup/portal/frameworks/laravel-5/dicas/laravel-auth.html" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Laravel - Auth" />
+	<meta property="og:description" content="Dicas de Autenticação no Laravel 5 Crie o aplicativo Crie o banco de dados Configure o banco Rode o scaffold do Laravel executando: php artisan make:auth p..." />
+
+   	<link rel="stylesheet" href="../../../media/jui/css/bootstrap.min.css" type="text/css" />
+	<link rel="stylesheet" href="../../../templates/shaper_helix3/css/frontend-edit.css" type="text/css" />
+    <link rel="stylesheet" href="../../../templates/shaper_helix3/css/template.css" type="text/css" />
+</head>
+<body class="contentpane">
+	<div id="system-message-container">
+	</div>
+
+	
+
+<article class="item item-page" itemscope itemtype="http://schema.org/Article">
+	<meta itemprop="inLanguage" content="pt-BR" />
+	
+	
+
+	<div class="entry-header">
+		<span class="post-format"><i class="fa fa-thumb-tack"></i></span>
+		
+					<h2 itemprop="name">
+									Laravel - Auth							</h2>
+												</div>
+
+						<div id="pop-print" class="btn hidden-print">
+				<a href="laravel-auth.html#" onclick="window.print();return false;">			<span class="icon-print" aria-hidden="true"></span>
+		Imprimir	</a>			</div>
+				
+	
+	
+				
+	
+			<div itemprop="articleBody">
+		<p><strong>Dicas de Autenticação no Laravel 5</strong></p>
+
+
+<p><br />Crie o aplicativo<br />Crie o banco de dados<br />Configure o banco<br /><br />Rode o scaffold do Laravel executando:<br />php artisan make:auth<br />php artisan migrate</p>
+
+
+<p>Ele traz forms de login, registro, recuperação de senha, com views, routes e o controller Home<br /><br />php artisan serve<br /><br />Acesse<br />http://localhost:8000<br /><br />No controller Users adicionar para maior controle<br />public function __construct(){<br />    $this-&gt;middleware(['auth']);<br />}<br /><br />Auth::routes();<br /><br />Route::group(['middleware' =&gt; 'auth'], function () {<br />    Route::resource('/', 'HomeController');<br />    Route::resource('home', 'HomeController');<br />    Route::resource('noticias', 'NoticiasController');<br />});<br /><br />Route::resource('clientes', 'ClientesController',['middleware' =&gt; 'auth']);<br /><br />Para que ao abrir seja solicitado o login, mudar as rotas:<br /><br />Auth::routes();<br /><br />Route::get('/', 'HomeController@index')-&gt;name('home');<br /><br /><br /><strong>Criar rota tipo post</strong><br /><br />Route::post('clientes/salvar', 'ClientesController@salvar');<br /><br />Mensagem num método salvar, após cadastrar<br /><br />\Session::flash('mensagem_sucesso', 'Cliente cadastrado com sucesso');<br /><br />Na view salvar<br /><br />&lt;div class="panel-body"&gt;<br />    @if(Session::has('mensagem_sucesso'))<br />        &lt;div class="alert alert-success"&gt;{{ Session::get('mensagem_sucesso') }}&lt;/div&gt;<br />    @endif<br />...<br /><br />Vide:<br /><a href="https://www.youtube.com/watch?v=9qkWJ2ABNMc">https://www.youtube.com/watch?v=9qkWJ2ABNMc</a> <br /><a href="https://www.youtube.com/watch?v=MZA-P_D1xIk">https://www.youtube.com/watch?v=MZA-P_D1xIk</a></p>
+
+
+<p> </p> 	</div>
+
+	
+	
+				
+	
+	
+	
+</article>
+
+</body>
+</html>

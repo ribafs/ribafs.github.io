@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br" dir="ltr">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <base href="" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Ribamar FS" />
+	<meta name="robots" content="noindex, nofollow" />
+	<meta name="description" content="Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros." />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>8.2 - O básico sobre o ORM - RibaFS Portal</title>
+	<link href="http://ribafs.org/portal/curriculo/livros/cakephp/8-2-o-basico-sobre-o-orm.html?tmpl=component&amp;print=1&amp;layout=default" rel="canonical" />
+	<link href="../../../templates/shaper_helix3/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../../../favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="http://backup/portal/media/plg_content_prismsyntaxhighlighter/css/prism-okaidia.css" rel="stylesheet" type="text/css" />
+	<link href="http://backup/portal/media/plg_content_prismsyntaxhighlighter/css/prism-linenumbers.css" rel="stylesheet" type="text/css" />
+	<script src="http://backup/portal/media/plg_content_prismsyntaxhighlighter/js/prism-tinymce.js" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery-noconflict.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery-migrate.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="http://backup/portal/media/system/js/caption.js?d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script type="text/javascript">
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+	</script>
+	<meta property="og:url" content="http://backup/portal/curriculo/livros/cakephp/8-2-o-basico-sobre-o-orm.html" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="8.2 - O básico sobre o ORM" />
+	<meta property="og:description" content="8.2 - O básico sobre o ORM Fazer as coisas certas é mais importante do que fazer bem feitas as coisas. Peter Drucker Criar um novo aplicativo chamado cake_..." />
+
+   	<link rel="stylesheet" href="../../../media/jui/css/bootstrap.min.css" type="text/css" />
+	<link rel="stylesheet" href="../../../templates/shaper_helix3/css/frontend-edit.css" type="text/css" />
+    <link rel="stylesheet" href="../../../templates/shaper_helix3/css/template.css" type="text/css" />
+</head>
+<body class="contentpane">
+	<div id="system-message-container">
+	</div>
+
+	
+
+<article class="item item-page" itemscope itemtype="http://schema.org/Article">
+	<meta itemprop="inLanguage" content="pt-BR" />
+	
+	
+
+	<div class="entry-header">
+		<span class="post-format"><i class="fa fa-thumb-tack"></i></span>
+		
+					<h2 itemprop="name">
+									8.2 - O básico sobre o ORM							</h2>
+												</div>
+
+						<div id="pop-print" class="btn hidden-print">
+				<a href="8-2-o-basico-sobre-o-orm.html#" onclick="window.print();return false;">			<span class="icon-print" aria-hidden="true"></span>
+		Imprimir	</a>			</div>
+				
+	
+	
+				
+	
+			<div itemprop="articleBody">
+		<h3>8.2 - O básico sobre o ORM</h3>
+<p align="left"> </p>
+<p align="right"><em><strong>Fazer as coisas certas é mais importante do que fazer bem feitas as coisas.</strong></em></p>
+<p align="right">Peter Drucker</p>
+<p align="left">Criar um novo aplicativo chamado cake_orm e um banco também cake_orm, com duas tabelas, relacionadas de acordo com a convenção do CakePHP: articles e comments para nossos testes, com o script abaixo:</p>
+<pre class="language-markup"><code>-- Primeiro, criamos a tabela articles
+CREATE TABLE articles (
+    id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(50),
+    body TEXT,
+    created DATETIME DEFAULT NULL,
+    modified DATETIME DEFAULT NULL
+);
+
+INSERT INTO `articles` (`id`, `title`, `body`, `created`, `modified`) VALUES
+(1,	'Título1',	'Corpo do primeiro artigo',	'2019-06-01 10:07:39',	NULL),
+(2,	'Título2',	'Corpo do segundo artigo.',	'2019-06-01 10:07:39',	NULL),
+(3,	'Título3',	'Corpo do terceiro artigo.',	'2019-06-01 10:07:39',	NULL),
+(4,	'Título4',	'Corpo do quarto artigo',	'2019-06-02 00:00:00',	NULL),
+(5,	'Título4',	'Corpo do quarto artigo',	'2019-06-02 00:00:00',	NULL);
+
+CREATE TABLE comments (
+    id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    comment VARCHAR(50),
+    created DATETIME DEFAULT NULL,
+    modified DATETIME DEFAULT NULL,
+    article_id int not null    
+);
+
+INSERT INTO comments (comment,created, article_id) VALUES ('Primeiro comantário', NOW(), 1),
+ ('Segundo comantário', NOW(), 2),
+ ('Terceiro comantário', NOW(), 3);</code></pre>
+<p align="left">Configurar o aplicativo para este banco, setar o routes para Articles/index e</p>
+<p align="left"> </p>
+<p align="left"><strong>Gerar os CRUDs com o bake:</strong></p>
+<p align="left">bin/cake bake all articles</p>
+<p align="left">bin/cake bake all comments</p>
+<p align="left"> </p>
+<p align="left"><strong>Exemplo de uso do find()</strong></p>
+<p align="left">Num método, pode ser o initialize() do model ArticlesTable.php</p>
+<p align="left">list - retorna pares com chave e valor</p>
+<p align="left">$rets = $this-&gt;find('list', ['order'=&gt;'id ASC']);</p>
+<p align="left">foreach($rets as $id=&gt;$title){</p>
+<p align="left">echo "$id : $title&lt;br&gt;";</p>
+<p align="left">}</p>
+<p align="left">exit;</p>
+<p align="left">Num método, pode ser o index() do controller ArticlesController.php</p>
+<p align="left">$rets = $this-&gt;Articles-&gt;find('list', ['order'=&gt;'id ASC']);</p>
+<p align="left">foreach($rets as $id=&gt;$title){</p>
+<p align="left">echo "$id : $title&lt;br&gt;";</p>
+<p align="left">}</p>
+<p align="left">exit;</p>
+<p align="left">Obs.: observe que a diferença entre os usos no model ou no controller é que no controller precisamos usar Articles e no model não.</p>
+<p align="left"> </p>
+<p align="left"><strong>Recebendo a conexão default:</strong></p>
+<p align="left">Abra o src/Model/Table/ArticlesTable.php</p>
+<p align="left">Adicione ao início, abaixo dos existentes:</p>
+<p align="left">use Cake\Datasource\ConnectionManager;</p>
+<p align="left"> </p>
+<p style="margin-bottom: 0cm; font-style: normal; font-weight: normal; line-height: 100%;" align="left"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;">Crie uma nova função:</span></span></p>
+<pre class="language-php"><code>	public function artigos(){
+		$conn = ConnectionManager::get('default');
+		$artigos = $conn-&gt;execute("select * from articles")-&gt;fetchAll();
+		return $artigos;
+	}
+
+Execute no initialize, ao final():
+
+//debug($this-&gt;artigos()[0]);exit;
+//debug($this-&gt;artigos()[0][2]);exit;
+//debug($this-&gt;artigos()[0][2]);exit;
+//debug($this-&gt;artigos()[2][2]);exit;
+
+$arts = $this-&gt;artigos();
+
+
+foreach($arts as $chave=&gt;$valor){
+    print 'Artigo';
+    foreach($valor as $val){
+        print $val.'&lt;br&gt;';
+    }
+}
+exit;</code></pre>
+<p style="margin-bottom: 0cm; font-style: normal; font-weight: normal; line-height: 100%;" align="left"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;">Chame pelo navegador para ver o resultado</span></span></p>
+<p style="margin-bottom: 0cm; font-style: normal; font-weight: normal; line-height: 100%;" align="left"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;">http://localhost/cake_orm</span></span></p>
+<p style="margin-bottom: 0cm; font-style: normal; font-weight: normal; line-height: 100%;" align="left"> </p>
+<p style="margin-bottom: 0cm; font-style: normal; line-height: 100%;" align="left"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><b>Executar consultas SQL</b></span></span></p>
+<p style="margin-bottom: 0cm; font-style: normal; font-weight: normal; line-height: 100%;" align="left"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;">Sempre usar no início, para dar suporte</span></span></p>
+<p style="margin-bottom: 0cm; font-style: normal; font-weight: normal; line-height: 100%;" align="left"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;">use Cake\Datasource\ConnectionManager;</span></span></p>
+<p style="margin-bottom: 0cm; font-style: normal; font-weight: normal; line-height: 100%;" align="left"> </p>
+<p style="margin-bottom: 0cm; font-style: normal; font-weight: normal; line-height: 100%;" align="left"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;">Execute o código abaixo no initialize() da ArticlesTable</span></span></p>
+<pre class="language-php"><code>$conn = ConnectionManager::get('default');
+$results = $conn
+    -&gt;execute('SELECT * FROM articles WHERE id = :id', ['id' =&gt; 1])
+    -&gt;fetchAll('assoc');
+//debug($results);exit;
+foreach($results as $chave=&gt;$valor){
+    foreach($valor as $val){
+        print $val.'&lt;br&gt;';
+    }
+}
+exit;</code></pre>
+<p style="margin-bottom: 0cm; font-style: normal; font-weight: normal; line-height: 100%;" align="left"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;">Chame pelo navegador para ver o resultado</span></span></p>
+<p style="margin-bottom: 0cm; font-style: normal; line-height: 100%;" align="left"> </p>
+<p style="margin-bottom: 0cm; font-style: normal; line-height: 100%;" align="left"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><b>Mais um exemplo:</b></span></span></p>
+<p style="margin-bottom: 0cm; font-style: normal; font-weight: normal; line-height: 100%;" align="left"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;">Adicione ao final do initialize() do ArticlesTable</span></span></p>
+<p style="margin-bottom: 0cm; font-style: normal; font-weight: normal; line-height: 100%;" align="left"> </p>
+<pre class="language-php"><code>$conn = ConnectionManager::get('default');
+$results = $conn
+    -&gt;execute(
+        'SELECT * FROM articles WHERE title = :title', ['title'=&gt;'Título1']
+    )
+    -&gt;fetchAll('assoc');
+debug($results);exit;
+foreach($results as $chave=&gt;$valor){
+    foreach($valor as $val){
+        print $val.'&lt;br&gt;';
+    }
+}
+exit;</code></pre>
+<p style="margin-bottom: 0cm; font-style: normal; font-weight: normal; line-height: 100%;" align="left"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;">Sempre Chame pelo navegador para ver o resultado</span></span></p>
+<p style="margin-bottom: 0cm; font-style: normal; line-height: 100%;" align="left"> </p>
+<p style="margin-bottom: 0cm; font-style: normal; line-height: 100%;" align="left"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><b>Usando query builder</b></span></span></p>
+<p style="margin-bottom: 0cm; font-style: normal; font-weight: normal; line-height: 100%;" align="left"> </p>
+<p style="margin-bottom: 0cm; font-style: normal; font-weight: normal; line-height: 100%;" align="left"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;">Adicione ao final do initialize()</span></span></p>
+<pre class="language-php"><code>$conn = ConnectionManager::get('default');
+$results = $conn
+    -&gt;newQuery()
+    -&gt;select('*')
+    -&gt;from('articles')
+    -&gt;where(['title &gt;' =&gt; 'Título1'])
+    -&gt;order(['title' =&gt; 'DESC'])
+    -&gt;execute()
+    -&gt;fetchAll('assoc');
+
+//debug($results);exit;
+foreach($results as $chave=&gt;$valor){
+    foreach($valor as $val){
+        print $val.'&lt;br&gt;';
+    }
+}
+exit;</code></pre>
+<p align="left">Chame pelo navegador</p>
+<p align="left"> </p>
+<p align="left"><strong>Insert</strong></p>
+<p align="left">$connection = ConnectionManager::get('default');</p>
+<p align="left">$connection-&gt;insert('articles', [</p>
+<p align="left">'title' =&gt; 'Título4',</p>
+<p align="left">'body' =&gt; 'Corpo do quarto artigo',</p>
+<p align="left">'created' =&gt; '2019-06-02',</p>
+<p align="left">], ['created' =&gt; 'datetime']);</p>
+<p align="left"> </p>
+<p align="left"><strong>Confira no banco de dados.</strong></p>
+<p align="left"> </p>
+<p align="left"><strong>Update</strong></p>
+<p align="left">$connection = ConnectionManager::get('default');</p>
+<p align="left">$connection-&gt;update('articles', ['title' =&gt; 'Título6'], ['id' =&gt; 6]);</p>
+<p align="left">Confira no banco</p>
+<p align="left"> </p>
+<p align="left"><strong>Delete</strong></p>
+<p align="left">use Cake\Datasource\ConnectionManager;</p>
+<p align="left">$connection = ConnectionManager::get('default');</p>
+<p align="left">$connection-&gt;delete('articles', ['id' =&gt; 5]);</p>
+<p align="left">Confira no banco</p>
+<p align="left"> </p>
+<p align="left"><strong>Transações</strong></p>
+<p align="left">$conn-&gt;begin();</p>
+<p align="left">$conn-&gt;update('articles', ['title' =&gt; 'Título6'], ['id' =&gt; 1]);</p>
+<p align="left">$conn-&gt;update('articles', ['title' =&gt; 'Título7'], ['id' =&gt; 1]);</p>
+<p align="left">//...</p>
+<p align="left">$conn-&gt;commit();</p>
+<p align="left">Confira no banco</p>
+<p align="left"> </p>
+<p align="left"><strong>Outro</strong></p>
+<p align="left">$conn = ConnectionManager::get('default');</p>
+<p align="left">$conn-&gt;transactional(function ($conn) {</p>
+<p align="left">$conn-&gt;execute('UPDATE articles SET created = "2019-06-01 10:07:39" WHERE id = 6');</p>
+<p align="left">$conn-&gt;execute('UPDATE articles SET created = "2019-06-01 10:07:39" WHERE id = 4');</p>
+<p align="left">});</p>
+<p align="left">exit;</p>
+<p align="left">Confira no banco</p>
+<p align="left"> </p>
+<p align="left"><strong>Executando consultas</strong></p>
+<p align="left">Cake\Database\Connection::query($sql)</p>
+<p align="left">Cake\Database\Connection::execute($sql, $params, $types)</p>
+<p align="left"> </p>
+<p align="left">$conn = ConnectionManager::get('default');</p>
+<p align="left">$stmt = $conn-&gt;query('UPDATE articles SET created = "2019-06-05" WHERE id = 6');</p>
+<p align="left">exit;</p>
+<p align="left"> </p>
+<p align="left">$conn = ConnectionManager::get('default');</p>
+<p align="left">$stmt = $conn-&gt;execute(</p>
+<p align="left">'UPDATE articles SET created = ? WHERE id = ?', ['2019-06-05', 2]</p>
+<p align="left">);</p>
+<p align="left">Confira no banco</p>
+<p align="left"> </p>
+<p align="left"><strong>Muito mais em:</strong></p>
+<p align="left"><a href="https://book.cakephp.org/3.0/pt/orm/database-basics.html">https://book.cakephp.org/3.0/pt/orm/database-basics.html</a></p> 	</div>
+
+	
+	
+				
+	
+	
+	
+</article>
+
+</body>
+</html>

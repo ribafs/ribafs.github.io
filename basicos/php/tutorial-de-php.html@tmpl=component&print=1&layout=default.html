@@ -1,0 +1,1257 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br" dir="ltr">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <base href="" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Ribamar FS" />
+	<meta name="robots" content="noindex, nofollow" />
+	<meta name="description" content="Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros." />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>Tutorial de PHP - RibaFS Portal</title>
+	<link href="http://ribafs.org/portal/basicos/php/tutorial-de-php.html?tmpl=component&amp;print=1&amp;layout=default" rel="canonical" />
+	<link href="../../templates/shaper_helix3/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../../favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="http://backup/portal/media/plg_content_prismsyntaxhighlighter/css/prism-okaidia.css" rel="stylesheet" type="text/css" />
+	<link href="http://backup/portal/media/plg_content_prismsyntaxhighlighter/css/prism-linenumbers.css" rel="stylesheet" type="text/css" />
+	<script src="http://backup/portal/media/plg_content_prismsyntaxhighlighter/js/prism-tinymce.js" type="text/javascript"></script>
+	<script src="../../media/jui/js/jquery.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../media/jui/js/jquery-noconflict.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../media/jui/js/jquery-migrate.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="http://backup/portal/media/system/js/caption.js?d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script type="text/javascript">
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+	</script>
+	<meta property="og:url" content="http://backup/portal/basicos/php/tutorial-de-php.html" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Tutorial de PHP" />
+	<meta property="og:description" content="TUTORIAL DE PHP ESTRUTURADO Este tutorial teve como principal fonte de informações o manual oficial do PHP. 1 - INTRODUÇÃO O Que é PHP? É uma linguagem de..." />
+
+   	<link rel="stylesheet" href="../../media/jui/css/bootstrap.min.css" type="text/css" />
+	<link rel="stylesheet" href="../../templates/shaper_helix3/css/frontend-edit.css" type="text/css" />
+    <link rel="stylesheet" href="../../templates/shaper_helix3/css/template.css" type="text/css" />
+</head>
+<body class="contentpane">
+	<div id="system-message-container">
+	</div>
+
+	
+
+<article class="item item-page" itemscope itemtype="http://schema.org/Article">
+	<meta itemprop="inLanguage" content="pt-BR" />
+	
+	
+
+	<div class="entry-header">
+		<span class="post-format"><i class="fa fa-thumb-tack"></i></span>
+		
+					<h2 itemprop="name">
+									Tutorial de PHP							</h2>
+												</div>
+
+						<div id="pop-print" class="btn hidden-print">
+				<a href="tutorial-de-php.html#" onclick="window.print();return false;">			<span class="icon-print" aria-hidden="true"></span>
+		Imprimir	</a>			</div>
+				
+	
+	
+				
+	
+			<div itemprop="articleBody">
+		<p style="text-align: justify;"><strong>TUTORIAL DE PHP ESTRUTURADO</strong></p>
+<p style="text-align: justify;">Este tutorial teve como principal fonte de informações o manual oficial do PHP.</p>
+<p style="text-align: justify;"><strong>1 - INTRODUÇÃO</strong></p>
+<p style="text-align: justify;">O Que é PHP?</p>
+<p style="text-align: justify;">É uma linguagem de script, Open Source, de uso geral, no lado do servidor, embutível no HTML e especialmente voltada para o desenvolvimento Web. Originalmente chamou-se PHP (Personal Home Page) mas depois teve seu nome alterado pela comunidade para PHP: Hypertext Processor, um acrônimo recursivo.</p>
+<p style="text-align: justify;">Um pequeno script em PHP</p>
+<p style="text-align: justify;">&lt;?php<br /> echo "Script em PHP!";<br /> ?&gt;</p>
+<p style="text-align: justify;">Em março/2006 ele já está presente em mais de 20 milhões de domínios ao redor do planeta (<a href="http://www.php.net/usage.php">http://www.php.net/usage.php</a>).</p>
+<p style="text-align: justify;"><br /><strong> Estatísticas sobre o PHP:</strong></p>
+<p style="text-align: justify;"><a href="http://www.nexen.net/chiffres_cles/phpversion/php_statistics_for_april_2006.php">http://www.nexen.net/chiffres_cles/phpversion/php_statistics_for_april_2006.php</a></p>
+<p style="text-align: justify;"><strong>História do PHP</strong><br /> - Criado em 1995 por Rasmus Lerdorf, na forma de scripts Perl para coletar estatísticas online de seu currículo. Com um interpretador em C e comunicação com SGBDs.</p>
+<p style="text-align: justify;">- Versão 2 aparece em novembro de 1997, quando recebe seu nome inicial e é enriquecido com um interpretador de formulários (FI) - PHP/FI. Teve seu código fonte disponibilizado para a comunidade. Contava com 50.000 domínios que o utilizavam (em torno de 1% dos existentes na época).</p>
+<p style="text-align: justify;">- Versão 3 sai em seguida, logo em julho de 1998. Similar ao PHP atual, esta versão foi totalmente reescrita por Andi Gutmans e Zeev Suraski, programadores israelenses. Inicia o suporte à orientação a objetos e a sua extensibilidade, que atraiu muitos programadores. Rebatizado de PHP: Hypertext Processor. Já estava presente em 10% dos servidores web da Internet.</p>
+<p style="text-align: justify;">- Versão 4 sai em maio de 2000. Melhora de performance, suporte a muitos servidores web, a session, entre outros. Já está presente em 20% dos domínios da Internet.</p>
+<p style="text-align: justify;">- Versão 5 sai em julho de 2004. Seu foco principal é a orientação a objetos, que corrije deficiências e traz novos e amplos recursos para a orientação a objetos.</p>
+<p style="text-align: justify;"><strong>Delimitadores do PHP</strong><br /> Para que o interpretador reconheça quando tem que interpretar o script em PHP e quando não, usa-se delimitadores para que quando os encontre ele interprete corretamente. Quando ele encontra o delimitador &lt;?php ele começa a processar como PHP e quando encontra ?&gt; ele pára de processar e tudo o mais envia para o browser como está. Existem outros tipos de delimitadores do PHP mas estes &lt;?php ... ?&gt; são os recomendados, por serem os mais abrangentes e terem suporte inclusive a XML.</p>
+<p style="text-align: justify;"><strong>Forças do PHP</strong><br /> - Sua simplicitade é muito importante para o programador que se inicia no PHP.</p>
+<p style="text-align: justify;">- Seus recursos atendem ao programador experiente.</p>
+<p style="text-align: justify;">- Sua documentação rica em conteúdo e exemplos facilita a solução de problemas, além da busca online.</p>
+<p style="text-align: justify;">- O suporte de maneira simples à maioria dos SGBDs do mercado atende às necessidades de sites dinâmicos com acesso a bancos de dados.</p>
+<p style="text-align: justify;"><strong>O Que é Possível Realizar em PHP?</strong><br /> - Em sendo uma linguagem de uso geral, podemos realizar praticamente qualquer atividade realizada com outra linguagem. Ele roda no lado servidor, como aplicação Web e também roda no lado cliente, com o PHP-GTK.</p>
+<p style="text-align: justify;">- Existem edições para os principais sistemas operacionais (Linux, BSDs, Windows, Mac OS X, etc).</p>
+<p style="text-align: justify;">- Suportado pela maioria dos servidores Web, especialmente pelo Apache.</p>
+<p style="text-align: justify;">- Bom suporte à orientação a objetos, em especial com a chegada da versão 5.</p>
+<p style="text-align: justify;">- Comunicação com Java.</p>
+<p style="text-align: justify;">- Suporte aos principais SGBDs do mercado (MySQL, PostgreSQL, Oracle, SQL Server, etc), atualmente são mais de vinte os suportados.</p>
+<p style="text-align: justify;">- Suporte a LDAP, IMAP, SNMP, NNTP, POP3, HTTP, COM (em Windows somente), a IRC, compressão (gzip, bz2, rar), PDF, GD, Flash, XML, etc..</p>
+<p style="text-align: justify;"> </p>
+<p style="text-align: justify;"><strong>2 - TUTORIAL SIMPLES</strong></p>
+<p style="text-align: justify;">Para continuar você deve ter um servidor web instalado e com suporte a PHP e, caso queira usar bancos de dados, instale um SGBD.</p>
+<p style="text-align: justify;">Os arquivos em PHP somente funcionam corretamente no navegador, se estivem no diretório reconhecido pelo servidor web, que é o DocumentRoot. Considerando que o PHP e Apache tenham sido instalados com o Xampp e que o diretório web seja o default, este fica em:</p>
+<p style="text-align: justify;">C:\Arquivos de Programas\Xampp\htdocs</p>
+<p style="text-align: justify;">Além disso qualquer script que contenha algo em PHP deve ter a extensão .php para que seja corretamente processado pelo Apache.</p>
+<p style="text-align: justify;">Criar um arquivo chamado olamundo.php na pasta C:\Arquivos de Programas\Xampp\htdocs, com o conteúdo:</p>
+<p style="text-align: justify;">&lt;?php</p>
+<p style="text-align: justify;">echo "Olá PHP!";</p>
+<p style="text-align: justify;">?&gt;</p>
+<p style="text-align: justify;">Startar o Apache e abrir no browser assim:</p>
+<p style="text-align: justify;">http://127.0.0.1/olamundo.php</p>
+<p style="text-align: justify;">Visualizar resultado de script PHP no Browser</p>
+<p style="text-align: justify;">Após ter executado o olamundo.php no Browser solicite a visualização do código fonte da página exibida.</p>
+<p style="text-align: justify;">Veja que nada chega de PHP. O PHP é processado no servidor e envia apenas o resultado em HTML para o browser.</p>
+<p style="text-align: justify;">Alerta sobre Editores e Processadores de Texto com PHP <br /> Para criar scripts PHP evite o uso de processadores de texto e de editores como o Bloco de Notas, pois deixam sujeira no código e dificultam o salvamento do arquivo.</p>
+<p style="text-align: justify;">Preferentemente use uma IDE especializada em PHP, que inclusive tem outros recursos úteis, a exemplo do PHPEclipse ou um editor de texto como o freeware Win32pad.</p>
+<p style="text-align: justify;"><br /><strong> Informações sobre o PHP</strong> <br /> Para obter diversas informações úteis sobre o PHP instalado no seu servidor, execute um script com a função:<br /> <br /> &lt;?php<br /> phpinfo();<br /> ?&gt;</p>
+<p style="text-align: justify;"><strong>Checar navegador em uso</strong></p>
+<p style="text-align: justify;">if (strstr($_SERVER["HTTP_USER_AGENT"], "MSIE")) {<br /> echo "Seu navegador é o Internet Explorer!";<br /> } else {<br /> echo "Seu navegador não é o IE!";<br /> }</p>
+<p style="text-align: justify;">strstr - procura substrings.</p>
+<p style="text-align: justify;"><strong>Teste com echo e print:</strong></p>
+<p style="text-align: justify;">&lt;?php<br /> // Teste de echo e print<br /> //print "primeiro, ", "segundo"; // Gera erro de parser<br /> echo "primeiro, ", "segundo, ", "terceiro"; //Funciona<br /> // Ou seja, print pode trabalhar apenas com uma string de cada vez e echo com várias<br /> ?&gt;</p>
+<p style="text-align: justify;"><strong>print retorna valor enquanto que echo não retorna.</strong></p>
+<p style="text-align: justify;"><br /> &lt;?php<br /> $print = print "";<br /> echo "Retorno do print: " . $print;<br /> ?&gt;</p>
+<p style="text-align: justify;"><strong>Agora teste esse:</strong></p>
+<p style="text-align: justify;">&lt;?php<br /> $echo = echo "";<br /> echo "Retorno do echo: " . $echo;<br /> ?&gt;</p>
+<p style="text-align: justify;">Irá receber um erro fatal (do parser).</p>
+<p style="text-align: justify;"> </p>
+<p style="text-align: justify;"><strong>3 - CONFIGURAÇÕES</strong></p>
+<p style="text-align: justify;">php.ini</p>
+<p style="text-align: justify;">register_globals = off (por questões de segurança)<br /> No Xampp o php.ini traz register_globals ativo por default.</p>
+<p style="text-align: justify;">GD, pgsql, mysql e outras extensões que queira usar deverá descomentar no php.ini, seção Extensions.</p>
+<p style="text-align: justify;">httpd.conf<br /> Para poder alterar o diretório web default deverá mudar dois parâmetros no arquivo httpd.conf do Apache:</p>
+<p style="text-align: justify;">DocumentRoot “/opt/lampp/htdocs”<br /> &lt;Directory "/opt/lampp/htdocs"&gt;</p>
+<p style="text-align: justify;">Os diretórios acima são para a edição for Linux do Xampp. Para o Windows observe que o Apache utiliza, não barras, que são utilizadas neste SO, mas sim contra-barras e as vezes contra-barras duplas.</p>
+<p style="text-align: justify;">No caso queremos mudar o diretório default para /home/www, então alteramos o httpd.conf para que fique assim:</p>
+<p style="text-align: justify;">DocumentRoot “/home/www”<br /> &lt;Directory "/home/www"&gt;</p>
+<p style="text-align: justify;">No Windows fica assim:<br /> DocumentRoot "c:/Arquivos de Programas/Xampp/htdocs"<br /> &lt;Directory "&lt;c:/Arquivos de Programas/Xampp/htdocs"&gt;</p>
+<p style="text-align: justify;">Que devem ficar assim:<br /> DocumentRoot "c:/1www"<br /> &lt;Directory "&lt;c:/1www"&gt;</p>
+<p style="text-align: justify;">Configuração das extensões suportadas. Altere a linha: <br /> DirectoryIndex index.html index.html.var index.php index.php3 index.php4</p>
+<p style="text-align: justify;">Veja que acima configurou-se para perceber inclusive arquivos com as extensões .php3 e .php4.<br /> Caso não fossem incluídas, arquivos com extensão .php3 e .php4 não poderiam ser abertos neste servidor.</p>
+<p style="text-align: justify;"> </p>
+<p style="text-align: justify;"><strong>4 - REFERÊNCIA DA LINGUAGEM</strong><br /> Separador de Instruções<br /> O ponto e vírgula ; é o separador de instruções em PHP (como em Perl e em C).<br /> Sempre que uma instrução terminar devemos digitar um ponto e vírgula (echo "ola"; ).</p>
+<p style="text-align: justify;"><strong>Comentários</strong><br /> Em PHP podemos usar 3 tipos de comentários (/* ... */, // e #) mas devemos utilizar somente os dois primeiros e o primeiro é o mais eficiente, que é o /* ... */, que veio do C, já que # está em processo de obsolescência. Ou seja, devemos usar // ou /* ... */, de preferência este último.</p>
+<p style="text-align: justify;"> </p>
+<p style="text-align: justify;"><strong>5 - TIPOS DE DADOS </strong><br /> O PHP suporta os oito tipos primitivos:</p>
+<p style="text-align: justify;">- boolean, integer, float e string (básicos)<br /> - array e object (compostos)<br /> - resource e NULL (especiais)</p>
+<p style="text-align: justify;">float é sinônimo de double em PHP.</p>
+<p style="text-align: justify;"><strong>Tipo de Variável </strong><br /> O tipo de uma variável em PHP não é controlado pelo programador, depende do valor da variável e é avaliado em tempo de execução. Não é permitido ao programador declarar o tipo de variáveis.</p>
+<p style="text-align: justify;">Funções que Retornal o Tipo</p>
+<p style="text-align: justify;">gettype</p>
+<p style="text-align: justify;">todas as is_type</p>
+<p style="text-align: justify;">Casting<br /> (tipo) variavel;</p>
+<p style="text-align: justify;">Boleanos<br /> Pode ser TRUE ou FALSE (case-insensitive)</p>
+<p style="text-align: justify;">Exemplos:</p>
+<pre class="language-php"><code>&lt;?php
+echo gettype((bool) "")."&lt;br&gt;"; // bool(false)
+echo gettype((bool) 1)."&lt;br&gt;"; // bool(true)
+echo gettype((bool) -2)."&lt;br&gt;"; // bool(true)
+echo gettype((bool) "foo")."&lt;br&gt;"; // bool(true)
+echo gettype((bool) 2.3e5)."&lt;br&gt;"; // bool(true)
+echo gettype((bool) array(12))."&lt;br&gt;"; // bool(true)
+echo gettype((bool) array())."&lt;br&gt;"; // bool(false)
+?&gt;
+
+</code></pre>
+<p><strong style="text-align: justify;">Convertendo Explicitamente para Boleano </strong></p>
+<p style="text-align: justify;">Usa-se o modificador (bool) ou (boolean).</p>
+<p style="text-align: justify;">Valores que são considerados FALSE</p>
+<p style="text-align: justify;">FALSE, 0, 0.0, "0", "", array vazio, objeto sem membros e NULL (e variáveis indefinidas).</p>
+<p style="text-align: justify;">Os demais são TRUE</p>
+<p style="text-align: justify;">Inteiros<br /> Em PHP, inteiro é um número do conjunto matemático dos Inteiros (Z), que contem os negativos, o zero e os positivos.</p>
+<p style="text-align: justify;">Em PHP os inteiros podem ser decimais, octais ou hexadecimais.</p>
+<p style="text-align: justify;">octal - precedido por 0.<br /> hexadecimal - precedido por 0x.</p>
+<p style="text-align: justify;">Exemplos:</p>
+<pre class="language-php"><code>&lt;?php
+$a =1234;
+echo $a."&lt;br&gt;"; // número decimal
+$a =-123;
+echo $a."&lt;br&gt;"; // um número negativo
+$a =0123;
+echo $a."&lt;br&gt;"; // número octal (equivalente a 83 em decimal)
+$a =0x1A;
+echo $a."&lt;br&gt;"; // número hexadecimal (equivalente a 26 em decimal)
+?&gt;
+
+</code></pre>
+<p>O tamanho dos inteiros depende da plataforma e é de 32 bits com sinal. O PHP não suporta inteiros sem sinal.</p>
+<p style="text-align: justify;">Overflow - caso seja especificado um número inteiro além dos limites, será interpretado como flutuante.</p>
+<p style="text-align: justify;">Convertendo Explicitamente para Inteiro</p>
+<p style="text-align: justify;">Usar o modificador (int) ou (integer).</p>
+<p style="text-align: justify;">Ou com a função intval().</p>
+<p style="text-align: justify;">De boleanos - FALSE será retornado como 0 e TRUE como 1.</p>
+<p style="text-align: justify;">De flutuantes - ao converter para inteiros serão truncados</p>
+<p style="text-align: justify;">De strings - A string será avaliada como um ponto flutuante se contiver qualquer um dos caracteres '.', 'e', ou 'E'. Em outros casos, ela será avaliada como um inteiro.</p>
+<p style="text-align: justify;">De outros tipos - não têm precisão, exatidão, portanto é melhor evitar.</p>
+<p style="text-align: justify;">Alerta: <br /> echo (int) ((0.1 + 0.7 ) * 10); // Exibirá 7 ao invés do esperado 8</p>
+<p style="text-align: justify;"><strong>Ponto Flutuante</strong><br /> É o float, double ou real.</p>
+<p style="text-align: justify;">Exemplos:</p>
+<p style="text-align: justify;">1.234 ou 1.2e3 ou 7E-10</p>
+<pre class="language-php"><code>&lt;?php
+$a = 1.234;
+echo $a."&lt;br&gt;";
+$b = 1.2e3;
+echo $b."&lt;br&gt;";
+$c = 7E-4;
+echo $c;
+?&gt;</code></pre>
+<p><strong style="text-align: justify;">O tamanho de um float depende também da plataforma e é de 64bits no formato IEEE(*).</strong></p>
+<p style="text-align: justify;"><strong>Nunca compare números em ponto flutuante em igualdades, sob pena de cometer erros.</strong></p>
+<p style="text-align: justify;">* - (Wikipedia - <a href="http://pt.wikipedia.org">http://pt.wikipedia.org</a> )O Instituto de Engenheiros Eletricistas e Eletrônicos ou IEEE (pronuncia-se I-3-E ) é uma organização profissional sem fins lucrativos, fundada nos <a title="Estados Unidos da América" href="http://pt.wikipedia.org/wiki/Estados_Unidos_da_Am%C3%A9rica">Estados Unidos</a>. É a maior (em número de sócios) organização profissional do mundo. O IEEE foi formado em <a title="1963" href="http://pt.wikipedia.org/wiki/1963">1963</a> pela fusão do <a title="Instituto de Engenheiros de Rádio" href="http://pt.wikipedia.org/w/index.php?title=Instituto_de_Engenheiros_de_R%C3%A1dio&amp;action=edit">Instituto de Engenheiros de Rádio</a> (IRA) com o <a title="Instituto Americano de Engenheiros Elétricistas" href="http://pt.wikipedia.org/w/index.php?title=Instituto_Americano_de_Engenheiros_El%C3%A9tricistas&amp;action=edit">Instituto Americano de Engenheiros Elétricistas</a> (AIEE). O IEEE tem filiais em muitas partes do mundo, sendo seus sócios engenheiros eletricistas, engenheiros da computação, cientistas da computação, profissionais de telecomunicações etc. Sua meta é promover conhecimento no campo da <a title="Engenharia eléctrica" href="http://pt.wikipedia.org/wiki/Engenharia_el%C3%A9ctrica">engenharia elétrica</a>, <a title="Engenharia eletrônica" href="http://pt.wikipedia.org/wiki/Engenharia_eletr%C3%B4nica">eletrônica</a> e <a title="Ciência da computação" href="http://pt.wikipedia.org/wiki/Ci%C3%AAncia_da_computa%C3%A7%C3%A3o">computação</a>. Um de seus papéis mais importantes é o estabelecimento de padrões para formatos de <a title="Computadores" href="http://pt.wikipedia.org/wiki/Computadores">computadores</a> e <a title="Dispositivo" href="http://pt.wikipedia.org/w/index.php?title=Dispositivo&amp;action=edit">dispositivos</a>.</p>
+<p style="text-align: justify;"><strong>Strings</strong><br /> Em PHP um caractere ocupa um byte. Até a versão 5 o PHP não tem suporte a UNICODE, mas está previsto este suporte para a próxima versão (Fonte: Wikipedia - http://www.wikipedia.org).</p>
+<p style="text-align: justify;">Não há limite para o tamanho de uma string em PHP.</p>
+<p style="text-align: justify;">Especificando Strings:<br /> - apóstrofos (chamados de aspas simples ' )<br /> - aspas (chamadas de aspas duplas " )<br /> - heredoc (&lt;&lt;&lt;)</p>
+<p style="text-align: justify;">Exemplos:</p>
+<pre class="language-php"><code>&lt;?php
+echo 'isto é uma string comum';
+echo 'Você pode incluir novas linhas em strings,
+dessa maneira que estará
+tudo bem';
+
+// Imprime: Arnold disse uma vez: "I\'ll be back"
+echo 'Arnold once said: "I\'ll be back"';
+
+// Imprime: Você tem certeza em apagar C:\*.*?
+echo 'Você tem certeza em apagar C:\\*.*?';
+
+// Imprime: Você tem certeza em apagar C:\*.*?
+echo 'Você tem certeza em apagar C:\*.*?';
+
+// Imprime: Isto não será substituido: \n uma nova linha
+echo 'Isto não será substituido: \n uma nova linha';
+
+// Imprime: Variaveis $também não $expandem
+echo 'Variaveis $também não $expandem';
+
+echo '&lt;br&gt;------------&lt;br&gt;';
+
+$str = &lt;&lt;&lt;EOD
+Exemplo de uma string
+distribuída em várias linhas
+utilizando a sintaxe heredoc.
+EOD;
+
+/* Exemplo mais complexo, com variáveis */
+class foo
+{
+var $foo;
+var $bar;
+
+function foo()
+{
+$this-&gt;foo = 'Foo';
+$this-&gt;bar = array('Bar1', 'Bar2', 'Bar3');
+}
+}
+
+$foo = new foo();
+$name = 'Meu nome';
+
+echo &lt;&lt;&lt;EOT
+Meu nome é "$name". Eu estou imprimindo $foo-&gt;foo.
+Agora, eu estou imprimindo {$foo-&gt;bar[1]}.
+Isto deve imprimir um 'A' maiúsculo: \x41
+EOT;
+</code></pre>
+<p style="text-align: justify;"><strong>6 - VARIÁVEIS </strong><br /> Em PHP as variáveis são iniciadas por um sinal de dólar $.</p>
+<p style="text-align: justify;">Variáveis Predefinidas</p>
+<p style="text-align: justify;">São as que já vêm definidas no próprio PHP. A função phpinfo() mostra também estas variáveis.</p>
+<p style="text-align: justify;">Com o PHP 4.2 o valor default da diretiva register_globals passou a ser off. Com isso as variáveis passaram a ser acessadas de forma diferente e muitos scripts deixaram de funcionar quanto tiveram o PHP atualizado e outros novos scripts não funcionaram devido esperar uma semelhante a anteerior.</p>
+<p style="text-align: justify;">On Off<br /> =======================================================</p>
+<p style="text-align: justify;">$DOCUMENT_ROOT $_SERVER['DOCUMENT_ROOT'];<br /> $HOME $_ENV['HOME'];<br /> $GLOBALS<br /> $_SERVER<br /> $_GET<br /> $_POST<br /> $_REQUEST<br /> $_SESSION</p>
+<p style="text-align: justify;">Obs.: Agora, como o default do PHP é register_globals = Off, faz-se necessário usar $_POST['nomecampo'], para receber o valor de um campo de form em script PHP.</p>
+<p style="text-align: justify;"><strong>Escopo de Variáveis </strong><br /> O escopo de uma variável é o contexto onde ela foi definida e geralmente o escopo é local.</p>
+<p style="text-align: justify;">$a = 1;<br /> include ("teste.php");</p>
+<p style="text-align: justify;">// $a estará disponível, será vista por teste.php, pois foi definida antes.</p>
+<p style="text-align: justify;">include ("teste.php");<br /> $a = 1;</p>
+<p style="text-align: justify;">// Aqui, como $a foi definida após a inclusão, não será visto pelo teste.php</p>
+<p style="text-align: justify;"><strong>Escopo de variáveis em funções </strong><br /> A palavra-chave global pode preceder uma variável para tornar seu escopo global, como também $GLOBALS[].</p>
+<p style="text-align: justify;">Exemplos:</p>
+<div style="text-align: justify;">&lt;?php<br /> $a = 1; /* escopo global */<br /> <br /> function Teste(){<br /> echo $a; /* referencia uma variável do escopo local (não definida) */<br /> }<br /> <br /> Teste();<br /> ?&gt;<br />
+<div><br /> &lt;?php<br /> $a = 1; /* escopo global */<br /> <br /> function Teste(){<br /> global $a;<br /> echo $a; /* referencia a variável do escopo global */<br /> }<br /> <br /> Teste();<br /> ?&gt;</div>
+<p> </p>
+</div>
+<p style="text-align: justify;"><strong>Usando $GLOBALS no lugar de global</strong></p>
+<div style="text-align: justify;">&lt;?php<br /> $a = 1;<br /> $b = 2;<br /> <br /> function Soma(){<br /> $GLOBALS["b"] = $GLOBALS["a"] + $GLOBALS["b"];<br /> }<br /> <br /> Soma();<br /> echo $b;<br /> ?&gt;</div>
+<p style="text-align: justify;"><strong>Utilizando Variáveis Estáticas</strong><br /> Variáveis estáticas guardam o valor de variáveis entre execuções de funções.<br /> Ao fechar o programa, ao fechar ou atualizar o browser, o valor da variável se perde.</p>
+<p style="text-align: justify;"><br /> Exemplos:</p>
+<pre class="language-php"><code>&lt;?php
+function Teste (){
+$a = 0;
+echo $a;
+$a++;
+}
+
+for ($x=1;$x&lt;10;$x++){
+Teste();
+}
+echo "&lt;br&gt;&lt;br&gt;";
+
+function Teste2(){
+static $a = 0;
+echo $a;
+$a++;
+}
+
+for ($x=1;$x&lt;10;$x++){
+Teste2();
+}
+
+echo "&lt;br&gt;&lt;br&gt;";
+
+// Função recursiva
+function Teste3()
+{
+static $count = 0;
+
+$count++;
+echo $count;
+if ($count &lt; 10) {
+Teste3 ();
+}
+$count--;
+}
+
+for ($x=1;$x&lt;5;$x++){
+Teste3();
+if ($x &lt; 4) echo " - ";
+
+}
+
+echo "&lt;br&gt;&lt;br&gt;";
+//Declarando variáveis static
+
+function foo(){
+static $int = 0; // correro
+//static $int = 1+2; // errado (é uma expressão)
+//static $int = sqrt(121); // wrong (é uma expressão também)
+
+$int++;
+echo $int;
+}
+
+foo();
+
+?&gt;</code></pre>
+<p style="text-align: justify;"> </p>
+<p style="text-align: justify;"><strong>Variáveis Variáveis</strong><br /> São variáveis cujos nomes podem ser criados dinamicamente.</p>
+<p style="text-align: justify;">Variável comun -&gt; $variavel;<br /> Variável variável -&gt; $$variavelvariavel;</p>
+<p style="text-align: justify;">Ela torna o valor de uma variável e o trata como se fosse o nome de uma variável. <br /> Obs.: variáveis variáveis não podem ser utilizadas com os arrays superglobais.</p>
+<p style="text-align: justify;"> </p>
+<p style="text-align: justify;"><strong>Determiando o Tipo das Variáveis </strong><br /> gettype<br /> is_array, is_float, is_int, is_object, is_string, is_numeric</p>
+<p style="text-align: justify;"> </p>
+<p style="text-align: justify;"><strong>7 - CONSTANTES</strong><br /> O valor de uma constante não pode ser alterado durante a execução do script.<br /> Convenciona-se usar o nome de constantes com todas as letras em maiúsculas.</p>
+<p style="text-align: justify;">define ("NOME", "valor");</p>
+<p style="text-align: justify;">Exemplos:</p>
+<div style="text-align: justify;">
+<pre class="language-php"><code>&lt;?php
+// Nomes de constantes válidos
+define("FOO", "alguma coisa");
+define("FOO2", "alguma outra coisa");
+define("FOO_BAR", "mais alguma outra coisa")
+
+// Nomes de constantes inválidas
+define("2FOO", "alguma coisa");
+
+// Isto é válido, mas deve ser evitado:
+// O PHP pode vir a fornercer uma constante mágica
+// que danificará seu script
+define("__FOO__", "alguma coisa");
+
+?&gt;</code></pre>
+</div>
+<p style="text-align: justify;">Obs.: Somente dados escalares (bolean, integer, float, e string) podem ser armazanados nos valores de constantes.</p>
+<p style="text-align: justify;">A função constant() retorna o valor de uma constante.<br /> A função get_defined_constantes() retorna todas as constantes definidas.<br /> Enquanto que defined() checa se uma constante foi definida.</p>
+<p style="text-align: justify;">define (NOME, valor);<br /> define ("PESO", 70);<br /> print "O peso vale " . PESO . " KG";</p>
+<pre class="language-php"><code>&lt;?php
+switch (PHP_OS){
+case "WIN32":
+echo "Sistema Windows";
+break;
+case "Linux":
+echo "Sistema Linux";
+break;
+case "OS/2":
+echo "Sistema OS/2";
+break;
+default:
+echo "Sistema não é Windows, Linux nem OS/2";
+break;
+}
+?&gt;
+
+&lt;?php
+if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') {
+echo 'Este é um servidor usando Windows!';
+} else {
+echo 'Este é um servidor que não usa Windows!';
+}
+?&gt;</code></pre>
+<p style="text-align: justify;"><strong>Constantes Mágicas</strong><br /> Essas são as cinco constantes "mágicas", que mudam dependendo de onde elas são utilizadas. Por exemplo, o valor de <tt>__LINE__</tt> depende do número da linha em que é utilizada em seu script. Essas constantes especiais são insensíveis ao caso:</p>
+<div style="text-align: justify;">
+<p>Algumas constantes "mágicas" do PHP</p>
+<table border="1"><colgroup><col /><col /></colgroup>
+<thead>
+<tr>
+<th>Nome</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><tt>__LINE__</tt></td>
+<td>A linha atual do script.</td>
+</tr>
+<tr>
+<td><tt>__FILE__</tt></td>
+<td>O caminho completo e nome do arquivo. Se utilizado dentro de um include, o nome do arquivo incluído será retornado.</td>
+</tr>
+<tr>
+<td><tt>__FUNCTION__</tt></td>
+<td>O nome da função (Acrescentado no PHP 4.3.0). A partir do PHP 5 esta constante retorna o nome da função como ela foi declarada (sensível a maiúsculas e minúsculas). No PHP 4 sempre retorna o nome em minúsculas.</td>
+</tr>
+<tr>
+<td><tt>__CLASS__</tt></td>
+<td>O nome da classe (Acrescentado no PHP 4.3.0). A partir do PHP 5 esta constante retorna o nome da função como ela foi declarada (sensível a maiúsculas e minúsculas). No PHP 4 sempre retorna o nome em minúsculas.</td>
+</tr>
+<tr>
+<td><tt>__METHOD__</tt></td>
+<td>O nome do método de classe. (Acrescentado no PHP 5.0.0). O nome do método é retornado como foi declarado (sensível a maiúsculas e minúsculas).</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p style="text-align: justify;">Veja também <a href="http://www.php.net/manual/pt_BR/function.get-class.php">get_class()</a>, <a href="http://www.php.net/manual/pt_BR/function.get-object-vars.php">get_object_vars()</a>, <a href="http://www.php.net/manual/pt_BR/function.file-exists.php">file_exists()</a>, e <a href="http://www.php.net/manual/pt_BR/function.function-exists.php">function_exists()</a>.</p>
+<p style="text-align: justify;"><strong><br />8 - EXPRESSÕES </strong><br /> Uma expressão é qualquer coisa que tem um valor, normalmente na forma de constantes ou variáveis.</p>
+<p style="text-align: justify;">$a = 5;</p>
+<p style="text-align: justify;">Temos acima uma equação formada por duas expressões, a da esquerda composta por uma variável e a da direita composta por uma constante.</p>
+<p style="text-align: justify;">Funções são expressões cujo valor é igual ao seu valor de retorno. <br /> O PHP é uma linguagem orientada as expressões. <br /> Atribuições são analisadas da direita para a esquerda.</p>
+<p style="text-align: justify;">$b = $a = 5; // $a recebe 5 e então $b recebe 5</p>
+<p style="text-align: justify;">Exemplo:</p>
+<pre class="language-php"><code>&lt;?php
+function dobro($i){
+return $i*2;
+}
+$b = $a = 5;echo $b."&lt;br&gt;"; /* atribui o valor cinco às variáveis $a e $b */
+$c = $a++;echo $c."&lt;br&gt;"; /* pós-incremento, atribui o valor original de $a
+(5) para $c */
+$e = $d = ++$b;echo $e."&lt;br&gt;"; /* pré-incremento, atribui o valor incrementado de
+$b (6) a $d e $e */
+
+/* neste ponto, tanto $d quanto $e são iguais a 6 */
+
+$f = dobro($d++);echo $f."&lt;br&gt;"; /* atribui o dobro do valor de $d antes
+do incremento, 2*6 = 12 a $f */
+$g = dobro(++$e);echo $g."&lt;br&gt;"; /* atribui o dobro do valor de $e depois
+do incremento, 2*7 = 14 a $g */
+$h = $g += 10;echo $h."&lt;br&gt;"; /* primeiro, $g é incrementado de 10 e termina com o
+valor 24. o valor da atribuição (24) é
+então atribuído a $h, e $h termina com o valor
+24 também. */
+?&gt;</code></pre>
+<p style="text-align: justify;"> </p>
+<p style="text-align: justify;"><strong>9 - OPERADORES </strong><br /> Um operador é algo que alimentado com um ou mais valores devolve outro valor. Assim as funções e outros construtores que retornam valor são operadores.</p>
+<p style="text-align: justify;"><strong>Tipos de Operadores</strong><br /> - unários - operam apenas em um valor (!, ++, ...)<br /> - binários - operam em dois valores (+, - , ...)<br /> - ternário - selecionar entre 2 valores, dependendo de um terceiro. Emglobá-los entre parênteses facilita o entendimento.</p>
+<p style="text-align: justify;"><strong>Precedência de Operadores </strong><br /> A precedência de um operador em relação a outro diz que um operador deve ser executado antes do outro.</p>
+<p style="text-align: justify;">Exemplo:<br /> 1 + 5 * 3</p>
+<p style="text-align: justify;">Dependendo da precedência dos operadores + ou * teremos resultados diferentes.<br /> Se o operador + tiver precedência superior ao * então resolveremos assim:</p>
+<p style="text-align: justify;">Somamos 1 + 5 e somente depois multiplicamos por 3 -&gt; (1+5)*3 = 6*3 = 18</p>
+<p style="text-align: justify;">Este resultado está incorreto, pois o operador * tem precedência superior ao + e deveria ser assim: <br /> 1+(5*3) = 1+15=16</p>
+<p style="text-align: justify;">Para facilitar a percepção das precedências usa-se parêntesis:</p>
+<p style="text-align: justify;">1 + (5 * 3) = Sempre devemos resolver antes o que estiver entre parêntesis.<br /> 1 + 15 = 16 (Neste caso fica mais claro).</p>
+<p style="text-align: justify;">Veja a tabela contendo a precedência de dos operadores do PHP, da maior precedência para a menor:</p>
+<p style="text-align: justify;">* e / têm precedência sobre + e -.</p>
+<p style="text-align: justify;">Obs.: Para uma relação completa das precedências veja o manual oficial no site do PHP.</p>
+<p style="text-align: justify;"><br /><strong> Operadores Aritméticos</strong><br /> São os operadores correspondentes às quatro operações comuns da matemática adicionados ao operador módulo:</p>
+<p style="text-align: justify;">• soma (+)<br /> • subtração (-)<br /> • multiplicação (*)<br /> • divisão (/)<br /> • módulo (%)</p>
+<p style="text-align: justify;">O módulo é o resto de um número dividido por outro.</p>
+<p style="text-align: justify;">Exemplos de operadores aritméticos:</p>
+<pre>$a = 9;<br />$b = 4;<br />echo "\$a + \$b = ".($a + $b); // 13<br />echo "\$a + \$b = ".$a + $b; // Retorna 4, pois após o ponto é considerado strings<br />echo "\$a - \$b = ".($a - $b); // 5<br />echo "\$a * \$b = ".$a * $b; // 36<br />echo "\$a / \$b = ".$a / $b; // 2.25 - Divisão Quociente de $a por $b.<br />echo "\$a % \$b = ".$a % $b; // 1 - Resto de $a por $b</pre>
+<p style="text-align: justify;"> </p>
+<p style="text-align: justify;"><strong>Operadores de Atribuição</strong><br /> O operador básico de atribuição é o sinal de igualdade =.</p>
+<p style="text-align: justify;">Exemplo:</p>
+<p style="text-align: justify;">$x = $y + 3; // O que representa: 3 será adicionado a $y e o resultado será atribuído a $x<br /> $a = 3;<br /> $a += 5; // Que é semelhante a $a = $a + 5;<br /> $b = "Bom ";<br /> $b .= "Dia!"; // Similar a $b = $b . "Dia!";</p>
+<p style="text-align: justify;">Exemplos:</p>
+<pre class="language-php"><code>&lt;?php
+$a = 3;
+$a += 5; // $a recebe 5 e soma com seus 3, tipo: $a = $a + 5;
+echo "\$a vale " . $a;
+
+$b = "Bom ";
+$b .= "Dia!"; // $b fica com "Bom Dia!", como em $b = $b . "Dia!";
+echo "\$b vale " . $b;
+
+$c=2;
+$a -= $c; //$a = $a - $c Subtração
+echo "\$a -= \$c vale " . $a;
+$a *= $c; //$a = $a * $c Multiplicação
+echo "\$a *= \$c vale " . $a;
+$a /= $c; //$a = $a / $c Divisão
+echo "\$a /= \$c vale " . $a;
+$resto = $a % $c; //$a = $a % $c Módulo (resto)
+echo "Resto de $a % $c vale: " . $resto;
+?&gt;</code></pre>
+<p style="text-align: justify;"><br /><strong> Operadores de Controle de Erro</strong><br /> Representado pelo símbolo de arroba @. Quando precede uma expressão ele abafa as mensagens de erro.<br /> Observação - Somente funciona em expressões, ou seja, em qualquer construção que retorne algo.<br /> <br /> Recomendação - Deixar todas as mensagens de erro originais do PHP livres em ambientes de desenvolvimento (de testes). Somente utilizar @ em ambiente de produção, após executar os testes.<br /> <br /> Exemplos:</p>
+<div style="text-align: justify;">
+<pre class="language-php"><code>&lt;?php
+/* Erro intencional */
+$a = 6;
+$b = 0;
+
+echo "Camuflando erro de divisão por zero";
+$c = @($a / $b);
+?&gt;​</code></pre>
+<br />
+<div> </div>
+</div>
+<p style="text-align: justify;"><br /><strong> Operadores de Execução</strong><br /> Existem algumas funções de execução de programas (shell_exec e outras) como também existe um operador, que é formado por dois sinais de crase` `.<br /> <br /> Nota: Caso safe_mode esteja desativado no php.ini como também shell_exec() então o operador de execução também fica dasativado.<br /> <br /> Exemplo:</p>
+<div style="text-align: justify;">
+<pre class="language-php"><code>&lt;?php
+
+// Em PHP a crase ` é um operador de execução de arquivos do SO
+
+// Como em scripts bash
+
+// Exibir todos os arquivos do diretório atual, inclusive os ocultos
+
+if (PHP_OS == "WINNT"){
+
+$output = `dir/o/p`;
+
+echo "&lt;pre&gt;$output&lt;/pre&gt;";
+
+} elseif (PHP_OS == "Linux){
+
+$output = `ls -la`;
+
+echo "&lt;pre&gt;$output&lt;/pre&gt;";
+
+}else{
+
+echo "Você está usando um SO diferente de Linux e de Windows!"
+
+}
+
+?&gt;​</code></pre>
+<br />
+<p><strong> Operadores de Incremento e de Decremento</strong></p>
+<p>Os operadores de pré e pós-incremento/decremento são suportados pelo PHP.</p>
+<p>++$a (pré-incremento) - Primeiro incrementa $a de 1, depois retorna $a incrementado</p>
+<p>$a++ (pós-incremento) - Primeiro retorna $a, depois incrementa $a de 1</p>
+<p>--$a (pré-decremento) - Primeiro decrementa $a de 1, depois retorna $a decrementado</p>
+<p>$a-- (pós-decremento) - Primeiro retorna $a, depois decrementa $a de 1</p>
+<p>Exemplos:</p>
+<pre class="language-php"><code>&lt;?php
+
+echo "&lt;h3&gt;Pós-incremento&lt;/h3&gt;";
+
+$a = 5;
+
+echo "\$a = ".$a."&lt;br&gt;&lt;br&gt;";
+
+echo "\$a++ deve ser: " . $a++ . "&lt;br /&gt;\n";
+
+echo "\$a deve ser: " . $a . "&lt;br /&gt;\n";
+
+echo "&lt;h3&gt;Pré-incremento&lt;/h3&gt;";
+
+$a = 5;
+
+echo "++\$a deve ser: " . ++$a . "&lt;br /&gt;\n";
+
+echo "\$a deve ser: " . $a . "&lt;br /&gt;\n";
+
+echo "&lt;h3&gt;Pós-decremento&lt;/h3&gt;";
+
+$a = 5;
+
+echo "\$a-- deve ser: " . $a-- . "&lt;br /&gt;\n";
+
+echo "\$a deve ser: " . $a . "&lt;br /&gt;\n";
+
+echo "&lt;h3&gt;Pré-decremento&lt;/h3&gt;";
+
+$a = 5;
+
+echo "--\$a deve ser: " . --$a . "&lt;br /&gt;\n";
+
+echo "\$a deve ser: " . $a . "&lt;br /&gt;\n";
+
+?&gt;​</code></pre>
+<br />
+<p><strong> Operadores Lógicos</strong></p>
+<p>Utilizados para comparar duas expressões e o resultado será TRUE ou FALSE.</p>
+<p>Exemplos:</p>
+<pre class="language-php"><code>&lt;?php
+
+$a = true; $b = FALSE; // true e false são insensitivos
+
+echo ($a and $b)? "T&lt;br&gt;":"F&lt;br&gt;"; //E Verdadeiro (TRUE) se tanto $a quanto $b são verdadeiros.
+
+echo ($a or $b)? "T&lt;br&gt;":"F&lt;br&gt;"; //OU Verdadeiro se $a ou $b são verdadeiros.
+
+echo ($a xor $b)? "T&lt;br&gt;":"F&lt;br&gt;"; //XOR Verdadeiro se $a ou $b são verdadeiros, mas não ambos.
+
+echo (! $a)? "T&lt;br&gt;":"F&lt;br&gt;"; //NÃO Verdadeiro se $a não é verdadeiro.
+
+echo ($a &amp;&amp; $b)? "T&lt;br&gt;":"F&lt;br&gt;"; //E Verdadeiro se tanto $a quanto $b são verdadeiros.
+
+echo ($a || $b)? "T&lt;br&gt;":"F&lt;br&gt;"; //OU Verdadeiro se $a ou $b são verdadeiros.
+
+?&gt;​</code></pre>
+<br />
+<p><strong> Operadores de String</strong></p>
+<p>Strings em PHP são concatenadas com o operador ponto final ".".</p>
+<p>Exemplos:</p>
+<pre class="language-php"><code>&lt;?php
+
+$a = "Olá ";
+
+$b = $a . "mundo do PHP!";
+
+echo $b;
+
+$a = "Olá ";
+
+$a .= "meu mundo!";
+
+echo "&lt;br&gt;" . $a;
+
+?&gt;​</code></pre>
+<br />
+<p><strong> Convertendo strings em números</strong></p>
+<pre class="language-markup"><code>&lt;?php
+
+$foo = 1 + "10.5";echo $foo."&lt;br&gt;"; // $foo é float (11.5)
+
+$foo = 1 + "-1.3e3";echo $foo."&lt;br&gt;"; // $foo é float (-1299)
+
+$foo = 1 + "bob-1.3e3";echo $foo."&lt;br&gt;"; // $foo é integer (1)
+
+$foo = 1 + "bob3";echo $foo."&lt;br&gt;"; // $foo é integer (1)
+
+$foo = 1 + "10 Small Pigs";echo $foo."&lt;br&gt;"; // $foo é integer (11)
+
+$foo = 4 + "10.2 Little Piggies";echo $foo."&lt;br&gt;"; // $foo é float (14.2)
+
+$foo = "10.0 pigs " + 1;echo $foo."&lt;br&gt;"; // $foo é float (11)
+
+$foo = "10.0 pigs " + 1.0;echo $foo."&lt;br&gt;"; // $foo é float (11)
+
+?&gt;​</code></pre>
+<br />
+<p><strong> Operações com Strings</strong></p>
+<pre class="language-php"><code>&lt;?php
+
+// Pega o primeiro caracter da string
+
+$str = 'Isto é um teste.';
+
+$first = $str{0};
+
+echo $first."&lt;br&gt;";
+
+// Pega o terceiro caracter da string
+
+$third = $str{2};
+
+echo $third."&lt;br&gt;";
+
+// Pega o último caracter da string
+
+$str = 'Isto ainda é um teste.';
+
+$last = $str{strlen($str)-1};
+
+echo $last."&lt;br&gt;";
+
+// Modifica o ultimo caracter da string
+
+$str = 'Olhe o mal';
+
+echo $str{strlen($str)-1} = 'r';
+
+?&gt;​</code></pre>
+<br />
+<p><strong> Operadores com Arrays</strong></p>
+<table border="1">
+<thead>
+<tr>
+<th>
+<p>Exemplo</p>
+</th>
+<th>
+<p>Nome</p>
+</th>
+<th>
+<p>Resultado</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<p>$a + $b</p>
+</td>
+<td>
+<p>União</p>
+</td>
+<td>
+<p>União de $a e $b.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>$a == $b</p>
+</td>
+<td>
+<p>Igualdade</p>
+</td>
+<td>
+<p><tt>TRUE</tt> se $a e $b tem os mesmos elementos.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>$a === $b</p>
+</td>
+<td>
+<p>Identidade</p>
+</td>
+<td>
+<p><tt>TRUE</tt> se $a e $b tem os mesmos elementos na mesma ordem.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>$a != $b</p>
+</td>
+<td>
+<p>Desigualdade</p>
+</td>
+<td>
+<p><tt>TRUE</tt> se $a não é igual a $b.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>$a &lt;&gt; $b</p>
+</td>
+<td>
+<p>Desigualdade</p>
+</td>
+<td>
+<p><tt>TRUE</tt> se $a não é igual a $b.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>$a !== $b</p>
+</td>
+<td>
+<p>Não identidade</p>
+</td>
+<td>
+<p><tt>TRUE</tt> se $a não é identico a $b.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>O operador + acrescenta o array da direita no array da esquerda, contudo, chaves duplicadas NÃO são sobrescritas.</p>
+<p>Exemplos:</p>
+<pre class="language-php"><code>&lt;?php
+$a = array("a" =&gt; "maçã", "b" =&gt; "banana");
+$b = array("a" =&gt;"pêra", "b" =&gt; "framboesa", "c" =&gt; "morango");
+
+$c = $a + $b; // Uniao de $a e $b
+echo "União de \$a e \$b: \n";
+var_dump($c);
+
+$c = $b + $a; // União de $b e $a
+echo "União de \$b e \$a: \n";
+var_dump($c);
+?&gt;</code></pre>
+<p>Observar que na união de $a+$b o valor de "b" é banana em $a, ele não foi sobrescrito por framboesa de $b.</p>
+<p>Assim como framboesa "b" em $b não foi substituído por banana de $a na união de $b+$a.</p>
+<p><strong> 10 - ESTRUTURAS DE CONTROLE</strong></p>
+<p>As principais estruturas para controlar o fluxo dos scripts PHP.</p>
+<p>if, else, elseif, while, do... while, for, break, consinue e switch.</p>
+<p>Um script PHP é formado por instruções (cada instrução termina com ;).</p>
+<p>Uma instrução pode ser:</p>
+<p>- uma atribuição</p>
+<p>- uma chamada de função</p>
+<p>- um laço (loop)</p>
+<p>- uma instrução condicional</p>
+<p>- até uma instrução nula (;;).</p>
+<p>As instruções podem ser agrupadas com chaves, formando blocos.</p>
+<p><strong> if - uma construção muito importante e versátil. Permite a execução condicional de fragmentos de código.</strong></p>
+<p>Sintaxe:</p>
+<p>if (expressao) {</p>
+<p>instrucoes;</p>
+<p>}</p>
+<p>expressao - é avaliada como TRUE ou FALSE</p>
+<p>- Se TRUE as instrucoes serão executadas</p>
+<p>- Se FALSE as instrucoes serão ignoradas</p>
+<p>Exemplos:</p>
+<p>&lt;?php<br /> $a = 5;<br /> $b = 3;<br /> if ($a &gt; $b){<br /> echo "a é maior que b";<br /> }<br /> ?&gt;</p>
+<p><strong> else - executa instrucoes2 caso expressao seja FALSE.</strong></p>
+<p>Sintaxe:</p>
+<p>if (expressao) {</p>
+<p>instrucoes;</p>
+<p>} else {</p>
+<p>instrucoes2;</p>
+<p>}</p>
+<p>Exemplos:</p>
+<p>&lt;?php</p>
+<p>$a = 3;</p>
+<p>$b = 5;</p>
+<p>if ($a &gt; $b){</p>
+<p>echo "a é maior que b";</p>
+<p>} else {</p>
+<p>echo "a NÃO é maior que b";</p>
+<p>}</p>
+<p>?&gt;</p>
+<p><strong> elseif - é uma combinação de if com else. Caso a expressao do if seja FALSE então o elseif testa a expresao2, se esta for TRUE instrucoes2 serão executadas, caso contrário instrucoes3 serão executadas.</strong></p>
+<p>Sintaxe:</p>
+<p>if (expressao) {</p>
+<p>instrucoes;</p>
+<p>} elseif (expressao2) {</p>
+<p>instrucoes2;</p>
+<p>} else {</p>
+<p>instrucoes3;</p>
+<p>}</p>
+<p>&lt;?php</p>
+<p>$a = 3;</p>
+<p>$b = 3;</p>
+<p>if ($a &gt; $b){</p>
+<p>echo "a é maior que b";</p>
+<p>} elseif ($a==$b){</p>
+<p>echo "a é igual a b";</p>
+<p>} else {</p>
+<p>echo "a NÃO é maior que b nem igual a b";</p>
+<p>}</p>
+<p>?&gt;</p>
+<p><strong> while - executa instruções várias vezez, enquanto uma expressão for verdadeira (TRUE).</strong></p>
+<p>Sintaxe:</p>
+<p>while (expressao) {</p>
+<p>instrucoes;</p>
+<p>}</p>
+<p>Em cada iteração expressao é avaliada, se TRUE instrucoes serão executadas, se FALSE, serão ignoradas.</p>
+<p>Exemplos:</p>
+<pre class="language-php"><code>&lt;?php
+
+$i = 1;
+
+while ($i &lt;= 10) {
+
+echo $i++; /* o valor impresso será
+
+$i depois do acréscimo
+
+(post-increment) */
+
+}
+
+?&gt;​</code></pre>
+<br />
+<p><strong> do ... while - Semelhante ao while, diferindo no fato da expressão condicional ficar ao final das iterações.</strong></p>
+<p>No do ... while a primeira iteração sempre executará as instruções incondicionalmente.</p>
+<p>Sintaxe:</p>
+<p>do {</p>
+<p>instrucoes;</p>
+<p>} while (expressoes); // Atentar para o ponto e vírgula ao final</p>
+<p>Exemplos:</p>
+<pre class="language-php"><code>&lt;?php
+
+// Executa pelo menos uma vez incondicionalmente
+
+$i = 6; $fator = 2; $minimo = 10;
+
+do {
+
+if ($i &lt; 5) {
+
+echo "\$i não é grande o suficiente";
+
+break;
+
+}
+
+$i *= $fator;
+
+if ($i &lt; $minimo) {
+
+break;
+
+}
+
+echo "\$i está Ok e vale " . $i;
+
+} while (0);
+
+/* Exemplo simples
+
+$i = 0;
+
+do {
+
+echo $i;
+
+} while ($i &gt; 0);
+
+*/
+
+?&gt;​</code></pre>
+<br />
+<p><strong> for - laço composto por 3 instruções. A primeira é a de inicialização da variável, a segunda será avaliada a cada iteração e a terceira é a de incremento. As 3 separadas por ponto e vírgula. Todas as 3 são opcionais e caso a segunda seja nula o loop será infinito.</strong></p>
+<p>Sintaxe:</p>
+<p>for (expr1; expr2; expr3) {</p>
+<p>instrucoes;</p>
+<p>}</p>
+<p>- expr1 será avaliada uma única vez incondicionalmente;</p>
+<p>- expr2 será avaliada no início de cada iteração:</p>
+<p>- Se TRUE o laço continua e as instruções serão executadas</p>
+<p>- Se FALSE o laço termina.</p>
+<p>- expr3 é avaliada ao final de cada iteração, no caso incrementa a variável</p>
+<p>Exemplos:</p>
+<pre class="language-php"><code>&lt;?php
+
+/* exemplo 1 - Controla o fluso no for*/
+
+echo "&lt;br&gt;&lt;br&gt;1- ";
+
+for ($i = 1; $i &lt;= 10; $i++) {
+
+echo $i;
+
+}
+
+echo "&lt;br&gt;&lt;br&gt;2- ";
+
+/* exemplo 2 - Controle o fluxo no if interno*/
+
+for ($i = 1; ; $i++) {
+
+if ($i &gt; 10) {
+
+break;
+
+}
+
+echo $i;
+
+}
+
+echo "&lt;br&gt;&lt;br&gt;3- ";
+
+/* exemplo 3 - Controle o fluxo no if interno*/
+
+$i = 1;
+
+for (; ; ) {
+
+if ($i &gt; 10) {
+
+break;
+
+}
+
+echo $i;
+
+$i++;
+
+}
+
+echo "&lt;br&gt;&lt;br&gt;4- ";
+
+/* exemplo 4 */
+
+for ($i = 1; $i &lt;= 10;$i++);
+
+echo $i;
+
+?&gt;​</code></pre>
+<br />
+<p><strong> foreach - laço para varrer os elementos de uma matriz (array).</strong></p>
+<p>Atentar para o fato de que o foreach não requer reset() antes, pois quando é executado o ponteiro interno do array já é zerado automaticamente.</p>
+<p>Sintaxe:</p>
+<p>foreach (expressao_array as $valor){<br /> instrucoes;<br />}<br /><br />foreach (expressao_array as $chave =&gt; $valor) {<br /> instrucoes;<br />}</p>
+<br /> Exemplos:</div>
+<div style="text-align: justify;"><br />
+<pre class="language-php"><code>&lt;?php
+//Você pode ter notado que os seguintes itens são funcionalmente idênticos:
+$arr = array("um", "dois", "três");
+reset ($arr); // Aponta para o primeiro elemento
+while (list(, $value) = each ($arr)) {
+echo "Valor: $value&lt;br /&gt;";
+}
+foreach ($arr as $value) {
+echo "Valor: $value&lt;br /&gt;";
+}
+
+//Os seguintes também são funcionalmente idênticos:
+$arr = array("one", "two", "three");
+reset($arr);
+while (list($key, $value) = each ($arr)) {
+echo "Chave: $key; Valor: $value&lt;br /&gt;";
+}
+foreach ($arr as $key =&gt; $value) {
+echo "Chave: $key; Valor: $value&lt;br /&gt;";
+}
+
+/* exemplo foreach 1: somente valores */
+$a = array(1, 2, 3, 17);
+foreach ($a as $v) {
+echo "Valor atual de \$a: $v.&lt;br&gt;";
+}
+
+/* exemplo foreach 2: valores (com as chaves impressas para ilustração) */
+$a = array(1, 2, 3, 17);
+$i = 0; /* para exemplo somente */
+foreach ($a as $v) {
+echo "\$a[$i] =&gt; $v.&lt;br&gt;";
+$i++;
+}
+
+/* exemplo foreach 3: chaves e valores */
+$a = array (
+"um" =&gt; 1,
+"dois" =&gt; 2,
+"três" =&gt; 3,
+"dezessete" =&gt; 17
+);
+foreach ($a as $k =&gt; $v) {
+echo "\$a[$k] =&gt; $v.&lt;br&gt;";
+}
+?&gt; ​</code></pre>
+<br /> <br /> <br /><strong> break - cancela a execução de laços: for, foreach, while, do ... while ou switch.</strong><br /> break n é suportado, onde n é o número de estruturas a serem canceladas.<br /> <br /> Sintaxe:<br /> <br /> break;<br /> <br /> break n;<br /> <br /> Exemplos:<br /> <br />
+<pre class="language-php"><code>&lt;?php
+$arr = array('um', 'dois', 'três', 'quatro', 'PARE', 'cinco');
+while (list (, $val) = each ($arr)) {
+if ($val == 'PARE') {
+break; /* Você poderia colocar 'break 1;' aqui. */
+}
+echo "$val&lt;br /&gt;";
+}
+echo "&lt;br /&gt;";
+/* Utilizando o argumento opcional. */
+
+$i = 0;
+while (++$i) {
+switch ($i) {
+case 5:
+echo "No 5&lt;br /&gt;";
+break 1; /* Sai somente do switch. */
+case 10:
+echo "No 10; saindo&lt;br /&gt;";
+break 2; /* Sai do switch e while. */
+default:
+break;
+}
+}
+?&gt;​</code></pre>
+<br /> <br /> <br /><strong> continue - sai da atual iteração de um loop para continuar na próxima iteração.</strong><br /> <br /> Sintaxe:<br /> <br /> continue;<br /> continue n;<br /> <br /> Enquanto o break encerra definitivamente um laço, o continue encerra somente a iteração atual.<br /> <br /> Exemplos:<br /> <br />
+<pre class="language-php"><code>&lt;?php
+$arr = array(1,2,3,4,5,6,7,8);
+while (list ($key, $value) = each ($arr)) {
+if (!($key % 2)) { // pula itens pares, ou seja, processa somente ímpares
+continue;
+}
+echo ($value);
+}
+echo "&lt;br&gt;";
+$i = 0;
+while ($i++ &lt; 5) {
+echo "Fora&lt;br /&gt;";
+while (1) {
+echo "&amp;nbsp;&amp;nbsp;Meio&lt;br /&gt;";
+while (1) {
+echo "&amp;nbsp;&amp;nbsp;Dentro&lt;br /&gt;";
+continue 3;
+}
+echo "Isto nunca será exibido.&lt;br /&gt;";
+}
+echo "Nem isso.&lt;br /&gt;";
+}
+
+// Outro exemplo
+for ($i = 0; $i &lt; 5; ++$i) {
+if ($i == 2)
+continue
+print "$i\n";
+}
+?&gt;​</code></pre>
+<br /> <br /> <br /><strong> switch - similar a uma série de construções if seguidas.</strong><br /> <br /> Sintaxe:<br /> <br /> switch (variavel) {<br /> case valor1:<br /> instrucoes;<br /> break;<br /> case valor2:<br /> instrucoes2;<br /> break;<br /> case valorN;<br /> instrucoesN;<br /> break;<br /> default:<br /> instrucoesDefault;<br /> break;<br /> }<br /> <br /> Exemplos:<br /> <br />
+<pre class="language-php"><code>&lt;?php
+
+$i = 1;
+
+// Estrutura com if
+if ($i == 0) {
+echo "\$i igual a 0";
+} elseif ($i == 1) {
+echo "\$i igual a 1";
+} elseif ($i == 2) {
+echo "\$i igual a 2";
+}
+echo "&lt;br&gt;";
+// Estruturas com switch
+switch ($i) {
+case 0:
+echo "\$i igual a 0";
+break;
+case 1:
+echo "\$i igual a 1";
+break;
+case 2:
+echo "\$i igual a 2";
+break;
+}
+echo "&lt;br&gt;";
+$i = 2;
+// Executará todos, falta o break
+switch ($i) {
+case 0:
+echo "\$i igual a 0";
+case 1:
+echo "\$i igual a 1";
+case 2:
+echo "\$i igual a 2";
+}
+echo "&lt;br&gt;";
+// Simulando intervalos
+switch ($i) {
+case 0:
+case 1:
+case 2:
+echo "\$i é menor que 3 mas não negativo";
+break;
+case 3:
+echo "\$i é 3";
+}
+echo "&lt;br&gt;";
+// Valor default
+switch ($i) {
+case 0:
+echo "\$i igual a 0";
+break;
+case 1:
+echo "\$i igual a 1";
+break;
+case 2:
+echo "\$i igual a 2";
+break;
+default:
+echo "\$i não é igual a 0, 1 ou 2";
+}
+​</code></pre>
+<br /> <br />
+<p><strong>Estruturas em Obsolescência</strong><br /> Devemos evitar, pois em futuras versões não mais serão utilizados.<br /><br /> Funções com nomes antigos, tipo:</p>
+<p>pg_numrown, pg_fecharray e similares.</p>
+<p>Caso se faça uma busca por estas funções no site do PHP nada será retornado.</p>
+<p>As funções atuais tem nomes com espaço separando palavras, como:<br /> pg_num_rown, pg_fech_array e similares.</p>
+<p>Algumas funções agora tem outro nome, por exemplo:<br /> pg_exec agora deve ser substuida por pg_query</p>
+<p>Algumas estruturas de controle usavam os dois pontos:<br /> while: ... endwhile, if: ... endif, devemos preferir:<br /> while(){ ... }, if(){ ... }</p>
+<p>Evitar o uso do comentário tipo shell #.</p>
+<p>Estruturas do tipo 4HTTP_POST_VARS e similares foram substituídas por: $_POST e similares.</p>
+<br />
+<p><strong>Formatando Números</strong><br /> number_format</p>
+<p>number_format -- Formata um número com os milhares agrupados<br /> string number_format ( float number [, int decimals] )<br /> string number_format ( float number, int decimals, string dec_point, string thousands_sep )</p>
+<p>number_format() retorna uma versão formatada de number. Esta função aceita um, dois ou quatro parâmetros (não três):</p>
+<p>Se apenas um parâmetro é dado, number será formatado sem decimais, mas com uma virgula (",") entre cada grupo de milhar.</p>
+<p>Se dois parâmetros são dados, number será formatado com o número de casas decimais especificadas em decimals com um ponto (".") na frente, e uma vírgula (",") entre cada grupo de milhar.</p>
+<p>Se todos os quatro parâmetros forem dados, number será formatado com o número de casas decimais em decimals, dec_point ao invés do ponto (".") antes das casas decimais e thousands_sep ao invés de uma vírgula (",") entre os grupos de milhares.</p>
+<p>Somente o primeiro caractere de thousands_sep é usado. Por exemplo, se você usar foo como o parâmetro thousands_sep no número 1000, number_format() irá retornar 1f000.</p>
+<p>Exemplo 1. Exemplo number_format()</p>
+<p>Por exemplo, a notação Francesa usa duas casas decimais, vírgula (',') como separador decimal, e espaço (' ') como separador de milhar. Isto é feito com a linha :</p>
+<p>&lt;?php</p>
+<p>// string number_format ( float number, int decimals, string dec_point, string thousands_sep )<br /> $number = 1234.56;</p>
+<p>// Notação Brasileira<br /> $numero_format_brasil = number_format($numero, 2, ',', '.');</p>
+<p>// 1.234,56<br /> echo "O número' $number' no formato brasileiro fica '$numero_format_brasil'&lt;br&gt;&lt;br&gt;";<br /> ?&gt;</p>
+<p><strong>Validação de Ano Bisexto </strong></p>
+<p>&lt;?php<br /> function ano_bisexto($ano){<br /> return ((($ano%4)==0 &amp;&amp; ($ano%100) != 0) || ($ano%400)==0);<br /> }</p>
+<p>if(ano_bisexto(2006))<br /> echo "Ano bisexto";<br /> else<br /> echo "Ano não bisexto";<br /> ?&gt;</p>
+<p><strong>Algumas Funções Matemáticas</strong></p>
+<p>abs -- Valor absoluto</p>
+mixed abs ( mixed número )<br />
+<div>&lt;?php<br /> $abs = abs(-4.2); // $abs = 4.2; (double/float)<br /> $abs2 = abs(5); // $abs2 = 5; (inteiro)<br /> $abs3 = abs(-5); // $abs3 = 5; (inteiro)<br /> ?&gt;<br /> <br /> ceil -- Arredonda frações para cima<br /> float ceil ( float valor )<br /> <br />
+<div>&lt;?php<br /> echo ceil(4.3); // 5<br /> echo ceil(9.999); // 10<br /> ?&gt;<br /> <br /> floor -- Arredonda frações para baixo<br /> float floor ( float valor )<br />
+<div>&lt;?php<br /> echo floor(4.3); // 4<br /> echo floor(9.999); // 9<br /> ?&gt;</div>
+max -- Localiza o maior número<br /> mixed max ( number arg1, number arg2 [, number ...] )<br /> mixed max ( array numbers [, array ...] )</div>
+<div>&lt;?php<br /> echo max(1, 3, 5, 6, 7); // 7<br /> echo max(array(2, 4, 5)); // 5<br /> <br /> echo max(0, 'hello'); // 0<br /> echo max('hello', 0); // hello<br /> echo max(-1, 'hello'); // hello<br /> <br /> // Com arrays múltiplos, max compara da esquerda para direita,<br /> // assim nesse exemplo: 2 == 2, mas 4 &lt; 5<br /> $val = max(array(2, 4, 8), array(2, 5, 7)); // array(2, 5, 7)<br /> <br /> // Se forem informados um array e um não array, o array<br /> // é sempre retornado como se ele fosse o maior<br /> $val = max('string', array(2, 5, 7), 42); // array(2, 5, 7)<br /> ?&gt;<br /> <br /> min -- Localiza o menor número<br /> mixed min ( number arg1, number arg2 [, number ...] )<br /> mixed min ( array numbers [, array ...] )</div>
+</div>
+<br />
+<div>&lt;?php<br /> echo min(2, 3, 1, 6, 7); // 1<br /> echo min(array(2, 4, 5)); // 2<br /> <br /> echo min(0, 'hello'); // 0<br /> echo min('hello', 0); // hello<br /> echo min('hello', -1); // -1<br /> <br /> // Com arrays múltiplos, min compara da esquerda para direita,<br /> // assim nesse exemplo: 2 == 2, mas 4 &lt; 5<br /> $val = min(array(2, 4, 8), array(2, 5, 1)); // array(2, 4, 8)<br /> <br /> // Se ambos forem um array e um não array, o array<br /> // nunca será retornado porque ele é sempre considerado o maior<br /> $val = min('string', array(2, 5, 7), 42); // string<br /> ?&gt;<br /> <br /> count -- Conta o número de elementos de uma variável<br /> int count ( mixed var [, int mode] )</div>
+<div><br />
+<div>&lt;?php<br /> $a[0] = 1; <br /> $a[1] = 3; <br /> $a[2] = 5; <br /> $result = count($a);<br /> // $result == 3<br /> <br /> $b[0] = 7;<br /> $b[5] = 9;<br /> $b[10] = 11;<br /> $result = count($b);<br /> // $result == 3;<br /> ?&gt;</div>
+<p>Exemplo 2. Uso recursivo da função count() (PHP &gt;= 4.2.0)</p>
+<div>&lt;?php<br /> $food = array( 'fruits' =&gt; array('orange', 'banana', 'apple'),<br /> 'veggie' =&gt; array('carrot', 'collard','pea'));<br /> // recursive count<br /> echo count($food,COUNT_RECURSIVE); // mostra 8<br /> // normal count<br /> echo count($food); // mostra2 2<br /> ?&gt;</div>
+<br /> pow -- Potência<br /> number pow ( number base, number exp )</div>
+<div><br /> var_dump( pow(2,8) ); // int(256)<br /> echo pow(-1,20); // 1<br /> echo pow(0, 0); // 1<br /> echo pow(-1, 5.5); // erro</div>
+<br /> rand -- Gera um número aleatório<br /> int rand ( [int min, int max] )<br /> <br /> echo "Exibir 20 números aleatórios entre 20 e 160&lt;br&gt;&lt;br&gt;";<br /> for($x=20;$x&lt;40;$x++){<br /> echo rand($x, 4*$x)."&lt;br&gt;";<br /> }<br /> exit("Saindo...");<br /> <br /> round -- Arredonda um número<br /> float round ( float val [, int precision] )<br /> <br />
+<div>&lt;?php<br /> echo round(3.4); // 3<br /> echo round(3.5); // 4<br /> echo round(3.6); // 4<br /> echo round(3.6, 0); // 4<br /> echo round(1.95583, 2); // 1.96<br /> echo round(1241757, -3); // 1242000<br /> echo round(5.045, 2); // 5.04<br /> echo round(5.055, 2); // 5.06<br /> ?&gt;<br /> <br /> sqrt -- Raiz quadrada<br /> float sqrt ( float arg )</div>
+<br />
+<pre>&lt;?php<br />// Precisão depende de sua diretiva precision<br />echo sqrt(9); // 3<br />echo sqrt(10); // 3.16227766 ...<br />?&gt;</pre>
+<p><strong>Forçando a Limpeza do Cache</strong></p>
+<p><br /> &lt;?php<br /> // Este é para os servidores de proxy. Diz para baixar, bypassando o proxy<br /> header ("Cache-Control: no-cache, must-revalidate");</p>
+<p>// Este é para o navegador e nem sempre funciona (falta de padrão entre eles)<br /> header ("Pragma: no-cache");<br /> ?&gt;</p>
+<p>Redirecionamento de Páginas</p>
+<p>header("location: novapagina.php");</p>
+<p>Exibir o conteúdo de um arquivo</p>
+<p>readfile -- Lê e exibe o conteúdo de um arquivo</p>
+<p>readfile('http://www.google.com.br');</p>
+<p>readfile('/home/1www/pagina2.php');</p>
+<p><strong>Enviar E-mail via PHP</strong></p>
+<p>&lt;?php<br /> $to = "<span id="cloakb6f52f4910830dc95585c9d582bafea7">Este endereço de email está sendo protegido de spambots. Você precisa do JavaScript ativado para vê-lo.</span><script type='text/javascript'>
+				document.getElementById('cloakb6f52f4910830dc95585c9d582bafea7').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addyb6f52f4910830dc95585c9d582bafea7 = 'r&#105;b&#97;m&#97;r.s&#111;&#117;s&#97;' + '&#64;';
+				addyb6f52f4910830dc95585c9d582bafea7 = addyb6f52f4910830dc95585c9d582bafea7 + 'dn&#111;cs' + '&#46;' + 'g&#111;v' + '&#46;' + 'br';
+				var addy_textb6f52f4910830dc95585c9d582bafea7 = 'r&#105;b&#97;m&#97;r.s&#111;&#117;s&#97;' + '&#64;' + 'dn&#111;cs' + '&#46;' + 'g&#111;v' + '&#46;' + 'br';document.getElementById('cloakb6f52f4910830dc95585c9d582bafea7').innerHTML += '<a ' + path + '\'' + prefix + ':' + addyb6f52f4910830dc95585c9d582bafea7 + '\'>'+addy_textb6f52f4910830dc95585c9d582bafea7+'<\/a>';
+		</script>";<br /> $subject="Apenas testando";<br /> $message = "Estou testando o envio de e-mail pelo PHP.";<br /> $email="<span id="cloak5060171e4e7e1e98c10a0ead3f03cbce">Este endereço de email está sendo protegido de spambots. Você precisa do JavaScript ativado para vê-lo.</span><script type='text/javascript'>
+				document.getElementById('cloak5060171e4e7e1e98c10a0ead3f03cbce').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addy5060171e4e7e1e98c10a0ead3f03cbce = 'r&#105;b&#97;fs' + '&#64;';
+				addy5060171e4e7e1e98c10a0ead3f03cbce = addy5060171e4e7e1e98c10a0ead3f03cbce + 'gm&#97;&#105;l' + '&#46;' + 'c&#111;m';
+				var addy_text5060171e4e7e1e98c10a0ead3f03cbce = 'r&#105;b&#97;fs' + '&#64;' + 'gm&#97;&#105;l' + '&#46;' + 'c&#111;m';document.getElementById('cloak5060171e4e7e1e98c10a0ead3f03cbce').innerHTML += '<a ' + path + '\'' + prefix + ':' + addy5060171e4e7e1e98c10a0ead3f03cbce + '\'>'+addy_text5060171e4e7e1e98c10a0ead3f03cbce+'<\/a>';
+		</script>";<br /> $ret=mail($to, $subject, $message, "From: $email\r\nReply-to: $email\r\n");<br /> echo $ret;<br /> ?&gt;</p>
+<p><strong>Usando Favicon em sites</strong></p>
+<p>Aquele pequeno ícone que fica à esquerda da URL do site, na caixa Location do Browser,<br /> que inclusive personaliza a barra de links quando arrastamos o endereço do site.<br /> Para que nosso site apareça para o visitante com um link, devemos seguir os<br /> seguintes procedimentos:</p>
+<p>- Criar uma imagem com o logo do site, no formato png, jpg, gif, etc com 32x32 pixels<br /> - Salvar como favicon.png ou outra extensão<br /> - Adicionar a TAG abaixo, na TAG head, como abaixo:<br /> &lt;head&gt;<br /> ...<br /> &lt;link href="http://www.seusite.com.br/diretorio/favicon.png" type="image/gif" rel="icon"&gt;<br /> ...<br /> &lt;/head&gt;</p>
+<p>Também pode ser assim:<br /> rel="shortcut icon"</p>
+<p>Este ícone pode ser inclusive animado.<br /> Referência: lista da Dicas-L (http://www.dicas-l.com.br).</p>
+<p><strong>Livros</strong><br /> Desenvolvendo Web Sites com PHP<br /> Editora Novatec<br /> Juliano Niederauer</p>
+<p>PHP para quem conhece PHP<br /> Editora Novatec<br /> Juliano Niederauer</p>
+<p>PHP Guia do Desenvolvedor<br /> Ed. Berkeley<br /> Sterling Hughes<br /> (Do grupo de desenvolvimento do PHP)</p>
+<p>Desvendando aplicações na Web com PHP 4.0<br /> Ed. Ciência Moderna<br /> Tobias Retschiller e<br /> Till Gerken</p>
+<p><strong>Links</strong></p>
+<p>PHP<br /> <a href="http://www.zend.com/">http://www.php.net<br /> http://www.php.net/manual/pt_BR/<br /> http://www.phpbrasil.com/<br /> http://www.planet-source-code.com/vb/default.asp?lngWId=8<br /> http://www.hotscripts.com/PHP/index.html<br /> http://www.zend.com</a> (empresa dos dois membros israelenses da equipe de desenvolvimento do PHP, especial ênfase na seção Developer Zone)<br /> <a href="http://www.devshed.com/">http://www.phpwizard.net<br /> http://www.phpclasses.org<br /> http://www.weberdev.com<br /> http://www.devshed.com</a><br /> <a href="http://www.phpnet.us/">http://www.phpmania.org/<br /> http://www.phpnet.us/</a> - Hospedagem free para PHP e MySQL (300MB)<br /> <a href="http://ribafs.byethost2.com/">http://www.superphp.com.br<br /> http://www.scriptbrasil.com/<br /> http://www.faqts.com/knowledge_base/index.phtml/fid/51/<br /> http://www.alt-php-faq.org/<br /> http://ribafs.byethost2.com/</a></p>
+<p><strong><small>CURSOS GRÁTIS</small></strong><br /> <a href="http://cursos.cdtc.org.br/brasil/">http://cursos.cdtc.org.br/brasil/</a> - Cursos Grátis para Func.Públ.<br /> <a href="http://www.solocursosgratis.com/cursos_gratis_php-slctema264.htm">http://www.apostilando.com/download.php?cod=171&amp;categoria=PHP<br /> http://www.aprendaemcasa.com.br/apcasa6.htm<br /> http://www.solocursosgratis.com/cursos_gratis_php-slctema264.htm</a></p>
+<p>CLIPARTS<br /> <a href="http://www.digitmania.holowww.com/digital.html">http://www.digitmania.holowww.com/digital.html</a> – Dígitos (cliparts)</p>
+<p><a href="http://paginas.terra.com.br/informatica/php_editor/">EDITORES<br /> http://paginas.terra.com.br/informatica/php_editor/</a></p>
+<p>POSTGRESQL<br /> <a href="http://www.postgresql.org/docs/current/interactive/">http://www.postgresql.org/docs/current/interactive/</a><br /> <a href="http://pgdocptbr.sourceforge.net/pg80/index.html">http://pgdocptbr.sourceforge.net/pg80/index.html</a><br /> <a href="http://www.designmagick.com/category/3/PostgreSQL">http://www.designmagick.com/category/3/PostgreSQL</a></p>
+<p>SQL<a href="http://tutorials.findtutorials.com/"><br /> </a><a href="http://www.firstsql.com/tutor.htm">http://www.firstsql.com/tutor.htm</a><br /> <a href="http://sqlzoo.net/">http://sqlzoo.net/</a><br /> <a href="http://www.sql-tutorial.net/SQL-tutorial.asp">http://www.sql-tutorial.net/SQL-tutorial.asp</a><br /> <a href="http://www.programmingtutorials.com/sql.aspx">http://www.programmingtutorials.com/sql.aspx</a><br /> <a href="http://tutorials.findtutorials.com/">http://tutorials.findtutorials.com/</a><br /> <a href="http://www.hardened-php.net/home.8.html">http://www.hardened-php.net/home.8.html</a> - Hardened PHP Project<br /><a href="http://www.1phpscripts.com/">http://www.1phpscripts.com/<br /></a><a href="http://www.weberdev.com/">http://www.weberdev.com/<br /></a><a href="http://www.goldsofts.com/scriptscategory/10/0/1/0.html">http://www.goldsofts.com/scriptscategory/10/0/1/0.html </a></p>
+</div>
+<p><code>
+
+
+
+
+
+</code></p> 	</div>
+
+	
+	
+				
+	
+	
+	
+</article>
+
+</body>
+</html>

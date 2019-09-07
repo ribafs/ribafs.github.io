@@ -1,0 +1,1983 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="Joomla! - Open Source Content Management" -->
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Unity 3D - RibaFS Portal</title>
+		<description><![CDATA[Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros.]]></description>
+		<link>http://backup/portal/mobile/unity-3d.html</link>
+		<lastBuildDate>Sat, 07 Sep 2019 19:02:56 -0300</lastBuildDate>
+		<generator>Joomla! - Open Source Content Management</generator>
+		<atom:link rel="self" type="application/rss+xml" href="http://backup/portal/mobile/unity-3d.feed?type=rss"/>
+		<language>pt-br</language>
+		<item>
+			<title>Jogos para Unity 3D</title>
+			<link>http://backup/portal/mobile/unity-3d/jogos-para-unity-3d.html</link>
+			<guid isPermaLink="true">http://backup/portal/mobile/unity-3d/jogos-para-unity-3d.html</guid>
+			<description><![CDATA[<p><strong>Alguns pequneos Jogos de Exemplo</strong></p>
+
+<p>Criados com o Unity 5</p>
+
+<p> </p>
+
+<p><a title="Asteroides2DFinalPt.zip" href="http://backup/portal/../down/mobile/unity3d/Asteroides2DFinalPt.zip">Asteroides2DFinalPt.zip</a></p>
+
+<p><a title="Chickenator.zip" href="http://backup/portal/../down/mobile/unity3d/Chickenator.zip">Chickenator.zip - </a>Este jogo foi criado seguindo a vídeo aula no <a href="https://www.youtube.com/watch?v=3Hq3z7a33MM">https://www.youtube.com/watch?v=3Hq3z7a33MM</a></p>
+
+<p><a title="JogodaVelha.zip" href="http://backup/portal/../down/mobile/unity3d/JogodaVelha.zip">JogodaVelha.zip</a></p>
+
+<p> </p>]]></description>
+			<category>Unity 3D</category>
+			<pubDate>Tue, 11 Jul 2017 17:44:49 -0300</pubDate>
+		</item>
+		<item>
+			<title>Input Manager</title>
+			<link>http://backup/portal/mobile/unity-3d/input-manager.html</link>
+			<guid isPermaLink="true">http://backup/portal/mobile/unity-3d/input-manager.html</guid>
+			<description><![CDATA[<p style="margin-bottom: 0cm; line-height: 100%;"><b>Input Manager no Unity 3D<br /></b></p>
+
+
+<p style="margin-bottom: 0cm; line-height: 100%;"> </p>
+
+
+<p style="margin-bottom: 0cm; line-height: 100%;">Para criar mais duas entradas no Input</p>
+
+
+<p style="margin-bottom: 0cm; line-height: 100%;">Edit – Project Settings – Input</p>
+
+
+<p style="margin-bottom: 0cm; line-height: 100%;">Mudar Size para 17, criando duas novas entradas</p>
+
+
+<p style="margin-bottom: 0cm; line-height: 100%;">Alterar as duas últimas assim (Forward e Right):</p>
+
+
+<p style="margin-bottom: 0cm; line-height: 100%;"><img src="http://backup/portal/images/inputmanager.png" alt="" /></p>
+
+
+<p style="margin-bottom: 0cm; line-height: 100%;"> </p>
+
+
+<p style="margin-bottom: 0cm; line-height: 100%;"> </p>
+
+
+<p style="margin-bottom: 0cm; line-height: 100%;"> </p>
+
+
+<p style="margin-bottom: 0cm; line-height: 100%;"> </p>
+
+
+<p style="margin-bottom: 0cm; line-height: 100%;"> </p>
+
+
+<p style="margin-bottom: 0cm; line-height: 100%;"> </p>
+
+
+<p style="margin-bottom: 0cm; line-height: 100%;"> </p>
+
+
+<p style="margin-bottom: 0cm; line-height: 100%;"> </p>
+
+
+<p style="margin-bottom: 0cm; line-height: 100%;"> </p>
+
+
+<p style="margin-bottom: 0cm; line-height: 100%;"> </p>
+
+
+<p style="margin-bottom: 0cm; line-height: 100%;"> </p>
+
+
+<p style="margin-bottom: 0cm; line-height: 100%;"> </p>
+
+
+<p style="margin-bottom: 0cm; line-height: 100%;"> </p>
+
+
+<p style="margin-bottom: 0cm; line-height: 100%;"> </p>
+
+
+<p style="margin-bottom: 0cm; line-height: 100%;"> </p>
+
+
+<p style="margin-bottom: 0cm; line-height: 100%;"> </p>
+
+
+<p style="margin-bottom: 0cm; line-height: 100%;"> </p>
+
+
+<p style="margin-bottom: 0cm; line-height: 100%;"> </p>
+
+
+<p style="margin-bottom: 0cm; line-height: 100%;"> </p>
+
+
+<p style="margin-bottom: 0cm; line-height: 100%;"> </p>
+
+
+<p style="margin-bottom: 0cm; line-height: 100%;"> </p>
+
+
+<p style="margin-bottom: 0cm; line-height: 100%;"> </p>
+
+
+<p style="margin-bottom: 0cm; line-height: 100%;"> </p>
+
+
+<p style="margin-bottom: 0cm; line-height: 100%;"> </p>
+
+
+<p style="margin-bottom: 0cm; line-height: 100%;"> </p>
+
+
+<p style="margin-bottom: 0cm; line-height: 100%;"> </p>
+
+
+<p style="margin-bottom: 0cm; line-height: 100%;"> </p>
+
+
+<p style="margin-bottom: 0cm; line-height: 100%;">Apenas mudando Negative Button e Positive Button em ambas para <b>s </b>e <b>w</b> e <b>a</b> e <b>d</b></p>
+
+
+<p style="margin-bottom: 0cm; font-weight: normal; line-height: 100%;">Usando:</p>
+
+
+<p style="margin-bottom: 0cm; font-weight: normal; line-height: 100%;">float forward = Input.GetAxis(“Forward”);</p>
+
+
+<p style="margin-bottom: 0cm; font-weight: normal; line-height: 100%;">float right = Input.GetAxis(“Right”);</p>
+
+
+<p style="margin-bottom: 0cm; font-weight: normal; line-height: 100%;">movement = new Vector3(movement.x + right, movement.y, movement.z + forward);</p>
+
+
+<p style="margin-bottom: 0cm; font-weight: normal; line-height: 100%;">tranfrorm.Translate(movement * Time.deltaTime * movementVelocity, Space.World);</p>]]></description>
+			<category>Unity 3D</category>
+			<pubDate>Tue, 11 Jul 2017 17:30:24 -0300</pubDate>
+		</item>
+		<item>
+			<title>Programando em C# para Unity 3D</title>
+			<link>http://backup/portal/mobile/unity-3d/programando-em-c-para-unity-3d.html</link>
+			<guid isPermaLink="true">http://backup/portal/mobile/unity-3d/programando-em-c-para-unity-3d.html</guid>
+			<description><![CDATA[<p style="margin-bottom: 0cm; text-align: justify;" align="center"><span style="font-size: large;"><b>Programando em C# para Unity</b></span></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Help</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Ao trabalhar ou estudar sobre programação no Unity mantenha sempre esta janela aberta: <a href="http://docs.unity3d.com/ScriptReference/">http://docs.unity3d.com/ScriptReference/</a></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Use e abuse da busca para encontrar detalhes sobre a programação.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Também fique atento às dicas do Editor quando autocompleta o código.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>GameObject</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">O comportamento dos GameObjects é controlado pelos componentes que são anexados a eles. O Unity considera os script como componentes e estes dão interatividade aos objetos do jogo.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Script</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Criar uma pasta chamada Scripts em Assets:</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Clicar em Assets</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Do lado direito clicar com o botão direito – Create – Folder (com nome Scripts)</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Abrir a pasta criada com um duplo clique</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Clicar com botão direito do mouse na área livre</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Create – C# Script com nome JogadorScript</p>
+
+<p style="text-align: justify;">O Unity suporta nativamente 3 linguagens de programação. Quando criamos um script precisamos especificar que linguagem ele usará. Podemos usar JavaScript, CSharp ou Boo.</p>
+
+<p style="text-align: justify;">Quando criamos um script em C# ou Boo e o abrimos no editor, ele já nos mostra uma pequena estrutura com uma classe e a definição de duas funções: Start() e Update(). Se for JavaScript ele não tem classe, apenas as funções.</p>
+
+<p style="text-align: justify;">Recomenda-se que cada script contenha somente uma classe e seja somente sobre um único assunto.</p>
+
+<p style="text-align: justify;">Cada script somente pode usar uma linguagem de programação, mas nós podemos usar scripts das 3 linguagens se quisermos em um único jogo, o que não é comum nem recomendado.</p>
+
+<p style="text-align: justify;">Neste tutorial iremos utilizar a linguagem C# (Csharp).</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Inicialização de Variáveis Públicas do tipo GameObject</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Estas variáveis devem ser completadas pelo Inspector, arrastando para elas um GameObject da Hierarquia ou um Prefab do Assets.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Anexar o Script à Main Camera</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Como estes scripts iniciais usarão apenas comandos da Console, anexaremos à Main Camera. Arraste o nome do script e solte sobre a Main Camera na Hierarquia.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Boa Prática</b></p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;">Nomear as variáveis tipo GameObject com o sufixo Prefab:</p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;">public GameObject balaPrefab;</p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; page-break-before: always; text-align: justify;"><b>Tecla de Atalho para Help Online no Monodevelop</b></p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;">Selecione a palavra sobre a qual quer ajuda e tecle</p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;">Ctrl + '<br /><br /></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Orientação a Objetos</b></p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;">Objetos são instanciados (clonados) de classes. Uma classe é justamente um arquivo que traz as definições de seu objeto.</p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;">Quando rodamos nosso jogo no Unity cada inimigo deve ser equipado com uma cópia do objeto.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Abrir o Script no Editor</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Ao efetuar um duplo clique no nome do script ele é aberto no editor Monodevelop. O Unity, para facilitar nossa vida, já mostra um template de script com alguns comandos como abaixo:</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">using UnityEngine;</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">using System.Collections;</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">public class JogadorScript : MonoBehaviour {</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">// Use this for initialization</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">void Start () {</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">}</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">// Update is called once per frame</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">void Update () {</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">}</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">}</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Renomear Script</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Quando criamos um script o Unity dá o nome NewBehaviourScript a ele.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Devemos renomer o mesmo antes que perca o foco. Caso demoremos a fazer isso, após renomear e quando abrir o nome da classe estará como o nome original do script, ou seja, NewBehaviourScript. Precisará renomear a classe para que tenha o mesmo nome do script e funcione corretamente.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Includes</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">As duas primeiras linhas:</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">using UnityEngine;</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">using System.Collections;</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Incluem as bibliotecas do Unity para que fiquem disponíveis no script.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Classe</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">A linha:</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">public class JogadorScript : MonoBehaviour {</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Cria uma classe que herda da MonoBehaviour.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Toda script tem uma classe criada obrigatoriamente com o mesmo nome do script.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Base para a Linguagem C#</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">As bases de uma linguagem orientada a objetos são as variáveis e os métodos. Em CSharp qualquer código deve ficar dentro de uma classe.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Orientação a Objetos</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Como C# é uma linguagem orientada a objetos é mais coerente usarmos o termo método no lugar de função.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Variáveis</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">É uma pequena seção da memória do computador onde guardamos valores. Podemos comparar as variáveis a gavetas. Cada gaveta guarda o nome da variável, o tipo, a visibilidade e o valor.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><img src="http://backup/portal/images/progcs.jpeg" alt="" /> <br clear="left" /> <b>Definição/Criação de Variável</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">private int velocidade;</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">public int espaco;</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Inicializando Variável</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">velocidade = 60;</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">espaco = 2;</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Usando/Chamando Variável</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">tempo = espaco / velocidade;</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Final de Linha</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Toda linha de código em C# termina com ponto e vírgula (;).</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Exemplo:</p>
+
+<p style="text-align: justify;">public int number1 = 2;</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">O C# exige que uma variável seja inicializada (receba valor) antes de ser usada.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Visibilidade/Modificadores de Acesso</b></p>
+
+<p style="text-align: justify;">public – são variáveis que podem ser acessadas também por outros scripts. Aparecem no Inspector para atribuição e alteração</p>
+
+<p style="text-align: justify;">private – são acessíveis somente no script onde são criadas. Não aparecem no Inspector</p>
+
+<p style="text-align: justify;">local – são acessíveis somente dentro da função onde foram criadas. Não aparecem no Inspector</p>
+
+<p style="text-align: justify;">Quando não especificamos a visibilidade é assumida private, que é a default.</p>
+
+<p style="text-align: justify;">No JavaScript, para ser public, basta que seja criada fora de função.</p>
+
+<p style="text-align: justify;">Exemplo:</p>
+
+<p style="text-align: justify;">public int nomeVariavel = 3;</p>
+
+<p style="text-align: justify;">ou</p>
+
+<p style="text-align: justify;">public void Start()</p>
+
+<p style="text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Comentários</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">// Comentários de linha única</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">/* Comentários</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">para várias</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">linhas</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">*/</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Indentação</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Importante para a organização e legibilidade do código</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">void Start(){</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">    if(x == 0){</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">        y = 3;</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">    }</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">}</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Editar Script</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Edite o script e adicione as variáveis abaixo da linha da definição da Classe. Assim:</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">using UnityEngine;</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">using System.Collections;</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">public class VeriaveisScript : MonoBehaviour {</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b> // Definição das variáveis</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">public int velocidade;</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">public int distancia;</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">public int tempo;</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">void Start () {</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b> // Inicialização</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">distancia = 120;</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">tempo = 2;</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b> // Usando</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">velocidade = distancia / tempo;</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">print (“A velocidade é de “ + velocidade);</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">}</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">}</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">O comando print é mostrado apenas na barra de status e na janela Console.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Selecionar a janela Console e clicar em Play.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">public class MetodoScript : MonoBehaviour {</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">public int arma = 0;</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">// Use this for initialization</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">void Start () {</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">SacarArma ();</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">}</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">// Update is called once per frame</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">void SacarArma () {</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">// Armas com codigo: 1-espada, 2-flecha, 3-revolver, 4-rifle</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">arma = Random.Range (1, 5);</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">switch(arma){</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">case 1:</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">print ("Voce encontrou a espada");</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">break;</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">case 2:</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">print ("Voce encontrou a flecha");</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">break;</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">case 3:</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">print ("Voce encontrou o revolver");</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">break;</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">case 4:</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">print ("Voce encontrou o rifle");</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">break;</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">default:</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">print ("Voce nao encontrou nada");</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">break;</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">}</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">}</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">}</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Execute algumas vezes.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;"><b>Tipos de Dados</b></span></span></p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;">int – inteiros</span></span></p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;">float – ponto flutuante, são números decimais. Em C# devem ter seus valores escritos com um f ao final, para distinguir dos inteiros. Ex: float speed = 3.2f;</span></span></p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;">string – são dados do tipo texto</span></span></p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;">Visibilidade – Níveis de Acesso</span></span></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;"><b>Nomes de Variáveis e Métodos</b></span></span></p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;">Alguns nomes são proibidos, pois tem seu uso reservado pelo Unity, como é o caso de algumas letras:</span></span></p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;">x, y, z</span></span></p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;">Que são usadas internamente pelo transform.</span></span></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; page-break-before: always; text-align: justify;"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;"><b>Expressões e Precedência</b></span></span></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;">Precisamos aprender a manipular as expressões em programação, assim como em Matemática. Aprender sobre a ordem de precedência, quem é executado primeiro, quem depois, etc. </span></span></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;">Exemplo:</span></span></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;">int variavelInt;</span></span></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;">float variavelInt2;</span></span></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;">variavelInt2 = 3;</span></span></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;">variavelInt = 10 + 3 * variavelInt2;</span></span></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;">Melhor é fazer assim, usando parêntesis, caso contrário dará um resultado errado:</span></span></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;">variavelInt = (10 + 3) * variavelInt2;</span></span></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Comando Condicional - if</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Criar um script chamado IfScript. Remova o script Variaveis da Main Camera e anexe este.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">A mais comum forma de tomar decisões é usando o comando if.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Operador NOT</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">if(!variavel)...</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">using UnityEngine;</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">using System.Collections;</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">public class IfScript : MonoBehaviour {</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">// Definição das variáveis</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">public int velocidade;</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">public int distancia;</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">public int tempo;</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">// Use this for initialization</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">void Start () {</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">// Inicialização</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">distancia = 180;</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">tempo = 10;</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">velocidade = distancia / tempo;</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">if(velocidade &gt; 70){</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">print (“Desacelere, pois sua velocidade é de “ + velocidade);</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">}</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">}</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">}</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Execute.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Atribuição</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">= é usado para atribuir, para gravar um valor em uma variável. Exemplo:</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">velocidade = 5; // Diz que a variável recebeu 5, agora tem 5 armazenado nela</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">== usado nas comparações com if, para comparar uma variável com um valor ou com outra variável. Exemplo:</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">if (x == 3)</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">ou</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">if ( x == z)</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Operadores </b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Operadores de Comparação</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">==, &gt;, &lt;, &gt;=, &lt;=, !=</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Operadores Lógicos</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">&amp;&amp; - AND</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">|| - OR</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">! - NOT</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Operadores Matemáticos</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">+, -, *, /, %, ++, --</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">*=, +=, /=, -=, %=</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Comando Switch - </b><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;"><span lang="pt-PT">Instruções switch agem como condicionais if. Elas serão úteis para quando você quiser comparar uma única variável contra uma série de constantes.</span></span></span></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Este comando substitui vários ifs em algumas vezes.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Crie um script SwitchScript contendo:</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">using UnityEngine;</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">using System.Collections;</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">public class SwitchScript : MonoBehaviour {</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">public int arma = 0;</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">void Start () {</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">// Armas com codigo: 1-espada, 2-flecha, 3-revolver, 4-rifle</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">arma = Random.Range (1, 5);</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">switch(arma){</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">case 1:</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">print ("Voce encontrou a espada");</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">break;</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">case 2:</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">print ("Voce encontrou a flecha");</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">break;</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">case 3:</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">print ("Voce encontrou o revolver");</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">break;</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">case 4:</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">print ("Voce encontrou o rifle");</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">break;</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">default:</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">print ("Voce nao encontrou nada");</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">break;</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">}</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">}</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">}</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Execute várias vezes.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Métodos</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">É onde acontecem as ações. Um método contem um trecho de código, é um pequeno programa dentro do script.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Geralmente o código nos scripts é executado uma linha por vez.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Quando criamos nosso código geralmente queremos executá-lo mais de uma vez e queremos poder executar apenas um trecho de código.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">O código dos métodos inicia na próxima linha após o início da chave e termina na linha imediatamente anterior ao final da chave.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Métodos são usados para oferecer comportamento aos GameObjects e também para reutilizar código.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Todo código executável em scripts está dentro de métodos.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Se nosso código executa algumas tarefas várias vezes ele está nos dizendo que devemos criar um método e apenas chamá-lo sempre que quisermos executar o código.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Exemplo: precisamos multiplicar dois números em várias partes do código. Então criamos um pequeno método chamado ProdutoDois() e apenas o chamamos quando precisarmos multiplicar os dois numeros.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Editar o script e adicionar duas variáveis:</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">public int numberOne = 2;</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">public int numberTwo = 9;</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Insira no método Update():</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">if (Input.GetKeyUp(KeyCode.Return)) // Quando teclar Enter</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">ProductTwo(); // irá processar o método</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Adicionar abaixo do método Update():</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">void ProductTwo(){</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Debug.Log(numberOne * numberTwo);</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">}</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Um método também quando chamado ele processa todo o código do seu conteúdo.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Métodos tem duas chaves, no início uma chave abrindo e ao final fechando a chave.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Os métodos que criamos somente serão executados quando forem chamados. Os métodos do Unity Start e Update são executados automaticamente pelo próprio Unity.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Chamando/executando um Método</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">ProductTwo();</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Um método pode ter muitas linhas de código em seu interior. Um método é chamado um pequeno programa dentro de outro.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Tipos de Métodos:</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Simples</b>, apenas executando um trecho de código:</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">void ProductTwo(){</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Debug.Log(numberOne * numberTwo);</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">}</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Método que recebe parâmetros</b> – recebe variáveis e processa em seu conteúdo</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">void ProductTwo(int x, int y){</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Debug.Log(x * y);</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">}</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Método que Retorna valores</b> – pode receber variáveis e retorna o valor de uma variável de certo tipo</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">public int ProductTwo(int x, int y){</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">int produto = (x * y);</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">return produto;</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">}</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Nomes de Métodos</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">-visibilidade</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">-tipo de dados que o método retornará</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">-nome do método, CamelCase e seguido de ()</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">-código delimitado por chaves { }</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">visibilidade tipoDeRetorno NomeMetodo(){</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">corpo do método;</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">}</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">void – usado quando o método não retorna nada.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Parâmetros – usados na definição da função: firstNumber e secondNumber.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Argumentos – usados na chamada da função: 3 e 4.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">O comando return deve ser o último comando da função.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Estruturas de Laço</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Laço for</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Crie um script chamado ForScript contendo:</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">using UnityEngine;</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">using System.Collections;</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">public class ForScript : MonoBehaviour {</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">void Start () {</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">BuscaInimigo ();</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">}</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">// Update is called once per frame</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">void BuscaInimigo () {</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">for (int i=0; i &lt; 5; i++) {</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">print ("Valor de i " + i);</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">}</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">}</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">}</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;"><b>foreach – laço que mostra os elementos de um array</b></span></span></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<pre class="western"><code class="western"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;">using UnityEngine;</span></span></code> <code class="western"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;">using System.Collections;</span></span></code> <code class="western"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;">public class ForeachLoop : MonoBehaviour {<br />   </span></span></code> <code class="western">    </code><code class="western"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;">void Start ()  {<br /></span></span></code> <code class="western">        </code><code class="western"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;">string[] strings = new string[3];</span></span></code><br /> <code class="western">        </code> <code class="western">        </code><code class="western"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;">strings[0] = "First string";</span></span></code><br /> <code class="western">        </code><code class="western"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;">strings[1] = "Second string";<br /></span></span></code> <code class="western">        </code><code class="western"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;">strings[2] = "Third string";<br /></span></span></code> <code class="western">        </code> <code class="western">        </code><code class="western"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;">foreach(string item in strings) {<br /></span></span></code> <code class="western">            </code><code class="western"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;">print (item);</span></span></code><br /> <code class="western">        </code><code class="western"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;">}<br /></span></span></code> <code class="western">    </code><code class="western"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;">}</span></span></code> <br /><code class="western"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;">}</span></span></code></pre>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Execute e veja o resultado.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; page-break-before: always; text-align: justify;"><b>Arrays/Matrizes</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Um array é tipo uma variável e é uma forma de uma variável conter mais de um tipo de dados.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Criar 3 empty GameObjects chamados:</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">gato, cachorro e porco</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Criar a tag Inimigo</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Selecionar os 3 e adicionar a tag a eles</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Exemplo:</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">public GameObject[ ] players;</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">using UnityEngine;</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">using System.Collections;</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">public class ArrayScript : MonoBehaviour</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">{</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">public GameObject[] players;</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">void Start (){</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">players = GameObject.FindGameObjectsWithTag("Inimigo");</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">for(int i = 0; i &lt; players.Length; i++){</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Debug.Log("Inimigo numero "+i+" tem o nome "+players[i].name);</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">}</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">}</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">}</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Classes</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Classes contém variáveis e métodos e processam seus dados.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Em Unity praticamente não lidamos com a classe pois ele já cria para nós, mas todo script já vem com uma classe, cujo nome é o mesmo do script.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;"><span lang="pt-PT">Como usar classes para armazenar e organizar suas informações e como criar construtores para trabalhar com partes de sua classe</span></span></span></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; page-break-before: always; text-align: justify;"><b>Componente Script</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Lembrar que um script é um componente no Unity que deve ser anexado a um GameObject para funcionar. Ao anexar o nome do script aparece ao final das propriedades do Objeto no Inspector. Também aparecem as variáveis public.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Os scripts é que dão interatividade e vida aos jogos.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Variáveis armazenam dados.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Métodos permitem a execução de tarefas.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Sintaxe dos pontos</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">transform.position.x;</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Alterações das Propriedades</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Podemos alterar as propriedades do Inspector tanto na cena quanto quando o jogo está executando. Alterações quando executando aparecem imediatamente mas se perdem logo que o jogo é parado.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">O valor entrado nas variáveis no Inspector sobrescreve o valor original do script.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Resetando Mudanças</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Para desfazer mudanças feitas nas variáveis de um objeto, melhor de um componente, basta clicar com o botão direito na pequena roldana à direita do nome do componente e clicar em Reset.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Nomes de Variáveis</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Crie nomes simples e claros para suas variáveis.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Lembre da convenção:</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">-quando formado por uma única palavra, ele deve ser toda em minúscula:</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">private int speed;</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">-quando palavra composta, a primeira é com tudo minúsculo e a segunda iniciada com maiúscula, camelCase:</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">private int speedPlayer;</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Nomes de Métodos</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Seguem as mesmas regras, apenas com () ao final, mas assim CamelCase, diferente das variáveis devem iniciar com maiúscula como Start().</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Nomes de Classes</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Estes também devem ser CamelCase mas com inicial maiúscula.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Onde Declarar Variáveis</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">O local do código onde a variável é declarada é importante em termos de visibilidade.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Variáveis declaradas no início do script, logo abaixo da declaração da classe</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; page-break-before: always; text-align: justify;"><b>Escopo das Variáveis</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">using UnityEngine;</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">using System.Collections;</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">public class LearningScript : MonoBehaviour {// --------Bloco 1</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">public string block1 = "Bloco 1";</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">// Use this for initialization</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">void Start () { // -------- Bloco 2</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Debug.Log (block1);</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">string block2 = "Bloco 2";</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Debug.Log (block2);</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">{// --------- Bloco 3</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Debug.Log (block1);</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Debug.Log (block2);</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">string block3 = "Bloco 3";</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">} // Final Bloco 3</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">} // Final Bloco 2</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">void Metodo(){// --- Bloco 4</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">string block4 = "Bloco 4";</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Debug.Log (block4);</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">}// Final Bloco 4</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">} // Final Bloco 1</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Bloco 3 – criado apenas com as chaves.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Tente mostrar a variével block3 no segundo bloco ou a block4 no bloco 3 e veja que o editor já reclama.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">O escopo é determinado pela chaves dos blocos. As chaves limitam um bloco de código.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Variável é o primeiro bloco de código em C#.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Método é o segundo.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Editor</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Quando tentamos trabalhar com uma variável ou método que ainda não foi declarado o editor já nos alerta mudando a cor do mesmo para vermelho. Logo que corrigimos fica preto.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Sintaxe do Ponto</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">GameObject.Component</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">GameObject.Component.variavel ou metodo</p>
+
+<p style="margin-bottom: 0.5cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; page-break-before: always; text-align: justify;"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;"><b>Funções de Inicialização</b></span></span></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;">As funções que são executadas automaticamente pelo Unity, sem interferência do programador.</span></span></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Método Start()</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Chamado pelo Unity somente uma vez a cada execução do jogo. Primariamente usado para inicializar ou configurar as variáveis.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Método Update()</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">A maioria do código dos scripts vai dentro deste método. A cena é mostrada várias vezes por segundo, que é chamado de Frames por Segundo – FPS. Após a exibição de cada frame, o método Update() é chamado pelo Unity para executar seu código.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Permite ao jogo detectar entradas (inputs), cliques do mouse, teclas pressionadas, a cada frame.</p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;">O método Update() é adequado para uso de movimentação através de teclas.</span></span></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;"><b>awake() e start()</b></span></span></p>
+
+<p style="text-align: justify;"> </p>
+
+<p lang="pt-PT" style="margin-bottom: 0cm; text-align: justify;"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;"><b>Update() e FixedUpdate()</b></span></span></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><a name="result_box2"></a><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;"><span lang="pt-PT">Como efetuar mudanças a cada frame/quadro com a atualização usando as funções Update e FixedUpdate e suas diferenças.</span> </span></span></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; page-break-before: always; text-align: justify;"><b>Mostrando os métodos de Inicialização em Ação</b></p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;">Debug.Log("ExecutionOrder::global");</p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;">void Awake() {</p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;">Debug.Log("ExecutionOrder::Awake");</p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;">}</p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;">void Start () {</p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;">Debug.Log("ExecutionOrder::Start");</p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;">}</p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;">void Update () {</p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;">Debug.Log("ExecutionOrder::Update");</p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;">}</p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;">void FixedUpdate() {</p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;">Debug.Log("ExecutionOrder::FixedUpdate");</p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;">}</p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;">void LateUpdate() {</p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;">Debug.Log("ExecutionOrder::LateUpdate");</p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;">}</p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;">void OnRenderObject() {</p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;">Debug.Log("ExecutionOrder::OnRenderObject");</p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;">}</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Objetos Internos do Unity</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Um script unity é escrito em uma linguagem de programação, com seus recursos básicos e também conta com classes e funções/métodos da biblioeca do Unity. Um script em C# tem diferenças básicas de um script em JavaScript mas tem em comum os recursos da biblioteca do Unity que ambas utilizam.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>transform</b></p>
+
+<pre class="western" style="margin-bottom: 0.5cm;">transform.Translate(1, 1, 1);<br />
+
+
+
+
+
+transform.Translate(<a href="http://docs.unity3d.com/ScriptReference/Vector3-forward.html">Vector3.forward</a> * <a href="http://docs.unity3d.com/ScriptReference/Time-deltaTime.html">Time.deltaTime</a>);<br />
+
+
+
+
+
+transform.Translate(<a href="http://docs.unity3d.com/ScriptReference/Vector3-up.html">Vector3.up</a> * <a href="http://docs.unity3d.com/ScriptReference/Time-deltaTime.html">Time.deltaTime</a>, <a href="http://docs.unity3d.com/ScriptReference/Space.World.html">Space.World</a>);</pre>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Vector2</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Vector2(float x, float y);</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Instantiate</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">var spawnPoint = new Vector2(Random.Range(x1, x2), transform.position.y);</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Instantiate(asteroidePrefab, spawnPoint, Quaternion.identity);</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Quaternion</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Quaternion(float x, float y, float z, float w);</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Ver a referência completa dos objetos do Unity aqui:</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><a href="http://docs.unity3d.com/ScriptReference/">http://docs.unity3d.com/ScriptReference/</a></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Quando acessamos esta página acima, à direita e acima aparecem as 3 linguagens para que selecionemos a que queremos perquisar.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; page-break-before: always; text-align: justify;"><b>Quaternions - </b>É a posição e o ângulo de um objeto a ser rotacionado. Para realizar a rotação de objetos no espaço tridimensional são utilizados quaterniões.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Para representar a direção que um objeto aponta no espaço não basta apenas representar sua posição, é necessário atribuir um ângulo a ela. Em jogos quando um objeto é criado, é definida a sua posição e um ângulo inicial a ele. Quando desejamos fazer alguma rotação nesse objeto, realizamos com base em sua posição e seu ângulo atual, ou seja, em seu quaternião.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Destroy </b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Destroy(gameObject, 20); // Destroi objeto após 20 segundos</p>
+
+<p style="margin-bottom: 0.5cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0.5cm; text-align: justify;"><span style="font-family: Arial,sans-serif;"><span style="font-size: large;"><b> Exemplos de Scripts para Jogos</b></span></span><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;"><b><br /> <br /> Movimento</b></span></span></p>
+
+<p style="margin-bottom: 0.5cm; text-align: justify;"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;"><b>Tiro</b></span></span></p>
+
+<p style="margin-bottom: 0.5cm; text-align: justify;"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;"><b>Limitando na Tela</b></span></span></p>
+
+<p style="margin-bottom: 0.5cm; text-align: justify;"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;"><b>Criando um Labirinto via Código</b></span></span></p>
+
+<p style="margin-bottom: 0.5cm; text-align: justify;"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;">using UnityEngine;<br /> using System.Collections;<br /> <br /> public class Grade : MonoBehaviour {<br /> // Referência - http://docs.unity3d.com/Manual/InstantiatingPrefabs.html<br /> public GameObject cubo;<br /> private int x,y;<br /> <br /> void Start() {<br /> LabirintoX(-9, 9, -5, -4);<br /> LabirintoX(-9, 9, 0, 4);<br /> LabirintoY(-4, 4, 0, 9);<br /> LabirintoY(-4, 4, 0, -9);<br /> LabirintoY(-4, 3, 0, -6);<br /> LabirintoX(-5, 3, 0, 3);<br /> LabirintoX(-5, 3, 0, 2);<br /> LabirintoX(1, 5, 0, -3);<br /> LabirintoX(1, 5, 0, -2);<br /> LabirintoX(1, 5, 0, -1);<br /> LabirintoX(1, 5, 0, 0);<br /> LabirintoX(-4, 3, 0, -3);<br /> LabirintoX(-4, -1, 0, -2);<br /> LabirintoX(-4, -1, 0, -1);<br /> LabirintoX(-4, -1, 0, 0);<br /> //LabirintoX(-4, 0, 0, -1);<br /> /*<br /> y = -4;<br /> for(x=-9;x &lt;=9;x++){<br /> if(x == -6) continue;<br /> Instantiate(cubo, new Vector3(x, y, 0), Quaternion.identity);<br /> }*/<br /> }<br /> <br /> void LabirintoX(int x1, int x2, int pulo, int y){<br /> for(x=x1;x &lt;=x2;x++){<br /> if(pulo != 0 &amp;&amp; x == pulo) continue; <br /> Instantiate(cubo, new Vector3(x, y, 0), Quaternion.identity);<br /> }<br /> }<br /> <br /> void LabirintoY(int y1, int y2, int pulo, int x){<br /> for(y=y1;y &lt;=y2;y++){<br /> if(pulo != 0 &amp;&amp; y == pulo) continue; <br /> Instantiate(cubo, new Vector3(x, y, 0), Quaternion.identity);<br /> }<br /> }<br /> }<br /> </span></span></p>
+
+<p style="text-align: justify;"><b>Corrigindo Erros/Debugando</b></p>
+
+<p style="text-align: justify;"><i><b>Editor Monodevelop</b></i></p>
+
+<p style="text-align: justify;">O editor Monodevelop ajuda muito na correção de erros. Alguns erros ele acusa logo no script. Tão logo digitemos o nome de uma variável para usá-la e antes de a definir, ele nós alerta deixando o nome em vermelho. Isso significa que ele exige que toda variável só pode ser usada quando definida/criada antes.</p>
+
+<p style="margin-bottom: 0.5cm; text-align: justify;"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;">Ele também nos ajuda auto-completando a sintaxe de métodos e objetos internos do Unity.</span></span></p>
+
+<p style="margin-bottom: 0.5cm; text-align: justify;"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;"><i><b>Unity<br /> </b></i><span style="font-style: normal;"><span style="font-weight: normal;">Quando salvamos um script e voltamos para o Unity geralmente, havendo erro no script, o Unity avisa do erro com mais detalhes que o editor. Ele mostra o erro, o script e a linha, além de outras informações úteis e isso em vermelho na barra de status. </span></span></span></span></p>
+
+<p style="margin-bottom: 0.5cm; text-align: justify;"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;"><span style="font-style: normal;"><span style="font-weight: normal;">Algumas vezes ele não mostra detalhes sobre o erro, apenas a mensagem. Quando isso acontecer devemos acessar a Console e clicar na mensagem para receber mais detalhes.<br /> <br /> </span></span><i><b>Ferramentas<br /> </b></i><span style="font-style: normal;"><span style="font-weight: normal;">A console ajuda muito na correção de erros.<br /> Podemos usar o comando Debug.Log para mostrar uma mensagem em uma região do script que desconfiamos de erro, ou mostrar o valor de uma variável.<br /> Exemplos:<br /> Debug.Log(“Teste”);</span></span></span></span></p>
+
+<p style="margin-bottom: 0.5cm; font-style: normal; font-weight: normal; text-align: justify;"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;">Debug.Log(“Velocidade vale: ” + speed);</span></span></p>
+
+<p style="margin-bottom: 0.5cm; text-align: justify;"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;"><i><b>Variáveis public</b></i></span></span></p>
+
+<p style="margin-bottom: 0.5cm; text-align: justify;"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;">Quando declaramos uma variável public e do tipo GameObject no script, precisamos atribuir um prefab ou objeto a ela pelo Inspector do Unity. Quando esquecemos de fazer isso recebemos a mensagem: <b>Null Reference Exception</b></span></span></p>
+
+<p style="margin-bottom: 0.5cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0.5cm; text-align: justify;"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;"><b>Pacote com Scripts em C#</b></span></span></p>
+
+<p style="margin-bottom: 0.5cm; text-align: justify;"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;"><a title="scripts.zip" href="http://backup/portal/../down/mobile/unity3d/scripts.zip">scripts.zip</a></span></span></p>]]></description>
+			<category>Unity 3D</category>
+			<pubDate>Tue, 11 Jul 2017 17:30:24 -0300</pubDate>
+		</item>
+		<item>
+			<title>Sprite Editor</title>
+			<link>http://backup/portal/mobile/unity-3d/sprite-editor.html</link>
+			<guid isPermaLink="true">http://backup/portal/mobile/unity-3d/sprite-editor.html</guid>
+			<description><![CDATA[<h4 style="margin-bottom: 0cm; text-align: left;" align="center">Sprite Editor do Unity 3D<span style="font-size: x-large;"><b><br /></b></span></h4>
+
+
+<p style="margin-bottom: 0cm;"> </p>
+
+
+<p style="margin-bottom: 0cm;">O Unity tem uma ferramenta para a criação de jogos 2D, que é o Sprite Editor. Ele é usado em imagens que contém múltiplos sprites.</p>
+
+
+<p style="margin-bottom: 0cm; font-weight: normal;">-Importe a imagem com múltiplos sprites</p>
+
+
+<p style="margin-bottom: 0cm; font-weight: normal;">-Altere no Inspector seu tipo para Sprite</p>
+
+
+<p style="margin-bottom: 0cm; font-weight: normal;">-Altere SpriteMode para Multiple</p>
+
+
+<p style="margin-bottom: 0cm; font-weight: normal;">-Clique em Sprite Editor</p>
+
+
+<p style="margin-bottom: 0cm; font-weight: normal;">-Clique em Slice</p>
+
+
+<p style="margin-bottom: 0cm; font-weight: normal;">-Se satisfeito clique acima em Apply, caso contrário faça os ajustes, mude os names, etc e ao final clique em Apply.</p>
+
+
+<p style="margin-bottom: 0cm; font-weight: normal;">-Em Assets clique na setinha à direita do sprite para ver seus subs.</p>
+
+
+<p style="margin-bottom: 0cm; font-weight: normal;"> </p>
+
+
+<p style="margin-bottom: 0cm;">Exemplo:</p>
+
+
+<p style="margin-bottom: 0cm;"><img src="http://backup/portal/images/speditor1.png" alt="" /></p>
+
+
+<p style="margin-bottom: 0cm;"> </p>
+
+
+<p style="margin-bottom: 0cm;">Precisamos configurar a imagem como</p>
+
+
+<p style="margin-bottom: 0cm;">Sprite</p>
+
+
+<p style="margin-bottom: 0cm;">Multiple</p>
+
+
+<p style="margin-bottom: 0cm;"> </p>
+
+
+<p style="margin-bottom: 0cm; page-break-before: always;">Então clicar no botão Sprite Editor</p>
+
+
+<p style="margin-bottom: 0cm;"> </p>
+
+
+<p style="margin-bottom: 0cm;"><img src="http://backup/portal/images/spriteeditor.png" alt="" /> </p>
+
+
+<p style="margin-bottom: 0cm;">Para separar as imagens para o Unity:</p>
+
+
+<p style="margin-bottom: 0cm;">-Clicar acima no botão Slice</p>
+
+
+<p style="margin-bottom: 0cm;">Aparecerá então a janelinha:</p>
+
+
+<p style="margin-bottom: 0cm;"> </p>
+
+
+<p style="margin-bottom: 0cm;"><img src="http://backup/portal/images/speditor2.png" alt="" /></p>
+
+
+<p style="margin-bottom: 0cm;"> </p>
+
+
+<p style="margin-bottom: 0cm;">Geralmente basta clicar em Slice abaixo.</p>
+
+
+<p style="margin-bottom: 0cm;"> </p>
+
+
+<p style="margin-bottom: 0cm; page-break-before: always;">E ficará assim:</p>
+
+
+<p style="margin-bottom: 0cm;"><img src="http://backup/portal/images/spriteeditor2.png" alt="" /> </p>
+
+
+<p style="margin-bottom: 0cm;">Abaixo e à direita aparecem as propriedades do sprite selecionado, onde podemos ajustas a posição, nome e dimensões.</p>
+
+
+<p style="margin-bottom: 0cm;">Quando satisfeito clicar acima em Apply e feche a janela.</p>
+
+
+<p style="margin-bottom: 0cm;">Veja que a imagem agora tem uma pequena seta à direita:</p>
+
+
+<p style="margin-bottom: 0cm;"><img src="http://backup/portal/images/speditor3.png" alt="" /></p>
+
+
+<p style="margin-bottom: 0cm;"> </p>
+
+
+<p style="margin-bottom: 0cm;">Ao clicar na seta aparecem os sprites:</p>
+
+
+<p style="margin-bottom: 0cm;"> </p>
+
+
+<p style="margin-bottom: 0cm;"><img src="http://backup/portal/images/speditor4.png" alt="" /></p>
+
+
+<p style="margin-bottom: 0cm;">Para que apareçam os nomes completos dos sprites arraste o botão abaixo e à direita.</p>
+
+
+<p style="margin-bottom: 0cm;"> </p>
+
+
+<p style="margin-bottom: 0cm; font-weight: normal;">Agora podemos usar cada um dos sprites em separado, arrastando para a cena.</p>]]></description>
+			<category>Unity 3D</category>
+			<pubDate>Tue, 11 Jul 2017 17:23:33 -0300</pubDate>
+		</item>
+		<item>
+			<title>Criação de Terrenos</title>
+			<link>http://backup/portal/mobile/unity-3d/criacao-de-terrenos.html</link>
+			<guid isPermaLink="true">http://backup/portal/mobile/unity-3d/criacao-de-terrenos.html</guid>
+			<description><![CDATA[<p style="margin-bottom: 0cm; text-align: justify;" align="center"><span style="font-size: large;"><b>Criação de Terrenos no Unity 3D<br /></b></span></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Terrenos criam um background para jogos 3D no Unity.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">O Unity 3D traz ferramentas que tornam fácil a criação de terrenos com um terreno, elevações, platôs, árvores, gramas, etc.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Criação de Terreno no Unity 3D 4.5.3:</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">GameObject – Create Other – Terrain</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Ele aparece assim:</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><img src="http://backup/portal/images/terreno1.png" alt="" /> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; page-break-before: always; text-align: justify;">Com ele selecionado, no Inspector aparece um componente Terrain (Script).</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Clique no último botão, Terrain Settings para visualizar as configurações do Terreno. Originalmente são estas:</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><img src="http://backup/portal/images/terreno2.png" alt="" /> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; page-break-before: always; text-align: justify;"><b>Configurações </b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Para trabalhar com mais conforto, vamos alterar Terrain Width para 200 e Terrain Length também para 200.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Agora rolamos o botão do meio do mouse para aumentar o zoom até aparecerem as limitações do terreno, como abaixo:</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><img src="http://backup/portal/images/terreno3a.png" alt="" /> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Alterando o Terreno</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">As Ferramentas de construção do terreno:</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><img src="http://backup/portal/images/uterreno1.png" alt="" /></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Pela ordem as ferramentas são:</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Raise / Lower</b> (ao clicar na primeira temos)</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><img src="http://backup/portal/images/uterreno2.png" alt="" /></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Temos várias brochas e podemos alterar o Size e a Opacidade delas.</p>
+
+<p style="margin-bottom: 0cm; page-break-before: always; text-align: justify;">A característica principal desta é que podemos arrastar para criar alguma elevação e se mantiver o botão pressionado a elevação continua sem limites.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Vejamos exemplos:</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><img src="http://backup/portal/images/terreno4.png" alt="" /> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Antes de começar a construir o terreno adicione uma luz direcional.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Posição da Câmera</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">É muito importante deixar a câmara numa posição que faça nosso terreno aparecer quando o play for pressionado, quando o jogo começar.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">O terreno precisa ficar numa região coberta pela Main Camera.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Clique na Main Camera e se ela não aparecer tecle F. Ela aparecerá. Então clique no botão Move (das 4 setas) e mova a câmara para uma posição acima e à esquerda do terreno.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Se o tereno desaparecer faça o mesmo: clique em Terrain na hierarquia e tecle F.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Então mova ou mude o zoom do mesmo com o mouse.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Interessante é girar a luz para uma posição de maior destaque. Gire e execute para ver no que dá.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Paint Height</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><img src="http://backup/portal/images/uterreno3.png" alt="" /></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">A diferença deste para o Raise/Lower é que tem mais um parâmetro, o height. Isso permite limitar a altura dos montes e picos, criando platôs. Reduza um pouco o Height e crie um monte:</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Posso reduzir os existente e criar novos com a altura máxima escolhida.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><img src="http://backup/portal/images/terreno5.png" alt="" /> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Segurando o Control</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Segurando o control o mouse sai deformando as elevações e destruindo até apagar.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Smooth Height</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><img src="http://backup/portal/images/uterreno4.png" alt="" /></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Esta suavisa as formas das elevações. Podemos alterar size e opacidade.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Ao arrastar o mouse sobre as superfícies ele sai suavizando.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Opacity maior suavisa mais.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; page-break-before: always; text-align: justify;"><b>Paint Texture</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Com esta podemos importar uma textura existente ou várias e pintar a cor de uma sobre outra com uma das brochas e ainda podemos escolher a a força da pintura com o Target Strength.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><img src="http://backup/portal/images/uterreno5.png" alt="" /></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Para importar Textura clique em Edite Textures – Add Texture.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Se observar em um projeto limpo não encontrará nenhuma textura para adicionar.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Adicionar Pacote de Terreno</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Clicar em Assets com o botão direito do mouse – Import Package – Terrain Assets</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><strong>Import</strong></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Ele criará uma pasta Standard Assets na pasta Assets. Nesta pasta existem várias texturas para trabalhar com terreno.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Vamos novamente tentar importar a textura para o terreno.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Selecione o terreno na hierarquia – No Inspector clicar no Paint Textura (pincel) - Edite Textures – Add Texture – Texture - Select. Escolha uma textura e efetue um duplo clique sobre a mesma e depois clique em Add.</p>
+
+<p style="margin-bottom: 0cm; page-break-before: always; text-align: justify;">Veja que nosso terreno já está todo coberto com a textura que selecionamos.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><img src="http://backup/portal/images/terreno6.png" alt="" /> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Podemos importar uma segunda e mais outras para pintar o terreno atual e seus elementos. Veja</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><img src="http://backup/portal/images/terreno7.png" alt="" /> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">A sua criatividade é quem determina os limites.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Place Tree</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Com esta adicionamos árvores para nosso terreno.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><img src="http://backup/portal/images/uterreno6.png" alt="" /></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Clique em Edit Trees – Add Tree</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><img src="http://backup/portal/images/uterreno7.png" alt="" /></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Clicar no pequeno círculo à direita de None (Game Object)</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">e selecionar Palm.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Efetuar um duplo clique em Palm e Add.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Agora configure o Size da Brush, a densidade, cor altura das árvores, etc. Então desenhe as árvores no terreno.</p>
+
+<p style="margin-bottom: 0cm; page-break-before: always; text-align: justify;">Veja um exemplo:</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><img src="http://backup/portal/images/terreno8.png" alt="" /> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Ventos</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Nossas árvores sofrem até influência dos ventos, balançando seus galhos. Podemos configurar as características do vento mexendo nas configurações do componente Terain (Script) em Wind Settings.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Paint Details</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Com esta podemos adicionar grama, pedras, etc.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><img src="http://backup/portal/images/uterreno8.png" alt="" /></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Veja</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><img src="http://backup/portal/images/terreno9.png" alt="" /> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Podemos também importar texturas e objetos de terceiros.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><span style="font-size: large;"><b>SkyBox</b></span></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Adicionar o ceu acima do terreno.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Para isso precisamos mexer em duas propriedades da Main Camera:</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Clear Flags e Back Ground Color</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Um exemplo é alterar de Skybox para Cor sólida e alterar a cor no Back Ground Color.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Criar Skybox</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Selecionar a Main Camera</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Component – Rendering – Skybox</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Ele adiciona o componente ao final das propriedades da Main Camera.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Adicionar o pacote Skybox</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Precisamos adicionar este pacote que tem o material do ceu.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Assets – Import Package – Skyboxes – Import</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Selecionar Main Camera</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Inspector ao final Skybox</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Clicar no pequeno círculo à direita de Custom Skybox e selecionar Sunny1 SkyBox ou Sunny2 SkyBox.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Execuo o jogo no play para ver o ceu acima.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Existem materiais para noite enluarada entre outros.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; page-break-before: always; text-align: justify;"><b>Salvando o material do Skybox</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Para que um material escolhido para o Skybox fique definitivamente, precisamos avisar ao renderizador:</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Edit – Render Settings – Skybox Material – indicar o mesmo da Main Camera.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Problemas</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">-Caso a grid do terreno desapareça, ficando todo brando (com luz), então não poderemos desenhar nada sobre o terreno. Volte para o estado com a grid (Ctrl+Z) ou refaça tudo.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">-A Main Camera deve estar posocionada adequadamente para que possamos desenhar os elementos do terreno.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">-A grama não pode ser desenhada em qualquer local no terreno.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">-Cuidado com o btão Flatten (Paint height), pois elimina todas as elevações do terreno.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Colisão em Árvores</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Selecione a árvore</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Adicione a colisão Capsula Collider</p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;"> </p>]]></description>
+			<category>Unity 3D</category>
+			<pubDate>Tue, 11 Jul 2017 17:23:33 -0300</pubDate>
+		</item>
+		<item>
+			<title>Engine Unity 3D</title>
+			<link>http://backup/portal/mobile/unity-3d/engine-unity-3d.html</link>
+			<guid isPermaLink="true">http://backup/portal/mobile/unity-3d/engine-unity-3d.html</guid>
+			<description><![CDATA[<p style="text-align: justify;"><strong>O que é o Unity 3D?</strong><br /><br />Unity 3D é uma nova peça de tecnologia que se esforça para tornar a vida de desenvolvedores de jogos melhor e mais fácil para jogo.   Unity é um motor de jogos ou uma ferramenta de criação de jogos que permite que pessoas criativas como você construam jogos de vídeo game.  Usando Unity, você pode construir jogos mais rápido e fácil do que nunca. No passado, a construção de jogos exigia um enorme pilha de cartões perfurados,  um computador que ocupava uma sala inteira e um sacrifício queimado para um deus antigo chamado Fortran. Hoje em dia temos Unity.  Considere-o o seu martelo - uma nova peça de tecnologia para o seu cinto de ferramentas criativas.</p>
+
+<p style="text-align: justify;"><strong>Alguns Canais no Youtube</strong> <br /> <br /><strong>Equilibre Cursos</strong> <br /><a href="https://www.youtube.com/watch?v=GJL2xAV7qDY&amp;list=PL_pppC5PqxveCQtTCXIzE75wnkZzFGsZO">https://www.youtube.com/watch?v=GJL2xAV7qDY&amp;list=PL_pppC5PqxveCQtTCXIzE75wnkZzFGsZO</a>  <br /><a href="https://www.youtube.com/playlist?list=PL_pppC5Pqxvc6irnJjAWCRTGKTLVpaIem">https://www.youtube.com/playlist?list=PL_pppC5Pqxvc6irnJjAWCRTGKTLVpaIem</a>  <br /> <br /><strong>Pong para Unity 5</strong> <br /><a href="https://www.youtube.com/watch?v=J1ww4Y_NL0s">https://www.youtube.com/watch?v=J1ww4Y_NL0s</a>  <br /> <br /><strong>Conhecendo o Unity 5</strong> <br /><a href="https://www.youtube.com/watch?v=qRjGPoSXUS8">https://www.youtube.com/watch?v=qRjGPoSXUS8</a>  <br /> <br />E muitos outros canais no Youtube.</p>
+
+<p style="text-align: justify;"> </p>]]></description>
+			<category>Unity 3D</category>
+			<pubDate>Tue, 11 Jul 2017 16:32:44 -0300</pubDate>
+		</item>
+		<item>
+			<title>Unity 3D - Navegação</title>
+			<link>http://backup/portal/mobile/unity-3d/unity-3d-navegacao.html</link>
+			<guid isPermaLink="true">http://backup/portal/mobile/unity-3d/unity-3d-navegacao.html</guid>
+			<description><![CDATA[<p style="margin-bottom: 0cm; text-align: justify;" align="center"><span style="font-size: x-large;"><b>Unity - Navegação</b></span></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;" align="left"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;" align="left"><span style="font-size: large;"><b>Instalação do Unity</b></span></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;" align="left"> </p>
+
+<h3 style="margin-bottom: 0cm; text-align: justify;" align="left"><span style="font-size: large;"><b>Requisitos da versão 5 do Unity 3D<br /></b></span></h3>
+
+<h4 class="western" style="text-align: justify;"><strong>Para desenvolvimento</strong></h4>
+
+<p style="text-align: justify;"><b>OS</b>: Windows XP SP2+, 7 SP1+, 8; Mac OS X 10.6+.</p>
+
+<p style="text-align: justify;"><span style="font-size: small;">Não há suporte para o Windows Vista e as versões de servidor do Windows &amp; OS X não foram testadas.</span></p>
+
+<p style="text-align: justify;"><b>GPU</b>: placa gráfica com recursos do DX9 (Shader Model 2.0). Qualquer placa fabricada a partir de 2004 deve funcionar.</p>
+
+<p style="text-align: justify;">O restante depende mais da complexidade dos seus projetos.</p>
+
+<h4 class="western" style="text-align: justify;">Outros requisitos de desenvolvimento de plataforma:</h4>
+
+<p style="margin-bottom: 0cm; text-align: justify;">iOS: computador com Mac e Xcode 4.3.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Android: Android SDK e Java Development Kit (JDK).</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Windows Store Apps / Windows Phone: Windows 8 Pro de 64 bits e Visual Studio 2012+.</p>
+
+<p style="text-align: justify;">Blackberry: Java Runtime (JRE) de 32 bits.</p>
+
+<h4 class="western" style="text-align: justify;"><strong>Para executar jogos Unity</strong></h4>
+
+<p style="text-align: justify;">Em geral, o conteúdo desenvolvido com o Unity pode funcionar muito bem em qualquer lugar; isso vai depender da complexidade do seu projeto. Mais detalhes dos requisitos:</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Desktop:</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">OS: Windows XP+, Mac OS X 10.6+, Ubuntu 10.10+, SteamOS+</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Placa gráfica: recursos do DX9 (Shader Model 2.0); em geral, qualquer placa fabricada a partir de 2004 deve funcionar.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">CPU: suporte para o conjunto de instruções SSE2.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">O Web Player é compatível com IE, Chrome, Firefox, Safari e outros.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">iOS: requer iOS 4.3 ou posterior.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Android: OS 2.3.1 ou posterior; ARMv7 (Cortex) CPU; OpenGL ES 2.0 ou posterior.</p>
+
+<p style="text-align: justify;">Blackberry: OS 10 ou posterior.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><a href="https://unity3d.com/pt/unity/system-requirements">https://unity3d.com/pt/unity/system-requirements</a></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;" align="left"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Download</b></p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;"><a href="http://unity3d.com/unity/download">http://unity3d.com/unity/download</a> (hoje, 27/10/2014, está na versão 4.5.5)</p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;">Para instalar basta executar o arquivo baixado, sem dificuldades.</p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;">Na primeira execução exigirá um cadastro (gratuito) e escolha a versão free.</p>
+
+<p style="text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>A tela do Unity é dividida em paineis:</b></p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;"><b>Hierarchy</b> – onde ficam todos os objetos de uma cena. Uma lista dos GameObjects da cena.</p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;"><b>Inspector</b> – onde aparecem as propriedades de um objeto/asset selecionado</p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;"><b>Project</b> – onde ficam todos os assets: imagens, sprites, cenas, etc a disposição do jogo. Lista de assets, que age como uma biblioeca.</p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;"><b>Scene</b> – Tela onde adicionamos os objetos que comporão o jogo e são exibidos. Aqui é onde o jogo é construído, como uma fase do jogo ou menu.</p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;"><b>Game</b> – onde aparecerá o jogo em execução</p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;"><b>Console</b> – aqui são exibidas as mensagens de erro e também na barra de status</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; page-break-before: always; text-align: justify;"><b>Assets</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">É qualquer recurso utilizado ou que poderá ser usado no jogo e fica no painel Project.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Assets 3D precisam ser criados externamente. O Unity3d aceita vindos do Maya, do 3D Studio Max, do Blender e do FilmBox.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Imagens: png, jpeg, tiff e psd.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Áudio: wav, aif, mp3 e ogg</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">O Unity tem uma loja que vende assets e também oferece gratuitamente:</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><a href="https://www.assetstore.unity3d.com/en/">https://www.assetstore.unity3d.com/en/</a></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Sprite</b> – é uma imagem 2D para jogos, que pode ser simples ou múltipla, quando contém outras sub imagens. <span style="font-weight: normal;">Sprite Renderer</span> é um componente exclusivo de sprites.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Texturas</b> – são imagens em geral no Unity. As imagens importadas para o Unity devem ter dimensões na potência de 2: 64x64, 128x128, 516x516, etc.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Licença</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Desenvolvedor Indie – grátis (somente para pessoa física e empresas com lucro anual menor que US$ 100,000)</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Versão Pro de teste para 30 dias grátis</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Edição Pro – US$ 1,500.00 (licença permanente e não tem limites quanto ao que fazer com os jogos criados).</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">A versão free permite criar jogos de forma completa sem problema, não é uma versão que expira, inclusive publica para desktop, web, para Android e iOS sem pagar um centavo.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Detalhes:</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><a href="http://unity3d.com/unity/licenses">http://unity3d.com/unity/licenses</a></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; page-break-before: always; text-align: justify;" align="center"><b>Navegação em ambiente 2D</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Zoom</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Para aumentar ou reduzir o zoom da cena inteira, aperte o botão do meio do mouse e gire para a frente ou para traz, tanto em ambiente 2D quanto 3D.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Transform</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Um dos recursos mais importantes para trabalhar com os objetos na cena é o Transform.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Selecionando a mãozinha podemos clicar com o botão esquerdo do mouse e <b>arrastar a cena completa</b>, com todos os objetos dela.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Propositalmente as teclas de atalho seguem a ordem das teclas do teclado: QWERty, ou seja, a ordem das ferramentas é a mesma das teclas QWER do teclado tipo Querty.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Selecionando a cruz poderemos <b>mover</b> ou selecionar o objeto selecionado. Quando o objeto está pequeno não aparecem as setas nas bordas para redimensionar. Então ampliamos o zoom, rolando para a frente o botão do meio do mouse, até que apareçam os 4 pontos azuis nos cantos. Então podemos usar os pontos azuis ou mesmo em qualquer posição intermediária. Podemos clicar sobre o objeto, no centro e arrastar o mesmo pela cena.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">O terceiro botão, com as duas setas curvas, é usado na <b>rotação</b> do objeto selecionado.</p>
+
+<p style="margin-bottom: 0cm; page-break-before: always; text-align: justify;">Veja a seguir o mesmo objeto da imagem anterior mas com rotações sobre o mesmo. </p>
+
+<p style="margin-bottom: 0cm; page-break-before: always; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Redimensionamos</b> o objeto selecionado com o último botão. Após selecionar este botão e selecionar o objeto veja abaixo que aparecem dois pequenos quadrados verdes, um na vertical e outro na horizontal. Clicamos no quadrado da vertical e arrastamos para ambliar o objeto nesta direção. Veja o mesmo objeto anterior redimensionado abaixo:</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Inspector</b></p>
+
+<p style="text-align: justify;">Também podemos fazer alterações nos objetos usando o Inspector, entrando números diretamente nas respectivas caixas de texto. Tomemos o objeto anterior, vamos fazê-lo voltar ao estado anterior usando o Inspector:</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Alteremos no Inspector para:</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Position – (0,-4,0)</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Rotation – (0,0,0)</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Scale – (1,1,1)</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Alterando valores de X, Y e Z nas caixas de texto do Position, no Inspector</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Ao passar o ponteiro do mouse por cima de X, Y ou Z nas caixas de texto aparecem duas setinhas, uma para a esquerda e outra para a direita. Basta então que pressionemos o botão esquerdo e arrastemos para a esquerda ou para a direita para aumentar ou reduzir o valor.</p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; page-break-before: always; text-align: justify;"><b>Play</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Iniciar/Parar o Jogo</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Executar o Jogo</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Para executar o jogo podemos usar o atalho Ctrl+P.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Paineis Scene e Game</b> – Alternar entre Cena ou Design e Game ou Execução</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Scene</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>No painel de Cena</b>/Scene é onde são arrumados todos os assets do jogo em sua posição final. A cena é para onde arrastamos os assets para arrumar a nosso gosto.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Scenes</b> – uma cena é basicamente um nível do jogo ou um menu.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Criar uma nova cena</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">File – New Scene ou teclar Ctrl+S</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Painel de Hierarquia</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>O painel de Hierarquia</b> é onde os assets ficam organizados em uma cena. Onde ficam os objetos que já estão na cena e já fazem parte do jogo.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Inspector/Propriedades</b> – aparecem as propriedades quando um objeto está selecionado no painel de Hierarquia</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>O painel Inspector</b> deixa você inspecionar e ajustar todos os atributos de um asset selecionado no painel de Hierarquia. Desde posição, rotação, gravidade, cor, componentes, etc.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Projeto</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>O painel do Projeto</b> é onde ficam todos os Assets que são ou podem ser usados no projeto.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Araste Fino</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Ao arrastar objeto na cena teclar V para ajuste fino.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Foco</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Em cenas com muitos objetos a visualização de algum sai da cena algumas vezes. Para deixar um objeto isolado com o foco na cena selecionamos ele na Hierarquia e teclamos F. Ele terá o foco na cena. Outra forma é efetuar um duplo clique sobre o nome do objeto na Hierarquia.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Arrastar a Cena</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">A mãozinha é usada para arrastar toda a cena. O botão do meio do mouse também pode ser utilizado para isso. Pressionar e arrastar para arrastar a cena.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Mover</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Selecione um objeto e clique no botão de movimento, aquele com 4 setas no Transformer.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Então clique numa das setas e arraste para mover na direção da seta.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Redimensionar</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Selecione o botão Scale e faça o mesmo, sendo que agora aumentando ou reduzindo o objeto.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Rotação</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Clique no botão Rotação e gire o objeto clicando e num dos círculos coloridos e arrastando.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Gizmo</b><span style="font-weight: normal;"> – bússola 3D, que mostra a orientação da câmera na cena e possibilita mudar a orientação da visão, bastando clicar em seus vértices. Mas use com cuidado. Caso perca o controle sem saber como voltar tecle Ctrl+Z.</span></p>
+
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; page-break-before: always; text-align: justify;"><b>Layout</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Uma sugestão de layout, que ajuda bastante, visto que em tempo real já mostra as alterações da cena no painel Game abaixo.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">O Unity é muito flexível para a criação de layouts dos paineis. Podemos escolher uma das opções em layout ou podemos criar o nosso apenas arrastando cada painel para a posição desejada. Para isso clicar na aba com o nome do painel e arrastar para a posição desejada.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Algo que dá um pouco de trabalho é posicionar um personagem em uma cena/terreno 3D. Usando o layout acima fica bem mais simples.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Resetar o layout para o layout original:</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Barra de ferramentas -&gt; Window -&gt;Layouts-&gt;Revert Factory Settings</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Pasta Assets e Layout</b></p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">A pasta assets é uma superpasta ou pasta raiz do projeto, que contem as demais pastas.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;">Alguns layouts não mostram a pasta Assets, mesmo ela estando lá, como é o caso do One-column e do Two-columns.</p>
+
+<p style="margin-bottom: 0cm; text-align: justify;" align="left"> </p>]]></description>
+			<category>Unity 3D</category>
+			<pubDate>Tue, 11 Jul 2017 16:32:44 -0300</pubDate>
+		</item>
+	</channel>
+</rss>

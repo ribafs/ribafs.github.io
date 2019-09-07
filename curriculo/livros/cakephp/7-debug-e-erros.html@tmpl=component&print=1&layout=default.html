@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br" dir="ltr">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <base href="" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Ribamar FS" />
+	<meta name="robots" content="noindex, nofollow" />
+	<meta name="description" content="Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros." />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>7 - Debug e Erros - RibaFS Portal</title>
+	<link href="http://ribafs.org/portal/curriculo/livros/cakephp/7-debug-e-erros.html?tmpl=component&amp;print=1&amp;layout=default" rel="canonical" />
+	<link href="../../../templates/shaper_helix3/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../../../favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="http://backup/portal/media/plg_content_prismsyntaxhighlighter/css/prism-okaidia.css" rel="stylesheet" type="text/css" />
+	<link href="http://backup/portal/media/plg_content_prismsyntaxhighlighter/css/prism-linenumbers.css" rel="stylesheet" type="text/css" />
+	<script src="http://backup/portal/media/plg_content_prismsyntaxhighlighter/js/prism-tinymce.js" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery-noconflict.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery-migrate.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="http://backup/portal/media/system/js/caption.js?d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script type="text/javascript">
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+	</script>
+	<meta property="og:url" content="http://backup/portal/curriculo/livros/cakephp/7-debug-e-erros.html" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="7 - Debug e Erros" />
+	<meta property="og:description" content="7 – Debug e Erros Só existe uma maneira de evitar críticas: não fazer nada, não dizer nada e não ser nada. Aristóteles Debug/Depuração Depuração é uma etap..." />
+
+   	<link rel="stylesheet" href="../../../media/jui/css/bootstrap.min.css" type="text/css" />
+	<link rel="stylesheet" href="../../../templates/shaper_helix3/css/frontend-edit.css" type="text/css" />
+    <link rel="stylesheet" href="../../../templates/shaper_helix3/css/template.css" type="text/css" />
+</head>
+<body class="contentpane">
+	<div id="system-message-container">
+	</div>
+
+	
+
+<article class="item item-page" itemscope itemtype="http://schema.org/Article">
+	<meta itemprop="inLanguage" content="pt-BR" />
+	
+	
+
+	<div class="entry-header">
+		<span class="post-format"><i class="fa fa-thumb-tack"></i></span>
+		
+					<h2 itemprop="name">
+									7 - Debug e Erros							</h2>
+												</div>
+
+						<div id="pop-print" class="btn hidden-print">
+				<a href="7-debug-e-erros.html#" onclick="window.print();return false;">			<span class="icon-print" aria-hidden="true"></span>
+		Imprimir	</a>			</div>
+				
+	
+	
+				
+	
+			<div itemprop="articleBody">
+		<h3>7 – Debug e Erros</h3>
+<p align="right"><em><strong>Só existe uma maneira de evitar críticas: não fazer nada, não dizer nada e não ser nada.</strong></em></p>
+<p align="right">Aristóteles</p>
+<p><strong>Debug/Depuração</strong></p>
+<p align="justify">Depuração é uma etapa inevitável e importante de qualquer ciclo de desenvolvimento. Ainda que o CakePHP não forneça nenhuma ferramenta que se conecte com qualquer IDE ou editor de texto, este oferece várias ferramentas que auxiliam na depuração e exibição de tudo que está sendo executado "por baixo dos panos" na sua aplicação.</p>
+<p> </p>
+<p><strong>Depuração Básica</strong></p>
+<p>Você pode usar as funções <a href="https://book.cakephp.org/3.0/pt/core-libraries/global-constants-and-functions.html#pr">pr()</a> ou <a href="https://book.cakephp.org/3.0/pt/core-libraries/global-constants-and-functions.html#debug">debug()</a> caso queira verificar erros em código ou apenas verificá-los.</p>
+<p>debug(mixed $var, boolean $showHtml = null, $showFrom = true)</p>
+<p> </p>
+<p align="justify">A função debug() é uma função de escopo global que funciona de maneira similar a função do PHP, print_r(). A função debug() exibe os conteúdos de uma variável de diversas maneiras. Primeiramente, se você deseja exibir os dados no formato HTML, defina o segundo parâmetro como true. A função também exibe a linha e o arquivo de onde a mesma foi chamada.</p>
+<p>A saída da função somente é exibida caso a variável $debug do core esteja definida com o valor true.</p>
+<p>debug($query) Mostra o SQL e os parâmetros incluídos, não mostra resultados.</p>
+<p>debug($query-&gt;all()) Mostra a propriedade ResultSet retornado pelo ORM.</p>
+<p>debug($query-&gt;toArray()) Um caminho mais fácil para mostrar todos os resultados.</p>
+<p>debug(json_encode($query, JSON_PRETTY_PRINT)) Exemplo em JSON.</p>
+<p>debug($query-&gt;first()) Primeiro resultado obtido na query.</p>
+<p>debug((string)$query-&gt;first()) Mostra as propriedades de uma única entidade em JSON.</p>
+<p> </p>
+<p>Tente isto na camada Controller: debug( $this-&gt;{EntidadeNome}-&gt;find()-&gt;all() );</p>
+<p> </p>
+<p><strong>Tratando erros</strong></p>
+<p>Cada SGBD tem seus próprios códigos de erro que podem ser capturados pelo PDO.</p>
+<p> </p>
+<p><strong>Dicas sobre erros no PDO no Cake</strong></p>
+<p>Criar o arquivo src/Template/Error/pdo_error.ctp, contendo</p>
+<p> </p>
+<pre class="language-php"><code>&lt;?php
+use Cake\Utility\Debugger;
+?&gt;
+
+&lt;h2&gt;Erro no Cadastro&lt;/h2&gt;
+&lt;p class="error"&gt;
+&lt;strong&gt;Erro: Grupo não existe na tabela estrangeira&lt;br&gt;&lt;/strong&gt;
+
+&lt;?php
+if($error-&gt;getCode() == 23503){
+print "Este grupo não existe na tabela estrangeira.&lt;br&gt;Caso tenha realmente digitado de forma correta&lt;br&gt;e queira adicionar cadastre-o na tabela estrangeira&lt;br&gt;primeiro e depois cadastre o material com ele!";
+}
+
+//print $message;
+?&gt;
+&lt;/p&gt;</code></pre>
+<p> </p>
+<p>Tratamento de erro é uma missão nobre em aplicativos.</p>
+<p align="justify">Aplicativos onde o programador prevê erros em todas as situações onde ele imagina que pode haver erro são aplicativos mais robustos. Os softwares de teste como o PHPUnit tem a missão de ajudar com isso.</p>
+<p align="left"> </p>
+<p align="left"><strong>Detalhes</strong></p>
+<p align="left"><a href="https://book.cakephp.org/3.0/en/development/debugging.html">https://book.cakephp.org/3.0/en/development/debugging.html</a></p>
+<p align="left"> </p>
+<h1 class="western"> </h1> 	</div>
+
+	
+	
+				
+	
+	
+	
+</article>
+
+</body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br" dir="ltr">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <base href="" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Ribamar FS" />
+	<meta name="robots" content="noindex, nofollow" />
+	<meta name="description" content="Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros." />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>Administração do Joomla - RibaFS Portal</title>
+	<link href="http://ribafs.org/portal/joomla-3/administracao/administracao-do-joomla.html?tmpl=component&amp;print=1&amp;layout=default" rel="canonical" />
+	<link href="../../templates/shaper_helix3/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../../favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<script src="../../media/jui/js/jquery.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../media/jui/js/jquery-noconflict.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../media/jui/js/jquery-migrate.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="http://backup/portal/media/system/js/caption.js?d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script type="text/javascript">
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+	</script>
+	<meta property="og:url" content="http://backup/portal/joomla-3/administracao/administracao-do-joomla.html" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Administração do Joomla" />
+	<meta property="og:description" content="Administração do Joomla 3.7.2 Através do site administrator criamos o site da frente, adicionamos conteúdo, instalamos extensões, templates, etc. Antes de..." />
+
+   	<link rel="stylesheet" href="../../media/jui/css/bootstrap.min.css" type="text/css" />
+	<link rel="stylesheet" href="../../templates/shaper_helix3/css/frontend-edit.css" type="text/css" />
+    <link rel="stylesheet" href="../../templates/shaper_helix3/css/template.css" type="text/css" />
+</head>
+<body class="contentpane">
+	<div id="system-message-container">
+	</div>
+
+	
+
+<article class="item item-page" itemscope itemtype="http://schema.org/Article">
+	<meta itemprop="inLanguage" content="pt-BR" />
+	
+	
+
+	<div class="entry-header">
+		<span class="post-format"><i class="fa fa-thumb-tack"></i></span>
+		
+					<h2 itemprop="name">
+									Administração do Joomla							</h2>
+												</div>
+
+						<div id="pop-print" class="btn hidden-print">
+				<a href="administracao-do-joomla.html#" onclick="window.print();return false;">			<span class="icon-print" aria-hidden="true"></span>
+		Imprimir	</a>			</div>
+				
+	
+	
+				
+	
+			<div itemprop="articleBody">
+		<h3>Administração do Joomla 3.7.2</h3>
+<p>Através do site administrator criamos o site da frente, adicionamos conteúdo, instalamos extensões, templates, etc.</p>
+<p>Antes de iniciar a administração do site, vamos efetuar uma nova instalação do Joomla na pasta portal2, mas agora sem nenhum conteúdo de exemplo, para que seja menos trabalhosa a criação do site.</p>
+<p>A instalação será inteiramente semelhante à anterior, exceto que sem conteúdo de exemplo.</p>
+<p><strong>Esboço de Projeto do Site</strong></p>
+<p>Mudar o idioma para pt_BR no site e na administração</p>
+<p>Ativar o mod_rewrite</p>
+<p>Ativar o cache</p>
+<p><strong>Instalar um novo Template</strong></p>
+<p>jl_learnmate_free</p>
+<p><strong>Instalar Algumas Extensões Nativas</strong></p>
+<p>- Breadcrumbs</p>
+<p>- Busca</p>
+<p>- Novidades</p>
+<p>- Populares</p>
+<p>- Rodapé</p>
+<p><strong>Instalar Algumas Extensões de Terceiros</strong></p>
+<p>- Componente SimpleBackup</p>
+<p>- Mapa do site</p>
+<p>- Gerenciador de arquivos</p>
+<p> </p>
+<p><strong>Criar Estrutura de Conteúdo</strong></p>
+<p>- Categorias</p>
+<p>- Artigos</p>
+<p>- Itens de Menu</p>
+<p> </p>
+<p><strong>Mudar o idioma para pt_BR no site e na administração</strong></p>
+<p>Extensions – Manager – Install Languages</p>
+<p> </p>
+<p>Digite br na caixa de busca e tecle Enter.</p>
+<p>Aparecerão os dois idiomas acima. Clique em Install à esquerda de Portuguese Brazil para instalar e aguarde um pouco.</p>
+<p> </p>
+<p>Agora clique em</p>
+<p>Extensions – Languages</p>
+<p>Clique na estrela na linha de Português do Brasil, à direita para torná-lo o idioma padrão.</p>
+<p>Depois clique na combo Site e selecione Administrator e então clique novamente na estrela na linha de Português do Brasil.</p>
+<p><br /><strong>Tudo em português do Brasil.</strong></p>
+<p>Ativar o mod_rewrite</p>
+<p>Clicar no menu</p>
+<p>Sistema – Configuração Global</p>
+<p>Em Site mude Usar mod_rewrite do Apache para Sim</p>
+<p>Agora renomeie o arquivo do raiz do site</p>
+<p>htaccess.txt para .htaccess</p>
+<p>Obs.: arquivos iniciados com ponto no Linux são arquivos ocultos. Após renomear eles desaparecem. Para que apareçam no modo gráfico tecle Ctrl+H e no terminal usando o comando “ls -la”.</p>
+<p> </p>
+<p><strong>Ativar o cache</strong></p>
+<p>Clicar em</p>
+<p>Sistema – Configuração Global</p>
+<p>Na aba Sistema em Cache mude para “Ligado – Cache Progressivo” ou Cache Conservador</p>
+<p>Conservador – pequeno cache</p>
+<p>Progressivo – mais rápido e grande cache. Não apropriado para sites muito grandes.</p>
+<p> </p>
+<p><strong>Instalar um novo Template</strong> </p>
+<p>Instalar o template jl_learnmate_free - <a href="http://www.joomlead.com/">http://www.joomlead.com</a></p>
+<p><a href="https://joomlead.com/joomla-template/learnmate/">https://joomlead.com/joomla-template/learnmate/</a></p>
+<p>Como ele requer o Framework Gantry, vamos instalar antes o Gantry, apenas o componente</p>
+<p><a href="http://gantry.org/downloads#joomla">http://gantry.org/downloads#joomla</a></p>
+<p> </p>
+<p><strong>Extensões – Gerenciar – Instalar</strong></p>
+<p>Clique em Instalar de uma URL e cole a URL do componente (que agora é esta)</p>
+<p><a href="https://github.com/gantry/gantry5/releases/download/5.4.13/joomla-pkg_gantry5_v5.4.13.zip">https://github.com/gantry/gantry5/releases/download/5.4.13/joomla-pkg_gantry5_v5.4.13.zip</a></p>
+<p> </p>
+<p>Agora então instalar o template learnmate.</p>
+<p>Extensões – Gerenciar – Instalar</p>
+<p>Faça o download e instale o pacote, pois ele requer seus dados para baixar.</p>
+<p>Caso tenha dificuldade de baixar do site oficial, baixe daqui:</p>
+<p><a href="http://www.joomla24.com/index.php?option=com_search&amp;Itemid=4&amp;searchword=learnmate">http://www.joomla24.com/index.php?option=com_search&amp;Itemid=4&amp;searchword=learnmate</a></p>
+<p>Mas veja que no joomla24 a versão é a 1.0.1 e no site oficial já é a 1.0.2. Prefira do site oficial.</p>
+<p>Extensões – Gerenciar – Instalar</p>
+<p>Clicar em Enviar Pacote de Arquivos</p>
+<p>Aponte para o arquivo baixado clicando no botão procurar pelo arquivo.</p>
+<p>Agora instalamos um novo template e temos dois templates para o site. Existem templates para o administrator também, mas não lidarei com eles aqui.</p>
+<p>Vamos tornar este template instalado o template padrão do site.</p>
+<p> </p>
+<p><strong>Extensões – Temas</strong></p>
+<p>Clique na estrela à direita de Learnate para para torná-lo padrão </p>
+<p>Agora ele é o nosso tempalte padrão.</p>
+<p>Mas precisamos realizar mais uma operação para que o conteúdo do nosso site seja assumido por este novo tempalte: Assignments</p>
+<p> </p>
+<p><strong>Criar um Novo Template com o Framework</strong></p>
+<p>Como este é mais que um template, mas é um Framework para a criação de templates, então vamos criar um template exclusivo para o nosso site, com o mesmo nome, portal2.</p>
+<p>Clique acima em Outlines</p>
+<p>Clique no grande sinal de mais (+)</p>
+<p>Na janela que se abre em</p>
+<p>Title – Portal2</p>
+<p>Create Form – Preset</p>
+<p>Preset – Default</p>
+<p>Confirm</p>
+<p>Saia do Gantry. Vá para Modulos, por exemplo.</p>
+<p>Agora clique em Extensões – Temas</p>
+<p> </p>
+<p><strong>Torne o Portal2 o default.</strong></p>
+<p>Clique no Portal2 para acessá-lo</p>
+<p>Clique acima em Assignments</p>
+<p>Clique no All verde acima para que selecione todos os menus do template.</p>
+<p>Depois clique em Save Assignments.</p>
+<p>Veja acima e à esquerda que está selecionado Portal2.</p>
+<p>Depois de instalar o novo template, torná-lo default e atribuir os menus ao mesm o nosso site .</p>
+<p>Iremos remover o que não desejamos e adicionar o que queremos.</p>
+<p>Veja que ele traz o main menu (HOME) e também um top menu, que iremos aproveitar para mostrar alguns itens sem subitens.</p>
+<p> </p>
+<p><strong>Bom tutorial</strong></p>
+<p><a href="https://www.ostraining.com/blog/joomla/">https://www.ostraining.com/blog/joomla/</a></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"> </p> 	</div>
+
+	
+	
+				
+	
+	
+	
+</article>
+
+</body>
+</html>

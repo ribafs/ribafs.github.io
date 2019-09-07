@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br" dir="ltr">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <base href="" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Ribamar FS" />
+	<meta name="robots" content="noindex, nofollow" />
+	<meta name="description" content="Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros." />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>Laravel - Artisan - RibaFS Portal</title>
+	<link href="http://ribafs.org/portal/frameworks/laravel-5/dicas/laravel-artisan.html?tmpl=component&amp;print=1&amp;layout=default" rel="canonical" />
+	<link href="../../../templates/shaper_helix3/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../../../favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<script src="../../../media/jui/js/jquery.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery-noconflict.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery-migrate.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="http://backup/portal/media/system/js/caption.js?d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script type="text/javascript">
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+	</script>
+	<meta property="og:url" content="http://backup/portal/frameworks/laravel-5/dicas/laravel-artisan.html" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Laravel - Artisan" />
+	<meta property="og:description" content="Comando para adicionar recursos usando a linha de comando assim php artisan comando Limpar o cache php artisan config:clear php artisan config:cache php ar..." />
+
+   	<link rel="stylesheet" href="../../../media/jui/css/bootstrap.min.css" type="text/css" />
+	<link rel="stylesheet" href="../../../templates/shaper_helix3/css/frontend-edit.css" type="text/css" />
+    <link rel="stylesheet" href="../../../templates/shaper_helix3/css/template.css" type="text/css" />
+</head>
+<body class="contentpane">
+	<div id="system-message-container">
+	</div>
+
+	
+
+<article class="item item-page" itemscope itemtype="http://schema.org/Article">
+	<meta itemprop="inLanguage" content="pt-BR" />
+	
+	
+
+	<div class="entry-header">
+		<span class="post-format"><i class="fa fa-thumb-tack"></i></span>
+		
+					<h2 itemprop="name">
+									Laravel - Artisan							</h2>
+												</div>
+
+						<div id="pop-print" class="btn hidden-print">
+				<a href="laravel-artisan.html#" onclick="window.print();return false;">			<span class="icon-print" aria-hidden="true"></span>
+		Imprimir	</a>			</div>
+				
+	
+	
+				
+	
+			<div itemprop="articleBody">
+		<p><strong>Comando para adicionar recursos usando a linha de comando assim</strong><br /><br />php artisan comando<br /><br />Limpar o cache<br />php artisan config:clear<br />php artisan config:cache<br /><br />php artisan key:generate --show<br />php artisan key:generate<br /><br />Mudar namespace da aplicação em geral<br />php artisan app:name Cadastro<br /><br />php artisan serve --port=8888<br /><br />O comando acima seta Cadastro como o novo namespace e configura todos os existentes<br />Exemplo: namespace Cadastro\Http\Controllers;<br /><br />php artisan list<br /><br />php artisan help migrate<br /><br />Criar numa pasta específica<br />php artisan make:controller Painel\\PainelController<br /><br />php artisan make:controller PhotoController --resource<br /><br />php artisan make:controller PhotoController --resource --model=Photo<br /><br />Sem detalhes:<br /><br />php artisan make:controller ClientesController --plain<br /><br />php artisan make:migration -h (help)<br /><br />php artisan migrate:install (instalar a tabela de migração)<br /><br />php aartisan make:migration create_tabela_post --create-posts<br /><br />Terminal de php<br /><br />php artisan tinker<br /><br />php artisan make:console (mudou para make:commander)<br /><br />Listar routes<br />php artisan route:list<br /><br />Criar o model e a migration, já com parte do método up<br />php artisan make:model Produtos -m<br /><br />php artisan help make:migration<br /><br />php artisan --version<br /><br />Quando baixamos um projeto do gitHub ele pode vir sem a pasta vendor ou outra. Para instalar execute:<br />composer install<br /><br />php artisan make:middleware PermissionsRequiredMiddleware</p> 	</div>
+
+	
+	
+				
+	
+	
+	
+</article>
+
+</body>
+</html>

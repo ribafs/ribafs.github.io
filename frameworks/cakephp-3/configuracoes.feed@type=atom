@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="Joomla! - Open Source Content Management" -->
+<feed xmlns="http://www.w3.org/2005/Atom"  xml:lang="pt-br">
+	<title type="text">Configurações - RibaFS Portal</title>
+	<subtitle type="text">Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros.</subtitle>
+	<link rel="alternate" type="text/html" href="http://backup"/>
+	<id>http://backup/portal/frameworks/cakephp-3/configuracoes.feed</id>
+	<updated>2019-09-07T18:58:22-03:00</updated>
+	<author>
+		<name>RibaFS Portal</name>
+	</author>
+	<generator uri="https://www.joomla.org">Joomla! - Open Source Content Management</generator>
+	<link rel="self" type="application/atom+xml" href="http://backup/portal/frameworks/cakephp-3/configuracoes.feed?type=atom"/>
+	<entry>
+		<title>Configurações do CakePHP 3</title>
+		<link rel="alternate" type="text/html" href="http://backup/portal/frameworks/cakephp-3/configuracoes/configuracoes-do-cakephp-3.html"/>
+		<published>2017-06-25T16:01:21-03:00</published>
+		<updated>2017-06-25T16:01:21-03:00</updated>
+		<id>http://backup/portal/frameworks/cakephp-3/configuracoes/configuracoes-do-cakephp-3.html</id>
+		<author>
+			<name>Ribamar FS</name>
+		</author>
+		<summary type="html">&lt;p style=&quot;margin-right: -0.04cm; text-align: justify;&quot;&gt;&lt;strong&gt;C&lt;/strong&gt;&lt;strong&gt;o&lt;/strong&gt;&lt;strong&gt;nfigurações no CakePHP 3&lt;br /&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p style=&quot;margin-right: 1.16cm; text-align: justify;&quot;&gt;Mesmo que as convenções nos livrem de estar efetuando muitas configurações no CakePHP,ainda assim precisamos configurar algumas coisas como bancos de dados, rotas e bootstrap (carga de plugins).&lt;/p&gt;
+&lt;p style=&quot;margin-right: -0.04cm; text-align: justify;&quot;&gt;Todos os arquivos de configuração ficam na pasta &lt;strong&gt;con&lt;/strong&gt;&lt;strong&gt;f&lt;/strong&gt;&lt;strong&gt;ig&lt;/strong&gt;.&lt;/p&gt;
+&lt;p style=&quot;margin-right: 9.17cm; text-align: justify;&quot;&gt;Os principais arquivos de configuração são: config/app.php&lt;/p&gt;
+&lt;p style=&quot;margin-right: 13.54cm; text-align: justify;&quot;&gt;config/routes.php config/bootstrap.php&lt;/p&gt;
+&lt;p style=&quot;margin-right: 1.62cm; text-align: justify;&quot;&gt;Nenhum dos 3 é obrigatório. Caso o aplicativo não use bancos de dados nem tenha plugins de terceiros não somos obrigados a alterar nenhum deles.&lt;/p&gt;
+&lt;p style=&quot;margin-right: -0.04cm; text-align: justify;&quot;&gt;Quando o aplicativo usa bancos de dados precisamos alterar o app.php.&lt;/p&gt;
+&lt;p style=&quot;margin-right: -0.04cm; text-align: justify;&quot;&gt;Quando desejamos personalizar as rotas também precisamos alterar o routes.php.&lt;/p&gt;
+&lt;p style=&quot;margin-right: -0.04cm; text-align: justify;&quot;&gt;Quando o aplicativo usa plugins de terceiros o bootstrap.php.&lt;/p&gt;
+&lt;p style=&quot;margin-right: -0.04cm; text-align: justify;&quot;&gt;&lt;strong&gt;ap&lt;/strong&gt;&lt;strong&gt;p&lt;/strong&gt;&lt;strong&gt;.php&lt;/strong&gt;&lt;/p&gt;
+&lt;p style=&quot;margin-right: 1.34cm; text-align: justify;&quot;&gt;Geralmente utilizado somente para configurar o banco de dados, mas existem muitas outras configurações nele. Vejamos algumas:&lt;/p&gt;
+&lt;p style=&quot;margin-right: -0.04cm; text-align: justify;&quot;&gt;debug&lt;/p&gt;
+&lt;p style=&quot;margin-right: -0.04cm; text-align: justify;&quot;&gt;encoding&lt;/p&gt;
+&lt;p style=&quot;margin-right: -0.04cm; text-align: justify;&quot;&gt;dir – diretório da aplicação. Por default o src webroot&lt;/p&gt;
+&lt;p style=&quot;margin-right: -0.04cm; text-align: justify;&quot;&gt;diretório base de imagens, css e javascript&lt;/p&gt;
+&lt;p style=&quot;margin-right: 1.53cm; text-align: justify;&quot;&gt;salt – deve ser alterado. String usada no hash de senhas. Usando o composer ele já altera o salt&lt;/p&gt;
+&lt;p style=&quot;margin-right: -0.04cm; text-align: justify;&quot;&gt;Error -&lt;/p&gt;
+&lt;p style=&quot;margin-right: -0.04cm; text-align: justify;&quot;&gt;Email configuração&lt;/p&gt;
+&lt;p style=&quot;margin-right: -0.04cm; text-align: justify;&quot;&gt;Datasources&lt;/p&gt;
+&lt;p style=&quot;margin-right: -0.04cm; text-align: justify;&quot;&gt;Log&lt;/p&gt;
+&lt;p style=&quot;margin-right: -0.04cm; text-align: justify;&quot;&gt;Session&lt;/p&gt;
+&lt;p style=&quot;margin-right: -0.04cm; text-align: justify;&quot;&gt;&lt;strong&gt;Configuran&lt;/strong&gt;&lt;strong&gt;d&lt;/strong&gt;&lt;strong&gt;o&lt;/strong&gt; &lt;strong&gt;o&lt;/strong&gt; &lt;strong&gt;Banco&lt;/strong&gt; &lt;strong&gt;d&lt;/strong&gt;&lt;strong&gt;e&lt;/strong&gt; &lt;strong&gt;D&lt;/strong&gt;&lt;strong&gt;ados&lt;/strong&gt;&lt;/p&gt;
+&lt;p style=&quot;margin-right: 0.56cm; text-align: justify;&quot;&gt;Para configurar o banco devemos indicar apenas o &lt;strong&gt;use&lt;/strong&gt;&lt;strong&gt;r&lt;/strong&gt;&lt;strong&gt;na&lt;/strong&gt;&lt;strong&gt;m&lt;/strong&gt;&lt;strong&gt;e,&lt;/strong&gt; &lt;strong&gt;password&lt;/strong&gt; e &lt;strong&gt;database&lt;/strong&gt; na configuração &lt;strong&gt;default&lt;/strong&gt;.&lt;/p&gt;
+&lt;pre class=&quot;language-php&quot;&gt;&lt;code&gt;'Datasources' =&amp;gt; [ 'default' =&amp;gt; [
+
+'className' =&amp;gt; 'Cake\Database\Connection', 'driver' =&amp;gt; 'Cake\Database\Driver\Mysql', 'persistent' =&amp;gt; false,
+
+'host' =&amp;gt; 'localhost', /**
+
+* CakePHP will use the default DB port based on the driver selected
+
+* MySQL on MAMP uses port 8889, MAMP users will want to uncomment * the following line and set the port accordingly
+
+*/
+
+//'port' =&amp;gt; 'non_standard_port_number', 'username' =&amp;gt; 'root',
+
+'password' =&amp;gt; '', 'database' =&amp;gt; 'blog', 'encoding' =&amp;gt; 'utf8', 'timezone' =&amp;gt; 'UTC', 'flags' =&amp;gt; [], 'cacheMetadata' =&amp;gt; true, 'log' =&amp;gt; false,&lt;/code&gt;&lt;/pre&gt;
+&lt;p style=&quot;margin-right: 0.95cm; text-align: justify;&quot;&gt;Uma configuração importante aqui também é o driver do SGBD. O CakePHP 3 trabalha atualmente com os SGBDs: Mysql, Postgres, Sqlite e Sqlserver. Caso queira criar o aplicativo acessando um banco do PostgreSQL, então a linha driver assim:&lt;/p&gt;
+&lt;p style=&quot;margin-right: -0.04cm; text-align: justify;&quot;&gt;'driver' =&amp;gt; 'Cake\Database\Driver\Postgres',&lt;/p&gt;
+&lt;p style=&quot;margin-right: -0.04cm; text-align: justify;&quot;&gt;Claro que também precisa alterar username, password e database.&lt;/p&gt;
+&lt;p style=&quot;margin-right: -0.04cm; text-align: justify;&quot;&gt;&lt;strong&gt;routes.php&lt;/strong&gt;&lt;/p&gt;
+&lt;p style=&quot;margin-right: 1.69cm; text-align: justify;&quot;&gt;Neste arquivo você configura as rotas para os actions e controllers. Rotas são um importante mecanismo que permite que você conecte para diferentes URLs apenas escolhendo os controllers e seus actions.&lt;/p&gt;
+&lt;p style=&quot;margin-right: 0.83cm; text-align: justify;&quot;&gt;Para uma configuração simples, suponha que você criou um aplicativo chamado cliente, que ficou na pasta cliente e criou os controllers e seus actions padrões: index(), view(), etc. Então vamos configurar o routes.php.&lt;/p&gt;
+&lt;p style=&quot;margin-right: -0.04cm; text-align: justify;&quot;&gt;Logo que criou o controller ClientesController e seus actions e acessar o aplicativo assim:&lt;/p&gt;
+&lt;p style=&quot;margin-right: -0.04cm; text-align: justify;&quot;&gt;&lt;a href=&quot;http://localhost/cliente&quot;&gt;&lt;u&gt;http://lo&lt;/u&gt;&lt;u&gt;c&lt;/u&gt;&lt;u&gt;alhost/&lt;/u&gt;&lt;u&gt;c&lt;/u&gt;&lt;u&gt;li&lt;/u&gt;&lt;u&gt;e&lt;/u&gt;&lt;u&gt;nte&lt;/u&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p style=&quot;margin-right: 0.8cm; text-align: justify;&quot;&gt;Quem responderá é o action display do controller PagesController, que é um controller e action padrão, que já vem com o Cake e estão pré-configurados no routes.php como a rota padrão. Veja:&lt;/p&gt;
+&lt;p style=&quot;margin-right: -0.04cm; text-align: justify;&quot;&gt;$routes-&amp;gt;connect('/', ['controller' =&amp;gt; 'Pages', 'action' =&amp;gt; 'display', 'home']);&lt;/p&gt;
+&lt;p style=&quot;margin-right: 0.59cm; text-align: justify;&quot;&gt;Para que seu controller Clientes seja mostrado juntamente com seus actions, precisamos dizer isso ao CakePHP,assim. Adicione esta linha &lt;strong&gt;ant&lt;/strong&gt;&lt;strong&gt;e&lt;/strong&gt;&lt;strong&gt;s&lt;/strong&gt; da linha anterior:&lt;/p&gt;
+&lt;p style=&quot;margin-right: -0.04cm; text-align: justify;&quot;&gt;$routes-&amp;gt;connect('/pages/*', ['controller' =&amp;gt; 'Clientes', 'action' =&amp;gt; 'index']);&lt;/p&gt;
+&lt;p style=&quot;margin-right: -0.04cm; text-align: justify;&quot;&gt;Chame seu aplicativo novamente com:&lt;/p&gt;
+&lt;p style=&quot;margin-right: -0.04cm; text-align: justify;&quot;&gt;&lt;a href=&quot;http://localhost/cliente&quot;&gt;&lt;u&gt;http://lo&lt;/u&gt;&lt;u&gt;c&lt;/u&gt;&lt;u&gt;alhost/&lt;/u&gt;&lt;u&gt;c&lt;/u&gt;&lt;u&gt;li&lt;/u&gt;&lt;u&gt;e&lt;/u&gt;&lt;u&gt;nte&lt;/u&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p style=&quot;margin-right: -0.04cm; text-align: justify;&quot;&gt;Agora sim, ele mostra o resultado do action index() do controller Clientes.&lt;/p&gt;
+&lt;p style=&quot;margin-right: 4.3cm; text-align: justify;&quot;&gt;Existem muitas configurações para as rotas. Para mais detalhes veja: &lt;a href=&quot;http://book.cakephp.org/3.0/en/development/routing.html&quot;&gt;&lt;u&gt;http://boo&lt;/u&gt;&lt;u&gt;k&lt;/u&gt;&lt;u&gt;.&lt;/u&gt;&lt;u&gt;c&lt;/u&gt;&lt;u&gt;a&lt;/u&gt;&lt;u&gt;k&lt;/u&gt;&lt;u&gt;e&lt;/u&gt;&lt;u&gt;php.org/3.0/en/&lt;/u&gt;&lt;u&gt;d&lt;/u&gt;&lt;u&gt;e&lt;/u&gt;&lt;u&gt;v&lt;/u&gt;&lt;u&gt;el&lt;/u&gt;&lt;u&gt;o&lt;/u&gt;&lt;u&gt;pment/routing.html&lt;/u&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt; &lt;/p&gt;
+&lt;p style=&quot;margin-right: -0.04cm; text-align: justify;&quot;&gt;&lt;strong&gt;bootstrap.p&lt;/strong&gt;&lt;strong&gt;h&lt;/strong&gt;&lt;strong&gt;p&lt;/strong&gt;&lt;/p&gt;
+&lt;p style=&quot;margin-right: 0.73cm; text-align: justify;&quot;&gt;Veja as mensagens iniciais que ele pode disparar, acusando que este é um dos arquivos iniciais no boot do CakePHP 3.&lt;/p&gt;
+&lt;p style=&quot;margin-right: 1.13cm; text-align: justify;&quot;&gt;Observe que ele já vem com várias configurações prontas. Já vem com alguns plugins carregados, como o Migrations e o DebugKit.&lt;/p&gt;
+&lt;p style=&quot;margin-right: -0.04cm; text-align: justify;&quot;&gt;&lt;strong&gt;Carregando&lt;/strong&gt; &lt;strong&gt;Plugins&lt;/strong&gt;&lt;/p&gt;
+&lt;p style=&quot;margin-right: 0.52cm; text-align: justify;&quot;&gt;Caso queira carregar um plugin de terceiro precisa adicionar uma linha logo abaixo desta: Plugin::load('Migrations');&lt;/p&gt;
+&lt;p style=&quot;margin-right: -0.04cm; text-align: justify;&quot;&gt;Supondo que precise carregar um plugin chamado Acl:&lt;/p&gt;
+&lt;p style=&quot;margin-right: -0.04cm; text-align: justify;&quot;&gt;&lt;br /&gt; Plugin::load('Acl');&lt;/p&gt;
+&lt;p style=&quot;margin-right: -0.04cm; text-align: justify;&quot;&gt;&lt;strong&gt;Checando&lt;/strong&gt; &lt;strong&gt;pa&lt;/strong&gt;&lt;strong&gt;r&lt;/strong&gt;&lt;strong&gt;a&lt;/strong&gt; &lt;strong&gt;v&lt;/strong&gt;&lt;strong&gt;er&lt;/strong&gt; &lt;strong&gt;se&lt;/strong&gt; &lt;strong&gt;uma&lt;/strong&gt; &lt;strong&gt;c&lt;/strong&gt;&lt;strong&gt;o&lt;/strong&gt;&lt;strong&gt;nfigura&lt;/strong&gt;&lt;strong&gt;ç&lt;/strong&gt;&lt;strong&gt;ão&lt;/strong&gt; &lt;strong&gt;foi&lt;/strong&gt; &lt;strong&gt;defi&lt;/strong&gt;&lt;strong&gt;n&lt;/strong&gt;&lt;strong&gt;ida&lt;/strong&gt;&lt;/p&gt;
+&lt;p style=&quot;margin-right: -0.04cm; text-align: justify;&quot;&gt;&lt;em&gt;static&lt;/em&gt; Cake\Core\Configure::check(&lt;em&gt;$key&lt;/em&gt;)&lt;/p&gt;
+&lt;p style=&quot;margin-right: -0.04cm; text-align: justify;&quot;&gt;$exists = Configure::check('Company.name');&lt;/p&gt;
+&lt;p style=&quot;margin-right: -0.04cm; text-align: justify;&quot;&gt;&lt;strong&gt;Deletando&lt;/strong&gt; &lt;strong&gt;C&lt;/strong&gt;&lt;strong&gt;onf&lt;/strong&gt;&lt;strong&gt;i&lt;/strong&gt;&lt;strong&gt;g&lt;/strong&gt;&lt;strong&gt;ur&lt;/strong&gt;&lt;strong&gt;a&lt;/strong&gt;&lt;strong&gt;ção&lt;/strong&gt;&lt;/p&gt;
+&lt;p style=&quot;margin-right: 8.09cm; text-align: justify;&quot;&gt;&lt;em&gt;static&lt;/em&gt; Cake\Core\Configure::delete(&lt;em&gt;$key&lt;/em&gt;) Configure::delete('Company.name');&lt;/p&gt;</summary>
+		<content type="html">&lt;p style=&quot;margin-right: -0.04cm; text-align: justify;&quot;&gt;&lt;strong&gt;C&lt;/strong&gt;&lt;strong&gt;o&lt;/strong&gt;&lt;strong&gt;nfigurações no CakePHP 3&lt;br /&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p style=&quot;margin-right: 1.16cm; text-align: justify;&quot;&gt;Mesmo que as convenções nos livrem de estar efetuando muitas configurações no CakePHP,ainda assim precisamos configurar algumas coisas como bancos de dados, rotas e bootstrap (carga de plugins).&lt;/p&gt;
+&lt;p style=&quot;margin-right: -0.04cm; text-align: justify;&quot;&gt;Todos os arquivos de configuração ficam na pasta &lt;strong&gt;con&lt;/strong&gt;&lt;strong&gt;f&lt;/strong&gt;&lt;strong&gt;ig&lt;/strong&gt;.&lt;/p&gt;
+&lt;p style=&quot;margin-right: 9.17cm; text-align: justify;&quot;&gt;Os principais arquivos de configuração são: config/app.php&lt;/p&gt;
+&lt;p style=&quot;margin-right: 13.54cm; text-align: justify;&quot;&gt;config/routes.php config/bootstrap.php&lt;/p&gt;
+&lt;p style=&quot;margin-right: 1.62cm; text-align: justify;&quot;&gt;Nenhum dos 3 é obrigatório. Caso o aplicativo não use bancos de dados nem tenha plugins de terceiros não somos obrigados a alterar nenhum deles.&lt;/p&gt;
+&lt;p style=&quot;margin-right: -0.04cm; text-align: justify;&quot;&gt;Quando o aplicativo usa bancos de dados precisamos alterar o app.php.&lt;/p&gt;
+&lt;p style=&quot;margin-right: -0.04cm; text-align: justify;&quot;&gt;Quando desejamos personalizar as rotas também precisamos alterar o routes.php.&lt;/p&gt;
+&lt;p style=&quot;margin-right: -0.04cm; text-align: justify;&quot;&gt;Quando o aplicativo usa plugins de terceiros o bootstrap.php.&lt;/p&gt;
+&lt;p style=&quot;margin-right: -0.04cm; text-align: justify;&quot;&gt;&lt;strong&gt;ap&lt;/strong&gt;&lt;strong&gt;p&lt;/strong&gt;&lt;strong&gt;.php&lt;/strong&gt;&lt;/p&gt;
+&lt;p style=&quot;margin-right: 1.34cm; text-align: justify;&quot;&gt;Geralmente utilizado somente para configurar o banco de dados, mas existem muitas outras configurações nele. Vejamos algumas:&lt;/p&gt;
+&lt;p style=&quot;margin-right: -0.04cm; text-align: justify;&quot;&gt;debug&lt;/p&gt;
+&lt;p style=&quot;margin-right: -0.04cm; text-align: justify;&quot;&gt;encoding&lt;/p&gt;
+&lt;p style=&quot;margin-right: -0.04cm; text-align: justify;&quot;&gt;dir – diretório da aplicação. Por default o src webroot&lt;/p&gt;
+&lt;p style=&quot;margin-right: -0.04cm; text-align: justify;&quot;&gt;diretório base de imagens, css e javascript&lt;/p&gt;
+&lt;p style=&quot;margin-right: 1.53cm; text-align: justify;&quot;&gt;salt – deve ser alterado. String usada no hash de senhas. Usando o composer ele já altera o salt&lt;/p&gt;
+&lt;p style=&quot;margin-right: -0.04cm; text-align: justify;&quot;&gt;Error -&lt;/p&gt;
+&lt;p style=&quot;margin-right: -0.04cm; text-align: justify;&quot;&gt;Email configuração&lt;/p&gt;
+&lt;p style=&quot;margin-right: -0.04cm; text-align: justify;&quot;&gt;Datasources&lt;/p&gt;
+&lt;p style=&quot;margin-right: -0.04cm; text-align: justify;&quot;&gt;Log&lt;/p&gt;
+&lt;p style=&quot;margin-right: -0.04cm; text-align: justify;&quot;&gt;Session&lt;/p&gt;
+&lt;p style=&quot;margin-right: -0.04cm; text-align: justify;&quot;&gt;&lt;strong&gt;Configuran&lt;/strong&gt;&lt;strong&gt;d&lt;/strong&gt;&lt;strong&gt;o&lt;/strong&gt; &lt;strong&gt;o&lt;/strong&gt; &lt;strong&gt;Banco&lt;/strong&gt; &lt;strong&gt;d&lt;/strong&gt;&lt;strong&gt;e&lt;/strong&gt; &lt;strong&gt;D&lt;/strong&gt;&lt;strong&gt;ados&lt;/strong&gt;&lt;/p&gt;
+&lt;p style=&quot;margin-right: 0.56cm; text-align: justify;&quot;&gt;Para configurar o banco devemos indicar apenas o &lt;strong&gt;use&lt;/strong&gt;&lt;strong&gt;r&lt;/strong&gt;&lt;strong&gt;na&lt;/strong&gt;&lt;strong&gt;m&lt;/strong&gt;&lt;strong&gt;e,&lt;/strong&gt; &lt;strong&gt;password&lt;/strong&gt; e &lt;strong&gt;database&lt;/strong&gt; na configuração &lt;strong&gt;default&lt;/strong&gt;.&lt;/p&gt;
+&lt;pre class=&quot;language-php&quot;&gt;&lt;code&gt;'Datasources' =&amp;gt; [ 'default' =&amp;gt; [
+
+'className' =&amp;gt; 'Cake\Database\Connection', 'driver' =&amp;gt; 'Cake\Database\Driver\Mysql', 'persistent' =&amp;gt; false,
+
+'host' =&amp;gt; 'localhost', /**
+
+* CakePHP will use the default DB port based on the driver selected
+
+* MySQL on MAMP uses port 8889, MAMP users will want to uncomment * the following line and set the port accordingly
+
+*/
+
+//'port' =&amp;gt; 'non_standard_port_number', 'username' =&amp;gt; 'root',
+
+'password' =&amp;gt; '', 'database' =&amp;gt; 'blog', 'encoding' =&amp;gt; 'utf8', 'timezone' =&amp;gt; 'UTC', 'flags' =&amp;gt; [], 'cacheMetadata' =&amp;gt; true, 'log' =&amp;gt; false,&lt;/code&gt;&lt;/pre&gt;
+&lt;p style=&quot;margin-right: 0.95cm; text-align: justify;&quot;&gt;Uma configuração importante aqui também é o driver do SGBD. O CakePHP 3 trabalha atualmente com os SGBDs: Mysql, Postgres, Sqlite e Sqlserver. Caso queira criar o aplicativo acessando um banco do PostgreSQL, então a linha driver assim:&lt;/p&gt;
+&lt;p style=&quot;margin-right: -0.04cm; text-align: justify;&quot;&gt;'driver' =&amp;gt; 'Cake\Database\Driver\Postgres',&lt;/p&gt;
+&lt;p style=&quot;margin-right: -0.04cm; text-align: justify;&quot;&gt;Claro que também precisa alterar username, password e database.&lt;/p&gt;
+&lt;p style=&quot;margin-right: -0.04cm; text-align: justify;&quot;&gt;&lt;strong&gt;routes.php&lt;/strong&gt;&lt;/p&gt;
+&lt;p style=&quot;margin-right: 1.69cm; text-align: justify;&quot;&gt;Neste arquivo você configura as rotas para os actions e controllers. Rotas são um importante mecanismo que permite que você conecte para diferentes URLs apenas escolhendo os controllers e seus actions.&lt;/p&gt;
+&lt;p style=&quot;margin-right: 0.83cm; text-align: justify;&quot;&gt;Para uma configuração simples, suponha que você criou um aplicativo chamado cliente, que ficou na pasta cliente e criou os controllers e seus actions padrões: index(), view(), etc. Então vamos configurar o routes.php.&lt;/p&gt;
+&lt;p style=&quot;margin-right: -0.04cm; text-align: justify;&quot;&gt;Logo que criou o controller ClientesController e seus actions e acessar o aplicativo assim:&lt;/p&gt;
+&lt;p style=&quot;margin-right: -0.04cm; text-align: justify;&quot;&gt;&lt;a href=&quot;http://localhost/cliente&quot;&gt;&lt;u&gt;http://lo&lt;/u&gt;&lt;u&gt;c&lt;/u&gt;&lt;u&gt;alhost/&lt;/u&gt;&lt;u&gt;c&lt;/u&gt;&lt;u&gt;li&lt;/u&gt;&lt;u&gt;e&lt;/u&gt;&lt;u&gt;nte&lt;/u&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p style=&quot;margin-right: 0.8cm; text-align: justify;&quot;&gt;Quem responderá é o action display do controller PagesController, que é um controller e action padrão, que já vem com o Cake e estão pré-configurados no routes.php como a rota padrão. Veja:&lt;/p&gt;
+&lt;p style=&quot;margin-right: -0.04cm; text-align: justify;&quot;&gt;$routes-&amp;gt;connect('/', ['controller' =&amp;gt; 'Pages', 'action' =&amp;gt; 'display', 'home']);&lt;/p&gt;
+&lt;p style=&quot;margin-right: 0.59cm; text-align: justify;&quot;&gt;Para que seu controller Clientes seja mostrado juntamente com seus actions, precisamos dizer isso ao CakePHP,assim. Adicione esta linha &lt;strong&gt;ant&lt;/strong&gt;&lt;strong&gt;e&lt;/strong&gt;&lt;strong&gt;s&lt;/strong&gt; da linha anterior:&lt;/p&gt;
+&lt;p style=&quot;margin-right: -0.04cm; text-align: justify;&quot;&gt;$routes-&amp;gt;connect('/pages/*', ['controller' =&amp;gt; 'Clientes', 'action' =&amp;gt; 'index']);&lt;/p&gt;
+&lt;p style=&quot;margin-right: -0.04cm; text-align: justify;&quot;&gt;Chame seu aplicativo novamente com:&lt;/p&gt;
+&lt;p style=&quot;margin-right: -0.04cm; text-align: justify;&quot;&gt;&lt;a href=&quot;http://localhost/cliente&quot;&gt;&lt;u&gt;http://lo&lt;/u&gt;&lt;u&gt;c&lt;/u&gt;&lt;u&gt;alhost/&lt;/u&gt;&lt;u&gt;c&lt;/u&gt;&lt;u&gt;li&lt;/u&gt;&lt;u&gt;e&lt;/u&gt;&lt;u&gt;nte&lt;/u&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p style=&quot;margin-right: -0.04cm; text-align: justify;&quot;&gt;Agora sim, ele mostra o resultado do action index() do controller Clientes.&lt;/p&gt;
+&lt;p style=&quot;margin-right: 4.3cm; text-align: justify;&quot;&gt;Existem muitas configurações para as rotas. Para mais detalhes veja: &lt;a href=&quot;http://book.cakephp.org/3.0/en/development/routing.html&quot;&gt;&lt;u&gt;http://boo&lt;/u&gt;&lt;u&gt;k&lt;/u&gt;&lt;u&gt;.&lt;/u&gt;&lt;u&gt;c&lt;/u&gt;&lt;u&gt;a&lt;/u&gt;&lt;u&gt;k&lt;/u&gt;&lt;u&gt;e&lt;/u&gt;&lt;u&gt;php.org/3.0/en/&lt;/u&gt;&lt;u&gt;d&lt;/u&gt;&lt;u&gt;e&lt;/u&gt;&lt;u&gt;v&lt;/u&gt;&lt;u&gt;el&lt;/u&gt;&lt;u&gt;o&lt;/u&gt;&lt;u&gt;pment/routing.html&lt;/u&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt; &lt;/p&gt;
+&lt;p style=&quot;margin-right: -0.04cm; text-align: justify;&quot;&gt;&lt;strong&gt;bootstrap.p&lt;/strong&gt;&lt;strong&gt;h&lt;/strong&gt;&lt;strong&gt;p&lt;/strong&gt;&lt;/p&gt;
+&lt;p style=&quot;margin-right: 0.73cm; text-align: justify;&quot;&gt;Veja as mensagens iniciais que ele pode disparar, acusando que este é um dos arquivos iniciais no boot do CakePHP 3.&lt;/p&gt;
+&lt;p style=&quot;margin-right: 1.13cm; text-align: justify;&quot;&gt;Observe que ele já vem com várias configurações prontas. Já vem com alguns plugins carregados, como o Migrations e o DebugKit.&lt;/p&gt;
+&lt;p style=&quot;margin-right: -0.04cm; text-align: justify;&quot;&gt;&lt;strong&gt;Carregando&lt;/strong&gt; &lt;strong&gt;Plugins&lt;/strong&gt;&lt;/p&gt;
+&lt;p style=&quot;margin-right: 0.52cm; text-align: justify;&quot;&gt;Caso queira carregar um plugin de terceiro precisa adicionar uma linha logo abaixo desta: Plugin::load('Migrations');&lt;/p&gt;
+&lt;p style=&quot;margin-right: -0.04cm; text-align: justify;&quot;&gt;Supondo que precise carregar um plugin chamado Acl:&lt;/p&gt;
+&lt;p style=&quot;margin-right: -0.04cm; text-align: justify;&quot;&gt;&lt;br /&gt; Plugin::load('Acl');&lt;/p&gt;
+&lt;p style=&quot;margin-right: -0.04cm; text-align: justify;&quot;&gt;&lt;strong&gt;Checando&lt;/strong&gt; &lt;strong&gt;pa&lt;/strong&gt;&lt;strong&gt;r&lt;/strong&gt;&lt;strong&gt;a&lt;/strong&gt; &lt;strong&gt;v&lt;/strong&gt;&lt;strong&gt;er&lt;/strong&gt; &lt;strong&gt;se&lt;/strong&gt; &lt;strong&gt;uma&lt;/strong&gt; &lt;strong&gt;c&lt;/strong&gt;&lt;strong&gt;o&lt;/strong&gt;&lt;strong&gt;nfigura&lt;/strong&gt;&lt;strong&gt;ç&lt;/strong&gt;&lt;strong&gt;ão&lt;/strong&gt; &lt;strong&gt;foi&lt;/strong&gt; &lt;strong&gt;defi&lt;/strong&gt;&lt;strong&gt;n&lt;/strong&gt;&lt;strong&gt;ida&lt;/strong&gt;&lt;/p&gt;
+&lt;p style=&quot;margin-right: -0.04cm; text-align: justify;&quot;&gt;&lt;em&gt;static&lt;/em&gt; Cake\Core\Configure::check(&lt;em&gt;$key&lt;/em&gt;)&lt;/p&gt;
+&lt;p style=&quot;margin-right: -0.04cm; text-align: justify;&quot;&gt;$exists = Configure::check('Company.name');&lt;/p&gt;
+&lt;p style=&quot;margin-right: -0.04cm; text-align: justify;&quot;&gt;&lt;strong&gt;Deletando&lt;/strong&gt; &lt;strong&gt;C&lt;/strong&gt;&lt;strong&gt;onf&lt;/strong&gt;&lt;strong&gt;i&lt;/strong&gt;&lt;strong&gt;g&lt;/strong&gt;&lt;strong&gt;ur&lt;/strong&gt;&lt;strong&gt;a&lt;/strong&gt;&lt;strong&gt;ção&lt;/strong&gt;&lt;/p&gt;
+&lt;p style=&quot;margin-right: 8.09cm; text-align: justify;&quot;&gt;&lt;em&gt;static&lt;/em&gt; Cake\Core\Configure::delete(&lt;em&gt;$key&lt;/em&gt;) Configure::delete('Company.name');&lt;/p&gt;</content>
+		<category term="Configurações" />
+	</entry>
+</feed>

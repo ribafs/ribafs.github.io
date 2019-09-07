@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br" dir="ltr">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <base href="" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Ribamar FS" />
+	<meta name="robots" content="noindex, nofollow" />
+	<meta name="description" content="Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros." />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>2 - MVC no CakePHP - RibaFS Portal</title>
+	<link href="http://ribafs.org/portal/curriculo/livros/cakephp/mvc-no-cakephp.html?tmpl=component&amp;print=1&amp;layout=default" rel="canonical" />
+	<link href="../../../templates/shaper_helix3/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../../../favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<script src="../../../media/jui/js/jquery.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery-noconflict.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery-migrate.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="http://backup/portal/media/system/js/caption.js?d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script type="text/javascript">
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+	</script>
+	<meta property="og:url" content="http://backup/portal/curriculo/livros/cakephp/mvc-no-cakephp.html" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="2 - MVC no CakePHP" />
+	<meta property="og:description" content="2 – MVC no CakePHP Uma pessoa inteligente resolve um problema, um sábio previne. Albert Einstein O CakePHP usa o padrão MVC para organizar seu código, port..." />
+
+   	<link rel="stylesheet" href="../../../media/jui/css/bootstrap.min.css" type="text/css" />
+	<link rel="stylesheet" href="../../../templates/shaper_helix3/css/frontend-edit.css" type="text/css" />
+    <link rel="stylesheet" href="../../../templates/shaper_helix3/css/template.css" type="text/css" />
+</head>
+<body class="contentpane">
+	<div id="system-message-container">
+	</div>
+
+	
+
+<article class="item item-page" itemscope itemtype="http://schema.org/Article">
+	<meta itemprop="inLanguage" content="pt-BR" />
+	
+	
+
+	<div class="entry-header">
+		<span class="post-format"><i class="fa fa-thumb-tack"></i></span>
+		
+					<h2 itemprop="name">
+									2 - MVC no CakePHP							</h2>
+												</div>
+
+						<div id="pop-print" class="btn hidden-print">
+				<a href="mvc-no-cakephp.html#" onclick="window.print();return false;">			<span class="icon-print" aria-hidden="true"></span>
+		Imprimir	</a>			</div>
+				
+	
+	
+				
+	
+			<div itemprop="articleBody">
+		<h1 align="left">2 – MVC no CakePHP</h1>
+<p> </p>
+<p align="right"><strong><em>Uma pessoa inteligente resolve um problema, um sábio previne.</em></strong></p>
+<p align="right">Albert Einstein</p>
+<p> </p>
+<p align="justify">O CakePHP usa o padrão MVC para organizar seu código, portando seguem algumas informações que tornarão mais simples o aprendizado do uso do CakePHP 3.</p>
+<p align="justify"> </p>
+<p align="justify"><a name="__RefHeading___Toc4096_844455279"></a> <span style="font-family: Times New Roman, serif;"><b>Model</b></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;" align="justify"> </p>
+<p style="margin-bottom: 0cm; line-height: 100%;" align="justify"><a name="__RefHeading___Toc4098_844455279"></a> <span style="font-family: Times New Roman, serif;">Nesta camada são realizadas as operações de validação, leitura e escrita de dados no banco de dados. É responsável por salvar e receber dados do banco de</span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;" align="justify"><a name="__RefHeading___Toc4100_844455279"></a> <span style="font-family: Times New Roman, serif;">dados, como também efetua diversos processamentos com os dados.</span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;" align="justify"> </p>
+<p style="margin-bottom: 0cm; line-height: 100%;" align="justify"><a name="__RefHeading___Toc4102_844455279"></a> <span style="font-family: Times New Roman, serif;">A camada Model é o cérebro da aplicação. Basicamente qualquer coisa para ler, alterar, salvar ou excluir dados é nesta camada. A camada Model é a camada que sofreu a maior transformação na versão 3.</span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;" align="justify"> </p>
+<p style="margin-bottom: 0cm; line-height: 100%;" align="justify"><a name="__RefHeading___Toc4104_844455279"></a> <span style="font-family: Times New Roman, serif;">Nas versões anteriores o Model era representado por classes Model e Behavior.</span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;" align="justify"><a name="__RefHeading___Toc4106_844455279"></a> <span style="font-family: Times New Roman, serif;">Na versão 3 agora temos as classes Table, Entity, Behavior e Query.</span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;" align="justify"> </p>
+<p style="margin-bottom: 0cm; line-height: 100%;" align="justify"><a name="__RefHeading___Toc4108_844455279"></a> <span style="font-family: Times New Roman, serif;">As classes Table representam os dados armazenados, normalmente uma tabela e são responsáveis por encontrar, salvar e validar nossos dados. Também são </span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;" align="justify"><a name="__RefHeading___Toc4110_844455279"></a> <span style="font-family: Times New Roman, serif;">responsáveis por manipular grandes massas de dados, como cálculo dos totais de uma coleção de dados.</span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;" align="justify"> </p>
+<p style="margin-bottom: 0cm; line-height: 100%;" align="justify"><a name="__RefHeading___Toc4112_844455279"></a> <span style="font-family: Times New Roman, serif;">As classes Entity formam um conceito inteiramente novo e elas representam dados simples, isto é, apenas um registro na tabela. Usando classes Entity permite a você criar campos de dados virtuais muito complexos.</span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;" align="justify"> </p>
+<p style="margin-bottom: 0cm; line-height: 100%;" align="justify"><a name="__RefHeading___Toc4114_844455279"></a> <span style="font-family: Times New Roman, serif;">Classes Behavior funcionam exatamente como as da versão anterior, complementando as classes Table e Entity. </span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;" align="justify"> </p>
+<p style="margin-bottom: 0cm; line-height: 100%;" align="justify"><a name="__RefHeading___Toc4116_844455279"></a> <span style="font-family: Times New Roman, serif;">A nova classe Query dá ao CakePHP 3 uma incrível e poderosa maneira de interagir com bancos de dados relacionais padrões, através do que é chamada de uma </span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;" align="justify"><a name="__RefHeading___Toc4118_844455279"></a> <span style="font-family: Times New Roman, serif;">interface fluente.</span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;" align="justify"> </p>
+<p style="margin-bottom: 0cm; line-height: 100%;" align="justify"><a name="__RefHeading___Toc4162_844455279"></a> <span style="font-family: Times New Roman, serif;">Uma boa prática é trazer para esta camada tudo que diz respeito às regras de negócio, como cálculos ou validações de integridade de dados.</span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;" align="justify"> </p>
+<p style="margin-bottom: 0cm; line-height: 100%;" align="justify"><span style="font-family: Times New Roman, serif;">Por padrão o Cake trabalha com um único model por tabela.</span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;" align="justify"> </p>
+<p style="margin-bottom: 0cm; line-height: 100%;" align="justify"><span style="font-family: Times New Roman, serif;">Caso não criemos um model em nosso aplicativo o Cake criará um dinamicamente com as funcionalidades básicas.</span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;" align="justify"> </p>
+<p style="margin-bottom: 0cm; font-weight: normal; line-height: 100%;" align="justify"><span style="font-family: Times New Roman, serif;">Os métodos que operam coleções de entidades são colocados na classe Table, enquanto os recursos pertencentes a um único registro são colocados na classe Entity.</span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;" align="justify"> </p>
+<p style="margin-bottom: 0cm; line-height: 100%; page-break-before: always;" align="justify"><a name="__RefHeading___Toc4164_844455279"></a> <span style="font-family: Times New Roman, serif;"><b>Controller</b></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;" align="justify"> </p>
+<p style="margin-bottom: 0cm; line-height: 100%;" align="justify"><a name="__RefHeading___Toc4166_844455279"></a> <span style="font-family: Times New Roman, serif;">É o responsável pela integração entre as camadas Model e View. Basicamente a View irá realizar uma solicitação para o Controller como por exemplo uma coleção de dados ou a solicitação de remover algum item do banco e o Controller, por sua vez, irá enviar a instrução para a camada Model executar.</span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;" align="justify"> </p>
+<p style="margin-bottom: 0cm; line-height: 100%;" align="justify"><span style="font-family: Times New Roman, serif;">Um controller pode ser visto como um gerente que certifica-se que todos os recursos necessários para completar uma tarefa sejam delegados aos trabalhadores corretos.</span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;" align="justify"> </p>
+<p style="margin-bottom: 0cm; line-height: 100%;" align="justify"><span style="font-family: Times New Roman, serif;">Ele aguarda por requisições dos clientes, checa suas validades de acordo com autenticação ou regras de autorização, delega requisições ou processamento de dados para a camada Model, selecciona o tipo de dados de apresentação que os clientes estão aceitando, e finalmente delega o processo de renderização para a camada View.</span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;" align="justify"> </p>
+<p style="margin-bottom: 0cm; line-height: 100%;" align="justify"><span style="font-family: Times New Roman, serif;">Nesta camada (Controller) também podemos realizar verificações que não se referem às regras de negócio, visto que a boa prática é manter as regras de negócio no Model.</span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;" align="justify"> </p>
+<p style="margin-bottom: 0cm; line-height: 100%;" align="justify"><span style="font-family: Times New Roman, serif;">O Controller é o coração do aplicativo. Esta camada é a que teve a menor quantidade de alterações da versão 2 para a 3. É responsável por controlar o fluxo de dados da aplicação: recebe requisições da view e as envia para o model. Então recebe de volta do model, efetua algum processamento e envia de volta a resposta para a view. </span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;" align="justify"> </p>
+<p style="margin-bottom: 0cm; line-height: 100%;" align="justify"><span style="font-family: Times New Roman, serif;">O Controller deve ser magro enquanto que gordo deve ser o model, onde fica a lógica de negócios.</span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;" align="justify"> </p>
+<p style="margin-bottom: 0cm; line-height: 100%;" align="justify"><span style="font-family: Times New Roman, serif;">Uma solicitação de entrada do cliente é enviada para uma ação de um controller específico, que tem a lógica necessária para determinar quais dados são necessários e em qual tabela estariam. O controller verifica se o cliente solicitante tem permissão para acessar tais dados e qual view deve ser usada para a saída dos dados. A camada controller consiste de classes Controller e classes Component (opcionalmente). Um componente tem função parecida com a dos Behavior para os Model, eles auxiliam os Controllers, assim como os Behavior auxiliam os Models. O componente encapsula código que deve ser compartilhado com os Controllers.</span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;" align="justify"> </p>
+<p style="margin-bottom: 0cm; line-height: 100%;" align="justify"><a name="__RefHeading___Toc4182_844455279"></a> <span style="font-family: Times New Roman, serif;"><i>Do livro oficial do CakePHP 3</i></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;" align="justify"> </p>
+<p style="margin-bottom: 0cm; line-height: 100%;" align="justify"><span style="font-family: Times New Roman, serif;">Controllers no CakePHP lidam com solicitações HTTP e executam lógica de negócios contida em métodos de Model, para preparar a resposta, que será repassada para uma view. São usados para receber requisições e requisitar dados e processá-los e, se for o caso, entregar para a view respectiva.</span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;" align="justify"> </p>
+<p style="margin-bottom: 0cm; line-height: 100%;" align="justify"><span style="font-family: Times New Roman, serif;">Trabalhar com bancos de dados pode ser em controllers e models, mas em models é mais adequado e recomendado. Embora tenhamos a liberdade de trabalhar onde quizermos.</span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;" align="justify"> </p>
+<p style="margin-bottom: 0cm; line-height: 100%;" align="justify"><span style="font-family: Times New Roman, serif;">Actions são métodos public do controller que possuem rotas conectadas a eles.</span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;" align="justify"> </p>
+<p style="margin-bottom: 0cm; line-height: 100%;" align="justify"><span style="font-family: Times New Roman, serif;"><b>Como funciona uma requisição:</b></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;" align="justify"><a name="__RefHeading___Toc4184_844455279"></a> <span style="font-family: Times New Roman, serif;">- O dispatche/despachante do CakePHP usa o roteador/router para determinar qual ação do controller deve ser chamado para servir a solicitação de entrada</span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;" align="justify"><a name="__RefHeading___Toc4186_844455279"></a> <span style="font-family: Times New Roman, serif;">- O controller, então, verificar se há detalhes de autenticação (se necessário) e quaisquer parâmetros de solicitação, tais como IDs, extensões de arquivos, etc.</span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;" align="justify"><a name="__RefHeading___Toc4188_844455279"></a> <span style="font-family: Times New Roman, serif;">- A ação/action do controller solicita os dados necessários da camada de modelo</span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;" align="justify"><a name="__RefHeading___Toc4190_844455279"></a> <span style="font-family: Times New Roman, serif;">- A camada Model recupera os dados solicitados a partir do armazenamento de dados, manipula e formata conforme necessário e retorna os dados para o controlador</span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;" align="justify"><a name="__RefHeading___Toc4192_844455279"></a> <span style="font-family: Times New Roman, serif;">- O controlador então passa os dados para a camada de visão</span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;" align="justify"><a name="__RefHeading___Toc4194_844455279"></a> <span style="font-family: Times New Roman, serif;">- A camada View torna os dados em HTML (ou JSON, PDF, XML, etc.)</span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;" align="justify"><a name="__RefHeading___Toc4196_844455279"></a> <span style="font-family: Times New Roman, serif;">- Finalmente, o controlador volta a saída da camada View para o dispatcher, que envia para o cliente.</span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;" align="justify"> </p>
+<p style="margin-bottom: 0cm; line-height: 100%;" align="justify"><a name="__RefHeading___Toc4198_844455279"></a> <span style="font-family: Times New Roman, serif;"><b>View</b></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;" align="justify"><a name="__RefHeading___Toc4200_844455279"></a> <span style="font-family: Times New Roman, serif;">É a camada responsável por tudo que é visual, páginas, formulários, listagens, menus, o HTML. Tudo aquilo que interage com o usuário deve estar presente nesta camada. </span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;" align="justify"><span style="font-family: Times New Roman, serif;">Representadas por HTML, classes Helpers, View, View Cells</span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;" align="justify"><a name="__RefHeading___Toc4202_844455279"></a> <span style="font-family: Times New Roman, serif;">A View não realiza operações diretamente com o banco de dados nem trata diretamente com o Model. Ela as solicita e e exibe através do Controller, que</span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;" align="justify"><a name="__RefHeading___Toc4204_844455279"></a> <span style="font-family: Times New Roman, serif;">intermedia suas solicitações com o Model.</span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;" align="justify"><a name="__RefHeading___Toc4206_844455279"></a> <span style="font-family: Times New Roman, serif;">No CakePHP 3 as views agora ficam no diretório Template</span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;" align="justify"><a name="__RefHeading___Toc4208_844455279"></a> <span style="font-family: Times New Roman, serif;">O diretório View contém apenas classes gerais.</span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;" align="justify"><a name="__RefHeading___Toc4210_844455279"></a> <span style="font-family: Times New Roman, serif;">Se o Controller é o coração, Model é o cérebro da nossa aplicação, então a View é a pele.</span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;" align="justify"> </p>
+<p align="justify"><span style="font-family: Times New Roman, serif;">Para a maioria das aplicações, as views são uma mescla entre HTML e PHP, mas também podem ser distribuídas como XML, CSV, ou ainda dados binários.</span></p>
+<p align="justify"><span style="font-family: Times New Roman, serif;">Os templates da view do CakePHP são código PHP para apresentação que são inseridos dentro do layout do aplicativo.</span></p>
+<p align="justify"><span style="font-family: Times New Roman, serif;">Um layout é um código de apresentação que contém em seu interior uma view/template. Arquivos de layout contêm elementos de site comuns, como cabeçalhos, rodapés e elementos de navegação. Seu aplicativo pode ter vários layouts e você pode alternar entre eles.</span></p>
+<p align="justify"><span style="font-family: Times New Roman, serif;">Os arquivos de template do CakePHP são armazenados em src/Template dentro de uma pasta com o nome do controller ao qual eles correspondem. Então, teremos que criar uma pasta chamada "Artigos" nesse caso.</span></p>
+<p align="justify"><span style="font-family: Times New Roman, serif;">Você precisa incluir o componente Flash em qualquer controlador onde você o usará. Por conta disso ele já vem no src/Controller/AppController.php gerado pelo bake.</span></p>
+<p align="justify"><span style="font-family: Times New Roman, serif;">O método $this-&gt;Form-&gt;control() é usado para criar elementos de formulário com o mesmo nome. O primeiro parâmetro diz ao CakePHP a que campo eles correspondem, e o segundo parâmetro permite que você especifique uma grande variedade de opções - neste caso, o número de linhas para a área de texto. Há um pouco de introspecção e convenções usadas aqui. O control() gerará diferentes elementos de formulário com base no campo de modelo especificado e usará inflexão para gerar o texto do rótulo (os nomes virão da tabela no banco de dados). Você pode personalizar o rótulo, a entrada ou qualquer outro aspecto dos controles de formulário usando opções. A chamada $this-&gt;Form-&gt;end() fecha o formulário.</span></p>
+<p align="justify"> </p>
+<p align="justify"><span style="font-family: Times New Roman, serif;"><b>Resumidamente</b></span></p>
+<p style="font-weight: normal;" align="justify"><span style="font-family: Times New Roman, serif;"><b>Models</b> – consultam o banco de dados e retorna os dados necessários</span></p>
+<p style="font-weight: normal;" align="justify"><span style="font-family: Times New Roman, serif;"><b>Views</b> – são páginas que renderizam os dados recebidos</span></p>
+<p style="font-weight: normal;" align="justify"><span style="font-family: Times New Roman, serif;"><b>Controllers</b> – manipulam as requisições dos usuários, recebe dados dos models e passa para as views</span></p>
+<p align="justify"><span style="font-family: Times New Roman, serif;"><b>Mais detalhes</b></span></p>
+<p style="font-weight: normal;" align="justify"><span style="font-family: Times New Roman, serif;"><a href="https://book.cakephp.org/3.0/en/intro.html">https://book.cakephp.org/3.0/en/intro.html</a></span></p>
+<p style="font-weight: normal;" align="justify"> </p> 	</div>
+
+	
+	
+				
+	
+	
+	
+</article>
+
+</body>
+</html>

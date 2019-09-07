@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br" dir="ltr">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <base href="" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Ribamar FS" />
+	<meta name="robots" content="noindex, nofollow" />
+	<meta name="description" content="Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros." />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>Criando um Projeto no GitHub - RibaFS Portal</title>
+	<link href="http://ribafs.org/portal/frameworks/cakephp-3/tutoriais/projeto-no-github.html?tmpl=component&amp;print=1&amp;layout=default" rel="canonical" />
+	<link href="../../../templates/shaper_helix3/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../../../favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<script src="../../../media/jui/js/jquery.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery-noconflict.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery-migrate.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="http://backup/portal/media/system/js/caption.js?d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script type="text/javascript">
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+	</script>
+	<meta property="og:url" content="http://backup/portal/frameworks/cakephp-3/tutoriais/projeto-no-github.html" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Criando um Projeto no GitHub" />
+	<meta property="og:description" content="Como Criar um Projeto hospedado no GitHub e no Packagist Ainda tem um terceiro projeto envolvido, o Composer. O Composer funciona de forma transparente ent..." />
+
+   	<link rel="stylesheet" href="../../../media/jui/css/bootstrap.min.css" type="text/css" />
+	<link rel="stylesheet" href="../../../templates/shaper_helix3/css/frontend-edit.css" type="text/css" />
+    <link rel="stylesheet" href="../../../templates/shaper_helix3/css/template.css" type="text/css" />
+</head>
+<body class="contentpane">
+	<div id="system-message-container">
+	</div>
+
+	
+
+<article class="item item-page" itemscope itemtype="http://schema.org/Article">
+	<meta itemprop="inLanguage" content="pt-BR" />
+	
+	
+
+	<div class="entry-header">
+		<span class="post-format"><i class="fa fa-thumb-tack"></i></span>
+		
+					<h2 itemprop="name">
+									Criando um Projeto no GitHub							</h2>
+												</div>
+
+						<div id="pop-print" class="btn hidden-print">
+				<a href="projeto-no-github.html#" onclick="window.print();return false;">			<span class="icon-print" aria-hidden="true"></span>
+		Imprimir	</a>			</div>
+				
+	
+	
+				
+	
+			<div itemprop="articleBody">
+		<p style="text-align: justify;"><strong>Como Criar um Projeto hospedado no GitHub e no Packagist</strong></p>
+
+<p style="text-align: justify;">Ainda tem um terceiro projeto envolvido, o Composer.<br /> O Composer funciona de forma transparente entre ambos, usado pelo Packagist.</p>
+
+<p style="text-align: justify;"><strong>Criando um arquivo compojer.json</strong></p>
+
+<p style="text-align: justify;">Projeto em PHP na dobradinha GitHub e Packagist</p>
+
+<p style="text-align: justify;">Ainda tem um terceiro projeto encolvido, o Composer.<br /> O Composer funciona de forma transparente entre ambos</p>
+
+<p style="text-align: justify;"><strong>GitHub</strong><br /> - Criar conta<br /> - Criar novo repositório<br /> - Enviar código fonte para o repositório<br /> <br /> 1) Crie seu projeto em PHP<br /> - Use um código existente<br /> - Crie um novo<br /> - Faça um fork de algum projeto do GitHub e customise</p>
+
+<p style="text-align: justify;">2) Criando a estrutura do seu projeto<br />     2.1) cd /var/www/html<br />          mkdir meu-projeto<br />          cd meu-projeto<br />          composer init</p>
+
+<p style="text-align: justify;"><strong>Responder as perguntas</strong></p>
+
+<p style="text-align: justify;">Package name (&lt;vendor&gt;/&lt;name&gt;) [ribafs/meu-projeto]: (apenas tecle enter para aceitar)</p>
+
+<p style="text-align: justify;">Description []: Meu Primeiro projeto com o Packageist</p>
+
+<p style="text-align: justify;">Author [, n to skip]: Ribamar FS &lt;<span id="cloak11e8c20df3096c0e39bb3914f784b308">Este endereço de email está sendo protegido de spambots. Você precisa do JavaScript ativado para vê-lo.</span><script type='text/javascript'>
+				document.getElementById('cloak11e8c20df3096c0e39bb3914f784b308').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addy11e8c20df3096c0e39bb3914f784b308 = 'r&#105;b&#97;fs' + '&#64;';
+				addy11e8c20df3096c0e39bb3914f784b308 = addy11e8c20df3096c0e39bb3914f784b308 + 'gm&#97;&#105;l' + '&#46;' + 'c&#111;m';
+				var addy_text11e8c20df3096c0e39bb3914f784b308 = 'r&#105;b&#97;fs' + '&#64;' + 'gm&#97;&#105;l' + '&#46;' + 'c&#111;m';document.getElementById('cloak11e8c20df3096c0e39bb3914f784b308').innerHTML += '<a ' + path + '\'' + prefix + ':' + addy11e8c20df3096c0e39bb3914f784b308 + '\'>'+addy_text11e8c20df3096c0e39bb3914f784b308+'<\/a>';
+		</script>&gt;    </p>
+
+<p style="text-align: justify;">Minimum Stability []: dev<br /> Opções: dev, alpha, beta, RC ou stable</p>
+
+<p style="text-align: justify;">Package Type (e.g. library, project, metapackage, composer-plugin) []: project</p>
+
+<p style="text-align: justify;">License []: MIT</p>
+
+<p style="text-align: justify;">Define your dependencies.</p>
+
+<p style="text-align: justify;">Would you like to define your dependencies (require) interactively [yes]? no<br /> (Nesta primeira etapa - no)</p>
+
+<p style="text-align: justify;">Would you like to define your dev dependencies (require-dev) interactively [yes]? no</p>
+
+<p style="text-align: justify;">{<br />     "name": "ribafs/meu-projeto",<br />     "description": "Meu Primeiro projeto com o Packageist",<br />     "type": "project",<br />     "license": "MIT",<br />     "authors": [<br />         {<br />             "name": "Ribamar FS",<br />             "email": "<span id="cloakaa865803470b0c15467cc8a9349e50f8">Este endereço de email está sendo protegido de spambots. Você precisa do JavaScript ativado para vê-lo.</span><script type='text/javascript'>
+				document.getElementById('cloakaa865803470b0c15467cc8a9349e50f8').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addyaa865803470b0c15467cc8a9349e50f8 = 'r&#105;b&#97;fs' + '&#64;';
+				addyaa865803470b0c15467cc8a9349e50f8 = addyaa865803470b0c15467cc8a9349e50f8 + 'gm&#97;&#105;l' + '&#46;' + 'c&#111;m';
+				var addy_textaa865803470b0c15467cc8a9349e50f8 = 'r&#105;b&#97;fs' + '&#64;' + 'gm&#97;&#105;l' + '&#46;' + 'c&#111;m';document.getElementById('cloakaa865803470b0c15467cc8a9349e50f8').innerHTML += '<a ' + path + '\'' + prefix + ':' + addyaa865803470b0c15467cc8a9349e50f8 + '\'>'+addy_textaa865803470b0c15467cc8a9349e50f8+'<\/a>';
+		</script>"<br />         }<br />     ],<br />     "minimum-stability": "dev",<br />     "require": {}<br /> }</p>
+
+<p style="text-align: justify;">Do you confirm generation [yes]?</p>
+
+<p style="text-align: justify;"><strong>Concluído</strong></p>
+
+<p style="text-align: justify;">Referência sobre o composer - https://getcomposer.org/doc/04-schema.md</p>
+
+<p style="text-align: justify;">A estrutura do projeto deve ficar assim (sugestão/recomendação):</p>
+
+<p style="text-align: justify;">/meu-projeto<br />     /src (código fonte do meu projeto)    <br />     /vendor (diretório criado pelo Composer para armazenar as dependências)<br />     composer.json<br />     README.md<br />     index.php</p>
+
+<p style="text-align: justify;">3) Abrigar meu-projeto no GitHub<br />     - Criar uma conta no GitHub - https://github.com/<br />     - Criar um repositório para meu-projeto</p>
+
+<p style="text-align: justify;"><strong>Adicionar uma chave SSH</strong></p>
+
+<p style="text-align: justify;"><strong>Em seu desktop Linux execute:</strong></p>
+
+<p style="text-align: justify;">cd<br /> ssh-keygen -t rsa -b 4096 -C "<span id="cloaka03ffc84a8a8355479a79fc5bdeaa1c4">Este endereço de email está sendo protegido de spambots. Você precisa do JavaScript ativado para vê-lo.</span><script type='text/javascript'>
+				document.getElementById('cloaka03ffc84a8a8355479a79fc5bdeaa1c4').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addya03ffc84a8a8355479a79fc5bdeaa1c4 = 'c&#111;nt&#97;t&#111;' + '&#64;';
+				addya03ffc84a8a8355479a79fc5bdeaa1c4 = addya03ffc84a8a8355479a79fc5bdeaa1c4 + 'r&#105;b&#97;fs' + '&#46;' + '&#111;rg';
+				var addy_texta03ffc84a8a8355479a79fc5bdeaa1c4 = 'c&#111;nt&#97;t&#111;' + '&#64;' + 'r&#105;b&#97;fs' + '&#46;' + '&#111;rg';document.getElementById('cloaka03ffc84a8a8355479a79fc5bdeaa1c4').innerHTML += '<a ' + path + '\'' + prefix + ':' + addya03ffc84a8a8355479a79fc5bdeaa1c4 + '\'>'+addy_texta03ffc84a8a8355479a79fc5bdeaa1c4+'<\/a>';
+		</script>"<br /> Enter<br /> Enter<br /> Enter</p>
+
+<p style="text-align: justify;">Checando a senha<br /> ls -al ~/.ssh</p>
+
+<p style="text-align: justify;"><strong>Capturando o hash da senha</strong></p>
+
+<p style="text-align: justify;">cat ~/.ssh/id_rsa.pub</p>
+
+<p style="text-align: justify;">Copie a chave mostrada desde ssh-rsa ... até seu e-mail, incluso.</p>
+
+<p style="text-align: justify;">Vá ate'o GitHub, faça login e clique acima em sua foto e Settings<br /> SSH and GPG keys<br /> New SSH key</p>
+
+<p style="text-align: justify;">Entre com um Title (Residência)</p>
+
+<p style="text-align: justify;">E cole na caixa Key abaixo</p>
+
+<p style="text-align: justify;">E clique em Add SSH key</p>
+
+<p style="text-align: justify;">Ao criar um repositório no GitHub ele recebe o estágio de desenvolvimento, com um nome:<br /> master-dev</p>
+
+<p style="text-align: justify;">Nesta fase informamos no composer.json assim:<br />     "minimum-stability": "dev",</p>
+
+<p style="text-align: justify;">Quando considerarmos que já está usável e queremos oferecer para o mundo, então</p>
+
+<p style="text-align: justify;">distribuimos assim:<br /> composer require ribafs/cake-control:dev-master</p>
+
+<p style="text-align: justify;">Ou<br /> editando o composer.json do raiz do aplicativo para adicionar a linha abaixo na seção require:<br />         "ribafs/cake-control": "master-dev"</p>
+
+<p style="text-align: justify;">No Packagist ele aparece como<br /> dev-master</p>
+
+<p style="text-align: justify;">Quando considerar que o projeto está estável crie um Release e dê um número para o mesmo.<br /> Agora pode oferecer duas versões: a estável e a em desenvolvimento, assim:</p>
+
+<p style="text-align: justify;">Dev<br /> composer require ribafs/cake-control:dev-master</p>
+
+<p style="text-align: justify;">Estável<br /> composer require ribafs/cake-control-twbs</p>
+
+<p style="text-align: justify;">Depois que configuramos o Packagist e sincrinizamos as atualizações somente precisamos interagir com<br /> nosso código no GitHub, o Packagist e o Composer ficam transparentes.</p>
+
+<p style="text-align: justify;">4) <strong>Enviar meu-projeto para o repositório do GitHub</strong><br />     cd /var/www/html/meu-projeto</p>
+
+<p style="text-align: justify;">git config --global user.email "<span id="cloak685d3f9e7a0f8b36fb2fee6f1b49f941">Este endereço de email está sendo protegido de spambots. Você precisa do JavaScript ativado para vê-lo.</span><script type='text/javascript'>
+				document.getElementById('cloak685d3f9e7a0f8b36fb2fee6f1b49f941').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addy685d3f9e7a0f8b36fb2fee6f1b49f941 = 'c&#111;nt&#97;t&#111;' + '&#64;';
+				addy685d3f9e7a0f8b36fb2fee6f1b49f941 = addy685d3f9e7a0f8b36fb2fee6f1b49f941 + 'r&#105;b&#97;fs' + '&#46;' + '&#111;rg';
+				var addy_text685d3f9e7a0f8b36fb2fee6f1b49f941 = 'c&#111;nt&#97;t&#111;' + '&#64;' + 'r&#105;b&#97;fs' + '&#46;' + '&#111;rg';document.getElementById('cloak685d3f9e7a0f8b36fb2fee6f1b49f941').innerHTML += '<a ' + path + '\'' + prefix + ':' + addy685d3f9e7a0f8b36fb2fee6f1b49f941 + '\'>'+addy_text685d3f9e7a0f8b36fb2fee6f1b49f941+'<\/a>';
+		</script>"<br /> git config --global user.name "Ribamar FS"<br /> git init<br /> git add .<br /> git commit -m "Primeiro commit"<br /> git remote add origin <span id="cloak52f93401c361e5c052e15923f703e299">Este endereço de email está sendo protegido de spambots. Você precisa do JavaScript ativado para vê-lo.</span><script type='text/javascript'>
+				document.getElementById('cloak52f93401c361e5c052e15923f703e299').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addy52f93401c361e5c052e15923f703e299 = 'g&#105;t' + '&#64;';
+				addy52f93401c361e5c052e15923f703e299 = addy52f93401c361e5c052e15923f703e299 + 'g&#105;th&#117;b' + '&#46;' + 'c&#111;m';
+				var addy_text52f93401c361e5c052e15923f703e299 = 'g&#105;t' + '&#64;' + 'g&#105;th&#117;b' + '&#46;' + 'c&#111;m';document.getElementById('cloak52f93401c361e5c052e15923f703e299').innerHTML += '<a ' + path + '\'' + prefix + ':' + addy52f93401c361e5c052e15923f703e299 + '\'>'+addy_text52f93401c361e5c052e15923f703e299+'<\/a>';
+		</script>:ribafs/cake-control.git<br /> git push -f origin master</p>
+
+<p style="text-align: justify;">Para enviar novamente após alterações<br /> remover a pasta .git<br /> e repetir os passos acima</p>
+
+<p style="text-align: justify;">O projeto está agora hospedado no GitHub e pronto para ser abrigado pelo Packagist.</p>
+
+<p style="text-align: justify;">5) <strong>Criando o Pacote no Packagist</strong></p>
+
+<p style="text-align: justify;">Acesse https://packagist.org/<br /> Crie uma conta<br /> Faça login<br /> Clique em Submit a Package</p>
+
+<p style="text-align: justify;">Cole a linha a seguir, lembrando que o nome do pacote deve ser em minúsculas, palavras compostas separadas por hífen:</p>
+
+<p style="text-align: justify;"><span id="cloak66239d0108b2f5ed41243adab3524c40">Este endereço de email está sendo protegido de spambots. Você precisa do JavaScript ativado para vê-lo.</span><script type='text/javascript'>
+				document.getElementById('cloak66239d0108b2f5ed41243adab3524c40').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addy66239d0108b2f5ed41243adab3524c40 = 'g&#105;t' + '&#64;';
+				addy66239d0108b2f5ed41243adab3524c40 = addy66239d0108b2f5ed41243adab3524c40 + 'g&#105;th&#117;b' + '&#46;' + 'c&#111;m';
+				var addy_text66239d0108b2f5ed41243adab3524c40 = 'g&#105;t' + '&#64;' + 'g&#105;th&#117;b' + '&#46;' + 'c&#111;m';document.getElementById('cloak66239d0108b2f5ed41243adab3524c40').innerHTML += '<a ' + path + '\'' + prefix + ':' + addy66239d0108b2f5ed41243adab3524c40 + '\'>'+addy_text66239d0108b2f5ed41243adab3524c40+'<\/a>';
+		</script>:ribafs/cake-control.git</p>
+
+<p style="text-align: justify;">E clique em Check</p>
+
+<p style="text-align: justify;">Se retornar correto aceite e faça o submit</p>
+
+<p style="text-align: justify;">6) <strong>Atualizações</strong></p>
+
+<p style="text-align: justify;">Cada vez que atualizar o projeto no GitHub precisa atualizar no Packageist<br /> - Vá para sua conta no packagist<br /> - Settings<br /> - My Packages<br /> - Clique no projeto<br /> - Clique em Update (botão verde)</p>
+
+<p style="text-align: justify;"><strong>Para tornar automáticas as atualizações</strong><br /> - Vá para seu repositório no GitHub<br /> - Clique em Settings<br /> - Integration &amp; services<br />     - Services - Add service - packagist    <br />     - User - ribafs<br />     - Token - o token da sua API (Acesse o site do packagist - login - Profile e copie o token gerado e cole aqui)<br />     - Domain - packagist.org<br />     - Marque Active<br />     Clique em Update service abaixo<br />     Clique acima e à direita em Test service<br />     Caso receba a mensagem "Okay, the test payload is on its way." já poderá ir ao Packagist e abrir seu projeto que não<br />     mais aparecerá a mensagem de que precisa atualizar.</p>
+
+<p style="text-align: justify;">Agora as atualizações foram automatizadas.</p>
+
+<p style="text-align: justify;">Você está pronto para compartilhar seu projeto com o mundo.</p>
+
+<p style="text-align: justify;">Para instalar um plugin (ex.: cake-control), crie um aplicativo em Cake com composer</p>
+
+<p style="text-align: justify;">cd aplicativo<br /> composer require ribafs/cake-control</p>
+
+<p style="text-align: justify;">Mas, desta forma somente será possível após criar um release do projeto no GitHub.<br /> Enquanto não conclue satisfatoriamente seu projeto, poderá divulgar para testes assim:</p>
+
+<p style="text-align: justify;">Editar o composer.json:</p>
+
+<p style="text-align: justify;">Adicionar na seção require-dev a linha</p>
+
+<p style="text-align: justify;">    "require-dev": {<br />         "psy/psysh": "@stable",<br />         "cakephp/debug_kit": "~3.2",<br />         "cakephp/bake": "~1.1",<br />         "ribafs/cake-control": "master-dev"<br />     },</p>
+
+<p style="text-align: justify;">Depois executar:</p>
+
+<p style="text-align: justify;">composer update</p>
+
+<p style="text-align: justify;">Ou então diretamente para linha de comando:</p>
+
+<p style="text-align: justify;">composer require ribafs/cake-control:dev-master</p>
+
+<p style="text-align: justify;"><br /> <strong>Como remover plugin:</strong></p>
+
+<p style="text-align: justify;">Removível somente se bem inicialmente.</p>
+
+<p style="text-align: justify;">composer remove cakephp/localized</p>
+
+<p style="text-align: justify;">Remover manualmente a linha no bootstrap.php e todo o código adicionado ao vendor<br /> além da linha respectiva no composer.json</p>
+
+<p style="text-align: justify;"><strong>Referências:</strong></p>
+
+<p style="text-align: justify;">Composer - <a href="https://getcomposer.org/doc/03-cli.md">https://getcomposer.org/doc/03-cli.md</a> <br /> http://blog.jgrossi.com/2013/creating-your-first-composer-packagist-package/ <br /> Markdown tutorial - <a href="http://www.markdowntutorial.com/">http://www.markdowntutorial.com/</a>  (a linguagem usada pelo GitHub)</p>
+
+<p style="text-align: justify;"><strong>Dicas úteis</strong><br /> https://gist.github.com/</p> 	</div>
+
+	
+	
+				
+	
+	
+	
+</article>
+
+</body>
+</html>

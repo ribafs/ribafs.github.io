@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="Joomla! - Open Source Content Management" -->
+<feed xmlns="http://www.w3.org/2005/Atom"  xml:lang="pt-br">
+	<title type="text">Shell Scripts - RibaFS Portal</title>
+	<subtitle type="text">Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros.</subtitle>
+	<link rel="alternate" type="text/html" href="http://backup"/>
+	<id>http://backup/portal/servidores/shell-scripts.feed</id>
+	<updated>2019-09-07T18:53:20-03:00</updated>
+	<author>
+		<name>RibaFS Portal</name>
+	</author>
+	<generator uri="https://www.joomla.org">Joomla! - Open Source Content Management</generator>
+	<link rel="self" type="application/atom+xml" href="http://backup/portal/servidores/shell-scripts.feed?type=atom"/>
+	<entry>
+		<title>Backup do PostgreSQL</title>
+		<link rel="alternate" type="text/html" href="http://backup/portal/servidores/shell-scripts/backup-do-postgresql.html"/>
+		<published>2017-06-24T18:34:48-03:00</published>
+		<updated>2017-06-24T18:34:48-03:00</updated>
+		<id>http://backup/portal/servidores/shell-scripts/backup-do-postgresql.html</id>
+		<author>
+			<name>Ribamar FS</name>
+		</author>
+		<summary type="html">&lt;p&gt;&lt;img src=&quot;http://backup/portal/images/conectarnautilus.png&quot; /&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Backup de Bancos do PostgreSQL&lt;/strong&gt;&lt;/p&gt;
+
+
+&lt;p&gt;Este script é simples e flexível, pois faz o backup de todos os bancos, um esquema ou uma tabela.&lt;/p&gt;
+
+
+&lt;p&gt;&lt;a title=&quot;pgback.sh&quot; href=&quot;http://backup/portal/../down/servidores/pgback.sh&quot; rel=&quot;alternate&quot;&gt;pgback.sh&lt;/a&gt;&lt;/p&gt;
+
+
+&lt;p&gt; &lt;/p&gt;
+
+
+&lt;p&gt; &lt;/p&gt;</summary>
+		<content type="html">&lt;p&gt;&lt;img src=&quot;http://backup/portal/images/conectarnautilus.png&quot; /&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Backup de Bancos do PostgreSQL&lt;/strong&gt;&lt;/p&gt;
+
+
+&lt;p&gt;Este script é simples e flexível, pois faz o backup de todos os bancos, um esquema ou uma tabela.&lt;/p&gt;
+
+
+&lt;p&gt;&lt;a title=&quot;pgback.sh&quot; href=&quot;http://backup/portal/../down/servidores/pgback.sh&quot; rel=&quot;alternate&quot;&gt;pgback.sh&lt;/a&gt;&lt;/p&gt;
+
+
+&lt;p&gt; &lt;/p&gt;
+
+
+&lt;p&gt; &lt;/p&gt;</content>
+		<category term="Shell Scripts" />
+	</entry>
+	<entry>
+		<title>Script Desenvolvedores</title>
+		<link rel="alternate" type="text/html" href="http://backup/portal/servidores/shell-scripts/script-desenvolvedores.html"/>
+		<published>2017-06-24T18:34:48-03:00</published>
+		<updated>2017-06-24T18:34:48-03:00</updated>
+		<id>http://backup/portal/servidores/shell-scripts/script-desenvolvedores.html</id>
+		<author>
+			<name>Ribamar FS</name>
+		</author>
+		<summary type="html">&lt;p&gt;&lt;img src=&quot;http://backup/portal/images/conectarnautilus.png&quot; /&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Menu de uso do Ubuntu Server pelos desenvolvedores&lt;br /&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Este script é simples e flexível, podndo ser alterado/adaptado facilmente&lt;/p&gt;
+&lt;p&gt;&lt;a title=&quot;devel.sh&quot; href=&quot;http://backup/portal/down/servidores/devel.sh&quot; rel=&quot;alternate&quot;&gt;devel.sh&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;</summary>
+		<content type="html">&lt;p&gt;&lt;img src=&quot;http://backup/portal/images/conectarnautilus.png&quot; /&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Menu de uso do Ubuntu Server pelos desenvolvedores&lt;br /&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Este script é simples e flexível, podndo ser alterado/adaptado facilmente&lt;/p&gt;
+&lt;p&gt;&lt;a title=&quot;devel.sh&quot; href=&quot;http://backup/portal/down/servidores/devel.sh&quot; rel=&quot;alternate&quot;&gt;devel.sh&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;</content>
+		<category term="Shell Scripts" />
+	</entry>
+	<entry>
+		<title>Script Administradores</title>
+		<link rel="alternate" type="text/html" href="http://backup/portal/servidores/shell-scripts/script-administradores.html"/>
+		<published>2017-06-24T18:34:48-03:00</published>
+		<updated>2017-06-24T18:34:48-03:00</updated>
+		<id>http://backup/portal/servidores/shell-scripts/script-administradores.html</id>
+		<author>
+			<name>Ribamar FS</name>
+		</author>
+		<summary type="html">&lt;p&gt;&lt;img src=&quot;http://backup/portal/images/conectarnautilus.png&quot; /&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Menu de uso do Ubuntu Server pelos administradores&lt;br /&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Este script é simples e flexível, podndo ser alterado/adaptado facilmente&lt;/p&gt;
+&lt;p&gt;&lt;a title=&quot;admin.sh&quot; href=&quot;http://backup/portal/down/servidores/admin.sh&quot; rel=&quot;alternate&quot;&gt;admin.sh&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;</summary>
+		<content type="html">&lt;p&gt;&lt;img src=&quot;http://backup/portal/images/conectarnautilus.png&quot; /&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Menu de uso do Ubuntu Server pelos administradores&lt;br /&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Este script é simples e flexível, podndo ser alterado/adaptado facilmente&lt;/p&gt;
+&lt;p&gt;&lt;a title=&quot;admin.sh&quot; href=&quot;http://backup/portal/down/servidores/admin.sh&quot; rel=&quot;alternate&quot;&gt;admin.sh&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;</content>
+		<category term="Shell Scripts" />
+	</entry>
+</feed>

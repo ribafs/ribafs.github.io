@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="Joomla! - Open Source Content Management" -->
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Extensões - RibaFS Portal</title>
+		<description><![CDATA[Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros.]]></description>
+		<link>http://backup/portal/joomla-3/extensoes.html</link>
+		<lastBuildDate>Sat, 07 Sep 2019 18:56:18 -0300</lastBuildDate>
+		<generator>Joomla! - Open Source Content Management</generator>
+		<atom:link rel="self" type="application/rss+xml" href="http://backup/portal/joomla-3/extensoes.feed?type=rss"/>
+		<language>pt-br</language>
+		<item>
+			<title>Backup e Restore de site Joomla</title>
+			<link>http://backup/portal/joomla-3/extensoes/backup-e-restore-de-site-joomla.html</link>
+			<guid isPermaLink="true">http://backup/portal/joomla-3/extensoes/backup-e-restore-de-site-joomla.html</guid>
+			<description><![CDATA[<p>Este software é dos que me dá satisfação em trabalhar com programação, daqueles que automatizam tarefas manuais, tornando nossas vidas mais práticas.</p>
+
+<p>Criei um componente para Joomla (2.5 e 3.x) que facilita e muito o backup dos sites Joomla:</p>
+
+<p><a href="https://github.com/ribafs/com_simplebackup">https://github.com/ribafs/com_simplebackup</a> </p>
+
+<p>Ele gera dois arquivos, um zip contendo todos os arquivos do site e um sql contendo todo o banco de dados do site.</p>
+
+<p>Ontem tive a ideia de criar algo que facilitasse a restauração do backup.</p>
+
+<p>Até hoje eu tenho restaurado o backup do Joomla efetuando manualmente vários passos: criava manualmente o banco de dados, criava uma pasta, descompactava o arquivo zip na pasta e importava o sql no banco de dados. Agora tudo isso é feito por este pequeno software apenas informando os dados no formulário e clicando no botão Enviar.</p>
+
+<p><a href="https://github.com/ribafs/joomla-install">https://github.com/ribafs/joomla-install</a></p>
+
+<p> </p>]]></description>
+			<category>Extensões</category>
+			<pubDate>Wed, 11 Oct 2017 21:53:23 -0300</pubDate>
+		</item>
+		<item>
+			<title>Usando overrides com o core do Joomla</title>
+			<link>http://backup/portal/joomla-3/extensoes/overrides-joomla.html</link>
+			<guid isPermaLink="true">http://backup/portal/joomla-3/extensoes/overrides-joomla.html</guid>
+			<description><![CDATA[<h4>Usando overrides com o core do Joomla - Como substituir a saída do core do Joomla</h4>
+
+<p>Tradução livre do original em inglês em:<br /><a href="https://docs.joomla.org/How_to_override_the_output_from_the_Joomla!_coreÂ">https://docs.joomla.org/How_to_override_the_output_from_the_Joomla!_core </a><br /><br />Acontece as vezes de desejarmos mudar a forma como aparecem no site algumas extensões (componentes ou módulos) do core do Joomla ou mesmo de terceiros.</p>
+
+<p>O Joomla nos oferece uma forma simples de fazer isso sem precisar reescrever por inteiro a extensão.<br />Podemos fazer isso substituindo/sobrescrevendo a aparência de uma extensão adicionando o código desejado para a pasta html do template. Também é possível sobrescrever Module chrome e paginação.<br /><br />Na versão 3.2 overrides podem ser criados usando o Template manager Creating Overrides<br />Extensões – Temas<br />Temas à esquerda e acima<br />Clicar no nome do template<br />Criar Substituição<br />Começando com overrides</p>
+
+<p>Faça uma cópia da view existente no diretório html do template e então modifique a cópia</p>
+
+<p>A estrutura de diretórios necessária é:<br />TEMPLATE_NAME/html/EXTENSION_NAME/VIEW_NAME/FILE_NAME.php</p>
+
+<p>Se você deseja mudar a maneira que a view 'Article' exibe um artigo com_content  então copie o arquivo:<br />PATH_TO_JOOMLA/components/com_content/views/article/tmpl/default.php<br />para<br />TEMPLATE_NAME/html/com_content/article/default.php</p>
+
+<p>Se deseja mudar como o módulo  mod_login é exibido, então copie:<br />PATH_TO_JOOMLA/modules/mod_login/tmpl/default.php<br />para<br />TEMPLATE_NAME/html/mod_login/default.php</p>
+
+<p>Joomla vem com um template para o site chamado Beez. Beez utiliza substituições de templates para produzir um layout tableless, para uma marcação mais rápida, mais suave e semanticamente correta. Para ver como é feito, localize o seu diretório de instalação do joomla do template e você notará o template Beez. Dentro do diretório do template Beez, você encontrará um diretório chamado html.<br /><br />A estrutura do diretório é a seguinte:<br />/your_joomla/templates/Beez/html/</p>
+
+<p>Caso deseje modificar o overrides usado no Beez você pode simplesmente copiar e colar o diretório html do Beez em seu próprio template. Ou então pode escolher por criar seus próprios arquivos de overrides. Verifique se são corretamente instalados em seu template.</p>
+
+<p><br />Para fazer isso você deve adicionar o seguinte código para o  templateDetails.xml do template para os arquivos adicionados:<br />&lt;files&gt; e &lt;/files&gt;</p>
+
+<p><strong>Outras Dicas</strong></p>
+
+<p>Você pode override as imagens do Joomla core que são armazenadas na pasta /media. Coloque uma imagem alternativa com o mesmo nome na pasta do seu template. Por exemplo o módulo Breadcrumbs usa uma seta laranja que é recebida de<br />/media/system/images/arrow.png. Joomla deve usar sua versão override se você colocar esta em:<br />/templates/your_template_name/images/system/arrow.png.</p>
+
+<p>Templates overrides são menos limitados. Eles permitem que você adicione, edite e remova a saída de componentes do core do Joomla.<br />O template Manager pode ser usado para criar files overrides prontos para editar.</p>
+
+<p><strong>Nota:</strong> existe uma extensão para o Firefox chamada Firebug que é útil para navegar entre os fontes do HTML das páginas e combinando com o PHP usado no overrides do template. Agora o Firebug também está disponível para o IE e o Chrome.<br /><br /><strong>Referências</strong><br /><a href="https://docs.joomla.org/How_to_override_the_output_from_the_Joomla!_core">https://docs.joomla.org/How_to_override_the_output_from_the_Joomla!_core</a> <br /><a href="https://docs.joomla.org/How_to_override_the_component_mvc_from_the_Joomla!_core">https://docs.joomla.org/How_to_override_the_component_mvc_from_the_Joomla!_core</a> <br /><a href="https://www.ostraining.com/blog/joomla/overrides/">https://www.ostraining.com/blog/joomla/overrides/</a> </p>
+
+<p> </p>]]></description>
+			<category>Extensões</category>
+			<pubDate>Mon, 28 Aug 2017 17:17:25 -0300</pubDate>
+		</item>
+		<item>
+			<title>Opções de Extensões para Vídeos no Joomla</title>
+			<link>http://backup/portal/joomla-3/extensoes/opcoes-de-extensoes-para-videos-no-joomla.html</link>
+			<guid isPermaLink="true">http://backup/portal/joomla-3/extensoes/opcoes-de-extensoes-para-videos-no-joomla.html</guid>
+			<description><![CDATA[<h4>Opções de Extensões para Vídeos no Joomla</h4>
+
+<p><br /><strong>All Videos</strong> - adiciona vídeos em artigos<br /><a href="http://www.joomlaworks.net/extensions/free/allvideos">http://www.joomlaworks.net/extensions/free/allvideos</a> <br /><br />Configurar o AllVideos (diretórios e dimensões)<br /><br />Local Video Folder = images/stories/videos<br />Local Audio Folder = images/audio<br /><br /><br />Basta enviar o vídeo para a pasta /video e áudio para a pasta /audio (ambas no raiz do site) e inserir a tag (como abaixo) no artigo, como abaixo</p>
+
+<p><br />{youtube}heu37ej3qs{/youtube}, {flv}batman_darknight{/flv} or {mp3}pixies_bonemachine{/mp3} {swfremote}/videos/foo.swf{/swfremote}<br />compatible video and audio formats like flv, swf, mov, mp4, wmv, wma, mp3, 3gp, webm, ogv, ogg, divx and more.<br /><br /><strong>Suportados</strong><br />youtube, vimeo e nuitos outros<br /><br />YouTube video with 600x450 dimensions that autoplays on page load<br />{youtube}he73js822|600|450|1{/youtube}<br />MP4 (H.264 Video)    images/stories/videos/our-family-trips/paris.mp4    {mp4}our-family-trips/paris{/mp4}<br /><br />FLV    images/stories/videos/our-family-trips/paris.flv    {flv}our-family-trips/paris{/flv}<br />FLV hosted on remote server    http://domain.com/media/paris.flv    {flvremote}http://domain.com/media/paris.flv{/flvremote}<br /><br />OGV (OGG VIdeo)    images/stories/videos/our-family-trips/paris.ogv    {ogv}our-family-trips/paris{/ogv}<br /><br />SWF (Shockwave Flash)    images/stories/videos/banners/promo.swf    {swf}banners/promo{/swf}<br /><br />Áudio<br />MP3    images/stories/audio/podcasts/theJoomlaShow.mp3    {mp3}podcasts/theJoomlaShow{/mp3}<br /><br /><strong>Mais informações</strong><br /><a href="http://www.joomlaworks.net/support/docs/allvideos">http://www.joomlaworks.net/support/docs/allvideos</a> <br /><br /><strong>Outras Alternativas</strong><br /><br /><strong>Video Gallery - Plugin</strong><br /><a href="https://huge-it.com/joomla-video-gallery/">https://huge-it.com/joomla-video-gallery/</a> <br /><br />Usos: vídeo em popup em artigo, vídeo slider em artigo, Lightbox Video Gallery, Video Slider e Thumbnails View<br /><br /><strong>Yendif Video Share - Componente</strong><br /><a href="https://yendifplayer.com/joomla-video-share-download.html">https://yendifplayer.com/joomla-video-share-download.html</a> <br /><a href="https://yendifplayer.com/joomla-video-share-overview.html">https://yendifplayer.com/joomla-video-share-overview.html</a> <br /><a href="https://yendifplayer.com/joomla/">https://yendifplayer.com/joomla/</a>  - demo <br /><br /><strong>Joombig video slider vertical - Módulo</strong><br /><a href="http://joombig.com/download-extension-free/407-down-joombig-video-slider-vertical">http://joombig.com/download-extension-free/407-down-joombig-video-slider-vertical</a> <br /><a href="http://joombig.com/extensions-detail/442-joombig-video-slider-vertical">http://joombig.com/extensions-detail/442-joombig-video-slider-vertical</a> <br /><a href="http://joombig.com/demo-extensions1/index.php/demo/joombig-video-slider-vertical">http://joombig.com/demo-extensions1/index.php/demo/joombig-video-slider-vertical</a>  - demo </p>]]></description>
+			<category>Extensões</category>
+			<pubDate>Mon, 28 Aug 2017 14:24:02 -0300</pubDate>
+		</item>
+		<item>
+			<title>Gerenciador de Arquivos Web</title>
+			<link>http://backup/portal/joomla-3/extensoes/gerenciador-de-arquivos-web.html</link>
+			<guid isPermaLink="true">http://backup/portal/joomla-3/extensoes/gerenciador-de-arquivos-web.html</guid>
+			<description><![CDATA[<h4 style="text-align: justify;">Gerenciador de Arquivos Web</h4>
+
+<p style="text-align: justify;"><br />O eXtplorer é um componente para Joomla do tipo gerenciador de arquivos, com uma grande quantidade de funções: upload, download, renomear, editar, excluir, descompactar, setar premissões e muito mais.<br /><br />Ele também pode ser instalado independente do Joomla<br /><br />A instalação no Joomla não requer nenhuma configuração, basta acessar e usar.<br /><br />Mas em uma instalação fora do Joomla ele traz um usuário padrão e permite criar outros além de configurar algumas propriedades para estes.<br /><br /><br /><strong>Instalação do eXtplorer fora do Joomla</strong><br /><br />Download<br /><br /><a href="https://extplorer.net/files">https://extplorer.net/files</a> <br /><br />Efetuar o download e descompactar no servidor<br /><br />No servidor, descompactar e chamar pelo navegador<br /><br />http://dominio.com/extplorer<br /><br />Login e senha default = admin<br />Trocar no primeir login<br /><br />No primeiro login também existe opção de criar um novo usuário bem limitado.<br /><br /><img src="http://backup/portal/images/extplorer_adduser.png" alt="" /><br /><br />Após o login, na interface do gerenciador existe um botão (ADMIN) para o gerenciamento de usuários: adicionar, editar e remover.<br />Ele cria os usuários criptografando suas senhas e guarda os dados dos usuários no arquivo oculto em:</p>
+
+<p style="text-align: justify;">config/.htusers.php<br /><br />Por conta disso este arquivo precisa ter permissão de escrita para o Apache.<br /><br /><img src="http://backup/portal/images/extplorer_admin.png" alt="" /><br /><br />Ele também pode mudar sua interface para usar FTP, desde que existe servidor e porta disponível no servidor onde for instalado e também<br />a pasta frp_tmp requer permissão de escrita pelo Apache.<br /><br />Existe também o net2ftp (http://net2ftp.com), que é uma boa alternativa mas que não funciona somente na porta 80. O net2ftp somente funciona como interface de FTP e em servidor com serviço de ftp habilitado.<br /><br />Lembrando que o extplorer para o Joomla é um componente com as mesmas funcionalidades, mas não vi o botão ADMIN.<br /><br /></p>]]></description>
+			<category>Extensões</category>
+			<pubDate>Tue, 22 Aug 2017 11:20:03 -0300</pubDate>
+		</item>
+		<item>
+			<title>Template Padrão com Joomla 3.7.5 multilanguage</title>
+			<link>http://backup/portal/joomla-3/extensoes/template-padrao-com-joomla-3-7-5-multilanguage.html</link>
+			<guid isPermaLink="true">http://backup/portal/joomla-3/extensoes/template-padrao-com-joomla-3-7-5-multilanguage.html</guid>
+			<description><![CDATA[<h4>Implementação do Template Padrão do Governo num portal com Joomla 3.7.5 multilanguage</h4>
+
+<p>Como o template padrão do governo não tem suporte a multilanguage, instalarei o Joomla com suporte a multilanguage e depois instalerei o tempale padrão e mostrarei o caminho das pedras para se instalar as demais extensões.</p>
+
+<p>Este projeto visa instalar o Joomla 3.7.5 com suporte a multilanguage<br />Depois instalar o template joomlagov e torná-lo o default atribuindo-lhe todos os itens de menu.<br />Instalar paralelamente o joomlagov com o quickstart para que veja que extensões ele instala<br />Então instalar cada uma das extensões existentes no joomlagov no Joomla multilanguage.</p>
+
+<p><strong>Download do Joomla</strong><br /><a href="https://downloads.joomla.org/">https://downloads.joomla.org/</a></p>
+
+<p><strong>Instalação</strong><br />Instalarei na pasta joomlagov_ml<br />Lembrar de implementar multilanguage escolhendo a opção de nenhum conteúdo de exemplo e configurando as Etapas Extras: instalar idiomas.</p>
+
+<p>Instalei os seguintes idiomas extras: English US, Francês, Português Brasil e Spanish</p>
+
+<p>Ativei o recurso de multi-idiomas<br />Ativei o plugin de código de idiomas</p>
+
+<p>E tornei Português do Brasil o default do site e do adminisrtator.</p>
+
+<p>Veja esta tela que capturei na instalação:</p>
+
+<p><img src="http://backup/portal/images/joomlagov_ml.png" alt="" /></p>
+
+<p>Ao finalizar a instalação acessei o form de login do administrator já deu para ver todos os idiomas instalados.</p>
+
+<p><img src="http://backup/portal/images/joomlagov_login.png" alt="" /></p>
+
+<p>Ao exibir o site já aparecem as 5 bandeirinhas.</p>
+
+<p><img src="http://backup/portal/images/joomlagov_idiomar.png" alt="" /></p>
+
+<p> </p>
+
+<p><strong>Instalar Template Padrão do Governo Brasileiro</strong><br />Agora instalarei o template isolado que encontra-se em meu projeto do GitHub:<br /><a href="https://github.com/ribafs/template-govbr">https://github.com/ribafs/template-govbr</a> </p>
+
+<p>E o tornarei o default além de atribuir todos os itens de menu ao mesmo.</p>
+
+<p>Para entender melhor como foi criado o template e seu funcionamento a equipe criou alguns documentos:</p>
+
+<p><a href="https://github.com/joomlagovbr/documentacao/tree/master/pdf">https://github.com/joomlagovbr/documentacao/tree/master/pdf</a></p>
+
+<p>Mudei o módulo Language Switcher para a posição header-topo-direita.</p>
+
+<p>Mudei a posição do Main menu pt-br para - topo-main</p>
+
+<p>Veja como ficou sendo o default:</p>
+
+<p> </p>
+
+<p><img src="http://backup/portal/images/joomlagov_frontend.png" alt="" /></p>
+
+<p>Já podemos ver que ele criou um artigo para cada idioma, um menu para cada idioma e habilitou as extensões necessárias: plugins e módulo.</p>
+
+<p><img src="http://backup/portal/images/joomlagov_menu.png" alt="" /></p>
+
+<p> </p>
+
+<p>Veja os artigos criados</p>
+
+<p><img src="http://backup/portal/images/joomlagov_artigos.png" alt="" /></p>
+
+<p><strong>Instalei o módulo barra do governo:</strong></p>
+
+<p><a href="https://github.com/joomlagovbr/barra-do-governo">https://github.com/joomlagovbr/barra-do-governo</a> </p>
+
+<p><strong>Setei sua posição para: barra-do-governo</strong></p>
+
+<p>No site do projeto ( <a href="https://github.com/joomlagovbr/">https://github.com/joomlagovbr/</a> ) existe outra extensão a ser instalada, que é a agenda de autoridades.<br /><a href="https://github.com/joomlagovbr/agenda-de-autoridades">https://github.com/joomlagovbr/agenda-de-autoridades</a> </p>
+
+<p>E assim se vai instalando todas as extensões que existem no projeto original.<br />Existem muitos menus e itens de menus, artigos de teste, componentes, etc.</p>
+
+<p>As extensões a serem instaladas depende de cada órgão.<br />Aqui onde trabalho temos a iCagenda, Phoca Download, eXtplorer, ChronoForms, etc.</p>
+
+<p><strong>Ativar o mod_rewrite</strong><br />Sistema - Configuração Global<br />Usar mod_rewrite do Apache - Sim<br />Salvar</p>
+
+<p>E renomear o arquivo htaccess.txt para .htaccess (encontra-se no raiz do site).</p>
+
+<p><strong>Ativar a exibição dos módulos do tempalte na página do site</strong></p>
+
+<p>Extensões - Temas<br />Opções - Visualização de Posições de Módulos - Ativado</p>
+
+<p><br /><strong>Então abrir o site assim:</strong><br />http://localhost/joomlagov_ml/pt/index.php?tp=1</p>
+
+<p>Veja as posições exibidas no site:</p>
+
+<p><img src="http://backup/portal/images/joomlagov_posicoes.png" alt="" /></p>
+
+<p>Com o recurso acima verificamos sempre que instalar um novo módulo, em qual posição ele deve ficar.</p>
+
+<p><strong>Posicionar módulos no template padrão:</strong></p>
+
+<p>Language Switcher - header-topo-direita</p>
+
+<p>Instalar o quickstart do projeto do template padrão para comparações</p>
+
+<p><strong>Download</strong><br /><a href="https://github.com/joomlagovbr/joomla-3.x">https://github.com/joomlagovbr/joomla-3.x </a> <br />Lembre que o pacote acima já contém o Joomla 3.7.4, o template padrão instalado e muitas outras extensões úteis para órgãos do governo brasileiro.</p>
+
+<p><strong>Instalarei na pasta joomlagov_orig</strong></p>
+
+<p>Uma instalação padrão, inclusive usando o conteúdo de exemplo desenvolvido pela equipe do Joomla Calango, que foi quem criou este template. Mantenha selecionado:<br /><br />Dados de exemplo do portal padrão<br />Veja o tutorial com ajustes iniciais para corrigir alguns erros encontrados nesta versão:</p>
+
+<p><a href="http://backup/portal/joomla-3/extensoes/181-template-padrao-do-governo-ajustes">http://ribafs.org/portal/joomla-3/extensoes/181-template-padrao-do-governo-ajustes</a> </p>
+
+<p> </p>]]></description>
+			<category>Extensões</category>
+			<pubDate>Mon, 21 Aug 2017 18:04:24 -0300</pubDate>
+		</item>
+		<item>
+			<title>Template Padrão do Governo - Ajustes</title>
+			<link>http://backup/portal/joomla-3/extensoes/template-padrao-do-governo-ajustes.html</link>
+			<guid isPermaLink="true">http://backup/portal/joomla-3/extensoes/template-padrao-do-governo-ajustes.html</guid>
+			<description><![CDATA[<h4>Ajustes no Template Padrão do Governo Brasileiro em Joomla</h4>
+
+<p><strong>A versão atual usa o Joomla 3.7.4</strong><br /><br /><strong>Download</strong> - O pacote abaixo é um quickstart, ou seja, é o Joomla 3.7.4, com template padrão do governo e com várias extensões pré-instaladas.<br /><a title="https://github.com/joomlagovbr/joomla-3.x" href="https://github.com/joomlagovbr/joomla-3.x">https://github.com/joomlagovbr/joomla-3.x</a><a href="https://github.com/joomlagovbr/joomla-3.xÂ"> </a> <br /><br />Este está instalado no site abaixo – caso queira checar:<br /><a href="http://portalpadrao.joomlacalango.org/">http://portalpadrao.joomlacalango.org/</a>  <br /><br /><strong>Instalação</strong><br />- Descompactar no www/html/joomlagov (ou outro em seu servidor)<br />- Chamar pelo navegador<br />http://localhost/joomlagov<br /><br />Instalar normalmente como uma instalação padrão do Joomla, lembrando de instalar os <br />"Dados de exemplo do portal padrão"<br /><br /><strong>Ajustes Iniciais</strong><br />http://localhost/joomlagov/administrator<br /><br /><strong>Corrigindo Erros</strong><br />Ao acessar o administrator pela primeira vez aparece a mensagem:<br /><br />Erro<br />Ocorreu um erro.<br /><br /><strong>Vamos corrigir o banco de dados</strong><br />Extensões - Geranciador de Extensões - Database<br />Corrigir<br /><br /><strong>Descobrir as extensões</strong><br />Extensões - Geranciador de Extensões - Discover<br />Selecionar todas e Instalar<br /><br />Selecionar todas novamente e clicar em Instalar<br />Selecionar todas finalmente e clicar em Instalar<br /><br /><strong>Desinstalar o idioma português instalado com falhas</strong><br /><br />Tornar o inglês o idiomar default<br />Extensões - Gerenciador de idiomar<br />Na linha onde tem Inglês clique na estrela para que fique amarela e torne padrão<br /><br />Clique na combo onde tem Site e mude para Administrator<br />Na linha onde tem Inglês clique na estrela para que fique amarela e torne padrão<br /><br />Extensões - Geranciador de Extensões - Manage<br />Clique na caixa de busca e digite:<br /><br />port<br />E tecle enter<br /><br />Selecione todos que tenham Português e clique em Desinstalar<br /><br /><strong>Instalar o idioma português do Brasil pelo instalador do Joomla</strong><br /><br />Extensions - Manager - Install<br />Veja que não aparece o botão para instalar pacotes. Clique no link Plugin Manager<br /><br />Habilite todos.<br /><br />Extensions - Manager - Install languages<br />Não aparece nenhum<br />.<br /><strong>Então instalaremos manualmente</strong><br /><br /><strong>Download</strong><br /><a href="http://joomlacode.org/gf/project/jtranslation3_x/frs/?action=FrsReleaseBrowse&amp;frs_package_id=6437Â">http://joomlacode.org/gf/project/jtranslation3_x/frs/?action=FrsReleaseBrowse&amp;frs_package_id=6437 </a> <br /><br />Faça o download da versão 3.7.4 e instale.<br /><br />Extensions - Manager - Install<br />Upload Package File<br /><br />Habilite e torne o português do Brasil o odioma padrão.<br /><br />Agora temos dois idiomas: pt_BR e en_GB.<br /><br /></p>]]></description>
+			<category>Extensões</category>
+			<pubDate>Mon, 21 Aug 2017 17:52:25 -0300</pubDate>
+		</item>
+		<item>
+			<title>Criando uma Galeria de Imagens no Joomla</title>
+			<link>http://backup/portal/joomla-3/extensoes/criando-uma-galeria-de-imagens-no-joomla.html</link>
+			<guid isPermaLink="true">http://backup/portal/joomla-3/extensoes/criando-uma-galeria-de-imagens-no-joomla.html</guid>
+			<description><![CDATA[<h4 style="text-align: justify;">Criando uma Galeria de Imagens no Joomla</h4>
+
+<p style="text-align: justify;">O Phoca Gallery é um ótimo componente para a criação de galerias de imagens no Joomla. Tem muitos e bons recursos.<br />Como existem muitos detalhes na criação de galerias com ele então resolvi fazer este pequeno tutorial.<br /><br /><strong>Download</strong><br /><a href="https://www.phoca.cz/download/category/1-phoca-gallery-component">https://www.phoca.cz/download/category/1-phoca-gallery-component</a> <br />No site acima efetuar o download do componente e da tradução/language para pt-BR, ambos para a versão 3 do Joomla.<br /><br />Instalar ambos de forma padrão.<br /><br /><strong>Se na instalação do Phoca Gallery aparecer o erro:</strong><br />Erro<br />Houve um erro ao carregar este arquivo para o servidor.<br />Tamanho máximo de envio de arquivo PHP é muito pequeno: isso é definido no php. ini nas configurações upload_max_filesize e post_max_size suas do PHP (localizado nos arquivos php.ini e/ou .htaccess)<br />Não foi possível encontrar o pacote de instalação<br /><br />E não souber como proceder, leia o artigo Joomla\Dicas\Aumentando o tamanho dos uploads no php.ini aqui neste site.<br /><br />Vamos supor que desejamos criar duas galerias de imagens: uma para cada filho  e ambas aparecendo no site sob o menu Filhos.<br /><br /><strong>Criação dos diretórios para as imagens</strong><br />Criar o diretório filhos e dentro dele criar filho1 e filho2, tudo em images\phocagallery<br /><br /><strong>Dica: uma boa indicação para gerenciador de arquivos vai para o eXtplorer:</strong><br /><a href="http://extplorer.net/files">http://extplorer.net/files</a> <br />A vantagem é que fazemos tudo confortavelmente no próprio Joomla, sem precisar acessar o cPanel ou o servidor diretamente.<br />Com ele podemos criar os diretórios, enviar os arquivos por upload e muito, muito mais.<br /><br /><strong>Abra o eXtplorer em Componentes - eXtplorer</strong><br />Crie um diretório <strong>filhos</strong> em <br />images\phocagallery\filhos<br /><br /><strong>Criar dentro de filhos um subdiretório para cada filho:</strong><br />images\phocagallery\filhos\filho1<br />images\phocagallery\filhos\filho2<br /><br />Deve ficar assim:<br /><br /><img src="http://backup/portal/images/pasta.jpeg" alt="" /><br /><br /><strong>Upload das fotos</strong><br />Envie todas as imagens para cada diretório.<br /><br /><strong>Criar as 3 categorias no Phoca Gallery, filhos e dentro dela filho1 e filho1</strong><br />Filhos<br />    Filho1 - esta categoria é uma categoria filha da Filhos<br />    Filho2 - esta categoria é uma categoria filha da Filhos<br /><br />Componentes - Phoca Gallery<br />Categorias - Novo<br /><br />Título - Filhos<br />Diretório de álbum - Selecionar diretório - clicar na setinha verde em filhos<br />Salvar e Fechar<br /><br /><strong>Criar a subcategoria Filho1</strong><br /><br />Componentes - Phoca Gallery<br />Categorias - Novo<br /><br />Título - Filho1<br />Categoria pai - Filhos<br />Diretório de álbum - Selecionar diretório - clicar sobre a pasta filhos e então na setinha verde em filho1<br />Salvar e Fechar<br /><br /><strong>Criar a subcategoria Filho2</strong><br /><br />Componentes - Phoca Gallery<br />Categorias - Novo<br /><br />Título - Filho2<br />Categoria pai - Filhos<br />Diretório de álbum - Selecionar diretório - clicar sobre a pasta filhos e então na setinha verde em filho2<br />Salvar e Fechar<br /><br /><strong>Criar os thumbnails/miniaturas das Fotos para casa subcategoria</strong><br /><br /><strong>Filhos 1</strong><br /><br />Componentes - Phoca Gallery<br />Imagens - Multipla adição<br />Categoria - Filhos - Filho1<br />À direita clique no link filhos e depois marque o checkbox de filho1<br />Salvar e Fechar<br /><br /><strong>Filhos 2</strong><br /><br />Componentes - Phoca Gallery<br />Imagens - Multipla adição<br />Categoria - Filhos - Filho2<br />À direita clique no link filhos e depois marque o checkbox de filho2<br />Salvar e Fechar<br /><br />Nossas galerias estão prontas mas nada aparece no site ainda. Para que apareçam precisamos criar um item de menu adequado para as mesmas.<br /><br /><strong>Criarei um menu Filhos que abra as galerias do Phoca Gallery na categoria Filhos</strong><br /><br />Menus - Main Menu - Adicionar item de menu<br />Título - Filhos<br />Tipo de Item de Menu - clicar em Selecionar<br />Phoca Gallery Modulo de Imagem - Lista de albuns<br />Salvar e Fechar</p>
+
+<p style="text-align: justify;">Veja o detalhe do botão Selecionar:</p>
+
+<p style="text-align: justify;"><img src="http://backup/portal/images/menuphocagal.jpeg" alt="" /><br /><br />Agora veja como ficou no site:</p>
+
+<p style="text-align: justify;">Ao clicar no menu Filhas aparecem ambas as galerias</p>
+
+<p style="text-align: justify;"><img src="http://backup/portal/images/galerias.jpeg" alt="" /></p>
+
+<p style="text-align: justify;">Ao clicar em filho1 aparece a tela abaixo:</p>
+
+<p style="text-align: justify;"><img src="http://backup/portal/images/filho1.jpeg" alt="" width="836" height="362" /></p>
+
+<p style="text-align: justify;">Quando clicar em uma das fotos (foto4) ela aparece ao centro em destaque assim:</p>
+
+<p style="text-align: justify;"><img src="http://backup/portal/images/foto4.jpeg" alt="" /><br /><br />Trabalhando as Imagens<br />Antes de efetuar o download das fotos para o servidor redimensione-as de forma a ter o melhor desempenho, ou seja, deixe-as com a dimensão:<br /><br />650x460 px.<br /><br />Uma boa extensão para efetuar medidas de parte da tela é a MeasureIt, que funciona bem no Firefox.<br />Basta clicar no canto superior esquerdo e arrastar para o inferior direito e anotar as dimensões em pixel.<br /><br /></p>]]></description>
+			<category>Extensões</category>
+			<pubDate>Mon, 07 Aug 2017 13:54:44 -0300</pubDate>
+		</item>
+		<item>
+			<title>Customização de módulo do Joomla 3</title>
+			<link>http://backup/portal/joomla-3/extensoes/customizacao-modulo.html</link>
+			<guid isPermaLink="true">http://backup/portal/joomla-3/extensoes/customizacao-modulo.html</guid>
+			<description><![CDATA[<h4 style="text-align: justify;">Customização de módulo do Joomla 3</h4>
+
+<p style="text-align: justify;">Não tem diferença customizar um módulo nativo e um de terceiros.<br />Gosto muito de instalar dois módulos nativos do Joomla: novidades e populares. Eles facilitam as próximas navegações do visitante, para que não precise ficar verificando tudo novamente a procura de novidade. Ele vai direto no Novidades e vê no módulo as 5 últimas novidades (número que pode ser alterado). Populares também ajuda um pouco, principalmente para eu ficar sabendo do que mais estão gostando.<br /><br />Também gosto muito do framework Gantry como template e encontrei um ótimo templae com o Gantry, que foi o LearnMate:<br /><a href="https://joomlead.com/joomla-template/learnmate/">https://joomlead.com/joomla-template/learnmate/</a> <br /><br />Acontece que o estilo do LearnMate oculta os links destes dois módulos e inviabiliza seu uso.<br />Quando criei este site eu usei o Learnmate como template e tive que abdicar do novidades e populares.<br />Depois fiquei refletindo sobre uma forma de os usar. A primeira que encontrei foi editar o código do core do Joomla e mudar a cor de fundo de amos.<br />Funcionou mas não ficou muito natural. Detalhes abaixo:<br /><br /><em><strong>modules/modules_articles_latest/tmpl/default.php</strong></em> - novidades<br /><br />defined('_JEXEC') or die;<br />?&gt;<br />&lt;ul style="background-color:#88e898;"&gt;<br />&lt;!--&lt;ul class="latestnews&lt;?php echo $moduleclass_sfx; ?&gt;"&gt;--&gt;<br /><br />O outro fica em:<br /><em><strong>modules/modules_articles_popular/tmpl/default.php</strong></em> - populares<br /><br />Já dava para usar mas não fiquei satisfeito.<br />Então usando o Inspector do Navegador verifiquei onde ficava o CSS para a cor do link dos dois módulos.<br />Ele me mostrou. Como de praxe ele mostra o CSS e o arquivo onde o mesmo se encontra. Ao mover o mouse sobre o nome do arquivo ele mostra o path completo.<br /><br />Ele me mostrou que era no arquivo:<br />templates/learnmate_free/custom/css_compiled/learnmate_9.css<br /><br />É um arquivo compilado e de trabalhosa edição e usei uma alternativa cômoda, adicionar o código ao final, pois sobrescreverá o que existe antes.<br /><br />Ao final adicionei:<br /> a{ color: #000; }<br /><br /><strong>E adicionei um Sufixo de Classe do Módulo</strong></p>
+
+<p style="text-align: justify;">Chamado fundo. Nem existe, mas mesmo assim interfere deixando a região do módulo menor do que estava.<br /><br />Novidades - Avançado - Sufixo de Classe do Módulo - fundo</p>
+
+<p style="text-align: justify;"> </p>]]></description>
+			<category>Extensões</category>
+			<pubDate>Sat, 29 Jul 2017 21:19:03 -0300</pubDate>
+		</item>
+		<item>
+			<title>Minhas Extensões</title>
+			<link>http://backup/portal/joomla-3/extensoes/minhas-extensoes.html</link>
+			<guid isPermaLink="true">http://backup/portal/joomla-3/extensoes/minhas-extensoes.html</guid>
+			<description><![CDATA[<p style="text-align: justify;"><strong>Minhas Extensões para Joomla 3</strong></p>
+
+<p style="text-align: justify;">Descrevendo algumas das extensões que criei para Joomla 3.</p>
+
+<p style="text-align: justify;"><strong>Simple Backup</strong></p>
+
+<p style="text-align: justify;">É uma das primeiras extensões que instalo em meus sites criados com Joomla 2.5 e 3.x.</p>
+
+<p style="text-align: justify;">Ela suporta os idiomas inglês e português.</p>
+
+<p style="text-align: justify;">É bem simples, como o nome sugere. Apenas 3 cliques e você tem uma cópia do site em seu desktop.</p>
+
+<p style="text-align: justify;">Ela tem uma limitação. Se seu site crescer e tiver mais de 5GB geralmente ela deixa de funcionar.</p>
+
+<p style="text-align: justify;">Hospedada do GitHub</p>
+
+<p style="text-align: justify;"><a href="https://github.com/ribafs/com_simplebackup">https://github.com/ribafs/com_simplebackup</a></p>
+
+<p style="text-align: justify;">Maior site testado: 1.5GB compactado.<br /><strong>Dica:</strong> Caso seu site seja maior, basta alterar o arquivo php do componente, mudando a linha do ini_set de 5060 para um valor que te atenda.</p>
+
+<p style="text-align: justify;">Instalação padrão do Joomla</p>
+
+<p style="text-align: justify;">Clique em Componentes - Backup Simples</p>
+
+<p style="text-align: justify;"> </p>
+
+<p style="text-align: justify;"><img src="http://backup/portal/images/combackup1.jpeg" alt="" /></p>
+
+<p style="text-align: justify;">Então clique no botão Enviar e aguarde a criação dos dois arquivos, sql do banco e o zip dos arquivos e diretórios.</p>
+
+<p style="text-align: justify;"><img src="http://backup/portal/images/combackup2.jpeg" alt="" /></p>
+
+<p style="text-align: justify;">Prontinho. Agora basta clicar nos dois links e guardar bem guardados os dois arquivos.</p>
+
+<p style="text-align: justify;">A recomendação é efetuar nnovo backup a cada alteração significativa do site, alterações, artigos criados, etc.</p>
+
+<p style="text-align: justify;"> </p>
+
+<p style="text-align: justify;"><strong>Restaurando o Backup do Site</strong></p>
+
+<p style="text-align: justify;"><a title="joomla-3/dicas/234-restore-de-site-em-joomla" href="http://backup/portal/joomla-3/dicas/234-restore-de-site-em-joomla">Restore</a></p>
+
+<p style="text-align: justify;"> </p>
+
+<p style="text-align: justify;"><strong>Pensamento do Dia</strong></p>
+
+<p style="text-align: justify;">Um pequeno módulo com suporte ao Joomla 2.5 e 3.x, que exibe um pensamento aleatório a cada visita.</p>
+
+<p style="text-align: justify;">Ele sorteia um pensamento dentre 200 contidos em um arquivo texto.</p>
+
+<p style="text-align: justify;">Hospedado no GitHub</p>
+
+<p style="text-align: justify;"><a href="https://github.com/ribafs/pensamento-do-dia">https://github.com/ribafs/pensamento-do-dia</a></p>
+
+<p style="text-align: justify;"> </p>
+
+<p style="text-align: justify;"><strong>Percurso - Google</strong></p>
+
+<p style="text-align: justify;">Módulo para Joomla 2.5 e 3 que mostra um mapa do Google e permite que se entre origem e destino e ele traça o percurso entre a origem e destino.</p>
+
+<p style="text-align: justify;">No GitHub</p>
+
+<p style="text-align: justify;"><a href="https://github.com/ribafs/percurso-google">https://github.com/ribafs/percurso-google</a></p>
+
+<p style="text-align: justify;"> </p>
+
+<p style="text-align: justify;"><strong>Outras extensões em meu site anterior</strong></p>
+
+<p style="text-align: justify;"><a href="http://ribafs.16mb.com/index.php/joomla">http://ribafs.16mb.com/index.php/joomla</a></p>
+
+<p style="text-align: justify;"> </p>]]></description>
+			<category>Extensões</category>
+			<pubDate>Tue, 27 Jun 2017 13:25:03 -0300</pubDate>
+		</item>
+	</channel>
+</rss>

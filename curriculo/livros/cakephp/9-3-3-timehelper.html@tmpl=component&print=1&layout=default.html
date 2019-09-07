@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br" dir="ltr">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <base href="" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Ribamar FS" />
+	<meta name="robots" content="noindex, nofollow" />
+	<meta name="description" content="Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros." />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>9.3.3 - TimeHelper - RibaFS Portal</title>
+	<link href="http://ribafs.org/portal/curriculo/livros/cakephp/9-3-3-timehelper.html?tmpl=component&amp;print=1&amp;layout=default" rel="canonical" />
+	<link href="../../../templates/shaper_helix3/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../../../favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="http://backup/portal/media/plg_content_prismsyntaxhighlighter/css/prism-okaidia.css" rel="stylesheet" type="text/css" />
+	<link href="http://backup/portal/media/plg_content_prismsyntaxhighlighter/css/prism-linenumbers.css" rel="stylesheet" type="text/css" />
+	<script src="http://backup/portal/media/plg_content_prismsyntaxhighlighter/js/prism-tinymce.js" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery-noconflict.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery-migrate.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="http://backup/portal/media/system/js/caption.js?d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script type="text/javascript">
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+	</script>
+	<meta property="og:url" content="http://backup/portal/curriculo/livros/cakephp/9-3-3-timehelper.html" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="9.3.3 - TimeHelper" />
+	<meta property="og:description" content="9.3.3 – TimeHelper Há dias que você tem que ir para a frente só com o que você tem na mão, não dá para esperar pela motivação. Data e Hora com CakePHP 3 cl..." />
+
+   	<link rel="stylesheet" href="../../../media/jui/css/bootstrap.min.css" type="text/css" />
+	<link rel="stylesheet" href="../../../templates/shaper_helix3/css/frontend-edit.css" type="text/css" />
+    <link rel="stylesheet" href="../../../templates/shaper_helix3/css/template.css" type="text/css" />
+</head>
+<body class="contentpane">
+	<div id="system-message-container">
+	</div>
+
+	
+
+<article class="item item-page" itemscope itemtype="http://schema.org/Article">
+	<meta itemprop="inLanguage" content="pt-BR" />
+	
+	
+
+	<div class="entry-header">
+		<span class="post-format"><i class="fa fa-thumb-tack"></i></span>
+		
+					<h2 itemprop="name">
+									9.3.3 - TimeHelper							</h2>
+												</div>
+
+						<div id="pop-print" class="btn hidden-print">
+				<a href="9-3-3-timehelper.html#" onclick="window.print();return false;">			<span class="icon-print" aria-hidden="true"></span>
+		Imprimir	</a>			</div>
+				
+	
+	
+				
+	
+			<div itemprop="articleBody">
+		<h3>9.3.3 – TimeHelper</h3>
+<p align="right"><strong>Há dias que você tem que ir para a frente só com o que você tem na mão, não dá para esperar pela motivação.</strong></p>
+<p><strong>Data e Hora com CakePHP 3</strong></p>
+<p>class Cake\I18n\Time</p>
+<p> </p>
+<p>Se você precisa das funcionalidades do TimeHelper fora de uma View, então use a classe Time:</p>
+<pre class="language-php"><code>use Cake\I18n\Time;
+
+class UsersController extends AppController
+{
+    public function initialize()
+    {
+        parent::initialize();
+        $this-&gt;loadComponent('Auth');
+    }
+
+    public function afterLogin()
+    {
+        $time = new Time($this-&gt;Auth-&gt;user('date_of_birth'));
+        if ($time-&gt;isToday()) {
+            // Greet user with a happy birthday message
+            $this-&gt;Flash-&gt;success(__('Happy birthday to you...'));
+        }
+    }
+}</code></pre>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><b>Criando Instâncias de Time</b></span></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"> </p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;">Existem algumas maneiras de criar instâncias de Time:</span></span></p>
+<pre class="language-php"><code>use Cake\I18n\Time;
+// Create from a string datetime.
+$time = Time::createFromFormat(
+    'Y-m-d H:i:s',
+    $datetime,
+    'America/Fortaleza'
+);
+// Create from a timestamp
+$time = Time::createFromTimestamp($ts);
+
+// Get the current time.
+$time = Time::now();
+$time = new Time('2014-01-10 11:11', 'America/Fortaleza');
+$time = new Time('2 hours ago');
+
+Mais:
+$now = new Time('2014-04-12 12:22:30');
+Time::setTestNow($now);
+
+// Retorna '2014-04-12 12:22:30'
+$now = Time::now();
+
+// Retorna '2014-04-12 12:22:30'
+$now = Time::parse('now');</code></pre>
+<p><strong>Manipulação</strong></p>
+<p>Depois de criada a instância podemos manipular as instâncias de Time usando métodos setters.</p>
+<p>$now = Time::now();</p>
+<p>$now-&gt;year(2016)</p>
+<p>-&gt;month(08)</p>
+<p>-&gt;day(31);</p>
+<p>Também podemos usar os métodos providos pelo PHP embutidos na classe DateTime:</p>
+<p>$now-&gt;setDate(2016, 08, 31);</p>
+<p>Datas podem ser modificdas através da subtração e adição de seus componentes:</p>
+<p>$now = Time::now();</p>
+<p>$now-&gt;subDays(5);</p>
+<p>$now-&gt;addMonth(1);</p>
+<p> </p>
+<p>// Usando strtotime strings.</p>
+<p>$now-&gt;modify('+5 days');</p>
+<p>Você pode receber os componentes internos da data acessando suas propriedades:</p>
+<p>$now = Time::now();</p>
+<p>echo $now-&gt;year; // 2014</p>
+<p>echo $now-&gt;month; // 5</p>
+<p>echo $now-&gt;day; // 10</p>
+<p>echo $now-&gt;timezone; // America/Fortaleza</p>
+<p> </p>
+<p>Também é permitido assinalar diretamente essas propriedades para modificar a data:</p>
+<p>$time-&gt;year = 2015;</p>
+<p>$time-&gt;timezone = 'Europe/Paris';</p>
+<p> </p>
+<p>Formatando</p>
+<p>static Cake\I18n\Time::setJsonEncodeFormat($format)</p>
+<p>O método configura o formato default usado quando convertendo um objeto para json:</p>
+<p>Time::setJsonEncodeFormat('yyyy-MM-dd HH:mm:ss');</p>
+<p> </p>
+<p>Este método precisa ser chamado estaticamente.</p>
+<p>Cake\I18n\Time::i18nFormat($format = null, $timezone = null, $locale = null)</p>
+<p>Algo bem comum a fazer com instâncias de Time é imprimir as datas formatadas. Veja:</p>
+<p>$now = Time::parse('2014-10-31');</p>
+<p>// Prints a localized datetime stamp.</p>
+<p>echo $now;</p>
+<p>// Outputs '10/31/14, 12:00 AM' for the en-US locale</p>
+<p>$now-&gt;i18nFormat();</p>
+<p> </p>
+<p>// Use the full date and time format</p>
+<p>$now-&gt;i18nFormat(\IntlDateFormatter::FULL);</p>
+<p>// Use full date but short time format</p>
+<p>$now-&gt;i18nFormat([\IntlDateFormatter::FULL, \IntlDateFormatter::SHORT]);</p>
+<p>// Outputs '2014-10-31 00:00:00'</p>
+<p>$now-&gt;i18nFormat('yyyy-MM-dd HH:mm:ss');</p>
+<p>Configurando o Locale Padrão e o Formato de String</p>
+<p>// The same method exists on Date, FrozenDate, and FrozenTime</p>
+<p>Time::setDefaultLocale('pt-BR');</p>
+<p> </p>
+<p>Datas</p>
+<p>A classe Date no CakePHP implementa a mesma API e métodos que o Time\ I18n\. A principal diferença entre hora e data é que Data não acompanha componentes de tempo, e está sempre em UTC. Como um exemplo:</p>
+<pre class="language-php"><code>use Cake\I18n\Date;
+$date = new Date('2015-06-15');
+
+$date-&gt;modify('+2 hours');
+// Outputs 2015-06-15 00:00:00
+echo $date-&gt;format('Y-m-d H:i:s');
+
+$date-&gt;modify('+36 hours');
+// Outputs 2015-06-15 00:00:00
+echo $date-&gt;format('Y-m-d H:i:s');
+
+Dicas sobre data e hora
+
+Num controller
+
+use Cake\I18n\Time;
+use Cake\I18n\Date;
+
+    public function index()
+    {
+        $time = new Time($this-&gt;Auth-&gt;user('birtday'));
+        if ($time-&gt;isToday()) {
+            // Greet user with a happy birthday message
+            $this-&gt;Flash-&gt;error(__('Hoje é seu aniversário. Meus parabéns...'));
+        }
+
+        $this-&gt;paginate = [
+            'contain' =&gt; ['Groups']
+        ];
+        $permissions = $this-&gt;paginate($this-&gt;Permissions);
+
+        $this-&gt;set(compact('permissions'));
+    }
+
+Outras formas:
+
+$now = Time::now();
+$now-&gt;year(2013)
+    -&gt;month(10)
+    -&gt;day(31);
+
+dd($now);
+
+$now = Time::parse('2014-10-31');
+
+$now = Time::parse('2014-10-31');
+
+// Outputs 'Oct 31, 2014 12:00 AM' in en-US
+Time::setDefaultLocale('pt-BR');
+echo $now;
+exit;
+
+$time = new Time($this-&gt;Auth-&gt;user('modified'));
+Time::setDefaultLocale('pt-BR'); // ou Date::setDefaultLocale('pt-BR');
+echo $time;
+exit;
+
+$time = new Time($this-&gt;Auth-&gt;user('modified'));
+Time::setToStringFormat('dd/MM/yyyy');
+echo $time;
+exit;
+
+src/Template/Clientes/add.ctp ou edit.ctp
+</code></pre>
+<p style="margin-bottom: 0cm; font-style: normal; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;">Por padrão o Cake mostra apenas os anos de 2011 até 2021 na combo Ano.</span></span></p>
+<p style="margin-bottom: 0cm; font-style: normal; line-height: 100%;"> </p>
+<p style="margin-bottom: 0cm; font-style: normal; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;">Vamos alterar para que o ano mínimo seja 13 anos antes do atual e máximo seja 100 anos antes do atual, ou seja, como estou em 2016, que mostre de 1916 até 2003, mas isso deve ser pensado para atender ao requisito da tabela/aplicativo. No nosso caso, do DNOCS, devemos usar 18 anos antes, ou mais para o primeiro?</span></span></p>
+<p style="margin-bottom: 0cm; font-style: normal; line-height: 100%;"> </p>
+<p style="margin-bottom: 0cm; font-style: normal; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;">E 100 anos antes do atual ou mais para o segundo.</span></span></p>
+<p style="margin-bottom: 0cm; font-style: normal; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;">Precisamos saber da legislação e usar a favor da segurança, deixando uma margem.</span></span></p>
+<pre class="language-php"><code>		echo $this-&gt;Form-&gt;input('nascimento',['label' =&gt; 'Nascimento',
+	        'dateFormat'    =&gt; 'DMY',
+	        'minYear'       =&gt; date('Y') - 100,
+	        'maxYear'       =&gt; date('Y') - 13,
+	        'empty'         =&gt; [
+	            'day'       =&gt; 'Dia',
+	            'month'     =&gt; 'Mês',
+	            'year'      =&gt; 'Ano'
+            ]
+        ]);</code></pre>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;">Mais em:</span></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;">CakePHP usa Chronos para dar poder ao seu utilitário Timer. Qualquer coisa que você possa fazer com Chronos e DateTime você pode fazer com Time e Date:</span></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Arial, serif;"><span style="font-size: medium;"><span style="font-family: Times New Roman, serif;"><a href="https://github.com/cakephp/chronos">https://github.com/cakephp/chronos</a> </span></span></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Arial, serif;"><span style="font-size: medium;"><span style="font-family: Times New Roman, serif;"><a href="http://api.cakephp.org/chronos/1.0/">http://api.cakephp.org/chronos/1.0/</a> </span></span></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"> </p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;">Antes da versão 3.2 o CakePHP usava Carbon:</span></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Arial, serif;"><span style="font-size: medium;"><span style="font-family: Times New Roman, serif;"><a href="https://github.com/briannesbitt/Carbon">https://github.com/briannesbitt/Carbon</a> </span></span></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Arial, serif;"><span style="font-size: medium;"><a href="http://book.cakephp.org/3.0/en/views/helpers/time.html"><span style="font-family: Times New Roman, serif;">http://book.cakephp.org/3.0/en/views/helpers/time.html</span></a></span></span></p>
+<p style="margin-bottom: 0cm; font-weight: normal; line-height: 100%;"><span style="font-family: Arial, serif;"><span style="font-size: medium;"><span style="font-family: Times New Roman, serif;"><a href="https://book.cakephp.org/3.0/en/core-libraries/time.html">https://book.cakephp.org/3.0/en/core-libraries/time.html</a> </span></span></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Arial, serif;"><span style="font-size: medium;"><span style="font-family: Times New Roman, serif;"><a href="http://book.cakephp.org/3.0/en/core-libraries/internationalization-and-localization.html#parsing-localized-dates">http://book.cakephp.org/3.0/en/core-libraries/internationalization-and-localization.html#parsing-localized-dates</a> </span></span></span></p> 	</div>
+
+	
+	
+				
+	
+	
+	
+</article>
+
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br" dir="ltr">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <base href="" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Ribamar FS" />
+	<meta name="robots" content="noindex, nofollow" />
+	<meta name="description" content="Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros." />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>15.3 - Exemplos de uso da Faker - RibaFS Portal</title>
+	<link href="http://ribafs.org/portal/curriculo/livros/cakephp/15-3-exemplos-de-uso-da-faker.html?tmpl=component&amp;print=1&amp;layout=default" rel="canonical" />
+	<link href="../../../templates/shaper_helix3/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../../../favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<script src="../../../media/jui/js/jquery.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery-noconflict.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery-migrate.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="http://backup/portal/media/system/js/caption.js?d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script type="text/javascript">
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+	</script>
+	<meta property="og:url" content="http://backup/portal/curriculo/livros/cakephp/15-3-exemplos-de-uso-da-faker.html" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="15.3 - Exemplos de uso da Faker" />
+	<meta property="og:description" content="15.3 - Exemplos de uso da Faker Como tive dificuldade de encontrar alguns exemplos de uso da Faker, então seguem alguns exenplos que colecionei. $faker = F..." />
+
+   	<link rel="stylesheet" href="../../../media/jui/css/bootstrap.min.css" type="text/css" />
+	<link rel="stylesheet" href="../../../templates/shaper_helix3/css/frontend-edit.css" type="text/css" />
+    <link rel="stylesheet" href="../../../templates/shaper_helix3/css/template.css" type="text/css" />
+</head>
+<body class="contentpane">
+	<div id="system-message-container">
+	</div>
+
+	
+
+<article class="item item-page" itemscope itemtype="http://schema.org/Article">
+	<meta itemprop="inLanguage" content="pt-BR" />
+	
+	
+
+	<div class="entry-header">
+		<span class="post-format"><i class="fa fa-thumb-tack"></i></span>
+		
+					<h2 itemprop="name">
+									15.3 - Exemplos de uso da Faker							</h2>
+												</div>
+
+						<div id="pop-print" class="btn hidden-print">
+				<a href="15-3-exemplos-de-uso-da-faker.html#" onclick="window.print();return false;">			<span class="icon-print" aria-hidden="true"></span>
+		Imprimir	</a>			</div>
+				
+	
+	
+				
+	
+			<div itemprop="articleBody">
+		<h3>15.3 - Exemplos de uso da Faker</h3>
+<p style="text-align: right;"><br /><em><strong>Como tive dificuldade de encontrar alguns exemplos de uso da Faker, então seguem alguns exenplos que colecionei.</strong></em></p>
+<p><br />$faker = Faker\Factory::create('pt_BR');<br /><br />$cpf = $faker-&gt;numberBetween($min = 10000000000, $max = 99999999999);<br />$nome = addslashes($faker-&gt;name);<br />$credito_liberado = $faker-&gt;regexify('[sn]');<br />$nascimento = $faker-&gt;date;<br />$email = $faker-&gt;email;<br />$user_id = $faker-&gt;numberBetween($min = 1, $max = 4);<br />$quantidade = $faker-&gt;randomNumber($nbDigits = NULL, $strict = false);<br />$preco_venda = $faker-&gt;numberBetween($min = 20, $max = 1200);<br /><br />randomNumber($nbDigits = NULL, $strict = false) // 79907610<br />randomFloat($nbMaxDecimals = NULL, $min = 0, $max = NULL) // 48.8932<br />numberBetween($min = 1000, $max = 9000) // 8567<br /><br />$faker-&gt;regexify('[sn]'); // s ou n<br />$faker-&gt;randomElement($array = array ('s','n'));<br />$faker-&gt;randomLetter;<br />$faker-&gt;regexify('[A-Z]+[a-z]{2,5}'); // 2 a 5 letras<br />$faker-&gt;regexify('[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}'); // <span id="cloakc0ef0a7e8a50505ef50cb6ba17bb210d">Este endereço de email está sendo protegido de spambots. Você precisa do JavaScript ativado para vê-lo.</span><script type='text/javascript'>
+				document.getElementById('cloakc0ef0a7e8a50505ef50cb6ba17bb210d').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addyc0ef0a7e8a50505ef50cb6ba17bb210d = 'sm0' + '&#64;';
+				addyc0ef0a7e8a50505ef50cb6ba17bb210d = addyc0ef0a7e8a50505ef50cb6ba17bb210d + 'y8k96&#97;' + '&#46;' + '&#101;j';
+				var addy_textc0ef0a7e8a50505ef50cb6ba17bb210d = 'sm0' + '&#64;' + 'y8k96&#97;' + '&#46;' + '&#101;j';document.getElementById('cloakc0ef0a7e8a50505ef50cb6ba17bb210d').innerHTML += '<a ' + path + '\'' + prefix + ':' + addyc0ef0a7e8a50505ef50cb6ba17bb210d + '\'>'+addy_textc0ef0a7e8a50505ef50cb6ba17bb210d+'<\/a>';
+		</script><br />$faker-&gt;randomElement($array = array ('a','b','c')); // 'b'<br />print $faker-&gt;sentence($nbWords = 3, $variableNbWords = true);<br />$faker-&gt;sentence($nbWords = 6, $variableNbWords = true);<br />$faker-&gt;address; // rua, número e cep<br />$faker-&gt;text; // Para grandes quantidades de texto<br />$faker-&gt;sentence($nbWords = 6, $variableNbWords = true);<br />$faker-&gt;text($maxNbChars = 200);<br />$faker-&gt;title($gender = null|'male'|'female');     // 'Ms.'<br />$faker-&gt;name($gender = null|'male'|'female');      // 'Dr. Zane Stroman'<br />$faker-&gt;cityPrefix;<br />$faker-&gt;state;<br />$faker-&gt;stateAbbr;<br />$faker-&gt;buildingNumber;<br />$faker-&gt;city;<br />$faker-&gt;streetName;<br />$faker-&gt;streetAddress;<br />$faker-&gt;postcode;<br />$faker-&gt;country;<br />$faker-&gt;PhoneNumber;<br />$faker-&gt;company;<br />$faker-&gt;date($format = 'Y-m-d', $max = 'now');<br />$faker-&gt;time($format = 'H:i:s', $max = 'now');<br />$faker-&gt;freeEmail;<br />$faker-&gt;password;<br />$faker-&gt;domainName;<br />$faker-&gt;url;<br />$faker-&gt;ipv4;<br />$faker-&gt;macAddress;<br />$faker-&gt;creditCardType;<br />$faker-&gt;creditCardNumber;<br />$faker-&gt;creditCardExpirationDateString;<br />$faker-&gt;hexcolor;<br />$faker-&gt;colorName;<br />$faker-&gt;fileExtension;<br />$faker-&gt;mimeType;<br />$faker-&gt;locale;<br />$faker-&gt;countryCode;<br />$faker-&gt;randomHtml(2,3);<br /><br /><br />A partir da versão 1.5.5 do plugin, você pode usar a shell de migrations para popular seu banco de dados. Essa função é oferecida graças ao recurso de seed da biblioteca Phinx. Por padrão, arquivos seed ficarão no diretório config/Seeds de sua aplicação. Por favor, tenha certeza de seguir as instruções do Phinx para construir seus arquivos de seed.<br /><br /><strong>Podemos especificar um plugin</strong><br /><br />bin/cake bake seed Articles --plugin PluginName<br /><br />As opções --data, --limit e --fields foram adicionadas para exportar dados da sua base de dados.<br />A partir da versão 16.4, o comando bake seed permite que você crie um arquivo de seed com dados exportados da sua base de dados com o uso da flag --data:<br /><br />Exportando a tabela Articles juntamente com seus dados:<br /><br />bin/cake bake seed --data Articles<br /><br />Por padrão, esse comando exportará todas as linhas encontradas na sua tabela. Você pode limitar o número de linhas a exportar usando a opção --limit:<br /><br />Exportar apenas os 10 primeiros registros encontradas<br /><br />bin/cake bake seed --data --limit 10 Articles<br /><br />Para popular seu banco de dados, você pode usar o subcomando seed:<br /><br />bin/cake migrations seed<br /><br />Para plugins<br /><br />bin/cake migrations seed -p MeuPlugin<br /><br /><br />Você pode especificar apenas um seeder para rodar usando a opção --seed:<br /><br />bin/cake migrations seed --seed ArticlesSeed<br /><br /><strong>Limpar o cache</strong><br /><br />Se você usa o plugin ao fazer o deploy de sua aplicação, garanta que o cache ORM seja limpo para renovar os metadados das colunas de suas tabelas.<br /><br />bin/cake orm_cache clear<br /><br /><br /><strong>Migrando somente uma migration</strong><br /><br />bin/cake migrations migrate -p CakeDC/Users<br />bin/cake migrations migrate -p Acl<br /><br /></p> 	</div>
+
+	
+	
+				
+	
+	
+	
+</article>
+
+</body>
+</html>

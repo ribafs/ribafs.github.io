@@ -1,0 +1,1096 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="Joomla! - Open Source Content Management" -->
+<feed xmlns="http://www.w3.org/2005/Atom"  xml:lang="pt-br">
+	<title type="text">Estudos - RibaFS Portal</title>
+	<subtitle type="text">Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros.</subtitle>
+	<link rel="alternate" type="text/html" href="http://backup"/>
+	<id>http://backup/portal/blog/estudos.feed</id>
+	<updated>2019-09-07T19:05:05-03:00</updated>
+	<author>
+		<name>RibaFS Portal</name>
+	</author>
+	<generator uri="https://www.joomla.org">Joomla! - Open Source Content Management</generator>
+	<link rel="self" type="application/atom+xml" href="http://backup/portal/blog/estudos.feed?type=atom"/>
+	<entry>
+		<title>Estudando com a Máxima Eficiência</title>
+		<link rel="alternate" type="text/html" href="http://backup/portal/blog/estudos/estudando-com-a-maxima-eficiencia.html"/>
+		<published>2018-04-08T18:44:13-03:00</published>
+		<updated>2018-04-08T18:44:13-03:00</updated>
+		<id>http://backup/portal/blog/estudos/estudando-com-a-maxima-eficiencia.html</id>
+		<author>
+			<name>Ribamar FS</name>
+		</author>
+		<summary type="html">&lt;h4 style=&quot;text-align: left;&quot; align=&quot;center&quot;&gt;Dicas, Reflexões e Links úteis&lt;/h4&gt;
+
+&lt;div id=&quot;Sumário1&quot; dir=&quot;ltr&quot;&gt;
+
+&lt;div id=&quot;Sumário1_Head&quot; dir=&quot;ltr&quot;&gt;
+
+&lt;p&gt;&lt;strong&gt;Sumário&lt;/strong&gt;&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://backup/portal/#__RefHeading___Toc1125_910990196&quot;&gt;Grande Quantidade de Matéria&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://backup/portal/#__RefHeading___Toc1127_910990196&quot;&gt;Encarar Desafios&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://backup/portal/#__RefHeading___Toc1129_910990196&quot;&gt;Estudar duro ou se divertir? Decida&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://backup/portal/#__RefHeading___Toc1236_2065335795&quot;&gt;Seja criterioso com seu alimento&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://backup/portal/#__RefHeading___Toc1131_910990196&quot;&gt;Procurar emprego ou ser procurado por ele?&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://backup/portal/#__RefHeading___Toc1133_910990196&quot;&gt;Não existe nada perfeito e isso é muito bom&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://backup/portal/#__RefHeading___Toc1135_910990196&quot;&gt;Estude de forma equilibrada todas as matérias&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://backup/portal/#__RefHeading___Toc1137_910990196&quot;&gt;Inteligência, uma ótima aliada&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://backup/portal/#__RefHeading___Toc1139_910990196&quot;&gt;Outra grande aliada, a Memória&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://backup/portal/#__RefHeading___Toc1141_910990196&quot;&gt;Você tem muitos recursos&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://backup/portal/#__RefHeading___Toc1143_910990196&quot;&gt;Sempre tire suas dúvidas em sala&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://backup/portal/#__RefHeading___Toc1145_910990196&quot;&gt;Eficiência&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://backup/portal/#__RefHeading___Toc1147_910990196&quot;&gt;Marcador de livros&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://backup/portal/#__RefHeading___Toc1149_910990196&quot;&gt;Valor dos estudos&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://backup/portal/#__RefHeading___Toc1151_910990196&quot;&gt;Organização, oura ferramenta&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://backup/portal/#__RefHeading___Toc1153_910990196&quot;&gt;Programe seus estudos&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://backup/portal/#__RefHeading___Toc1155_910990196&quot;&gt;Gostar de desafios e resolver problemas&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://backup/portal/#__RefHeading___Toc1157_910990196&quot;&gt;Gravar aulas&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://backup/portal/#__RefHeading___Toc1159_910990196&quot;&gt;Cama não é um lugar adequado para estudar&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://backup/portal/#__RefHeading___Toc1161_910990196&quot;&gt;Distrações&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://backup/portal/#__RefHeading___Toc1163_910990196&quot;&gt;Marcador de cadernos&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://backup/portal/#__RefHeading___Toc1165_910990196&quot;&gt;Estudo é seu objetivo principal nesta fase da vida&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://backup/portal/#__RefHeading___Toc1167_910990196&quot;&gt;Relaxe&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://backup/portal/#__RefHeading___Toc1169_910990196&quot;&gt;Formas eficientes e não eficientes de estudar&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://backup/portal/#__RefHeading___Toc1171_910990196&quot;&gt;Não existe uma técnica mágica&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://backup/portal/#__RefHeading___Toc1173_910990196&quot;&gt;Alguns Fatores que Influem na Máxima Eficiência&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://backup/portal/#__RefHeading___Toc1175_910990196&quot;&gt;Lei da Atração&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://backup/portal/#__RefHeading___Toc1177_910990196&quot;&gt;Alguns dos materiais de estudo mais importantes, na ordem&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://backup/portal/#__RefHeading___Toc1179_910990196&quot;&gt;Curiosidade&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://backup/portal/#__RefHeading___Toc1181_910990196&quot;&gt;Referências&lt;/a&gt;&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;Veja que estudar com eficiência tem um peso e uma sugestão enquanto estudar com a Máxima eficiência é outra coisa.&lt;/p&gt;
+
+&lt;p&gt;Para maior eficiência a concentração ajuda e muito. Veja isso:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.primecursos.com.br/blog/prime-cursos/como-melhorar-sua-concentracao-com-a-neurociencia/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;https://www.primecursos.com.br/blog/prime-cursos/como-melhorar-sua-concentracao-com-a-neurociencia/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;O título é meio provocativo, mas é sincero. Mesmo que aqui você não vá receber todas as informações necessárias para estudar com a máxima eficiência (e acredito que em nenhum lugar), ainda assim esta é a ideia, te passar algumas dicas sobre como tornar seus estudos mais eficientes e te estimulara para que você se empenhe para conseguir sempre a máxima eficiência possível em seus estudos. Isso você pode fazer e deve, inclusive em tudo na sua vida.&lt;/p&gt;
+
+&lt;p&gt;Este artigo é fruto de uma pesquisa e de alguma reflexão e experiência própria.&lt;/p&gt;
+
+&lt;p&gt;O resultado da pesquisa não me levou a algo muito importante a se fazer para tornar o estudo mais eficiente, mas encontrei algumas boas recomendações.&lt;/p&gt;
+
+&lt;h3&gt;&lt;a name=&quot;__RefHeading___Toc1125_910990196&quot;&gt;&lt;/a&gt;Grande Quantidade de Matéria&lt;/h3&gt;
+
+&lt;p&gt;Como a quantidade de matéria a ser estudada é muito grande para o tempo que você tem, então você precisa aprender a estudar da forma mais eficiente possível, para assim conseguir aprender todas as matérias e ser aprovado(a) em todas.&lt;/p&gt;
+
+&lt;h3 class=&quot;western&quot;&gt;&lt;a name=&quot;__RefHeading___Toc1127_910990196&quot;&gt;&lt;/a&gt;&lt;span style=&quot;font-family: Liberation\ Sans, sans-serif;&quot;&gt;&lt;span style=&quot;font-size: large;&quot;&gt;&lt;b&gt;Encarar Desafios&lt;/b&gt;&lt;/span&gt;&lt;/span&gt;&lt;/h3&gt;
+
+&lt;p&gt;Não é uma tarefa fácil, de maneira alguma. Você precisa estar inteiramente consciente disso, que será uma tarefa árdua. Mas vamos começar falando que para você ser bem sucedido em teus estudos precisa assumir uma atitude de quem encara desafios, de quem está disposto a fazer um grande sacrifício em nome de uma grande causa. Mas isso não significa que precisa ser algo desagradável. Você precisa se estimular, se sentir desafiado por todas as dificuldades que o estudo apresenta. Tem mais, isso serve não somente para seus estudos, mas para todas as dificuldades que tenha na sua vida. Encarar desafios, estudá-los de cabeça fria, de forma organizada e racional é uma forma muito eficiente de vencer os desafios. E dependendo da forma como você encarar isso poderá ser algo muito agradável e importante para você.&lt;/p&gt;
+
+&lt;h3 class=&quot;western&quot;&gt;&lt;a name=&quot;__RefHeading___Toc1129_910990196&quot;&gt;&lt;/a&gt;&lt;span style=&quot;font-family: Liberation\ Sans, sans-serif;&quot;&gt;&lt;span style=&quot;font-size: large;&quot;&gt;&lt;b&gt;Estudar duro ou se divertir? Decida&lt;/b&gt;&lt;/span&gt;&lt;/span&gt;&lt;/h3&gt;
+
+&lt;p&gt;Você não é obrigado a fazer todo este sacrifício, a dedicar muito tempo da sua vida a estudar. Talvez seja mais interessante chutar o pau da barraca, se juntar a vários colegas que levam suas vidas apenas a se divertir, a se encontrarem, usar Facebook, Whatsapp, Instagran, assistir filmes, vídeos, jogar e muito mais atividades divertidas e atraentes. Mas é interessante refletir com grande seriedade e lembrar que eles não estão fazendo muito pelo futuro, para conseguir uma profissão mais rentável e que valorize suas vidas. Precisarão estar competindo por empregos que pagam apenas um salário mínimo. Enquanto que quem estuda muito, se empenha para aprender de tudo e ser aprovado inclusive por média, quem faz assim está se preparando melhor para abraçar uma profissão rentável e ser realmente um especialista, alguém valorizado no mercado de trabalho.&lt;/p&gt;
+
+&lt;h3 class=&quot;western&quot;&gt;&lt;a name=&quot;__RefHeading___Toc1236_2065335795&quot;&gt;&lt;/a&gt;Seja criterioso com seu alimento&lt;/h3&gt;
+
+&lt;p&gt;E aqui não me refiro ao alimento que nutre seu corpo, mas ao que nutre sua mente e sua personalidade. Muito alimento tem sabor e enche a barriga mas não nutre o corpo, não aumenta sua energia nem a mantém. Seja criterioso com os filmes que assiste, pois eles podem ajudar sua inteligência, seu caráter, seus conhecimentos ou atrapalhar tudo isso. Assim como seus amigos, os jogos que joga, etc.&lt;/p&gt;
+
+&lt;h3 class=&quot;western&quot;&gt;&lt;a name=&quot;__RefHeading___Toc1131_910990196&quot;&gt;&lt;/a&gt;Procurar emprego ou ser procurado por ele?&lt;/h3&gt;
+
+&lt;p&gt;Me parece que o maior objetivo deve ser o de ser alguém que domina muito um conhecimento, uma profissão, que leve o trabalho a procurar você, que leve as empresas a procurarem alguém como você e não você procurar trabalho. Veja que isto ocorre em muitas profissões, onde os melhores profissionais não saem procurando trabalho mas as pessoas os procuram, as empresas os procuram e valorizam o que sabem fazer e como fazem.&lt;/p&gt;
+
+&lt;h3 class=&quot;western&quot;&gt;&lt;a name=&quot;__RefHeading___Toc1133_910990196&quot;&gt;&lt;/a&gt;Não existe nada perfeito e isso é muito bom&lt;/h3&gt;
+
+&lt;p&gt;Devo começar dizendo que não existe nada perfeito no mundo e isso tem uma enorme vantagem: então tudo pode ser melhorado, pode ser feito com mais simplicidade, pode ser otimizado. É bom lembrar disso quando tiver um problema que está te dando trabalho. Pesquise em outros livros, veja outros exemplos parecidos e procure então outras formas de resolver. Não empanque em uma ideia e fique em-burra-do nela. Procure alternativas. Por outro lado não é produtivo ficar melhorando algo indefinidamente. Precisamos ter consciência do que fazemos e confiança para perceber quando está bom.&lt;/p&gt;
+
+&lt;h3 class=&quot;western&quot;&gt;&lt;a name=&quot;__RefHeading___Toc1135_910990196&quot;&gt;&lt;/a&gt;Estude de forma equilibrada todas as matérias&lt;/h3&gt;
+
+&lt;p&gt;Como você precisa aprender e passar em todas as matérias, talvez seja importante estudar mais as matérias nas quais você tem nota baixa. As que tem notas melhores podem ficar em segundo plano, pois é importante tirar boas notas e ser aprovado em todas as matérias. Não pode desprezar nenhuma. Caso sempre estude mais as que mais gosta o que vai acontecer? As que estuda menos terá notas ainda menores e as que estuda mais notas ainda melhores. Como precisa passar em todas então procure ficar atento e equilibrar seus estudos para ter as notas equilibradas.&lt;/p&gt;
+
+&lt;h3 class=&quot;western&quot;&gt;&lt;a name=&quot;__RefHeading___Toc1137_910990196&quot;&gt;&lt;/a&gt;Inteligência, uma ótima aliada&lt;/h3&gt;
+
+&lt;p&gt;Uma maravilhosa ferramenta que existe e que pode e deve ser melhorada é a inteligência.&lt;/p&gt;
+
+&lt;p&gt;Para melhorar precisamos primeiro confiar que temos que somos capazes de aumentar. Confiando então procuraremos ficar atentos ao assunto e procuremos fazer cada coisa de forma mais bem feita e assim criar uma verdadeira atitude, algo que se torne uma característica nossa, algo que estará sempre ao nosso lado, conosco. Esta atitude de caprichar, de aceitar desafios de estimular sua inteligências com problemas reais e com problemas dos estudos. Existem livros com testes de raciocínio e inteligência. Existem livros com testes de QI (Quociente de Inteligência), que ma aprece não medem inteligência mas podem estimular o raciocínio lógico, o raciocínio matemático e outras áreas. Mas é muito importante salientar que a inteligência somente será uma aliada se você se empenhar muito nos seus estudos. A inteligência sozinha não vale muita coisa, mas aliada ao esforço sério e estudo árduo então teremos uma grande aliada.&lt;/p&gt;
+
+&lt;p&gt;Você precisa aprender a raciocinar usando a lógica, para que consiga aprender com mais eficiência. Algumas pessoas alimentam ideias que não são coerentes, que não são lógicas, que são meio ou muito fantasiosas e mágicas. Precisamos ter os “pés no chão” e procurar raciocinar com clareza, sem fantasias. Assim conseguiremos ter um maior rendimento nos estudos e na vida.&lt;/p&gt;
+
+&lt;h3 class=&quot;western&quot;&gt;&lt;a name=&quot;__RefHeading___Toc1139_910990196&quot;&gt;&lt;/a&gt;Outra grande aliada, a Memória&lt;/h3&gt;
+
+&lt;p&gt;Outra grande ferramenta e auxiliar da inteligência é a memória. Todos nós temos a capacidade de memorizar, mas precisamos melhorar a memória que temos. Para isso também precisamos confiar que poderemos aumentar e que nossa memória será melhor e mais útil com o tempo, com os exercícios e com a confiança depositada nela. Veja como se perde tempo fazendo algo várias vezes quando não valorizamos a nossa memória. Você vai sair de casa e mal abre a porta você volta por que esqueceu de algo. Você tem a responsabilidade de mudar isso. Se empenhe em fortalecer esta sua aliada.&lt;/p&gt;
+
+&lt;p&gt;Para que aumentemos nossa inteligência e nossa memória precisamos não apenas confiar que o faremos, mas querer muito, querer com todas as nossas forças, usando tudo ao nosso alcance para conseguir isso. Lembre que sendo alguém mais inteligente e com melhor memória você será mais bem sucedido não somente nos estudos mas em tudo que fizer na vida. Então tenha sempre estas duas ferramentas em mente e em cada situação que possa usar para conseguir exercite.&lt;/p&gt;
+
+&lt;h3 class=&quot;western&quot;&gt;&lt;a name=&quot;__RefHeading___Toc1141_910990196&quot;&gt;&lt;/a&gt;Você tem muitos recursos&lt;/h3&gt;
+
+&lt;p&gt;Lembre que você tem vários outros recursos importantes que poderão te ajudar nos estudos, confiança, força de vontade, controle emocional, disciplina, organização, etc&lt;/p&gt;
+
+&lt;h3 class=&quot;western&quot;&gt;&lt;a name=&quot;__RefHeading___Toc1143_910990196&quot;&gt;&lt;/a&gt;Sempre tire suas dúvidas em sala&lt;/h3&gt;
+
+&lt;p&gt;Se interessar pra valer. Dormir cedo e pelo menos 8 horas por noite. Acordar cedo e sentar na frente. Prestar a máxima atenção às aulas e realmente manter interesse, sempre lembrando de perguntar caso não tenha entendido. Nunca tenha vergonha de perguntar algo. Você está ali é pra isso e o professor também. Tem mais, geralmente o professor gosta quando alguém pergunta, pois valoriza sua aula e permite que ele explique de outra forma e melhor, possibilitando que outros colegas também compreendam.&lt;/p&gt;
+
+&lt;h3 class=&quot;western&quot;&gt;&lt;a name=&quot;__RefHeading___Toc1145_910990196&quot;&gt;&lt;/a&gt;Eficiência&lt;/h3&gt;
+
+&lt;p&gt;Seja racional e inteligente em tudo que fizer na sua vida. Procure estudar um certo tempo e fazer um pequeno intervalo então. Tenha sempre em mente de estar desempenhando tudo que fizer com a máxima eficiência, até chegar ao ponto de estar realmente agindo assim automaticamente. Assim isso passará a fazer parte da sua personalidade e será uma atitude. Será que isso é bom?&lt;/p&gt;
+
+&lt;p&gt;Me parece que fazer bem feito tudo que se faz na vida é algo importante. Caso chegue a se tornar alguém perfeccionista, isso me parece bom. Mas a maior regra que conheço é a do equilíbrio, então não exagere nem na eficiência, precisa estar sempre no controle para que atinja a maior produtividade.&lt;/p&gt;
+
+&lt;h3 class=&quot;western&quot;&gt;&lt;a name=&quot;__RefHeading___Toc1147_910990196&quot;&gt;&lt;/a&gt;Marcador de livros&lt;/h3&gt;
+
+&lt;p&gt;Lembre de usar um marcador de livros para ajudar você a ler, especialmente quando a linha é larga, as vezes da largura do livro. Um marcador ajuda.&lt;/p&gt;
+
+&lt;p&gt;Como marcador eu uso uma tira de papel em baixo da mão e vou descendo para facilitar que meus olhos não percam a linha onde estava.&lt;/p&gt;
+
+&lt;h3 class=&quot;western&quot;&gt;&lt;a name=&quot;__RefHeading___Toc1149_910990196&quot;&gt;&lt;/a&gt;Valor dos estudos&lt;/h3&gt;
+
+&lt;p&gt;Para dar ênfase aos seus estudos e valorizá-los você precisa entender que eles são muito importante para você. Como eles são importantes então tudo que você puder fazer para torná-lo mais eficientes você deve fazer e dar bastante atenção. Então se empenhe muito em ser inteligente e em ter uma super memória e mais do que isso se empenhe muito em estudar.&lt;/p&gt;
+
+&lt;p&gt;Se você estuda somente porque seus pais querem que estude, então dificilmente conseguirá fazer algo importante com seus estudos. Você precisa decidir por você mesmo, precisa entender que estudar é importante para a sua vida, especialmente para o seu futuro.&lt;/p&gt;
+
+&lt;p&gt;Empenho, dedicação e esforço.&lt;/p&gt;
+
+&lt;h3 class=&quot;western&quot;&gt;&lt;a name=&quot;__RefHeading___Toc1151_910990196&quot;&gt;&lt;/a&gt;Organização, outra ferramenta&lt;/h3&gt;
+
+&lt;p&gt;Seja organizado para evitar perda de tempo procurando coisas. Mantenha todos os cadernos, livros, lápis, canetas, etc, tudo organizado e no devido lugar sobre sua mesa de estudos. Lembre que deve organizar não somente sua mesa de estudos. Precisa organizar sua vida como um todo para que problemas externos não atrapalhem o bom desempenho dos seus estudos.&lt;/p&gt;
+
+&lt;h3 class=&quot;western&quot;&gt;&lt;a name=&quot;__RefHeading___Toc1153_910990196&quot;&gt;&lt;/a&gt;Programe seus estudos&lt;/h3&gt;
+
+&lt;p&gt;Faça sua programação de estudo. Tantas horas para certa matéria, tantas para outra e tenha tudo isso registrado para verificar se está cumprindo e se está te ajudando.&lt;/p&gt;
+
+&lt;p&gt;Não existe fórmula mágica para obter a máxima eficiência nos estudos&lt;/p&gt;
+
+&lt;p&gt;Não existe uma fórmula mágica para obter a máxima eficiência nos estudos. Existem algumas dicas e uma atitude proativa da sua parte e que faça um grande esforço. Infelizmente as escolas ainda não despertaram para ensinar os alunos a estudar de forma eficiente. Então você deve usar as informações que encontrar, usar sua inteligência, sua memória, sua organização, trocar ideias sobre isso com seus colegas, com seus professores, seus pais e conhecidos. Geralmente vamos com o tempo juntando informações e dicas que nos ajudam a estudar melhor e tudo vai ficando menos trabalhoso.&lt;/p&gt;
+
+&lt;p&gt;Precisa otimizar seu tempo, seus estudos e tudo que fizer na vida para conseguir obter o melhor resultado em seus estudos.&lt;/p&gt;
+
+&lt;h3 class=&quot;western&quot;&gt;&lt;a name=&quot;__RefHeading___Toc1155_910990196&quot;&gt;&lt;/a&gt;Gostar de desafios e resolver problemas&lt;/h3&gt;
+
+&lt;p&gt;Sua maturidade, seu controle emocional são muito importantes e também te ajudarão. Caso tenha tirado uma nota baixa e isso te faça sentir ruim. Lembre que problemas são para serem resolvidos e quando encarados de frente e resolvidos nos tornam ainda mais resistentes para os mesmos. Sentar, fazer anotações sobre o problema, se possível criar um desenho, anote tudo que pode fazer para melhorar ou resolver. Precisa de firmeza e de confiança para resolver problemas. Não vá jogar tudo fora. Você precisa aprender a gostar de encarar desafios, de enfrentar problemas. Não importa qual seja, vá em frente pois é a sua vida e você precisa resolver da melhor maneira possível e não de qualquer jeito. Lembre de ser racional neste momento, frio. Caso se envolva emocionalmente, caso fique chateado, caso fique triste, isso irá atrapalhar você, minar sua energia e impedirá que você veja as coisas da forma adequada. Acalme-se, confie em você e faça um planejamento adequado para superar o problema.&lt;/p&gt;
+
+&lt;h3 class=&quot;western&quot;&gt;&lt;a name=&quot;__RefHeading___Toc1157_910990196&quot;&gt;&lt;/a&gt;Gravar aulas&lt;/h3&gt;
+
+&lt;p&gt;Talvez seja útil gravar aulas que considere difíceis para ouvir algumas vezes quando chegar à casa. Avalie se vale a pena.&lt;/p&gt;
+
+&lt;h3 class=&quot;western&quot;&gt;&lt;a name=&quot;__RefHeading___Toc1159_910990196&quot;&gt;&lt;/a&gt;Cama é um lugar adequado para estudar&lt;/h3&gt;
+
+&lt;p&gt;Evite estudar na cama, prefira estudar numa mesa.&lt;/p&gt;
+
+&lt;h3 class=&quot;western&quot;&gt;&lt;a name=&quot;__RefHeading___Toc1161_910990196&quot;&gt;&lt;/a&gt;Distrações&lt;/h3&gt;
+
+&lt;p&gt;Celular, computador, somente para necessidades. Deixe de lado tudo que te distrai. Talvez usar um fone de ouvido te ajude, mesmo que não esteja ouvindo nada, mas para abafar ruídos e barulhos.&lt;/p&gt;
+
+&lt;h3 class=&quot;western&quot;&gt;&lt;a name=&quot;__RefHeading___Toc1163_910990196&quot;&gt;&lt;/a&gt;Marcador de cadernos&lt;/h3&gt;
+
+&lt;p&gt;Caso use apenas um único caderno para todas as matérias uma forma prática de procurar uma matéria é colocar um clipe em cada matéria, que ajuda a encontrar.&lt;/p&gt;
+
+&lt;p&gt;Seja racional, procure se alimentar de forma que te ajude, evitando alimentos que já sabe que não irão alimentar teu corpo com eficiência. Procure dormir bem e relaxar tanto quanto seu organismo precisa. Respeite os sinais do seu corpo. Se sentir sono é mais produtivo dormir, pois estudar com sono não terá grande rendimento.&lt;/p&gt;
+
+&lt;h3 class=&quot;western&quot;&gt;&lt;a name=&quot;__RefHeading___Toc1165_910990196&quot;&gt;&lt;/a&gt;Estudo é seu objetivo principal nesta fase da vida&lt;/h3&gt;
+
+&lt;p&gt;Faça exercícios físicos mas sem exagerar. Lembre que nesta fase da sua vida, seu objetivo principal são seus estudos.&lt;/p&gt;
+
+&lt;h3 class=&quot;western&quot;&gt;&lt;a name=&quot;__RefHeading___Toc1167_910990196&quot;&gt;&lt;/a&gt;Relaxe&lt;/h3&gt;
+
+&lt;p&gt;Aprenda a relaxar, especialmente quando se sentir ansioso e estressado. Pare, respire fundo e calmamente e vá inspirando e expirando até acalmar.&lt;/p&gt;
+
+&lt;h3 class=&quot;western&quot;&gt;&lt;a name=&quot;__RefHeading___Toc1169_910990196&quot;&gt;&lt;/a&gt;Formas eficientes e não eficientes de estudar&lt;/h3&gt;
+
+&lt;p&gt;Segundo uma pesquisa feita em 2013 na revista científica Psychological Science in the Public Interest:&lt;/p&gt;
+
+&lt;p&gt;- Grifar, efetuar resumos, ler novamente, mapas mentais não são muito produtivos&lt;/p&gt;
+
+&lt;p&gt;- Interrogação elaborativa, estudo intercalado (estudar também outras fontes) e auto explicação tem média produtividade&lt;/p&gt;
+
+&lt;p&gt;- Resolver exercícios e Estudo distribuído (distribuir o estudo em vários blocos) tem alta produtividade&lt;/p&gt;
+
+&lt;h3 class=&quot;western&quot;&gt;&lt;a name=&quot;__RefHeading___Toc1171_910990196&quot;&gt;&lt;/a&gt;Não existe uma técnica mágica&lt;/h3&gt;
+
+&lt;p&gt;Observação importante: Lembre-se de que estes indicativos acima reflete os resultados da pesquisa, porém cada pessoa tem suas próprias técnicas de estudo e não existe um método que seja a verdadeira bala de prata que te dará de brinde a máxima eficiência. Sem menosprezar a ciência, mas precisamos ter em mente que pesquisas científicas são importantes, mas também falham, pois são feitas por seres falhos. Leia-as, as estude mas com moderação, use o que considerar útil e descarte o restante.&lt;/p&gt;
+
+&lt;h3 class=&quot;western&quot;&gt;&lt;a name=&quot;__RefHeading___Toc1173_910990196&quot;&gt;&lt;/a&gt;Alguns Fatores que Influem na Máxima Eficiência&lt;/h3&gt;
+
+&lt;p&gt;Empenho - A meu ver o fator mais importante para se atingir a máxima eficiência é o empenho, o esforço e o trabalho/estudo sério. Parafraseando um dos maiores cientistas (Thomas Alva Edison) “A máxima eficiência é atingida com 1% de inteligência e 99% de empenho e estudo dedicado”.&lt;/p&gt;
+
+&lt;p&gt;Prestar atenção às aulas - Um fator que colabora com o empenho e demonstra o mesmo é prestar atenção às aulas. Isso ajuda muito e se prestar muito atenção e tirar todas as dúvidas que venham a aparecer na sala, a sua necessidade de estudo em cada será menor. Então procure todos os dias:&lt;/p&gt;
+
+&lt;p&gt;- Sentar na frente&lt;/p&gt;
+
+&lt;p&gt;- Dar a máxima atenção ao que o professor está explicando. Devore mesmo a aula. Lembre que está fazendo algo muito importante.&lt;/p&gt;
+
+&lt;p&gt;- Sempre, mas sempre mesmo, quando tiver alguma dúvida pergunte gentilmente ao professor para te explicar, pois não entendeu. Lembre que isso ajuda o professor, pois ele percebe que sua aula está sendo assistida e é importante para alguém. Também será importante para alguns colegas que porventura tiveram a mesma dúvida e não tiveram coragem de perguntar. Então fique atento, procure entender tudo, mas se não entender algo, por favor, pergunte.&lt;/p&gt;
+
+&lt;p&gt;Estudo em casa – Aqui fica a parte mais consistente do seu estudo. Se necessário estude muitas horas todos os dias. Quando sentir que está dominando melhor cada matérias, então poderá reduzir a quantidade de horas e talvez começar a estudar uma profissão, mas lembrando de manter seus estudos com a maior atenção. Lembre que para se tornar um aluno bom, que sente segurança e domina bem todas as matérias são necessários vários anos e com muito empenho. Não acontece no primeiro ano de estudo sério e nem talvez no segundo. Mas tudo depende também do seu empenho e inteligência.&lt;/p&gt;
+
+&lt;h3 class=&quot;western&quot;&gt;&lt;a name=&quot;__RefHeading___Toc1175_910990196&quot;&gt;&lt;/a&gt;Lei da Atração&lt;/h3&gt;
+
+&lt;p&gt;Conhecida por alguns como lei de causa e efeito ou lei do karma. Atualmente ela é super valorizada e até tornada mágica. Se assistir o vídeo O Segredo no Youtube talvez concorde comigo. Mas estou falando nela porque tem toda a lógica o fato de que quando você se empenha, dá tudo de si fazendo algo, planejando e executando da melhor forma que você consegue. Quando você age assim a probabilidade de sucesso é muito grande. Então lembre que você não pode garantir o sucesso mas pode se empenhar ao máximo para conseguir. Faça isso, faça bem feita a sua parte.&lt;/p&gt;
+
+&lt;h3 class=&quot;western&quot; style=&quot;page-break-before: always;&quot;&gt;&lt;a name=&quot;__RefHeading___Toc1177_910990196&quot;&gt;&lt;/a&gt; Alguns dos materiais de estudo mais importantes, na ordem&lt;/h3&gt;
+
+&lt;p&gt;- Os próprios livros didáticos/Aulas em sala&lt;/p&gt;
+
+&lt;p&gt;- Livros similares, do mesmo ano e assunto e ano (podem ser digitais)&lt;/p&gt;
+
+&lt;p&gt;- Tutoriais em texto: HTML (páginas), PDF, EPUB, etc&lt;/p&gt;
+
+&lt;p&gt;- Vídeo aulas&lt;/p&gt;
+
+&lt;p&gt;- Invente o seu :)&lt;/p&gt;
+
+&lt;p&gt;Parafraseando outro grande cientista (Isaac Newton) sobre a importância do estudo sério: “Se atingi a máxima eficiência em minha vida de cientista é porque estudei muito os grandes cientistas que vieram antes de mim”.&lt;/p&gt;
+
+&lt;h3 class=&quot;western&quot;&gt;&lt;a name=&quot;__RefHeading___Toc1179_910990196&quot;&gt;&lt;/a&gt;Curiosidade&lt;/h3&gt;
+
+&lt;p&gt;A curiosidade é uma característica de pessoas inteligentes, que observam detalhes e que se interessam em aprender coisas novas. Deve te ajudar ter curiosidade em aprender todas as matérias e conhecer de tudo.&lt;/p&gt;
+
+&lt;h3 class=&quot;western&quot;&gt;&lt;a name=&quot;__RefHeading___Toc1181_910990196&quot;&gt;&lt;/a&gt;Referências&lt;/h3&gt;
+
+&lt;p&gt;Observação: não testei todos os links abaixo, portanto seja criterioso e descarte os que não forem úteis e eficientes.&lt;/p&gt;
+
+&lt;p&gt;- O mínimo pra se tornar uma pessoa mais inteligente | Oi Seiiti Arata 34&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=0x4BT-LZP_M&quot;&gt;https://www.youtube.com/watch?v=0x4BT-LZP_M&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;- Como estudar com eficiência | Oi Seiiti Arata 36&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=lnQ8W1LllpI&quot;&gt;https://www.youtube.com/watch?v=lnQ8W1LllpI&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;- As 10 melhores técnicas de estudo, segundo a ciência (a #9 é a minha preferida)&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;https://mude.nu/estudo-10-melhores-formas/&quot;&gt;https://mude.nu/estudo-10-melhores-formas/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;- Como Fixar na Memória o Conteúdo Estudado - O Guia Completo&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;http://www.tudosobreconcursos.com/dicas/como-fixar-na-memoria-o-conteudo-estudado-o-guia-completo&quot;&gt;http://www.tudosobreconcursos.com/dicas/como-fixar-na-memoria-o-conteudo-estudado-o-guia-completo&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;- 7 dicas para estudar de forma eficiente&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;https://www.ead.com.br/ead/7-dicas-para-estudar-de-forma-eficiente.html&quot;&gt;https://www.ead.com.br/ead/7-dicas-para-estudar-de-forma-eficiente.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;b&gt;Porque algumas pessoas se dão bem na vida? Qual seuu segredo?&lt;/b&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;https://super.abril.com.br/ciencia/o-segredo-do-sucesso/&quot;&gt;&lt;span style=&quot;font-weight: normal;&quot;&gt;https://super.abril.com.br/ciencia/o-segredo-do-sucesso/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;b&gt;Sites de Estudos&lt;/b&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;https://brasilescola.uol.com.br/&quot;&gt;https://brasilescola.uol.com.br/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;https://www.matematicario.com.br/&quot;&gt;https://www.matematicario.com.br/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;https://www.soportugues.com.br/&quot;&gt;https://www.soportugues.com.br/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;https://canaldoensino.com.br/blog/16-sites-para-estudar-de-graca-para-concursos-publicos&quot;&gt;https://canaldoensino.com.br/blog/16-sites-para-estudar-de-graca-para-concursos-publicos&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;https://www.mundovestibular.com.br/&quot;&gt;https://www.mundovestibular.com.br/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;Provas e gabaritos do ENEM para baixar&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;https://vestibulandoweb.com.br/enem/vestibular-provas-enem.asp&quot;&gt;https://vestibulandoweb.com.br/enem/vestibular-provas-enem.asp&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;Conjugar verbos para você&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;http://linguistica.insite.com.br/mod_perl/conjugue&quot;&gt;http://linguistica.insite.com.br/mod_perl/conjugue&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;b&gt;Busca por livros acadêmicos&lt;/b&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;https://scholar.google.com.br/&quot;&gt;https://scholar.google.com.br/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;b&gt;Livros didáticos grátis&lt;/b&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; font-weight: normal; line-height: 100%;&quot;&gt;Muitos livros gratuitos - &lt;a href=&quot;http://www.dominiopublico.gov.br/pesquisa/PesquisaObraForm.jsp&quot;&gt;http://www.dominiopublico.gov.br/pesquisa/PesquisaObraForm.jsp&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;http://www.estudajovem.com.br/2013/03/livros-didaticos-gratis-em-pdf.html&quot;&gt;http://www.estudajovem.com.br/2013/03/livros-didaticos-gratis-em-pdf.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;https://projetomedicina.com.br/conteudo-exclusivo/colecao-passe-facil-no-enem/&quot;&gt;https://projetomedicina.com.br/conteudo-exclusivo/colecao-passe-facil-no-enem/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;https://viacarreira.com/apostilas-pre-vestibular-gratuitas-material-de-cursinho-em-pdf-215959/&quot;&gt;https://viacarreira.com/apostilas-pre-vestibular-gratuitas-material-de-cursinho-em-pdf-215959/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;https://foconoenem.com/apostila-enem-2016-pdf-download-gratis/&quot;&gt;https://foconoenem.com/apostila-enem-2016-pdf-download-gratis/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;https://pt.scribd.com/document/246238339/Caderno-Marista-Para-o-Enem-Matematica-e-Suas-Tecnologias-1&quot;&gt;https://pt.scribd.com/document/246238339/Caderno-Marista-Para-o-Enem-Matematica-e-Suas-Tecnologias-1&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;http://www.educadores.diaadia.pr.gov.br/arquivos/File/gabaritando_enem/2015/simulado_impresso_gabaritando_enem.pdf&quot;&gt;http://www.educadores.diaadia.pr.gov.br/arquivos/File/gabaritando_enem/2015/simulado_impresso_gabaritando_enem.pdf&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;http://www.ufjf.br/cursinho/files/2014/09/Material-revisional-iMPRESSAO.pdf&quot;&gt;http://www.ufjf.br/cursinho/files/2014/09/Material-revisional-iMPRESSAO.pdf&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;http://download.inep.gov.br/educacao_basica/enem/guia_participante/2016/manual_de_redacao_do_enem_2016.pdf&quot;&gt;http://download.inep.gov.br/educacao_basica/enem/guia_participante/2016/manual_de_redacao_do_enem_2016.pdf&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;https://catracalivre.com.br/geral/educacao-3/indicacao/baixe-gratuitamente-130-apostilas-para-estudar-para-o-enem/&quot;&gt;https://catracalivre.com.br/geral/educacao-3/indicacao/baixe-gratuitamente-130-apostilas-para-estudar-para-o-enem/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;http://portal.mec.gov.br/colecao-explorando-o-ensino-sp-3427598/volumes&quot;&gt;http://portal.mec.gov.br/colecao-explorando-o-ensino-sp-3427598/volumes&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;https://g1.globo.com/educacao/noticia/encceja-veja-material-de-estudo-apostilas-e-o-que-cai-na-prova-para-quem-quer-o-diploma-do-ensino-medio-ou-do-fundamental.ghtml&quot;&gt;https://g1.globo.com/educacao/noticia/encceja-veja-material-de-estudo-apostilas-e-o-que-cai-na-prova-para-quem-quer-o-diploma-do-ensino-medio-ou-do-fundamental.ghtml&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;http://portal.mec.gov.br/secretaria-de-regulacao-e-supervisao-da-educacao-superior-seres/194-secretarias-112877938/secad-educacao-continuada-223369541/13536-materiais-didaticos&quot;&gt;http://portal.mec.gov.br/secretaria-de-regulacao-e-supervisao-da-educacao-superior-seres/194-secretarias-112877938/secad-educacao-continuada-223369541/13536-materiais-didaticos&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;Entenda as 5 competências&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;http://foconoenem.com/guia-de-redacao-do-enem/&quot;&gt;http://foconoenem.com/guia-de-redacao-do-enem/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;Aplicativos sobre estudos, que podem ser úteis, mas avalie bem antes e use com moderação, pois&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;Três em cada quatro apps da Google Play possuem rastreadores, afirma estudo&lt;/b&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;https://play.google.com/store/apps/details?id=com.sandrobot.aprovado&amp;amp;hl=pt_BR&quot;&gt;https://play.google.com/store/apps/details?id=com.sandrobot.aprovado&amp;amp;hl=pt_BR&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;https://play.google.com/store/apps/details?id=br.com.passeidireto&amp;amp;hl=pt_BR&quot;&gt;https://play.google.com/store/apps/details?id=br.com.passeidireto&amp;amp;hl=pt_BR&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;https://play.google.com/store/apps/details?id=br.com.ftd.guiadeestudos&amp;amp;hl=pt_BR&quot;&gt;https://play.google.com/store/apps/details?id=br.com.ftd.guiadeestudos&amp;amp;hl=pt_BR&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;https://canaltech.com.br/android/aprenda-a-denunciar-aplicativos-na-google-play/&quot;&gt;https://canaltech.com.br/android/aprenda-a-denunciar-aplicativos-na-google-play/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;b&gt;Testes de QI e de raciocínio Online – para momentos de descanso&lt;/b&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;Descansar carregando pedra. :)&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;https://guiadoestudante.abril.com.br/estudo/aprenda-como-se-preparar-para-os-testes-de-raciocinio-logico/&quot;&gt;https://guiadoestudante.abril.com.br/estudo/aprenda-como-se-preparar-para-os-testes-de-raciocinio-logico/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;https://testedeqi.org/&quot;&gt;https://testedeqi.org/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;http://www.testesonline.com.br/fazer-teste-online/teste-de-raciocinio-logico&quot;&gt;http://www.testesonline.com.br/fazer-teste-online/teste-de-raciocinio-logico&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;https://pt.testsworld.net/teste-de-logica.html&quot;&gt;https://pt.testsworld.net/teste-de-logica.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;https://www.fatosdesconhecidos.com.br/resolva-estes-testes-de-raciocinio-logico-e-descubra-a-potencia-do-seu-cerebro/&quot;&gt;https://www.fatosdesconhecidos.com.br/resolva-estes-testes-de-raciocinio-logico-e-descubra-a-potencia-do-seu-cerebro/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;https://rachacuca.com.br/testes/&quot;&gt;https://rachacuca.com.br/testes/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;http://www.vestibular1.com.br/testes/testes-de-raciocinio/testes-de-raciocinio/&quot;&gt;http://www.vestibular1.com.br/testes/testes-de-raciocinio/testes-de-raciocinio/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;https://www.buzzfeed.com/raphaelevangelista/testes-de-raciocinio-que-parecem-simples-mas-vao-bugar?utm_term=.xljZJPPob#.mgPZMRRn6&quot;&gt;https://www.buzzfeed.com/raphaelevangelista/testes-de-raciocinio-que-parecem-simples-mas-vao-bugar?utm_term=.xljZJPPob#.mgPZMRRn6&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;https://www.shldirect.com/pt/example-questions/inductive-reasoning&quot;&gt;https://www.shldirect.com/pt/example-questions/inductive-reasoning&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;https://www.lumosity.com/&quot;&gt;https://www.lumosity.com/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;b&gt;Curiosidades&lt;/b&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;O site que advinha tudo - &lt;a href=&quot;http://pt.akinator.com/&quot;&gt;http://pt.akinator.com/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;Construa Gráficos de Funções usando o Google&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;http://www.prof-edigleyalexandre.com/2011/12/construa-graficos-de-funcoes.html&quot;&gt;http://www.prof-edigleyalexandre.com/2011/12/construa-graficos-de-funcoes.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;https://www.visiblebody.com/&quot;&gt;https://www.visiblebody.com/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;https://www.healthline.com/human-body-maps&quot;&gt;https://www.healthline.com/human-body-maps&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;https://www.solarsystemscope.com/&quot;&gt;https://www.solarsystemscope.com/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;Matemática multimídia - &lt;a href=&quot;http://m3.ime.unicamp.br/&quot;&gt;http://m3.ime.unicamp.br/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;http://sorisomail.com/partilha/74120.html&quot;&gt;http://sorisomail.com/partilha/74120.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;Criar caixas de papel ou papelão&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;http://www.templatemaker.nl/?lang=pt&quot;&gt;http://www.templatemaker.nl/?lang=pt&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;b&gt;Como melhorar a inteligência&lt;/b&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=qhoKo5YxzUE&quot;&gt;https://www.youtube.com/watch?v=qhoKo5YxzUE&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=oIBpPRvDsLE&quot;&gt;https://www.youtube.com/watch?v=oIBpPRvDsLE&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=q-1pfviGMRQ&quot;&gt;https://www.youtube.com/watch?v=q-1pfviGMRQ&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=v_OfAY5wzTQ&quot;&gt;https://www.youtube.com/watch?v=v_OfAY5wzTQ&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=XB_NM8U2cl0&quot;&gt;https://www.youtube.com/watch?v=XB_NM8U2cl0&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=WmNkQQaApWA&quot;&gt;https://www.youtube.com/watch?v=WmNkQQaApWA&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=kT9P7jLqdvw&quot;&gt;https://www.youtube.com/watch?v=kT9P7jLqdvw&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;b&gt;Apps&lt;/b&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;Android:&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;1 - Lumosity: &lt;a href=&quot;https://www.youtube.com/redirect?q=https%3A%2F%2Fgoo.gl%2FWuUfwu&amp;amp;event=video_description&amp;amp;v=b7nJjd6rQHg&amp;amp;redir_token=tzZAh3HH4SyCpfovHPIxvQ32NnV8MTUyMzE5MzE2MUAxNTIzMTA2NzYx&quot;&gt;https://goo.gl/WuUfwu&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;2 - Memorado: &lt;a href=&quot;https://www.youtube.com/redirect?q=https%3A%2F%2Fgoo.gl%2FH97fAA&amp;amp;event=video_description&amp;amp;v=b7nJjd6rQHg&amp;amp;redir_token=tzZAh3HH4SyCpfovHPIxvQ32NnV8MTUyMzE5MzE2MUAxNTIzMTA2NzYx&quot;&gt;https://goo.gl/H97fAA&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;3 - NeuroNation: &lt;a href=&quot;https://www.youtube.com/redirect?q=https%3A%2F%2Fgoo.gl%2FFbvADx&amp;amp;event=video_description&amp;amp;v=b7nJjd6rQHg&amp;amp;redir_token=tzZAh3HH4SyCpfovHPIxvQ32NnV8MTUyMzE5MzE2MUAxNTIzMTA2NzYx&quot;&gt;https://goo.gl/FbvADx&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;(Bônus Android) Elevate: &lt;a href=&quot;https://www.youtube.com/redirect?q=https%3A%2F%2Fgoo.gl%2FxdBA0T&amp;amp;event=video_description&amp;amp;v=b7nJjd6rQHg&amp;amp;redir_token=tzZAh3HH4SyCpfovHPIxvQ32NnV8MTUyMzE5MzE2MUAxNTIzMTA2NzYx&quot;&gt;https://goo.gl/xdBA0T&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;iOS:&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;1 - Lumosity: &lt;a href=&quot;https://www.youtube.com/redirect?q=https%3A%2F%2Fgoo.gl%2F69qkjF&amp;amp;event=video_description&amp;amp;v=b7nJjd6rQHg&amp;amp;redir_token=tzZAh3HH4SyCpfovHPIxvQ32NnV8MTUyMzE5MzE2MUAxNTIzMTA2NzYx&quot;&gt;https://goo.gl/69qkjF&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;2 - Memorado: &lt;a href=&quot;https://www.youtube.com/redirect?q=https%3A%2F%2Fgoo.gl%2FECqRTo&amp;amp;event=video_description&amp;amp;v=b7nJjd6rQHg&amp;amp;redir_token=tzZAh3HH4SyCpfovHPIxvQ32NnV8MTUyMzE5MzE2MUAxNTIzMTA2NzYx&quot;&gt;https://goo.gl/ECqRTo&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;3 - NeuroNation: &lt;a href=&quot;https://www.youtube.com/redirect?q=https%3A%2F%2Fgoo.gl%2FDMCYfh&amp;amp;event=video_description&amp;amp;v=b7nJjd6rQHg&amp;amp;redir_token=tzZAh3HH4SyCpfovHPIxvQ32NnV8MTUyMzE5MzE2MUAxNTIzMTA2NzYx&quot;&gt;https://goo.gl/DMCYfh&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;(Bônus iOS) Elevate: &lt;a href=&quot;https://goo.gl/PLge5M&quot;&gt;https://goo.gl/PLge5M&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;b&gt;Como melhorar a memória&lt;/b&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;http://www.cursou.com.br/desenvolvimento-pessoal/curso-memorizacao-gratis/&quot;&gt;http://www.cursou.com.br/desenvolvimento-pessoal/curso-memorizacao-gratis/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=_efWhnguZL8&quot;&gt;https://www.youtube.com/watch?v=_efWhnguZL8&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=21VySCp_7TE&quot;&gt;https://www.youtube.com/watch?v=21VySCp_7TE&lt;/a&gt; – 6 vídeos&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=VMS9gzWHQME&quot;&gt;https://www.youtube.com/watch?v=VMS9gzWHQME&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=zOcRjfoX2YE&quot;&gt;https://www.youtube.com/watch?v=zOcRjfoX2YE&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=RoNV140JucE&quot;&gt;https://www.youtube.com/watch?v=RoNV140JucE&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;b&gt;Músicas para melhorar a concentração nos estudos (caso goste do estilo)&lt;br /&gt;&lt;/b&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; font-weight: normal; line-height: 100%;&quot;&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=Ao6mIoBuQCA&quot;&gt;https://www.youtube.com/watch?v=Ao6mIoBuQCA&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;b&gt;Softwares que podem ser úteis&lt;/b&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; font-weight: normal; line-height: 100%;&quot;&gt;GeoGebra - &lt;a href=&quot;https://www.geogebra.org/&quot;&gt;https://www.geogebra.org/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;b&gt;Sites para tirar dúvidas&lt;/b&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; font-weight: normal; line-height: 100%;&quot;&gt;&lt;a href=&quot;http://www.ajudamatematica.com/viewtopic.php?f=98&amp;amp;t=117&quot;&gt;http://www.ajudamatematica.com/viewtopic.php?f=98&amp;amp;t=117&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; font-weight: normal; line-height: 100%;&quot;&gt;&lt;a href=&quot;http://www.zoomdigital.com.br/site-resolve-sua-licao-de-matematica/&quot;&gt;http://www.zoomdigital.com.br/site-resolve-sua-licao-de-matematica/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; font-weight: normal; line-height: 100%;&quot;&gt;&lt;a href=&quot;http://www.mat.ufrgs.br/~portosil/consulta.html&quot;&gt;http://www.mat.ufrgs.br/~portosil/consulta.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; font-weight: normal; line-height: 100%;&quot;&gt;Trabalhos escolares prontos - &lt;a href=&quot;https://www.coladaweb.com/&quot;&gt;https://www.coladaweb.com/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; font-weight: normal; line-height: 100%;&quot;&gt; &lt;/p&gt;</summary>
+		<content type="html">&lt;h4 style=&quot;text-align: left;&quot; align=&quot;center&quot;&gt;Dicas, Reflexões e Links úteis&lt;/h4&gt;
+
+&lt;div id=&quot;Sumário1&quot; dir=&quot;ltr&quot;&gt;
+
+&lt;div id=&quot;Sumário1_Head&quot; dir=&quot;ltr&quot;&gt;
+
+&lt;p&gt;&lt;strong&gt;Sumário&lt;/strong&gt;&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://backup/portal/#__RefHeading___Toc1125_910990196&quot;&gt;Grande Quantidade de Matéria&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://backup/portal/#__RefHeading___Toc1127_910990196&quot;&gt;Encarar Desafios&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://backup/portal/#__RefHeading___Toc1129_910990196&quot;&gt;Estudar duro ou se divertir? Decida&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://backup/portal/#__RefHeading___Toc1236_2065335795&quot;&gt;Seja criterioso com seu alimento&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://backup/portal/#__RefHeading___Toc1131_910990196&quot;&gt;Procurar emprego ou ser procurado por ele?&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://backup/portal/#__RefHeading___Toc1133_910990196&quot;&gt;Não existe nada perfeito e isso é muito bom&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://backup/portal/#__RefHeading___Toc1135_910990196&quot;&gt;Estude de forma equilibrada todas as matérias&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://backup/portal/#__RefHeading___Toc1137_910990196&quot;&gt;Inteligência, uma ótima aliada&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://backup/portal/#__RefHeading___Toc1139_910990196&quot;&gt;Outra grande aliada, a Memória&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://backup/portal/#__RefHeading___Toc1141_910990196&quot;&gt;Você tem muitos recursos&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://backup/portal/#__RefHeading___Toc1143_910990196&quot;&gt;Sempre tire suas dúvidas em sala&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://backup/portal/#__RefHeading___Toc1145_910990196&quot;&gt;Eficiência&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://backup/portal/#__RefHeading___Toc1147_910990196&quot;&gt;Marcador de livros&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://backup/portal/#__RefHeading___Toc1149_910990196&quot;&gt;Valor dos estudos&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://backup/portal/#__RefHeading___Toc1151_910990196&quot;&gt;Organização, oura ferramenta&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://backup/portal/#__RefHeading___Toc1153_910990196&quot;&gt;Programe seus estudos&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://backup/portal/#__RefHeading___Toc1155_910990196&quot;&gt;Gostar de desafios e resolver problemas&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://backup/portal/#__RefHeading___Toc1157_910990196&quot;&gt;Gravar aulas&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://backup/portal/#__RefHeading___Toc1159_910990196&quot;&gt;Cama não é um lugar adequado para estudar&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://backup/portal/#__RefHeading___Toc1161_910990196&quot;&gt;Distrações&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://backup/portal/#__RefHeading___Toc1163_910990196&quot;&gt;Marcador de cadernos&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://backup/portal/#__RefHeading___Toc1165_910990196&quot;&gt;Estudo é seu objetivo principal nesta fase da vida&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://backup/portal/#__RefHeading___Toc1167_910990196&quot;&gt;Relaxe&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://backup/portal/#__RefHeading___Toc1169_910990196&quot;&gt;Formas eficientes e não eficientes de estudar&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://backup/portal/#__RefHeading___Toc1171_910990196&quot;&gt;Não existe uma técnica mágica&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://backup/portal/#__RefHeading___Toc1173_910990196&quot;&gt;Alguns Fatores que Influem na Máxima Eficiência&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://backup/portal/#__RefHeading___Toc1175_910990196&quot;&gt;Lei da Atração&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://backup/portal/#__RefHeading___Toc1177_910990196&quot;&gt;Alguns dos materiais de estudo mais importantes, na ordem&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://backup/portal/#__RefHeading___Toc1179_910990196&quot;&gt;Curiosidade&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://backup/portal/#__RefHeading___Toc1181_910990196&quot;&gt;Referências&lt;/a&gt;&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;Veja que estudar com eficiência tem um peso e uma sugestão enquanto estudar com a Máxima eficiência é outra coisa.&lt;/p&gt;
+
+&lt;p&gt;Para maior eficiência a concentração ajuda e muito. Veja isso:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.primecursos.com.br/blog/prime-cursos/como-melhorar-sua-concentracao-com-a-neurociencia/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;https://www.primecursos.com.br/blog/prime-cursos/como-melhorar-sua-concentracao-com-a-neurociencia/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;O título é meio provocativo, mas é sincero. Mesmo que aqui você não vá receber todas as informações necessárias para estudar com a máxima eficiência (e acredito que em nenhum lugar), ainda assim esta é a ideia, te passar algumas dicas sobre como tornar seus estudos mais eficientes e te estimulara para que você se empenhe para conseguir sempre a máxima eficiência possível em seus estudos. Isso você pode fazer e deve, inclusive em tudo na sua vida.&lt;/p&gt;
+
+&lt;p&gt;Este artigo é fruto de uma pesquisa e de alguma reflexão e experiência própria.&lt;/p&gt;
+
+&lt;p&gt;O resultado da pesquisa não me levou a algo muito importante a se fazer para tornar o estudo mais eficiente, mas encontrei algumas boas recomendações.&lt;/p&gt;
+
+&lt;h3&gt;&lt;a name=&quot;__RefHeading___Toc1125_910990196&quot;&gt;&lt;/a&gt;Grande Quantidade de Matéria&lt;/h3&gt;
+
+&lt;p&gt;Como a quantidade de matéria a ser estudada é muito grande para o tempo que você tem, então você precisa aprender a estudar da forma mais eficiente possível, para assim conseguir aprender todas as matérias e ser aprovado(a) em todas.&lt;/p&gt;
+
+&lt;h3 class=&quot;western&quot;&gt;&lt;a name=&quot;__RefHeading___Toc1127_910990196&quot;&gt;&lt;/a&gt;&lt;span style=&quot;font-family: Liberation\ Sans, sans-serif;&quot;&gt;&lt;span style=&quot;font-size: large;&quot;&gt;&lt;b&gt;Encarar Desafios&lt;/b&gt;&lt;/span&gt;&lt;/span&gt;&lt;/h3&gt;
+
+&lt;p&gt;Não é uma tarefa fácil, de maneira alguma. Você precisa estar inteiramente consciente disso, que será uma tarefa árdua. Mas vamos começar falando que para você ser bem sucedido em teus estudos precisa assumir uma atitude de quem encara desafios, de quem está disposto a fazer um grande sacrifício em nome de uma grande causa. Mas isso não significa que precisa ser algo desagradável. Você precisa se estimular, se sentir desafiado por todas as dificuldades que o estudo apresenta. Tem mais, isso serve não somente para seus estudos, mas para todas as dificuldades que tenha na sua vida. Encarar desafios, estudá-los de cabeça fria, de forma organizada e racional é uma forma muito eficiente de vencer os desafios. E dependendo da forma como você encarar isso poderá ser algo muito agradável e importante para você.&lt;/p&gt;
+
+&lt;h3 class=&quot;western&quot;&gt;&lt;a name=&quot;__RefHeading___Toc1129_910990196&quot;&gt;&lt;/a&gt;&lt;span style=&quot;font-family: Liberation\ Sans, sans-serif;&quot;&gt;&lt;span style=&quot;font-size: large;&quot;&gt;&lt;b&gt;Estudar duro ou se divertir? Decida&lt;/b&gt;&lt;/span&gt;&lt;/span&gt;&lt;/h3&gt;
+
+&lt;p&gt;Você não é obrigado a fazer todo este sacrifício, a dedicar muito tempo da sua vida a estudar. Talvez seja mais interessante chutar o pau da barraca, se juntar a vários colegas que levam suas vidas apenas a se divertir, a se encontrarem, usar Facebook, Whatsapp, Instagran, assistir filmes, vídeos, jogar e muito mais atividades divertidas e atraentes. Mas é interessante refletir com grande seriedade e lembrar que eles não estão fazendo muito pelo futuro, para conseguir uma profissão mais rentável e que valorize suas vidas. Precisarão estar competindo por empregos que pagam apenas um salário mínimo. Enquanto que quem estuda muito, se empenha para aprender de tudo e ser aprovado inclusive por média, quem faz assim está se preparando melhor para abraçar uma profissão rentável e ser realmente um especialista, alguém valorizado no mercado de trabalho.&lt;/p&gt;
+
+&lt;h3 class=&quot;western&quot;&gt;&lt;a name=&quot;__RefHeading___Toc1236_2065335795&quot;&gt;&lt;/a&gt;Seja criterioso com seu alimento&lt;/h3&gt;
+
+&lt;p&gt;E aqui não me refiro ao alimento que nutre seu corpo, mas ao que nutre sua mente e sua personalidade. Muito alimento tem sabor e enche a barriga mas não nutre o corpo, não aumenta sua energia nem a mantém. Seja criterioso com os filmes que assiste, pois eles podem ajudar sua inteligência, seu caráter, seus conhecimentos ou atrapalhar tudo isso. Assim como seus amigos, os jogos que joga, etc.&lt;/p&gt;
+
+&lt;h3 class=&quot;western&quot;&gt;&lt;a name=&quot;__RefHeading___Toc1131_910990196&quot;&gt;&lt;/a&gt;Procurar emprego ou ser procurado por ele?&lt;/h3&gt;
+
+&lt;p&gt;Me parece que o maior objetivo deve ser o de ser alguém que domina muito um conhecimento, uma profissão, que leve o trabalho a procurar você, que leve as empresas a procurarem alguém como você e não você procurar trabalho. Veja que isto ocorre em muitas profissões, onde os melhores profissionais não saem procurando trabalho mas as pessoas os procuram, as empresas os procuram e valorizam o que sabem fazer e como fazem.&lt;/p&gt;
+
+&lt;h3 class=&quot;western&quot;&gt;&lt;a name=&quot;__RefHeading___Toc1133_910990196&quot;&gt;&lt;/a&gt;Não existe nada perfeito e isso é muito bom&lt;/h3&gt;
+
+&lt;p&gt;Devo começar dizendo que não existe nada perfeito no mundo e isso tem uma enorme vantagem: então tudo pode ser melhorado, pode ser feito com mais simplicidade, pode ser otimizado. É bom lembrar disso quando tiver um problema que está te dando trabalho. Pesquise em outros livros, veja outros exemplos parecidos e procure então outras formas de resolver. Não empanque em uma ideia e fique em-burra-do nela. Procure alternativas. Por outro lado não é produtivo ficar melhorando algo indefinidamente. Precisamos ter consciência do que fazemos e confiança para perceber quando está bom.&lt;/p&gt;
+
+&lt;h3 class=&quot;western&quot;&gt;&lt;a name=&quot;__RefHeading___Toc1135_910990196&quot;&gt;&lt;/a&gt;Estude de forma equilibrada todas as matérias&lt;/h3&gt;
+
+&lt;p&gt;Como você precisa aprender e passar em todas as matérias, talvez seja importante estudar mais as matérias nas quais você tem nota baixa. As que tem notas melhores podem ficar em segundo plano, pois é importante tirar boas notas e ser aprovado em todas as matérias. Não pode desprezar nenhuma. Caso sempre estude mais as que mais gosta o que vai acontecer? As que estuda menos terá notas ainda menores e as que estuda mais notas ainda melhores. Como precisa passar em todas então procure ficar atento e equilibrar seus estudos para ter as notas equilibradas.&lt;/p&gt;
+
+&lt;h3 class=&quot;western&quot;&gt;&lt;a name=&quot;__RefHeading___Toc1137_910990196&quot;&gt;&lt;/a&gt;Inteligência, uma ótima aliada&lt;/h3&gt;
+
+&lt;p&gt;Uma maravilhosa ferramenta que existe e que pode e deve ser melhorada é a inteligência.&lt;/p&gt;
+
+&lt;p&gt;Para melhorar precisamos primeiro confiar que temos que somos capazes de aumentar. Confiando então procuraremos ficar atentos ao assunto e procuremos fazer cada coisa de forma mais bem feita e assim criar uma verdadeira atitude, algo que se torne uma característica nossa, algo que estará sempre ao nosso lado, conosco. Esta atitude de caprichar, de aceitar desafios de estimular sua inteligências com problemas reais e com problemas dos estudos. Existem livros com testes de raciocínio e inteligência. Existem livros com testes de QI (Quociente de Inteligência), que ma aprece não medem inteligência mas podem estimular o raciocínio lógico, o raciocínio matemático e outras áreas. Mas é muito importante salientar que a inteligência somente será uma aliada se você se empenhar muito nos seus estudos. A inteligência sozinha não vale muita coisa, mas aliada ao esforço sério e estudo árduo então teremos uma grande aliada.&lt;/p&gt;
+
+&lt;p&gt;Você precisa aprender a raciocinar usando a lógica, para que consiga aprender com mais eficiência. Algumas pessoas alimentam ideias que não são coerentes, que não são lógicas, que são meio ou muito fantasiosas e mágicas. Precisamos ter os “pés no chão” e procurar raciocinar com clareza, sem fantasias. Assim conseguiremos ter um maior rendimento nos estudos e na vida.&lt;/p&gt;
+
+&lt;h3 class=&quot;western&quot;&gt;&lt;a name=&quot;__RefHeading___Toc1139_910990196&quot;&gt;&lt;/a&gt;Outra grande aliada, a Memória&lt;/h3&gt;
+
+&lt;p&gt;Outra grande ferramenta e auxiliar da inteligência é a memória. Todos nós temos a capacidade de memorizar, mas precisamos melhorar a memória que temos. Para isso também precisamos confiar que poderemos aumentar e que nossa memória será melhor e mais útil com o tempo, com os exercícios e com a confiança depositada nela. Veja como se perde tempo fazendo algo várias vezes quando não valorizamos a nossa memória. Você vai sair de casa e mal abre a porta você volta por que esqueceu de algo. Você tem a responsabilidade de mudar isso. Se empenhe em fortalecer esta sua aliada.&lt;/p&gt;
+
+&lt;p&gt;Para que aumentemos nossa inteligência e nossa memória precisamos não apenas confiar que o faremos, mas querer muito, querer com todas as nossas forças, usando tudo ao nosso alcance para conseguir isso. Lembre que sendo alguém mais inteligente e com melhor memória você será mais bem sucedido não somente nos estudos mas em tudo que fizer na vida. Então tenha sempre estas duas ferramentas em mente e em cada situação que possa usar para conseguir exercite.&lt;/p&gt;
+
+&lt;h3 class=&quot;western&quot;&gt;&lt;a name=&quot;__RefHeading___Toc1141_910990196&quot;&gt;&lt;/a&gt;Você tem muitos recursos&lt;/h3&gt;
+
+&lt;p&gt;Lembre que você tem vários outros recursos importantes que poderão te ajudar nos estudos, confiança, força de vontade, controle emocional, disciplina, organização, etc&lt;/p&gt;
+
+&lt;h3 class=&quot;western&quot;&gt;&lt;a name=&quot;__RefHeading___Toc1143_910990196&quot;&gt;&lt;/a&gt;Sempre tire suas dúvidas em sala&lt;/h3&gt;
+
+&lt;p&gt;Se interessar pra valer. Dormir cedo e pelo menos 8 horas por noite. Acordar cedo e sentar na frente. Prestar a máxima atenção às aulas e realmente manter interesse, sempre lembrando de perguntar caso não tenha entendido. Nunca tenha vergonha de perguntar algo. Você está ali é pra isso e o professor também. Tem mais, geralmente o professor gosta quando alguém pergunta, pois valoriza sua aula e permite que ele explique de outra forma e melhor, possibilitando que outros colegas também compreendam.&lt;/p&gt;
+
+&lt;h3 class=&quot;western&quot;&gt;&lt;a name=&quot;__RefHeading___Toc1145_910990196&quot;&gt;&lt;/a&gt;Eficiência&lt;/h3&gt;
+
+&lt;p&gt;Seja racional e inteligente em tudo que fizer na sua vida. Procure estudar um certo tempo e fazer um pequeno intervalo então. Tenha sempre em mente de estar desempenhando tudo que fizer com a máxima eficiência, até chegar ao ponto de estar realmente agindo assim automaticamente. Assim isso passará a fazer parte da sua personalidade e será uma atitude. Será que isso é bom?&lt;/p&gt;
+
+&lt;p&gt;Me parece que fazer bem feito tudo que se faz na vida é algo importante. Caso chegue a se tornar alguém perfeccionista, isso me parece bom. Mas a maior regra que conheço é a do equilíbrio, então não exagere nem na eficiência, precisa estar sempre no controle para que atinja a maior produtividade.&lt;/p&gt;
+
+&lt;h3 class=&quot;western&quot;&gt;&lt;a name=&quot;__RefHeading___Toc1147_910990196&quot;&gt;&lt;/a&gt;Marcador de livros&lt;/h3&gt;
+
+&lt;p&gt;Lembre de usar um marcador de livros para ajudar você a ler, especialmente quando a linha é larga, as vezes da largura do livro. Um marcador ajuda.&lt;/p&gt;
+
+&lt;p&gt;Como marcador eu uso uma tira de papel em baixo da mão e vou descendo para facilitar que meus olhos não percam a linha onde estava.&lt;/p&gt;
+
+&lt;h3 class=&quot;western&quot;&gt;&lt;a name=&quot;__RefHeading___Toc1149_910990196&quot;&gt;&lt;/a&gt;Valor dos estudos&lt;/h3&gt;
+
+&lt;p&gt;Para dar ênfase aos seus estudos e valorizá-los você precisa entender que eles são muito importante para você. Como eles são importantes então tudo que você puder fazer para torná-lo mais eficientes você deve fazer e dar bastante atenção. Então se empenhe muito em ser inteligente e em ter uma super memória e mais do que isso se empenhe muito em estudar.&lt;/p&gt;
+
+&lt;p&gt;Se você estuda somente porque seus pais querem que estude, então dificilmente conseguirá fazer algo importante com seus estudos. Você precisa decidir por você mesmo, precisa entender que estudar é importante para a sua vida, especialmente para o seu futuro.&lt;/p&gt;
+
+&lt;p&gt;Empenho, dedicação e esforço.&lt;/p&gt;
+
+&lt;h3 class=&quot;western&quot;&gt;&lt;a name=&quot;__RefHeading___Toc1151_910990196&quot;&gt;&lt;/a&gt;Organização, outra ferramenta&lt;/h3&gt;
+
+&lt;p&gt;Seja organizado para evitar perda de tempo procurando coisas. Mantenha todos os cadernos, livros, lápis, canetas, etc, tudo organizado e no devido lugar sobre sua mesa de estudos. Lembre que deve organizar não somente sua mesa de estudos. Precisa organizar sua vida como um todo para que problemas externos não atrapalhem o bom desempenho dos seus estudos.&lt;/p&gt;
+
+&lt;h3 class=&quot;western&quot;&gt;&lt;a name=&quot;__RefHeading___Toc1153_910990196&quot;&gt;&lt;/a&gt;Programe seus estudos&lt;/h3&gt;
+
+&lt;p&gt;Faça sua programação de estudo. Tantas horas para certa matéria, tantas para outra e tenha tudo isso registrado para verificar se está cumprindo e se está te ajudando.&lt;/p&gt;
+
+&lt;p&gt;Não existe fórmula mágica para obter a máxima eficiência nos estudos&lt;/p&gt;
+
+&lt;p&gt;Não existe uma fórmula mágica para obter a máxima eficiência nos estudos. Existem algumas dicas e uma atitude proativa da sua parte e que faça um grande esforço. Infelizmente as escolas ainda não despertaram para ensinar os alunos a estudar de forma eficiente. Então você deve usar as informações que encontrar, usar sua inteligência, sua memória, sua organização, trocar ideias sobre isso com seus colegas, com seus professores, seus pais e conhecidos. Geralmente vamos com o tempo juntando informações e dicas que nos ajudam a estudar melhor e tudo vai ficando menos trabalhoso.&lt;/p&gt;
+
+&lt;p&gt;Precisa otimizar seu tempo, seus estudos e tudo que fizer na vida para conseguir obter o melhor resultado em seus estudos.&lt;/p&gt;
+
+&lt;h3 class=&quot;western&quot;&gt;&lt;a name=&quot;__RefHeading___Toc1155_910990196&quot;&gt;&lt;/a&gt;Gostar de desafios e resolver problemas&lt;/h3&gt;
+
+&lt;p&gt;Sua maturidade, seu controle emocional são muito importantes e também te ajudarão. Caso tenha tirado uma nota baixa e isso te faça sentir ruim. Lembre que problemas são para serem resolvidos e quando encarados de frente e resolvidos nos tornam ainda mais resistentes para os mesmos. Sentar, fazer anotações sobre o problema, se possível criar um desenho, anote tudo que pode fazer para melhorar ou resolver. Precisa de firmeza e de confiança para resolver problemas. Não vá jogar tudo fora. Você precisa aprender a gostar de encarar desafios, de enfrentar problemas. Não importa qual seja, vá em frente pois é a sua vida e você precisa resolver da melhor maneira possível e não de qualquer jeito. Lembre de ser racional neste momento, frio. Caso se envolva emocionalmente, caso fique chateado, caso fique triste, isso irá atrapalhar você, minar sua energia e impedirá que você veja as coisas da forma adequada. Acalme-se, confie em você e faça um planejamento adequado para superar o problema.&lt;/p&gt;
+
+&lt;h3 class=&quot;western&quot;&gt;&lt;a name=&quot;__RefHeading___Toc1157_910990196&quot;&gt;&lt;/a&gt;Gravar aulas&lt;/h3&gt;
+
+&lt;p&gt;Talvez seja útil gravar aulas que considere difíceis para ouvir algumas vezes quando chegar à casa. Avalie se vale a pena.&lt;/p&gt;
+
+&lt;h3 class=&quot;western&quot;&gt;&lt;a name=&quot;__RefHeading___Toc1159_910990196&quot;&gt;&lt;/a&gt;Cama é um lugar adequado para estudar&lt;/h3&gt;
+
+&lt;p&gt;Evite estudar na cama, prefira estudar numa mesa.&lt;/p&gt;
+
+&lt;h3 class=&quot;western&quot;&gt;&lt;a name=&quot;__RefHeading___Toc1161_910990196&quot;&gt;&lt;/a&gt;Distrações&lt;/h3&gt;
+
+&lt;p&gt;Celular, computador, somente para necessidades. Deixe de lado tudo que te distrai. Talvez usar um fone de ouvido te ajude, mesmo que não esteja ouvindo nada, mas para abafar ruídos e barulhos.&lt;/p&gt;
+
+&lt;h3 class=&quot;western&quot;&gt;&lt;a name=&quot;__RefHeading___Toc1163_910990196&quot;&gt;&lt;/a&gt;Marcador de cadernos&lt;/h3&gt;
+
+&lt;p&gt;Caso use apenas um único caderno para todas as matérias uma forma prática de procurar uma matéria é colocar um clipe em cada matéria, que ajuda a encontrar.&lt;/p&gt;
+
+&lt;p&gt;Seja racional, procure se alimentar de forma que te ajude, evitando alimentos que já sabe que não irão alimentar teu corpo com eficiência. Procure dormir bem e relaxar tanto quanto seu organismo precisa. Respeite os sinais do seu corpo. Se sentir sono é mais produtivo dormir, pois estudar com sono não terá grande rendimento.&lt;/p&gt;
+
+&lt;h3 class=&quot;western&quot;&gt;&lt;a name=&quot;__RefHeading___Toc1165_910990196&quot;&gt;&lt;/a&gt;Estudo é seu objetivo principal nesta fase da vida&lt;/h3&gt;
+
+&lt;p&gt;Faça exercícios físicos mas sem exagerar. Lembre que nesta fase da sua vida, seu objetivo principal são seus estudos.&lt;/p&gt;
+
+&lt;h3 class=&quot;western&quot;&gt;&lt;a name=&quot;__RefHeading___Toc1167_910990196&quot;&gt;&lt;/a&gt;Relaxe&lt;/h3&gt;
+
+&lt;p&gt;Aprenda a relaxar, especialmente quando se sentir ansioso e estressado. Pare, respire fundo e calmamente e vá inspirando e expirando até acalmar.&lt;/p&gt;
+
+&lt;h3 class=&quot;western&quot;&gt;&lt;a name=&quot;__RefHeading___Toc1169_910990196&quot;&gt;&lt;/a&gt;Formas eficientes e não eficientes de estudar&lt;/h3&gt;
+
+&lt;p&gt;Segundo uma pesquisa feita em 2013 na revista científica Psychological Science in the Public Interest:&lt;/p&gt;
+
+&lt;p&gt;- Grifar, efetuar resumos, ler novamente, mapas mentais não são muito produtivos&lt;/p&gt;
+
+&lt;p&gt;- Interrogação elaborativa, estudo intercalado (estudar também outras fontes) e auto explicação tem média produtividade&lt;/p&gt;
+
+&lt;p&gt;- Resolver exercícios e Estudo distribuído (distribuir o estudo em vários blocos) tem alta produtividade&lt;/p&gt;
+
+&lt;h3 class=&quot;western&quot;&gt;&lt;a name=&quot;__RefHeading___Toc1171_910990196&quot;&gt;&lt;/a&gt;Não existe uma técnica mágica&lt;/h3&gt;
+
+&lt;p&gt;Observação importante: Lembre-se de que estes indicativos acima reflete os resultados da pesquisa, porém cada pessoa tem suas próprias técnicas de estudo e não existe um método que seja a verdadeira bala de prata que te dará de brinde a máxima eficiência. Sem menosprezar a ciência, mas precisamos ter em mente que pesquisas científicas são importantes, mas também falham, pois são feitas por seres falhos. Leia-as, as estude mas com moderação, use o que considerar útil e descarte o restante.&lt;/p&gt;
+
+&lt;h3 class=&quot;western&quot;&gt;&lt;a name=&quot;__RefHeading___Toc1173_910990196&quot;&gt;&lt;/a&gt;Alguns Fatores que Influem na Máxima Eficiência&lt;/h3&gt;
+
+&lt;p&gt;Empenho - A meu ver o fator mais importante para se atingir a máxima eficiência é o empenho, o esforço e o trabalho/estudo sério. Parafraseando um dos maiores cientistas (Thomas Alva Edison) “A máxima eficiência é atingida com 1% de inteligência e 99% de empenho e estudo dedicado”.&lt;/p&gt;
+
+&lt;p&gt;Prestar atenção às aulas - Um fator que colabora com o empenho e demonstra o mesmo é prestar atenção às aulas. Isso ajuda muito e se prestar muito atenção e tirar todas as dúvidas que venham a aparecer na sala, a sua necessidade de estudo em cada será menor. Então procure todos os dias:&lt;/p&gt;
+
+&lt;p&gt;- Sentar na frente&lt;/p&gt;
+
+&lt;p&gt;- Dar a máxima atenção ao que o professor está explicando. Devore mesmo a aula. Lembre que está fazendo algo muito importante.&lt;/p&gt;
+
+&lt;p&gt;- Sempre, mas sempre mesmo, quando tiver alguma dúvida pergunte gentilmente ao professor para te explicar, pois não entendeu. Lembre que isso ajuda o professor, pois ele percebe que sua aula está sendo assistida e é importante para alguém. Também será importante para alguns colegas que porventura tiveram a mesma dúvida e não tiveram coragem de perguntar. Então fique atento, procure entender tudo, mas se não entender algo, por favor, pergunte.&lt;/p&gt;
+
+&lt;p&gt;Estudo em casa – Aqui fica a parte mais consistente do seu estudo. Se necessário estude muitas horas todos os dias. Quando sentir que está dominando melhor cada matérias, então poderá reduzir a quantidade de horas e talvez começar a estudar uma profissão, mas lembrando de manter seus estudos com a maior atenção. Lembre que para se tornar um aluno bom, que sente segurança e domina bem todas as matérias são necessários vários anos e com muito empenho. Não acontece no primeiro ano de estudo sério e nem talvez no segundo. Mas tudo depende também do seu empenho e inteligência.&lt;/p&gt;
+
+&lt;h3 class=&quot;western&quot;&gt;&lt;a name=&quot;__RefHeading___Toc1175_910990196&quot;&gt;&lt;/a&gt;Lei da Atração&lt;/h3&gt;
+
+&lt;p&gt;Conhecida por alguns como lei de causa e efeito ou lei do karma. Atualmente ela é super valorizada e até tornada mágica. Se assistir o vídeo O Segredo no Youtube talvez concorde comigo. Mas estou falando nela porque tem toda a lógica o fato de que quando você se empenha, dá tudo de si fazendo algo, planejando e executando da melhor forma que você consegue. Quando você age assim a probabilidade de sucesso é muito grande. Então lembre que você não pode garantir o sucesso mas pode se empenhar ao máximo para conseguir. Faça isso, faça bem feita a sua parte.&lt;/p&gt;
+
+&lt;h3 class=&quot;western&quot; style=&quot;page-break-before: always;&quot;&gt;&lt;a name=&quot;__RefHeading___Toc1177_910990196&quot;&gt;&lt;/a&gt; Alguns dos materiais de estudo mais importantes, na ordem&lt;/h3&gt;
+
+&lt;p&gt;- Os próprios livros didáticos/Aulas em sala&lt;/p&gt;
+
+&lt;p&gt;- Livros similares, do mesmo ano e assunto e ano (podem ser digitais)&lt;/p&gt;
+
+&lt;p&gt;- Tutoriais em texto: HTML (páginas), PDF, EPUB, etc&lt;/p&gt;
+
+&lt;p&gt;- Vídeo aulas&lt;/p&gt;
+
+&lt;p&gt;- Invente o seu :)&lt;/p&gt;
+
+&lt;p&gt;Parafraseando outro grande cientista (Isaac Newton) sobre a importância do estudo sério: “Se atingi a máxima eficiência em minha vida de cientista é porque estudei muito os grandes cientistas que vieram antes de mim”.&lt;/p&gt;
+
+&lt;h3 class=&quot;western&quot;&gt;&lt;a name=&quot;__RefHeading___Toc1179_910990196&quot;&gt;&lt;/a&gt;Curiosidade&lt;/h3&gt;
+
+&lt;p&gt;A curiosidade é uma característica de pessoas inteligentes, que observam detalhes e que se interessam em aprender coisas novas. Deve te ajudar ter curiosidade em aprender todas as matérias e conhecer de tudo.&lt;/p&gt;
+
+&lt;h3 class=&quot;western&quot;&gt;&lt;a name=&quot;__RefHeading___Toc1181_910990196&quot;&gt;&lt;/a&gt;Referências&lt;/h3&gt;
+
+&lt;p&gt;Observação: não testei todos os links abaixo, portanto seja criterioso e descarte os que não forem úteis e eficientes.&lt;/p&gt;
+
+&lt;p&gt;- O mínimo pra se tornar uma pessoa mais inteligente | Oi Seiiti Arata 34&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=0x4BT-LZP_M&quot;&gt;https://www.youtube.com/watch?v=0x4BT-LZP_M&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;- Como estudar com eficiência | Oi Seiiti Arata 36&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=lnQ8W1LllpI&quot;&gt;https://www.youtube.com/watch?v=lnQ8W1LllpI&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;- As 10 melhores técnicas de estudo, segundo a ciência (a #9 é a minha preferida)&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;https://mude.nu/estudo-10-melhores-formas/&quot;&gt;https://mude.nu/estudo-10-melhores-formas/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;- Como Fixar na Memória o Conteúdo Estudado - O Guia Completo&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;http://www.tudosobreconcursos.com/dicas/como-fixar-na-memoria-o-conteudo-estudado-o-guia-completo&quot;&gt;http://www.tudosobreconcursos.com/dicas/como-fixar-na-memoria-o-conteudo-estudado-o-guia-completo&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;- 7 dicas para estudar de forma eficiente&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;https://www.ead.com.br/ead/7-dicas-para-estudar-de-forma-eficiente.html&quot;&gt;https://www.ead.com.br/ead/7-dicas-para-estudar-de-forma-eficiente.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;b&gt;Porque algumas pessoas se dão bem na vida? Qual seuu segredo?&lt;/b&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;https://super.abril.com.br/ciencia/o-segredo-do-sucesso/&quot;&gt;&lt;span style=&quot;font-weight: normal;&quot;&gt;https://super.abril.com.br/ciencia/o-segredo-do-sucesso/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;b&gt;Sites de Estudos&lt;/b&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;https://brasilescola.uol.com.br/&quot;&gt;https://brasilescola.uol.com.br/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;https://www.matematicario.com.br/&quot;&gt;https://www.matematicario.com.br/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;https://www.soportugues.com.br/&quot;&gt;https://www.soportugues.com.br/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;https://canaldoensino.com.br/blog/16-sites-para-estudar-de-graca-para-concursos-publicos&quot;&gt;https://canaldoensino.com.br/blog/16-sites-para-estudar-de-graca-para-concursos-publicos&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;https://www.mundovestibular.com.br/&quot;&gt;https://www.mundovestibular.com.br/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;Provas e gabaritos do ENEM para baixar&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;https://vestibulandoweb.com.br/enem/vestibular-provas-enem.asp&quot;&gt;https://vestibulandoweb.com.br/enem/vestibular-provas-enem.asp&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;Conjugar verbos para você&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;http://linguistica.insite.com.br/mod_perl/conjugue&quot;&gt;http://linguistica.insite.com.br/mod_perl/conjugue&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;b&gt;Busca por livros acadêmicos&lt;/b&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;https://scholar.google.com.br/&quot;&gt;https://scholar.google.com.br/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;b&gt;Livros didáticos grátis&lt;/b&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; font-weight: normal; line-height: 100%;&quot;&gt;Muitos livros gratuitos - &lt;a href=&quot;http://www.dominiopublico.gov.br/pesquisa/PesquisaObraForm.jsp&quot;&gt;http://www.dominiopublico.gov.br/pesquisa/PesquisaObraForm.jsp&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;http://www.estudajovem.com.br/2013/03/livros-didaticos-gratis-em-pdf.html&quot;&gt;http://www.estudajovem.com.br/2013/03/livros-didaticos-gratis-em-pdf.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;https://projetomedicina.com.br/conteudo-exclusivo/colecao-passe-facil-no-enem/&quot;&gt;https://projetomedicina.com.br/conteudo-exclusivo/colecao-passe-facil-no-enem/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;https://viacarreira.com/apostilas-pre-vestibular-gratuitas-material-de-cursinho-em-pdf-215959/&quot;&gt;https://viacarreira.com/apostilas-pre-vestibular-gratuitas-material-de-cursinho-em-pdf-215959/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;https://foconoenem.com/apostila-enem-2016-pdf-download-gratis/&quot;&gt;https://foconoenem.com/apostila-enem-2016-pdf-download-gratis/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;https://pt.scribd.com/document/246238339/Caderno-Marista-Para-o-Enem-Matematica-e-Suas-Tecnologias-1&quot;&gt;https://pt.scribd.com/document/246238339/Caderno-Marista-Para-o-Enem-Matematica-e-Suas-Tecnologias-1&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;http://www.educadores.diaadia.pr.gov.br/arquivos/File/gabaritando_enem/2015/simulado_impresso_gabaritando_enem.pdf&quot;&gt;http://www.educadores.diaadia.pr.gov.br/arquivos/File/gabaritando_enem/2015/simulado_impresso_gabaritando_enem.pdf&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;http://www.ufjf.br/cursinho/files/2014/09/Material-revisional-iMPRESSAO.pdf&quot;&gt;http://www.ufjf.br/cursinho/files/2014/09/Material-revisional-iMPRESSAO.pdf&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;http://download.inep.gov.br/educacao_basica/enem/guia_participante/2016/manual_de_redacao_do_enem_2016.pdf&quot;&gt;http://download.inep.gov.br/educacao_basica/enem/guia_participante/2016/manual_de_redacao_do_enem_2016.pdf&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;https://catracalivre.com.br/geral/educacao-3/indicacao/baixe-gratuitamente-130-apostilas-para-estudar-para-o-enem/&quot;&gt;https://catracalivre.com.br/geral/educacao-3/indicacao/baixe-gratuitamente-130-apostilas-para-estudar-para-o-enem/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;http://portal.mec.gov.br/colecao-explorando-o-ensino-sp-3427598/volumes&quot;&gt;http://portal.mec.gov.br/colecao-explorando-o-ensino-sp-3427598/volumes&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;https://g1.globo.com/educacao/noticia/encceja-veja-material-de-estudo-apostilas-e-o-que-cai-na-prova-para-quem-quer-o-diploma-do-ensino-medio-ou-do-fundamental.ghtml&quot;&gt;https://g1.globo.com/educacao/noticia/encceja-veja-material-de-estudo-apostilas-e-o-que-cai-na-prova-para-quem-quer-o-diploma-do-ensino-medio-ou-do-fundamental.ghtml&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;http://portal.mec.gov.br/secretaria-de-regulacao-e-supervisao-da-educacao-superior-seres/194-secretarias-112877938/secad-educacao-continuada-223369541/13536-materiais-didaticos&quot;&gt;http://portal.mec.gov.br/secretaria-de-regulacao-e-supervisao-da-educacao-superior-seres/194-secretarias-112877938/secad-educacao-continuada-223369541/13536-materiais-didaticos&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;Entenda as 5 competências&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;http://foconoenem.com/guia-de-redacao-do-enem/&quot;&gt;http://foconoenem.com/guia-de-redacao-do-enem/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;Aplicativos sobre estudos, que podem ser úteis, mas avalie bem antes e use com moderação, pois&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;Três em cada quatro apps da Google Play possuem rastreadores, afirma estudo&lt;/b&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;https://play.google.com/store/apps/details?id=com.sandrobot.aprovado&amp;amp;hl=pt_BR&quot;&gt;https://play.google.com/store/apps/details?id=com.sandrobot.aprovado&amp;amp;hl=pt_BR&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;https://play.google.com/store/apps/details?id=br.com.passeidireto&amp;amp;hl=pt_BR&quot;&gt;https://play.google.com/store/apps/details?id=br.com.passeidireto&amp;amp;hl=pt_BR&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;https://play.google.com/store/apps/details?id=br.com.ftd.guiadeestudos&amp;amp;hl=pt_BR&quot;&gt;https://play.google.com/store/apps/details?id=br.com.ftd.guiadeestudos&amp;amp;hl=pt_BR&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;https://canaltech.com.br/android/aprenda-a-denunciar-aplicativos-na-google-play/&quot;&gt;https://canaltech.com.br/android/aprenda-a-denunciar-aplicativos-na-google-play/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;b&gt;Testes de QI e de raciocínio Online – para momentos de descanso&lt;/b&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;Descansar carregando pedra. :)&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;https://guiadoestudante.abril.com.br/estudo/aprenda-como-se-preparar-para-os-testes-de-raciocinio-logico/&quot;&gt;https://guiadoestudante.abril.com.br/estudo/aprenda-como-se-preparar-para-os-testes-de-raciocinio-logico/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;https://testedeqi.org/&quot;&gt;https://testedeqi.org/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;http://www.testesonline.com.br/fazer-teste-online/teste-de-raciocinio-logico&quot;&gt;http://www.testesonline.com.br/fazer-teste-online/teste-de-raciocinio-logico&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;https://pt.testsworld.net/teste-de-logica.html&quot;&gt;https://pt.testsworld.net/teste-de-logica.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;https://www.fatosdesconhecidos.com.br/resolva-estes-testes-de-raciocinio-logico-e-descubra-a-potencia-do-seu-cerebro/&quot;&gt;https://www.fatosdesconhecidos.com.br/resolva-estes-testes-de-raciocinio-logico-e-descubra-a-potencia-do-seu-cerebro/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;https://rachacuca.com.br/testes/&quot;&gt;https://rachacuca.com.br/testes/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;http://www.vestibular1.com.br/testes/testes-de-raciocinio/testes-de-raciocinio/&quot;&gt;http://www.vestibular1.com.br/testes/testes-de-raciocinio/testes-de-raciocinio/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;https://www.buzzfeed.com/raphaelevangelista/testes-de-raciocinio-que-parecem-simples-mas-vao-bugar?utm_term=.xljZJPPob#.mgPZMRRn6&quot;&gt;https://www.buzzfeed.com/raphaelevangelista/testes-de-raciocinio-que-parecem-simples-mas-vao-bugar?utm_term=.xljZJPPob#.mgPZMRRn6&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;https://www.shldirect.com/pt/example-questions/inductive-reasoning&quot;&gt;https://www.shldirect.com/pt/example-questions/inductive-reasoning&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;https://www.lumosity.com/&quot;&gt;https://www.lumosity.com/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;b&gt;Curiosidades&lt;/b&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;O site que advinha tudo - &lt;a href=&quot;http://pt.akinator.com/&quot;&gt;http://pt.akinator.com/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;Construa Gráficos de Funções usando o Google&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;http://www.prof-edigleyalexandre.com/2011/12/construa-graficos-de-funcoes.html&quot;&gt;http://www.prof-edigleyalexandre.com/2011/12/construa-graficos-de-funcoes.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;https://www.visiblebody.com/&quot;&gt;https://www.visiblebody.com/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;https://www.healthline.com/human-body-maps&quot;&gt;https://www.healthline.com/human-body-maps&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;https://www.solarsystemscope.com/&quot;&gt;https://www.solarsystemscope.com/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;Matemática multimídia - &lt;a href=&quot;http://m3.ime.unicamp.br/&quot;&gt;http://m3.ime.unicamp.br/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;http://sorisomail.com/partilha/74120.html&quot;&gt;http://sorisomail.com/partilha/74120.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;Criar caixas de papel ou papelão&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;http://www.templatemaker.nl/?lang=pt&quot;&gt;http://www.templatemaker.nl/?lang=pt&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;b&gt;Como melhorar a inteligência&lt;/b&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=qhoKo5YxzUE&quot;&gt;https://www.youtube.com/watch?v=qhoKo5YxzUE&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=oIBpPRvDsLE&quot;&gt;https://www.youtube.com/watch?v=oIBpPRvDsLE&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=q-1pfviGMRQ&quot;&gt;https://www.youtube.com/watch?v=q-1pfviGMRQ&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=v_OfAY5wzTQ&quot;&gt;https://www.youtube.com/watch?v=v_OfAY5wzTQ&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=XB_NM8U2cl0&quot;&gt;https://www.youtube.com/watch?v=XB_NM8U2cl0&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=WmNkQQaApWA&quot;&gt;https://www.youtube.com/watch?v=WmNkQQaApWA&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=kT9P7jLqdvw&quot;&gt;https://www.youtube.com/watch?v=kT9P7jLqdvw&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;b&gt;Apps&lt;/b&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;Android:&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;1 - Lumosity: &lt;a href=&quot;https://www.youtube.com/redirect?q=https%3A%2F%2Fgoo.gl%2FWuUfwu&amp;amp;event=video_description&amp;amp;v=b7nJjd6rQHg&amp;amp;redir_token=tzZAh3HH4SyCpfovHPIxvQ32NnV8MTUyMzE5MzE2MUAxNTIzMTA2NzYx&quot;&gt;https://goo.gl/WuUfwu&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;2 - Memorado: &lt;a href=&quot;https://www.youtube.com/redirect?q=https%3A%2F%2Fgoo.gl%2FH97fAA&amp;amp;event=video_description&amp;amp;v=b7nJjd6rQHg&amp;amp;redir_token=tzZAh3HH4SyCpfovHPIxvQ32NnV8MTUyMzE5MzE2MUAxNTIzMTA2NzYx&quot;&gt;https://goo.gl/H97fAA&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;3 - NeuroNation: &lt;a href=&quot;https://www.youtube.com/redirect?q=https%3A%2F%2Fgoo.gl%2FFbvADx&amp;amp;event=video_description&amp;amp;v=b7nJjd6rQHg&amp;amp;redir_token=tzZAh3HH4SyCpfovHPIxvQ32NnV8MTUyMzE5MzE2MUAxNTIzMTA2NzYx&quot;&gt;https://goo.gl/FbvADx&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;(Bônus Android) Elevate: &lt;a href=&quot;https://www.youtube.com/redirect?q=https%3A%2F%2Fgoo.gl%2FxdBA0T&amp;amp;event=video_description&amp;amp;v=b7nJjd6rQHg&amp;amp;redir_token=tzZAh3HH4SyCpfovHPIxvQ32NnV8MTUyMzE5MzE2MUAxNTIzMTA2NzYx&quot;&gt;https://goo.gl/xdBA0T&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;iOS:&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;1 - Lumosity: &lt;a href=&quot;https://www.youtube.com/redirect?q=https%3A%2F%2Fgoo.gl%2F69qkjF&amp;amp;event=video_description&amp;amp;v=b7nJjd6rQHg&amp;amp;redir_token=tzZAh3HH4SyCpfovHPIxvQ32NnV8MTUyMzE5MzE2MUAxNTIzMTA2NzYx&quot;&gt;https://goo.gl/69qkjF&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;2 - Memorado: &lt;a href=&quot;https://www.youtube.com/redirect?q=https%3A%2F%2Fgoo.gl%2FECqRTo&amp;amp;event=video_description&amp;amp;v=b7nJjd6rQHg&amp;amp;redir_token=tzZAh3HH4SyCpfovHPIxvQ32NnV8MTUyMzE5MzE2MUAxNTIzMTA2NzYx&quot;&gt;https://goo.gl/ECqRTo&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;3 - NeuroNation: &lt;a href=&quot;https://www.youtube.com/redirect?q=https%3A%2F%2Fgoo.gl%2FDMCYfh&amp;amp;event=video_description&amp;amp;v=b7nJjd6rQHg&amp;amp;redir_token=tzZAh3HH4SyCpfovHPIxvQ32NnV8MTUyMzE5MzE2MUAxNTIzMTA2NzYx&quot;&gt;https://goo.gl/DMCYfh&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;(Bônus iOS) Elevate: &lt;a href=&quot;https://goo.gl/PLge5M&quot;&gt;https://goo.gl/PLge5M&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;b&gt;Como melhorar a memória&lt;/b&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;http://www.cursou.com.br/desenvolvimento-pessoal/curso-memorizacao-gratis/&quot;&gt;http://www.cursou.com.br/desenvolvimento-pessoal/curso-memorizacao-gratis/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=_efWhnguZL8&quot;&gt;https://www.youtube.com/watch?v=_efWhnguZL8&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=21VySCp_7TE&quot;&gt;https://www.youtube.com/watch?v=21VySCp_7TE&lt;/a&gt; – 6 vídeos&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=VMS9gzWHQME&quot;&gt;https://www.youtube.com/watch?v=VMS9gzWHQME&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=zOcRjfoX2YE&quot;&gt;https://www.youtube.com/watch?v=zOcRjfoX2YE&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=RoNV140JucE&quot;&gt;https://www.youtube.com/watch?v=RoNV140JucE&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;b&gt;Músicas para melhorar a concentração nos estudos (caso goste do estilo)&lt;br /&gt;&lt;/b&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; font-weight: normal; line-height: 100%;&quot;&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=Ao6mIoBuQCA&quot;&gt;https://www.youtube.com/watch?v=Ao6mIoBuQCA&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;b&gt;Softwares que podem ser úteis&lt;/b&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; font-weight: normal; line-height: 100%;&quot;&gt;GeoGebra - &lt;a href=&quot;https://www.geogebra.org/&quot;&gt;https://www.geogebra.org/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt;&lt;b&gt;Sites para tirar dúvidas&lt;/b&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; font-weight: normal; line-height: 100%;&quot;&gt;&lt;a href=&quot;http://www.ajudamatematica.com/viewtopic.php?f=98&amp;amp;t=117&quot;&gt;http://www.ajudamatematica.com/viewtopic.php?f=98&amp;amp;t=117&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; font-weight: normal; line-height: 100%;&quot;&gt;&lt;a href=&quot;http://www.zoomdigital.com.br/site-resolve-sua-licao-de-matematica/&quot;&gt;http://www.zoomdigital.com.br/site-resolve-sua-licao-de-matematica/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; font-weight: normal; line-height: 100%;&quot;&gt;&lt;a href=&quot;http://www.mat.ufrgs.br/~portosil/consulta.html&quot;&gt;http://www.mat.ufrgs.br/~portosil/consulta.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; font-weight: normal; line-height: 100%;&quot;&gt;Trabalhos escolares prontos - &lt;a href=&quot;https://www.coladaweb.com/&quot;&gt;https://www.coladaweb.com/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0cm; font-weight: normal; line-height: 100%;&quot;&gt; &lt;/p&gt;</content>
+		<category term="Estudos" />
+	</entry>
+	<entry>
+		<title>Estimulando para Estudar</title>
+		<link rel="alternate" type="text/html" href="http://backup/portal/blog/estudos/estimulando-para-estudar.html"/>
+		<published>2017-07-11T15:20:01-03:00</published>
+		<updated>2017-07-11T15:20:01-03:00</updated>
+		<id>http://backup/portal/blog/estudos/estimulando-para-estudar.html</id>
+		<author>
+			<name>Ribamar FS</name>
+		</author>
+		<summary type="html">&lt;h3 style=&quot;text-align: left;&quot; align=&quot;center&quot;&gt;Estímulo para estudar&lt;/h3&gt;
+&lt;p style=&quot;text-align: left;&quot; align=&quot;center&quot;&gt;Algumas dicas para estimular seu filho ou a si mesmo a estudar.&lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;Depois de uma pesquisa por alguns sites com o assunto eu elaborei estas dicas.&lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;É importante começar dizendo que são apenas dicas e que você deve usar todos os recursos ao seu alcance para conseguir este intento.&lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;&lt;br /&gt;&lt;strong&gt;Sinceridade é Importante&lt;/strong&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;Não podemos querer dizer ao filho que estudar é a atividade mais prazerosa do mundo. Ele poderá até achar isso algum dia, mas atualmente isso não é verdade. Precisamos ser sinceros e dizer que pelo menos no início ele precisará fazer algum sacrifício. Com o passar do tempo, quando ele for aprendendo e sentindo mais segurança ele começará a gostar mais. Lembre que quanto mais você conseguir motivar ele mais ele estudará.&lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;&lt;strong&gt;Importância de Estudar&lt;/strong&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;Fale sobre a importância de estudar. Do quanto se aprende. Aprendendo mais a gente se valoriza e se torna mais útil onde quer que esteja, além de ajudar a melhorar sua auto estima.&lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;Mas o maior objetivo de estudar, de sacrificar seu presente é o de possibilitar que seu futuro profissional e financeiro seja melhor. É como um investimento, você sacrifica algumas horas por dia do seu presente para que seu futuro seja mais confortável e você seja alguém que ganhará mais facilmente dinheiro do que se não estudar ou estudar menos.&lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;Ele precisa realmente acreditar nisso, mas precisa de sua ajuda, pois brincar é muito mais agradável que estudar, especialmente nos nossos dias, quando as opções são inúmeras e maravilhosas. Ele precisa ter uma forte consciência caso contrário não conseguirá. Repetindo, ajude, acompanhe e colabore com ele para tornar menos difícil.&lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;Procure formas agradáveis e criativas de mostrar os assuntos do estudo para ele.&lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;Veja, que quando estiver estudando e pensar assim “eu poderia estar jogando ou assistindo filme, ou no Facebook”. Nestes momentos rebata com “estou investindo no meu futuro, pois quero ter um futuro melhor. Mais tarde posso fazer isso”.&lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt; &lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;&lt;strong&gt;Disciplina é Importante&lt;/strong&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;A disciplina ajuda nosso cérebro a confiar que queremos estudar e ele irá nos ajudar lembrando quando chegar a hora.&lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt; &lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;&lt;strong&gt;Aplicação Prática dos Conhecimentos&lt;/strong&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;Uma dificuldade de alguém livre e inteligente gostar de estudar é não ver uma aplicação prática em sua vida dos conhecimentos estudados. Procure mostrar que todos os conhecimentos são úteis e importantes na nossa vida. Claro que alguns assuntos serão mais importantes, mas isso no futuro quando ele escolher em que deseja trabalhar, por enquanto ele precisa estudar todas as matérias para que tenha um conhecimento geral e para conseguir aprovação.&lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt; &lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;&lt;strong&gt;Uso Racional da Internet&lt;/strong&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;Atualmente a internet é a maior fonte de pesquisas para a escola, mas ele precisa estar ciente de que apenas pesquisar e imprimir não o ajuda muito. Precisa pesquisar, estudar, entender e fazer o trabalho com suas palavras para que a pesquisa seja realmente útil e importante.&lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt; &lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;&lt;strong&gt;Inteligência e Criatividade são Superiores à Memorização&lt;/strong&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;Mostre e explique para ele que desenvolver a memória é importante, usando artifícios e técnicas, mas desenvolver a inteligência e a criatividade são ainda mais importantes e que ele deve ter sempre isso em mente.&lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt; &lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;&lt;strong&gt;Organização Ajuda&lt;/strong&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;Tenha um local definido e adequado para estudar. Mantenha seus livros, cadernos e demais materiais de estudo bem organizados em um lugar certo. Procure se isolar quando estudar. Somente use nestes momentos o celular e o computador em caso de necessidade. Tome cuidado com eles pois geralmente nos dispersam e nos fazem perder tempo.&lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;Faça uma agenda do que precisa estudar, anote o dia dos trabalhos e das provas. Também anote que matéria estará estudando em cada dia da semana. Organize-se.&lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt; &lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;&lt;strong&gt;Empenho&lt;/strong&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;Peça que ele procure se empenhar bastante, que procure ficar pensando nos estudos durante o dia pois assim seu cérebro irá perceber que ele acha isso importante e irá ajudá-lo quando seu filho precisar dele, do cérebro (este deve ser seu grande parceiro).&lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;Procure dormir cedo e dormir bem, para acordar cedo e disposto.&lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;Procure chegar cedo ao colégio e sentar na frente.&lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;Fique atento às aulas e sempre que não entender algo pergunte ao professor. Esta é uma forma de economizar tempo de estudo. Se levar uma dúvida para casa irá gastar mais tempo de estudo. Tem mais, o professor gosta (geralmente) de alunos que perguntam e demonstram interesse.&lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt; &lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;&lt;strong&gt;Acompanhamento&lt;/strong&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;É importante o filho sentir que você está realmente interessado nos estudos dele. Para isso procure acompanhar diariamente ou com frequência suas atividades, perguntando como está, se está enfrentando alguma dificuldade. Faça realmente algo sério neste sentido.&lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt; &lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;&lt;strong&gt;Exemplos&lt;/strong&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;Procure mostrar exemplos de pessoas bem sucedidas e que se empenharam para estudar e chegar onde chegaram, inclusive você.&lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt; &lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;&lt;strong&gt;Evite Castigos e Punições&lt;/strong&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;Se conseguir conversar de forma a convencê-lo da importância de estudar e participar juntamente com ele de seus estudos será mais eficiente do que ameaças e castigos. Sem contar que algo mais importante que os estudos dele irá acontecer, o relacionamento de vocês será algo mais desejável.&lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt; &lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;&lt;strong&gt;Compre Livros Interessantes para Ele&lt;/strong&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;Pergunte e procure saber de que livros ele gosta e compre estes livros para um maior estímulo à leitura.&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;&lt;strong&gt;Nosso Cérebro&lt;/strong&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;O normal é que nosso cérebro procure o prazer e fuja da dor, ou seja, procuramos praticar atividades agradáveis e deixar de lado as desagradáveis. Então tanto você pai precisa mostrar para seu filho que ele precisa gostar de estudar quanto seu filho precisa ter essa consciência. Se ele realmente entender que seu esforço atual será compensado no futuro ele poderá se dedicar mais e seus estudos não serão um grande sacrifício.&lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;Encontre formas de mostrar para seu cérebro que o estudo é importante, necessário e pode ser agradável, assim seu cérebro o ajudará nessa tarefa.&lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt; &lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;&lt;strong&gt;Prioridades&lt;/strong&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;Na vida todos temos 24 horas no dia e podemos ter muito mais atividades para fazer no dia do que dá tempo, portanto precisamos escolher as mais importantes e focar nelas. Divida o seu dia em partes e procure se organizar para cumprir sua agenda. Lembre que estudar é muito importante para você e deve dar prioridade sobre muitas outras atividades.&lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt; &lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;&lt;strong&gt;O Poder da Visualização&lt;/strong&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;Ajuda muito a memorizar uma tarefa se você se visualizar fazendo. Para, relaxe, respire profunda e calmamente e comece a visualizar você executando a atividade. Caso dramatize a memória funciona melhor.&lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;Também é importante que você se visualize daqui há alguns anos, caso não estude, como você poderá ser e caso estude e se empenhe muito como poderá ser. O que acha?&lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt; &lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;&lt;strong&gt;Encare primeiro o mais chato&lt;/strong&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;É mais eficiente encarar primeiro as matérias mais “chatas”, aquelas em que tem mais dificuldade. Quando começar a aprender e a dominar começará e deixar de achar chata e começará a gostar dela.&lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt; &lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;&lt;strong&gt;Atitude&lt;/strong&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;Para ser bem sucedido nos estudos e chegar a gostar muito de estudara precisa se empenhar, caprichar no que faz e realmente assumir uma atitude de estudioso.&lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;Essa atitude de seriedade deve se expandir para a sua vida como um todo, para a sua alimentação, sua saúde em geral e seu estilo de vida. Afinal tudo isso o ajudará a estudar e o ajudará a viver melhor. Atitude, seriedade no sentido de combinar que fará algo e fazer e fazer bem feito, muto bem feito. Isso fará com que se sinta bem e te retornará mais energia e confiança.&lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt; &lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;&lt;strong&gt;Procrastinação&lt;/strong&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;Para ser eficiente em alguma atividade precisamos nos cercar de alguns cuidados, ser disciplinados, organizados e de muito empenho. Algo que precisamos evitar a todo custo é a procrastinação, aquela mania de deixar para fazer as coisas depois e acabamos nos esquecendo. Se tiver algo para fazer faça agora e nunca deixe para depois. A história da atitude, da decisão, da firmeza. Faça disso um traço da sua personalidade.&lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt; &lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;Saúde&lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;Esta é uma grande parceira dos seus estudos e da sua vida, portanto colabore com ela e se interesse em conhecer como cuidar dela. Boa alimentação, evitando produtos químicos em geral, dormir bem, profundamente, pelo menos 8 horas por noite, evite estresse, filmes e jogos violentos ou de terror, especialmente a noite antes de dormir. Cuida da sua saúde, da sua vida.&lt;/p&gt;</summary>
+		<content type="html">&lt;h3 style=&quot;text-align: left;&quot; align=&quot;center&quot;&gt;Estímulo para estudar&lt;/h3&gt;
+&lt;p style=&quot;text-align: left;&quot; align=&quot;center&quot;&gt;Algumas dicas para estimular seu filho ou a si mesmo a estudar.&lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;Depois de uma pesquisa por alguns sites com o assunto eu elaborei estas dicas.&lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;É importante começar dizendo que são apenas dicas e que você deve usar todos os recursos ao seu alcance para conseguir este intento.&lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;&lt;br /&gt;&lt;strong&gt;Sinceridade é Importante&lt;/strong&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;Não podemos querer dizer ao filho que estudar é a atividade mais prazerosa do mundo. Ele poderá até achar isso algum dia, mas atualmente isso não é verdade. Precisamos ser sinceros e dizer que pelo menos no início ele precisará fazer algum sacrifício. Com o passar do tempo, quando ele for aprendendo e sentindo mais segurança ele começará a gostar mais. Lembre que quanto mais você conseguir motivar ele mais ele estudará.&lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;&lt;strong&gt;Importância de Estudar&lt;/strong&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;Fale sobre a importância de estudar. Do quanto se aprende. Aprendendo mais a gente se valoriza e se torna mais útil onde quer que esteja, além de ajudar a melhorar sua auto estima.&lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;Mas o maior objetivo de estudar, de sacrificar seu presente é o de possibilitar que seu futuro profissional e financeiro seja melhor. É como um investimento, você sacrifica algumas horas por dia do seu presente para que seu futuro seja mais confortável e você seja alguém que ganhará mais facilmente dinheiro do que se não estudar ou estudar menos.&lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;Ele precisa realmente acreditar nisso, mas precisa de sua ajuda, pois brincar é muito mais agradável que estudar, especialmente nos nossos dias, quando as opções são inúmeras e maravilhosas. Ele precisa ter uma forte consciência caso contrário não conseguirá. Repetindo, ajude, acompanhe e colabore com ele para tornar menos difícil.&lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;Procure formas agradáveis e criativas de mostrar os assuntos do estudo para ele.&lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;Veja, que quando estiver estudando e pensar assim “eu poderia estar jogando ou assistindo filme, ou no Facebook”. Nestes momentos rebata com “estou investindo no meu futuro, pois quero ter um futuro melhor. Mais tarde posso fazer isso”.&lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt; &lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;&lt;strong&gt;Disciplina é Importante&lt;/strong&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;A disciplina ajuda nosso cérebro a confiar que queremos estudar e ele irá nos ajudar lembrando quando chegar a hora.&lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt; &lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;&lt;strong&gt;Aplicação Prática dos Conhecimentos&lt;/strong&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;Uma dificuldade de alguém livre e inteligente gostar de estudar é não ver uma aplicação prática em sua vida dos conhecimentos estudados. Procure mostrar que todos os conhecimentos são úteis e importantes na nossa vida. Claro que alguns assuntos serão mais importantes, mas isso no futuro quando ele escolher em que deseja trabalhar, por enquanto ele precisa estudar todas as matérias para que tenha um conhecimento geral e para conseguir aprovação.&lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt; &lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;&lt;strong&gt;Uso Racional da Internet&lt;/strong&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;Atualmente a internet é a maior fonte de pesquisas para a escola, mas ele precisa estar ciente de que apenas pesquisar e imprimir não o ajuda muito. Precisa pesquisar, estudar, entender e fazer o trabalho com suas palavras para que a pesquisa seja realmente útil e importante.&lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt; &lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;&lt;strong&gt;Inteligência e Criatividade são Superiores à Memorização&lt;/strong&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;Mostre e explique para ele que desenvolver a memória é importante, usando artifícios e técnicas, mas desenvolver a inteligência e a criatividade são ainda mais importantes e que ele deve ter sempre isso em mente.&lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt; &lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;&lt;strong&gt;Organização Ajuda&lt;/strong&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;Tenha um local definido e adequado para estudar. Mantenha seus livros, cadernos e demais materiais de estudo bem organizados em um lugar certo. Procure se isolar quando estudar. Somente use nestes momentos o celular e o computador em caso de necessidade. Tome cuidado com eles pois geralmente nos dispersam e nos fazem perder tempo.&lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;Faça uma agenda do que precisa estudar, anote o dia dos trabalhos e das provas. Também anote que matéria estará estudando em cada dia da semana. Organize-se.&lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt; &lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;&lt;strong&gt;Empenho&lt;/strong&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;Peça que ele procure se empenhar bastante, que procure ficar pensando nos estudos durante o dia pois assim seu cérebro irá perceber que ele acha isso importante e irá ajudá-lo quando seu filho precisar dele, do cérebro (este deve ser seu grande parceiro).&lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;Procure dormir cedo e dormir bem, para acordar cedo e disposto.&lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;Procure chegar cedo ao colégio e sentar na frente.&lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;Fique atento às aulas e sempre que não entender algo pergunte ao professor. Esta é uma forma de economizar tempo de estudo. Se levar uma dúvida para casa irá gastar mais tempo de estudo. Tem mais, o professor gosta (geralmente) de alunos que perguntam e demonstram interesse.&lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt; &lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;&lt;strong&gt;Acompanhamento&lt;/strong&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;É importante o filho sentir que você está realmente interessado nos estudos dele. Para isso procure acompanhar diariamente ou com frequência suas atividades, perguntando como está, se está enfrentando alguma dificuldade. Faça realmente algo sério neste sentido.&lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt; &lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;&lt;strong&gt;Exemplos&lt;/strong&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;Procure mostrar exemplos de pessoas bem sucedidas e que se empenharam para estudar e chegar onde chegaram, inclusive você.&lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt; &lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;&lt;strong&gt;Evite Castigos e Punições&lt;/strong&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;Se conseguir conversar de forma a convencê-lo da importância de estudar e participar juntamente com ele de seus estudos será mais eficiente do que ameaças e castigos. Sem contar que algo mais importante que os estudos dele irá acontecer, o relacionamento de vocês será algo mais desejável.&lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt; &lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;&lt;strong&gt;Compre Livros Interessantes para Ele&lt;/strong&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;Pergunte e procure saber de que livros ele gosta e compre estes livros para um maior estímulo à leitura.&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;&lt;strong&gt;Nosso Cérebro&lt;/strong&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;O normal é que nosso cérebro procure o prazer e fuja da dor, ou seja, procuramos praticar atividades agradáveis e deixar de lado as desagradáveis. Então tanto você pai precisa mostrar para seu filho que ele precisa gostar de estudar quanto seu filho precisa ter essa consciência. Se ele realmente entender que seu esforço atual será compensado no futuro ele poderá se dedicar mais e seus estudos não serão um grande sacrifício.&lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;Encontre formas de mostrar para seu cérebro que o estudo é importante, necessário e pode ser agradável, assim seu cérebro o ajudará nessa tarefa.&lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt; &lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;&lt;strong&gt;Prioridades&lt;/strong&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;Na vida todos temos 24 horas no dia e podemos ter muito mais atividades para fazer no dia do que dá tempo, portanto precisamos escolher as mais importantes e focar nelas. Divida o seu dia em partes e procure se organizar para cumprir sua agenda. Lembre que estudar é muito importante para você e deve dar prioridade sobre muitas outras atividades.&lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt; &lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;&lt;strong&gt;O Poder da Visualização&lt;/strong&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;Ajuda muito a memorizar uma tarefa se você se visualizar fazendo. Para, relaxe, respire profunda e calmamente e comece a visualizar você executando a atividade. Caso dramatize a memória funciona melhor.&lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;Também é importante que você se visualize daqui há alguns anos, caso não estude, como você poderá ser e caso estude e se empenhe muito como poderá ser. O que acha?&lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt; &lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;&lt;strong&gt;Encare primeiro o mais chato&lt;/strong&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;É mais eficiente encarar primeiro as matérias mais “chatas”, aquelas em que tem mais dificuldade. Quando começar a aprender e a dominar começará e deixar de achar chata e começará a gostar dela.&lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt; &lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;&lt;strong&gt;Atitude&lt;/strong&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;Para ser bem sucedido nos estudos e chegar a gostar muito de estudara precisa se empenhar, caprichar no que faz e realmente assumir uma atitude de estudioso.&lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;Essa atitude de seriedade deve se expandir para a sua vida como um todo, para a sua alimentação, sua saúde em geral e seu estilo de vida. Afinal tudo isso o ajudará a estudar e o ajudará a viver melhor. Atitude, seriedade no sentido de combinar que fará algo e fazer e fazer bem feito, muto bem feito. Isso fará com que se sinta bem e te retornará mais energia e confiança.&lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt; &lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;&lt;strong&gt;Procrastinação&lt;/strong&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;Para ser eficiente em alguma atividade precisamos nos cercar de alguns cuidados, ser disciplinados, organizados e de muito empenho. Algo que precisamos evitar a todo custo é a procrastinação, aquela mania de deixar para fazer as coisas depois e acabamos nos esquecendo. Se tiver algo para fazer faça agora e nunca deixe para depois. A história da atitude, da decisão, da firmeza. Faça disso um traço da sua personalidade.&lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt; &lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;Saúde&lt;/p&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;Esta é uma grande parceira dos seus estudos e da sua vida, portanto colabore com ela e se interesse em conhecer como cuidar dela. Boa alimentação, evitando produtos químicos em geral, dormir bem, profundamente, pelo menos 8 horas por noite, evite estresse, filmes e jogos violentos ou de terror, especialmente a noite antes de dormir. Cuida da sua saúde, da sua vida.&lt;/p&gt;</content>
+		<category term="Estudos" />
+	</entry>
+</feed>

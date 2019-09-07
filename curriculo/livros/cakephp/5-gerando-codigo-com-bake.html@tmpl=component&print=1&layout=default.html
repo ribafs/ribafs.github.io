@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br" dir="ltr">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <base href="" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Ribamar FS" />
+	<meta name="robots" content="noindex, nofollow" />
+	<meta name="description" content="Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros." />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>5 - Gerando Código com Bake - RibaFS Portal</title>
+	<link href="http://ribafs.org/portal/curriculo/livros/cakephp/5-gerando-codigo-com-bake.html?tmpl=component&amp;print=1&amp;layout=default" rel="canonical" />
+	<link href="../../../templates/shaper_helix3/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../../../favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<script src="../../../media/jui/js/jquery.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery-noconflict.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery-migrate.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="http://backup/portal/media/system/js/caption.js?d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script type="text/javascript">
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+	</script>
+	<meta property="og:url" content="http://backup/portal/curriculo/livros/cakephp/5-gerando-codigo-com-bake.html" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="5 - Gerando Código com Bake" />
+	<meta property="og:description" content="5 - Gerando CRUD com Bake e muito mais Algumas pessoas querem que algo aconteça, outras desejam que aconteça, outras fazem acontecer. Michael Jordan http:/..." />
+
+   	<link rel="stylesheet" href="../../../media/jui/css/bootstrap.min.css" type="text/css" />
+	<link rel="stylesheet" href="../../../templates/shaper_helix3/css/frontend-edit.css" type="text/css" />
+    <link rel="stylesheet" href="../../../templates/shaper_helix3/css/template.css" type="text/css" />
+</head>
+<body class="contentpane">
+	<div id="system-message-container">
+	</div>
+
+	
+
+<article class="item item-page" itemscope itemtype="http://schema.org/Article">
+	<meta itemprop="inLanguage" content="pt-BR" />
+	
+	
+
+	<div class="entry-header">
+		<span class="post-format"><i class="fa fa-thumb-tack"></i></span>
+		
+					<h2 itemprop="name">
+									5 - Gerando Código com Bake							</h2>
+												</div>
+
+						<div id="pop-print" class="btn hidden-print">
+				<a href="5-gerando-codigo-com-bake.html#" onclick="window.print();return false;">			<span class="icon-print" aria-hidden="true"></span>
+		Imprimir	</a>			</div>
+				
+	
+	
+				
+	
+			<div itemprop="articleBody">
+		<h3>5 - Gerando CRUD com Bake e muito mais</h3>
+<p> </p>
+<p align="right"><em><strong>Algumas pessoas querem que algo aconteça, outras desejam que aconteça, outras fazem acontecer.</strong></em></p>
+<p align="right">Michael Jordan</p>
+<p><a href="http://book.cakephp.org/3.0/en/bake.html">http://book.cakephp.org/3.0/en/bake.html</a></p>
+<p align="justify">A console bake do CakePHP é um outro esforço para que você esteja rodando o CakePHP rapidamente. A console do bake pode criar qualquer um dos códigos básicos do CakePHP: models, behaviors, views, helpers, controllers, components, test cases, fixtures e plugins. E não estamos falando apenas de esqueletos de classes, o bake pode criar uma aplicação inteiramente funcional em poucos minutos.</p>
+<p> </p>
+<p><strong>Pré-requisitos</strong></p>
+<p>A console do bake requer:</p>
+<p>- PHP CLI</p>
+<p>- extensão intl</p>
+<p>- Pelo menos um SGBD instalado e configurado na aplicação atual</p>
+<p align="left"> </p>
+<p align="left"><strong>Executando o bake</strong></p>
+<p align="left">cd /var/www/html/cliente</p>
+<p align="left">bin/cake bake</p>
+<p align="left"><strong>Mostrará:</strong></p>
+<p align="left">The following commands can be used to generate skeleton code for your application.</p>
+<p align="left">Available bake commands:</p>
+<p align="left">- all</p>
+<p align="left">- behavior</p>
+<p align="left">- cell</p>
+<p align="left">- command</p>
+<p align="left">- component</p>
+<p align="left">- controller</p>
+<p align="left">- fixture</p>
+<p align="left">- form</p>
+<p align="left">- helper</p>
+<p align="left">- mailer</p>
+<p align="left">- middleware</p>
+<p align="left">- migration</p>
+<p align="left">- migration_diff</p>
+<p align="left">- migration_snapshot</p>
+<p align="left">- model</p>
+<p align="left">- plugin</p>
+<p align="left">- seed</p>
+<p align="left">- shell</p>
+<p align="left">- shell_helper</p>
+<p align="left">- task</p>
+<p align="left">- template</p>
+<p align="left">- test</p>
+<p align="left">- twig_template</p>
+<p align="left">By using `cake bake [name]` you can invoke a specific bake task.</p>
+<p align="left"> </p>
+<p align="left"><strong>Obtendo ajuda para controllers com o bake</strong></p>
+<p align="left">bin/cake bake controller --help</p>
+<p align="left">Veja:</p>
+<p align="left">bin/cake bake controller --help</p>
+<p align="left">Bake a controller skeleton.</p>
+<p align="left">Usage:</p>
+<p align="left">cake bake controller [subcommand] [options] [&lt;name&gt;]</p>
+<p align="left">Subcommands:</p>
+<p align="left">all Bake all controllers with CRUD methods.</p>
+<p align="left">To see help on a subcommand use `cake bake controller [subcommand] --help`</p>
+<p align="left">Options:</p>
+<p align="left">--actions The comma separated list of actions to generate. You</p>
+<p align="left">can include custom methods provided by your template</p>
+<p align="left">set here.</p>
+<p align="left">--components The comma separated list of components to use.</p>
+<p align="left">--connection, -c The datasource connection to get data from.</p>
+<p align="left">(default: default)</p>
+<p align="left">--force, -f Force overwriting existing files without prompting.</p>
+<p align="left">--help, -h Display this help.</p>
+<p align="left">--helpers The comma separated list of helpers to use.</p>
+<p align="left">--no-actions Do not generate basic CRUD action methods.</p>
+<p align="left">--no-test Do not generate a test skeleton.</p>
+<p align="left">--plugin, -p Plugin to bake into.</p>
+<p align="left">--prefix The namespace/routing prefix to use.</p>
+<p align="left">--quiet, -q Enable quiet output.</p>
+<p align="left">--theme, -t The theme to use when baking code. (choices:</p>
+<p align="left">Bake|Migrations|WyriHaximus/TwigView)</p>
+<p align="left">--verbose, -v Enable verbose output.</p>
+<p align="left">Arguments:</p>
+<p align="left">name Name of the controller to bake (without the `Controller` suffix).</p>
+<p align="left">You can use Plugin.name to bake controllers into plugins.</p>
+<p align="left"> </p>
+<p align="left"><strong>Versatilidade do bake</strong></p>
+<p align="left">Ajuda para plugins</p>
+<p align="left">bin/cake bake plugin --help</p>
+<p align="left"><strong>Gerar tudo para Clientes</strong> (controller, model, templates, etc)</p>
+<p align="left">bin/cake bake all Clientes</p>
+<p align="left"> </p>
+<p align="left"><strong>Gerar novamente forçando</strong></p>
+<p align="left">Caso já tenha gerado um código e queira gerar novamente evitando as perguntas para sobrescrever os arquivos gerados, use --force ou -f, assim:</p>
+<p align="left">bin/cake bake all Clientes -f</p>
+<p align="left"> </p>
+<p><strong>Gerar um controller:</strong></p>
+<p>bin/cake bake controller Clientes</p>
+<p> </p>
+<p><strong>Gerar controller sem actions:</strong></p>
+<p>bin\cake bake controller --no-actions Clientes</p>
+<p> </p>
+<p><strong>Gerar Componente</strong></p>
+<p>bin/cake bake component Calculo</p>
+<p> </p>
+<p><strong>Gerar um Template</strong></p>
+<p>bin/cake bake template Clientes</p>
+<p> </p>
+<p><strong>Gerar Helper</strong></p>
+<p>bin/cake bake helper MeuForm</p>
+<p> </p>
+<p><strong>Gerar Cell</strong></p>
+<p>bin/cake bake cell MinhaCelula</p>
+<p> </p>
+<p><strong>Gerar Form</strong></p>
+<p>bin/cake bake form MeuForm</p>
+<p> </p>
+<p><strong>Gerar um Model</strong></p>
+<p>bin/cake bake model Clientes</p>
+<p> </p>
+<p><strong>Gerar Behavior</strong></p>
+<p align="left">bin/cake bake behavior MeuBehavior</p>
+<p align="left"> </p>
+<p><strong>Gerar apenas controller, model e template</strong></p>
+<p>bin/cake bake controller clientes</p>
+<p>bin/cake bake model clientes</p>
+<p>bin/cake bake template clientes index (somente a index)</p>
+<p align="left"> </p>
+<p><strong>Gerando plugin</strong></p>
+<p>bin/cake bake all --plugin CakePtbr articles</p>
+<p> </p>
+<p><strong>Agora gerar o código completo para o plugin</strong></p>
+<p>bin/cake bake all -p CakeAdmin groups</p>
+<p>bin/cake bake all -p CakeAdmin users</p>
+<p>bin/cake bake all -p CakeAdmin permissions</p>
+<p>bin/cake bake all -p CakeAdmin customers</p>
+<p> </p>
+<p><strong>Criar plugin ContactManager com tabela contacts para o aplicativo cliente</strong></p>
+<p>cd /var/www/html/cliente</p>
+<p>bin/cake bake plugin ContactManager</p>
+<p>bin/cake bake controller --plugin ContactManager Contacts</p>
+<p>bin/cake bake migration CreateContacts title:string body:text created modified</p>
+<p>bin/cake bake migration CreateGroups name:string created modified</p>
+<p>bin/cake bake migration CreateUsers username:string password:string created modified</p>
+<p>bin/cake migrations migrate</p>
+<p>bin/cake bake model --plugin ContactManager Contacts</p>
+<p>bin/cake bake template --plugin ContactManager Contacts</p>
+<p> </p>
+<p><strong>Estrutura de Arquivos do Plugin</strong></p>
+<pre>/src
+/plugins
+    /ContactManager
+        /config
+        /src
+            /Plugin.php
+            /Controller
+                /Component
+            /Model
+                /Table
+                /Entity
+                /Behavior
+            /View
+                /Helper
+            /Template
+                /Layout
+        /tests
+            /TestCase
+            /Fixture
+        /webroot</pre>
+<p><strong>Regerando o autoloader</strong></p>
+<p align="left">composer dump-autoload</p>
+<p align="left"> </p>
+<p align="left"><strong>Limpando o cache</strong></p>
+<p align="left">composer clear-cache</p>
+<p align="left"> </p>
+<p align="left"><strong>Observação</strong></p>
+<p>Existem alguns recursos que não são gerados ou auxiliados pelo bake, como o element.</p>
+<p> </p>
+<p><strong>Outros comandos</strong></p>
+<p>bin/cake bake fixture groups</p>
+<p>bin/cake bake test users</p>
+<p> </p>
+<p><strong>Garantir que não use cache:</strong></p>
+<p>bin/cake bake model comments –force<br /> bin/cake bake model issues –force<br /> bin/cake orm_cache clear</p>
+<p>Cache do ORM</p>
+<p>Reconstruir o cache dos metadados de todas as tabelas da conexão default</p>
+<p>bin/cake orm_cache build --connection default</p>
+<p> </p>
+<p><strong>Para reconstruir o cache dos metadados apenas da tabela artigos</strong></p>
+<p>bin/cake orm_cache build --connection default artigos</p>
+<p> </p>
+<p><strong>Remover o cache de todos os metadados:</strong></p>
+<p>bin/cake orm_cache clear</p>
+<p> </p>
+<p><strong>Remover o cache de todos os metadados da tabela aratigos</strong></p>
+<p>bin/cake orm_cache clear artigos</p>
+<p align="left"> </p>
+<p><strong>Criando Model para o Plugin</strong></p>
+<p>bin/cake bake model --plugin Admin Groups</p>
+<p>bin/cake bake model --plugin Admin Users</p>
+<p> </p>
+<p><strong>Criando Templates para o Plugin</strong></p>
+<p>bin/cake bake template --plugin Admin Groups</p>
+<p>bin/cake bake template --plugin Admin Users</p>
+<p> </p>
+<p><strong>Criar somente a view login.ctp para o Plugin</strong></p>
+<p>bin/cake bake template --plugin Admin Users login</p>
+<p align="left"> </p>
+<p><strong>Observação importante:</strong></p>
+<p align="justify">Atualmente na versão 3, idealmente devemos criar plugins para a pasta vendor, que são hospedados num repositório público, como o GitHub e publicados num repositório do composer, como o Packagist. Assim podemos instalar e publicar o plugin pela linha de comando com o composer.</p>
+<p align="left"> </p>
+<p align="left"><strong>A oitava maravilha do mundo</strong></p>
+<p align="left">Gosto de dizer que o bake é a oitava maravilha do mundo da programação web. Realmente me maravilho com seus resultados mágicos e ele me prende ao Cake.</p>
+<p align="left"><strong>Mas gostaria de deixar aqui um alerta</strong>, especialmente para o programador iniciante: evite ficar preso somente ao bake e se satisfazer com o resultado dele. Ao contrário estude o código gerado por ele, que por sinal é muito bom, para então conseguir adaptar seus aplicativos para as tuas necessidades e dos teus clientes.</p>
+<p align="left">Comodismo é algo que acaba com o programador e me parece que com qualquer área da vida do ser humano. A curiosidade, a motivação, o interesse em estudar, aprender, mexer, customizar, isso sim, devem estar presentes na vida do programador e do ser humano, me parece.</p>
+<p align="left">Detalhes - <a href="https://book.cakephp.org/bake/1.x/en/index.html">https://book.cakephp.org/bake/1.x/en/index.html</a></p> 	</div>
+
+	
+	
+				
+	
+	
+	
+</article>
+
+</body>
+</html>

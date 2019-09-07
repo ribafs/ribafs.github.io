@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br" dir="ltr">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <base href="" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Ribamar FS" />
+	<meta name="robots" content="noindex, nofollow" />
+	<meta name="description" content="Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros." />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>Usando locales com PHP - RibaFS Portal</title>
+	<link href="http://ribafs.org/portal/basicos/php/usando-locales-com-php.html?tmpl=component&amp;print=1&amp;layout=default" rel="canonical" />
+	<link href="../../templates/shaper_helix3/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../../favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<script src="../../media/jui/js/jquery.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../media/jui/js/jquery-noconflict.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../media/jui/js/jquery-migrate.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="http://backup/portal/media/system/js/caption.js?d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script type="text/javascript">
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+	</script>
+	<meta property="og:url" content="http://backup/portal/basicos/php/usando-locales-com-php.html" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Usando locales com PHP" />
+	<meta property="og:description" content="Usando locales com PHP setlocale(LC_ALL, 'pt_BR', 'pt_BR.utf-8', 'pt_BR.utf-8', 'portuguese'); $float = 1500.87; setlocale(LC_MONETARY, 'pt_BR.UTF-8'); ech..." />
+
+   	<link rel="stylesheet" href="../../media/jui/css/bootstrap.min.css" type="text/css" />
+	<link rel="stylesheet" href="../../templates/shaper_helix3/css/frontend-edit.css" type="text/css" />
+    <link rel="stylesheet" href="../../templates/shaper_helix3/css/template.css" type="text/css" />
+</head>
+<body class="contentpane">
+	<div id="system-message-container">
+	</div>
+
+	
+
+<article class="item item-page" itemscope itemtype="http://schema.org/Article">
+	<meta itemprop="inLanguage" content="pt-BR" />
+	
+	
+
+	<div class="entry-header">
+		<span class="post-format"><i class="fa fa-thumb-tack"></i></span>
+		
+					<h2 itemprop="name">
+									Usando locales com PHP							</h2>
+												</div>
+
+						<div id="pop-print" class="btn hidden-print">
+				<a href="usando-locales-com-php.html#" onclick="window.print();return false;">			<span class="icon-print" aria-hidden="true"></span>
+		Imprimir	</a>			</div>
+				
+	
+	
+				
+	
+			<div itemprop="articleBody">
+		<h4>Usando locales com PHP</h4>
+
+<p>setlocale(LC_ALL, 'pt_BR', 'pt_BR.utf-8', 'pt_BR.utf-8', 'portuguese');</p>
+
+<p><br />$float = 1500.87;<br /><br />setlocale(LC_MONETARY, 'pt_BR.UTF-8');<br /><br />echo money_format('%n', $float);   // Imprime: R$ 1.500,87<br />echo money_format('%i', $float);   // Imprime: BRL 1.500,87<br />print '&lt;br&gt;&lt;br&gt;';<br /><br />$time = mktime(0, 0, 0, 9, 26, 2012);<br /><br />setlocale(LC_TIME, 'pt_BR.UTF-8');<br />echo strftime('%A, %d de %B de %Y', $time);<br /><br /><strong>Referências</strong><br /><a href="https://rubsphp.blogspot.com.br/2012/09/trabalhando-com-localidade-em-php-usando-setlocale.html?m=0">https://rubsphp.blogspot.com.br/2012/09/trabalhando-com-localidade-em-php-usando-setlocale.html?m=0</a> <br /><br /></p> 	</div>
+
+	
+	
+				
+	
+	
+	
+</article>
+
+</body>
+</html>

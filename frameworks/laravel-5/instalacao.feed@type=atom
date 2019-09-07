@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="Joomla! - Open Source Content Management" -->
+<feed xmlns="http://www.w3.org/2005/Atom"  xml:lang="pt-br">
+	<title type="text">Instalação - RibaFS Portal</title>
+	<subtitle type="text">Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros.</subtitle>
+	<link rel="alternate" type="text/html" href="http://backup"/>
+	<id>http://backup/portal/frameworks/laravel-5/instalacao.feed</id>
+	<updated>2019-09-07T18:59:38-03:00</updated>
+	<author>
+		<name>RibaFS Portal</name>
+	</author>
+	<generator uri="https://www.joomla.org">Joomla! - Open Source Content Management</generator>
+	<link rel="self" type="application/atom+xml" href="http://backup/portal/frameworks/laravel-5/instalacao.feed?type=atom"/>
+	<entry>
+		<title>Instalação do Laravel</title>
+		<link rel="alternate" type="text/html" href="http://backup/portal/frameworks/laravel-5/instalacao/instalacao-do-laravel.html"/>
+		<published>2017-06-25T21:08:35-03:00</published>
+		<updated>2017-06-25T21:08:35-03:00</updated>
+		<id>http://backup/portal/frameworks/laravel-5/instalacao/instalacao-do-laravel.html</id>
+		<author>
+			<name>Ribamar FS</name>
+		</author>
+		<summary type="html">&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Instalar o Laravel com o Composer Globalmente no Linux&lt;br /&gt;&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;Abrir Terminal e executar&lt;br /&gt;composer global require &quot;laravel/installer&quot;&lt;br /&gt;&lt;br /&gt;Agora para criar os projetos se coloca o laravel no path assim (Ubuntu e derivados):&lt;br /&gt;echo 'export PATH=&quot;$PATH:$HOME/.config/composer/vendor/bin&quot;' &amp;gt;&amp;gt; ~/.bashrc&lt;br /&gt;&lt;br /&gt;Fechar o terminal e abrir novamente para surtir efeito&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Teste assim:&lt;br /&gt;laravel new blog&lt;br /&gt;&lt;br /&gt;Executar o aplicativo com o servidor interno do PHP&lt;br /&gt;php artisan serve&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Ver pelo navegador&lt;br /&gt;http://127.0.0.1:8000&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Outra forma de instalar o laravel, desta vez um laravel por projeto, usando o composer&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;composer create-project --prefer-dist laravel/laravel blog&lt;br /&gt;&lt;br /&gt;Ajuste as permissões, se em linux e execute&lt;br /&gt;&lt;br /&gt;Usando Apache ou outro servidor web&lt;br /&gt;http://localhost/blog&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;Criar um VirtualHost&lt;br /&gt;&lt;br /&gt;Ao criar e chamar pelo navegador com tela em branco&lt;br /&gt;Sete as permissões&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Obs.: Se precisar de ajuda para estes últimos veja a seção Servidor aqui do site.&lt;/p&gt;</summary>
+		<content type="html">&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Instalar o Laravel com o Composer Globalmente no Linux&lt;br /&gt;&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;Abrir Terminal e executar&lt;br /&gt;composer global require &quot;laravel/installer&quot;&lt;br /&gt;&lt;br /&gt;Agora para criar os projetos se coloca o laravel no path assim (Ubuntu e derivados):&lt;br /&gt;echo 'export PATH=&quot;$PATH:$HOME/.config/composer/vendor/bin&quot;' &amp;gt;&amp;gt; ~/.bashrc&lt;br /&gt;&lt;br /&gt;Fechar o terminal e abrir novamente para surtir efeito&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Teste assim:&lt;br /&gt;laravel new blog&lt;br /&gt;&lt;br /&gt;Executar o aplicativo com o servidor interno do PHP&lt;br /&gt;php artisan serve&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Ver pelo navegador&lt;br /&gt;http://127.0.0.1:8000&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Outra forma de instalar o laravel, desta vez um laravel por projeto, usando o composer&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;composer create-project --prefer-dist laravel/laravel blog&lt;br /&gt;&lt;br /&gt;Ajuste as permissões, se em linux e execute&lt;br /&gt;&lt;br /&gt;Usando Apache ou outro servidor web&lt;br /&gt;http://localhost/blog&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;Criar um VirtualHost&lt;br /&gt;&lt;br /&gt;Ao criar e chamar pelo navegador com tela em branco&lt;br /&gt;Sete as permissões&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Obs.: Se precisar de ajuda para estes últimos veja a seção Servidor aqui do site.&lt;/p&gt;</content>
+		<category term="Instalação" />
+	</entry>
+</feed>

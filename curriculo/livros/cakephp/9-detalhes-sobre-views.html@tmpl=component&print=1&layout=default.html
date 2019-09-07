@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br" dir="ltr">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <base href="" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Ribamar FS" />
+	<meta name="robots" content="noindex, nofollow" />
+	<meta name="description" content="Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros." />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>9 - Detalhes sobre Views - RibaFS Portal</title>
+	<link href="http://ribafs.org/portal/curriculo/livros/cakephp/9-detalhes-sobre-views.html?tmpl=component&amp;print=1&amp;layout=default" rel="canonical" />
+	<link href="../../../templates/shaper_helix3/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../../../favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="http://backup/portal/media/plg_content_prismsyntaxhighlighter/css/prism-okaidia.css" rel="stylesheet" type="text/css" />
+	<link href="http://backup/portal/media/plg_content_prismsyntaxhighlighter/css/prism-linenumbers.css" rel="stylesheet" type="text/css" />
+	<script src="http://backup/portal/media/plg_content_prismsyntaxhighlighter/js/prism-tinymce.js" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery-noconflict.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery-migrate.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="http://backup/portal/media/system/js/caption.js?d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script type="text/javascript">
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+	</script>
+	<meta property="og:url" content="http://backup/portal/curriculo/livros/cakephp/9-detalhes-sobre-views.html" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="9 - Detalhes sobre Views" />
+	<meta property="og:description" content="9 – Detalhes sobre Views Eu gosto do impossível porque lá a concorrência é menor. Walt Disney As Views representam o V de MVC. Elas são responsáveis por ge..." />
+
+   	<link rel="stylesheet" href="../../../media/jui/css/bootstrap.min.css" type="text/css" />
+	<link rel="stylesheet" href="../../../templates/shaper_helix3/css/frontend-edit.css" type="text/css" />
+    <link rel="stylesheet" href="../../../templates/shaper_helix3/css/template.css" type="text/css" />
+</head>
+<body class="contentpane">
+	<div id="system-message-container">
+	</div>
+
+	
+
+<article class="item item-page" itemscope itemtype="http://schema.org/Article">
+	<meta itemprop="inLanguage" content="pt-BR" />
+	
+	
+
+	<div class="entry-header">
+		<span class="post-format"><i class="fa fa-thumb-tack"></i></span>
+		
+					<h2 itemprop="name">
+									9 - Detalhes sobre Views							</h2>
+												</div>
+
+						<div id="pop-print" class="btn hidden-print">
+				<a href="9-detalhes-sobre-views.html#" onclick="window.print();return false;">			<span class="icon-print" aria-hidden="true"></span>
+		Imprimir	</a>			</div>
+				
+	
+	
+				
+	
+			<div itemprop="articleBody">
+		<h3>9 – Detalhes sobre Views</h3>
+<p align="right"><em><strong>Eu gosto do impossível porque lá a concorrência é menor.</strong></em></p>
+<p align="right">Walt Disney</p>
+<p align="justify">As Views representam o V de MVC. Elas são responsáveis por gerar a saída específica para a requisição do usuário. Geralmente a saída é em HTML, mas também pode ser em XML, JSON, PDF e outras.</p>
+<p>O CakePHP conta com uma grande quantidade de classes embutidas para manipulação o mais comum dos cenários a renderizar:</p>
+<p>- Para criar webservers XML ou JSON que podemos usar nas views</p>
+<p>- Para servir arquivos protegidos, ou arquivos gerados dinamicamente</p>
+<p>- Para criar múltiplas views com templates</p>
+<p>A AppView</p>
+<p>A classe AppView é a classe View default. Em si ela estende a classe View e é definida em src\View\AppView.php assim:</p>
+<pre>&lt;?php
+namespace App\View;
+
+use Cake\View\View;
+
+class AppView extends View
+{
+}</pre>
+<p align="justify">Podemos usar AppView para carregar Helper (no método initialize()), mas geralmente os helpers criados e adicionados a src\View\Helper já ficam automaticamente disponíveis para as views dos templates.</p>
+<p> </p>
+<p><strong>Views Template</strong></p>
+<p>A camada de views do CakePHP é a forma de nos comunicarmos com o usuário da aplicação.</p>
+<p align="justify">A extensão default das views é .ctp (CakePHP Template) e utiliza uma sintaxe alternativa em PHP para estruturas de controle e saída. Estes arquivos contem a lógica necessária para preparar os dados recebidos do controller no formato de apresentação que está pronto para a nossa audiência.</p>
+<p align="justify">O CakePHP espera que os nossos templates sigam a convenção de nomenclatura onde o nome do template é a versão minúscula e grifada do nome do respectivo action do controller.</p>
+<p align="left"> </p>
+<p><strong>Partes de uma View</strong></p>
+<p align="justify">A camada View no CakePHP pode ser formada por algumas partes. Cada parte tem diferentes usos e será coberta neste tutorial:</p>
+<p>- templates: Templates são a parte da página que é única para o action começar a rodar;</p>
+<p><a name="result_box1"></a> <span style="font-family: Times New Roman, serif;"><span lang="pt-PT">Elas são a parte principal da resposta do aplicativo.</span> Arquivos de template do CakePHP são armazenados em <strong>src/Template</strong> dentro de uma pasta com o nome do controller correspondente e com extensão .ctp.</span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><a href="https://book.cakephp.org/3.0/en/views.html#view-templates">https://book.cakephp.org/3.0/en/views.html#view-templates</a> </span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;">- <b>elements</b>: pequenos, reusáveis pedaços de código da view. Elements geralmente são renderizados dentro da view. Documentação oficial:</span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><a href="http://book.cakephp.org/3.0/en/views.html#elements">http://book.cakephp.org/3.0/en/views.html#elements</a> </span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;">- <b>layouts</b>: são arquivos de templates que contém código de apresentação que envolve muitas interfaces na sua aplicação. Muitas views são renderizadas dentro de um layout. Os layouts incorporam templates: index, add, edit, login, etc.</span></p>
+<p><span style="font-family: Times New Roman, serif;">Um layout é um conjunto de códigos encontrado ao redor das views. Múltiplos layouts podem ser definidos, e você pode alterar entre eles, mas agora, vamos usar o default, localziado em <strong>src/Template/Layout/default.ctp</strong>.</span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><a href="http://book.cakephp.org/3.0/en/views.html#layouts">http://book.cakephp.org/3.0/en/views.html#layouts</a> </span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;">- <b>helpers</b>: estas classes encapsulam lógica de views que são necessárias em muitos lugares na camada view. Entre outras coisas os helpers no CakePHP podem ajudar você a construir forms, criar funcionalidade AJAX, paginar modelo de dados, etc.</span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><a href="http://book.cakephp.org/3.0/en/views/helpers.html">http://book.cakephp.org/3.0/en/views/helpers.html</a> </span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;">- <b>cells</b>: estas classes oferecem uma miniatura tipo as características dos controllers para a criação de componentes UI auto contidos. Veja a documentação para mais informações:</span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><a href="http://book.cakephp.org/3.0/en/views/cells.html"><span style="font-family: Times New Roman, serif;">http://book.cakephp.org/3.0/en/views/cells.html</span></a></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"> </p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><b>Dicas sobre Views</b></span></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><b>Título do Aplicativo</b></span></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;">- Adicionar ao AppController.php:</span></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"> </p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><i> function beforeFilter(Event $event){</i></span></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><i> $this-&gt;set('title_for_layout','Controle de Finanças Pessoais');</i></span></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><i> }</i></span></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"> </p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;">- Será usado no Layout/default.ctp, aqui assim:</span></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"> </p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><i>&lt;title&gt;</i></span></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><i>&lt;?= $cakeDescription ?&gt;:</i></span></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><i>&lt;?php echo $title_for_layout;?&gt;</i></span></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><i>&lt;/title&gt;</i></span></span></p>
+<p style="margin-bottom: 0cm; font-style: normal; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;">E no body</span></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;">…</p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><i>&lt;li class="name"&gt;</i></span></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><i>&lt;h1&gt;&lt;a href="/portal/"&gt;&lt;?php echo $title_for_layout;?&gt;&lt;/a&gt;&lt;/h1&gt;</i></span></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><i>&lt;/li&gt;</i></span></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"> </p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;">Isso mostrará no title do navegador a variável $title_for_layout definida no AppController e também no body, no h1.</span></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"> </p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><b>T</b><b>rocando campo do tipo text por select:</b></span></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><i>$options = array(''=&gt;'Selecione','colegioelias' =&gt; 'Colégio do Elias', 'eliasmesada'=&gt;'Elias Mesada','eliasmerenda'=&gt;'Elias Merenda','meire' =&gt; 'Meire Salário', 'coelce'=&gt;'COELCE', 'condominio'=&gt;'Condomínio Ferreira', 'gvt'=&gt;'GVT', 'carnes'=&gt;'Carnes','mercantil'=&gt;'Mercantil','almoco'=&gt;'Almoço Trabalho','passagens'=&gt;'Passagens','remedio'=&gt;'Remédio');</i></span></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"> </p>
+<p style="margin-bottom: 0cm; font-style: normal; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;">Usando o $options:</span></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><i> echo $this-&gt;Form-&gt;input('descricao', array('type'=&gt;'select','label' =&gt; 'Descrição da Despesa','options' =&gt; $options,'default'=&gt;'0'));</i></span></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;" align="left"> </p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><b>Algumas views típicas:</b></span></p>
+<pre class="language-php"><code>&lt;!-- File: src/Template/Articles/add.ctp --&gt;
+
+&lt;h1&gt;Add Article&lt;/h1&gt;
+&lt;?php
+    echo $this-&gt;Form-&gt;create($article);
+    echo $this-&gt;Form-&gt;control('title');
+    echo $this-&gt;Form-&gt;control('body', ['rows' =&gt; '3']);
+    echo $this-&gt;Form-&gt;button(__('Save Article'));
+    echo $this-&gt;Form-&gt;end();
+?&gt;
+
+&lt;!-- File: src/Template/Articles/edit.ctp --&gt;
+
+&lt;h1&gt;Edit Article&lt;/h1&gt;
+&lt;?php
+    echo $this-&gt;Form-&gt;create($article);
+    echo $this-&gt;Form-&gt;control('title');
+    echo $this-&gt;Form-&gt;control('body', ['rows' =&gt; '3']);
+    echo $this-&gt;Form-&gt;button(__('Save Article'));
+    echo $this-&gt;Form-&gt;end();
+?&gt;
+
+&lt;!-- File: src/Template/Articles/view.ctp --&gt;
+
+&lt;h1&gt;&lt;?= h($article-&gt;title) ?&gt;&lt;/h1&gt;
+&lt;p&gt;&lt;?= h($article-&gt;body) ?&gt;&lt;/p&gt;
+&lt;p&gt;&lt;small&gt;Created: &lt;?= $article-&gt;created-&gt;format(DATE_RFC850) ?&gt;&lt;/small&gt;&lt;/p&gt;
+
+
+&lt;!-- File: src/Template/Articles/index.ctp  (edit links added) --&gt;
+
+&lt;!-- File: src/Template/Articles/index.ctp (delete links added) --&gt;
+
+&lt;h1&gt;Blog articles&lt;/h1&gt;
+&lt;p&gt;&lt;?= $this-&gt;Html-&gt;link('Add Article', ['action' =&gt; 'add']) ?&gt;&lt;/p&gt;
+&lt;table&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Id&lt;/th&gt;
+        &lt;th&gt;Title&lt;/th&gt;
+        &lt;th&gt;Created&lt;/th&gt;
+        &lt;th&gt;Actions&lt;/th&gt;
+    &lt;/tr&gt;
+
+&lt;!-- Here's where we loop through our $articles query object, printing out article info --&gt;
+
+    &lt;?php foreach ($articles as $article): ?&gt;
+    &lt;tr&gt;
+        &lt;td&gt;&lt;?= $article-&gt;id ?&gt;&lt;/td&gt;
+        &lt;td&gt;
+            &lt;?= $this-&gt;Html-&gt;link($article-&gt;title, ['action' =&gt; 'view', $article-&gt;id]) ?&gt;
+        &lt;/td&gt;
+        &lt;td&gt;
+            &lt;?= $article-&gt;created-&gt;format(DATE_RFC850) ?&gt;
+        &lt;/td&gt;
+        &lt;td&gt;
+            &lt;?= $this-&gt;Form-&gt;postLink(
+                'Delete',
+                ['action' =&gt; 'delete', $article-&gt;id],
+                ['confirm' =&gt; 'Are you sure?'])
+            ?&gt;
+            &lt;?= $this-&gt;Html-&gt;link('Edit', ['action' =&gt; 'edit', $article-&gt;id]) ?&gt;
+        &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;?php endforeach; ?&gt;
+
+&lt;/table&gt;
+
+&lt;!-- File: src/Template/Users/login.ctp --&gt;
+&lt;div class="users form"&gt;
+&lt;?= $this-&gt;Flash-&gt;render() ?&gt;
+&lt;?= $this-&gt;Form-&gt;create() ?&gt;
+    &lt;fieldset&gt;
+        &lt;legend&gt;&lt;?= __('Please enter your username and password') ?&gt;&lt;/legend&gt;
+        &lt;?= $this-&gt;Form-&gt;control('username') ?&gt;
+        &lt;?= $this-&gt;Form-&gt;control('password') ?&gt;
+    &lt;/fieldset&gt;
+&lt;?= $this-&gt;Form-&gt;button(__('Login')); ?&gt;
+&lt;?= $this-&gt;Form-&gt;end() ?&gt;
+&lt;/div&gt;
+</code></pre>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><b>Detalhes em</b></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><a href="http://book.cakephp.org/3.0/en/views.html">http://book.cakephp.org/3.0/en/views.html</a> </span></p>
+<h2 class="western"> </h2> 	</div>
+
+	
+	
+				
+	
+	
+	
+</article>
+
+</body>
+</html>

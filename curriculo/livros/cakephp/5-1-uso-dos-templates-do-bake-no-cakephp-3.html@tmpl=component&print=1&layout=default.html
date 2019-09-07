@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br" dir="ltr">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <base href="" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Ribamar FS" />
+	<meta name="robots" content="noindex, nofollow" />
+	<meta name="description" content="Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros." />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>5.1 - Uso dos templates do bake no CakePHP 3 - RibaFS Portal</title>
+	<link href="http://ribafs.org/portal/curriculo/livros/cakephp/5-1-uso-dos-templates-do-bake-no-cakephp-3.html?tmpl=component&amp;print=1&amp;layout=default" rel="canonical" />
+	<link href="../../../templates/shaper_helix3/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../../../favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="http://backup/portal/media/plg_content_prismsyntaxhighlighter/css/prism-okaidia.css" rel="stylesheet" type="text/css" />
+	<link href="http://backup/portal/media/plg_content_prismsyntaxhighlighter/css/prism-linenumbers.css" rel="stylesheet" type="text/css" />
+	<script src="http://backup/portal/media/plg_content_prismsyntaxhighlighter/js/prism-tinymce.js" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery-noconflict.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery-migrate.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="http://backup/portal/media/system/js/caption.js?d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script type="text/javascript">
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+	</script>
+	<meta property="og:url" content="http://backup/portal/curriculo/livros/cakephp/5-1-uso-dos-templates-do-bake-no-cakephp-3.html" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="5.1 - Uso dos templates do bake no CakePHP 3" />
+	<meta property="og:description" content="5.1 - Uso dos templates do bake no CakePHP 3 A causa da derrota, não está nos obstáculos, ou no rigor das circunstâncias, está na falta de determinação e d..." />
+
+   	<link rel="stylesheet" href="../../../media/jui/css/bootstrap.min.css" type="text/css" />
+	<link rel="stylesheet" href="../../../templates/shaper_helix3/css/frontend-edit.css" type="text/css" />
+    <link rel="stylesheet" href="../../../templates/shaper_helix3/css/template.css" type="text/css" />
+</head>
+<body class="contentpane">
+	<div id="system-message-container">
+	</div>
+
+	
+
+<article class="item item-page" itemscope itemtype="http://schema.org/Article">
+	<meta itemprop="inLanguage" content="pt-BR" />
+	
+	
+
+	<div class="entry-header">
+		<span class="post-format"><i class="fa fa-thumb-tack"></i></span>
+		
+					<h2 itemprop="name">
+									5.1 - Uso dos templates do bake no CakePHP 3							</h2>
+												</div>
+
+						<div id="pop-print" class="btn hidden-print">
+				<a href="5-1-uso-dos-templates-do-bake-no-cakephp-3.html#" onclick="window.print();return false;">			<span class="icon-print" aria-hidden="true"></span>
+		Imprimir	</a>			</div>
+				
+	
+	
+				
+	
+			<div itemprop="articleBody">
+		<h3>5.1 - Uso dos templates do bake no CakePHP 3</h3>
+<p style="margin-bottom: 0cm; line-height: 100%;" align="right"> </p>
+<p style="margin-bottom: 0cm; line-height: 100%;" align="right"><i><b>A causa da derrota, não está nos obstáculos, ou no rigor das circunstâncias, está na falta de determinação e desistência da própria pessoa. </b></i><span style="font-style: normal;"><span style="font-weight: normal;">(Buda)</span></span></p>
+<p> </p>
+<p><strong>Na pasta dos fontes do CakePHP 3 temos:</strong></p>
+<p>vendor/cakephp/bake/src/Template/Bake</p>
+<p>vendor/cakephp/bake/src/Template/Bake/Element</p>
+<p>vendor/cakephp/bake/src/Template/Bake/Form</p>
+<p>vendor/cakephp/bake/src/Template/Bake/Controller</p>
+<p>vendor/cakephp/bake/src/Template/Bake/Model</p>
+<p>Entre outras pastas.</p>
+<p> </p>
+<p>Desde a versão 0.1.0 usa-se as tags do ASP no template do bake do CakePHP, que ainda são aceitas na versão 3, mas com previsão de serem removidas na versão 4:</p>
+<p>• &lt;% A Bake template php open tag</p>
+<p>• %&gt; A Bake template php close tag</p>
+<p>• &lt;%= A Bake template php short-echo tag</p>
+<p>• &lt;%- A Bake template php open tag, stripping any leading whitespace before the tag</p>
+<p>• -%&gt; A Bake template php close tag, stripping trailing whitespace after the tag</p>
+<p> </p>
+<p><strong>Adiconar também login e logout na geração de código com o Bake.</strong></p>
+<p>Para isso mude o arquivo config/bootstrap_cli.php</p>
+<p>E deixe assim:</p>
+<pre class="language-php"><code>&lt;?php
+
+use Cake\Core\Configure;
+use Cake\Core\Exception\MissingPluginException;
+use Cake\Event\Event;
+use Cake\Event\EventManager;
+
+Configure::write('Log.debug.file', 'cli-debug');
+Configure::write('Log.error.file', 'cli-error');
+
+try {
+    $this-&gt;addPlugin('Bake');
+} catch (MissingPluginException $e) {
+// Do not halt if the plugin is missing
+}
+
+EventManager::instance()-&gt;on(
+    'Bake.beforeRender.Controller.controller',
+    function (Event $event) {
+        $view = $event-&gt;subject();
+        if ($view-&gt;viewVars['name'] == 'Users') {
+// add the login and logout actions to the Users controller
+            $view-&gt;viewVars['actions'] = [
+                'login',
+                'logout',
+                'index',
+                'view',
+                'add',
+                'edit',
+                'delete',
+            ];
+        }
+    }
+);
+$this-&gt;addPlugin('Migrations');
+</code></pre>
+<p> </p>
+<p>Agora, ao gerar código com o bake assim:</p>
+<p>bin/cake bake all users</p>
+<p>Ele gerará também os actions login() e logout() e também o template login.ctp</p>
+<p> </p>
+<p>O Bake usa em seus templates atualmente, na versão 3.7.8, a sintaxe do twig, inclusive seus arquivos tem extensão twig.</p>
+<p>Veja por exemplo, parte do código do arquivo vendor/cakephp/bake/src/Template/Bake/Element/form.twig abaixo:</p>
+<p> </p>
+<pre class="language-php"><code>{% set fields = Bake.filterFields(fields, schema, modelObject) %}
+&lt;nav class="large-3 medium-4 columns" id="actions-sidebar"&gt;
+&lt;ul class="side-nav"&gt;
+&lt;li class="heading"&gt;&lt;?= __('Actions') ?&gt;&lt;/li&gt;
+{% if strpos(action, 'add') is same as(false) %}
+&lt;li&gt;&lt;?= $this-&gt;Form-&gt;postLink(
+__('Delete'),
+['action' =&gt; 'delete', ${{ singularVar }}-&gt;{{ primaryKey[0] }}],
+['confirm' =&gt; __('Are you sure you want to delete # {0}?', ${{ singularVar }}-&gt;{{ primaryKey[0] }})]
+)
+?&gt;&lt;/li&gt;
+{% endif %}
+&lt;li&gt;&lt;?= $this-&gt;Html-&gt;link(__('List {{ pluralHumanName }}'), ['action' =&gt; 'index']) ?&gt;&lt;/li&gt;
+{{- "\n" }}</code></pre>
+<p> </p>
+<p><strong>A versão atual (3.7.8) ainda aceita a sintaxe abaixo:</strong></p>
+<p>• &lt;% A Bake template php open tag</p>
+<p>• %&gt; A Bake template php close tag</p>
+<p>• &lt;%= A Bake template php short-echo tag</p>
+<p>• &lt;%- A Bake template php open tag, stripping any leading whitespace before the tag</p>
+<p>• -%&gt; A Bake template php close tag, stripping trailing whitespace after the tag</p>
+<p><strong>Com estes a extensão deve ser .ctp</strong></p>
+<p> </p>
+<p><strong>A partir da versão 2.0.0 do Cake a sintaxe passou a usar Twig, inclusive na extensão dos arquivos:</strong></p>
+<p>• {% A Bake template php open tag</p>
+<p>• %} A Bake template php close tag</p>
+<p>• {%= A Bake template php short-echo tag</p>
+<p>• {%- A Bake template php open tag, stripping any leading whitespace before the tag</p>
+<p>• -%} A Bake template php close tag, stripping trailing whitespace after the tag</p>
+<p> </p>
+<p><strong>Usa também para as seções de comentários:</strong></p>
+<p>{#</p>
+<p>e</p>
+<p>#}</p>
+<p> </p>
+<p><strong>Agora veja o arquivo form.ctp usado no plugin ribafs/admin-br em sua versão 1.8</strong>, onde adicionei suporte para o Bootstrap 3:</p>
+<pre class="language-php"><code>&lt;%
+/**
+* CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
+* Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
+*
+* Licensed under The MIT License
+* For full copyright and license information, please see the LICENSE.txt
+* Redistributions of files must retain the above copyright notice.
+*
+* Slightly modified by Òscar Casajuana for the twbs-cake-plugin
+* also under the MIT license.
+*
+* @copyright Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
+* @link http://cakephp.org CakePHP(tm) Project
+* @since 0.1.0
+* @license http://www.opensource.org/licenses/mit-license.php MIT License
+*/
+use Cake\Utility\Inflector;
+
+$fields = collection($fields)-&gt;filter(function($field) use ($schema) {
+return $schema-&gt;columnType($field) !== 'binary';
+});
+
+$pk = "\${$singularVar}-&gt;{$primaryKey[0]}";
+%&gt;
+
+&lt;div class="container"&gt;
+&lt;div class="actions columns col-lg-2 col-md-3"&gt;
+&lt;h3&gt;&lt;?= __('Ações') ?&gt;&lt;/h3&gt;
+&lt;ul class="nav nav-stacked nav-pills"&gt;
+&lt;% if (strpos($action, 'add') === false): %&gt;
+&lt;li class="active disabled"&gt;&lt;?= $this-&gt;Html-&gt;link(__('Editar &lt;%= $singularHumanName %&gt;'), ['action' =&gt; 'edit', &lt;%= $pk %&gt;]) ?&gt; &lt;/li&gt;
+&lt;li&gt;&lt;?= $this-&gt;Form-&gt;postLink(__('Excluir'),['action' =&gt; 'delete', &lt;%= $pk %&gt;],['confirm' =&gt; __('Deseja realmente excluir # {0}?', $&lt;%= $singularVar %&gt;-&gt;&lt;%= $primaryKey[0] %&gt;), 'class' =&gt; 'btn-danger'])
+?&gt;&lt;/li&gt;
+&lt;li&gt;&lt;?= $this-&gt;Html-&gt;link(__('Novo(a) &lt;%= $singularHumanName %&gt;'), ['action' =&gt; 'add']) ?&gt;&lt;/li&gt;</code></pre>
+<p> </p>
+<p>Dica - Quando eu estava alterando uma view gerada pelo bake original para uso com Bootstrap, troquei uma tag inicial &lt;nav&gt; por &lt;div&gt; mas esqueci de trocar a tag &lt;/nav&gt; final então ao visualizar pelo navegador a view apareceu em apenas uma coluna. Então devemos ficar bem atentos quando alterarmos o código de um template do bake. Um detalhe importante é que a sintaxe do twig pode ser detectada pelo VSCode ao instalar a extensão abaixo:</p>
+<p>vscode-twig</p>
+<p> </p>
+<p>Isso já ajuda, pois o VSCode já mostra o código colorido, separado em seções e até autocompleta o código e não mais todo em cinza.</p>
+<p>Veja o início do form.ctp do tempalte do bake no plugin:</p>
+<p><a href="https://github.com/elboletaire/twbs-cake-plugin">https://github.com/elboletaire/twbs-cake-plugin</a></p>
+<p> </p>
+<p><strong>Agora vejamos como vem o template do bake na versão atual (3.7.8) do Cake:</strong></p>
+<p>vendor/cake/php/bake/src/Template/Bake/Element/form.twig</p>
+<pre class="language-php"><code>{#
+/**
+* CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
+* Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
+*
+* Licensed under The MIT License
+* For full copyright and license information, please see the LICENSE.txt
+* Redistributions of files must retain the above copyright notice.
+*
+* @copyright Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
+* @link http://cakephp.org CakePHP(tm) Project
+* @since 2.0.0
+* @license http://www.opensource.org/licenses/mit-license.php MIT License
+*/
+#}
+{% set fields = Bake.filterFields(fields, schema, modelObject) %}
+&lt;nav class="large-3 medium-4 columns" id="actions-sidebar"&gt;
+&lt;ul class="side-nav"&gt;
+&lt;li class="heading"&gt;&lt;?= __('Actions') ?&gt;&lt;/li&gt;
+{% if strpos(action, 'add') is same as(false) %}</code></pre>
+<p> </p>
+<p>Veja que a extensão é twig e a sintaxe não mais usa as tags ASP, mas a sintaxe do twig.</p>
+<p>Então, se queremos criar um template para o bake que será suportado pela versão 4 do Cake, não devemos usar as tags do ASP mas as do twig.</p>
+<p> </p>
+<p><strong>Customizar o template do bake do CakePHP 3 para usar o Twitter BootStrap.</strong></p>
+<p>Idealmente não devemos alterar o core do Cake. Para isso é importante criar plugins, helpers, componentes, behaviors, etc. Mas para facilitar e apenas exemplificar iremos alterar o core e ao final indicarei um plugin que foi criado para esta finalidade.</p>
+<p> </p>
+<p>Minha fonte de consulta para a documentação do BootStrap 4 é o:</p>
+<p><a href="https://www.w3schools.com/bootstrap4/default.asp">https://www.w3schools.com/bootstrap4/default.asp</a></p>
+<p> </p>
+<p><strong>Vou criar o aplicativo financas</strong></p>
+<p>Com o banco financas e duas tabelas despesas e receitas</p>
+<p>Configurar a rota default para Despesas/index para facilitar o acesso</p>
+<p>Após configurar o banco gerar o código com o template default do bake:</p>
+<p>bin/cake bake all despesas</p>
+<p>bin/cake bake all receitas</p>
+<p> </p>
+<p>Visualizar pelo navegador</p>
+<p><a href="http://localhost/financas">http://localhost/financas</a></p>
+<p>Deixe esta aba do navegador aberta e vamos customizar o template default.</p>
+<p>Para facilitar, primeiro vamoms customizar o template das views geradas e depois customizaremos o templae do bake.</p>
+<p> </p>
+<p><strong>Comecemos por baixar o BootStrap 4:</strong></p>
+<p><a href="https://getbootstrap.com/docs/4.3/getting-started/download/">https://getbootstrap.com/docs/4.3/getting-started/download/</a></p>
+<p>Após descompactar copiamos os arquivos:</p>
+<p>bootstrap-reboot.min.css</p>
+<p>bootstrap.min.css</p>
+<p>bootstrap-grid.min.css</p>
+<p> </p>
+<p><strong>Para webroot/css</strong></p>
+<p>Manterei o CSS default e adicionarei o do BootStrap abaixo para que tenha prioridade.</p>
+<p>E alteramos o <strong>src/Template/Layout/default.ctp</strong> para que fique assim:</p>
+<pre class="language-php"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;?=$this-&gt;Html-&gt;charset()?&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+&lt;title&gt;CakePHP 3 com BootStrap 4&lt;/title&gt;
+&lt;?=$this-&gt;Html-&gt;meta('icon')?&gt;
+
+&lt;?=$this-&gt;Html-&gt;css('base.css')?&gt;
+&lt;?=$this-&gt;Html-&gt;css('style.css')?&gt;
+&lt;?=$this-&gt;Html-&gt;css('bootstrap-reboot.css')?&gt;
+&lt;?=$this-&gt;Html-&gt;css('bootstrap.min.css')?&gt;
+&lt;?=$this-&gt;Html-&gt;css('bootstrap-grid.min.css')?&gt;
+
+&lt;?=$this-&gt;fetch('meta')?&gt;
+&lt;?=$this-&gt;fetch('css')?&gt;
+&lt;?=$this-&gt;fetch('script')?&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;nav class="top-bar expanded" data-topbar role="navigation"&gt;
+    &lt;ul class="title-area col-md-d columns"&gt;
+        &lt;li class="name"&gt;
+        &lt;h1&gt;&lt;a href="/portal/"&gt;CakePHP 3 com BootStrap 4&lt;/a&gt;&lt;/h1&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;
+&lt;?=$this-&gt;Flash-&gt;render()?&gt;
+&lt;div class="container clearfix"&gt;
+&lt;?=$this-&gt;fetch('content')?&gt;
+&lt;/div&gt;
+&lt;footer&gt;
+&lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p> </p>
+<p><strong>Alterar src/Template/Despesas/index.ctp</strong></p>
+<p>Vamos por partes. Primeiro o sidebar:</p>
+<p>&lt;nav class="large-3 medium-4 columns" id="actions-sidebar"&gt;</p>
+<p>&lt;ul class="side-nav"&gt;</p>
+<p>&lt;li class="heading"&gt;&lt;?= __('Actions') ?&gt;&lt;/li&gt;</p>
+<p> </p>
+<p><strong>Troquemos por:</strong></p>
+<p>&lt;div class="actions columns col-lg-2 col-md-3"&gt;</p>
+<p>&lt;h3&gt;&lt;?= __('Actions') ?&gt;&lt;/h3&gt;</p>
+<p>&lt;ul class="nav nav-stacked nav-pills"&gt;</p>
+<p> </p>
+<p><strong>Ao final o index.ctp de Despesas usando o Botstrap ficará assim:</strong></p>
+<p> </p>
+<pre class="language-php"><code>&lt;div class="actions columns col-lg-2 col-md-3"&gt;
+&lt;h3&gt;&lt;?=__('Actions')?&gt;&lt;/h3&gt;
+&lt;ul class="nav nav-stacked nav-pills"&gt;
+&lt;li&gt;&lt;?=$this-&gt;Html-&gt;link(__('New Despesa'), ['action' =&gt; 'add'])?&gt;&lt;/li&gt;
+&lt;li&gt;&lt;?=$this-&gt;Html-&gt;link(__('List Receitas'), ['controller' =&gt; 'Receitas', 'action' =&gt; 'index'])?&gt;&lt;/li&gt;
+&lt;li&gt;&lt;?=$this-&gt;Html-&gt;link(__('New Receita'), ['controller' =&gt; 'Receitas', 'action' =&gt; 'add'])?&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="despesas index col-lg-10 col-md-9 columns"&gt;
+&lt;h3&gt;&lt;?=__('Despesas')?&gt;&lt;/h3&gt;
+&lt;table class="table table-hover table-stripped"&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th scope="col"&gt;&lt;?=$this-&gt;Paginator-&gt;sort('id')?&gt;&lt;/th&gt;
+&lt;th scope="col"&gt;&lt;?=$this-&gt;Paginator-&gt;sort('descricao')?&gt;&lt;/th&gt;
+&lt;th scope="col"&gt;&lt;?=$this-&gt;Paginator-&gt;sort('valor')?&gt;&lt;/th&gt;
+&lt;th scope="col"&gt;&lt;?=$this-&gt;Paginator-&gt;sort('mes')?&gt;&lt;/th&gt;
+&lt;th scope="col"&gt;&lt;?=$this-&gt;Paginator-&gt;sort('created')?&gt;&lt;/th&gt;
+&lt;th scope="col"&gt;&lt;?=$this-&gt;Paginator-&gt;sort('modified')?&gt;&lt;/th&gt;
+&lt;th scope="col"&gt;&lt;?=$this-&gt;Paginator-&gt;sort('receita_id')?&gt;&lt;/th&gt;
+&lt;th scope="col" class="actions"&gt;&lt;?=__('Actions')?&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;?php foreach ($despesas as $despesa): ?&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;?=$this-&gt;Number-&gt;format($despesa-&gt;id)?&gt;&lt;/td&gt;
+&lt;td&gt;&lt;?=h($despesa-&gt;descricao)?&gt;&lt;/td&gt;
+&lt;td&gt;&lt;?=$this-&gt;Number-&gt;format($despesa-&gt;valor)?&gt;&lt;/td&gt;
+&lt;td&gt;&lt;?=h($despesa-&gt;mes)?&gt;&lt;/td&gt;
+&lt;td&gt;&lt;?=h($despesa-&gt;created)?&gt;&lt;/td&gt;
+&lt;td&gt;&lt;?=h($despesa-&gt;modified)?&gt;&lt;/td&gt;
+&lt;td&gt;&lt;?=$despesa-&gt;has('receita') ? $this-&gt;Html-&gt;link($despesa-&gt;receita-&gt;id, ['controller' =&gt; 'Receitas', 'action' =&gt; 'view', $despesa-&gt;receita-&gt;id]) : ''?&gt;&lt;/td&gt;
+&lt;td class="actions"&gt;
+&lt;?=$this-&gt;Html-&gt;link(__('View'), ['action' =&gt; 'view', $despesa-&gt;id])?&gt;
+&lt;?=$this-&gt;Html-&gt;link(__('Edit'), ['action' =&gt; 'edit', $despesa-&gt;id])?&gt;
+&lt;?=$this-&gt;Form-&gt;postLink(__('Del'), ['action' =&gt; 'delete', $despesa-&gt;id], ['confirm' =&gt; __('Are you sure you want to delete # {0}?', $despesa-&gt;id)])?&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;?php endforeach;?&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;div class="paginator"&gt;
+&lt;ul class="pagination"&gt;
+&lt;?=$this-&gt;Paginator-&gt;first('&lt;&lt; ' . __('first'))?&gt;
+&lt;?=$this-&gt;Paginator-&gt;prev('&lt; ' . __('previous'))?&gt;
+&lt;?=$this-&gt;Paginator-&gt;numbers()?&gt;
+&lt;?=$this-&gt;Paginator-&gt;next(__('next') . ' &gt;')?&gt;
+&lt;?=$this-&gt;Paginator-&gt;last(__('last') . ' &gt;&gt;')?&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;?=$this-&gt;Paginator-&gt;counter(['format' =&gt; __('Page {{page}} of {{pages}}, showing {{current}} record(s) out of {{count}} total')])?&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<p> </p>
+<p>E assim procedi com as outras 3 views restantes até concluir.</p>
+<p><strong>Crédito:</strong></p>
+<p>As classes que estou usando do Bootstrap 4, as encontrei no plugin twbs-cake</p>
+<p><a href="https://github.com/elboletaire/twbs-cake-plugin">https://github.com/elboletaire/twbs-cake-plugin</a>. Como este plugin é para o Bootstrap 3 eu converti algumas classes que mudaram para o Bootstrap 4 com ajuda do</p>
+<p><a href="https://www.w3schools.com/bootstrap4/default.asp">https://www.w3schools.com/bootstrap4/default.asp</a></p>
+<p> </p>
+<p align="left"><strong>Detalhes</strong></p>
+<p align="left">Plugin que usa o BootStrap 3 com CakePHP 3 e já com Twig:</p>
+<p align="left"><a href="https://github.com/ribafs/admin-br">https://github.com/ribafs/admin-br</a></p>
+<p align="left"> </p> 	</div>
+
+	
+	
+				
+	
+	
+	
+</article>
+
+</body>
+</html>

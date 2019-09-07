@@ -1,0 +1,467 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="Joomla! - Open Source Content Management" -->
+<feed xmlns="http://www.w3.org/2005/Atom"  xml:lang="pt-br">
+	<title type="text">HTML - RibaFS Portal</title>
+	<subtitle type="text">Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros.</subtitle>
+	<link rel="alternate" type="text/html" href="http://backup"/>
+	<id>http://backup/portal/basicos/html.feed</id>
+	<updated>2019-09-07T18:48:30-03:00</updated>
+	<author>
+		<name>RibaFS Portal</name>
+	</author>
+	<generator uri="https://www.joomla.org">Joomla! - Open Source Content Management</generator>
+	<link rel="self" type="application/atom+xml" href="http://backup/portal/basicos/html.feed?type=atom"/>
+	<entry>
+		<title>Introdução ao HTML</title>
+		<link rel="alternate" type="text/html" href="http://backup/portal/basicos/html/introducao-ao-html.html"/>
+		<published>2017-06-22T16:43:34-03:00</published>
+		<updated>2017-06-22T16:43:34-03:00</updated>
+		<id>http://backup/portal/basicos/html/introducao-ao-html.html</id>
+		<author>
+			<name>Ribamar FS</name>
+		</author>
+		<summary type="html">&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;b&gt;Introdução ao HTML&lt;br /&gt;&lt;/b&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Definição&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;HTML (acrônimo para a expressão inglesa HyperText Markup Language, que significa Linguagem de Marcação de Hipertexto) é uma linguagem de marcação utilizada para produzir páginas na Web. Documentos HTML podem ser interpretados por navegadores.&lt;br /&gt; (Wikipédia)&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;br /&gt; &lt;strong&gt;Ferramentas&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Existe uma grande quantidade de ferramentas para se trabalhar com HTML. Citando apenas minhas preferidas:&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt; gedit do Linux&lt;/strong&gt; - acompanha as principais distribuições Linux&lt;br /&gt;&lt;strong&gt; Netbeans for PHP&lt;/strong&gt; - &lt;a href=&quot;http://netbeans.org&quot;&gt;http://netbeans.org&lt;/a&gt; &lt;br /&gt;&lt;strong&gt; Eclipse PDT&lt;/strong&gt; - &lt;a href=&quot;http://eclipse.org/pdt&quot;&gt;http://eclipse.org/pdt&lt;/a&gt;  (prefira a edição AllInOne se na dúvida)&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt; &lt;/p&gt;</summary>
+		<content type="html">&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;b&gt;Introdução ao HTML&lt;br /&gt;&lt;/b&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Definição&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;HTML (acrônimo para a expressão inglesa HyperText Markup Language, que significa Linguagem de Marcação de Hipertexto) é uma linguagem de marcação utilizada para produzir páginas na Web. Documentos HTML podem ser interpretados por navegadores.&lt;br /&gt; (Wikipédia)&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;br /&gt; &lt;strong&gt;Ferramentas&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Existe uma grande quantidade de ferramentas para se trabalhar com HTML. Citando apenas minhas preferidas:&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt; gedit do Linux&lt;/strong&gt; - acompanha as principais distribuições Linux&lt;br /&gt;&lt;strong&gt; Netbeans for PHP&lt;/strong&gt; - &lt;a href=&quot;http://netbeans.org&quot;&gt;http://netbeans.org&lt;/a&gt; &lt;br /&gt;&lt;strong&gt; Eclipse PDT&lt;/strong&gt; - &lt;a href=&quot;http://eclipse.org/pdt&quot;&gt;http://eclipse.org/pdt&lt;/a&gt;  (prefira a edição AllInOne se na dúvida)&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt; &lt;/p&gt;</content>
+		<category term="HTML" />
+	</entry>
+	<entry>
+		<title>Introdução ao HTML 5</title>
+		<link rel="alternate" type="text/html" href="http://backup/portal/basicos/html/introducao-ao-html-5.html"/>
+		<published>2017-06-22T16:43:34-03:00</published>
+		<updated>2017-06-22T16:43:34-03:00</updated>
+		<id>http://backup/portal/basicos/html/introducao-ao-html-5.html</id>
+		<author>
+			<name>Ribamar FS</name>
+		</author>
+		<summary type="html">&lt;h2 style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;HTML5&lt;/strong&gt;&lt;/h2&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;O HTML5 é a nova versão do HTML.&lt;/strong&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;HTML significa Hyper Text Mark-up Language, linguagem de marcação de texto. Uma linguagem criada para mostrar texto em páginas mas que evoluiu muito e atualmente faz praticamente tudo que outras linguagens mais poderosas fazem. É conhecimento obrigatório para qualquer desenvolvedor web.&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;O HTML 5 permite fazer no navegador o que antes somente faziamos no desktop do PC ou num telefone móvel e sem a necessidade de plugin extra.&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;O HTML é uma linguagem de marcação, que usa tags/etiquetas para o reconhecimento do que fazer. Todos os sites na Internet usam o HTML para que sejam exibidos por um navegador. A maioria das tags tem a tag inicial e a de fechamento, veja exemplo abaixo.&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;O foco do HTML é o conteúdo.&lt;/strong&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Detalhes:&lt;/strong&gt;&lt;br /&gt; http://www.w3schools.com/html/html5_intro.asp&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;Uma página básica e simples em HTML5 deve conter as tags:&lt;/p&gt;
+&lt;pre xml:lang=&quot;html4strict&quot;&gt;[code]&lt;br /&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;br /&gt;&amp;lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&amp;gt;&lt;br /&gt;&amp;lt;head&amp;gt;&lt;br /&gt;&amp;lt;meta charset=&quot;UTF-8&quot;&amp;gt;&lt;br /&gt;&amp;lt;title&amp;gt;Título do site&amp;lt;/title&amp;gt;&lt;br /&gt;&amp;lt;/head&amp;gt;&lt;br /&gt;&amp;lt;body&amp;gt;&lt;br /&gt;&amp;lt;h1&amp;gt;Esta é a parte principal da página&amp;lt;/h1&amp;gt;&lt;br /&gt;&lt;br /&gt;&amp;lt;p&amp;gt;Aqui um texto normal&amp;lt;/p&amp;gt;&lt;br /&gt;&amp;lt;/body&amp;gt;&lt;br /&gt;&amp;lt;/html&amp;gt;&lt;br /&gt;[/code]&lt;/pre&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;Para ser automaticamente reconhecido pelos navegadores deve ter a extensão .htm ou .html.&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;Acima para identificar HTML5 adiciona-se mais uma tag no início do arquivo:&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;Veja que adicionamos a primeira e mudamos a segunda (&amp;lt;html&amp;gt;).&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;Para a criação de um texto em HTML precisamos de um editor de texto e de um navegador.&lt;br /&gt; Tanto podemos usar um editor simples como o bloco de notas, o notepad++ já é melhor e melhor ainda&lt;br /&gt; é uma IDE como o NetBeans.&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;Se criarmos um arquivo chamado teste.html contendo:&lt;/p&gt;
+&lt;pre xml:lang=&quot;html4strict&quot;&gt;[code]&lt;br /&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;br /&gt;&amp;lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&amp;gt;&lt;br /&gt;&amp;lt;head&amp;gt;&lt;br /&gt;&amp;lt;/head&amp;gt;&lt;br /&gt;&amp;lt;body&amp;gt;&lt;br /&gt;&amp;lt;/body&amp;gt;&lt;br /&gt;&amp;lt;/html&amp;gt;&lt;br /&gt;[/code]&lt;/pre&gt;
+&lt;p&gt;Ao abrir num navegador não veremos nada, apenas uma página em branco.&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;Apenas algumas tags mostram conteúdo, outras são apenas estruturais, como html, head, body, etc.&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Validação&lt;/strong&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;O site do w3C tem uma ferramenta da validação online.&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;Acesse&lt;br /&gt; http://validator.w3.org/&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;Clique em Validate by Direct input&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;Cole o código que deseja testar e clique em Check.&lt;br /&gt; Ele fará uma avaliação do seu código, mostrando os erros.&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;Veja que ele apresenta mais duas alternativas de validação: URL e arquivo.&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;O HTML5 trouxe muitos recursos importantes para os sites, tanto para si quanto para seus parceiros &lt;br /&gt; CSS e JavaScript. Basta ver a quantidade de ferramentas que existem e que aparecem a cada dia para&lt;br /&gt; a criação de games para mobile.&lt;/p&gt;</summary>
+		<content type="html">&lt;h2 style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;HTML5&lt;/strong&gt;&lt;/h2&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;O HTML5 é a nova versão do HTML.&lt;/strong&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;HTML significa Hyper Text Mark-up Language, linguagem de marcação de texto. Uma linguagem criada para mostrar texto em páginas mas que evoluiu muito e atualmente faz praticamente tudo que outras linguagens mais poderosas fazem. É conhecimento obrigatório para qualquer desenvolvedor web.&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;O HTML 5 permite fazer no navegador o que antes somente faziamos no desktop do PC ou num telefone móvel e sem a necessidade de plugin extra.&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;O HTML é uma linguagem de marcação, que usa tags/etiquetas para o reconhecimento do que fazer. Todos os sites na Internet usam o HTML para que sejam exibidos por um navegador. A maioria das tags tem a tag inicial e a de fechamento, veja exemplo abaixo.&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;O foco do HTML é o conteúdo.&lt;/strong&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Detalhes:&lt;/strong&gt;&lt;br /&gt; http://www.w3schools.com/html/html5_intro.asp&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;Uma página básica e simples em HTML5 deve conter as tags:&lt;/p&gt;
+&lt;pre xml:lang=&quot;html4strict&quot;&gt;[code]&lt;br /&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;br /&gt;&amp;lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&amp;gt;&lt;br /&gt;&amp;lt;head&amp;gt;&lt;br /&gt;&amp;lt;meta charset=&quot;UTF-8&quot;&amp;gt;&lt;br /&gt;&amp;lt;title&amp;gt;Título do site&amp;lt;/title&amp;gt;&lt;br /&gt;&amp;lt;/head&amp;gt;&lt;br /&gt;&amp;lt;body&amp;gt;&lt;br /&gt;&amp;lt;h1&amp;gt;Esta é a parte principal da página&amp;lt;/h1&amp;gt;&lt;br /&gt;&lt;br /&gt;&amp;lt;p&amp;gt;Aqui um texto normal&amp;lt;/p&amp;gt;&lt;br /&gt;&amp;lt;/body&amp;gt;&lt;br /&gt;&amp;lt;/html&amp;gt;&lt;br /&gt;[/code]&lt;/pre&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;Para ser automaticamente reconhecido pelos navegadores deve ter a extensão .htm ou .html.&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;Acima para identificar HTML5 adiciona-se mais uma tag no início do arquivo:&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;Veja que adicionamos a primeira e mudamos a segunda (&amp;lt;html&amp;gt;).&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;Para a criação de um texto em HTML precisamos de um editor de texto e de um navegador.&lt;br /&gt; Tanto podemos usar um editor simples como o bloco de notas, o notepad++ já é melhor e melhor ainda&lt;br /&gt; é uma IDE como o NetBeans.&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;Se criarmos um arquivo chamado teste.html contendo:&lt;/p&gt;
+&lt;pre xml:lang=&quot;html4strict&quot;&gt;[code]&lt;br /&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;br /&gt;&amp;lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&amp;gt;&lt;br /&gt;&amp;lt;head&amp;gt;&lt;br /&gt;&amp;lt;/head&amp;gt;&lt;br /&gt;&amp;lt;body&amp;gt;&lt;br /&gt;&amp;lt;/body&amp;gt;&lt;br /&gt;&amp;lt;/html&amp;gt;&lt;br /&gt;[/code]&lt;/pre&gt;
+&lt;p&gt;Ao abrir num navegador não veremos nada, apenas uma página em branco.&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;Apenas algumas tags mostram conteúdo, outras são apenas estruturais, como html, head, body, etc.&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Validação&lt;/strong&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;O site do w3C tem uma ferramenta da validação online.&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;Acesse&lt;br /&gt; http://validator.w3.org/&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;Clique em Validate by Direct input&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;Cole o código que deseja testar e clique em Check.&lt;br /&gt; Ele fará uma avaliação do seu código, mostrando os erros.&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;Veja que ele apresenta mais duas alternativas de validação: URL e arquivo.&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;O HTML5 trouxe muitos recursos importantes para os sites, tanto para si quanto para seus parceiros &lt;br /&gt; CSS e JavaScript. Basta ver a quantidade de ferramentas que existem e que aparecem a cada dia para&lt;br /&gt; a criação de games para mobile.&lt;/p&gt;</content>
+		<category term="HTML" />
+	</entry>
+	<entry>
+		<title>Mais sobre HTML</title>
+		<link rel="alternate" type="text/html" href="http://backup/portal/basicos/html/mais-sobre-html.html"/>
+		<published>2017-06-22T16:43:34-03:00</published>
+		<updated>2017-06-22T16:43:34-03:00</updated>
+		<id>http://backup/portal/basicos/html/mais-sobre-html.html</id>
+		<author>
+			<name>Ribamar FS</name>
+		</author>
+		<summary type="html">&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Comentários&lt;/strong&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;Em HTML para comentar um trecho de código usamos:&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&amp;lt;!-- Aqui todo o código&lt;br /&gt; será ignorado pelo navegador.&lt;br /&gt; Ou seja, temos um comentário para&lt;br /&gt; múltiplas linhas.&lt;br /&gt; --&amp;gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Dica sobre o Notepad++&lt;/strong&gt;&lt;br /&gt; Para trabalhar com caracteres UTF-8 e salvar assim:&lt;br /&gt; Formatar - Codificação em UTF-8 (sem BOM)&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Exemplos&lt;/strong&gt;&lt;/p&gt;
+&lt;pre xml:lang=&quot;html4strict&quot;&gt; &lt;/pre&gt;
+&lt;pre class=&quot;language-markup&quot;&gt;&lt;code&gt;&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&amp;gt;
+&amp;lt;head&amp;gt;
+&amp;lt;meta charset=&quot;UTF-8&quot;&amp;gt;
+&amp;lt;title&amp;gt;Título do site&amp;lt;/title&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+&amp;lt;h1&amp;gt;Título nível 1&amp;lt;/h1&amp;gt;
+&amp;lt;h2&amp;gt;Título nível 2&amp;lt;/h2&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;br /&gt; &amp;lt;div&amp;gt;Aqui temos uma divisão lógica&amp;lt;/div&amp;gt;&lt;br /&gt; &lt;br /&gt; &amp;lt;hr&amp;gt;&lt;br /&gt; Acima mostrarei uma linha horizontal.&lt;/p&gt;
+&lt;pre class=&quot;language-markup&quot;&gt;&lt;code&gt;&amp;lt;ol&amp;gt;
+&amp;lt;li&amp;gt;Aqui é um item de uma lista ordenada (ol - ordered list)&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;li significa list item&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;Podemos adicionar tantos itens quantos quizermos&amp;lt;/li&amp;gt;
+&amp;lt;/ol&amp;gt;
+
+&amp;lt;ul&amp;gt;
+&amp;lt;li&amp;gt;Aqui é um item de uma lista não ordenada (ul)&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;li significa list item&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;Podemos adicionar tantos itens quantos quizermos&amp;lt;/li&amp;gt;
+&amp;lt;/ol&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&amp;lt;p&amp;gt;Aqui uma &amp;lt;strong&amp;gt;palavra em negrito&amp;lt;/strong&amp;gt; em &amp;lt;br&amp;gt;&lt;br /&gt; quebra de linha&amp;lt;/p&amp;gt;&lt;br /&gt; &amp;lt;/body&amp;gt;&lt;br /&gt; &amp;lt;/html&amp;gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Exibindo Imagens&lt;/strong&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&amp;lt;img src=&quot;http://backup/portal/logo.png&quot; width=&quot;100&quot; height=&quot;80&quot; alt=&quot;Logomarca&quot;&amp;gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;br /&gt; &lt;strong&gt;Links&lt;/strong&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&amp;lt;a href=&quot;http://ribafs.org&quot; target=&quot;_blank&quot;&amp;gt;RibaFS Portal&amp;lt;/a&amp;gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;target=&quot;_blank&quot; - para abrir a página noutra aba ou janela.&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;Podemos linkar para IDs da página, veja:&lt;/p&gt;
+&lt;pre class=&quot;language-markup&quot;&gt;&lt;code&gt;&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&amp;gt;
+&amp;lt;head&amp;gt;
+&amp;lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html;charset=utf-8&quot; /&amp;gt;
+&amp;lt;title&amp;gt;Título do site&amp;lt;/title&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+&amp;lt;div id=&quot;topo&quot;&amp;gt;Topo da página&amp;lt;/div&amp;gt;
+&amp;lt;h1&amp;gt;Título nível 1&amp;lt;/h1&amp;gt;
+&amp;lt;h2&amp;gt;Título nível 2&amp;lt;/h2&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&amp;lt;div&amp;gt;Aqui temos uma divisão lógica&amp;lt;/div&amp;gt;&lt;br /&gt; &lt;br /&gt; &amp;lt;hr&amp;gt;&lt;br /&gt; Acima mostrarei uma linha horizontal.&lt;/p&gt;
+&lt;pre xml:lang=&quot;html4strict&quot;&gt; &lt;/pre&gt;
+&lt;pre class=&quot;language-markup&quot;&gt;&lt;code&gt;&amp;lt;ol&amp;gt;
+&amp;lt;li&amp;gt;Aqui é um item de uma lista ordenada (ol - ordered list)&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;li significa list item&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;Podemos adicionar tantos itens quantos quizermos&amp;lt;/li&amp;gt;
+&amp;lt;/ol&amp;gt;
+
+&amp;lt;ul&amp;gt;
+&amp;lt;li&amp;gt;Aqui é um item de uma lista não ordenada (ul)&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;li significa list item&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;Podemos adicionar tantos itens quantos quizermos&amp;lt;/li&amp;gt;
+&amp;lt;/ol&amp;gt;
+
+&amp;lt;a href=&quot;http://backup/portal/#topo&quot;&amp;gt;Voltar ao topo&amp;lt;/a&amp;gt;
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;Crie um arquivo chamado links.html e cole o conteúdo acima para testar o link para a mesma página.&lt;br /&gt; Precisará adicionar mais texto no body para que possa rolar a tela e clicar no link que rolará a&lt;br /&gt; tela para o topo.&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;br /&gt; &lt;strong&gt;Link para e-mail&lt;/strong&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&amp;lt;a href=&quot;mailto:ribafs@gmail.com?Subject='E-mail de teste'&quot;&amp;gt;Contato&amp;lt;/a&amp;gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;br /&gt; &lt;strong&gt;Tabelas&lt;/strong&gt;&lt;/p&gt;
+&lt;pre class=&quot;language-markup&quot;&gt;&lt;code&gt;&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&amp;gt;
+&amp;lt;head&amp;gt;
+&amp;lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html;charset=utf-8&quot; /&amp;gt;
+&amp;lt;title&amp;gt;Título do site&amp;lt;/title&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+&amp;lt;div id=&quot;topo&quot;&amp;gt;Topo da página&amp;lt;/div&amp;gt;
+&amp;lt;h1&amp;gt;Título nível 1&amp;lt;/h1&amp;gt;
+
+&amp;lt;table&amp;gt;
+&amp;lt;caption&amp;gt;Minha Tabela HTML5&amp;lt;/caption&amp;gt;
+&amp;lt;tr&amp;gt;&amp;lt;td&amp;gt;Celula 11&amp;lt;/td&amp;gt;&amp;lt;td&amp;gt;Célula 12&amp;lt;/td&amp;gt;&amp;lt;/tr&amp;gt;
+&amp;lt;tr&amp;gt;&amp;lt;td&amp;gt;Celula 21&amp;lt;/td&amp;gt;&amp;lt;td&amp;gt;Célula 22&amp;lt;/td&amp;gt;&amp;lt;/tr&amp;gt;
+&amp;lt;tr&amp;gt;&amp;lt;td&amp;gt;Celula 31&amp;lt;/td&amp;gt;&amp;lt;td&amp;gt;Célula 32&amp;lt;/td&amp;gt;&amp;lt;/tr&amp;gt;
+&amp;lt;/table&amp;gt;
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Formulários&lt;/strong&gt;&lt;br /&gt; Neste assunto o HTML5 trouxe muitas novidades interessantes.&lt;/p&gt;
+&lt;pre class=&quot;language-markup&quot;&gt;&lt;code&gt;&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&amp;gt;
+&amp;lt;head&amp;gt;
+&amp;lt;title&amp;gt;--Formulário Contato--&amp;lt;/title&amp;gt;
+&amp;lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html;charset=utf-8&quot; /&amp;gt;
+&amp;lt;link href=&quot;http://backup/portal/estilo.css&quot; rel=&quot;stylesheet&quot; media=&quot;all&quot; /&amp;gt;
+&amp;lt;script src=&quot;http://backup/portal/script.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+&amp;lt;form name=&quot;meu_form&quot;&amp;gt;
+&amp;lt;h1&amp;gt;Entre em contato&amp;lt;/h1&amp;gt;
+&amp;lt;p class=&quot;nome&quot;&amp;gt;
+&amp;lt;input type=&quot;text&quot; id=&quot;nomeid&quot; placeholder=&quot;Tiago Vale&quot; required=&quot;required&quot; name=&quot;nome&quot; /&amp;gt;
+&amp;lt;label for=&quot;nome&quot;&amp;gt;Nome&amp;lt;/label&amp;gt;
+&amp;lt;/p&amp;gt;
+&amp;lt;p class=&quot;fone&quot;&amp;gt;
+&amp;lt;input type=&quot;text&quot; id=&quot;foneid&quot; placeholder=&quot;(xx)xx-xx-xx-xx&quot; name=&quot;fone&quot; /&amp;gt;
+&amp;lt;label for=&quot;fone&quot;&amp;gt;Fone&amp;lt;/label&amp;gt;
+&amp;lt;/p&amp;gt;
+&amp;lt;p&amp;gt;
+&amp;lt;input type=&quot;email&quot; id=&quot;emailid&quot; placeholder=&quot;fulano@mail.com&quot; name=&quot;email&quot; /&amp;gt;
+&amp;lt;label for=&quot;email&quot;&amp;gt;Email&amp;lt;/label&amp;gt;
+&amp;lt;/p&amp;gt;
+&amp;lt;p&amp;gt;
+&amp;lt;textarea placeholder=&quot;Deixe sua opinião&quot;&amp;gt;&amp;lt;/textarea&amp;gt;
+&amp;lt;/p&amp;gt;
+&amp;lt;p class=&quot;submit&quot;&amp;gt;
+&amp;lt;input type=&quot;submit&quot; onclick=&quot;Enviar();&quot; value=&quot;Enviar&quot; /&amp;gt;
+&amp;lt;/p&amp;gt;
+&amp;lt;/form&amp;gt;
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;Veja em CSS e JavaScript os arquivos estilo.css e script.js.&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;br /&gt; &lt;strong&gt;Algumas novas TAGs do HTML5&lt;/strong&gt;&lt;/p&gt;
+&lt;pre class=&quot;language-markup&quot;&gt;&lt;code&gt;&amp;lt;header&amp;gt;Texto&amp;lt;/header&amp;gt;
+
+&amp;lt;footer&amp;gt;Texto&amp;lt;/footer&amp;gt;
+
+&amp;lt;nav&amp;gt;Texto&amp;lt;/nav&amp;gt;
+
+&amp;lt;section&amp;gt;Texto&amp;lt;/section&amp;gt;
+
+&amp;lt;section&amp;gt;
+&amp;lt;article&amp;gt;
+Texto
+&amp;lt;/article&amp;gt;
+&amp;lt;article&amp;gt;
+Texto
+&amp;lt;/article&amp;gt;
+&amp;lt;/section&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;E muitos outros. Veja aqui:&lt;br /&gt; https://developer.mozilla.org/pt-BR/docs/Web/HTML/HTML5/HTML5_element_list&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;br /&gt; &lt;strong&gt;Vídeos&lt;/strong&gt;&lt;/p&gt;
+&lt;pre class=&quot;language-markup&quot;&gt;&lt;code&gt;&amp;lt;video width=&quot;640&quot; height=&quot;480&quot; controls&amp;gt;
+&amp;lt;source src=&quot;http://backup/portal/video.mp4&quot; type=&quot;video/mp4&quot;&amp;gt;
+&amp;lt;source src=&quot;http://backup/portal/video.webm&quot; type=&quot;video/webm&quot;&amp;gt;
+Meus Vídeos
+&amp;lt;/video&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;br /&gt; &lt;strong&gt;Áudio&lt;/strong&gt;&lt;/p&gt;
+&lt;pre class=&quot;language-markup&quot;&gt;&lt;code&gt;&amp;lt;audio controls&amp;gt;
+&amp;lt;source src=&quot;http://backup/portal/audio.mp3&quot; type=&quot;audio/mpeg&quot;&amp;gt;
+&amp;lt;source src=&quot;http://backup/portal/video.ogg&quot; type=&quot;audio/ogg&quot;&amp;gt;
+Meus Áudio
+&amp;lt;/audio&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;Algumas tags foram adicionadas pelo HTML5 e outras foram removidas. Veja aqui:&lt;br /&gt; http://newhtml5.blogspot.com.br/2011/03/novas-tag.html &lt;br /&gt; http://www.scriptcase.com.br/blog/objetos-removidos-html5/&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;a href=&quot;http://www.w3schools.com/html/html5_intro.asp&quot;&gt;http://www.w3schools.com/html/html5_intro.asp&lt;/a&gt;&lt;/p&gt;</summary>
+		<content type="html">&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Comentários&lt;/strong&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;Em HTML para comentar um trecho de código usamos:&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&amp;lt;!-- Aqui todo o código&lt;br /&gt; será ignorado pelo navegador.&lt;br /&gt; Ou seja, temos um comentário para&lt;br /&gt; múltiplas linhas.&lt;br /&gt; --&amp;gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Dica sobre o Notepad++&lt;/strong&gt;&lt;br /&gt; Para trabalhar com caracteres UTF-8 e salvar assim:&lt;br /&gt; Formatar - Codificação em UTF-8 (sem BOM)&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Exemplos&lt;/strong&gt;&lt;/p&gt;
+&lt;pre xml:lang=&quot;html4strict&quot;&gt; &lt;/pre&gt;
+&lt;pre class=&quot;language-markup&quot;&gt;&lt;code&gt;&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&amp;gt;
+&amp;lt;head&amp;gt;
+&amp;lt;meta charset=&quot;UTF-8&quot;&amp;gt;
+&amp;lt;title&amp;gt;Título do site&amp;lt;/title&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+&amp;lt;h1&amp;gt;Título nível 1&amp;lt;/h1&amp;gt;
+&amp;lt;h2&amp;gt;Título nível 2&amp;lt;/h2&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;br /&gt; &amp;lt;div&amp;gt;Aqui temos uma divisão lógica&amp;lt;/div&amp;gt;&lt;br /&gt; &lt;br /&gt; &amp;lt;hr&amp;gt;&lt;br /&gt; Acima mostrarei uma linha horizontal.&lt;/p&gt;
+&lt;pre class=&quot;language-markup&quot;&gt;&lt;code&gt;&amp;lt;ol&amp;gt;
+&amp;lt;li&amp;gt;Aqui é um item de uma lista ordenada (ol - ordered list)&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;li significa list item&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;Podemos adicionar tantos itens quantos quizermos&amp;lt;/li&amp;gt;
+&amp;lt;/ol&amp;gt;
+
+&amp;lt;ul&amp;gt;
+&amp;lt;li&amp;gt;Aqui é um item de uma lista não ordenada (ul)&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;li significa list item&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;Podemos adicionar tantos itens quantos quizermos&amp;lt;/li&amp;gt;
+&amp;lt;/ol&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&amp;lt;p&amp;gt;Aqui uma &amp;lt;strong&amp;gt;palavra em negrito&amp;lt;/strong&amp;gt; em &amp;lt;br&amp;gt;&lt;br /&gt; quebra de linha&amp;lt;/p&amp;gt;&lt;br /&gt; &amp;lt;/body&amp;gt;&lt;br /&gt; &amp;lt;/html&amp;gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Exibindo Imagens&lt;/strong&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&amp;lt;img src=&quot;http://backup/portal/logo.png&quot; width=&quot;100&quot; height=&quot;80&quot; alt=&quot;Logomarca&quot;&amp;gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;br /&gt; &lt;strong&gt;Links&lt;/strong&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&amp;lt;a href=&quot;http://ribafs.org&quot; target=&quot;_blank&quot;&amp;gt;RibaFS Portal&amp;lt;/a&amp;gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;target=&quot;_blank&quot; - para abrir a página noutra aba ou janela.&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;Podemos linkar para IDs da página, veja:&lt;/p&gt;
+&lt;pre class=&quot;language-markup&quot;&gt;&lt;code&gt;&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&amp;gt;
+&amp;lt;head&amp;gt;
+&amp;lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html;charset=utf-8&quot; /&amp;gt;
+&amp;lt;title&amp;gt;Título do site&amp;lt;/title&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+&amp;lt;div id=&quot;topo&quot;&amp;gt;Topo da página&amp;lt;/div&amp;gt;
+&amp;lt;h1&amp;gt;Título nível 1&amp;lt;/h1&amp;gt;
+&amp;lt;h2&amp;gt;Título nível 2&amp;lt;/h2&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&amp;lt;div&amp;gt;Aqui temos uma divisão lógica&amp;lt;/div&amp;gt;&lt;br /&gt; &lt;br /&gt; &amp;lt;hr&amp;gt;&lt;br /&gt; Acima mostrarei uma linha horizontal.&lt;/p&gt;
+&lt;pre xml:lang=&quot;html4strict&quot;&gt; &lt;/pre&gt;
+&lt;pre class=&quot;language-markup&quot;&gt;&lt;code&gt;&amp;lt;ol&amp;gt;
+&amp;lt;li&amp;gt;Aqui é um item de uma lista ordenada (ol - ordered list)&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;li significa list item&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;Podemos adicionar tantos itens quantos quizermos&amp;lt;/li&amp;gt;
+&amp;lt;/ol&amp;gt;
+
+&amp;lt;ul&amp;gt;
+&amp;lt;li&amp;gt;Aqui é um item de uma lista não ordenada (ul)&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;li significa list item&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;Podemos adicionar tantos itens quantos quizermos&amp;lt;/li&amp;gt;
+&amp;lt;/ol&amp;gt;
+
+&amp;lt;a href=&quot;http://backup/portal/#topo&quot;&amp;gt;Voltar ao topo&amp;lt;/a&amp;gt;
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;Crie um arquivo chamado links.html e cole o conteúdo acima para testar o link para a mesma página.&lt;br /&gt; Precisará adicionar mais texto no body para que possa rolar a tela e clicar no link que rolará a&lt;br /&gt; tela para o topo.&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;br /&gt; &lt;strong&gt;Link para e-mail&lt;/strong&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&amp;lt;a href=&quot;mailto:ribafs@gmail.com?Subject='E-mail de teste'&quot;&amp;gt;Contato&amp;lt;/a&amp;gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;br /&gt; &lt;strong&gt;Tabelas&lt;/strong&gt;&lt;/p&gt;
+&lt;pre class=&quot;language-markup&quot;&gt;&lt;code&gt;&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&amp;gt;
+&amp;lt;head&amp;gt;
+&amp;lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html;charset=utf-8&quot; /&amp;gt;
+&amp;lt;title&amp;gt;Título do site&amp;lt;/title&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+&amp;lt;div id=&quot;topo&quot;&amp;gt;Topo da página&amp;lt;/div&amp;gt;
+&amp;lt;h1&amp;gt;Título nível 1&amp;lt;/h1&amp;gt;
+
+&amp;lt;table&amp;gt;
+&amp;lt;caption&amp;gt;Minha Tabela HTML5&amp;lt;/caption&amp;gt;
+&amp;lt;tr&amp;gt;&amp;lt;td&amp;gt;Celula 11&amp;lt;/td&amp;gt;&amp;lt;td&amp;gt;Célula 12&amp;lt;/td&amp;gt;&amp;lt;/tr&amp;gt;
+&amp;lt;tr&amp;gt;&amp;lt;td&amp;gt;Celula 21&amp;lt;/td&amp;gt;&amp;lt;td&amp;gt;Célula 22&amp;lt;/td&amp;gt;&amp;lt;/tr&amp;gt;
+&amp;lt;tr&amp;gt;&amp;lt;td&amp;gt;Celula 31&amp;lt;/td&amp;gt;&amp;lt;td&amp;gt;Célula 32&amp;lt;/td&amp;gt;&amp;lt;/tr&amp;gt;
+&amp;lt;/table&amp;gt;
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Formulários&lt;/strong&gt;&lt;br /&gt; Neste assunto o HTML5 trouxe muitas novidades interessantes.&lt;/p&gt;
+&lt;pre class=&quot;language-markup&quot;&gt;&lt;code&gt;&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&amp;gt;
+&amp;lt;head&amp;gt;
+&amp;lt;title&amp;gt;--Formulário Contato--&amp;lt;/title&amp;gt;
+&amp;lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html;charset=utf-8&quot; /&amp;gt;
+&amp;lt;link href=&quot;http://backup/portal/estilo.css&quot; rel=&quot;stylesheet&quot; media=&quot;all&quot; /&amp;gt;
+&amp;lt;script src=&quot;http://backup/portal/script.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+&amp;lt;form name=&quot;meu_form&quot;&amp;gt;
+&amp;lt;h1&amp;gt;Entre em contato&amp;lt;/h1&amp;gt;
+&amp;lt;p class=&quot;nome&quot;&amp;gt;
+&amp;lt;input type=&quot;text&quot; id=&quot;nomeid&quot; placeholder=&quot;Tiago Vale&quot; required=&quot;required&quot; name=&quot;nome&quot; /&amp;gt;
+&amp;lt;label for=&quot;nome&quot;&amp;gt;Nome&amp;lt;/label&amp;gt;
+&amp;lt;/p&amp;gt;
+&amp;lt;p class=&quot;fone&quot;&amp;gt;
+&amp;lt;input type=&quot;text&quot; id=&quot;foneid&quot; placeholder=&quot;(xx)xx-xx-xx-xx&quot; name=&quot;fone&quot; /&amp;gt;
+&amp;lt;label for=&quot;fone&quot;&amp;gt;Fone&amp;lt;/label&amp;gt;
+&amp;lt;/p&amp;gt;
+&amp;lt;p&amp;gt;
+&amp;lt;input type=&quot;email&quot; id=&quot;emailid&quot; placeholder=&quot;fulano@mail.com&quot; name=&quot;email&quot; /&amp;gt;
+&amp;lt;label for=&quot;email&quot;&amp;gt;Email&amp;lt;/label&amp;gt;
+&amp;lt;/p&amp;gt;
+&amp;lt;p&amp;gt;
+&amp;lt;textarea placeholder=&quot;Deixe sua opinião&quot;&amp;gt;&amp;lt;/textarea&amp;gt;
+&amp;lt;/p&amp;gt;
+&amp;lt;p class=&quot;submit&quot;&amp;gt;
+&amp;lt;input type=&quot;submit&quot; onclick=&quot;Enviar();&quot; value=&quot;Enviar&quot; /&amp;gt;
+&amp;lt;/p&amp;gt;
+&amp;lt;/form&amp;gt;
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;Veja em CSS e JavaScript os arquivos estilo.css e script.js.&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;br /&gt; &lt;strong&gt;Algumas novas TAGs do HTML5&lt;/strong&gt;&lt;/p&gt;
+&lt;pre class=&quot;language-markup&quot;&gt;&lt;code&gt;&amp;lt;header&amp;gt;Texto&amp;lt;/header&amp;gt;
+
+&amp;lt;footer&amp;gt;Texto&amp;lt;/footer&amp;gt;
+
+&amp;lt;nav&amp;gt;Texto&amp;lt;/nav&amp;gt;
+
+&amp;lt;section&amp;gt;Texto&amp;lt;/section&amp;gt;
+
+&amp;lt;section&amp;gt;
+&amp;lt;article&amp;gt;
+Texto
+&amp;lt;/article&amp;gt;
+&amp;lt;article&amp;gt;
+Texto
+&amp;lt;/article&amp;gt;
+&amp;lt;/section&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;E muitos outros. Veja aqui:&lt;br /&gt; https://developer.mozilla.org/pt-BR/docs/Web/HTML/HTML5/HTML5_element_list&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;br /&gt; &lt;strong&gt;Vídeos&lt;/strong&gt;&lt;/p&gt;
+&lt;pre class=&quot;language-markup&quot;&gt;&lt;code&gt;&amp;lt;video width=&quot;640&quot; height=&quot;480&quot; controls&amp;gt;
+&amp;lt;source src=&quot;http://backup/portal/video.mp4&quot; type=&quot;video/mp4&quot;&amp;gt;
+&amp;lt;source src=&quot;http://backup/portal/video.webm&quot; type=&quot;video/webm&quot;&amp;gt;
+Meus Vídeos
+&amp;lt;/video&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;br /&gt; &lt;strong&gt;Áudio&lt;/strong&gt;&lt;/p&gt;
+&lt;pre class=&quot;language-markup&quot;&gt;&lt;code&gt;&amp;lt;audio controls&amp;gt;
+&amp;lt;source src=&quot;http://backup/portal/audio.mp3&quot; type=&quot;audio/mpeg&quot;&amp;gt;
+&amp;lt;source src=&quot;http://backup/portal/video.ogg&quot; type=&quot;audio/ogg&quot;&amp;gt;
+Meus Áudio
+&amp;lt;/audio&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;Algumas tags foram adicionadas pelo HTML5 e outras foram removidas. Veja aqui:&lt;br /&gt; http://newhtml5.blogspot.com.br/2011/03/novas-tag.html &lt;br /&gt; http://www.scriptcase.com.br/blog/objetos-removidos-html5/&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;a href=&quot;http://www.w3schools.com/html/html5_intro.asp&quot;&gt;http://www.w3schools.com/html/html5_intro.asp&lt;/a&gt;&lt;/p&gt;</content>
+		<category term="HTML" />
+	</entry>
+	<entry>
+		<title>Dicas de HTML</title>
+		<link rel="alternate" type="text/html" href="http://backup/portal/basicos/html/dicas-de-html.html"/>
+		<published>2017-06-22T16:43:34-03:00</published>
+		<updated>2017-06-22T16:43:34-03:00</updated>
+		<id>http://backup/portal/basicos/html/dicas-de-html.html</id>
+		<author>
+			<name>Ribamar FS</name>
+		</author>
+		<summary type="html">&lt;p&gt;&lt;strong&gt;Criando Form de Contato com HTML5, CSS3 e JavaScript&lt;/strong&gt;&lt;br /&gt;&lt;a href=&quot;http://www.devmedia.com.br/criando-form-de-contato-com-html5-css3-e-javascript/29415#ixzz453cK6sZk&quot;&gt;http://www.devmedia.com.br/criando-form-de-contato-com-html5-css3-e-javascript/29415#ixzz453cK6sZk&lt;/a&gt;&lt;/p&gt;
+
+
+&lt;p&gt;&lt;strong&gt;Referências:&lt;/strong&gt;&lt;br /&gt;&lt;a href=&quot;http://www.w3schools.com/tags/default.asp&quot;&gt;http://www.w3schools.com/tags/default.asp&lt;/a&gt;&lt;a href=&quot;http://www.w3.org/TR/html4/&quot;&gt;&lt;br /&gt;http://www.html-reference.com/&lt;br /&gt;http://www.w3.org/TR/html4/&lt;/a&gt;&lt;br /&gt;Lista de tags por categoria - &lt;a href=&quot;http://htmlhelp.com/reference/html40/olist.html&quot;&gt;http://htmlhelp.com/reference/html40/olist.html&lt;/a&gt;&lt;br /&gt;Lista de tags por ordem alfabética - &lt;a href=&quot;http://htmlhelp.com/reference/html40/alist.html&quot;&gt;http://htmlhelp.com/reference/html40/alist.html&lt;/a&gt;&lt;/p&gt;
+
+
+&lt;p&gt;&lt;strong&gt;Simples Wizards&lt;/strong&gt;&lt;br /&gt;&lt;a title=&quot;Formato&quot; href=&quot;http://backup/portal/../down/basicos/wizards/formatwiz.html&quot; rel=&quot;alternate&quot;&gt;Formato&lt;/a&gt;&lt;br /&gt;&lt;a title=&quot;Form&quot; href=&quot;http://backup/portal/../down/basicos/wizards/formwiz.html&quot; rel=&quot;alternate&quot;&gt;Form &lt;/a&gt;&lt;br /&gt;&lt;a title=&quot;Frame&quot; href=&quot;http://backup/portal/../down/basicos/wizards/framewiz.html&quot; rel=&quot;alternate&quot;&gt;Frame&lt;/a&gt;&lt;br /&gt;&lt;a title=&quot;Table&quot; href=&quot;http://backup/portal/../down/basicos/wizards/tablewiz.html&quot; rel=&quot;alternate&quot;&gt;Table&lt;/a&gt;&lt;br /&gt;&lt;a title=&quot;Wizards&quot; href=&quot;http://backup/portal/../down/basicos/wizards.zip&quot; rel=&quot;alternate&quot;&gt;Pacote completo&lt;/a&gt;&lt;/p&gt;
+
+
+&lt;p&gt; &lt;/p&gt;</summary>
+		<content type="html">&lt;p&gt;&lt;strong&gt;Criando Form de Contato com HTML5, CSS3 e JavaScript&lt;/strong&gt;&lt;br /&gt;&lt;a href=&quot;http://www.devmedia.com.br/criando-form-de-contato-com-html5-css3-e-javascript/29415#ixzz453cK6sZk&quot;&gt;http://www.devmedia.com.br/criando-form-de-contato-com-html5-css3-e-javascript/29415#ixzz453cK6sZk&lt;/a&gt;&lt;/p&gt;
+
+
+&lt;p&gt;&lt;strong&gt;Referências:&lt;/strong&gt;&lt;br /&gt;&lt;a href=&quot;http://www.w3schools.com/tags/default.asp&quot;&gt;http://www.w3schools.com/tags/default.asp&lt;/a&gt;&lt;a href=&quot;http://www.w3.org/TR/html4/&quot;&gt;&lt;br /&gt;http://www.html-reference.com/&lt;br /&gt;http://www.w3.org/TR/html4/&lt;/a&gt;&lt;br /&gt;Lista de tags por categoria - &lt;a href=&quot;http://htmlhelp.com/reference/html40/olist.html&quot;&gt;http://htmlhelp.com/reference/html40/olist.html&lt;/a&gt;&lt;br /&gt;Lista de tags por ordem alfabética - &lt;a href=&quot;http://htmlhelp.com/reference/html40/alist.html&quot;&gt;http://htmlhelp.com/reference/html40/alist.html&lt;/a&gt;&lt;/p&gt;
+
+
+&lt;p&gt;&lt;strong&gt;Simples Wizards&lt;/strong&gt;&lt;br /&gt;&lt;a title=&quot;Formato&quot; href=&quot;http://backup/portal/../down/basicos/wizards/formatwiz.html&quot; rel=&quot;alternate&quot;&gt;Formato&lt;/a&gt;&lt;br /&gt;&lt;a title=&quot;Form&quot; href=&quot;http://backup/portal/../down/basicos/wizards/formwiz.html&quot; rel=&quot;alternate&quot;&gt;Form &lt;/a&gt;&lt;br /&gt;&lt;a title=&quot;Frame&quot; href=&quot;http://backup/portal/../down/basicos/wizards/framewiz.html&quot; rel=&quot;alternate&quot;&gt;Frame&lt;/a&gt;&lt;br /&gt;&lt;a title=&quot;Table&quot; href=&quot;http://backup/portal/../down/basicos/wizards/tablewiz.html&quot; rel=&quot;alternate&quot;&gt;Table&lt;/a&gt;&lt;br /&gt;&lt;a title=&quot;Wizards&quot; href=&quot;http://backup/portal/../down/basicos/wizards.zip&quot; rel=&quot;alternate&quot;&gt;Pacote completo&lt;/a&gt;&lt;/p&gt;
+
+
+&lt;p&gt; &lt;/p&gt;</content>
+		<category term="HTML" />
+	</entry>
+	<entry>
+		<title>Includes</title>
+		<link rel="alternate" type="text/html" href="http://backup/portal/basicos/html/includes-html.html"/>
+		<published>2017-06-22T16:43:34-03:00</published>
+		<updated>2017-06-22T16:43:34-03:00</updated>
+		<id>http://backup/portal/basicos/html/includes-html.html</id>
+		<author>
+			<name>Ribamar FS</name>
+		</author>
+		<summary type="html">&lt;p&gt;&lt;strong&gt;JAVASCRIPT&lt;/strong&gt;&lt;br /&gt;&amp;lt;script type=&quot;text/javascript&quot; src=&quot;http://backup/portal//js/script.js&quot;&amp;gt;&amp;lt;/script&amp;gt;&lt;br /&gt;&amp;lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js&quot;&amp;gt;&amp;lt;/script&amp;gt;&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;CSS&lt;/strong&gt;&lt;br /&gt;&amp;lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;http://backup/portal/mystyle.css&quot;&amp;gt;&lt;br /&gt;&amp;lt;link href=&quot;//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot;&amp;gt;&lt;br /&gt;@import url(&quot;//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css&quot;);&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;EXEMPLOS DE CÓDIFICAÇÃO DE CARACTERES&lt;/strong&gt;&lt;br /&gt;&lt;strong&gt;HTML&lt;/strong&gt;&lt;br /&gt;&amp;lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html;charset=utf-8&quot; /&amp;gt;&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;XML ou JavaScript ou AJAX&lt;/strong&gt;&lt;br /&gt;&amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;ISO-8859-1&quot;?&amp;gt; &lt;br /&gt;&lt;br /&gt;&lt;strong&gt;ASP&lt;/strong&gt;&lt;br /&gt;&amp;lt;% Response.Charset=&quot;ISO-8859-1&quot; %&amp;gt;&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;PHP&lt;/strong&gt;&lt;br /&gt;&amp;lt;?php header(&quot;Content-Type: text/html;  charset=UTF-8&quot;,true) ?&amp;gt;&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;JSP&lt;/strong&gt;&lt;br /&gt;&amp;lt;%@ page contentType=&quot;text/html; charset=ISO-8859-1&quot; %&amp;gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;</summary>
+		<content type="html">&lt;p&gt;&lt;strong&gt;JAVASCRIPT&lt;/strong&gt;&lt;br /&gt;&amp;lt;script type=&quot;text/javascript&quot; src=&quot;http://backup/portal//js/script.js&quot;&amp;gt;&amp;lt;/script&amp;gt;&lt;br /&gt;&amp;lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js&quot;&amp;gt;&amp;lt;/script&amp;gt;&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;CSS&lt;/strong&gt;&lt;br /&gt;&amp;lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;http://backup/portal/mystyle.css&quot;&amp;gt;&lt;br /&gt;&amp;lt;link href=&quot;//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot;&amp;gt;&lt;br /&gt;@import url(&quot;//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css&quot;);&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;EXEMPLOS DE CÓDIFICAÇÃO DE CARACTERES&lt;/strong&gt;&lt;br /&gt;&lt;strong&gt;HTML&lt;/strong&gt;&lt;br /&gt;&amp;lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html;charset=utf-8&quot; /&amp;gt;&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;XML ou JavaScript ou AJAX&lt;/strong&gt;&lt;br /&gt;&amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;ISO-8859-1&quot;?&amp;gt; &lt;br /&gt;&lt;br /&gt;&lt;strong&gt;ASP&lt;/strong&gt;&lt;br /&gt;&amp;lt;% Response.Charset=&quot;ISO-8859-1&quot; %&amp;gt;&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;PHP&lt;/strong&gt;&lt;br /&gt;&amp;lt;?php header(&quot;Content-Type: text/html;  charset=UTF-8&quot;,true) ?&amp;gt;&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;JSP&lt;/strong&gt;&lt;br /&gt;&amp;lt;%@ page contentType=&quot;text/html; charset=ISO-8859-1&quot; %&amp;gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;</content>
+		<category term="HTML" />
+	</entry>
+</feed>

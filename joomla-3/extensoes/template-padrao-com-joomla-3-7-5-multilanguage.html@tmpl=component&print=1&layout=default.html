@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br" dir="ltr">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <base href="" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Ribamar FS" />
+	<meta name="robots" content="noindex, nofollow" />
+	<meta name="description" content="Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros." />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>Template Padrão com Joomla 3.7.5 multilanguage - RibaFS Portal</title>
+	<link href="http://ribafs.org/portal/joomla-3/extensoes/template-padrao-com-joomla-3-7-5-multilanguage.html?tmpl=component&amp;print=1&amp;layout=default" rel="canonical" />
+	<link href="../../templates/shaper_helix3/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../../favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<script src="../../media/jui/js/jquery.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../media/jui/js/jquery-noconflict.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../media/jui/js/jquery-migrate.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="http://backup/portal/media/system/js/caption.js?d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script type="text/javascript">
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+	</script>
+	<meta property="og:url" content="http://backup/portal/joomla-3/extensoes/template-padrao-com-joomla-3-7-5-multilanguage.html" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Template Padrão com Joomla 3.7.5 multilanguage" />
+	<meta property="og:description" content="Implementação do Template Padrão do Governo num portal com Joomla 3.7.5 multilanguage Como o template padrão do governo não tem suporte a multilanguage, in..." />
+
+   	<link rel="stylesheet" href="../../media/jui/css/bootstrap.min.css" type="text/css" />
+	<link rel="stylesheet" href="../../templates/shaper_helix3/css/frontend-edit.css" type="text/css" />
+    <link rel="stylesheet" href="../../templates/shaper_helix3/css/template.css" type="text/css" />
+</head>
+<body class="contentpane">
+	<div id="system-message-container">
+	</div>
+
+	
+
+<article class="item item-page" itemscope itemtype="http://schema.org/Article">
+	<meta itemprop="inLanguage" content="pt-BR" />
+	
+	
+
+	<div class="entry-header">
+		<span class="post-format"><i class="fa fa-thumb-tack"></i></span>
+		
+					<h2 itemprop="name">
+									Template Padrão com Joomla 3.7.5 multilanguage							</h2>
+												</div>
+
+						<div id="pop-print" class="btn hidden-print">
+				<a href="template-padrao-com-joomla-3-7-5-multilanguage.html#" onclick="window.print();return false;">			<span class="icon-print" aria-hidden="true"></span>
+		Imprimir	</a>			</div>
+				
+	
+	
+				
+	
+			<div itemprop="articleBody">
+		<h4>Implementação do Template Padrão do Governo num portal com Joomla 3.7.5 multilanguage</h4>
+
+<p>Como o template padrão do governo não tem suporte a multilanguage, instalarei o Joomla com suporte a multilanguage e depois instalerei o tempale padrão e mostrarei o caminho das pedras para se instalar as demais extensões.</p>
+
+<p>Este projeto visa instalar o Joomla 3.7.5 com suporte a multilanguage<br />Depois instalar o template joomlagov e torná-lo o default atribuindo-lhe todos os itens de menu.<br />Instalar paralelamente o joomlagov com o quickstart para que veja que extensões ele instala<br />Então instalar cada uma das extensões existentes no joomlagov no Joomla multilanguage.</p>
+
+<p><strong>Download do Joomla</strong><br /><a href="https://downloads.joomla.org/">https://downloads.joomla.org/</a></p>
+
+<p><strong>Instalação</strong><br />Instalarei na pasta joomlagov_ml<br />Lembrar de implementar multilanguage escolhendo a opção de nenhum conteúdo de exemplo e configurando as Etapas Extras: instalar idiomas.</p>
+
+<p>Instalei os seguintes idiomas extras: English US, Francês, Português Brasil e Spanish</p>
+
+<p>Ativei o recurso de multi-idiomas<br />Ativei o plugin de código de idiomas</p>
+
+<p>E tornei Português do Brasil o default do site e do adminisrtator.</p>
+
+<p>Veja esta tela que capturei na instalação:</p>
+
+<p><img src="../../images/joomlagov_ml.png" alt="" /></p>
+
+<p>Ao finalizar a instalação acessei o form de login do administrator já deu para ver todos os idiomas instalados.</p>
+
+<p><img src="../../images/joomlagov_login.png" alt="" /></p>
+
+<p>Ao exibir o site já aparecem as 5 bandeirinhas.</p>
+
+<p><img src="../../images/joomlagov_idiomar.png" alt="" /></p>
+
+<p> </p>
+
+<p><strong>Instalar Template Padrão do Governo Brasileiro</strong><br />Agora instalarei o template isolado que encontra-se em meu projeto do GitHub:<br /><a href="https://github.com/ribafs/template-govbr">https://github.com/ribafs/template-govbr</a> </p>
+
+<p>E o tornarei o default além de atribuir todos os itens de menu ao mesmo.</p>
+
+<p>Para entender melhor como foi criado o template e seu funcionamento a equipe criou alguns documentos:</p>
+
+<p><a href="https://github.com/joomlagovbr/documentacao/tree/master/pdf">https://github.com/joomlagovbr/documentacao/tree/master/pdf</a></p>
+
+<p>Mudei o módulo Language Switcher para a posição header-topo-direita.</p>
+
+<p>Mudei a posição do Main menu pt-br para - topo-main</p>
+
+<p>Veja como ficou sendo o default:</p>
+
+<p> </p>
+
+<p><img src="../../images/joomlagov_frontend.png" alt="" /></p>
+
+<p>Já podemos ver que ele criou um artigo para cada idioma, um menu para cada idioma e habilitou as extensões necessárias: plugins e módulo.</p>
+
+<p><img src="../../images/joomlagov_menu.png" alt="" /></p>
+
+<p> </p>
+
+<p>Veja os artigos criados</p>
+
+<p><img src="../../images/joomlagov_artigos.png" alt="" /></p>
+
+<p><strong>Instalei o módulo barra do governo:</strong></p>
+
+<p><a href="https://github.com/joomlagovbr/barra-do-governo">https://github.com/joomlagovbr/barra-do-governo</a> </p>
+
+<p><strong>Setei sua posição para: barra-do-governo</strong></p>
+
+<p>No site do projeto ( <a href="https://github.com/joomlagovbr/">https://github.com/joomlagovbr/</a> ) existe outra extensão a ser instalada, que é a agenda de autoridades.<br /><a href="https://github.com/joomlagovbr/agenda-de-autoridades">https://github.com/joomlagovbr/agenda-de-autoridades</a> </p>
+
+<p>E assim se vai instalando todas as extensões que existem no projeto original.<br />Existem muitos menus e itens de menus, artigos de teste, componentes, etc.</p>
+
+<p>As extensões a serem instaladas depende de cada órgão.<br />Aqui onde trabalho temos a iCagenda, Phoca Download, eXtplorer, ChronoForms, etc.</p>
+
+<p><strong>Ativar o mod_rewrite</strong><br />Sistema - Configuração Global<br />Usar mod_rewrite do Apache - Sim<br />Salvar</p>
+
+<p>E renomear o arquivo htaccess.txt para .htaccess (encontra-se no raiz do site).</p>
+
+<p><strong>Ativar a exibição dos módulos do tempalte na página do site</strong></p>
+
+<p>Extensões - Temas<br />Opções - Visualização de Posições de Módulos - Ativado</p>
+
+<p><br /><strong>Então abrir o site assim:</strong><br />http://localhost/joomlagov_ml/pt/index.php?tp=1</p>
+
+<p>Veja as posições exibidas no site:</p>
+
+<p><img src="../../images/joomlagov_posicoes.png" alt="" /></p>
+
+<p>Com o recurso acima verificamos sempre que instalar um novo módulo, em qual posição ele deve ficar.</p>
+
+<p><strong>Posicionar módulos no template padrão:</strong></p>
+
+<p>Language Switcher - header-topo-direita</p>
+
+<p>Instalar o quickstart do projeto do template padrão para comparações</p>
+
+<p><strong>Download</strong><br /><a href="https://github.com/joomlagovbr/joomla-3.x">https://github.com/joomlagovbr/joomla-3.x </a> <br />Lembre que o pacote acima já contém o Joomla 3.7.4, o template padrão instalado e muitas outras extensões úteis para órgãos do governo brasileiro.</p>
+
+<p><strong>Instalarei na pasta joomlagov_orig</strong></p>
+
+<p>Uma instalação padrão, inclusive usando o conteúdo de exemplo desenvolvido pela equipe do Joomla Calango, que foi quem criou este template. Mantenha selecionado:<br /><br />Dados de exemplo do portal padrão<br />Veja o tutorial com ajustes iniciais para corrigir alguns erros encontrados nesta versão:</p>
+
+<p><a href="http://backup/portal/joomla-3/extensoes/181-template-padrao-do-governo-ajustes">http://ribafs.org/portal/joomla-3/extensoes/181-template-padrao-do-governo-ajustes</a> </p>
+
+<p> </p> 	</div>
+
+	
+	
+				
+	
+	
+	
+</article>
+
+</body>
+</html>

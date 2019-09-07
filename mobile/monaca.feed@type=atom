@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="Joomla! - Open Source Content Management" -->
+<feed xmlns="http://www.w3.org/2005/Atom"  xml:lang="pt-br">
+	<title type="text">Monaca - RibaFS Portal</title>
+	<subtitle type="text">Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros.</subtitle>
+	<link rel="alternate" type="text/html" href="http://backup"/>
+	<id>http://backup/portal/mobile/monaca.feed</id>
+	<updated>2019-09-07T19:02:19-03:00</updated>
+	<author>
+		<name>RibaFS Portal</name>
+	</author>
+	<generator uri="https://www.joomla.org">Joomla! - Open Source Content Management</generator>
+	<link rel="self" type="application/atom+xml" href="http://backup/portal/mobile/monaca.feed?type=atom"/>
+	<entry>
+		<title>Monaca IDE Mobile</title>
+		<link rel="alternate" type="text/html" href="http://backup/portal/mobile/monaca/monaca-ide-mobile.html"/>
+		<published>2017-07-12T18:10:42-03:00</published>
+		<updated>2017-07-12T18:10:42-03:00</updated>
+		<id>http://backup/portal/mobile/monaca/monaca-ide-mobile.html</id>
+		<author>
+			<name>Ribamar FS</name>
+		</author>
+		<summary type="html">&lt;p&gt;&lt;strong&gt;Monaca&lt;/strong&gt;&lt;/p&gt;
+
+
+&lt;p&gt;&lt;br /&gt;É uma IDE online para a criação de aplicativos mobile para Phonegap, Cordova, Ionic e outros.&lt;br /&gt;Compatível com Android, iOS e Windows 8.&lt;br /&gt;Possui ferramentas para debugar o código.&lt;br /&gt;Registro gratuito ou pago. O gratuito permite até 3 projetos.&lt;/p&gt;
+
+
+&lt;p&gt;A maior vantagem que encontrei no monaca foi o fato de não ter que instalar nada. Em algumas ferramentas a trabalheira de instalar e configurar dependências é cansativa. Agradeço à equipe do Monaca.&lt;br /&gt;&lt;br /&gt;&lt;a href=&quot;http://monaca.io&quot;&gt;http://monaca.io&lt;/a&gt; &lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Monaca CLI&lt;/strong&gt;&lt;br /&gt;sudo npm install -g monaca&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+
+&lt;p&gt;&lt;strong&gt;Usando&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;monaca login&lt;br /&gt;monaca create PROJECT_DIRECTORY&lt;br /&gt;Selecione o template com a seta e Enter&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Build&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;Acesse o site, faça login e selecione o projeto e abra&lt;br /&gt;Config - Android KeyStore Setting&lt;br /&gt;Clique em Clear and Generate new&lt;br /&gt;Preencha seu login e senha&lt;br /&gt;Clicar em Android à esquerda (Abaixo de Build &amp;amp; Build Settings)&lt;br /&gt;Clique acima em Build for Release&lt;br /&gt;Clicar no botão abaixo Start Build e aguardar&lt;br /&gt;Clique em Download to Local PC&lt;/p&gt;
+
+
+&lt;p&gt; &lt;/p&gt;
+
+
+&lt;p&gt;&lt;strong&gt;Tutoriais&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;&lt;a href=&quot;http://www.tekzoom.com.br/monaca-ide-online-para-criacao-de-aplicativos-phonegap-e-cordova/&quot;&gt;http://www.tekzoom.com.br/monaca-ide-online-para-criacao-de-aplicativos-phonegap-e-cordova/&lt;/a&gt;&lt;/p&gt;
+
+
+&lt;p&gt;&lt;a href=&quot;https://onsen.io/blog/monaca-with-wikitude-pokemon-app/&quot;&gt;https://onsen.io/blog/monaca-with-wikitude-pokemon-app/&lt;/a&gt;&lt;/p&gt;
+
+
+&lt;p&gt; &lt;/p&gt;</summary>
+		<content type="html">&lt;p&gt;&lt;strong&gt;Monaca&lt;/strong&gt;&lt;/p&gt;
+
+
+&lt;p&gt;&lt;br /&gt;É uma IDE online para a criação de aplicativos mobile para Phonegap, Cordova, Ionic e outros.&lt;br /&gt;Compatível com Android, iOS e Windows 8.&lt;br /&gt;Possui ferramentas para debugar o código.&lt;br /&gt;Registro gratuito ou pago. O gratuito permite até 3 projetos.&lt;/p&gt;
+
+
+&lt;p&gt;A maior vantagem que encontrei no monaca foi o fato de não ter que instalar nada. Em algumas ferramentas a trabalheira de instalar e configurar dependências é cansativa. Agradeço à equipe do Monaca.&lt;br /&gt;&lt;br /&gt;&lt;a href=&quot;http://monaca.io&quot;&gt;http://monaca.io&lt;/a&gt; &lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Monaca CLI&lt;/strong&gt;&lt;br /&gt;sudo npm install -g monaca&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+
+&lt;p&gt;&lt;strong&gt;Usando&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;monaca login&lt;br /&gt;monaca create PROJECT_DIRECTORY&lt;br /&gt;Selecione o template com a seta e Enter&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Build&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;Acesse o site, faça login e selecione o projeto e abra&lt;br /&gt;Config - Android KeyStore Setting&lt;br /&gt;Clique em Clear and Generate new&lt;br /&gt;Preencha seu login e senha&lt;br /&gt;Clicar em Android à esquerda (Abaixo de Build &amp;amp; Build Settings)&lt;br /&gt;Clique acima em Build for Release&lt;br /&gt;Clicar no botão abaixo Start Build e aguardar&lt;br /&gt;Clique em Download to Local PC&lt;/p&gt;
+
+
+&lt;p&gt; &lt;/p&gt;
+
+
+&lt;p&gt;&lt;strong&gt;Tutoriais&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;&lt;a href=&quot;http://www.tekzoom.com.br/monaca-ide-online-para-criacao-de-aplicativos-phonegap-e-cordova/&quot;&gt;http://www.tekzoom.com.br/monaca-ide-online-para-criacao-de-aplicativos-phonegap-e-cordova/&lt;/a&gt;&lt;/p&gt;
+
+
+&lt;p&gt;&lt;a href=&quot;https://onsen.io/blog/monaca-with-wikitude-pokemon-app/&quot;&gt;https://onsen.io/blog/monaca-with-wikitude-pokemon-app/&lt;/a&gt;&lt;/p&gt;
+
+
+&lt;p&gt; &lt;/p&gt;</content>
+		<category term="Monaca" />
+	</entry>
+	<entry>
+		<title>Monaca - Exemplo</title>
+		<link rel="alternate" type="text/html" href="http://backup/portal/mobile/monaca/monaca-exemplo.html"/>
+		<published>2017-07-12T18:10:42-03:00</published>
+		<updated>2017-07-12T18:10:42-03:00</updated>
+		<id>http://backup/portal/mobile/monaca/monaca-exemplo.html</id>
+		<author>
+			<name>Ribamar FS</name>
+		</author>
+		<summary type="html">&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Monaca - Exemplo&lt;br /&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Criação de um app Mobile na IDE online Monaca&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;&lt;a href=&quot;http://monaca.io&quot;&gt;http://monaca.io&lt;/a&gt; &lt;br /&gt;&lt;br /&gt;Vamos criar um aplicativo mobile usando WebSQL. Uma pequena agenda partindo do example1 daqui:&lt;br /&gt;&lt;a href=&quot;https://github.com/cesarjr/crud-offline&quot;&gt;https://github.com/cesarjr/crud-offline&lt;/a&gt; &lt;br /&gt;&lt;br /&gt;Fazer o download abrir example1.&lt;br /&gt;&lt;br /&gt;Acessar o Monaca e efetuar seu registro&lt;br /&gt;&lt;br /&gt;Efetuar login&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Criar um novo projeto clicando em Create Project&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;Escolher o template:&lt;br /&gt;&lt;br /&gt;JS No Framework - Blank&lt;br /&gt;&lt;br /&gt;Clicar em Create New à direita de Blank&lt;br /&gt;&lt;br /&gt;Project Name - Agenda&lt;br /&gt;Description - Agenda de telefones&lt;br /&gt;&lt;br /&gt;Make Project&lt;br /&gt;&lt;br /&gt;Agora Agenda está listada no painel da esquerda&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Abrindo o projeto&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;Clique em Open à direita de Agenda&lt;br /&gt;&lt;br /&gt;Agora ele abre o projeto na IDE.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Descrição das regiões da IDE do Monaca&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;À esquerda - árvore de pastas e arquivos do projeto&lt;br /&gt;Ao centro - o arquivo index.html é aberto no editor de código&lt;br /&gt;Abaixo - a região de debug, logs, warnings e erros&lt;br /&gt;Acima - um menu com algumas opções: Preview (mostra/oculta o Preview), Run on device, etc&lt;br /&gt;À direita - painel de preview da aplicação (um emulador)&lt;br /&gt;&lt;br /&gt;Agora vamos excluir o que não iremos usar no projeto do monaca e vamos enviar por Upload os arquivos da agenda.&lt;br /&gt;Também precisamos excluir do index.html do monaca o que não usaremos e copiar e colar do index.html da agenda para o do monaca.&lt;br /&gt;&lt;br /&gt;Ao final devemos &lt;strong&gt;criar uma chave/certificado&lt;/strong&gt; para efetuar o Build para Android e podermos publicar no Google Play&lt;br /&gt;- Config - Android KeyStore Settings&lt;br /&gt;- Clear and Generate New&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Agora vamos efetuar o Build para Android&lt;/strong&gt;&lt;br /&gt;- Build - Build App for Android&lt;br /&gt;- Build for Release&lt;br /&gt;- Entrar com a senha da chave&lt;br /&gt;- Clicar em Start Build&lt;br /&gt;Aguardar&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;br /&gt;- Efetuar o download do APK para o computador&lt;br /&gt;Renomear removendo os números do início e adicionando &quot;agenda&quot;.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Finalmente o executável da agenda&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;a title=&quot;agenda.apk&quot; href=&quot;http://backup/portal/../down/mobile/monaca/agenda-android-release.apk&quot;&gt;agenda.apk&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt; &lt;/p&gt;</summary>
+		<content type="html">&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Monaca - Exemplo&lt;br /&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Criação de um app Mobile na IDE online Monaca&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;&lt;a href=&quot;http://monaca.io&quot;&gt;http://monaca.io&lt;/a&gt; &lt;br /&gt;&lt;br /&gt;Vamos criar um aplicativo mobile usando WebSQL. Uma pequena agenda partindo do example1 daqui:&lt;br /&gt;&lt;a href=&quot;https://github.com/cesarjr/crud-offline&quot;&gt;https://github.com/cesarjr/crud-offline&lt;/a&gt; &lt;br /&gt;&lt;br /&gt;Fazer o download abrir example1.&lt;br /&gt;&lt;br /&gt;Acessar o Monaca e efetuar seu registro&lt;br /&gt;&lt;br /&gt;Efetuar login&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Criar um novo projeto clicando em Create Project&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;Escolher o template:&lt;br /&gt;&lt;br /&gt;JS No Framework - Blank&lt;br /&gt;&lt;br /&gt;Clicar em Create New à direita de Blank&lt;br /&gt;&lt;br /&gt;Project Name - Agenda&lt;br /&gt;Description - Agenda de telefones&lt;br /&gt;&lt;br /&gt;Make Project&lt;br /&gt;&lt;br /&gt;Agora Agenda está listada no painel da esquerda&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Abrindo o projeto&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;Clique em Open à direita de Agenda&lt;br /&gt;&lt;br /&gt;Agora ele abre o projeto na IDE.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Descrição das regiões da IDE do Monaca&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;À esquerda - árvore de pastas e arquivos do projeto&lt;br /&gt;Ao centro - o arquivo index.html é aberto no editor de código&lt;br /&gt;Abaixo - a região de debug, logs, warnings e erros&lt;br /&gt;Acima - um menu com algumas opções: Preview (mostra/oculta o Preview), Run on device, etc&lt;br /&gt;À direita - painel de preview da aplicação (um emulador)&lt;br /&gt;&lt;br /&gt;Agora vamos excluir o que não iremos usar no projeto do monaca e vamos enviar por Upload os arquivos da agenda.&lt;br /&gt;Também precisamos excluir do index.html do monaca o que não usaremos e copiar e colar do index.html da agenda para o do monaca.&lt;br /&gt;&lt;br /&gt;Ao final devemos &lt;strong&gt;criar uma chave/certificado&lt;/strong&gt; para efetuar o Build para Android e podermos publicar no Google Play&lt;br /&gt;- Config - Android KeyStore Settings&lt;br /&gt;- Clear and Generate New&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Agora vamos efetuar o Build para Android&lt;/strong&gt;&lt;br /&gt;- Build - Build App for Android&lt;br /&gt;- Build for Release&lt;br /&gt;- Entrar com a senha da chave&lt;br /&gt;- Clicar em Start Build&lt;br /&gt;Aguardar&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;br /&gt;- Efetuar o download do APK para o computador&lt;br /&gt;Renomear removendo os números do início e adicionando &quot;agenda&quot;.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Finalmente o executável da agenda&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;a title=&quot;agenda.apk&quot; href=&quot;http://backup/portal/../down/mobile/monaca/agenda-android-release.apk&quot;&gt;agenda.apk&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt; &lt;/p&gt;</content>
+		<category term="Monaca" />
+	</entry>
+</feed>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br" dir="ltr">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <base href="" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Ribamar FS" />
+	<meta name="robots" content="noindex, nofollow" />
+	<meta name="description" content="Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros." />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>15.1 - Migrate - RibaFS Portal</title>
+	<link href="http://ribafs.org/portal/curriculo/livros/cakephp/15-1-migrate.html?tmpl=component&amp;print=1&amp;layout=default" rel="canonical" />
+	<link href="../../../templates/shaper_helix3/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../../../favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="http://backup/portal/media/plg_content_prismsyntaxhighlighter/css/prism-okaidia.css" rel="stylesheet" type="text/css" />
+	<link href="http://backup/portal/media/plg_content_prismsyntaxhighlighter/css/prism-linenumbers.css" rel="stylesheet" type="text/css" />
+	<script src="http://backup/portal/media/plg_content_prismsyntaxhighlighter/js/prism-tinymce.js" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery-noconflict.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery-migrate.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="http://backup/portal/media/system/js/caption.js?d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script type="text/javascript">
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+	</script>
+	<meta property="og:url" content="http://backup/portal/curriculo/livros/cakephp/15-1-migrate.html" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="15.1 - Migrate" />
+	<meta property="og:description" content="15.1 - Migrate Não se preocupe com falhas, preocupe-se com as chances que você perde quando não tenta. (Jack Canfield) Aqui segue um exemplo de migração: <..." />
+
+   	<link rel="stylesheet" href="../../../media/jui/css/bootstrap.min.css" type="text/css" />
+	<link rel="stylesheet" href="../../../templates/shaper_helix3/css/frontend-edit.css" type="text/css" />
+    <link rel="stylesheet" href="../../../templates/shaper_helix3/css/template.css" type="text/css" />
+</head>
+<body class="contentpane">
+	<div id="system-message-container">
+	</div>
+
+	
+
+<article class="item item-page" itemscope itemtype="http://schema.org/Article">
+	<meta itemprop="inLanguage" content="pt-BR" />
+	
+	
+
+	<div class="entry-header">
+		<span class="post-format"><i class="fa fa-thumb-tack"></i></span>
+		
+					<h2 itemprop="name">
+									15.1 - Migrate							</h2>
+												</div>
+
+						<div id="pop-print" class="btn hidden-print">
+				<a href="15-1-migrate.html#" onclick="window.print();return false;">			<span class="icon-print" aria-hidden="true"></span>
+		Imprimir	</a>			</div>
+				
+	
+	
+				
+	
+			<div itemprop="articleBody">
+		<h3>15.1 - Migrate</h3>
+<p style="text-align: right;"><br /><em><strong>Não se preocupe com falhas, preocupe-se com as chances que você perde quando não tenta. (Jack Canfield)</strong></em></p>
+<p><br />Aqui segue um exemplo de migração:</p>
+<p> </p>
+<pre class="language-php"><code>&lt;?php
+use Migrations\AbstractMigration;
+
+class CreateProducts extends AbstractMigration
+{
+    /**
+     * Change Method.
+     *
+     * More information on this method is available here:
+     * http://docs.phinx.org/en/latest/migrations.html#the-change-method
+     * @return void
+     */
+    public function change()
+    {
+        $table = $this-&gt;table('products');
+        $table-&gt;addColumn('name', 'string', [
+            'default' =&gt; null,
+            'limit' =&gt; 255,
+            'null' =&gt; false,
+        ]);
+        $table-&gt;addColumn('description', 'text', [
+            'default' =&gt; null,
+            'null' =&gt; false,
+        ]);
+        $table-&gt;addColumn('created', 'datetime', [
+            'default' =&gt; null,
+            'null' =&gt; false,
+        ]);
+        $table-&gt;addColumn('modified', 'datetime', [
+            'default' =&gt; null,
+            'null' =&gt; false,
+        ]);
+        $table-&gt;create();
+    }
+}</code></pre>
+<p><strong>Salvar em</strong><br />config/Migrations/20190519085224_Products.php<br /><br />Veja o formato: YYYYMMDDHHMMSS_Products.php<br /><br /><br /><strong>Também podemos criar a migration usando o bake:</strong><br /><br />bin/cake bake migration CreateProducts name:string description:text created modified<br /><br />Você pode criar um arquivo de migração vazio caso deseje ter um controle total do que precisa ser executado. Para isto, apenas omita a definição das colunas:<br /><br />bin/cake migrations create MyCustomMigration<br /><br /><strong>Criar a tabela ou as tabelas do(s) Migration(s)</strong><br /><br />bin/cake migrations migrate<br /><br /><strong>Limpar todo o banco, excluindo todas as tabelas</strong><br /><br />bin/cake migrations rollback<br /><br /><br /><strong>Nomes de campos e tipos</strong><br /><br />fieldName:fieldType[length]:indexType:indexName<br /><br /><strong>Por exemplo, veja formas válidas de especificar um campo de e-mail:</strong><br />    • email:string:unique <br />    • email:string:unique:EMAIL_INDEX <br />    • email:string[120]:unique:EMAIL_INDEX <br />O parâmetro length para o fieldType é opcional e deve sempre ser escrito entre colchetes<br />Os campos created e modified serão automaticamente definidos como datetime.<br />Os tipos de campos são genericamente disponibilizados pela biblioteca Phinx. Eles podem ser:<br />    • string <br />    • text <br />    • integer <br />    • biginteger <br />    • float <br />    • decimal <br />    • datetime <br />    • timestamp <br />    • time <br />    • date <br />    • binary <br />    • boolean <br />    • uuid <br /><br />Há algumas heurísticas para a escolha de tipos de campos que não são especificados ou são definidos com valor inválido. O tipo de campo padrão é string;<br />    • id: integer <br />    • created, modified, updated: datetime <br /><br /><br /><strong>Adicionando colunas a uma tabela existente</strong><br /><br />Se o nome da migração na linha de comando estiver na forma "AddXXXToYYY" e for seguido por uma lista de nomes de colunas e tipos, então o arquivo de migração com o código para criar as colunas será gerado:</p>
+<p><br />bin/cake bake migration AddPriceToProducts price:decimal<br /><br />A linha de comando acima irá gerar um arquivo com o seguinte conteúdo:</p>
+<p><br />&lt;?php<br />use Migrations\AbstractMigration;<br /><br />class AddPriceToProducts extends AbstractMigration<br />{<br />    public function change()<br />    {<br />        $table = $this-&gt;table('products');<br />        $table-&gt;addColumn('price', 'decimal')<br />              -&gt;update();<br />    }<br />}<br /><br /><br /><strong>Especificando o tamanho do campo</strong><br /><br />Se você precisar especificar o tamanho do campo, você pode fazer isto entre colchetes logo após o tipo do campo, ex.:<br /><br />bin/cake bake migration AddFullDescriptionToProducts full_description:string[60]<br /><br /><strong>Executar o comando acima irá gerar:</strong><br /><br />&lt;?php<br />use Migrations\AbstractMigration;<br /><br />class AddFullDescriptionToProducts extends AbstractMigration<br />{<br />    public function change()<br />    {<br />        $table = $this-&gt;table('products');<br />        $table-&gt;addColumn('full_description', 'string', [<br />            'default' =&gt; null,<br />            'limit' =&gt; 60,<br />            'null' =&gt; false,<br />        ])<br />        -&gt;update();<br />    }<br />}<br /><br />Se o tamanho não for especificado, os seguintes padrões serão utilizados:<br />    • string: 255 <br />    • integer: 11 <br />    • biginteger: 20 <br /><br /><strong>Removendo uma coluna de uma tabela</strong><br /><br />Da mesma forma, você pode gerar uma migração para remover uma coluna utilizando a linha de comando, se o nome da migração estiver na forma "RemoveXXXFromYYY":<br /><br />bin/cake bake migration RemovePriceFromProducts price<br /><br /><strong>Cria o arquivo:</strong><br />&lt;?php<br />use Migrations\AbstractMigration;<br /><br />class RemovePriceFromProducts extends AbstractMigration<br />{<br />    public function change()<br />    {<br />        $table = $this-&gt;table('products');<br />        $table-&gt;removeColumn('price');<br />    }<br />}<br /><br /><strong>Gerando migrações a partir de uma base de dados existente</strong><br /><br />Se você está trabalhando com um banco de dados pré-existente e quer começar a usar migrações, ou para versionar o schema inicial da base de dados da sua aplicação, você pode executar o comando migration_snapshot:<br /><br />bin/cake bake migration_snapshot Financas<br /><br />Ele gerará um arquivo de migrations com todas as tabelas do banco, mas somente as estruturas, sem os registros:<br /><br />YYYYMMDDHHMMSS_Financas.php<br /><br /><br />Migrações também podem ser executadas para plugins. Simplesmente utilize a opção <br />``--plugin`` ou ``-p``<br /><br />bin/cake migrations migrate -p MyAwesomePlugin<br /><br /><strong>Lista das migrações</strong><br /><br />bin/cake migrations status<br /><br /></p> 	</div>
+
+	
+	
+				
+	
+	
+	
+</article>
+
+</body>
+</html>

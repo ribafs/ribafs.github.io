@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br" dir="ltr">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <base href="" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Ribamar FS" />
+	<meta name="robots" content="noindex, nofollow" />
+	<meta name="description" content="Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros." />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>Configurações do CakePHP 3 - RibaFS Portal</title>
+	<link href="http://ribafs.org/portal/frameworks/cakephp-3/configuracoes/configuracoes-do-cakephp-3.html?tmpl=component&amp;print=1&amp;layout=default" rel="canonical" />
+	<link href="../../../templates/shaper_helix3/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../../../favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="http://backup/portal/media/plg_content_prismsyntaxhighlighter/css/prism-okaidia.css" rel="stylesheet" type="text/css" />
+	<link href="http://backup/portal/media/plg_content_prismsyntaxhighlighter/css/prism-linenumbers.css" rel="stylesheet" type="text/css" />
+	<script src="http://backup/portal/media/plg_content_prismsyntaxhighlighter/js/prism-tinymce.js" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery-noconflict.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery-migrate.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="http://backup/portal/media/system/js/caption.js?d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script type="text/javascript">
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+	</script>
+	<meta property="og:url" content="http://backup/portal/frameworks/cakephp-3/configuracoes/configuracoes-do-cakephp-3.html" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Configurações do CakePHP 3" />
+	<meta property="og:description" content="C o nfigurações no CakePHP 3 Mesmo que as convenções nos livrem de estar efetuando muitas configurações no CakePHP,ainda assim precisamos configurar alguma..." />
+
+   	<link rel="stylesheet" href="../../../media/jui/css/bootstrap.min.css" type="text/css" />
+	<link rel="stylesheet" href="../../../templates/shaper_helix3/css/frontend-edit.css" type="text/css" />
+    <link rel="stylesheet" href="../../../templates/shaper_helix3/css/template.css" type="text/css" />
+</head>
+<body class="contentpane">
+	<div id="system-message-container">
+	</div>
+
+	
+
+<article class="item item-page" itemscope itemtype="http://schema.org/Article">
+	<meta itemprop="inLanguage" content="pt-BR" />
+	
+	
+
+	<div class="entry-header">
+		<span class="post-format"><i class="fa fa-thumb-tack"></i></span>
+		
+					<h2 itemprop="name">
+									Configurações do CakePHP 3							</h2>
+												</div>
+
+						<div id="pop-print" class="btn hidden-print">
+				<a href="configuracoes-do-cakephp-3.html#" onclick="window.print();return false;">			<span class="icon-print" aria-hidden="true"></span>
+		Imprimir	</a>			</div>
+				
+	
+	
+				
+	
+			<div itemprop="articleBody">
+		<p style="margin-right: -0.04cm; text-align: justify;"><strong>C</strong><strong>o</strong><strong>nfigurações no CakePHP 3<br /></strong></p>
+<p style="margin-right: 1.16cm; text-align: justify;">Mesmo que as convenções nos livrem de estar efetuando muitas configurações no CakePHP,ainda assim precisamos configurar algumas coisas como bancos de dados, rotas e bootstrap (carga de plugins).</p>
+<p style="margin-right: -0.04cm; text-align: justify;">Todos os arquivos de configuração ficam na pasta <strong>con</strong><strong>f</strong><strong>ig</strong>.</p>
+<p style="margin-right: 9.17cm; text-align: justify;">Os principais arquivos de configuração são: config/app.php</p>
+<p style="margin-right: 13.54cm; text-align: justify;">config/routes.php config/bootstrap.php</p>
+<p style="margin-right: 1.62cm; text-align: justify;">Nenhum dos 3 é obrigatório. Caso o aplicativo não use bancos de dados nem tenha plugins de terceiros não somos obrigados a alterar nenhum deles.</p>
+<p style="margin-right: -0.04cm; text-align: justify;">Quando o aplicativo usa bancos de dados precisamos alterar o app.php.</p>
+<p style="margin-right: -0.04cm; text-align: justify;">Quando desejamos personalizar as rotas também precisamos alterar o routes.php.</p>
+<p style="margin-right: -0.04cm; text-align: justify;">Quando o aplicativo usa plugins de terceiros o bootstrap.php.</p>
+<p style="margin-right: -0.04cm; text-align: justify;"><strong>ap</strong><strong>p</strong><strong>.php</strong></p>
+<p style="margin-right: 1.34cm; text-align: justify;">Geralmente utilizado somente para configurar o banco de dados, mas existem muitas outras configurações nele. Vejamos algumas:</p>
+<p style="margin-right: -0.04cm; text-align: justify;">debug</p>
+<p style="margin-right: -0.04cm; text-align: justify;">encoding</p>
+<p style="margin-right: -0.04cm; text-align: justify;">dir – diretório da aplicação. Por default o src webroot</p>
+<p style="margin-right: -0.04cm; text-align: justify;">diretório base de imagens, css e javascript</p>
+<p style="margin-right: 1.53cm; text-align: justify;">salt – deve ser alterado. String usada no hash de senhas. Usando o composer ele já altera o salt</p>
+<p style="margin-right: -0.04cm; text-align: justify;">Error -</p>
+<p style="margin-right: -0.04cm; text-align: justify;">Email configuração</p>
+<p style="margin-right: -0.04cm; text-align: justify;">Datasources</p>
+<p style="margin-right: -0.04cm; text-align: justify;">Log</p>
+<p style="margin-right: -0.04cm; text-align: justify;">Session</p>
+<p style="margin-right: -0.04cm; text-align: justify;"><strong>Configuran</strong><strong>d</strong><strong>o</strong> <strong>o</strong> <strong>Banco</strong> <strong>d</strong><strong>e</strong> <strong>D</strong><strong>ados</strong></p>
+<p style="margin-right: 0.56cm; text-align: justify;">Para configurar o banco devemos indicar apenas o <strong>use</strong><strong>r</strong><strong>na</strong><strong>m</strong><strong>e,</strong> <strong>password</strong> e <strong>database</strong> na configuração <strong>default</strong>.</p>
+<pre class="language-php"><code>'Datasources' =&gt; [ 'default' =&gt; [
+
+'className' =&gt; 'Cake\Database\Connection', 'driver' =&gt; 'Cake\Database\Driver\Mysql', 'persistent' =&gt; false,
+
+'host' =&gt; 'localhost', /**
+
+* CakePHP will use the default DB port based on the driver selected
+
+* MySQL on MAMP uses port 8889, MAMP users will want to uncomment * the following line and set the port accordingly
+
+*/
+
+//'port' =&gt; 'non_standard_port_number', 'username' =&gt; 'root',
+
+'password' =&gt; '', 'database' =&gt; 'blog', 'encoding' =&gt; 'utf8', 'timezone' =&gt; 'UTC', 'flags' =&gt; [], 'cacheMetadata' =&gt; true, 'log' =&gt; false,</code></pre>
+<p style="margin-right: 0.95cm; text-align: justify;">Uma configuração importante aqui também é o driver do SGBD. O CakePHP 3 trabalha atualmente com os SGBDs: Mysql, Postgres, Sqlite e Sqlserver. Caso queira criar o aplicativo acessando um banco do PostgreSQL, então a linha driver assim:</p>
+<p style="margin-right: -0.04cm; text-align: justify;">'driver' =&gt; 'Cake\Database\Driver\Postgres',</p>
+<p style="margin-right: -0.04cm; text-align: justify;">Claro que também precisa alterar username, password e database.</p>
+<p style="margin-right: -0.04cm; text-align: justify;"><strong>routes.php</strong></p>
+<p style="margin-right: 1.69cm; text-align: justify;">Neste arquivo você configura as rotas para os actions e controllers. Rotas são um importante mecanismo que permite que você conecte para diferentes URLs apenas escolhendo os controllers e seus actions.</p>
+<p style="margin-right: 0.83cm; text-align: justify;">Para uma configuração simples, suponha que você criou um aplicativo chamado cliente, que ficou na pasta cliente e criou os controllers e seus actions padrões: index(), view(), etc. Então vamos configurar o routes.php.</p>
+<p style="margin-right: -0.04cm; text-align: justify;">Logo que criou o controller ClientesController e seus actions e acessar o aplicativo assim:</p>
+<p style="margin-right: -0.04cm; text-align: justify;"><a href="http://localhost/cliente"><u>http://lo</u><u>c</u><u>alhost/</u><u>c</u><u>li</u><u>e</u><u>nte</u></a></p>
+<p style="margin-right: 0.8cm; text-align: justify;">Quem responderá é o action display do controller PagesController, que é um controller e action padrão, que já vem com o Cake e estão pré-configurados no routes.php como a rota padrão. Veja:</p>
+<p style="margin-right: -0.04cm; text-align: justify;">$routes-&gt;connect('/', ['controller' =&gt; 'Pages', 'action' =&gt; 'display', 'home']);</p>
+<p style="margin-right: 0.59cm; text-align: justify;">Para que seu controller Clientes seja mostrado juntamente com seus actions, precisamos dizer isso ao CakePHP,assim. Adicione esta linha <strong>ant</strong><strong>e</strong><strong>s</strong> da linha anterior:</p>
+<p style="margin-right: -0.04cm; text-align: justify;">$routes-&gt;connect('/pages/*', ['controller' =&gt; 'Clientes', 'action' =&gt; 'index']);</p>
+<p style="margin-right: -0.04cm; text-align: justify;">Chame seu aplicativo novamente com:</p>
+<p style="margin-right: -0.04cm; text-align: justify;"><a href="http://localhost/cliente"><u>http://lo</u><u>c</u><u>alhost/</u><u>c</u><u>li</u><u>e</u><u>nte</u></a></p>
+<p style="margin-right: -0.04cm; text-align: justify;">Agora sim, ele mostra o resultado do action index() do controller Clientes.</p>
+<p style="margin-right: 4.3cm; text-align: justify;">Existem muitas configurações para as rotas. Para mais detalhes veja: <a href="http://book.cakephp.org/3.0/en/development/routing.html"><u>http://boo</u><u>k</u><u>.</u><u>c</u><u>a</u><u>k</u><u>e</u><u>php.org/3.0/en/</u><u>d</u><u>e</u><u>v</u><u>el</u><u>o</u><u>pment/routing.html</u></a></p>
+<p style="text-align: justify;"> </p>
+<p style="margin-right: -0.04cm; text-align: justify;"><strong>bootstrap.p</strong><strong>h</strong><strong>p</strong></p>
+<p style="margin-right: 0.73cm; text-align: justify;">Veja as mensagens iniciais que ele pode disparar, acusando que este é um dos arquivos iniciais no boot do CakePHP 3.</p>
+<p style="margin-right: 1.13cm; text-align: justify;">Observe que ele já vem com várias configurações prontas. Já vem com alguns plugins carregados, como o Migrations e o DebugKit.</p>
+<p style="margin-right: -0.04cm; text-align: justify;"><strong>Carregando</strong> <strong>Plugins</strong></p>
+<p style="margin-right: 0.52cm; text-align: justify;">Caso queira carregar um plugin de terceiro precisa adicionar uma linha logo abaixo desta: Plugin::load('Migrations');</p>
+<p style="margin-right: -0.04cm; text-align: justify;">Supondo que precise carregar um plugin chamado Acl:</p>
+<p style="margin-right: -0.04cm; text-align: justify;"><br /> Plugin::load('Acl');</p>
+<p style="margin-right: -0.04cm; text-align: justify;"><strong>Checando</strong> <strong>pa</strong><strong>r</strong><strong>a</strong> <strong>v</strong><strong>er</strong> <strong>se</strong> <strong>uma</strong> <strong>c</strong><strong>o</strong><strong>nfigura</strong><strong>ç</strong><strong>ão</strong> <strong>foi</strong> <strong>defi</strong><strong>n</strong><strong>ida</strong></p>
+<p style="margin-right: -0.04cm; text-align: justify;"><em>static</em> Cake\Core\Configure::check(<em>$key</em>)</p>
+<p style="margin-right: -0.04cm; text-align: justify;">$exists = Configure::check('Company.name');</p>
+<p style="margin-right: -0.04cm; text-align: justify;"><strong>Deletando</strong> <strong>C</strong><strong>onf</strong><strong>i</strong><strong>g</strong><strong>ur</strong><strong>a</strong><strong>ção</strong></p>
+<p style="margin-right: 8.09cm; text-align: justify;"><em>static</em> Cake\Core\Configure::delete(<em>$key</em>) Configure::delete('Company.name');</p> 	</div>
+
+	
+	
+				
+	
+	
+	
+</article>
+
+</body>
+</html>

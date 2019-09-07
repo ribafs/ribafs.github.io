@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br" dir="ltr">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <base href="" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Ribamar FS" />
+	<meta name="robots" content="noindex, nofollow" />
+	<meta name="description" content="Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros." />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>MySQL Resumo - RibaFS Portal</title>
+	<link href="http://ribafs.org/portal/servidores/servidor-sgbd/mysql-resumo.html?tmpl=component&amp;print=1&amp;layout=default" rel="canonical" />
+	<link href="../../templates/shaper_helix3/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../../favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<script src="../../media/jui/js/jquery.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../media/jui/js/jquery-noconflict.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../media/jui/js/jquery-migrate.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="http://backup/portal/media/system/js/caption.js?d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script type="text/javascript">
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+	</script>
+	<meta property="og:url" content="http://backup/portal/servidores/servidor-sgbd/mysql-resumo.html" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="MySQL Resumo" />
+	<meta property="og:description" content="Resumo do MySQL apt-get update apt-get upgrade apt-get -y install mysql-server mysql-client Criar bancos Criar usuários com direitos somente ao banco Cada..." />
+
+   	<link rel="stylesheet" href="../../media/jui/css/bootstrap.min.css" type="text/css" />
+	<link rel="stylesheet" href="../../templates/shaper_helix3/css/frontend-edit.css" type="text/css" />
+    <link rel="stylesheet" href="../../templates/shaper_helix3/css/template.css" type="text/css" />
+</head>
+<body class="contentpane">
+	<div id="system-message-container">
+	</div>
+
+	
+
+<article class="item item-page" itemscope itemtype="http://schema.org/Article">
+	<meta itemprop="inLanguage" content="pt-BR" />
+	
+	
+
+	<div class="entry-header">
+		<span class="post-format"><i class="fa fa-thumb-tack"></i></span>
+		
+					<h2 itemprop="name">
+									MySQL Resumo							</h2>
+												</div>
+
+						<div id="pop-print" class="btn hidden-print">
+				<a href="mysql-resumo.html#" onclick="window.print();return false;">			<span class="icon-print" aria-hidden="true"></span>
+		Imprimir	</a>			</div>
+				
+	
+	
+				
+	
+			<div itemprop="articleBody">
+		<p style="text-align: justify;"><strong>Resumo do MySQL</strong></p>
+
+<p style="text-align: justify;">apt-get update<br /> apt-get upgrade<br /> apt-get -y install mysql-server mysql-client</p>
+
+<p style="text-align: justify;"><strong>Criar bancos</strong><br /> Criar usuários com direitos somente ao banco<br /> Cada site deve ter um usuário exclusivo e um banco onde tem plenos poderes.</p>
+
+<p style="text-align: justify;"><strong>Para permitir acesso de host externo</strong><br /> nano /etc/mysql/my.cnf<br /> #bind-address  = 127.0.0.1<br /> Descomentado aceita somente conexão local</p>
+
+<p style="text-align: justify;">Checar se rede está habilitada:<br /> netstat -tap | grep mysql</p>
+
+<p style="text-align: justify;"><strong>Hardening e Tuninng do MySQL</strong></p>
+
+<p style="text-align: justify;">Execute o seguinte comando e siga os passos recomendados:<br /> mysql_secure_installation</p>
+
+<p style="text-align: justify;"> </p>
+
+<p style="text-align: justify;"><strong>Resumo</strong></p>
+
+<p style="text-align: justify;">E criar um usuário para acesso remoto e plenos poderes, já que o root deve estar restrito aos acessos locais (pelo mysql_secure_installation)<br /> EVITAR A CRIAÇÃO DESTE USUÁRIO</p>
+
+<p style="text-align: justify;">mysql -u root -p<br /> GRANT ALL PRIVILEGES ON *.* TO admin@"%" IDENTIFIED BY 'senha' WITH GRANT OPTION;<br /> FLUSH PRIVILEGES;</p>
+
+<p style="text-align: justify;">Criar usuário para o site em Joomla com poderes apenas no localhost<br /> banco - portal<br /> usuário - portal</p>
+
+<p style="text-align: justify;">mysql -u root -p<br /> create database portal;<br /> use portal;<br /> GRANT ALL PRIVILEGES ON portal.* TO portal@localhost IDENTIFIED BY 'senha' WITH GRANT OPTION;</p>
+
+<p style="text-align: justify;">show processList;</p>
+
+<p style="text-align: justify;">create database sic;<br /> GRANT ALL PRIVILEGES ON sic.* TO sic@localhost IDENTIFIED BY 'senha' WITH GRANT OPTION;<br /> FLUSH PRIVILEGES;</p>
+
+<p style="text-align: justify;">Liberando apenas para 192.168.0.201 (web)<br /> mysql -u root -p<br /> create database portal;<br /> GRANT ALL PRIVILEGES ON portal.* TO <span id="cloak2ab41bc75c535445663a020ad789dfe8">Este endereço de email está sendo protegido de spambots. Você precisa do JavaScript ativado para vê-lo.</span><script type='text/javascript'>
+				document.getElementById('cloak2ab41bc75c535445663a020ad789dfe8').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addy2ab41bc75c535445663a020ad789dfe8 = 'p&#111;rt&#97;l' + '&#64;';
+				addy2ab41bc75c535445663a020ad789dfe8 = addy2ab41bc75c535445663a020ad789dfe8 + '192' + '&#46;' + '168' + '&#46;' + '0' + '&#46;' + '201';
+				var addy_text2ab41bc75c535445663a020ad789dfe8 = 'p&#111;rt&#97;l' + '&#64;' + '192' + '&#46;' + '168' + '&#46;' + '0' + '&#46;' + '201';document.getElementById('cloak2ab41bc75c535445663a020ad789dfe8').innerHTML += '<a ' + path + '\'' + prefix + ':' + addy2ab41bc75c535445663a020ad789dfe8 + '\'>'+addy_text2ab41bc75c535445663a020ad789dfe8+'<\/a>';
+		</script> IDENTIFIED BY 'senha' WITH GRANT OPTION;<br /> Outro<br /> GRANT ALL PRIVILEGES ON portal.* TO <span id="cloake8e15e9119114e655f8508d7dd225438">Este endereço de email está sendo protegido de spambots. Você precisa do JavaScript ativado para vê-lo.</span><script type='text/javascript'>
+				document.getElementById('cloake8e15e9119114e655f8508d7dd225438').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addye8e15e9119114e655f8508d7dd225438 = 'p&#111;rt&#97;l' + '&#64;';
+				addye8e15e9119114e655f8508d7dd225438 = addye8e15e9119114e655f8508d7dd225438 + '10' + '&#46;' + '10' + '&#46;' + '0' + '&#46;' + '201';
+				var addy_texte8e15e9119114e655f8508d7dd225438 = 'p&#111;rt&#97;l' + '&#64;' + '10' + '&#46;' + '10' + '&#46;' + '0' + '&#46;' + '201';document.getElementById('cloake8e15e9119114e655f8508d7dd225438').innerHTML += '<a ' + path + '\'' + prefix + ':' + addye8e15e9119114e655f8508d7dd225438 + '\'>'+addy_texte8e15e9119114e655f8508d7dd225438+'<\/a>';
+		</script> IDENTIFIED BY 'senha' WITH GRANT OPTION;<br /> \q</p>
+
+<p style="text-align: justify;">service mysql restart</p>
+
+<p style="text-align: justify;"><strong>Privilégios:</strong><br /> *.* - Privilégio grobal. Todos os bancos (*) e todas as tabelas de todos os bancos (.*)<br /> db.* - Todas as tabelas do banco db<br /> db.tb - Somente a tabela tb do banco db</p>
+
+<p style="text-align: justify;">Acesso com o uso do coringa (%):</p>
+
+<p style="text-align: justify;">Exemplos:<br /> ... TO remoto@"%.mysqlbrasil.com.br"<br /> ... TO remoto@"200.236.13.%"<br /> ... TO " "@"%mysqlbrasil.com.br"</p>
+
+<p style="text-align: justify;"><br /> /etc/init.d/mysql restart</p>
+
+<p style="text-align: justify;"> </p>
+
+<p style="text-align: justify;"><strong>Mostrar estrutura de tabela</strong><br /> use banco<br /> describe tabela;</p>
+
+<p style="text-align: justify;"><strong>Mostrar privilégios</strong><br /> use banco<br /> show privileges;</p>
+
+<p style="text-align: justify;"><strong>Mostrar privilégios de um usuário</strong><br /> SHOW GRANTS FOR teste@localhost;</p>
+
+<p style="text-align: justify;"><strong>Remover usuário</strong><br /> DELETE FROM mysql.user WHERE user="teste" AND host="localhost";<br /> FLUSH PRIVILEGES;</p>
+
+<p style="text-align: justify;"><strong>Alterar o password de determinado usuário:</strong><br /> set password for 'root'@'localhost'=password('novopassword');</p>
+
+<p style="text-align: justify;"><strong>Importar script para banco</strong><br /> mysql -h servidor -u usuário -p senha database_name &lt; banco.sql<br /> -h servidor: geralmente localhost. Dependendo do lugar, coloca-se o ip:porta. Ex.: -h localhost<br /> -u usuário:  usuário que manda no seu banco. Ex.: -u root<br /> -p senha: precisa exemplificar não né? :P<br /> database_name: o nome do banco que vai receber os dados sql.<br /> banco.sql: arquivo que foi previamente feito o dump.</p>
+
+<p style="text-align: justify;"><strong>Exportar banco para script</strong><br /> mysqldump -u root -p --opt database_name &gt; banco.sql</p>
+
+<p style="text-align: justify;"> </p>
+
+<h3 style="text-align: justify;">Privilégios</h3>
+
+<p style="text-align: justify;"><strong>Criando outro super usuário para o mysql</strong></p>
+
+<p style="text-align: justify;">mysql -u root -p<br /> use mysql;<br /> GRANT ALL PRIVILEGES ON *.localhost TO dnocs@localhost IDENTIFIED BY 'dnocs.devel' WITH GRANT OPTION;<br /> flush privileges;<br /> exit;</p>
+
+<p style="text-align: justify;"><strong>Criar usuário restrito para site com joomla</strong><br /> Criar banco tendo como dono o usuário acima</p>
+
+<p style="text-align: justify;">host - 10.0.0.60<br /> banco - portaldev<br /> usuario - portaldev<br /> senha - portaldev</p>
+
+<p style="text-align: justify;">mysql -u root -p<br /> create database portaldev;<br /> use portaldev;<br /> GRANT ALL PRIVILEGES ON portaldev.* TO portaldev@localhost IDENTIFIED BY 'portaldev' WITH GRANT OPTION;</p>
+
+<p style="text-align: justify;"> </p> 	</div>
+
+	
+	
+				
+	
+	
+	
+</article>
+
+</body>
+</html>

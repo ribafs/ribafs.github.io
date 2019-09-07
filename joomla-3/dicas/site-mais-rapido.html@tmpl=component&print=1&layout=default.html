@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br" dir="ltr">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <base href="" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Ribamar FS" />
+	<meta name="robots" content="noindex, nofollow" />
+	<meta name="description" content="Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros." />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>Melhores práticas para um site mais rápido - RibaFS Portal</title>
+	<link href="http://ribafs.org/portal/joomla-3/dicas/site-mais-rapido.html?tmpl=component&amp;print=1&amp;layout=default" rel="canonical" />
+	<link href="../../templates/shaper_helix3/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../../favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<script src="../../media/jui/js/jquery.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../media/jui/js/jquery-noconflict.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../media/jui/js/jquery-migrate.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="http://backup/portal/media/system/js/caption.js?d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script type="text/javascript">
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+	</script>
+	<meta property="og:url" content="http://backup/portal/joomla-3/dicas/site-mais-rapido.html" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Melhores práticas para um site mais rápido" />
+	<meta property="og:description" content="Um pequeno resumo da documentação da extensão YSlow para o Firefox, encontrado em inglês em: http://developer.yahoo.com/performance/rules.html A extensão,..." />
+
+   	<link rel="stylesheet" href="../../media/jui/css/bootstrap.min.css" type="text/css" />
+	<link rel="stylesheet" href="../../templates/shaper_helix3/css/frontend-edit.css" type="text/css" />
+    <link rel="stylesheet" href="../../templates/shaper_helix3/css/template.css" type="text/css" />
+</head>
+<body class="contentpane">
+	<div id="system-message-container">
+	</div>
+
+	
+
+<article class="item item-page" itemscope itemtype="http://schema.org/Article">
+	<meta itemprop="inLanguage" content="pt-BR" />
+	
+	
+
+	<div class="entry-header">
+		<span class="post-format"><i class="fa fa-thumb-tack"></i></span>
+		
+					<h2 itemprop="name">
+									Melhores práticas para um site mais rápido							</h2>
+												</div>
+
+						<div id="pop-print" class="btn hidden-print">
+				<a href="site-mais-rapido.html#" onclick="window.print();return false;">			<span class="icon-print" aria-hidden="true"></span>
+		Imprimir	</a>			</div>
+				
+	
+	
+				
+	
+			<div itemprop="articleBody">
+		<p>Um pequeno resumo da documentação da extensão YSlow para o Firefox, encontrado em inglês em: http://developer.yahoo.com/performance/rules.html<br /><br />A extensão, que mede o desempenho de sites no Firefox, pode ser encontrada em: https://addons.mozilla.org/pt-BR/firefox/addon/5369<br /><br />Obs.: o original é bem mais detalhado e com muito mais informações, aqui trago apenas o que achei mais interessante ou importante.<br /><br />80% do tempo gasto pelo visitante para baixar uma página é gasto no front-end (cliente) e somente 20 no back-end (servidor). Desses 80% a maioria é gasto baixando componentes: images, CSS, script JS, Flash, etc.<br /><br />Reduzindo o número de componentes do site reduzirá as requisições HTTP para renderizar a página no cliente. Esta é a chave de páginas rápidas.<br /><br />Simplificar o design das páginas reduzirá o número de componentes.<br /><br />Abaixo algumas técnicas para reduzir o número de requisições e ao mesmo tempo manter um design rico.<br /><br />Usar CSS sprites reduz o número de requisições de imagens, ao invés de requisitar várias requisita-se somente uma e o CSS mapeia usando o background-image e background-position. Exemplo em: http://ribafs.org/portal/colaboracoes/1-ribamar-fs/123-sprites-em-css Combinar, quando possível todo o CSS em um único arquivo externo.<br /><br />Mova o CSS para o topo da página, entre as tags &lt; head&gt; e &lt;/head&gt; que a página será carregada mais rapidamente.<br /><br />Já os scripts em JavaScript devem ser movidos para o final da página, para que a carga seja otimizada. É verdade que em algumas situações não dá para mover para o final da página, mas sempre que possível devemos fazê-lo.<br /><br />O IE suporta expressões em CSS e para melhor desempenho evite estas expressões.<br /><br />Sempre que possível tenha o CSS e o JavaScript em arquivos externos para melhor desempenho.<br /><br />Otimize para reduzir o código do CSS e do JavaScript. Remova caracteres desnecessários, linhas e trechos duplicados e otimize ao máximo seu código. Isso vale também para toda a construção do site, evitar tudo que seja desnecessário e otimizar o necessário.<br /><br />Evite redirecionamentos. Não tenha mais que 3 redirecionamentos na página. Exemplo: temos 3 banners cujas imagens vem de outras URLs. No caso o site só abrirá quando pegar as imagens dos outros sites. Estando tudo normal ele terá que fazer a requisição aos outros sites e imagine quando um deles está lento.<br /><br />Use GET para as requisições de AJAX. São mais rápidas que usando POST.<br /><br />Otimize ao máximo a página inicial, reduzindo a carga para que o visitante chegue. Nas demais páginas poderá adicionar componentes que colocaria na inicial.<br /><br /><strong>Minimizar o número de iframes.</strong><br /><br />Evite erro 404 (páginas não encontradas). Use o serviço do servidor para redirecionar o usuário para uma página personalizada quando acontecer um erro 404.<br /><br />Reduza o tamanho dos cookies.<br /><br />Minimize acessos DOM.<br /><br />Desenvolva manipuladores de eventos inteligentes. Acontece de um evento somente ser disparado quando um outro o for e isso pode complicar. Mais detalhes no documento original.<br /><br />Ao fazer link dos arquivos externos prefira &lt; link...&gt; ao invés de @import.<br /><br /><strong>Evite filtros no CSS.</strong><br /><br />Otimize as imagens. Sempre antes de enviar as imagens para o servidor, reduza seu tamanho, como também reduza a quantidade de cores sempre que razoável. Alguns serviços online que ajudam na otimização de imagens: <a href="http://tools.dynamicdrive.com/imageoptimizer/">http://tools.dynamicdrive.com/imageoptimizer/</a>  <a href="http://www.imageoptimizer.net/Pages/Home.aspx">http://www.imageoptimizer.net/Pages/Home.aspx</a>  <a href="http://webresizer.com/resizer/">http://webresizer.com/resizer/</a> <br /><br />Otimize os sprites CSS As imagens ficando na horizontal ao invés da vertical carregam mais rapidamente.<br /><br />Não altere as dimensões de imagens somente no HTML. Isso altera somente a visualização, mas seu tamanho permanece o mesmo. Altere seu tamanho offline e envie para o servidor ao invés.<br /><br /><strong>Reduza o tamanho dos favicon.ico.</strong><br /><br />Mantenha o tamanho dos componentes sempre inferior a 25KB. Lembre que ese valor é para o arquivo descompactado.<br /><br />Mais informações no documento original em inglês: <br /><a href="http://developer.yahoo.com/performance/rules.html">http://developer.yahoo.com/performance/rules.html</a> </p> 	</div>
+
+	
+	
+				
+	
+	
+	
+</article>
+
+</body>
+</html>

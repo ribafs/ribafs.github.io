@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br" dir="ltr">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <base href="" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Ribamar FS" />
+	<meta name="robots" content="noindex, nofollow" />
+	<meta name="description" content="Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros." />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>Usando o Vagrant - RibaFS Portal</title>
+	<link href="http://ribafs.org/portal/servidores/ubuntu-server/usando-o-vagrant.html?tmpl=component&amp;print=1&amp;layout=default" rel="canonical" />
+	<link href="../../templates/shaper_helix3/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../../favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<script src="../../media/jui/js/jquery.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../media/jui/js/jquery-noconflict.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../media/jui/js/jquery-migrate.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="http://backup/portal/media/system/js/caption.js?d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script type="text/javascript">
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+	</script>
+	<meta property="og:url" content="http://backup/portal/servidores/ubuntu-server/usando-o-vagrant.html" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Usando o Vagrant" />
+	<meta property="og:description" content="Usando o Vagrant O Vagrant é uma ferramenta de desenvolvimento que cria máquinas virtuais de vários sistemas operacionais, onde podemos instalar o que quiz..." />
+
+   	<link rel="stylesheet" href="../../media/jui/css/bootstrap.min.css" type="text/css" />
+	<link rel="stylesheet" href="../../templates/shaper_helix3/css/frontend-edit.css" type="text/css" />
+    <link rel="stylesheet" href="../../templates/shaper_helix3/css/template.css" type="text/css" />
+</head>
+<body class="contentpane">
+	<div id="system-message-container">
+	</div>
+
+	
+
+<article class="item item-page" itemscope itemtype="http://schema.org/Article">
+	<meta itemprop="inLanguage" content="pt-BR" />
+	
+	
+
+	<div class="entry-header">
+		<span class="post-format"><i class="fa fa-thumb-tack"></i></span>
+		
+					<h2 itemprop="name">
+									Usando o Vagrant							</h2>
+												</div>
+
+						<div id="pop-print" class="btn hidden-print">
+				<a href="usando-o-vagrant.html#" onclick="window.print();return false;">			<span class="icon-print" aria-hidden="true"></span>
+		Imprimir	</a>			</div>
+				
+	
+	
+				
+	
+			<div itemprop="articleBody">
+		<p style="text-align: justify;"><strong>Usando o Vagrant</strong></p>
+
+<p style="text-align: justify;">O Vagrant é uma ferramenta de desenvolvimento que cria máquinas virtuais de vários sistemas operacionais, onde podemos instalar o que quizermos, configurar e ao final empacotar e transferir para outros computadores com grande facilidade.</p>
+
+<p style="text-align: justify;"><strong>Exemplo</strong></p>
+
+<p style="text-align: justify;">Em casa meu sistema operacional atual é o linux Mint 18.1, que vem com o PostgreSQL 9.5. Estou precisando usar a última versão, que é a 9.6.3. Então crio uma box com o Vagrant, contendo o Ubuntu 17.04. Com a última versão do Ubuntu posso instalar o PostgreSQL 9.6.3. Após criar a box com o 17.04, instalo e configuro o PostgreSQL, o PHP 7 e outros e configuro. Após tudo pronto e testado eu empacoto e levo para minha máquina no trabalho. Chegando lá eu uso sem reinstalar ou reconfigurar nada.</p>
+
+<p style="text-align: justify;"><strong>Usando o Vagrant para criar um ambiente de desenvolvimento</strong><br />Funciona no Linux, Windows e Mac<br /><br /><strong>Instalação</strong><br />Virtualbox e guest<br /><a href="https://www.virtualbox.org/wiki/Downloads">https://www.virtualbox.org/wiki/Downloads</a>  - Virtualbox e Extension Pack<br />Vargant - <a href="http://vagrantup.com">http://vagrantup.com</a> <br />git - <a href="https://git-scm.com/">https://git-scm.com/</a> <br /><br />Após nstalar tudo, vamos <strong>instalar uma box</strong> (pacote com um sistema operacional)<br /><br />Acesse<br /><a href="https://www.vagrantup.com/">https://www.vagrantup.com/</a> <br /><br />E clique em Find Boxes. Como exemplo vamos instalar a box Ubuntu 17.04<br /><br />Crie um diretório para o varant em seu home:<br />mkdir vagrant<br />cd vagrant mkdir ub1704<br /><br />Execute a linha de comando<br />vagrant init fso/zesty64; vagrant up --provider virtualbox<br /><br />Se no Windows faça em duas etapas, executando dois comandos separados pelo ;<br /><br />Ao concluir <strong>acesse a box com</strong><br />varant ssh<br /><br /><strong>Atualize com</strong><br />sudo apt update<br /><br /><strong>Sair da box com:</strong><br />exit<br /><br /><strong>Enviar algum arquivo para a box pelo scp:</strong><br />scp -P 2222 arquivo.ext vagrant@127.0.0.1:/home/vagrant<br /><br />A senha é vagrant<br /><br />Acesse novamente e instale o que deseja para seu ambiente: linguagens, ferramentas, SGBDs, etc.<br /><br /><strong>Parando uma box</strong><br />vagrant halt<br /><br /><strong>Destruindo quando não mais desejar</strong><br />vagrant destroy<br /><br /><strong>Empacotando para transporte</strong><br />É muito confortável e eficiente transportar seu ambiente prontinho, com tudo que você usa, as versões e configurações para um destino (casa, trabalho, etc).<br /><br />cd vagrant/ub1704<br />vagrant package --output ub1704.box<br /><br /><strong>Transportar os arquivos</strong><br />package.box e Vagrantfile<br /><br /><strong>No destino</strong><br />Criar uma pasta no home<br />Copiar os arquivos package.box e Vagrantfile para a pasta acima<br />Renomear (exemplo) package.box para ub1704.box<br />Mudar no Vagrantfile a linha <br />  config.vm.box = "fso/zesty64"<br />Para<br />  config.vm.box = "./ub1704.box"<br />Acessar e executar<br />vagrant up<br /><br /><strong>Para atualizar após alterações no Vagrantfile</strong><br />vagrant halt<br />vagrant up<br /><br /><strong>Instalar o plugin vbguest</strong></p>
+
+<p style="text-align: justify;">vagrant plugin install vagrant-vbguest<br /><br /><strong>Carregar alterações</strong><br />vagrant provision</p> 	</div>
+
+	
+	
+				
+	
+	
+	
+</article>
+
+</body>
+</html>

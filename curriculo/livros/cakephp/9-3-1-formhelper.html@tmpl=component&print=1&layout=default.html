@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br" dir="ltr">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <base href="" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Ribamar FS" />
+	<meta name="robots" content="noindex, nofollow" />
+	<meta name="description" content="Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros." />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>9.3.1 - formHelper - RibaFS Portal</title>
+	<link href="http://ribafs.org/portal/curriculo/livros/cakephp/9-3-1-formhelper.html?tmpl=component&amp;print=1&amp;layout=default" rel="canonical" />
+	<link href="../../../templates/shaper_helix3/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../../../favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="http://backup/portal/media/plg_content_prismsyntaxhighlighter/css/prism-okaidia.css" rel="stylesheet" type="text/css" />
+	<link href="http://backup/portal/media/plg_content_prismsyntaxhighlighter/css/prism-linenumbers.css" rel="stylesheet" type="text/css" />
+	<script src="http://backup/portal/media/plg_content_prismsyntaxhighlighter/js/prism-tinymce.js" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery-noconflict.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery-migrate.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="http://backup/portal/media/system/js/caption.js?d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script type="text/javascript">
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+	</script>
+	<meta property="og:url" content="http://backup/portal/curriculo/livros/cakephp/9-3-1-formhelper.html" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="9.3.1 - formHelper" />
+	<meta property="og:description" content="9.3.1 – formHelper Você nunca sabe a força que tem, até que a sua única alternativa é ser forte. Johnny Depp Tradução simplificada e resumida do original e..." />
+
+   	<link rel="stylesheet" href="../../../media/jui/css/bootstrap.min.css" type="text/css" />
+	<link rel="stylesheet" href="../../../templates/shaper_helix3/css/frontend-edit.css" type="text/css" />
+    <link rel="stylesheet" href="../../../templates/shaper_helix3/css/template.css" type="text/css" />
+</head>
+<body class="contentpane">
+	<div id="system-message-container">
+	</div>
+
+	
+
+<article class="item item-page" itemscope itemtype="http://schema.org/Article">
+	<meta itemprop="inLanguage" content="pt-BR" />
+	
+	
+
+	<div class="entry-header">
+		<span class="post-format"><i class="fa fa-thumb-tack"></i></span>
+		
+					<h2 itemprop="name">
+									9.3.1 - formHelper							</h2>
+												</div>
+
+						<div id="pop-print" class="btn hidden-print">
+				<a href="9-3-1-formhelper.html#" onclick="window.print();return false;">			<span class="icon-print" aria-hidden="true"></span>
+		Imprimir	</a>			</div>
+				
+	
+	
+				
+	
+			<div itemprop="articleBody">
+		<h3>9.3.1 – formHelper</h3>
+<p align="right">Você nunca sabe a força que tem, até que a sua única alternativa é ser forte.</p>
+<p align="right">Johnny Depp</p>
+<p> </p>
+<p><strong>Tradução simplificada e resumida do original em:</strong></p>
+<p><a href="http://book.cakephp.org/3.0/en/views/helpers/form.html">http://book.cakephp.org/3.0/en/views/helpers/form.html</a></p>
+<p>class <tt>Cake\View\Helper\FormHelper</tt>(View $view, array $config =[])</p>
+<p align="justify"><a name="result_box6"></a> <span style="font-family: Times New Roman, serif;"><span lang="pt-PT">O FormHelper faz a maior parte do trabalho pesado na criação de formulários. O FormHelper foca na criação de formulários de forma rápida, de uma forma que irá agilizar a validação, re-po</span><span lang="pt-PT">pulação</span><span lang="pt-PT"> e layout. O FormHelper também é flexível - ele vai fazer quase tudo p</span><span lang="pt-PT">or</span><span lang="pt-PT"> você, utilizando convenções, ou você pode usar métodos específicos para obter apenas o que você precisa.</span> </span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><b>Iniciando um Formulário</b></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><tt class="western"><span style="font-family: Times New Roman, serif;">Cake\View\Helper\FormHelper::create</span></tt><span style="font-family: Times New Roman, serif;"><span style="font-size: large;">(</span></span><em><span style="font-family: Times New Roman, serif;">mixed $model = null</span></em><span style="font-family: Times New Roman, serif;">, </span><em><span style="font-family: Times New Roman, serif;">array $options =</span></em><span style="font-family: Times New Roman, serif;">[]</span><span style="font-family: Times New Roman, serif;"><span style="font-size: large;">)</span></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;" align="justify"><span style="font-family: Times New Roman, serif;">O primeiro método que você deve usar para tirar vantagem do FormHelper é o create(). Este método mostra uma tag de abertura de formulário.</span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;" align="justify"><span style="font-family: Times New Roman, serif;">Todos os parâmetros são opcionais. Caso create() seja chamado sem nenhum parâmetro, ele assume que você está construindo um form que submete para o controller atual, via URL atual. O método default para a submissão do form é o POST. Caso você chame o create dentro da view para UsersController::add(), com <code class="western">$this-&gt;Form-&gt;create()</code><code class="western">
+</code>você deve ver a seguinte saída na view renderizada:</span></p>
+<pre class="western"><span style="font-family: Times New Roman, serif;"><span style="font-size: xx-small;"><i>/<span style="font-size: medium;">&lt;form method="post" action="/users/add"&gt;</span></i></span></span></pre>
+<p align="justify"><span style="font-family: Times New Roman, serif;">Se <code class="western">create()</code> é chamado sem parâmetros fornecidos, assume-se a construção de um formulário que submete dados via POST para a action <code class="western">add()</code> (ou <code class="western">edit()</code> no caso de um <code class="western">id</code> estar incluído nos dados do formulário).</span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;" align="justify"><a name="result_box11"></a> <span style="font-family: Times New Roman, serif;">O argumento $model é usado como forma de contexto. <span lang="pt-PT">Existem vários contextos </span><span lang="pt-PT">embutidos para </span><span lang="pt-PT">formulário e você pode adicionar seu próprio, o que nós vamos cobrir na próxima seção. O provedores internos map</span><span lang="pt-PT">eiam</span><span lang="pt-PT"> para os seguintes valores de</span> $model:</span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;" align="justify"><a name="result_box21"></a> <span style="font-family: Times New Roman, serif;">- <span lang="pt-PT">Uma instância de entidade ou um mapa de itera</span><span lang="pt-PT">t</span><span lang="pt-PT">or para o EntityContext, neste contexto permite FormHelper trabalhar com os resultados do ORM embutido.</span></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;" align="justify"><span style="font-family: Times New Roman, serif;"><span lang="pt-PT">- Um </span><span lang="pt-PT">array</span><span lang="pt-PT"> que contém a chave de esquema, mapeia para ArrayContext que permite a criação de estruturas de dados simples para construir forms </span><span lang="pt-PT">contra</span><span lang="pt-PT">.</span></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;" align="justify"><span style="font-family: Times New Roman, serif;"><span lang="pt-PT">- </span><span lang="pt-PT">null</span> <span lang="pt-PT">e</span><span lang="pt-PT"> fals</span><span lang="pt-PT">e</span> <span lang="pt-PT">mapeiam para </span><span lang="pt-PT">o NullContext, esta classe de contexto simplesmente satisfizer a interface </span><span lang="pt-PT">que a </span><span lang="pt-PT">FormHelper requer. </span><span lang="pt-PT">E</span><span lang="pt-PT">ste contexto é útil se você quiser construir um pequeno formulário que não requer persistência </span><span lang="pt-PT">ORM</span><span lang="pt-PT">.</span></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;">Para criar um form para uma entity faça o seguinte:</span></p>
+<pre class="western"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;">// Se você está em /articles/add</span></span>
+<span style="font-family: Times New Roman, serif;"><span style="font-size: medium;">// $article deve ser uma entidade vazia de Article.</span></span>
+<span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><i>echo $this-&gt;Form-&gt;create($article);</i></span></span></pre>
+<p style="margin-bottom: 0cm; line-height: 100%;" align="justify"><a name="result_box41"></a><span style="font-family: Times New Roman, serif;"><span lang="pt-PT">Isto irá postar os dados do formulário para </span><span lang="pt-PT">o action</span><span lang="pt-PT"> add () de ArticlesController. No entanto, você também pode usar a mesma lógica para criar um formulário de edição. O FormHelper utiliza o objeto de entidade para detectar automaticamente se criar</span><span lang="pt-PT">á</span><span lang="pt-PT"> um form de adicionar ou editar. Se a entidade fornecido não é "novo", o formulário será criado como um formulário de edição. </span><span lang="pt-PT">Se for novo será add.</span> </span></p>
+<p><span style="font-family: Times New Roman, serif;">Por exemplo, se navegar para</span><br /> </p>
+<p><strong><span style="font-family: Times New Roman, serif;">http://example.org/articles/edit/5</span></strong><span style="font-family: Times New Roman, serif;">, nós devemos fazer o seguinte:</span></p>
+<pre class="language-php"><code>// src/Controller/ArticlesController.php:
+
+public function edit($id = null)
+{
+    if (empty($id)) {
+        throw new NotFoundException;
+    }
+    $article = $this-&gt;Articles-&gt;get($id);
+    // Save logic goes here
+    $this-&gt;set('article', $article);
+}
+
+// View/Articles/edit.ctp:
+// Since $article-&gt;isNew() is false, we will get an edit form
+
+&lt;?= $this-&gt;Form-&gt;create($article) ?&gt;</code></pre>
+<p><strong>Mudando o Método para o Form</strong></p>
+<pre>echo $this-&gt;Form-&gt;create($article, ['type' =&gt; 'get']);</pre>
+<p>Quando existir algum campo do tipo file, precisará ser assim:</p>
+<pre>echo $this-&gt;Form-&gt;create($article, ['type' =&gt; 'file']);</pre>
+<p><strong>Configurando a URL para o Form</strong></p>
+<pre>echo $this-&gt;Form-&gt;create($article, ['url' =&gt; ['action' =&gt; 'login']]);</pre>
+<p>Caso o desejado form action não seja do controller atual, podemos especificar a completa URL para a action do form:</p>
+<pre>echo $this-&gt;Form-&gt;create(null, [
+    'url' =&gt; ['controller' =&gt; 'Articles', 'action' =&gt; 'publish']
+]);</pre>
+<p><strong>Ou pode apontar para uma URL externa:</strong></p>
+<pre>echo $this-&gt;Form-&gt;create(null, [
+    'url' =&gt; 'http://www.google.com/search',
+    'type' =&gt; 'get'
+]);</pre>
+<p><strong>Criando Controles para Forms</strong></p>
+<p><a name="Cake\View\Helper\FormHelper::control"></a><code class="western"><span style="font-family: Times New Roman, serif;"><i>Cake\View\Helper\FormHelper::control</i></span></code><span style="font-family: Times New Roman, serif;"><i>(</i></span><em><span style="font-family: Times New Roman, serif;"><i>string $fieldName</i></span></em><span style="font-family: Times New Roman, serif;"><i>, </i></span><em><span style="font-family: Times New Roman, serif;"><i>array $options = []</i></span></em><span style="font-family: Times New Roman, serif;"><i>) </i></span></p>
+<p style="margin-bottom: 0cm;"><code class="western">$fieldName</code> – O nome do campo do form <code class="western">'Modelname.fieldname'</code>.</p>
+<p><code class="western">$options</code> - Um array opcional que pode incluir ambos <a href="https://book.cakephp.org/3.0/en/views/helpers/form.html#control-specific-options">Options for Control</a>, e options dos outros métodos (que o <code class="western">control()</code> emprega internamente para gerar vários elementos HTML) como também atributos HTML válidos.</p>
+<p>Em versões anteriores o Cake usava $this-&gt;form-&gt;input(), agora usa $this-&gt;form-&gt;control().</p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><span lang="pt-PT">O método control() permite gerar </span></span><span style="font-family: Times New Roman, serif;"><span lang="pt-PT">todos os </span></span><span style="font-family: Times New Roman, serif;"><span lang="pt-PT">controles/</span></span><span style="font-family: Times New Roman, serif;"><span lang="pt-PT">inputs</span></span><span style="font-family: Times New Roman, serif;"><span lang="pt-PT"> d</span></span><span style="font-family: Times New Roman, serif;"><span lang="pt-PT">o</span></span><span style="font-family: Times New Roman, serif;"><span lang="pt-PT"> formulário. Esses controles incluirão um</span></span><span style="font-family: Times New Roman, serif;"><span lang="pt-PT">a</span></span><span style="font-family: Times New Roman, serif;"><span lang="pt-PT"> div </span></span><span style="font-family: Times New Roman, serif;"><span lang="pt-PT">para</span></span><span style="font-family: Times New Roman, serif;"><span lang="pt-PT"> quebra automática, </span></span><span style="font-family: Times New Roman, serif;"><span lang="pt-PT">um </span></span><span style="font-family: Times New Roman, serif;"><span lang="pt-PT">rótulo, </span></span><span style="font-family: Times New Roman, serif;"><span lang="pt-PT">um </span></span><span style="font-family: Times New Roman, serif;"><span lang="pt-PT">widget de controle e </span></span><span style="font-family: Times New Roman, serif;"><span lang="pt-PT">validação de </span></span><span style="font-family: Times New Roman, serif;"><span lang="pt-PT">erro, se necessário. Usando os metadados no contexto do formulário, esse método escolherá um tipo de controle apropriado para cada campo. Internamente control() usa os outros métodos do FormHelper.</span></span></p>
+<p lang="pt-PT">Observe que enquanto os campos gerados pelo método control() são chamados genericamente de “inputs” nesta página, tecnicamente falando, o método control() pode gerar não apenas todos os elementos de tipo input do HTML, mas também outros elementos de formulário HTML (por exemplo, selects, button, textarea).</p>
+<p>Por default o método <code class="western"><span style="font-family: Times New Roman, serif;">control()
+</span></code><code class="western"><span style="font-family: Times New Roman, serif;">deve
+empregar os </span></code><code class="western"><span style="font-family: Times New Roman, serif;">s</span></code><code class="western"><span style="font-family: Times New Roman, serif;">eguintes
+widget </span></code>templates:</p>
+<pre class="western">'inputContainer' =&gt; '&lt;div class="input {{type}}{{required}}"&gt;{{content}}&lt;/div&gt;'
+'input' =&gt; '&lt;input type="{{type}}" name="{{name}}"{{attrs}}/&gt;'</pre>
+<p>Em caso de validação de erros ele também usa:</p>
+<pre class="western" style="margin-bottom: 0.5cm;">'inputContainerError' =&gt; '&lt;div class="input {{type}}{{required}} error"&gt;{{content}}{{error}}&lt;/div&gt;'</pre>
+<p><span style="font-family: Times New Roman, serif;">O tipo de controle criado (quando nós não provemos nenhum options adicional para especificar o tipo de elemento gerado) é inferido via introspecção do model e depende do tipo de dados do campo:</span></p>
+<dl>
+<dt><b>Column Type - </b>Resulting Form Field</dt>
+<dt>string, uuid (char, varchar, etc.) - text</dt>
+<dt>boolean, tinyint(1) - checkbox</dt>
+<dt>decimal - number</dt>
+<dt>float - number</dt>
+<dt>integer - number</dt>
+<dt>text - textarea</dt>
+<dt>text, with name of password, passwd - password</dt>
+<dt>text, with name of email - email</dt>
+<dt>text, with name of tel, telephone, or phone - tel</dt>
+<dt>date - day, month, and year selects</dt>
+<dt>datetime, timestamp - day, month, year, hour, minute, and meridian selects</dt>
+<dt>time - hour, minute, and meridian selects</dt>
+<dt>binary - file</dt>
+</dl>
+<p>O parâmetro <code class="western">$options</code> segue sua escolha de um controle específico tipo caso necessite:</p>
+<pre class="western" style="margin-bottom: 0.5cm;">echo $this-&gt;Form-&gt;control('published', ['type' =&gt; 'checkbox']);</pre>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><b>Exemplo de form:</b></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;">Crie uma nova view em um template, chamada form.ctp, contendo</span></p>
+<pre class="language-php"><code>&lt;?php
+	echo $this-&gt;Form-&gt;create($user);
+	// The following generates a Text input
+	echo $this-&gt;Form-&gt;control('username');
+	// The following generates a Password input
+	echo $this-&gt;Form-&gt;control('password');
+	// Assuming 'approved' is a datetime or timestamp field the following
+	//generates: Day, Month, Year, Hour, Minute
+	echo $this-&gt;Form-&gt;control('approved');
+	// The following generates a Textarea element
+	echo $this-&gt;Form-&gt;control('quote');
+	echo $this-&gt;Form-&gt;button('Add');
+	echo $this-&gt;Form-&gt;end();
+?&gt;</code></pre>
+<p><strong>Adicione um action ao controller correspondente, assim:</strong></p>
+<p>public function form()</p>
+<p>{</p>
+<p>$customers =$this-&gt;Customers;</p>
+<p>$this-&gt;set(compact('customers'));</p>
+<p>}</p>
+<p>Então chame pelo navegador assim:</p>
+<p><a href="http://localhost/controllerNome/form">http://localhost/</a><a href="http://localhost/controllerNome/form">clientes/</a><a href="http://localhost/controllerNome/form">controllerNome/form</a></p>
+<p>Podemos especificar qualquer opção para o tipo do input e qualquer atributo HTML.</p>
+<p> </p>
+<p><strong>Criar um Select</strong></p>
+<p>Se você deseja criar um campo select enquanto usando uma relação belogTo ou hasOne você pode adicionar o seguinte para seu UsersController (assumindo que User belongTo Group):</p>
+<pre>$this-&gt;set('groups', $this-&gt;Users-&gt;Groups-&gt;find('list'));</pre>
+<p>Então na view do Template:</p>
+<pre>echo $this-&gt;Form-&gt;input('group_id', ['options' =&gt; $groups]);</pre>
+<p> </p>
+<p>Para um select em uma associação belongsToMany Groups você pode adicionar o seguinte para seu UsersController:</p>
+<pre>$this-&gt;set('groups', $this-&gt;Users-&gt;Groups-&gt;find('list'));</pre>
+<p>Na view:</p>
+<pre>echo $this-&gt;Form-&gt;input('groups._ids', ['options' =&gt; $groups]);</pre>
+<p><a name="result_box31"></a> <span style="font-family: Times New Roman, serif;"><span lang="pt-PT">Se o nome do model consiste em duas ou mais palavras, por exemplo, "UserGroup", ao passar os dados usando set() você deve nomear os seus dados </span><span lang="pt-PT">com</span><span lang="pt-PT"> um formato pluralizado e camelCase como se segue:</span></span></p>
+<pre class="western" lang="pt-PT"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><i>$this-&gt;set('userGroups', $this-&gt;UserGroups-&gt;find('list'));</i></span></span></pre>
+<p lang="pt-PT" style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><b>Não usar input() para gerar submits</b></span></p>
+<p lang="pt-PT" style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;">Para isso usar o método \View\Helper\FormHelper::submit().</span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><span style="font-family: Times New Roman, serif;"><b>Options do Input</b></span></p>
+<pre class="language-php"><code>$options['type']
+
+echo $this-&gt;Form-&gt;input('field', ['type' =&gt; 'file']);
+echo $this-&gt;Form-&gt;input('email', ['type' =&gt; 'email']);
+$options['label']
+
+echo $this-&gt;Form-&gt;input('name', [
+    'label' =&gt; 'The User Alias'
+]);
+Outros:
+echo $this-&gt;Form-&gt;input('name', [
+    'label' =&gt; [
+        'class' =&gt; 'thingy',
+        'text' =&gt; 'The User Alias'
+    ]
+]);</code></pre>
+<p> </p>
+<pre class="language-php"><code>Tipo select:
+$sizes = ['s' =&gt; 'Small', 'm' =&gt; 'Medium', 'l' =&gt; 'Large'];
+echo $this-&gt;Form-&gt;select('size', $sizes, ['default' =&gt; 'm']);
+$options['value']
+echo $this-&gt;Form-&gt;time('close_time', [
+    'value' =&gt; '13:30:00'
+]);
+echo $this-&gt;Form-&gt;select('rooms', [
+    'multiple' =&gt; true,
+    // options with values 1 and 3 will be selected as default
+    'default' =&gt; [1, 3]
+]);
+$options['empty']
+echo $this-&gt;Form-&gt;select(
+    'field',
+    [1, 2, 3, 4, 5],
+    ['empty' =&gt; '(choose one)']
+);
+$options['datetime']
+echo $this-&gt;Form-&gt;input('time', [
+    'type' =&gt; 'time',
+    'interval' =&gt; 15
+]);
+</code></pre>
+<p><strong>Criando dois selects estáticos para os campos controller e action em Permissions/add.ctp</strong></p>
+<p>$options = ['Customers'=&gt;'Customers','Groups'=&gt;'Groups','Users'=&gt;'Users','Permissions'=&gt;'Permissions','Products'=&gt;'Products','ProductItems'=&gt;'ProductItems','value'=&gt;'Selecione'];</p>
+<p>echo $this-&gt;Form-&gt;input('controller',['options'=&gt;$options,'required'=&gt;'false', 'class'=&gt;'col-md-12','empty'=&gt;'Selecione']); </p>
+<p>$options2 = ['index'=&gt;'index','add'=&gt;'add','edit'=&gt;'edit','view'=&gt;'view','delete'=&gt;'delete'];</p>
+<p>echo $this-&gt;Form-&gt;input('action', ['options'=&gt;$options2,'required'=&gt;'false', 'class'=&gt;'col-md-12', 'empty'=&gt;'Selecione']);</p>
+<p> </p>
+<p>São estáticos, portanto sempre que precisar adicionar um novo controller ou action, precisa alterar este código.</p>
+<p> </p>
+<p><strong>Para que Html-&gt;Link permita CSS:</strong></p>
+<p>&lt;?= $this-&gt;Html-&gt;Link('&lt;span class="glyphicon glyphicon-plus"&gt;&lt;/span&gt; Novo', ['controller'=&gt;'Bookmaarks','action'=&gt;'add'],</p>
+<p>['class'=&gt;'btn tbn-primary pull-right']);</p>
+<p> </p>
+<p>Assim ele mostrará o código &lt;span...&lt;/span&gt;</p>
+<p><strong>Para que permita o CSS, use:</strong></p>
+<p>&lt;?= $this-&gt;Html-&gt;link('&lt;span class="glyphicon glyphicon-plus"&gt;&lt;/span&gt; Novo', ['controller'=&gt;'Bookmaarks','action'=&gt;'add'],</p>
+<p>['class'=&gt;'btn tbn-primary pull-right', 'escape'=&gt;false]);</p>
+<p> </p>
+<p><strong>Observação:</strong></p>
+<p>classe Html, método link. Classe com inicial maiúscula e método tudo em minúsculas.</p>
+<p> </p>
+<p><strong>Mudar o tipo de um campo</strong></p>
+<p>O Cake gerou um campo com o tipo textarea em um form.</p>
+<p>Para mudar podemos fazer isso:</p>
+<p>print $this-&gt;Form-&gt;input('url',['label', 'URL']);</p>
+<p> </p>
+<p>Mudar para tipo text (campo texto) assim:</p>
+<p>print $this-&gt;Form-&gt;input('url',['type'=&gt;'text','label', 'URL']);</p>
+<p> </p>
+<p><strong>Pegando os Erros do Formulário</strong></p>
+<p>Uma vez sido validado, o formulário pode recuperar seus próprios erros:</p>
+<p>$errors = $form-&gt;errors();</p>
+<p>/* $errors contains</p>
+<p>[</p>
+<p>'email' =&gt; ['A valid email address is required']</p>
+<p>]</p>
+<p>*/</p>
+<p> </p>
+<p><strong>Form Helper</strong></p>
+<p>Form</p>
+<p>$this-&gt;Form-&gt;control() - usado para criar elementos com o mesmo nome. Tem dois parâmetros:</p>
+<p>Primeiro - nome do campo</p>
+<p>Segundo - opcional, permite usar arrays com múltiplas opções</p>
+<p> </p>
+<p>Para o CakePHP os campos do tipo data, datatime ou timestamp obrigatoriamente devem usar DEFAULT NULL:</p>
+<p>nascimento date DEFAULT NULL</p>
+<p>E também não podemos alterar sua validação para exigir preenchimento com notEmpty ou notBlank. Caso contrário o Cake não reconhece e não adiciona o registro.</p>
+<p>src/Template/Clientes/add.ctp ou edit.ctp</p>
+<p> </p>
+<p>Ano mínimo sendo 13 anos antes do atual e máximo sendo 100 anos antes do atual, ou seja, como estou em 2016 de 1916 até 2003</p>
+<p>Select múltiplo (permite selecionar várias opções)</p>
+<pre class="language-php"><code>	print $this-&gt;Form-&gt;input('pilot_ratings',[
+		'type' =&gt; 'select',
+		'class' =&gt; 'listbox',
+		'size' =&gt; 5,
+		'id' =&gt; 'pilot_ratings',
+		'multiple' =&gt; 'multiple',
+		'options' =&gt; [
+		    ['name' =&gt; 'Habilitación de Vuelo Nocturno Local', 'value' =&gt; '1'],
+		    ['name' =&gt; 'Habilitación Cat. II / Cat. III', 'value' =&gt; '2'],
+		    ['name' =&gt; 'Habilitación de Remolque de Planeador', 'value' =&gt; '5']
+		]
+	]);</code></pre>
+<p>src/Template/Clientes/add.ctp ou edit.ctp</p>
+<p> </p>
+<p><strong>Dicas sobre data e hora</strong></p>
+<p>Para o CakePHP os campos do tipo data, datatime ou timestamp obrigatoriamente devem usar DEFAULT NULL:</p>
+<p>nascimento date DEFAULT NULL</p>
+<p> </p>
+<p>E também não podemos alterar sua validação para exigir preenchimento com notEmpty ou notBlank. Caso contrário</p>
+<p>o Cake não reconhece e não adiciona o registro.</p>
+<p>src/Template/Clientes/add.ctp ou edit.ctp</p>
+<p>Por padrão o Cake mostra apenas os anos de 2011 até 2021 na combo Ano.</p>
+<p>Vamos alterar para que o ano mínimo seja 13 anos antes do atual</p>
+<p>e máximo seja 100 anos antes do atual, ou seja, como estou em 2016,</p>
+<p>que mostre de 1916 até 2003, mas isso deve ser pensado para atender ao requisito</p>
+<p>da tabela/aplicativo. No nosso caso, do DNOCS, devemos usar 18 anos antes,</p>
+<p>ou mais para o primeiro?</p>
+<p><strong>Criar o select controller e o action</strong></p>
+<pre class="language-php"><code>&lt;?php
+            $controls = ['Groups'=&gt;'Groups', 'Users'=&gt;'Users', 'Permissions'=&gt;'Permissions', 'Customers'=&gt;'Customers'];			
+            $actions = ['index'=&gt;'index','add'=&gt;'add','edit'=&gt;'edit','delete'=&gt;'delete'];
+            echo $this-&gt;Form-&gt;input('group_id', ['options' =&gt; $groups, 'empty'=&gt;'Grupo','class'=&gt;'col2']);
+            echo $this-&gt;Form-&gt;input('controller', ['options'=&gt;$controls,'class'=&gt;'col2','empty'=&gt;'Controller']);
+            echo $this-&gt;Form-&gt;input('action', ['options'=&gt;$actions,'class'=&gt;'col2','empty'=&gt;'Action']);
+        ?&gt;
+</code></pre>
+<p><strong>Actions em form</strong></p>
+<p>echo $form-&gt;create('Post', ['action' =&gt; 'whatever']);</p>
+<p>echo $form-&gt;create('Post', ['url' =&gt; '/controller_name/action_name']);</p>
+<p>echo $this-&gt;Form-&gt;create("Despesas",['url'=&gt;'/despesas/despesas_mes']);</p>
+<p> </p>
+<p>Quando usamos o método set() em nosso controller, definimos variáveis específicas para serem enviadas para a view/tempalte correspondente. A view/template fará com que todas as variáveis passadas estejam disponíveis no escopo do template como variáveis locais.</p>
+<p> </p>
+<p><strong>Mudando largura de campos</strong></p>
+<p>echo $this-&gt;Form-&gt;input['Busca',['type'=&gt;'text','maxlength'=&gt;'8','style'=&gt;'width:50px; height:20px;']];</p>
+<p> </p>
+<p><strong>Criando link com o HtmlHelper:</strong></p>
+<p>Para o controller atual</p>
+<p>&lt;?= $this-&gt;Html-&gt;link(__('Lista de Usuário'), ['action' =&gt; 'index']) ?&gt;</p>
+<p> </p>
+<p><strong>Para outro controller</strong></p>
+<p>&lt;?= $this-&gt;Html-&gt;link(__('Lista de Usuário'), ['controller'=&gt;'Users','action' =&gt; 'index']) ?&gt;</p>
+<p> </p>
+<p><strong>Criando formulário com o FormHelper</strong></p>
+<p>&lt;?= $this-&gt;Form-&gt;create($user) ?&gt;</p>
+<p>&lt;legend&gt;&lt;?= __('Editar Usuário') ?&gt;&lt;/legend&gt;</p>
+<p>&lt;?php</p>
+<p>echo $this-&gt;Form-&gt;input('username');</p>
+<p>echo $this-&gt;Form-&gt;input('password');</p>
+<p>echo $this-&gt;Form-&gt;input('role', ['admin'=&gt;'Administrador','user'=&gt;'Usuário']);</p>
+<p>?&gt;</p>
+<p>&lt;?= $this-&gt;Form-&gt;button(__('Submit')) ?&gt;</p>
+<p>&lt;?= $this-&gt;Form-&gt;end() ?&gt;</p>
+<p>Campo input simular select em FormHelper e mudando o label:</p>
+<p> </p>
+<p>echo $this-&gt;Form-&gt;label('Tipo'); // Criando o Label</p>
+<p>echo $this-&gt;Form-&gt;select('role', ['user'=&gt;'Usuário','admin'=&gt;'Administrador'], ['default' =&gt; 'admin']);</p>
+<p> </p>
+<p><strong>Mais detalhes em:</strong></p>
+<p><a href="http://book.cakephp.org/3.0/en/views/helpers/form.html">http://book.cakephp.org/3.0/en/views/helpers/form.html</a></p>
+<p><a href="https://book.cakephp.org/3.0/pt/core-libraries/form.html">https://book.cakephp.org/3.0/pt/core-libraries/form.html</a></p>
+<h3 class="western"> </h3> 	</div>
+
+	
+	
+				
+	
+	
+	
+</article>
+
+</body>
+</html>

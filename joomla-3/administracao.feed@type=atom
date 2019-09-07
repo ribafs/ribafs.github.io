@@ -1,0 +1,960 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="Joomla! - Open Source Content Management" -->
+<feed xmlns="http://www.w3.org/2005/Atom"  xml:lang="pt-br">
+	<title type="text">Administração - RibaFS Portal</title>
+	<subtitle type="text">Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros.</subtitle>
+	<link rel="alternate" type="text/html" href="http://backup"/>
+	<id>http://backup/portal/joomla-3/administracao.feed</id>
+	<updated>2019-09-07T18:55:57-03:00</updated>
+	<author>
+		<name>RibaFS Portal</name>
+	</author>
+	<generator uri="https://www.joomla.org">Joomla! - Open Source Content Management</generator>
+	<link rel="self" type="application/atom+xml" href="http://backup/portal/joomla-3/administracao.feed?type=atom"/>
+	<entry>
+		<title>Customização do Template</title>
+		<link rel="alternate" type="text/html" href="http://backup/portal/joomla-3/administracao/customizacao-do-template-joomla.html"/>
+		<published>2017-06-27T10:12:32-03:00</published>
+		<updated>2017-06-27T10:12:32-03:00</updated>
+		<id>http://backup/portal/joomla-3/administracao/customizacao-do-template-joomla.html</id>
+		<author>
+			<name>Ribamar FS</name>
+		</author>
+		<summary type="html">&lt;p style=&quot;text-align: justify;&quot;&gt;O template instalado vem com vários itens que não pretendo usar e outros faltando que pretendo.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Vamos remover alguns itens para que fique assim:&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Extensões - Temas&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Learnmate Free - Portal2&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Mudando o Estilo&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Vamos escolher um novo estilo. O último (verde escuro, Preset 6). Clique nele e em Save Styles&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Agora vá até o site e clique em F5 para visualizar o novo estilo.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Customizar o Menu de Topo&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Quero alterar e deixar somente 2 itens: Contato e Sobre Mim&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Clique em Layout&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Observe que os itens estão meio cinza e com um cadeado (estão bloqueados)&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Então acima e à esquerda clique em Portal2 e selecione Base Outline para desbloquear&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Nosso menu está em Top Menu&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Clique na pequena roldana à direita de Top Menu.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt; &lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Clique em Apply and Save.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Em seguida criaremos o componente Contato e o artigo Sobre Mim.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Agora vamos remover os itens do rodapé.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Um portal grande, com muitos itens e notícias pode aproveitar este rodapé, como estão fazendo os grandes portais, mas eu os removerei, pois estou criando um site simples. O Contato será o componente do Joomla. O Sobre Mim será um artigo.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Não irei remover, mas apenas desabilitar.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Role a tela até o Footer&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Clique na roldana de cada item e depois no interrumptor verde para desabilitar (fique vemelho) então salve. Não desabilite o Branding.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Também desabilitarei as redes sociais na barra Above-Slideshow.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Trocar a Logomarca&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Na região Header clique na roldana em Logo / Image&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Clique em Image para abrir a caixa de seleção. Depois clique em Selecting then e escolha a imagem para o Logo.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Então, quando ele trouxer a imagem, clique nela para selecioná-la e depois no botão Select e Apply and Save.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Agora para que nosso tempalte fique mais apresentável vamos criar um artigo de boas vindas para que apareça na página inicial.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Conteúdo - Artigos - Criar Novo Artigo&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Título - Boas Vindas&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Destaque - Sim&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Conteúdo&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Sinceramente bem-vindo(a).&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Este site destina-se ao compartilhamento de informações sobre o desenvolvimento web (criação de sites com o CMS Joomla 3, criação de aplicativos com o Framework CakePHP 3), Servidores Linux e desenvolvimento mobile. Outros assuntos procurarei abordar na seção Blog.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Quem estiver procurando meu site anterior, que contém informações sobre Joomla 2.5, CakePHP 2, servidores, virtualização, ele está aqui:&lt;/strong&gt;&lt;br /&gt;&lt;a href=&quot;http://ribafs.16mb.com&quot;&gt;http://ribafs.16mb.com&lt;/a&gt; ou &lt;a href=&quot;http://ribafs.xyz&quot;&gt;http://ribafs.xyz&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Espero sinceramente que seja útil.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Caso tenha alguma sugestão ou crítica e quiser me contactar, acesse o formulário de contato e me envie uma mensagem.&lt;br /&gt;Agradecido pela visita. &lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Ribamar FS - ribafs @ gmail.com&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Fortaleza, 27 de junho de 2017&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Salvar &amp;amp; Fechar&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt; &lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Agora vamos adicionar extensões.&lt;/p&gt;</summary>
+		<content type="html">&lt;p style=&quot;text-align: justify;&quot;&gt;O template instalado vem com vários itens que não pretendo usar e outros faltando que pretendo.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Vamos remover alguns itens para que fique assim:&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Extensões - Temas&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Learnmate Free - Portal2&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Mudando o Estilo&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Vamos escolher um novo estilo. O último (verde escuro, Preset 6). Clique nele e em Save Styles&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Agora vá até o site e clique em F5 para visualizar o novo estilo.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Customizar o Menu de Topo&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Quero alterar e deixar somente 2 itens: Contato e Sobre Mim&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Clique em Layout&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Observe que os itens estão meio cinza e com um cadeado (estão bloqueados)&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Então acima e à esquerda clique em Portal2 e selecione Base Outline para desbloquear&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Nosso menu está em Top Menu&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Clique na pequena roldana à direita de Top Menu.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt; &lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Clique em Apply and Save.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Em seguida criaremos o componente Contato e o artigo Sobre Mim.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Agora vamos remover os itens do rodapé.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Um portal grande, com muitos itens e notícias pode aproveitar este rodapé, como estão fazendo os grandes portais, mas eu os removerei, pois estou criando um site simples. O Contato será o componente do Joomla. O Sobre Mim será um artigo.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Não irei remover, mas apenas desabilitar.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Role a tela até o Footer&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Clique na roldana de cada item e depois no interrumptor verde para desabilitar (fique vemelho) então salve. Não desabilite o Branding.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Também desabilitarei as redes sociais na barra Above-Slideshow.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Trocar a Logomarca&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Na região Header clique na roldana em Logo / Image&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Clique em Image para abrir a caixa de seleção. Depois clique em Selecting then e escolha a imagem para o Logo.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Então, quando ele trouxer a imagem, clique nela para selecioná-la e depois no botão Select e Apply and Save.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Agora para que nosso tempalte fique mais apresentável vamos criar um artigo de boas vindas para que apareça na página inicial.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Conteúdo - Artigos - Criar Novo Artigo&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Título - Boas Vindas&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Destaque - Sim&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Conteúdo&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Sinceramente bem-vindo(a).&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Este site destina-se ao compartilhamento de informações sobre o desenvolvimento web (criação de sites com o CMS Joomla 3, criação de aplicativos com o Framework CakePHP 3), Servidores Linux e desenvolvimento mobile. Outros assuntos procurarei abordar na seção Blog.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Quem estiver procurando meu site anterior, que contém informações sobre Joomla 2.5, CakePHP 2, servidores, virtualização, ele está aqui:&lt;/strong&gt;&lt;br /&gt;&lt;a href=&quot;http://ribafs.16mb.com&quot;&gt;http://ribafs.16mb.com&lt;/a&gt; ou &lt;a href=&quot;http://ribafs.xyz&quot;&gt;http://ribafs.xyz&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Espero sinceramente que seja útil.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Caso tenha alguma sugestão ou crítica e quiser me contactar, acesse o formulário de contato e me envie uma mensagem.&lt;br /&gt;Agradecido pela visita. &lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Ribamar FS - ribafs @ gmail.com&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Fortaleza, 27 de junho de 2017&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Salvar &amp;amp; Fechar&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt; &lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Agora vamos adicionar extensões.&lt;/p&gt;</content>
+		<category term="Administração" />
+	</entry>
+	<entry>
+		<title>Adicionar Conteúdo</title>
+		<link rel="alternate" type="text/html" href="http://backup/portal/joomla-3/administracao/adicionar-conteudo.html"/>
+		<published>2017-06-27T10:12:32-03:00</published>
+		<updated>2017-06-27T10:12:32-03:00</updated>
+		<id>http://backup/portal/joomla-3/administracao/adicionar-conteudo.html</id>
+		<author>
+			<name>Ribamar FS</name>
+		</author>
+		<summary type="html">&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Adicionar Conteúdo&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Vamos adicionar a seguinte estrutura (categorias, artigos e itens de menu) de conteúdo ao site:&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Criar as seguites categorias e subcategorias&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;CakePHP&lt;br /&gt;    Introdução&lt;br /&gt;    Instalação&lt;br /&gt;    Configurações&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Laravel&lt;br /&gt;    Introdução&lt;br /&gt;    Instalação&lt;br /&gt;    Configurações&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Joomla&lt;br /&gt;    Introdução&lt;br /&gt;    Instalação&lt;br /&gt;    Configurações&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Main Menu&lt;br /&gt;Criar itens de menu para as categorias principais e para as subcategorias (subordinados aos principais), de forma que quando o mouse for movido sobre as categorias principais as subcategorias apareçam, como acontece aqui neste site (&lt;a href=&quot;http://backup/portal/../&quot; rel=&quot;alternate&quot;&gt;http://ribafs.org&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Meu de Topo&lt;br /&gt;    Contato&lt;br /&gt;    Sobre Mim   &lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Mudar o item de menu existente no Main Manu de Home para Início, inclusive o apelido.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Criando as Categorias Principais&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Conteúdo - Categorias - Criar Nova Categoria&lt;br /&gt;Título - CakePHP&lt;br /&gt;Salvar &amp;amp; Fechar&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Novo&lt;br /&gt;Título - Laravel&lt;br /&gt;Salvar &amp;amp; Fechar&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Novo&lt;br /&gt;Título - Joomla&lt;br /&gt;Salvar &amp;amp; Fechar&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;br /&gt;&lt;strong&gt;Criando as Subcategorias&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;CakePHP&lt;br /&gt;    Introdução&lt;br /&gt;    Instalação&lt;br /&gt;    Configurações&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Conteúdo - Categorias - Criar Nova Categoria&lt;br /&gt;Título - Introdução&lt;br /&gt;Pai - CakePHP&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Assim:&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;img src=&quot;http://backup/portal/images/conteudo1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Salvar &amp;amp; Fechar&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Novo&lt;br /&gt;Titulo - Instalaçao&lt;br /&gt;Pai - CakePHP&lt;br /&gt;Salvar &amp;amp; Fechar&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Novo&lt;br /&gt;Titulo - Configuraçoes&lt;br /&gt;Pai - CakePHP&lt;br /&gt;Salvar &amp;amp; Fechar&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Subcategorias da Laravel&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Novo&lt;br /&gt;Titulo - Introduçao&lt;br /&gt;Pai - Laravel&lt;br /&gt;Salvar &amp;amp; Fechar&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Novo&lt;br /&gt;Titulo - Instalaçao&lt;br /&gt;Pai - Laravel&lt;br /&gt;Salvar &amp;amp; Fechar&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Novo&lt;br /&gt;Titulo - Configuraçoes&lt;br /&gt;Pai - Laravel&lt;br /&gt;Salvar &amp;amp; Fechar&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Subcategorias da Joomla&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Novo&lt;br /&gt;Titulo - Introduçao&lt;br /&gt;Pai - Joomla&lt;br /&gt;Salvar &amp;amp; Fechar&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Novo&lt;br /&gt;Titulo - Instalaçao&lt;br /&gt;Pai - Joomla&lt;br /&gt;Salvar &amp;amp; Fechar&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Novo&lt;br /&gt;Titulo - Configuraçoes&lt;br /&gt;Pai - Joomla&lt;br /&gt;Salvar &amp;amp; Fechar&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Apos concluido ficara assim&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;img src=&quot;http://backup/portal/images/conteudo2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Nossas categorias e sub estao prontas para receber os artigos, mas antes vamos criar os itens de menu correspondentes.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Criar Itens de Menu do CakePHP&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Menus - Main Menu - Adicionar Item de Menu&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Itens requeridos&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Titulo do Menu - CakePHP&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Tipo de Item de Menu - clicar em Selecionar - Artigos - Lista de uma categoria&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Clicar em Selecionar (a direita de Lista de uma Categoria) e escolher CakePHP&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Deve ficar assim:&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;img src=&quot;http://backup/portal/images/conteudo3.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt; &lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt; De forma semelhante criar as categorias Laravel e Joomla.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Criar as SubCategorias&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Introduçao de CakePHP&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Menus - Main Menu - Adicionar Item de Menu&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;A criaçao sera semelhante a da CakePHP, exceto que indicaremos uma categoria Pai, que neste casos era a CakePHP.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Titulo do Menu - Introduçao&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Tipo de Item de Menu - clicar em Selecionar - Artigos - Lista de uma categoria&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Clicar em Selecionar (a direita de Lista de uma Categoria) e escolher Introduçao (abaixo de CakePHP)&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Deve ficar assim:&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;img src=&quot;http://backup/portal/images/conteudo4.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt; De forma semelhante crie tambem os itens Instalaçao e Configuraçoes.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Depois, de forma identica, crie as subs de Laravel e Joomla tambem.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Veja como deve ficar ao final (os 3 tem os mesmos subitens).&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;img src=&quot;http://backup/portal/images/conteudo5.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt; &lt;/p&gt;</summary>
+		<content type="html">&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Adicionar Conteúdo&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Vamos adicionar a seguinte estrutura (categorias, artigos e itens de menu) de conteúdo ao site:&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Criar as seguites categorias e subcategorias&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;CakePHP&lt;br /&gt;    Introdução&lt;br /&gt;    Instalação&lt;br /&gt;    Configurações&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Laravel&lt;br /&gt;    Introdução&lt;br /&gt;    Instalação&lt;br /&gt;    Configurações&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Joomla&lt;br /&gt;    Introdução&lt;br /&gt;    Instalação&lt;br /&gt;    Configurações&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Main Menu&lt;br /&gt;Criar itens de menu para as categorias principais e para as subcategorias (subordinados aos principais), de forma que quando o mouse for movido sobre as categorias principais as subcategorias apareçam, como acontece aqui neste site (&lt;a href=&quot;http://backup/portal/../&quot; rel=&quot;alternate&quot;&gt;http://ribafs.org&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Meu de Topo&lt;br /&gt;    Contato&lt;br /&gt;    Sobre Mim   &lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Mudar o item de menu existente no Main Manu de Home para Início, inclusive o apelido.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Criando as Categorias Principais&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Conteúdo - Categorias - Criar Nova Categoria&lt;br /&gt;Título - CakePHP&lt;br /&gt;Salvar &amp;amp; Fechar&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Novo&lt;br /&gt;Título - Laravel&lt;br /&gt;Salvar &amp;amp; Fechar&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Novo&lt;br /&gt;Título - Joomla&lt;br /&gt;Salvar &amp;amp; Fechar&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;br /&gt;&lt;strong&gt;Criando as Subcategorias&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;CakePHP&lt;br /&gt;    Introdução&lt;br /&gt;    Instalação&lt;br /&gt;    Configurações&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Conteúdo - Categorias - Criar Nova Categoria&lt;br /&gt;Título - Introdução&lt;br /&gt;Pai - CakePHP&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Assim:&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;img src=&quot;http://backup/portal/images/conteudo1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Salvar &amp;amp; Fechar&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Novo&lt;br /&gt;Titulo - Instalaçao&lt;br /&gt;Pai - CakePHP&lt;br /&gt;Salvar &amp;amp; Fechar&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Novo&lt;br /&gt;Titulo - Configuraçoes&lt;br /&gt;Pai - CakePHP&lt;br /&gt;Salvar &amp;amp; Fechar&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Subcategorias da Laravel&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Novo&lt;br /&gt;Titulo - Introduçao&lt;br /&gt;Pai - Laravel&lt;br /&gt;Salvar &amp;amp; Fechar&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Novo&lt;br /&gt;Titulo - Instalaçao&lt;br /&gt;Pai - Laravel&lt;br /&gt;Salvar &amp;amp; Fechar&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Novo&lt;br /&gt;Titulo - Configuraçoes&lt;br /&gt;Pai - Laravel&lt;br /&gt;Salvar &amp;amp; Fechar&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Subcategorias da Joomla&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Novo&lt;br /&gt;Titulo - Introduçao&lt;br /&gt;Pai - Joomla&lt;br /&gt;Salvar &amp;amp; Fechar&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Novo&lt;br /&gt;Titulo - Instalaçao&lt;br /&gt;Pai - Joomla&lt;br /&gt;Salvar &amp;amp; Fechar&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Novo&lt;br /&gt;Titulo - Configuraçoes&lt;br /&gt;Pai - Joomla&lt;br /&gt;Salvar &amp;amp; Fechar&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Apos concluido ficara assim&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;img src=&quot;http://backup/portal/images/conteudo2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Nossas categorias e sub estao prontas para receber os artigos, mas antes vamos criar os itens de menu correspondentes.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Criar Itens de Menu do CakePHP&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Menus - Main Menu - Adicionar Item de Menu&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Itens requeridos&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Titulo do Menu - CakePHP&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Tipo de Item de Menu - clicar em Selecionar - Artigos - Lista de uma categoria&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Clicar em Selecionar (a direita de Lista de uma Categoria) e escolher CakePHP&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Deve ficar assim:&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;img src=&quot;http://backup/portal/images/conteudo3.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt; &lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt; De forma semelhante criar as categorias Laravel e Joomla.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Criar as SubCategorias&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Introduçao de CakePHP&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Menus - Main Menu - Adicionar Item de Menu&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;A criaçao sera semelhante a da CakePHP, exceto que indicaremos uma categoria Pai, que neste casos era a CakePHP.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Titulo do Menu - Introduçao&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Tipo de Item de Menu - clicar em Selecionar - Artigos - Lista de uma categoria&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Clicar em Selecionar (a direita de Lista de uma Categoria) e escolher Introduçao (abaixo de CakePHP)&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Deve ficar assim:&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;img src=&quot;http://backup/portal/images/conteudo4.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt; De forma semelhante crie tambem os itens Instalaçao e Configuraçoes.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Depois, de forma identica, crie as subs de Laravel e Joomla tambem.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Veja como deve ficar ao final (os 3 tem os mesmos subitens).&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;img src=&quot;http://backup/portal/images/conteudo5.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt; &lt;/p&gt;</content>
+		<category term="Administração" />
+	</entry>
+	<entry>
+		<title>Instalar Extensões</title>
+		<link rel="alternate" type="text/html" href="http://backup/portal/joomla-3/administracao/instalar-extensoes.html"/>
+		<published>2017-06-27T10:12:32-03:00</published>
+		<updated>2017-06-27T10:12:32-03:00</updated>
+		<id>http://backup/portal/joomla-3/administracao/instalar-extensoes.html</id>
+		<author>
+			<name>Ribamar FS</name>
+		</author>
+		<summary type="html">&lt;h4 style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Instalar Extensões Nativas e de Terceiros&lt;/strong&gt;&lt;/h4&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt; &lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Uma extensão simples e importante é a Breadcrumbs.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;O Joomla já vem com ela, é nativa.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Extensões - Módulos&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Clique em Breadcrumbs&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Exibir Título - Ocultar&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Salvar e Fechar&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Exibindo no Site&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Para exibir no site precisamos adicionar ao Template&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Extensões - Temas - Portal2 - Layout&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Mudar de Portal2 para Base Outline para desbloquear&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Agora devemos escolher uma região adequada para o Breadcrumbs. Vamos adicioná-lo logo abaixo da região Navigation. Para isso basta clicar no sinal de + acima de Navigation para que ele adicione uma linha abaixo de si.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Acima e à esquerda, em Positions, clicar e arrastar um Module Instance e soltar na linha criada abaixo de Navigation.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Agora é hora de customizar o Module Instance. Clique na roldana à direita e renomeie (no lápis) para Breadcrumbs. Clique em Pick a Module, selecione Breadcrumbs na lista e clique em Select e então em Apply and Save&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt; &lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;E Save Layout&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Veja que ele ocupa toda a linha, sem necessidade. Então vamos adicionar outra extensão nativa, a Busca, na mesma linha. Então poderemos escolhar a largura de cada uma simplesmente arrastando.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Adicionar Busca&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Extensões - Módulos - Novo - Busca&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Título - Busca&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Exibir Título - Ocultar&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Posição - position-6 (pode ser qualquer uma, pois o Template é quem vai definir)&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Exibir pelo Template&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Extensões - Temas - Portal2 - Layout (mudar para Base Outline)&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Clicar em Module Instance, arrastar e soltar sobre Breadcrumbs, logo à direita. Veja que ele divide em partes iguais (50% para cada).&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Podemos alterar as larguras posando o mouse na separação e arrastando para um dos lados. Mudei o BC para 70% e Save Layout.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Clique na roldana à direita do Module Instante da direita, renomeie para Busca e escolha o módulo Busca.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt; &lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Criar Componente Contato&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Mudar o Nome do Usuário&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Usuários - Gerenciar - Super User&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Clicar em Super User e mudar para seu nome&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Salvar e Fechar&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Componentes - Contatos - Contatos - Novo&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Nome - Contato&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Usuário Associado - Clique no ícone e selecione (Ribamar FS)&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Cargo - Proprietário do site&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;E-mail - &lt;a href=&quot;mailto:ribafs@gmail.com&quot;&gt;ribafs@gmail.com&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Do endereço e telefones entre apenas os que julgar importantes&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Salvar e Fechar&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Quero que este link apareça no menu de topo e não no main menu.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Criar um menu de topo&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Menus - Gerenciar - Adicionar novo menu&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Título - Topo&lt;br /&gt;Tipo de menu - top&lt;br /&gt;Salvar e Fechar&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Adicionar um módulo a este menu&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Título - Topo&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Salvar e Fechar&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Criar Item de Menu para Contato&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Menus - Topo - Adicionar Item de Menu&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Título - Contato&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Selecionar - Contatos - Conteto Único&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Selecionar Contato&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Salvar e Fechar&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Criar artigo Sobre Mim, com as informações desejadas, currículo ou outras.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Criar Item de menu no menu Topo para Sobre Mim.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt; &lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Instalar Extensões de Terceiros&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Inicialmente vamos instalar um pequeno componente que criei, que ajuda muito na segurança do site, pois é um componente que efetua backup do site completo, arquivos e banco com muita facilidade. Faça o backup e guarde bem guardado. Sempre que alterar o site efetue novo backup. Ele guarda com a data nos arquivos.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Instalar Componente Simple Backup&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Extensões - Gerenciar - Instalar&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;a href=&quot;https://github.com/ribafs/com_simplebackup&quot;&gt;https://github.com/ribafs/com_simplebackup&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Clique em Instalar de uma URL e copie e cole a URL abaixo&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;a href=&quot;https://github.com/ribafs/com_simplebackup/archive/master.zip&quot;&gt;https://github.com/ribafs/com_simplebackup/archive/master.zip&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Com isso agora temos um novo item em Componentes, que é o Backup Simples.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Vamos efetuar o primeiro backup do nosso novo site:&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Componentes - Backup Simples&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Clique em Enviar e aguarde que ele mostrará os dois links Arquivos e Banco de Dados. Clique em cada um e guarde bem os arquivos.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Ao instalar uma extensão de terceiros, o Joomla não atribui nenhum item de menu a ela por default. Portanto ela não irá aparecer no site. Requer que você atribua itens de menu à mesma, não esqueça. Geralmente atribuo todos.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;br /&gt;&lt;strong&gt;Instalar um Gerenciador de Arquivos&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Instalarei o extPlorer&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Extensões - Gerenciar - Instalar&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Faça o download de - &lt;a href=&quot;http://extplorer.sourceforge.net/&quot;&gt;http://extplorer.sourceforge.net/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Clique em Enviar Pacote de Arquivos&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Indique o arquivo baixado e pronto.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Agora temos um gerenciador de arquivos completo no administrator do site: copiar, criar arquivo ou diretório, upload, download, etc.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Componentes - EXTPLORER&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt; &lt;/p&gt;</summary>
+		<content type="html">&lt;h4 style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Instalar Extensões Nativas e de Terceiros&lt;/strong&gt;&lt;/h4&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt; &lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Uma extensão simples e importante é a Breadcrumbs.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;O Joomla já vem com ela, é nativa.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Extensões - Módulos&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Clique em Breadcrumbs&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Exibir Título - Ocultar&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Salvar e Fechar&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Exibindo no Site&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Para exibir no site precisamos adicionar ao Template&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Extensões - Temas - Portal2 - Layout&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Mudar de Portal2 para Base Outline para desbloquear&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Agora devemos escolher uma região adequada para o Breadcrumbs. Vamos adicioná-lo logo abaixo da região Navigation. Para isso basta clicar no sinal de + acima de Navigation para que ele adicione uma linha abaixo de si.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Acima e à esquerda, em Positions, clicar e arrastar um Module Instance e soltar na linha criada abaixo de Navigation.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Agora é hora de customizar o Module Instance. Clique na roldana à direita e renomeie (no lápis) para Breadcrumbs. Clique em Pick a Module, selecione Breadcrumbs na lista e clique em Select e então em Apply and Save&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt; &lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;E Save Layout&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Veja que ele ocupa toda a linha, sem necessidade. Então vamos adicionar outra extensão nativa, a Busca, na mesma linha. Então poderemos escolhar a largura de cada uma simplesmente arrastando.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Adicionar Busca&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Extensões - Módulos - Novo - Busca&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Título - Busca&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Exibir Título - Ocultar&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Posição - position-6 (pode ser qualquer uma, pois o Template é quem vai definir)&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Exibir pelo Template&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Extensões - Temas - Portal2 - Layout (mudar para Base Outline)&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Clicar em Module Instance, arrastar e soltar sobre Breadcrumbs, logo à direita. Veja que ele divide em partes iguais (50% para cada).&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Podemos alterar as larguras posando o mouse na separação e arrastando para um dos lados. Mudei o BC para 70% e Save Layout.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Clique na roldana à direita do Module Instante da direita, renomeie para Busca e escolha o módulo Busca.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt; &lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Criar Componente Contato&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Mudar o Nome do Usuário&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Usuários - Gerenciar - Super User&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Clicar em Super User e mudar para seu nome&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Salvar e Fechar&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Componentes - Contatos - Contatos - Novo&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Nome - Contato&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Usuário Associado - Clique no ícone e selecione (Ribamar FS)&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Cargo - Proprietário do site&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;E-mail - &lt;a href=&quot;mailto:ribafs@gmail.com&quot;&gt;ribafs@gmail.com&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Do endereço e telefones entre apenas os que julgar importantes&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Salvar e Fechar&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Quero que este link apareça no menu de topo e não no main menu.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Criar um menu de topo&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Menus - Gerenciar - Adicionar novo menu&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Título - Topo&lt;br /&gt;Tipo de menu - top&lt;br /&gt;Salvar e Fechar&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Adicionar um módulo a este menu&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Título - Topo&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Salvar e Fechar&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Criar Item de Menu para Contato&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Menus - Topo - Adicionar Item de Menu&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Título - Contato&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Selecionar - Contatos - Conteto Único&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Selecionar Contato&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Salvar e Fechar&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Criar artigo Sobre Mim, com as informações desejadas, currículo ou outras.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Criar Item de menu no menu Topo para Sobre Mim.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt; &lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Instalar Extensões de Terceiros&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Inicialmente vamos instalar um pequeno componente que criei, que ajuda muito na segurança do site, pois é um componente que efetua backup do site completo, arquivos e banco com muita facilidade. Faça o backup e guarde bem guardado. Sempre que alterar o site efetue novo backup. Ele guarda com a data nos arquivos.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;Instalar Componente Simple Backup&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Extensões - Gerenciar - Instalar&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;a href=&quot;https://github.com/ribafs/com_simplebackup&quot;&gt;https://github.com/ribafs/com_simplebackup&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Clique em Instalar de uma URL e copie e cole a URL abaixo&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;a href=&quot;https://github.com/ribafs/com_simplebackup/archive/master.zip&quot;&gt;https://github.com/ribafs/com_simplebackup/archive/master.zip&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Com isso agora temos um novo item em Componentes, que é o Backup Simples.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Vamos efetuar o primeiro backup do nosso novo site:&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Componentes - Backup Simples&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Clique em Enviar e aguarde que ele mostrará os dois links Arquivos e Banco de Dados. Clique em cada um e guarde bem os arquivos.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Ao instalar uma extensão de terceiros, o Joomla não atribui nenhum item de menu a ela por default. Portanto ela não irá aparecer no site. Requer que você atribua itens de menu à mesma, não esqueça. Geralmente atribuo todos.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;br /&gt;&lt;strong&gt;Instalar um Gerenciador de Arquivos&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Instalarei o extPlorer&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Extensões - Gerenciar - Instalar&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Faça o download de - &lt;a href=&quot;http://extplorer.sourceforge.net/&quot;&gt;http://extplorer.sourceforge.net/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Clique em Enviar Pacote de Arquivos&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Indique o arquivo baixado e pronto.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Agora temos um gerenciador de arquivos completo no administrator do site: copiar, criar arquivo ou diretório, upload, download, etc.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Componentes - EXTPLORER&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt; &lt;/p&gt;</content>
+		<category term="Administração" />
+	</entry>
+	<entry>
+		<title>Administração do Joomla</title>
+		<link rel="alternate" type="text/html" href="http://backup/portal/joomla-3/administracao/administracao-do-joomla.html"/>
+		<published>2017-06-26T14:08:06-03:00</published>
+		<updated>2017-06-26T14:08:06-03:00</updated>
+		<id>http://backup/portal/joomla-3/administracao/administracao-do-joomla.html</id>
+		<author>
+			<name>Ribamar FS</name>
+		</author>
+		<summary type="html">&lt;h3&gt;Administração do Joomla 3.7.2&lt;/h3&gt;
+&lt;p&gt;Através do site administrator criamos o site da frente, adicionamos conteúdo, instalamos extensões, templates, etc.&lt;/p&gt;
+&lt;p&gt;Antes de iniciar a administração do site, vamos efetuar uma nova instalação do Joomla na pasta portal2, mas agora sem nenhum conteúdo de exemplo, para que seja menos trabalhosa a criação do site.&lt;/p&gt;
+&lt;p&gt;A instalação será inteiramente semelhante à anterior, exceto que sem conteúdo de exemplo.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Esboço de Projeto do Site&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Mudar o idioma para pt_BR no site e na administração&lt;/p&gt;
+&lt;p&gt;Ativar o mod_rewrite&lt;/p&gt;
+&lt;p&gt;Ativar o cache&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Instalar um novo Template&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;jl_learnmate_free&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Instalar Algumas Extensões Nativas&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;- Breadcrumbs&lt;/p&gt;
+&lt;p&gt;- Busca&lt;/p&gt;
+&lt;p&gt;- Novidades&lt;/p&gt;
+&lt;p&gt;- Populares&lt;/p&gt;
+&lt;p&gt;- Rodapé&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Instalar Algumas Extensões de Terceiros&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;- Componente SimpleBackup&lt;/p&gt;
+&lt;p&gt;- Mapa do site&lt;/p&gt;
+&lt;p&gt;- Gerenciador de arquivos&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Criar Estrutura de Conteúdo&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;- Categorias&lt;/p&gt;
+&lt;p&gt;- Artigos&lt;/p&gt;
+&lt;p&gt;- Itens de Menu&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Mudar o idioma para pt_BR no site e na administração&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Extensions – Manager – Install Languages&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;Digite br na caixa de busca e tecle Enter.&lt;/p&gt;
+&lt;p&gt;Aparecerão os dois idiomas acima. Clique em Install à esquerda de Portuguese Brazil para instalar e aguarde um pouco.&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;Agora clique em&lt;/p&gt;
+&lt;p&gt;Extensions – Languages&lt;/p&gt;
+&lt;p&gt;Clique na estrela na linha de Português do Brasil, à direita para torná-lo o idioma padrão.&lt;/p&gt;
+&lt;p&gt;Depois clique na combo Site e selecione Administrator e então clique novamente na estrela na linha de Português do Brasil.&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;strong&gt;Tudo em português do Brasil.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Ativar o mod_rewrite&lt;/p&gt;
+&lt;p&gt;Clicar no menu&lt;/p&gt;
+&lt;p&gt;Sistema – Configuração Global&lt;/p&gt;
+&lt;p&gt;Em Site mude Usar mod_rewrite do Apache para Sim&lt;/p&gt;
+&lt;p&gt;Agora renomeie o arquivo do raiz do site&lt;/p&gt;
+&lt;p&gt;htaccess.txt para .htaccess&lt;/p&gt;
+&lt;p&gt;Obs.: arquivos iniciados com ponto no Linux são arquivos ocultos. Após renomear eles desaparecem. Para que apareçam no modo gráfico tecle Ctrl+H e no terminal usando o comando “ls -la”.&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Ativar o cache&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Clicar em&lt;/p&gt;
+&lt;p&gt;Sistema – Configuração Global&lt;/p&gt;
+&lt;p&gt;Na aba Sistema em Cache mude para “Ligado – Cache Progressivo” ou Cache Conservador&lt;/p&gt;
+&lt;p&gt;Conservador – pequeno cache&lt;/p&gt;
+&lt;p&gt;Progressivo – mais rápido e grande cache. Não apropriado para sites muito grandes.&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Instalar um novo Template&lt;/strong&gt; &lt;/p&gt;
+&lt;p&gt;Instalar o template jl_learnmate_free - &lt;a href=&quot;http://www.joomlead.com/&quot;&gt;http://www.joomlead.com&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://joomlead.com/joomla-template/learnmate/&quot;&gt;https://joomlead.com/joomla-template/learnmate/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Como ele requer o Framework Gantry, vamos instalar antes o Gantry, apenas o componente&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://gantry.org/downloads#joomla&quot;&gt;http://gantry.org/downloads#joomla&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Extensões – Gerenciar – Instalar&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Clique em Instalar de uma URL e cole a URL do componente (que agora é esta)&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/gantry/gantry5/releases/download/5.4.13/joomla-pkg_gantry5_v5.4.13.zip&quot;&gt;https://github.com/gantry/gantry5/releases/download/5.4.13/joomla-pkg_gantry5_v5.4.13.zip&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;Agora então instalar o template learnmate.&lt;/p&gt;
+&lt;p&gt;Extensões – Gerenciar – Instalar&lt;/p&gt;
+&lt;p&gt;Faça o download e instale o pacote, pois ele requer seus dados para baixar.&lt;/p&gt;
+&lt;p&gt;Caso tenha dificuldade de baixar do site oficial, baixe daqui:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.joomla24.com/index.php?option=com_search&amp;amp;Itemid=4&amp;amp;searchword=learnmate&quot;&gt;http://www.joomla24.com/index.php?option=com_search&amp;amp;Itemid=4&amp;amp;searchword=learnmate&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Mas veja que no joomla24 a versão é a 1.0.1 e no site oficial já é a 1.0.2. Prefira do site oficial.&lt;/p&gt;
+&lt;p&gt;Extensões – Gerenciar – Instalar&lt;/p&gt;
+&lt;p&gt;Clicar em Enviar Pacote de Arquivos&lt;/p&gt;
+&lt;p&gt;Aponte para o arquivo baixado clicando no botão procurar pelo arquivo.&lt;/p&gt;
+&lt;p&gt;Agora instalamos um novo template e temos dois templates para o site. Existem templates para o administrator também, mas não lidarei com eles aqui.&lt;/p&gt;
+&lt;p&gt;Vamos tornar este template instalado o template padrão do site.&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Extensões – Temas&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Clique na estrela à direita de Learnate para para torná-lo padrão &lt;/p&gt;
+&lt;p&gt;Agora ele é o nosso tempalte padrão.&lt;/p&gt;
+&lt;p&gt;Mas precisamos realizar mais uma operação para que o conteúdo do nosso site seja assumido por este novo tempalte: Assignments&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Criar um Novo Template com o Framework&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Como este é mais que um template, mas é um Framework para a criação de templates, então vamos criar um template exclusivo para o nosso site, com o mesmo nome, portal2.&lt;/p&gt;
+&lt;p&gt;Clique acima em Outlines&lt;/p&gt;
+&lt;p&gt;Clique no grande sinal de mais (+)&lt;/p&gt;
+&lt;p&gt;Na janela que se abre em&lt;/p&gt;
+&lt;p&gt;Title – Portal2&lt;/p&gt;
+&lt;p&gt;Create Form – Preset&lt;/p&gt;
+&lt;p&gt;Preset – Default&lt;/p&gt;
+&lt;p&gt;Confirm&lt;/p&gt;
+&lt;p&gt;Saia do Gantry. Vá para Modulos, por exemplo.&lt;/p&gt;
+&lt;p&gt;Agora clique em Extensões – Temas&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Torne o Portal2 o default.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Clique no Portal2 para acessá-lo&lt;/p&gt;
+&lt;p&gt;Clique acima em Assignments&lt;/p&gt;
+&lt;p&gt;Clique no All verde acima para que selecione todos os menus do template.&lt;/p&gt;
+&lt;p&gt;Depois clique em Save Assignments.&lt;/p&gt;
+&lt;p&gt;Veja acima e à esquerda que está selecionado Portal2.&lt;/p&gt;
+&lt;p&gt;Depois de instalar o novo template, torná-lo default e atribuir os menus ao mesm o nosso site .&lt;/p&gt;
+&lt;p&gt;Iremos remover o que não desejamos e adicionar o que queremos.&lt;/p&gt;
+&lt;p&gt;Veja que ele traz o main menu (HOME) e também um top menu, que iremos aproveitar para mostrar alguns itens sem subitens.&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Bom tutorial&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.ostraining.com/blog/joomla/&quot;&gt;https://www.ostraining.com/blog/joomla/&lt;/a&gt;&lt;/p&gt;
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt; &lt;/p&gt;</summary>
+		<content type="html">&lt;h3&gt;Administração do Joomla 3.7.2&lt;/h3&gt;
+&lt;p&gt;Através do site administrator criamos o site da frente, adicionamos conteúdo, instalamos extensões, templates, etc.&lt;/p&gt;
+&lt;p&gt;Antes de iniciar a administração do site, vamos efetuar uma nova instalação do Joomla na pasta portal2, mas agora sem nenhum conteúdo de exemplo, para que seja menos trabalhosa a criação do site.&lt;/p&gt;
+&lt;p&gt;A instalação será inteiramente semelhante à anterior, exceto que sem conteúdo de exemplo.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Esboço de Projeto do Site&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Mudar o idioma para pt_BR no site e na administração&lt;/p&gt;
+&lt;p&gt;Ativar o mod_rewrite&lt;/p&gt;
+&lt;p&gt;Ativar o cache&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Instalar um novo Template&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;jl_learnmate_free&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Instalar Algumas Extensões Nativas&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;- Breadcrumbs&lt;/p&gt;
+&lt;p&gt;- Busca&lt;/p&gt;
+&lt;p&gt;- Novidades&lt;/p&gt;
+&lt;p&gt;- Populares&lt;/p&gt;
+&lt;p&gt;- Rodapé&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Instalar Algumas Extensões de Terceiros&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;- Componente SimpleBackup&lt;/p&gt;
+&lt;p&gt;- Mapa do site&lt;/p&gt;
+&lt;p&gt;- Gerenciador de arquivos&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Criar Estrutura de Conteúdo&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;- Categorias&lt;/p&gt;
+&lt;p&gt;- Artigos&lt;/p&gt;
+&lt;p&gt;- Itens de Menu&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Mudar o idioma para pt_BR no site e na administração&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Extensions – Manager – Install Languages&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;Digite br na caixa de busca e tecle Enter.&lt;/p&gt;
+&lt;p&gt;Aparecerão os dois idiomas acima. Clique em Install à esquerda de Portuguese Brazil para instalar e aguarde um pouco.&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;Agora clique em&lt;/p&gt;
+&lt;p&gt;Extensions – Languages&lt;/p&gt;
+&lt;p&gt;Clique na estrela na linha de Português do Brasil, à direita para torná-lo o idioma padrão.&lt;/p&gt;
+&lt;p&gt;Depois clique na combo Site e selecione Administrator e então clique novamente na estrela na linha de Português do Brasil.&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;strong&gt;Tudo em português do Brasil.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Ativar o mod_rewrite&lt;/p&gt;
+&lt;p&gt;Clicar no menu&lt;/p&gt;
+&lt;p&gt;Sistema – Configuração Global&lt;/p&gt;
+&lt;p&gt;Em Site mude Usar mod_rewrite do Apache para Sim&lt;/p&gt;
+&lt;p&gt;Agora renomeie o arquivo do raiz do site&lt;/p&gt;
+&lt;p&gt;htaccess.txt para .htaccess&lt;/p&gt;
+&lt;p&gt;Obs.: arquivos iniciados com ponto no Linux são arquivos ocultos. Após renomear eles desaparecem. Para que apareçam no modo gráfico tecle Ctrl+H e no terminal usando o comando “ls -la”.&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Ativar o cache&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Clicar em&lt;/p&gt;
+&lt;p&gt;Sistema – Configuração Global&lt;/p&gt;
+&lt;p&gt;Na aba Sistema em Cache mude para “Ligado – Cache Progressivo” ou Cache Conservador&lt;/p&gt;
+&lt;p&gt;Conservador – pequeno cache&lt;/p&gt;
+&lt;p&gt;Progressivo – mais rápido e grande cache. Não apropriado para sites muito grandes.&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Instalar um novo Template&lt;/strong&gt; &lt;/p&gt;
+&lt;p&gt;Instalar o template jl_learnmate_free - &lt;a href=&quot;http://www.joomlead.com/&quot;&gt;http://www.joomlead.com&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://joomlead.com/joomla-template/learnmate/&quot;&gt;https://joomlead.com/joomla-template/learnmate/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Como ele requer o Framework Gantry, vamos instalar antes o Gantry, apenas o componente&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://gantry.org/downloads#joomla&quot;&gt;http://gantry.org/downloads#joomla&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Extensões – Gerenciar – Instalar&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Clique em Instalar de uma URL e cole a URL do componente (que agora é esta)&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/gantry/gantry5/releases/download/5.4.13/joomla-pkg_gantry5_v5.4.13.zip&quot;&gt;https://github.com/gantry/gantry5/releases/download/5.4.13/joomla-pkg_gantry5_v5.4.13.zip&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;Agora então instalar o template learnmate.&lt;/p&gt;
+&lt;p&gt;Extensões – Gerenciar – Instalar&lt;/p&gt;
+&lt;p&gt;Faça o download e instale o pacote, pois ele requer seus dados para baixar.&lt;/p&gt;
+&lt;p&gt;Caso tenha dificuldade de baixar do site oficial, baixe daqui:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.joomla24.com/index.php?option=com_search&amp;amp;Itemid=4&amp;amp;searchword=learnmate&quot;&gt;http://www.joomla24.com/index.php?option=com_search&amp;amp;Itemid=4&amp;amp;searchword=learnmate&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Mas veja que no joomla24 a versão é a 1.0.1 e no site oficial já é a 1.0.2. Prefira do site oficial.&lt;/p&gt;
+&lt;p&gt;Extensões – Gerenciar – Instalar&lt;/p&gt;
+&lt;p&gt;Clicar em Enviar Pacote de Arquivos&lt;/p&gt;
+&lt;p&gt;Aponte para o arquivo baixado clicando no botão procurar pelo arquivo.&lt;/p&gt;
+&lt;p&gt;Agora instalamos um novo template e temos dois templates para o site. Existem templates para o administrator também, mas não lidarei com eles aqui.&lt;/p&gt;
+&lt;p&gt;Vamos tornar este template instalado o template padrão do site.&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Extensões – Temas&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Clique na estrela à direita de Learnate para para torná-lo padrão &lt;/p&gt;
+&lt;p&gt;Agora ele é o nosso tempalte padrão.&lt;/p&gt;
+&lt;p&gt;Mas precisamos realizar mais uma operação para que o conteúdo do nosso site seja assumido por este novo tempalte: Assignments&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Criar um Novo Template com o Framework&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Como este é mais que um template, mas é um Framework para a criação de templates, então vamos criar um template exclusivo para o nosso site, com o mesmo nome, portal2.&lt;/p&gt;
+&lt;p&gt;Clique acima em Outlines&lt;/p&gt;
+&lt;p&gt;Clique no grande sinal de mais (+)&lt;/p&gt;
+&lt;p&gt;Na janela que se abre em&lt;/p&gt;
+&lt;p&gt;Title – Portal2&lt;/p&gt;
+&lt;p&gt;Create Form – Preset&lt;/p&gt;
+&lt;p&gt;Preset – Default&lt;/p&gt;
+&lt;p&gt;Confirm&lt;/p&gt;
+&lt;p&gt;Saia do Gantry. Vá para Modulos, por exemplo.&lt;/p&gt;
+&lt;p&gt;Agora clique em Extensões – Temas&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Torne o Portal2 o default.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Clique no Portal2 para acessá-lo&lt;/p&gt;
+&lt;p&gt;Clique acima em Assignments&lt;/p&gt;
+&lt;p&gt;Clique no All verde acima para que selecione todos os menus do template.&lt;/p&gt;
+&lt;p&gt;Depois clique em Save Assignments.&lt;/p&gt;
+&lt;p&gt;Veja acima e à esquerda que está selecionado Portal2.&lt;/p&gt;
+&lt;p&gt;Depois de instalar o novo template, torná-lo default e atribuir os menus ao mesm o nosso site .&lt;/p&gt;
+&lt;p&gt;Iremos remover o que não desejamos e adicionar o que queremos.&lt;/p&gt;
+&lt;p&gt;Veja que ele traz o main menu (HOME) e também um top menu, que iremos aproveitar para mostrar alguns itens sem subitens.&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Bom tutorial&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.ostraining.com/blog/joomla/&quot;&gt;https://www.ostraining.com/blog/joomla/&lt;/a&gt;&lt;/p&gt;
+&lt;p style=&quot;margin-bottom: 0cm; line-height: 100%;&quot;&gt; &lt;/p&gt;</content>
+		<category term="Administração" />
+	</entry>
+</feed>

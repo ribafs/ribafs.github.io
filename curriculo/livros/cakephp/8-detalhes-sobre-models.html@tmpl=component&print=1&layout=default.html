@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br" dir="ltr">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <base href="" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Ribamar FS" />
+	<meta name="robots" content="noindex, nofollow" />
+	<meta name="description" content="Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros." />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>8 - Detalhes sobre Models - RibaFS Portal</title>
+	<link href="http://ribafs.org/portal/curriculo/livros/cakephp/8-detalhes-sobre-models.html?tmpl=component&amp;print=1&amp;layout=default" rel="canonical" />
+	<link href="../../../templates/shaper_helix3/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../../../favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<script src="../../../media/jui/js/jquery.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery-noconflict.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery-migrate.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="http://backup/portal/media/system/js/caption.js?d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script type="text/javascript">
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+	</script>
+	<meta property="og:url" content="http://backup/portal/curriculo/livros/cakephp/8-detalhes-sobre-models.html" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="8 - Detalhes sobre Models" />
+	<meta property="og:description" content="8 – Detalhes sobre Models Nas adversidades, uns desistem, enquanto outros batem recordes. Ayrton Senna O Model representa a primeira letra do MVC. Models (..." />
+
+   	<link rel="stylesheet" href="../../../media/jui/css/bootstrap.min.css" type="text/css" />
+	<link rel="stylesheet" href="../../../templates/shaper_helix3/css/frontend-edit.css" type="text/css" />
+    <link rel="stylesheet" href="../../../templates/shaper_helix3/css/template.css" type="text/css" />
+</head>
+<body class="contentpane">
+	<div id="system-message-container">
+	</div>
+
+	
+
+<article class="item item-page" itemscope itemtype="http://schema.org/Article">
+	<meta itemprop="inLanguage" content="pt-BR" />
+	
+	
+
+	<div class="entry-header">
+		<span class="post-format"><i class="fa fa-thumb-tack"></i></span>
+		
+					<h2 itemprop="name">
+									8 - Detalhes sobre Models							</h2>
+												</div>
+
+						<div id="pop-print" class="btn hidden-print">
+				<a href="8-detalhes-sobre-models.html#" onclick="window.print();return false;">			<span class="icon-print" aria-hidden="true"></span>
+		Imprimir	</a>			</div>
+				
+	
+	
+				
+	
+			<div itemprop="articleBody">
+		<h3>8 – Detalhes sobre Models</h3>
+<p align="left"> </p>
+<p align="right"><em><strong>Nas adversidades, uns desistem, enquanto outros batem recordes.</strong></em></p>
+<p align="right">Ayrton Senna</p>
+<p align="left"> </p>
+<p><strong>O Model representa a primeira letra do MVC.</strong></p>
+<p align="justify">Models (Modelos) são as classes que servem como camada de negócio na sua aplicação. Isso significa que eles devem ser responsáveis pela gestão de quase tudo o que acontece em relação a seus dados, sua validade, interações e evolução do fluxo de trabalho de informação no domínio do trabalho.</p>
+<p align="justify">No CakePHP seu modelo de domínio da aplicação é dividido em 2 tipos de objetos principais. Os primeiros são repositories (repositórios) ou table objects (objetos de tabela). Estes objetos fornecem acesso a coleções de dados. Eles permitem a você salvar novos registros, modificar/deletar os que já existem, definir relacionamentos, e executar operações em massa. O segundo tipo de objetos são as entities (entidades). Entities representam registros individuais e permitem a você definir comportamento em nível de linha/registro e funcionalidades.</p>
+<p align="justify"><strong>O ORM (MOR - Mapeamento Objeto-Relacional)</strong> nativo do CakePHP especializa-se em banco de dados relacionais, mas pode ser extendido para suportar fontes de dados alternativas.</p>
+<p align="justify">O ORM do Cakephp toma emprestadas ideias e conceitos dos padrões ActiveRecord e Datamapper. Isso permite criar uma implementação híbrida que combina aspectos de ambos padrões para criar uma ORM rápida e simples de utilizar.</p>
+<p align="justify">Objetos Table são usados para ser interface para coleções de objetos, ou seja, tabelas. O objeto Entity provê uma interface para um objeto individual, ou seja registros.</p>
+<p> </p>
+<p><strong>Atributos do Model</strong></p>
+<p>Indicar nome de configuração do database</p>
+<p>public $useDbConfig = 'alternate';</p>
+<p> </p>
+<p><strong>Prefixo das Tabelas</strong></p>
+<p>public $tablePrefix = 'alternate_';</p>
+<p> </p>
+<p><strong>Nome do campo Primary Key</strong></p>
+<p>public $primaryKey = 'example_id';</p>
+<p> </p>
+<p><strong>Display field</strong></p>
+<p>Nomes de campos em tabelas para tabelas relacionadas</p>
+<p>Convenção: title ou name</p>
+<p>Se diferente indicar no model com:</p>
+<p>public $displayField = 'nomedocampo';</p>
+<p> </p>
+<p><strong>Tabela Default</strong></p>
+<p>public $useTable = 'users';</p>
+<p>Caso receba a mensagem:</p>
+<p>Erro: Table useres for model User was not found in datasource default.</p>
+<p>Isso aconteceu comigo sempre que instalei o o plugin Cakept_br.</p>
+<p> </p>
+<p>Adicione a variável $use/Table contendo o nome da tabela ao model User</p>
+<p>public $useTable = 'usuarios';</p>
+<p> </p>
+<p><strong>Método _setPassword()</strong> - este método cria um hash da senha do usuário antes que seja salva e antes que seja validada.</p>
+<p> </p>
+<p><strong>Lógica de negócios</strong></p>
+<p>A codificação mostrada abaixo, neste capítulo, sobre os models e o ORM, que é o padrão que o CakePHP usa para lidar com bancos de dados, é muito importante para codificar a lógica de negócios de muitos aplicativos. As operações de CRUD, que são as mais básicas, podemos criar usando o bake, mas a lógica específica de alguns aplicativos somos nós que precisaremos criar. Então devemos criá-la no model, para que esteja disponível nos controllers e possa ser solicitada pelas views.</p>
+<p>Um exemplo deste tipo de lógica é a usada no aplicativo de exemplo Finanças, no capítulo 13.5, onde temos que retornar a soma das despesas de um certo mês, somar as receitas do mesmo mês e devolver ambas e também o saldo. O bake não faz isso, somente faz as operações básicas de CRUD, somos nós que devemos fazer manualmente e sempre irá depender de cada aplicativo como faremos isso. Por isso é muito importante conhecer como o CakePHP lida com model, controller, view e cia além do CRUD. Me parece que o pontapé inicial recomendado é seguir os tutoriais de criação de aplicativos existentes no site oficial. Depois ir em frente devorando a documentação e todo o material deste livro foi elaborado para colaborar com esta empreitada.</p>
+<p><strong>Detalhes</strong></p>
+<p><a href="https://book.cakephp.org/3.0/en/orm.html">https://book.cakephp.org/3.0/en/orm.html</a></p>
+<h1 class="western"> </h1> 	</div>
+
+	
+	
+				
+	
+	
+	
+</article>
+
+</body>
+</html>

@@ -1,0 +1,1361 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br" dir="ltr">
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+                <!-- head -->
+        <base href="" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Ribamar FS" />
+	<meta name="description" content="Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros." />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>Ainda CSS - RibaFS Portal</title>
+	<link href="http://ribafs.org/portal/basicos/css/ainda-css.html" rel="canonical" />
+	<link href="../../templates/shaper_helix3/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../../favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,300italic,regular,italic,600,600italic,700,700italic,800,800italic&amp;subset=latin" rel="stylesheet" type="text/css" />
+	<link href="http://fonts.googleapis.com/css?family=Amarante:regular&amp;subset=latin-ext" rel="stylesheet" type="text/css" />
+	<link href="../../cache/com_templates/templates/shaper_helix3/13dbdb302db49810d4fe978773c86c41.css" rel="stylesheet" type="text/css" />
+	<style type="text/css">
+body{font-family:Open Sans, sans-serif; font-size:16px; font-weight:normal; }h1{font-family:Open Sans, sans-serif; font-weight:800; }h2{font-family:Open Sans, sans-serif; font-weight:600; }h3{font-family:Open Sans, sans-serif; font-weight:normal; }h4{font-family:Open Sans, sans-serif; font-weight:normal; }h5{font-family:Open Sans, sans-serif; font-weight:600; }h6{font-family:Open Sans, sans-serif; font-weight:600; }.sp-megamenu-parent{font-family:Amarante, sans-serif; font-size:16px; font-weight:normal; }.sp-megamenu-parent > li.active > a, 
+.sp-megamenu-parent .sp-dropdown li.sp-menu-item.active > a { color: red; }
+#offcanvas-toggler > i { color: red !important; }
+#sp-top-bar{ background-color:#093d09;color:#999999; }#sp-top-bar a{color:#ceebe9;}#sp-header{ background-color:#54a859; }#sp-header a{color:#022e05;}#sp-page-title a{color:#e8f7f7;}#sp-main-body{ background-color:#fefffa; }
+	</style>
+	<script type="application/json" class="joomla-script-options new">{"csrf.token":"796296c0a9019553ed4bbba150ad5a40","system.paths":{"root":"\/portal","base":"\/portal"},"joomla.jtext":{"COM_COMMENT_PLEASE_FILL_IN_ALL_REQUIRED_FIELDS":"Favor preencher todos os campos obrigat\u00f3rios.","COM_COMMENT_ANONYMOUS":"An\u00f4nimo","JLIB_FORM_FIELD_INVALID":"Campo inv\u00e1lido:&#160;"},"system.keepalive":{"interval":840000,"uri":"\/portal\/component\/ajax\/?format=json"}}</script>
+	<script src="../../cache/com_templates/templates/shaper_helix3/54c592f5254dda874419f32ed016b1ca.js" type="text/javascript"></script>
+	<script type="text/javascript">
+jQuery(function($){ initTooltips(); $("body").on("subform-row-add", initTooltips); function initTooltips (event, container) { container = container || document;$(container).find(".hasTooltip").tooltip({"html": true,"container": "body"});} });jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+var sp_preloader = '0';
+
+var sp_gotop = '1';
+
+var sp_offanimation = 'default';
+
+	</script>
+	<meta property="og:url" content="http://backup/portal/basicos/css/ainda-css.html" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Ainda CSS" />
+	<meta property="og:description" content="Introdução ao CSS Índice 1 – Introdução ao CSS 2 – Usando CSS em Scripts internos 4 - Usando CSS nas Tags HTML 5 - Usando CSS em Scripts externos 6 - Cores..." />
+
+            </head>
+
+    <body class="site com-content view-article no-layout no-task itemid-114 pt-br ltr  sticky-header layout-fluid off-canvas-menu-init">
+
+        <div class="body-wrapper">
+            <div class="body-innerwrapper">
+                <section id="sp-top-bar"><div class="container"><div class="row"><div id="sp-top1" class="col-sm-12 col-md-12"><div class="sp-column "><div class="sp-module "><div class="sp-module-content"><!-- https://www.clubedohardware.com.br/artigos/redes/colocando-um-mecanismo-de-busca-em-seu-site-r34327/ -->
+<FORM class="form-inline" method="GET" action="http://www.google.com/search">
+<div class="form-group">
+<input type="hidden" name="sitesearch" value="ribafs.github.io">
+<input style="height:20px" class="form-control" type="text" name="q" size="20" placeholder="Pesquisar...">
+</div>
+</FORM>
+
+</div></div><ul class="sp-contact-info"><li class="sp-contact-email"><i class="fa fa-envelope" aria-hidden="true"></i> <a href="mailto:ribafs@gmail.com">ribafs@gmail.com</a></li></ul></div></div></div></div></section><section id="sp-section-2"><div class="container"><div class="row"><div id="sp-top2" class="col-sm-12 col-md-12"><div class="sp-column "><div class="sp-module "><div class="sp-module-content">
+
+<div class="custom"  >
+	<p style="text-align: center;"><b>Don't you speak portuguese? Translate this site with <a href="https://translate.google.com/translate?hl=pt-BR&amp;sl=pt&amp;tl=en&amp;u=https://ribafs.org/portal" target="_blank" rel="noopener noreferrer">Google Translator </a></b></p></div>
+</div></div></div></div></div></div></section><header id="sp-header"><div class="container"><div class="row"><div id="sp-logo" class="col-xs-8 col-sm-2 col-md-2"><div class="sp-column "><h1 class="logo"> <a href="../../index.html">RibaFS Portal</a></h1></div></div><div id="sp-menu" class="col-xs-4 col-sm-10 col-md-10"><div class="sp-column ">			<div class='sp-megamenu-wrapper'>
+				<a id="offcanvas-toggler" class="visible-sm visible-xs" aria-label="Helix Megamenu Options" href="ainda-css.html#"><i class="fa fa-bars" aria-hidden="true" title="Helix Megamenu Options"></i></a>
+				<ul class="sp-megamenu-parent menu-fade hidden-sm hidden-xs"><li class="sp-menu-item"><a  href="../../index.html"  >Início</a></li><li class="sp-menu-item sp-has-child active"><a  href="../../basicos.html"  >Básicos</a><div class="sp-dropdown sp-dropdown-main sp-menu-right" style="width: 240px;"><div class="sp-dropdown-inner"><ul class="sp-dropdown-items"><li class="sp-menu-item"><a  href="../html.html"  >HTML</a></li><li class="sp-menu-item"><a  href="../javascript.html"  >JavaScript</a></li><li class="sp-menu-item current-item active"><a  href="../css.html"  >CSS</a></li><li class="sp-menu-item"><a  href="../jquery.html"  >jQuery</a></li><li class="sp-menu-item"><a  href="../bootstrap.html"  >Bootstrap</a></li><li class="sp-menu-item"><a  href="../php.html"  >PHP</a></li><li class="sp-menu-item"><a  href="../phpoo.html"  >PHPOO</a></li><li class="sp-menu-item"><a  href="../pdo.html"  >PDO</a></li><li class="sp-menu-item"><a  href="../ferramentas.html"  >Ferramentas</a></li><li class="sp-menu-item"><a  href="../outros.html"  >Outros</a></li></ul></div></div></li><li class="sp-menu-item sp-has-child"><a  href="../../servidores.html"  >Servidores</a><div class="sp-dropdown sp-dropdown-main sp-menu-right" style="width: 240px;"><div class="sp-dropdown-inner"><ul class="sp-dropdown-items"><li class="sp-menu-item"><a  href="../../servidores/desktop.html"  >Desktop</a></li><li class="sp-menu-item"><a  href="../../servidores/ubuntu-server.html"  >Ubuntu Server</a></li><li class="sp-menu-item"><a  href="../../servidores/shell-scripts.html"  >Shell Scripts</a></li><li class="sp-menu-item"><a  href="../../servidores/servidor-web.html"  >Servidor Web</a></li><li class="sp-menu-item"><a  href="../../servidores/servidor-sgbd.html"  >Servidor SGBD</a></li><li class="sp-menu-item sp-has-child"><a  href="../../servidores/postgresql.html"  >PostgreSQL</a><div class="sp-dropdown sp-dropdown-sub sp-menu-right" style="width: 240px;"><div class="sp-dropdown-inner"><ul class="sp-dropdown-items"><li class="sp-menu-item"><a  href="../../servidores/postgresql/introducao-ao-postgresql.html"  >Introdução</a></li><li class="sp-menu-item"><a  href="../../servidores/postgresql/projeto.html"  >Projeto</a></li><li class="sp-menu-item"><a  href="../../servidores/postgresql/dimensionamento.html"  >Dimensionamento</a></li></ul></div></div></li></ul></div></div></li><li class="sp-menu-item sp-has-child"><a  href="../../joomla-3.html"  >Joomla 3</a><div class="sp-dropdown sp-dropdown-main sp-menu-right" style="width: 240px;"><div class="sp-dropdown-inner"><ul class="sp-dropdown-items"><li class="sp-menu-item"><a  href="../../joomla-3/introducao.html"  >Introdução</a></li><li class="sp-menu-item"><a  href="../../joomla-3/seguranca.html"  >Segurança</a></li><li class="sp-menu-item"><a  href="../../joomla-3/instalacao.html"  >Instalação do Joomla</a></li><li class="sp-menu-item"><a  href="../../joomla-3/administracao.html"  >Administração</a></li><li class="sp-menu-item"><a  href="../../joomla-3/extensoes.html"  >Extensões</a></li><li class="sp-menu-item"><a  href="../../joomla-3/loja-simples.html"  >Loja Simples</a></li><li class="sp-menu-item"><a  href="../../joomla-3/dicas.html"  >Dicas</a></li></ul></div></div></li><li class="sp-menu-item sp-has-child"><a  href="javascript:void(0);"  >Frameworks</a><div class="sp-dropdown sp-dropdown-main sp-dropdown-mega sp-menu-right" style="width: 600px;"><div class="sp-dropdown-inner"><div class="row"><div class="col-sm-6"><ul class="sp-mega-group"><li class="sp-menu-item sp-has-child"><a class="sp-group-title" href="../../frameworks/cakephp-3.html"  >CakePHP 3</a><ul class="sp-mega-group-child sp-dropdown-items"><li class="sp-menu-item"><a  href="../../frameworks/cakephp-3/introducao.html"  >Introdução</a></li><li class="sp-menu-item"><a  href="../../frameworks/cakephp-3/instalacao.html"  >Instalação</a></li><li class="sp-menu-item"><a  href="../../frameworks/cakephp-3/configuracoes.html"  >Configurações</a></li><li class="sp-menu-item"><a  href="../../frameworks/cakephp-3/convencoes.html"  >Convenções</a></li><li class="sp-menu-item"><a  href="../../frameworks/cakephp-3/tutoriais.html"  >Tutoriais</a></li><li class="sp-menu-item"><a  href="../../frameworks/cakephp-3/dicas.html"  >Dicas</a></li><li class="sp-menu-item"><a  href="../../frameworks/cakephp-3/seguranca.html"  >Segurança</a></li><li class="sp-menu-item"><a  href="../../frameworks/cakephp-3/mvc-no-cakephp-3.html"  >MVC no CakePHP 3</a></li></ul></li></ul></div><div class="col-sm-6"><ul class="sp-mega-group"><li class="sp-menu-item sp-has-child"><a class="sp-group-title" href="../../frameworks/laravel-5.html"  >Laravel 5</a><ul class="sp-mega-group-child sp-dropdown-items"><li class="sp-menu-item"><a  href="../../frameworks/laravel-5/introducao.html"  >Introdução</a></li><li class="sp-menu-item"><a  href="../../frameworks/laravel-5/instalacao.html"  >Instalação</a></li><li class="sp-menu-item"><a  href="../../frameworks/laravel-5/configuracoes.html"  >Configurações</a></li><li class="sp-menu-item"><a  href="../../frameworks/laravel-5/routes.html"  >Routes</a></li><li class="sp-menu-item"><a  href="../../frameworks/laravel-5/dicas.html"  >Dicas</a></li><li class="sp-menu-item"><a  href="../../frameworks/laravel-5/tutoriais.html"  >Tutoriais</a></li></ul></li></ul></div></div></div></div></li><li class="sp-menu-item sp-has-child"><a  href="../../mobile.html"  >Mobile</a><div class="sp-dropdown sp-dropdown-main sp-menu-right" style="width: 240px;"><div class="sp-dropdown-inner"><ul class="sp-dropdown-items"><li class="sp-menu-item"><a  href="../../mobile/introducao.html"  >Introdução</a></li><li class="sp-menu-item"><a  href="../../mobile/ambiente.html"  >Ambiente</a></li><li class="sp-menu-item"><a  href="../../mobile/phaser.html"  >Phaser</a></li><li class="sp-menu-item"><a  href="../../mobile/monaca.html"  >Monaca</a></li><li class="sp-menu-item"><a  href="../../mobile/phonegap.html"  >PhoneGap</a></li><li class="sp-menu-item"><a  href="../../mobile/app-inventor.html"  >App Inventor</a></li><li class="sp-menu-item"><a  href="../../mobile/unity-3d.html"  >Unity 3D</a></li><li class="sp-menu-item"><a  href="../../mobile/intel-xdk.html"  >Intel XDK</a></li><li class="sp-menu-item"><a  href="../../mobile/outros.html"  >Outros</a></li><li class="sp-menu-item"><a  href="../../mobile/dicas.html"  >Dicas</a></li></ul></div></div></li><li class="sp-menu-item sp-has-child"><a  href="../../blog.html"  >Blog</a><div class="sp-dropdown sp-dropdown-main sp-menu-right" style="width: 240px;"><div class="sp-dropdown-inner"><ul class="sp-dropdown-items"><li class="sp-menu-item"><a  href="../../blog/reflexoes.html"  >Reflexões</a></li><li class="sp-menu-item"><a  href="../../blog/saude.html"  >Saúde</a></li><li class="sp-menu-item"><a  href="../../blog/diversos.html"  >Diversos</a></li><li class="sp-menu-item"><a  href="../../blog/estudos.html"  >Estudos</a></li></ul></div></div></li><li class="sp-menu-item sp-has-child"><a  href="../../curriculo.html"  >Sobre</a><div class="sp-dropdown sp-dropdown-main sp-menu-right" style="width: 240px;"><div class="sp-dropdown-inner"><ul class="sp-dropdown-items"><li class="sp-menu-item"><a  href="https://github.com/ribafs?tab=repositories" rel="noopener noreferrer" target="_blank" >Projetos</a></li><li class="sp-menu-item"><a  href="../../curriculo/livros.html"  >Livros</a></li><li class="sp-menu-item"><a  href="../../curriculo/curriculo.html"  >Currículo</a></li><li class="sp-menu-item"><a  href="../../curriculo/contato.html"  >Contato</a></li><li class="sp-menu-item"><a  href="../../curriculo/mapa-do-site.html"  >Mapa</a></li></ul></div></div></li></ul>			</div>
+		</div></div></div></div></header><section id="sp-page-title"><div class="row"><div id="sp-title" class="col-sm-12 col-md-12"><div class="sp-column "></div></div></div></section><section id="sp-main-body"><div class="container"><div class="row"><div id="sp-left" class="col-sm-3 col-md-3"><div class="sp-column custom-class"><div class="sp-module "><h3 class="sp-module-title">Novidades</h3><div class="sp-module-content"><div class="latestnews">
+	<div itemscope itemtype="http://schema.org/Article">
+		<a href="../../blog/diversos/traducao-de-sites-de-forma-muito-simples.html" itemprop="url">
+			<span itemprop="name">
+				Tradução de sites de forma muito simples			</span>
+		</a>
+		<small>29 Agosto 2019</small>
+	</div>
+	<div itemscope itemtype="http://schema.org/Article">
+		<a href="../../servidores/desktop/recuperar-senha-do-root.html" itemprop="url">
+			<span itemprop="name">
+				Recuperar senha do root			</span>
+		</a>
+		<small>23 Agosto 2019</small>
+	</div>
+	<div itemscope itemtype="http://schema.org/Article">
+		<a href="../../blog/reflexoes/quer-ficar-rico.html" itemprop="url">
+			<span itemprop="name">
+				Quer ficar rico?			</span>
+		</a>
+		<small>19 Agosto 2019</small>
+	</div>
+	<div itemscope itemtype="http://schema.org/Article">
+		<a href="../php/cuidado-com-floats-em-linguagens.html" itemprop="url">
+			<span itemprop="name">
+				Cuidado com floats em Linguagens			</span>
+		</a>
+		<small>19 Julho 2019</small>
+	</div>
+	<div itemscope itemtype="http://schema.org/Article">
+		<a href="../../servidores/servidor-web/setando-permissoes.html" itemprop="url">
+			<span itemprop="name">
+				Setando Permissões			</span>
+		</a>
+		<small>12 Julho 2019</small>
+	</div>
+</div>
+</div></div><div class="sp-module "><h3 class="sp-module-title">Pensamento do Dia</h3><div class="sp-module-content"><div>Onde não há amor, põe amor e tirarás amor. (S. João da Cruz) 
+</div>
+</div></div></div></div><div id="sp-component" class="col-sm-6 col-md-6"><div class="sp-column "><div id="system-message-container">
+	</div>
+
+
+<article class="item item-page" itemscope itemtype="http://schema.org/Article">
+	<meta itemprop="inLanguage" content="pt-BR" />
+	
+	
+
+	<div class="entry-header has-post-format">
+		<span class="post-format"><i class="fa fa-thumb-tack"></i></span>
+						<dl class="article-info">
+
+		
+			<dt class="article-info-term"></dt>	
+				
+							<dd class="createdby" itemprop="author" itemscope itemtype="http://schema.org/Person">
+	<i class="fa fa-user"></i>
+					<span itemprop="name" data-toggle="tooltip" title="Escrito por ">Ribamar FS</span>	</dd>			
+			
+							<dd class="category-name">
+	<i class="fa fa-folder-open-o"></i>
+				<a href="../css.html" itemprop="genre" data-toggle="tooltip" title="Categoria do Artigo">CSS</a>	</dd>			
+			
+							<dd class="published">
+	<i class="fa fa-calendar-o"></i>
+	<time datetime="2017-06-22T16:59:51-03:00" itemprop="datePublished" data-toggle="tooltip" title="Data de Publicação">
+		22 Junho 2017	</time>
+</dd>			
+		
+					
+			
+							<dd class="hits">
+	<span class="fa fa-eye"></span>
+	<meta itemprop="interactionCount" content="UserPageVisits:360" />
+	Acessos: 360</dd>					
+		
+
+	</dl>
+		
+					<h2 itemprop="name">
+									Ainda CSS							</h2>
+												</div>
+
+						
+<div class="icons">
+	
+					<div class="btn-group pull-right">
+				<button class="btn dropdown-toggle" type="button" id="dropdownMenuButton-12" aria-label="Ferramentas de usuário"
+				data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					<span class="icon-cog" aria-hidden="true"></span>
+					<span class="caret" aria-hidden="true"></span>
+				</button>
+								<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton-12">
+											<li class="print-icon"> <a href="ainda-css.html@tmpl=component&amp;print=1&amp;layout=default.html" title="Imprimir o artigo < Ainda CSS >" onclick="window.open(this.href,'win2','status=no,toolbar=no,scrollbars=yes,titlebar=no,menubar=no,resizable=yes,width=640,height=480,directories=no,location=no'); return false;" rel="nofollow">			<span class="icon-print" aria-hidden="true"></span>
+		Imprimir	</a> </li>
+																<li class="email-icon"> <a href="../../component/mailto/index.html@tmpl=component&amp;template=shaper_helix3&amp;link=16fc341b71025aea4f2737199169f49f05ea7722.html" title="Envie este link a um amigo" onclick="window.open(this.href,'win2','width=400,height=450,menubar=yes,resizable=yes'); return false;" rel="nofollow">			<span class="icon-envelope" aria-hidden="true"></span>
+		Email	</a> </li>
+														</ul>
+			</div>
+		
+	</div>
+				
+	
+	
+				
+	
+			<div itemprop="articleBody">
+		<p style="margin-bottom: 0cm; text-align: justify;" align="center"><span style="font-size: large;"><b>Introdução ao CSS</b></span></p>
+<p style="margin-bottom: 0cm; text-align: justify;" align="center"><b>Índice</b></p>
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+<p style="margin-bottom: 0cm; text-align: justify;">1 – Introdução ao CSS</p>
+<p style="margin-bottom: 0cm; text-align: justify;">2 – Usando CSS em Scripts internos</p>
+<p style="margin-bottom: 0cm; text-align: justify;">4 - Usando CSS nas Tags HTML</p>
+<p style="margin-bottom: 0cm; text-align: justify;">5 - Usando CSS em Scripts externos</p>
+<p style="margin-bottom: 0cm; text-align: justify;">6 - Cores</p>
+<p style="margin-bottom: 0cm; text-align: justify;">7 - Como Trocar o Cursor do Mouse com CSS</p>
+<p style="margin-bottom: 0cm; text-align: justify;">8 - Comentários em CSS</p>
+<p style="margin-bottom: 0cm; text-align: justify;">9 - Dicas úteis para CSS</p>
+<p style="margin-bottom: 0cm; text-align: justify;">10 - Recomendações para HTML, JavaScript e CSS</p>
+<p style="margin-bottom: 0cm; text-align: justify;">11 - Funções em PHP que retornam CSS</p>
+<p style="margin-bottom: 0cm; text-align: justify;">12 – Referências</p>
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+<p style="margin-bottom: 0cm; page-break-before: always; text-align: justify;" align="center"><span style="font-size: large;"><b>1 - Introdução ao CSS </b></span></p>
+<p style="margin-bottom: 0cm; text-align: justify;" align="center"> </p>
+<p style="margin-bottom: 0cm; text-align: justify;"><a class="western" href="http://www.w3schools.com/css/default.asp">http://www.w3schools.com/css/default.asp</a></p>
+<p style="margin-bottom: 0cm; text-align: justify;"><a class="western" href="http://www.w3schools.com/css/tryit.asp?filename=trycss_ex">http://www.w3schools.com/css/tryit.asp?filename=trycss_ex</a></p>
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+<p style="margin-bottom: 0cm; text-align: justify;"><b>O que é CSS?</b></p>
+<p style="text-align: justify;">Talvez você já tenha ouvido falar em CSS, mas não saiba o que significa exatamente. Nesta lição você saberá o que é e para que serve CSS.</p>
+<p style="text-align: justify;">CSS é a abreviatura para <b>C</b>ascading <b>S</b>tyle <b>S</b>heets. — Folha de Estilos em Cascata</p>
+<p style="text-align: justify;"> </p>
+<p style="text-align: justify;"><b>O que eu posso fazer com CSS?</b></p>
+<p style="text-align: justify;">CSS é uma linguagem para estilos que define o layout de documentos HTML. Por exemplo, CSS controla fontes, cores, margens, linhas, alturas, larguras, imagens de fundo, posicionamentos e muito mais. Aguarde e você verá!</p>
+<p style="text-align: justify;">HTML pode ser (in)devidamente usado para definir o layout de websites. Contudo CSS proporciona mais opções e é mais preciso e sofisticado. CSS é suportado por todos os navegadores atuais.</p>
+<p style="text-align: justify;">Depois de estudar algumas poucas lições deste tutorial, você estará em condições de projetar uma folha de estilos, usando CSS para dar um grande visual ao seu website.</p>
+<p style="text-align: justify;"> </p>
+<p style="text-align: justify;"><b>Qual é a diferença entre CSS e HTML?</b></p>
+<p style="text-align: justify;">HTML é usado para estruturar conteúdo. CSS é usado para formatar conteúdo estruturado.</p>
+<p style="text-align: justify;">OK, isto soa um tanto técnico e confuso. Mas, por favor continue lendo. Tudo fará sentido em breve.</p>
+<p style="text-align: justify;">Em tempos passados quando a Madonna era virgem e um sujeito chamado Tim Berners Lee inventou a World Wide Web, a linguagem HTML era usada somente para estruturar textos. Um autor podia marcar seus textos definindo "isto é um cabeçalho " ou "isto é um parágrafo" usando tags HTML tais como <code>&lt;h1&gt;</code> e <code>&lt;p&gt;</code>.</p>
+<p style="text-align: justify;">À medida que a Web ganhava popularidade, os designers começavam a sentir a necessidade de encontrar meios de construir layout para os documentos online. Para suprir estas necessidades os fabricantes de navegadores (àquela época a Netscape e a Microsoft) inventaram novas tags HTML tais como, por exemplo a tag <code>&lt;font&gt;</code> que se diferenciava das tags originais do HTML pelo fato de destinar-se à layout — e não à estrutura.</p>
+<p style="text-align: justify;">Isto adicionalmente teve o efeito de disvirtuar o emprego de tags inicialmente projetadas para estrutura como por exemplo a tag &lt;table&gt; que passaram a ser empregadas para layout. Muitas destas novas tags para layout como a tag &lt;blink&gt; eram suportadas somente por um determinado tipo de navegador. A frase "Você precisa do navegador X para visualizar esta página" tornou-se comum nos websites.</p>
+<p style="text-align: justify;">CSS foi inventada para solucionar esta situação, colocando à disposição dos web designers meios sofisticados de projetar layouts suportados por todos os navegadores. E ao mesmo tempo a separação dos estilos de apresentação da marcação dos conteúdos torna a manutenção dos sites bem mais fácil.</p>
+<p style="page-break-before: always; text-align: justify;"><b>Quais são os benefícios do uso de CSS?</b></p>
+<p style="text-align: justify;">CSS é uma revolução no mundo do web design. Os benefícios concretos do uso de CSS incluem:</p>
+<p style="margin-bottom: 0cm; text-align: justify;">controle do layout de vários documentos a partir de uma simples folha de estilos;</p>
+<p style="margin-bottom: 0cm; text-align: justify;">maior precisão no controle do layout;</p>
+<p style="margin-bottom: 0cm; text-align: justify;">aplicação de diferentes layouts para servir diferentes mídias (tela, impressora, etc.);</p>
+<p style="text-align: justify;">emprego de variadas, sofisticadas e avançadas técnicas de desenvolvimento.</p>
+<p style="margin-bottom: 0cm; text-align: justify;">Fonte: <a class="western" href="http://www.pt-br.html.net/tutorials/css/lesson1.asp">http://www.pt-br.html.net/tutorials/css/lesson1.asp</a></p>
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Sintaxe:</b></p>
+<p style="margin-bottom: 0cm; text-align: justify;">seletor {propriedade: valor;}</p>
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+<p style="margin-bottom: 0cm; text-align: justify;">Exemplo:</p>
+<p style="margin-bottom: 0cm; text-align: justify;">body {color:black;}</p>
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+<p style="margin-bottom: 0cm; text-align: justify;">Mudará a cor do texto do body para preto.</p>
+<p style="margin-bottom: 0cm; text-align: justify;">O que mostra que quando aplicamos CSS ao HTML, o CSS mudará (sobrescreverá) o comportamento do HTML.</p>
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+<p style="margin-bottom: 0cm; text-align: justify;">Existem as classes e os IDs. Veja como os criamos:</p>
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+<p style="margin-bottom: 0cm; text-align: justify;">.nome_classe {</p>
+<p style="margin-bottom: 0cm; text-align: justify;">margin-left: 1.0in;</p>
+<p style="margin-bottom: 0cm; text-align: justify;">}</p>
+<p style="margin-bottom: 0cm; text-align: justify;">#nome_id {</p>
+<p style="margin-bottom: 0cm; text-align: justify;">margin-left: 1.0in;</p>
+<p style="margin-bottom: 0cm; text-align: justify;">}</p>
+<p style="margin-bottom: 0cm; text-align: justify;">Classe inicia com ponto (.).</p>
+<p style="margin-bottom: 0cm; text-align: justify;">ID inicia com cerquilha (#).</p>
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Separando em Camadas com CSS</b></p>
+<p style="margin-bottom: 0cm; text-align: justify;">Uma das funções importantes do CSS é permitir que separemos em camadas o conteúdo do site (HTML) da formatação (CSS) e também o JavaScript em outra camada.</p>
+<p style="margin-bottom: 0cm; text-align: justify;">Cada camada em arquivo separado:</p>
+<p style="margin-bottom: 0cm; text-align: justify;">conteúdo - .html</p>
+<p style="margin-bottom: 0cm; text-align: justify;">formatação - .css</p>
+<p style="margin-bottom: 0cm; text-align: justify;">JavaScript - .js</p>
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Suprindo Deficiências do HTML</b></p>
+<p style="margin-bottom: 0cm; text-align: justify;">Outra função muito importante do CSS é suprir algumas deficiências do HTML. Por exemplo, o HTML com seus recursos não permite mudar a cor de fundo de uma caixa de texto de um input de formulário e o CSS consegue. Assim vários outros recursos permitidos pelo CSS, como mudar a cor de fundo de uma textarea, de um botão, cor das bordas de uma caixa de texto, cor ao mover o mouse, etc.</p>
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Exemplo de CSS que altera o comportamento do input e do select e também quando perde o foco:</b></p>
+<pre class="language-css"><code>input {
+
+background-color: #6D5B52;
+
+border-style: 1px solid;
+
+border-color: black gray gray black;
+
+color: white;
+
+font-family: Verdana, Arial, Helvetica, sans-serif;
+
+font-size: 11px;
+
+}
+
+input:focus {
+
+background-color: #6D5B52;
+
+border-style: 1px solid;
+
+border-color: red red red red;
+
+color: white;
+
+font-family: Verdana, Arial, Helvetica, sans-serif;
+
+font-size: 11px;
+
+}
+
+select {
+
+background-color: #6D5B52;
+
+font:12px verdana, arial, helvetica, sans-serif;
+
+color:white;
+
+}
+
+select:focus {
+
+background-color: #3C1103;
+
+font:12px verdana, arial, helvetica, sans-serif;
+
+color:white;
+
+}</code></pre>
+<p style="margin-bottom: 0cm; text-align: justify;">Quando no CSS usamos o nome de controles de formulários, o seu comportamento e formatação será substituído pelo comportamento adicionado no CSS (que prevalecerá).</p>
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+<p style="margin-bottom: 0cm; page-break-before: always; text-align: justify;" align="center"><span style="font-size: large;"><b>2 - Script interno </b></span></p>
+<p style="margin-bottom: 0cm; text-align: justify;">Este tipo permite criar CSS dentro da página HTML.</p>
+<pre><code>&lt;html&gt;</code> <code>&lt;head&gt;</code> <code>&lt;title&gt;Exemplo&lt;/title&gt;</code> <strong>&lt;style type="text/css"&gt;</strong> <strong>body {background-color: #FF0000;}</strong> <strong>&lt;/style&gt;</strong> <code>&lt;/head&gt;</code> <code>&lt;body&gt;</code> <code>&lt;p&gt;Esta é uma página com fundo vermelho&lt;/p&gt;</code> <code>&lt;/body&gt;</code> <code>&lt;/html&gt;</code></pre>
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Uso nas tags do HTML </b></p>
+<p style="margin-bottom: 0cm; text-align: justify;">Aqui criamos dentro das tags HTML.</p>
+<pre><code>&lt;html&gt;</code> <code>&lt;head&gt;</code> <code>&lt;title&gt;Exemplo&lt;/title&gt;</code> <code>&lt;/head&gt;</code> <strong>&lt;body style="background-color: #FF0000;"&gt;</strong> <code>&lt;p&gt;Esta é uma página com fundo vermelho&lt;/p&gt;</code> <code>&lt;/body&gt;</code> <code>&lt;/html&gt;</code></pre>
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Script externo </b></p>
+<p style="margin-bottom: 0cm; text-align: justify;">Este deixa o código CSS num outro arquivo e é o mais indicado para quando temos grandes códigos CSS.</p>
+<pre>&lt;html&gt; &lt;head&gt; &lt;title&gt;Meu documento&lt;/title&gt; &lt;link rel="stylesheet" type="text/css" href="/portal/style/style.css" /&gt; &lt;/head&gt; &lt;body&gt;</pre>
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+<p style="margin-bottom: 0cm; page-break-before: always; text-align: justify;" align="center"><span style="font-size: large;"><b>4 - Uso do CSS nas Tags HTML</b></span></p>
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;">Assim como o JavaScript podemos usar o CSS nas tags HTML, como no exemplo abaixo:</p>
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;">Código &lt;input type="text" name="codigo" value="&lt;?php print $codigo;?&gt;" READONLY style="background-color:gray;"&gt;</p>
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;">O CSS foi usado para deixar o fundo da caixa de texto com cor cinza, simulando desabilitado, coisa que não se consegue com HTML.</p>
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;">Ouro exemplo:</p>
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;">&lt;h1style="color:red;"&gt;Título em cor vermelha&lt;/h1&gt;</p>
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;"> </p>
+<p style="margin-bottom: 0cm; text-align: justify;" align="center"><span style="font-size: large;"><b>5 - Uso do CSS em Arquivos Externos</b></span></p>
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;">Este é o uso recomendado do CSS, em arquivos externos, para separas as camadas, ficando no arquivo CSS tudo que diz respeito à formatação e ao posicionamento e no HTML o conteúdo.</p>
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;">Assim, se quisermos alterar o conteúdo não haverá problema com a formatação e posicionamento e vice-versa.</p>
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;">Para criar um arquivo externo em CSS, não devemos adicionar as tags &lt;style&gt; ... &lt;/style&gt;, apenas o conteúdo como no exemplo seguinte.</p>
+<p style="margin-bottom: 0cm; text-align: justify;"><b>style.css</b></p>
+<pre class="language-markup"><code>body {
+
+margin: 0;
+
+font-family: verdana, arial, helvetica, sans-serif;
+
+color: #F9E8E5;
+
+/* background-color: #C5F5BF; */
+
+background-image: url("../../images/bg_brown.jpg");
+
+border-top: 15px #082A08 solid; /* Barra acima do Título */
+
+font-size: 14px;
+
+}
+
+#main-title {
+
+margin-bottom: 10px;
+
+margin-left: 0;
+
+margin-right: 0;
+
+padding-top:5px; /* Corrigir no original, que era 15 */
+
+padding-bottom: 8px;
+
+padding-left: 25px;
+
+padding-right: 0;
+
+background-color: #571B07;
+
+border-top: 1px black solid;
+
+border-bottom: 1px black solid;
+
+color: white;
+
+font-weight: bold;
+
+font-size: 18px;
+
+font-family: Verdana, Helvetica, Arial, sans-serif;
+
+}
+
+Para usar este arquivo em um HTML efetuamos o "include" entre as tags &lt;head&gt; e &lt;/head&gt;, assim:
+
+&lt;head&gt;
+
+&lt;title&gt;Título da Página&lt;/title&gt;
+
+&lt;link rel="stylesheet" type="text/css" href="/portal/style.css" /&gt;
+
+&lt;/head&gt;</code></pre>
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;"> </p>
+<p style="margin-bottom: 0cm; text-align: justify;" align="center"><span style="font-size: large;"><b>6 - Cores</b></span></p>
+<p style="text-align: justify;">Nesta lição você aprenderá como aplicar cores de primeiro plano e cores de fundo no seu website. Abordaremos ainda os métodos avançados de controle e posicionamento de imagens de fundo. Serão explicadas as seguintes propriedades CSS:</p>
+<p style="margin-bottom: 0cm; text-align: justify;"><a class="western" href="http://www.pt-br.html.net/tutorials/css/lesson3.asp#s1">color</a></p>
+<p style="margin-bottom: 0cm; text-align: justify;"><a class="western" href="http://www.pt-br.html.net/tutorials/css/lesson3.asp#s2">background-color</a></p>
+<p style="margin-bottom: 0cm; text-align: justify;"><a class="western" href="http://www.pt-br.html.net/tutorials/css/lesson3.asp#s3">background-image</a></p>
+<p style="margin-bottom: 0cm; text-align: justify;"><a class="western" href="http://www.pt-br.html.net/tutorials/css/lesson3.asp#s4">background-repeat</a></p>
+<p style="margin-bottom: 0cm; text-align: justify;"><a class="western" href="http://www.pt-br.html.net/tutorials/css/lesson3.asp#s5">background-attachment</a></p>
+<p style="margin-bottom: 0cm; text-align: justify;"><a class="western" href="http://www.pt-br.html.net/tutorials/css/lesson3.asp#s6">background-position</a></p>
+<p style="text-align: justify;"><a class="western" href="http://www.pt-br.html.net/tutorials/css/lesson3.asp#s7">background</a></p>
+<p style="text-align: justify;"> </p>
+<p style="text-align: justify;"><a name="s1"></a><b>Cor do primeiro plano: a propriedade 'color'</b></p>
+<p style="text-align: justify;">A propriedade <code>color</code> define a cor do primeiro plano de um elemento.</p>
+<p style="text-align: justify;">Considere, por exemplo, que desejamos que todos os cabeçalhos de primeiro nível no documento sejam na cor vermelha. O elemento HTML que marca tais cabeçalhos é o elemento <code>&lt;h1&gt;</code>. O código a seguir define todos os <code>&lt;h1&gt;</code> na cor vermelha.</p>
+<pre><code>h1 {</code> <code>        </code><strong>color: #ff0000;</strong> <code>}</code></pre>
+<p style="text-align: justify;"><a class="western" href="http://www.pt-br.html.net/tutorials/css/lesson3_ex1.asp">Ver exemplo </a></p>
+<p style="text-align: justify;">As cores podem ser definidas pelo seu valor hexadecimal como no exemplo acima (#ff0000), com uso do nome da cor ("red") ou ainda pelo seu valor rgb (rgb(255,0,0)).</p>
+<p style="text-align: justify;"><a name="s2"></a><b>A propriedade 'background-color'</b></p>
+<p style="text-align: justify;">A propriedade <code>background-color</code> define a cor do fundo de um elemento.</p>
+<p style="text-align: justify;">O elemento <code>&lt;body&gt;</code> contém todo o conteúdo de um documento HTML. Assim, para mudar a cor de fundo da página, devemos aplicar a propriedade <code>background-color</code> ao elemento <code>&lt;body&gt;</code>.</p>
+<p style="text-align: justify;">Você pode aplicar cores de fundo para outros elementos, inclusive para cabeçalhos e textos. No exemplo abaixo foram aplicadas diferentes cores de fundo para os elementos <code>&lt;body&gt;</code> e <code>&lt;h1&gt;</code>.</p>
+<pre><code>body {</code> <code>        </code><strong>background-color: #FFCC66;</strong> <code>}</code> <code>h1 {</code> <code>        color: #990000;</code> <code>        </code><strong>background-color: #FC9804;</strong> <code>}</code></pre>
+<p style="text-align: justify;">Notar que foram aplicadas duas propriedades ao elemento <code>&lt;h1&gt;</code> separadas por um ponto e vírgula.</p>
+<p style="text-align: justify;"><a name="s3"></a><b>Images de fundo [background-image]</b></p>
+<p style="text-align: justify;"><img src="../../images/css1.png" alt="" /></p>
+<p style="text-align: justify;">A propriedade CSS <code>background-image</code> é usada para definir uma imagem de</p>
+<p style="text-align: justify;">fundo.</p>
+<p style="text-align: justify;">Usaremos a imagem de uma borboleta para exemplificar a aplicação de imagens de</p>
+<p style="text-align: justify;">fundo. Você pode fazer o download da imagem mostrada abaixo e usá-la nos seus</p>
+<p style="text-align: justify;">experimentos (clique com o botão direito do mouse sobre a imagem e escolha "salvar</p>
+<p style="text-align: justify;">imagem como") ou você poderá usar uma outra imagem qualquer ao seu gosto.</p>
+<p style="text-align: justify;"> </p>
+<p style="text-align: justify;">Para inserir uma imagem de fundo na página basta aplicar a propriedade <code>background-image</code> ao elemento <code>&lt;body&gt;</code> e especificar o caminho para onde está gravada a imagem.</p>
+<pre><code></code></pre>
+<div style="color: #d4d4d4; background-color: #1e1e1e; font-family: 'Fira Code','Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'; font-weight: normal; font-size: 14px; line-height: 19px; white-space: pre;">
+<div><span style="color: #d7ba7d;">body</span><span style="color: #d4d4d4;"> {</span></div>
+<div><span style="color: #9cdcfe;">background-color</span><span style="color: #d4d4d4;">: </span><span style="color: #ce9178;">#FFCC66</span><span style="color: #d4d4d4;">;</span></div>
+<div><span style="color: #9cdcfe;">background-image</span><span style="color: #d4d4d4;">: </span><span style="color: #dcdcaa;">url</span><span style="color: #d4d4d4;">(</span><span style="color: #ce9178;">"butterfly.gif"</span><span style="color: #d4d4d4;">);</span></div>
+<div><span style="color: #d4d4d4;">}</span></div>
+<br />
+<div><span style="color: #d7ba7d;">h1</span><span style="color: #d4d4d4;"> {</span></div>
+<div><span style="color: #9cdcfe;">color</span><span style="color: #d4d4d4;">: </span><span style="color: #ce9178;">#990000</span><span style="color: #d4d4d4;">;</span></div>
+<div><span style="color: #9cdcfe;">background-color</span><span style="color: #d4d4d4;">: </span><span style="color: #ce9178;">#FC9804</span><span style="color: #d4d4d4;">;</span></div>
+<div><span style="color: #d4d4d4;">}</span></div>
+</div>
+<pre><code><br /></code><code></code></pre>
+<p style="text-align: justify;">NB: Notar como foi especificado o caminho para a imagem usando <strong>url("butterfly.gif")</strong>. Isto significa que a imagem está localizada no mesmo diretório da folha de estilos. Pode ser escolhido um outro diretório para gravar as imagens e o caminho seria <strong>url("../images/butterfly.gif")</strong> ou até mesmo hospedá-la na Internet: <strong>url("http://www.html.net/butterfly.gif")</strong>.</p>
+<p style="text-align: justify;"> </p>
+<p style="page-break-before: always; text-align: justify;"><a name="s4"></a><b>Imagem de fundo repetida [background-repeat]</b></p>
+<p style="text-align: justify;">No exemplo anterior você observou que a imagem da borboleta repetiu tanto na vertical como na horizontal cobrindo toda a tela? A propriedade <code>background-repeat</code> controla o comportamento de repetição da imagem de fundo.</p>
+<p style="text-align: justify;">A tabela a seguir mostra os quatro diferentes valores para <code>background-repeat</code>.</p>
+<table width="706" cellspacing="3" cellpadding="2">
+<tbody>
+<tr>
+<th style="border-top: 2.60pt double #808080; border-bottom: 2.60pt double #808080; border-left: 2.60pt double #808080; border-right: none; padding: 0.05cm 0cm 0.05cm 0.05cm;" width="255">
+<p>Value</p>
+</th>
+<th style="border-top: 2.60pt double #808080; border-bottom: 2.60pt double #808080; border-left: 2.60pt double #808080; border-right: none; padding: 0.05cm 0cm 0.05cm 0.05cm;" width="345">
+<p>Description</p>
+</th>
+<th style="border: 2.60pt double #808080; padding: 0.05cm;" width="80">
+<p>Example</p>
+</th>
+</tr>
+<tr>
+<td style="border-top: none; border-bottom: 2.60pt double #808080; border-left: 2.60pt double #808080; border-right: none; padding: 0cm 0cm 0.05cm 0.05cm;" width="255">
+<p><code>Background-repeat: repeat-x</code></p>
+</td>
+<td style="border-top: none; border-bottom: 2.60pt double #808080; border-left: 2.60pt double #808080; border-right: none; padding: 0cm 0cm 0.05cm 0.05cm;" width="345">
+<p>A imagem se repete na horizontal</p>
+</td>
+<td style="border-top: none; border-bottom: 2.60pt double #808080; border-left: 2.60pt double #808080; border-right: 2.60pt double #808080; padding: 0cm 0.05cm 0.05cm 0.05cm;" width="80">
+<p><a class="western" href="http://www.pt-br.html.net/tutorials/css/lesson3_ex4.asp">Ver exemplo</a></p>
+</td>
+</tr>
+<tr>
+<td style="border-top: none; border-bottom: 2.60pt double #808080; border-left: 2.60pt double #808080; border-right: none; padding: 0cm 0cm 0.05cm 0.05cm;" width="255">
+<p><code>background-repeat: repeat-y</code></p>
+</td>
+<td style="border-top: none; border-bottom: 2.60pt double #808080; border-left: 2.60pt double #808080; border-right: none; padding: 0cm 0cm 0.05cm 0.05cm;" width="345">
+<p>A imagem se repete na vertical</p>
+</td>
+<td style="border-top: none; border-bottom: 2.60pt double #808080; border-left: 2.60pt double #808080; border-right: 2.60pt double #808080; padding: 0cm 0.05cm 0.05cm 0.05cm;" width="80">
+<p><a class="western" href="http://www.pt-br.html.net/tutorials/css/lesson3_ex5.asp">Ver exemplo</a></p>
+</td>
+</tr>
+<tr>
+<td style="border-top: none; border-bottom: 2.60pt double #808080; border-left: 2.60pt double #808080; border-right: none; padding: 0cm 0cm 0.05cm 0.05cm;" width="255">
+<p><code>background-repeat: repeat</code></p>
+</td>
+<td style="border-top: none; border-bottom: 2.60pt double #808080; border-left: 2.60pt double #808080; border-right: none; padding: 0cm 0cm 0.05cm 0.05cm;" width="345">
+<p>A imagem se repete na tanto na horizontal como na vertical</p>
+</td>
+<td style="border-top: none; border-bottom: 2.60pt double #808080; border-left: 2.60pt double #808080; border-right: 2.60pt double #808080; padding: 0cm 0.05cm 0.05cm 0.05cm;" width="80">
+<p><a class="western" href="http://www.pt-br.html.net/tutorials/css/lesson3_ex6.asp">Ver exemplo</a></p>
+</td>
+</tr>
+<tr>
+<td style="border-top: none; border-bottom: 2.60pt double #808080; border-left: 2.60pt double #808080; border-right: none; padding: 0cm 0cm 0.05cm 0.05cm;" width="255">
+<p><code>background-repeat: no-repeat</code></p>
+</td>
+<td style="border-top: none; border-bottom: 2.60pt double #808080; border-left: 2.60pt double #808080; border-right: none; padding: 0cm 0cm 0.05cm 0.05cm;" width="345">
+<p>A imagem não se repete</p>
+</td>
+<td style="border-top: none; border-bottom: 2.60pt double #808080; border-left: 2.60pt double #808080; border-right: 2.60pt double #808080; padding: 0cm 0.05cm 0.05cm 0.05cm;" width="80">
+<p><a class="western" href="http://www.pt-br.html.net/tutorials/css/lesson3_ex7.asp">Ver exemplo</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: justify;">Por exemplo, o código mostrado a seguir é para que a imagem não se repita na tela:</p>
+<pre><code>body {</code> <code>        background-color: #FFCC66;</code> <code>        background-image: url("butterfly.gif");</code> <code>        </code><strong>background-repeat: no-repeat;</strong> <code>}</code> <code>h1 {</code> <code>        color: #990000;</code> <code>        background-color: #FC9804;</code> <code>}</code></pre>
+<p style="text-align: justify;"><a name="s5"></a><b>Image de fundo fixa [background-attachment]</b></p>
+<p style="text-align: justify;">A propriedade <code>background-attachment</code> define se a imagem será fixa ou se irá rolar juntamente com o elemento que a contém.</p>
+<p style="text-align: justify;">Uma imagem de fundo fixa permanece no mesmo lugar e não rola com a tela ao contrário da imagem que não é fixa e rola acompanhando o conteúdo da tela.</p>
+<p style="text-align: justify;">A tabela a seguir mostra os quatro diferentes valores para <code>background-attachment</code>. Veja os exemplos para constatar a diferença entre imagem fixa e imegem que rola.</p>
+<table width="577" cellspacing="3" cellpadding="2">
+<tbody>
+<tr>
+<th style="border-top: 2.60pt double #808080; border-bottom: 2.60pt double #808080; border-left: 2.60pt double #808080; border-right: none; padding: 0.05cm 0cm 0.05cm 0.05cm;" width="282">
+<p>Value</p>
+</th>
+<th style="border-top: 2.60pt double #808080; border-bottom: 2.60pt double #808080; border-left: 2.60pt double #808080; border-right: none; padding: 0.05cm 0cm 0.05cm 0.05cm;" width="187">
+<p>Description</p>
+</th>
+<th style="border: 2.60pt double #808080; padding: 0.05cm;" width="82"> </th>
+</tr>
+<tr>
+<td style="border-top: none; border-bottom: 2.60pt double #808080; border-left: 2.60pt double #808080; border-right: none; padding: 0cm 0cm 0.05cm 0.05cm;" width="282">
+<p><code>Background-attachment: scroll</code></p>
+</td>
+<td style="border-top: none; border-bottom: 2.60pt double #808080; border-left: 2.60pt double #808080; border-right: none; padding: 0cm 0cm 0.05cm 0.05cm;" width="187">
+<p>A imagem rola com a página</p>
+</td>
+<td style="border-top: none; border-bottom: 2.60pt double #808080; border-left: 2.60pt double #808080; border-right: 2.60pt double #808080; padding: 0cm 0.05cm 0.05cm 0.05cm;" width="82"> </td>
+</tr>
+<tr>
+<td style="border-top: none; border-bottom: 2.60pt double #808080; border-left: 2.60pt double #808080; border-right: none; padding: 0cm 0cm 0.05cm 0.05cm;" width="282">
+<p><code>Background-attachment: fixed</code></p>
+</td>
+<td style="border-top: none; border-bottom: 2.60pt double #808080; border-left: 2.60pt double #808080; border-right: none; padding: 0cm 0cm 0.05cm 0.05cm;" width="187">
+<p>A imagem é fixa</p>
+</td>
+<td style="border-top: none; border-bottom: 2.60pt double #808080; border-left: 2.60pt double #808080; border-right: 2.60pt double #808080; padding: 0cm 0.05cm 0.05cm 0.05cm;" width="82"> </td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: justify;"> </p>
+<p style="text-align: justify;">Por exemplo, o código abaixo fixa a imagem na tela.</p>
+<pre><code>body {</code> <code>        background-color: #FFCC66;</code> <code>        background-image: url("butterfly.gif");</code> <code>        background-repeat: no-repeat;</code> <code>        </code><strong>background-attachment: fixed;</strong> <code>}</code> <code>h1 {</code> <code>        color: #990000;</code> <code>        background-color: #FC9804;</code> <code>}</code></pre>
+<p style="text-align: justify;"><a name="s6"></a><b>Posição da imagem de fundo [background-position]</b></p>
+<p style="text-align: justify;">Por padrão uma imagem de fundo é posicionada no canto superior esquerdo da tela. A propriedade <code>background-position</code> permite alterar este posicionamento padrão e colocar a imagem em qualquer lugar na tela.</p>
+<p style="text-align: justify;">Existem várias maneiras de definir o posicionamento da imagem na tela definindo valores para <code>background-position</code>. Todas elas se utilizam de um sistema de coordenadas. Por exemplo, os valores '100px 200px' posiciona a imagem a 100px do topo e a 200px do lado esquerdo da janela do navegador.</p>
+<p style="text-align: justify;">As coordenadas podem ser expressas em percentagem da largura da janeja, em unidades fixas (pixels, centímetros, etc.) ou pode-se usar as palavras top, bottom, center, left e right. A figura a seguir ilustra o modelo de coordenadas:</p>
+<p style="text-align: justify;"><img src="../../images/css2.png" alt="" /></p>
+<p style="text-align: justify;"> </p>
+<p style="page-break-before: always; text-align: justify;">Na tabela a seguir são mostrados alguns exemplos .</p>
+<table width="706" cellspacing="3" cellpadding="2">
+<tbody>
+<tr>
+<th style="border-top: 2.60pt double #808080; border-bottom: 2.60pt double #808080; border-left: 2.60pt double #808080; border-right: none; padding: 0.05cm 0cm 0.05cm 0.05cm;" width="236">
+<p>Value</p>
+</th>
+<th style="border-top: 2.60pt double #808080; border-bottom: 2.60pt double #808080; border-left: 2.60pt double #808080; border-right: none; padding: 0.05cm 0cm 0.05cm 0.05cm;" width="367">
+<p>Description</p>
+</th>
+<th style="border: 2.60pt double #808080; padding: 0.05cm;" width="76"> </th>
+</tr>
+<tr>
+<td style="border-top: none; border-bottom: 2.60pt double #808080; border-left: 2.60pt double #808080; border-right: none; padding: 0cm 0cm 0.05cm 0.05cm;" width="236">
+<p><code>background-position: 2cm 2cm</code></p>
+</td>
+<td style="border-top: none; border-bottom: 2.60pt double #808080; border-left: 2.60pt double #808080; border-right: none; padding: 0cm 0cm 0.05cm 0.05cm;" width="367">
+<p>A imagem é posicionada a 2 cm da esquerda e 2 cm para baixo na página</p>
+</td>
+<td style="border-top: none; border-bottom: 2.60pt double #808080; border-left: 2.60pt double #808080; border-right: 2.60pt double #808080; padding: 0cm 0.05cm 0.05cm 0.05cm;" width="76"> </td>
+</tr>
+<tr>
+<td style="border-top: none; border-bottom: 2.60pt double #808080; border-left: 2.60pt double #808080; border-right: none; padding: 0cm 0cm 0.05cm 0.05cm;" width="236">
+<p><code>background-position: 50% 25%</code></p>
+</td>
+<td style="border-top: none; border-bottom: 2.60pt double #808080; border-left: 2.60pt double #808080; border-right: none; padding: 0cm 0cm 0.05cm 0.05cm;" width="367">
+<p>A imagem é centrada na horizontal e a um quarto (25%) para baixo na página</p>
+</td>
+<td style="border-top: none; border-bottom: 2.60pt double #808080; border-left: 2.60pt double #808080; border-right: 2.60pt double #808080; padding: 0cm 0.05cm 0.05cm 0.05cm;" width="76"> </td>
+</tr>
+<tr>
+<td style="border-top: none; border-bottom: 2.60pt double #808080; border-left: 2.60pt double #808080; border-right: none; padding: 0cm 0cm 0.05cm 0.05cm;" width="236">
+<p><code>background-position: top right</code></p>
+</td>
+<td style="border-top: none; border-bottom: 2.60pt double #808080; border-left: 2.60pt double #808080; border-right: none; padding: 0cm 0cm 0.05cm 0.05cm;" width="367">
+<p>A imagem é posicionada no canto superior direito da página</p>
+</td>
+<td style="border-top: none; border-bottom: 2.60pt double #808080; border-left: 2.60pt double #808080; border-right: 2.60pt double #808080; padding: 0cm 0.05cm 0.05cm 0.05cm;" width="76"> </td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: justify;"> </p>
+<p style="text-align: justify;">No exemplo de código a seguir a imagem é posicionada no canto inferior direito da página:</p>
+<pre><code></code></pre>
+<div style="color: #d4d4d4; background-color: #1e1e1e; font-family: 'Fira Code','Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'; font-weight: normal; font-size: 14px; line-height: 19px; white-space: pre;">
+<div><span style="color: #d7ba7d;">body</span><span style="color: #d4d4d4;"> {</span></div>
+<div><span style="color: #9cdcfe;">background-color</span><span style="color: #d4d4d4;">: </span><span style="color: #ce9178;">#FFCC66</span><span style="color: #d4d4d4;">;</span></div>
+<div><span style="color: #9cdcfe;">background-image</span><span style="color: #d4d4d4;">: </span><span style="color: #dcdcaa;">url</span><span style="color: #d4d4d4;">(</span><span style="color: #ce9178;">"butterfly.gif"</span><span style="color: #d4d4d4;">);</span></div>
+<div><span style="color: #9cdcfe;">background-repeat</span><span style="color: #d4d4d4;">: </span><span style="color: #ce9178;">no-repeat</span><span style="color: #d4d4d4;">;</span></div>
+<div><span style="color: #9cdcfe;">background-attachment</span><span style="color: #d4d4d4;">: </span><span style="color: #ce9178;">fixed</span><span style="color: #d4d4d4;">;</span></div>
+<div><span style="color: #9cdcfe;">background-position</span><span style="color: #d4d4d4;">: </span><span style="color: #ce9178;">right</span> <span style="color: #ce9178;">bottom</span><span style="color: #d4d4d4;">;</span></div>
+<div><span style="color: #d4d4d4;">}</span></div>
+<br />
+<div><span style="color: #d7ba7d;">h1</span><span style="color: #d4d4d4;"> {</span></div>
+<div><span style="color: #9cdcfe;">color</span><span style="color: #d4d4d4;">: </span><span style="color: #ce9178;">#990000</span><span style="color: #d4d4d4;">;</span></div>
+<div><span style="color: #9cdcfe;">background-color</span><span style="color: #d4d4d4;">: </span><span style="color: #ce9178;">#FC9804</span><span style="color: #d4d4d4;">;</span></div>
+<div><span style="color: #d4d4d4;">}</span></div>
+</div>
+<pre><code></code> </pre>
+<p style="text-align: justify;"><b>Compilando [background]</b></p>
+<p style="text-align: justify;">A propriedade <code>background</code> é uma abreviação para todas as propriedades listadas anteriormente.</p>
+<p style="text-align: justify;">Com <code>background</code> você declara várias propriedades de modo abreviado, economizando digitação e alguns bites, além de tornar a folha de estilo mais fácil de se ler e entender.</p>
+<p style="text-align: justify;">Por exemplo, observe as cinco linhas a seguir:</p>
+<pre><code></code></pre>
+<div style="color: #d4d4d4; background-color: #1e1e1e; font-family: 'Fira Code','Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'; font-weight: normal; font-size: 14px; line-height: 19px; white-space: pre;">
+<div><span style="color: #569cd6;">background-color</span><span style="color: #d4d4d4;">: </span><span style="color: #f44747;">#FFCC66;</span></div>
+<div><span style="color: #569cd6;">background-image</span><span style="color: #d4d4d4;">: url("/portal/butterfly.gif");</span></div>
+<div><span style="color: #569cd6;">background-repeat</span><span style="color: #d4d4d4;">: </span><span style="color: #569cd6;">no-repeat</span><span style="color: #d4d4d4;">;</span></div>
+<div><span style="color: #569cd6;">background-attachment</span><span style="color: #d4d4d4;">: fixed;</span></div>
+<div><span style="color: #569cd6;">background-position</span><span style="color: #d4d4d4;">: right bottom;</span></div>
+</div>
+<pre><code><br /></code><code></code></pre>
+<p style="text-align: justify;">Usando <code>background</code> você consegue o mesmo resultado, abreviando como mostrado abaixo:</p>
+<pre><code></code></pre>
+<div style="color: #d4d4d4; background-color: #1e1e1e; font-family: 'Fira Code','Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'; font-weight: normal; font-size: 14px; line-height: 19px; white-space: pre;">
+<div><span style="color: #d4d4d4;">background: </span><span style="color: #d7ba7d;">#FFCC66</span><span style="color: #d4d4d4;"> url("butterfly.gif") </span><span style="color: #569cd6;">no-repeat</span><span style="color: #d4d4d4;"> fixed right bottom;</span></div>
+</div>
+<pre><code> </code></pre>
+<p style="text-align: justify;">A declaração abreviada deve seguir a seguinte ordem:</p>
+<p style="text-align: justify;"><code></code></p>
+<div style="color: #d4d4d4; background-color: #1e1e1e; font-family: 'Fira Code','Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'; font-weight: normal; font-size: 14px; line-height: 19px; white-space: pre;">
+<div><span style="color: #d4d4d4;">[</span><span style="color: #9cdcfe;">background-color</span><span style="color: #d4d4d4;">] | [</span><span style="color: #9cdcfe;">background-image</span><span style="color: #d4d4d4;">] | [</span><span style="color: #9cdcfe;">background-repeat</span><span style="color: #d4d4d4;">] | [</span><span style="color: #9cdcfe;">background-attachment</span><span style="color: #d4d4d4;">] | [</span><span style="color: #9cdcfe;">background-position</span><span style="color: #d4d4d4;">]</span></div>
+</div>
+<p style="text-align: justify;">Se uma das propriedades não for declarada ela assume automaticamente o seu valor default. Por exemplo, a propriedade <code>background-attachment</code> e <code>background-position</code> não foram declaradas no código mostrado a seguir:</p>
+<pre><code></code></pre>
+<div style="color: #d4d4d4; background-color: #1e1e1e; font-family: 'Fira Code','Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'; font-weight: normal; font-size: 14px; line-height: 19px; white-space: pre;">
+<div><span style="color: #d4d4d4;">background: </span><span style="color: #d7ba7d;">#FFCC66</span><span style="color: #d4d4d4;"> url("butterfly.gif") </span><span style="color: #569cd6;">no-repeat</span><span style="color: #d4d4d4;">;</span></div>
+</div>
+<pre><code> </code></pre>
+<p style="text-align: justify;">Exemplo:</p>
+<div style="color: #d4d4d4; background-color: #1e1e1e; font-family: 'Fira Code','Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'; font-weight: normal; font-size: 14px; line-height: 19px; white-space: pre;">
+<div><span style="color: #d4d4d4;">&lt;!DOCTYPE </span><span style="color: #d7ba7d;">html</span><span style="color: #d4d4d4;"> PUBLIC "-//W3C//DTD </span><span style="color: #d7ba7d;">HTML</span><span style="color: #d4d4d4;"> 4.01//EN"</span><span style="color: #d4d4d4;">&gt;</span></div>
+<div><span style="color: #d4d4d4;">&lt;</span><span style="color: #d7ba7d;">html</span><span style="color: #d4d4d4;">&gt;</span></div>
+<div><span style="color: #d4d4d4;">&lt;</span><span style="color: #d7ba7d;">head</span><span style="color: #d4d4d4;">&gt;</span></div>
+<div><span style="color: #d4d4d4;"> &lt;</span><span style="color: #d7ba7d;">title</span><span style="color: #d4d4d4;">&gt;</span><span style="color: #d4d4d4;">My first styled page&lt;/</span><span style="color: #d7ba7d;">title</span><span style="color: #d4d4d4;">&gt;</span></div>
+<div><span style="color: #d4d4d4;"> &lt;</span><span style="color: #d7ba7d;">style</span><span style="color: #d4d4d4;"> type="text/css"</span><span style="color: #d4d4d4;">&gt;</span></div>
+<div><span style="color: #d7ba7d;">body</span><span style="color: #d4d4d4;"> {</span></div>
+<div><span style="color: #9cdcfe;">font-family</span><span style="color: #d4d4d4;">: </span><span style="color: #ce9178;">Georgia</span><span style="color: #d4d4d4;">, </span><span style="color: #ce9178;">"Times New Roman"</span><span style="color: #d4d4d4;">,</span></div>
+<div><span style="color: #ce9178;">Times</span><span style="color: #d4d4d4;">, </span><span style="color: #ce9178;">serif</span><span style="color: #d4d4d4;">;</span></div>
+<div><span style="color: #9cdcfe;">color</span><span style="color: #d4d4d4;">: </span><span style="color: #ce9178;">purple</span><span style="color: #d4d4d4;">;</span></div>
+<div><span style="color: #9cdcfe;">background-color</span><span style="color: #d4d4d4;">: </span><span style="color: #ce9178;">#d8da3d</span><span style="color: #d4d4d4;"> }</span></div>
+<div><span style="color: #d7ba7d;">h1</span><span style="color: #d4d4d4;"> {</span></div>
+<div><span style="color: #9cdcfe;">font-family</span><span style="color: #d4d4d4;">: </span><span style="color: #ce9178;">Helvetica</span><span style="color: #d4d4d4;">, Geneva, </span><span style="color: #ce9178;">Arial</span><span style="color: #d4d4d4;">,</span></div>
+<div><span style="color: #d4d4d4;"> SunSans-Regular, </span><span style="color: #ce9178;">sans-serif</span><span style="color: #d4d4d4;"> }</span></div>
+<div><span style="color: #d4d4d4;"> &lt;/</span><span style="color: #d7ba7d;">style</span><span style="color: #d4d4d4;">&gt;</span></div>
+<div><span style="color: #d4d4d4;">&lt;/</span><span style="color: #d7ba7d;">head</span><span style="color: #d4d4d4;">&gt;</span></div>
+<br />
+<div><span style="color: #d4d4d4;">&lt;</span><span style="color: #d7ba7d;">body</span><span style="color: #d4d4d4;">&gt;</span></div>
+</div>
+<p style="text-align: justify;" align="center"> </p>
+<p style="text-align: justify;" align="center"><span style="font-size: large;"><b>7 - Como Trocar o Cursor do Mouse com CSS</b></span></p>
+<p style="text-align: justify;"><a class="western" href="http://networking.mydesigntool.com/viewtopic.php?tid=466&amp;id=31">http://networking.mydesigntool.com/viewtopic.php?tid=466&amp;id=31</a></p>
+<p style="text-align: justify;"><b>cursor:default</b></p>
+<p style="text-align: justify;"><b>cursor:pointer</b></p>
+<p style="text-align: justify;"><b>Melhorando o estilo de tabelas com CSS </b></p>
+<p style="text-align: justify;"><a class="western" href="http://networking.mydesigntool.com/viewtopic.php?tid=468&amp;id=31">http://networking.mydesigntool.com/viewtopic.php?tid=468&amp;id=31</a></p>
+<p style="text-align: justify;">As duas propriedades não declaradas assumirão o valor default que como você já sabe são: a imagem rola na tela e será posicionada no canto superior esquerdo (que são os valores default para as propriedades não declaradas).</p>
+<p style="text-align: justify;">Sumário</p>
+<p style="margin-bottom: 0cm; text-align: justify;">Nesta lição você aprendeu técnicas que não são possíveis com uso de HTML. A brincadeira continua na <a class="western" href="http://www.pt-br.html.net/tutorials/css/lesson4.asp">próxima lição</a> onde examinaremos as possibilidades de estilização das fontes.</p>
+<p style="margin-bottom: 0cm; text-align: justify;">Bom tutorial em: <a class="western" href="http://www.pt-br.html.net/tutorials/css/">http://www.pt-br.html.net/tutorials/css/</a></p>
+<p style="margin-bottom: 0cm; text-align: justify;"><a class="western" href="http://maujor.com/tutorial/css3-modulo-template-layout.php">http://maujor.com/tutorial/css3-modulo-template-layout.php</a></p>
+<p style="margin-bottom: 0cm; text-align: justify;"><a class="western" href="http://www.echoecho.com/css.htm">http://www.echoecho.com/css.htm</a></p>
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Uso de sprites com CSS:</b></p>
+<p style="margin-bottom: 0cm; text-align: justify;"><a class="western" href="http://backup/portal/colaboracoes/1-ribamar-fs/123-sprites-em-css">http://ribafs.org/portal/colaboracoes/1-ribamar-fs/123-sprites-em-css</a></p>
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Templates com CSS</b></p>
+<p style="margin-bottom: 0cm; text-align: justify;"><a class="western" href="http://backup/portal/projetos-opensource/84-utilitarios-em-php/143-templates-usando-css">http://ribafs.org/portal/projetos-opensource/84-utilitarios-em-php/143-templates-usando-css</a></p>
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+<p style="margin-bottom: 0cm; text-align: justify;" align="center"><span style="font-size: large;"><b>8 - Comentários em CSS</b></span></p>
+<p style="margin-bottom: 0cm; text-align: justify;">Para comentar código em CSS devemos usar somente o comentário tipo C:</p>
+<p style="margin-bottom: 0cm; text-align: justify;">/*</p>
+<p style="margin-bottom: 0cm; text-align: justify;">Estas linhas não serão interpretadas</p>
+<p style="margin-bottom: 0cm; text-align: justify;">pelo navegador.</p>
+<p style="margin-bottom: 0cm; text-align: justify;">*/</p>
+<p style="margin-bottom: 0cm; text-align: justify;">A intenção aqui foi apenas de mostrar uma pequena porção dos recursos do CSS, que são muitos.</p>
+<p style="margin-bottom: 0cm; text-align: justify;">Para mais detalhes consulte os sites citados ou outros bons tutoriais existentes na Internet.</p>
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+<p style="margin-bottom: 0cm; text-align: justify;" align="center"><span style="font-size: large;"><b>9 - Dicas úteis para CSS</b></span></p>
+<div style="color: #d4d4d4; background-color: #1e1e1e; font-family: 'Fira Code','Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'; font-weight: normal; font-size: 14px; line-height: 19px; white-space: pre;">
+<div><span style="color: #569cd6;">*</span><span style="color: #d4d4d4;">{</span></div>
+<br />
+<div><span style="color: #9cdcfe;">margin</span><span style="color: #d4d4d4;">: </span><span style="color: #b5cea8;">0</span><span style="color: #d4d4d4;">; </span><span style="color: #9cdcfe;">padding</span><span style="color: #d4d4d4;">: </span><span style="color: #b5cea8;">0</span><span style="color: #d4d4d4;">;</span></div>
+<br />
+<div><span style="color: #d4d4d4;">}</span></div>
+<br />
+<div><span style="color: #d7ba7d;">body</span><span style="color: #d4d4d4;"> {</span></div>
+<br />
+<div><span style="color: #9cdcfe;">font</span><span style="color: #d4d4d4;">: </span><span style="color: #b5cea8;">12px</span> <span style="color: #ce9178;">"Lucida Grande"</span><span style="color: #d4d4d4;">, </span><span style="color: #ce9178;">Sans-Serif</span><span style="color: #d4d4d4;">;</span></div>
+<br />
+<div><span style="color: #9cdcfe;">background</span><span style="color: #d4d4d4;">: </span><span style="color: #ce9178;">#ccc</span><span style="color: #d4d4d4;">;</span></div>
+<br />
+<div><span style="color: #d4d4d4;">}</span></div>
+<br />
+<div><span style="color: #d7ba7d;">h1</span><span style="color: #d4d4d4;">, </span><span style="color: #d7ba7d;">h2</span><span style="color: #d4d4d4;">, </span><span style="color: #d7ba7d;">h3</span><span style="color: #d4d4d4;"> {</span></div>
+<br />
+<div><span style="color: #9cdcfe;">font</span><span style="color: #d4d4d4;">: </span><span style="color: #b5cea8;">28px</span> <span style="color: #ce9178;">Georgia</span><span style="color: #d4d4d4;">, </span><span style="color: #ce9178;">Serif</span><span style="color: #d4d4d4;">;</span></div>
+<br />
+<div><span style="color: #9cdcfe;">border-bottom</span><span style="color: #d4d4d4;">: </span><span style="color: #b5cea8;">1px</span> <span style="color: #ce9178;">dotted</span> <span style="color: #ce9178;">#ccc</span><span style="color: #d4d4d4;">;</span></div>
+<br />
+<div><span style="color: #9cdcfe;">margin</span><span style="color: #d4d4d4;">: </span><span style="color: #b5cea8;">0</span> <span style="color: #b5cea8;">0</span> <span style="color: #b5cea8;">10px</span> <span style="color: #b5cea8;">0</span><span style="color: #d4d4d4;">;</span></div>
+<br />
+<div><span style="color: #d4d4d4;">}</span></div>
+<br />
+<div><span style="color: #d7ba7d;">input</span><span style="color: #d4d4d4;">[</span><span style="color: #9cdcfe;">type</span><span style="color: #d4d4d4;">=</span><span style="color: #ce9178;">"text"</span><span style="color: #d4d4d4;">] {</span></div>
+<br />
+<div><span style="color: #9cdcfe;">padding</span><span style="color: #d4d4d4;">: </span><span style="color: #b5cea8;">3px</span><span style="color: #d4d4d4;">;</span></div>
+<br />
+<div><span style="color: #9cdcfe;">border</span><span style="color: #d4d4d4;">: </span><span style="color: #b5cea8;">1px</span> <span style="color: #ce9178;">solid</span> <span style="color: #ce9178;">#666</span><span style="color: #d4d4d4;">;</span></div>
+<br />
+<div><span style="color: #9cdcfe;">width</span><span style="color: #d4d4d4;">: </span><span style="color: #b5cea8;">350px</span><span style="color: #d4d4d4;">;</span></div>
+<br />
+<div><span style="color: #9cdcfe;">margin</span><span style="color: #d4d4d4;">: </span><span style="color: #b5cea8;">0</span> <span style="color: #b5cea8;">0</span> <span style="color: #b5cea8;">15px</span> <span style="color: #b5cea8;">0</span><span style="color: #d4d4d4;">;</span></div>
+<br />
+<div><span style="color: #d4d4d4;">}</span></div>
+</div>
+<p style="margin-bottom: 0cm; font-weight: normal; text-align: justify;"> </p>
+<p style="margin-bottom: 0cm; text-align: justify;" align="center"><b><span style="font-size: large;">10 - Recomendações para HTML, JavaScript e CSS</span></b></p>
+<p style="margin-bottom: 0cm; text-align: justify;">Deixe o código fácil de ser lido</p>
+<p style="margin-bottom: 0cm; text-align: justify;">Mantenha-o consistente</p>
+<p style="margin-bottom: 0cm; text-align: justify;">Organize bem o código</p>
+<p style="margin-bottom: 0cm; text-align: justify;">Use bem a indentação em funções, classes, ids, trechos de código</p>
+<p style="margin-bottom: 0cm; text-align: justify;">Crie o HTML antes</p>
+<p style="margin-bottom: 0cm; text-align: justify;">Não crie classes grandes, mas várias pequenas</p>
+<p style="margin-bottom: 0cm; text-align: justify;">Use o correto doctypy: <a class="western" href="http://www.alistapart.com/articles/doctype/">http://www.alistapart.com/articles/doctype/</a></p>
+<p style="margin-bottom: 0cm; text-align: justify;">Comente seu código</p>
+<p style="margin-bottom: 0cm; text-align: justify;">No CSS use</p>
+<p style="margin-bottom: 0cm; text-align: justify;">margin: 0 auto; // top, bottom e left, right valores, respectivamente. para centrar divs, parágrafos ou outros elementos em seu layout.</p>
+<p style="margin-bottom: 0cm; text-align: justify;">Use a extensão do Firefox, o Firebug para ganhar produtividade</p>
+<p style="margin-bottom: 0cm; text-align: justify;">Use no CSS: text-transform: lowercase;</p>
+<p style="margin-bottom: 0cm; text-align: justify;">Valide seu HTML (<a class="western" href="http://validator.w3.org/">http://validator.w3.org/</a>) e seu CSS (<a class="western" href="http://jigsaw.w3.org/css-validator/">http://jigsaw.w3.org/css-validator/</a>)</p>
+<p style="margin-bottom: 0cm; text-align: justify;">Para tamanho da página use pixel e para tamanho de fontes use ems.</p>
+<p style="margin-bottom: 0cm; text-align: justify;">Use bastante as listas</p>
+<p style="margin-bottom: 0cm; text-align: justify;">Maior compatibilidade entre os navegadores. Inicie o CSS com: * {margin:0;padding:0;}</p>
+<p style="margin-bottom: 0cm; text-align: justify;">Use um reset CSS: <a class="western" href="http://meyerweb.com/eric/thoughts/2007/05/01/reset-reloaded/">http://meyerweb.com/eric/thoughts/2007/05/01/reset-reloaded/</a></p>
+<p style="margin-bottom: 0cm; text-align: justify;"><a class="western" href="http://www.webdesignerdepot.com/2009/08/250-resources-to-help-you-become-a-css-expert/">http://www.webdesignerdepot.com/2009/08/250-resources-to-help-you-become-a-css-expert/</a></p>
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+<p style="margin-bottom: 0cm; text-align: justify;"><span style="font-size: large;"><b>11 - Funções em PHP que retornam CSS</b></span></p>
+<div style="color: #d4d4d4; background-color: #1e1e1e; font-family: 'Fira Code','Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'; font-weight: normal; font-size: 14px; line-height: 19px; white-space: pre;">
+<div><span style="color: #569cd6;">&lt;?php</span></div>
+<br />
+<div><span style="color: #6a9955;">// Funções em PHP que retornam CSS</span></div>
+<br />
+<div><span style="color: #6a9955;">/* Cores</span></div>
+<br />
+<div><span style="color: #6a9955;">RGB = "rgb(255,255,0)"</span></div>
+<br />
+<div><span style="color: #6a9955;">HEXADECIMAL = "#FFFF00"</span></div>
+<br />
+<div><span style="color: #6a9955;">NOME = "yellow"</span></div>
+<br />
+<div><span style="color: #6a9955;">*/</span></div>
+<br />
+<div><span style="color: #569cd6;">function</span> <span style="color: #dcdcaa;">cor_fundo</span><span style="color: #d4d4d4;">(</span><span style="color: #9cdcfe;">$cor</span><span style="color: #d4d4d4;">){</span></div>
+<br />
+<div><span style="color: #c586c0;">return</span> <span style="color: #9cdcfe;">$fundo</span><span style="color: #d4d4d4;"> = </span><span style="color: #ce9178;">"style=</span><span style="color: #d7ba7d;">\"</span><span style="color: #ce9178;">background-color:</span><span style="color: #9cdcfe;">$cor</span><span style="color: #d7ba7d;">\"</span><span style="color: #ce9178;">"</span><span style="color: #d4d4d4;">;</span></div>
+<br />
+<div><span style="color: #d4d4d4;">}</span></div>
+<br />
+<div><span style="color: #569cd6;">function</span> <span style="color: #dcdcaa;">cor_fonte</span><span style="color: #d4d4d4;">(</span><span style="color: #9cdcfe;">$cor</span><span style="color: #d4d4d4;">){</span></div>
+<br />
+<div><span style="color: #c586c0;">return</span> <span style="color: #ce9178;">"style=</span><span style="color: #d7ba7d;">\"</span><span style="color: #ce9178;">color:</span><span style="color: #9cdcfe;">$cor</span><span style="color: #d7ba7d;">\"</span><span style="color: #ce9178;">"</span><span style="color: #d4d4d4;">;</span></div>
+<br />
+<div><span style="color: #d4d4d4;">}</span></div>
+<br />
+<div><span style="color: #dcdcaa;">print</span> <span style="color: #ce9178;">"&lt;table&gt;&lt;tr "</span><span style="color: #d4d4d4;">.</span> <span style="color: #dcdcaa;">cor_fundo</span><span style="color: #d4d4d4;">(</span><span style="color: #ce9178;">'black'</span><span style="color: #d4d4d4;">) </span><span style="color: #d4d4d4;">.</span><span style="color: #ce9178;">"&gt;&lt;td "</span><span style="color: #d4d4d4;">.</span> <span style="color: #dcdcaa;">cor_fonte</span><span style="color: #d4d4d4;">(</span><span style="color: #ce9178;">'white'</span><span style="color: #d4d4d4;">)</span><span style="color: #d4d4d4;">.</span><span style="color: #ce9178;">"&gt;TESTE&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;"</span><span style="color: #d4d4d4;">;</span></div>
+<br />
+<div><span style="color: #569cd6;">function</span> <span style="color: #dcdcaa;">imagem_fundo</span><span style="color: #d4d4d4;">(</span><span style="color: #9cdcfe;">$imagem</span><span style="color: #d4d4d4;">){</span></div>
+<br />
+<div><span style="color: #c586c0;">return</span> <span style="color: #ce9178;">"background-image: url(</span><span style="color: #d7ba7d;">\"</span><span style="color: #9cdcfe;">$imagem</span><span style="color: #d7ba7d;">\"</span><span style="color: #ce9178;">)"</span><span style="color: #d4d4d4;">;</span></div>
+<br />
+<div><span style="color: #d4d4d4;">}</span></div>
+<br />
+<div><span style="color: #569cd6;">function</span> <span style="color: #dcdcaa;">imagem_fundo</span><span style="color: #d4d4d4;">(</span><span style="color: #9cdcfe;">$imagem</span><span style="color: #d4d4d4;">){</span></div>
+<br />
+<div><span style="color: #c586c0;">return</span> <span style="color: #ce9178;">"style=</span><span style="color: #d7ba7d;">\"</span><span style="color: #ce9178;">background-image: url('</span><span style="color: #9cdcfe;">$imagem</span><span style="color: #ce9178;">')</span><span style="color: #d7ba7d;">\"</span><span style="color: #ce9178;">"</span><span style="color: #d4d4d4;">;</span></div>
+<br />
+<div><span style="color: #d4d4d4;">}</span></div>
+<br />
+<div><span style="color: #dcdcaa;">print</span> <span style="color: #ce9178;">"&lt;body "</span><span style="color: #d4d4d4;">.</span><span style="color: #dcdcaa;">imagem_fundo</span><span style="color: #d4d4d4;">(</span><span style="color: #ce9178;">'/dnocs.jpg'</span><span style="color: #d4d4d4;">)</span><span style="color: #d4d4d4;">.</span><span style="color: #ce9178;">"&gt;"</span><span style="color: #d4d4d4;">; </span><span style="color: #6a9955;">// Esta imagem deve estar num diretório disponível ao apache</span></div>
+<br />
+<div><span style="color: #569cd6;">function</span> <span style="color: #dcdcaa;">random_color</span><span style="color: #d4d4d4;">()</span></div>
+<br />
+<div><span style="color: #d4d4d4;">{</span></div>
+<br />
+<div><span style="color: #9cdcfe;">$chars</span><span style="color: #d4d4d4;"> = </span><span style="color: #ce9178;">"abcdef0123456789"</span><span style="color: #d4d4d4;">;</span></div>
+<br />
+<div><span style="color: #dcdcaa;">srand</span><span style="color: #d4d4d4;">((</span><span style="color: #569cd6;">double</span><span style="color: #d4d4d4;">)</span><span style="color: #dcdcaa;">microtime</span><span style="color: #d4d4d4;">() * </span><span style="color: #b5cea8;">1000000</span><span style="color: #d4d4d4;">);</span></div>
+<br />
+<div><span style="color: #9cdcfe;">$color</span><span style="color: #d4d4d4;"> = </span><span style="color: #ce9178;">''</span><span style="color: #d4d4d4;">;</span></div>
+<br />
+<div><span style="color: #c586c0;">for</span><span style="color: #d4d4d4;"> (</span><span style="color: #9cdcfe;">$i</span><span style="color: #d4d4d4;">=</span><span style="color: #b5cea8;">0</span><span style="color: #d4d4d4;">; </span><span style="color: #9cdcfe;">$i</span><span style="color: #d4d4d4;">&lt;</span><span style="color: #b5cea8;">6</span><span style="color: #d4d4d4;">; </span><span style="color: #9cdcfe;">$i</span><span style="color: #d4d4d4;">++)</span></div>
+<br />
+<div><span style="color: #d4d4d4;">{</span></div>
+<br />
+<div><span style="color: #9cdcfe;">$num</span><span style="color: #d4d4d4;"> = </span><span style="color: #dcdcaa;">rand</span><span style="color: #d4d4d4;">(</span><span style="color: #b5cea8;">0</span><span style="color: #d4d4d4;">, </span><span style="color: #b5cea8;">15</span><span style="color: #d4d4d4;">);</span></div>
+<br />
+<div><span style="color: #9cdcfe;">$tmp</span><span style="color: #d4d4d4;"> = </span><span style="color: #dcdcaa;">substr</span><span style="color: #d4d4d4;">(</span><span style="color: #9cdcfe;">$chars</span><span style="color: #d4d4d4;">, </span><span style="color: #9cdcfe;">$num</span><span style="color: #d4d4d4;">, </span><span style="color: #b5cea8;">1</span><span style="color: #d4d4d4;">);</span></div>
+<br />
+<div><span style="color: #9cdcfe;">$color</span> <span style="color: #d4d4d4;">.=</span> <span style="color: #9cdcfe;">$tmp</span><span style="color: #d4d4d4;">;</span></div>
+<br />
+<div><span style="color: #d4d4d4;">}</span></div>
+<br />
+<div><span style="color: #c586c0;">return</span> <span style="color: #ce9178;">"#"</span> <span style="color: #d4d4d4;">.</span> <span style="color: #9cdcfe;">$color</span><span style="color: #d4d4d4;">;</span></div>
+<br />
+<div><span style="color: #d4d4d4;">}</span></div>
+<br />
+<div><span style="color: #6a9955;">//print random_color();</span></div>
+</div>
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+<p style="margin-bottom: 0cm; text-align: justify;"><b>Referências</b></p>
+<p style="margin-bottom: 0cm; text-align: justify;">Mastering CSS, Part 1: Styling Design Elements</p>
+<p style="margin-bottom: 0cm; text-align: justify;"><a class="western" href="http://www.smashingmagazine.com/2009/08/03/mastering-css-styling-design-elements/">http://www.smashingmagazine.com/2009/08/03/mastering-css-styling-design-elements/</a></p>
+<p style="margin-bottom: 0cm; text-align: justify;"><a class="western" href="http://www.smashingmagazine.com/2009/08/10/mastering-css-advanced-techniques-and-tools/">http://www.smashingmagazine.com/2009/08/10/mastering-css-advanced-techniques-and-tools/</a></p>
+<h2 class="western" style="text-align: justify;"><a class="western" href="http://socialcmsbuzz.com/40-css-web-form-style-tutorials-for-web-developers-14082008/"><span style="font-size: medium;"><span style="font-weight: normal;">40 CSS Web Form Style Tutorials For Web Developers</span></span></a></h2>
+<p style="margin-bottom: 0cm; text-align: justify;"><a class="western" href="http://www.websiteoptimization.com/speed/tweak/forms/css.html">http://www.websiteoptimization.com/speed/tweak/forms/css.html</a></p>
+<p style="margin-bottom: 0cm; text-align: justify;"><a name="title"></a>Fancy Form Design Using CSS de Cameron Adams na sitepoint (<a class="western" href="http://sitepoint.com/">http://sitepoint.com</a>)</p>
+<p style="margin-bottom: 0cm; text-align: justify;">pForm - <a class="western" href="http://www.phpform.org/">http://www.phpform.org/</a></p>
+<p style="margin-bottom: 0cm; text-align: justify;"><a class="western" href="http://nidahas.com/2006/12/06/forms-markup-and-css-revisited/">http://nidahas.com/2006/12/06/forms-markup-and-css-revisited/</a></p>
+<p style="margin-bottom: 0cm; text-align: justify;"><a class="western" href="http://www.alistapart.com/articles/prettyaccessibleforms/">http://www.alistapart.com/articles/prettyaccessibleforms/</a></p>
+<p style="margin-bottom: 0cm; text-align: justify;">Layouts e Templates CSS Free - <a class="western" href="http://www.smashingmagazine.com/2007/01/12/free-css-layouts-and-templates/">http://www.smashingmagazine.com/2007/01/12/free-css-layouts-and-templates/</a></p>
+<p style="margin-bottom: 0cm; text-align: justify;">Layouts CSS - <a class="western" href="http://www.dynamicdrive.com/style/layouts/category/C11/">http://www.dynamicdrive.com/style/layouts/category/C11/</a></p>
+<p style="margin-bottom: 0cm; text-align: justify;">CSS Reference - <a class="western" href="http://xhtml.com/en/css/reference/">http://xhtml.com/en/css/reference/</a></p>
+<p style="margin-bottom: 0cm; text-align: justify;">CSS Reference - <a class="western" href="http://www.w3schools.com/CSS/CSS_reference.asp">http://www.w3schools.com/CSS/CSS_reference.asp</a></p>
+<p style="margin-bottom: 0cm; text-align: justify;"> </p>
+<p style="margin-bottom: 0cm; page-break-before: always; text-align: justify;"><img src="../../images/css3.png" alt="" /></p>
+<p style="margin-bottom: 0cm; text-align: justify;"> </p> 	</div>
+
+	
+	
+	<ul class="pager pagenav">
+	<li class="previous">
+		<a class="hasTooltip" title="Introdução ao CSS" aria-label="Artigo anterior: Introdução ao CSS" href="introducao-ao-css.html" rel="prev">
+			<span class="icon-chevron-left" aria-hidden="true"></span> <span aria-hidden="true">Ant</span>		</a>
+	</li>
+</ul>
+				
+	
+	<script type="text/x-template" id="ccomment-pagination">
+	<nav class="pagination text-center" v-if="pagination.last_page > 0">
+		<ul >
+			<li v-if="showPrevious()" :class="{ 'disabled' : pagination.current_page <= 1 }">
+				<span v-if="pagination.current_page <= 1">
+					<span aria-hidden="true">Ant</span>
+				</span>
+				<a href="ainda-css.html#" v-if="pagination.current_page > 1 " :aria-label="config.ariaPrevioius"
+				   @click.prevent="changePage(pagination.current_page - 1)">
+					<span aria-hidden="true">Ant</span>
+				</a>
+			</li>
+			<li v-for="num in array" :class="{ 'active': num === pagination.current_page }">
+				<a href="ainda-css.html#" @click.prevent="changePage(num)">{{ num }}</a>
+			</li>
+			<li v-if="showNext()"
+			    :class="{ 'disabled' : pagination.current_page === pagination.last_page || pagination.last_page === 0 }">
+				<span v-if="pagination.current_page === pagination.last_page || pagination.last_page === 0">
+					<span aria-hidden="true">Próximo</span>
+				</span>
+				<a href="ainda-css.html#" v-if="pagination.current_page < pagination.last_page" :aria-label="config.ariaNext"
+				   @click.prevent="changePage(pagination.current_page + 1)">
+					<span aria-hidden="true">Próximo</span>
+				</a>
+			</li>
+		</ul>
+	</nav>
+</script>
+	<script type="text/x-template" id="ccomment-avatar">
+		<div class="ccomment-avatar">
+			<a v-if="profileLink" v-bind:href="profileLink">
+				<img v-bind:src="avatar"/>
+			</a>
+			<img v-else v-bind:src="avatar"/>
+		</div>
+	</script>
+
+	<script type="text/x-template" id="ccomment-user-name">
+		<a v-if="profileLink" :href="profileLink">
+			<span class="ccomment-author">{{name}}</span>
+		</a>
+		<span v-else class="ccomment-author">{{name}}</span>
+	</script>
+
+	<script type="text/x-template" id="ccomment-created">
+		<a :href="'#!/ccomment-comment=' + id" class="muted ccomment-created">
+			{{date}}
+		</a>
+	</script>
+
+	<div id="ccomment-token" style="display:none;">
+		<input type="hidden" name="796296c0a9019553ed4bbba150ad5a40" value="1" />	</div>
+
+	
+<script type="text/x-template" id="ccomment-customfields">
+	<div class="ccomment-customfields" v-if="customfields">
+		<strong>Campos personalizados</strong>
+		<dl class="dl-horizontal">
+			<template v-for="customfield in customfields">
+				<dt>{{customfield.title}}</dt>
+				<dd>{{customfield.value}}</dd>
+			</template>
+		</dl>
+	</div>
+</script>
+
+<script type="text/x-template" id="ccomment-template">
+	<li v-bind:class="model.class+' ccomment-level-'+model.level">
+		<div class="ccomment-comment-content" v-bind:id="'ccomment-comment-'+model.id">
+			<div class="ccomment-data">
+									<ccomment-avatar
+							v-bind:avatar="model.avatar"
+							v-bind:profileLink="model.profileLink"/>
+								<div class="ccomment-content">
+					<div class="ccomment-meta">
+						<ccomment-user-name v-bind:name="model.name" v-bind:profileLink="model.profileLink"></ccomment-user-name>
+						<ccomment-created v-bind:date="model.date" v-bind:id="model.id"></ccomment-created>
+					</div>
+
+					<div v-html="model.comment">
+					</div>
+
+
+					<div v-if="model.galleria" class="js-ccomment-galleria galleria ccomment-galleria"></div>
+
+					<ccomment-customfields v-bind:customfields="model.customfields"></ccomment-customfields>
+					<div class="ccomment-actions">
+													<span class="muted">
+					{{model.votes}}
+					<i class="ccomment-thumbs-up ccomment-voting" v-on:click="vote(+1, model.id)"></i>
+					<i class="ccomment-thumbs-down ccomment-voting" v-on:click="vote(-1, model.id)"></i>
+				</span>
+						
+													<button class="btn btn-small ccomment-quote btn-link" v-on:click="quote(model.id)">
+								Citar							</button>
+						
+						
+						<div class="pull-right ccomment-moderation">
+							<button v-if="model.commentModerator" class="btn btn-mini btn-ccomment-edit" v-on:click="edit(model.id)">
+								Editar							</button>
+
+													</div>
+					</div>
+				</div>
+			</div>
+
+
+			<keep-alive>
+				<ccomment-form v-if="reply" :ref="'form-'+model.id" v-bind:focus="true">
+					<input slot="parent-id" name="jform[parentid]" type="hidden" v-bind:value="model.id"/>
+				</ccomment-form>
+			</keep-alive>
+		</div>
+
+		<ul v-if="hasChildren">
+			<ccomment-comment class="item" v-for="model in getChild()" v-bind:key="model.id" v-bind:model="model">
+			</ccomment-comment>
+		</ul>
+	</li>
+
+</script>
+	
+	
+
+		<script type="text/x-template" id="ccomment-form">
+			<form class="ccomment-form" v-on:submit.prevent="onSubmit">
+				<div class="ccomment-error-form row-fluid  margin-bottom" v-if="error">
+					<div class="alert alert-error">
+						{{errorMessage}}
+					</div>
+				</div>
+				<div class="ccomment-info-form row-fluid  margin-bottom" v-if="info">
+					<div class="alert alert-info">
+						{{infoMessage}}
+					</div>
+				</div>
+				<div class="row-fluid margin-bottom">
+											<div class="span1 hidden-phone">
+							<ccomment-avatar v-bind:avatar="getAvatar"></ccomment-avatar>
+						</div>
+					
+					<div class="span11">
+						<textarea v-on:focus="toggle"
+								  name="jform[comment]"
+								  class='js-ccomment-textarea ccomment-textarea span12 required'
+								  placeholder="Deixe um comentário"
+						></textarea>
+
+						<div v-show="uploadImage">
+							
+<div class="fileupload">
+	<!-- The fileupload-buttonbar contains buttons to add/delete files and start/cancel the upload -->
+	<div class="row fileupload-buttonbar">
+		<input type="file" name="files[]" class="js-ccomment-file-upload-real ccomment-file-upload-real" multiple/>
+		<div class="">
+			<!-- The global file processing state -->
+			<span class="fileupload-process"><span class="fa fa-spinner fa-pulse"></span></span>
+			Attach images by dragging & dropping or <span type="button" class="js-file-upload-fake ccomment-file-upload-fake btn-link"> by selecting them.</span>			<br/>
+			<small class="muted">The maximum file size for uploads is <strong>MB</strong>.				Only <strong></strong> files are allowed.</small>
+
+			<!-- The global progress state -->
+			<div class="fileupload-progress fade hide">
+				<!-- The global progress bar -->
+				<div class="progress progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+					<div class="progress-bar progress-bar-success" style="width:0%;"></div>
+				</div>
+				<!-- The extended global progress state -->
+				<div class="progress-extended">&nbsp;</div>
+			</div>
+			<div class="ccomment-file-list">
+				<div class="alert alert-error hide compojoom-max-number-files">
+					The maximum number of 3 allowed files to upload has been reached. If you want to upload more files you have to delete one of the existing uploaded files first.				</div>
+				<table role="presentation" class="table table-striped">
+					<thead></thead>
+					<tbody class="files"></tbody>
+				</table>
+				<div class="alert alert-error hide compojoom-max-number-files">
+					The maximum number of 3 allowed files to upload has been reached. If you want to upload more files you have to delete one of the existing uploaded files first.				</div>
+			</div>
+		</div>
+	</div>
+</div>
+						</div>
+
+						<div v-show="active">
+							<div class="span4 muted small">
+								Postando como																	<button type="button"
+											v-on:click="display = !display"
+											class="btn-link btn-small ccomment-posting-as">{{getDefaultName}}
+									</button>
+															</div>
+															<label class="checkbox pull-right small ccomment-notify">
+									<input type="checkbox" value="1" name="jform[notify]ƒ"
+										   v-on:click="notify = !notify"/>
+									<span class="muted">
+										Notificar-me de futuros comentários via e-mail									</span>
+								</label>
+							
+
+						</div>
+					</div>
+											<div v-show="display"
+							 class="row-fluid ccomment-user-info offset1					span11">
+							<div class="span6">
+								<input name="jform[name]"
+									   class="ccomment-name span12 no-margin "
+									   type='text'
+									   v-bind:value="getName"
+									   v-on:input="updateDefaultName"
+																			   placeholder="Informe seu nome"
+									   tabindex="2"
+																	/>
+								<span class="help-block pull-right small muted">
+								Exibido ao lado de seus comentários.							</span>
+							</div>
+
+															<div class="span6">
+									<input name='jform[email]'
+										   class="ccomment-email span12 no-margin "
+										   type='text'
+										   v-bind:value='getEmail'
+										   v-on:input="updateUserEmail"
+										   placeholder="Informe seu email"
+																				   tabindex="3"
+																			/>
+									<p class="help-block small pull-right muted">
+										Não exibido publicamente.																					<span class='gravatar'>
+											<a href='http://gravatar.com' target='_blank'>Gravatar</a> habilitado										</span>
+																			</p>
+								</div>
+													</div>
+					
+
+					
+					
+
+					<div class="row-fluid ccomment-actions" v-show="active">
+													<div class="pull-left muted small ccomment-undergo-moderation offset1">
+								Comentários serão submetidos a moderação antes de serem publicados.							</div>
+												<div class="pull-right">
+							<button v-on:click="reset()"
+									type="button"
+									class="btn ccomment-cancel">
+								Cancelar</button>
+							<button type="submit" class='btn btn-primary ccomment-send'
+									tabindex="7"
+									name='bsend'>
+								<span v-if="isSending">
+									Salvando...								</span>
+								<span v-else>
+									Enviar								</span>
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<input type="hidden" name="jform[contentid]" v-bind:value="itemConfig.contentid"/>
+				<input type="hidden" name="jform[component]" v-bind:value="itemConfig.component"/>
+				<input type="hidden" name="jform[page]" v-bind:value="page"/>
+				<slot name="parent-id"></slot>
+			</form>
+		</script>
+
+	
+
+
+
+
+<!-- The template to display files available for upload -->
+<script id="template-upload" type="text/x-tmpl">
+{% for (var i=0, file; file=o.files[i]; i++) { %}
+    <tr class="template-upload fade">
+        <td>
+            <span class="preview"></span>
+        </td>
+        <td>
+         <span class="name"><i>{%=file.name%}</i></span>
+            <div class="compojoom-single-file-progress">
+	            <div class="progress progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+	                <div class="progress-bar progress-bar-success" style="width:0%;"></div>
+	            </div>
+	           <small><strong class="size">Processing...</strong></small>
+			</div>
+        </td>
+        <td>
+            {% if (!i && !o.options.autoUpload) { %}
+                <button class="btn btn-default btn-xs start" disabled>
+                    <i class="fa fa-upload"></i>
+                    <span>Start</span>
+                </button>
+            {% } %}
+            {% if (!i) { %}
+                <button class="btn btn-default btn-xs btn-xs cancel pull-left">
+                    <i class="fa fa-stop"></i>
+                    <span>Cancel</span>
+                </button>
+            {% } %}
+        </td>
+    </tr>
+{% } %}
+</script>
+
+<!-- The template to display files available for download -->
+<script id="template-download" type="text/x-tmpl">
+{% for (var i=0, file; file=o.files[i]; i++) { %}
+    <tr class="template-download fade">
+        <td style="">
+        {% if (file.thumbnailUrl) { %}
+            <span class="preview">
+                {% if (file.url) { %}
+					<a href="http://backup/portal/{%=file.url%}" title="{%=file.name%}" download="{%=file.name%}" data-gallery>
+						<img src='http://backup/portal/basicos/css/{%=file.thumbnailUrl%}'>
+					</a>
+				{% } else { %}
+					<img src='http://backup/portal/basicos/css/{%=file.thumbnailUrl%}'>
+				{% } %}
+            </span>
+		{% } %}
+        </td>
+        <td>
+        {% if (!file.error) { %}
+	        <div class="file-meta">
+			    <div class="row">
+			        <div class="col-lg-4">
+			           <input type="text" class="form-control"
+			                placeholder="Title"
+							name="jform[picture_data][{%=file.name%}][title]"
+					        value="{%=file.title%}" />
+			        </div>
+			        <div class="col-lg-8">
+			            <input type="text" placeholder="Description" class="form-control"
+					                name="jform[picture_data][{%=file.name%}][description]"
+
+					                value="{%=file.description%}" />
+			        </div>
+			    </div>
+	        </div>
+		 {% } %}
+        {% if (file.error) { %}
+            <div><span class="label label-danger">Error</span> {%=file.error%}</div>
+        {% } %}
+        </td>
+        <td style="text-align: center">
+            {% if (file.deleteUrl) { %}
+                            {% } else { %}
+                 <button class="btn btn-default btn-xs btn-xs cancel">
+                    <i class="fa fa-stop"></i>
+                    <span>Cancel</span>
+                </button>
+            {% }%}
+            {% if (!file.error) { %}
+            <input type="hidden" name="jform[picture][]" value="{%=file.name%}" />
+            {% } %}
+        </td>
+    </tr>
+{% } %}
+</script>
+	
+<script type="text/x-template" id="ccomment-menu">
+	<div class="row-fluid ccomment-menu">
+		<h4 class="pull-left">
+			Comentários			(<span class="ccomment-comment-counter">{{pagination.total_with_children}}</span>)
+		</h4>
+		<div class="pull-right">
+							<button
+						v-on:click="newComment"
+						class="ccomment-add-new btn btn-mini" title='Adicionar Novo'>
+					Adicionar Novo				</button>
+														</div>
+	</div>
+</script>
+
+	<!-- the ccomment root element -->
+	<div class="ccomment" id="ccomment">
+
+		<ccomment-menu></ccomment-menu>
+
+		
+		
+		<ul class="ccomment-comments-list">
+			<ccomment-comment v-for="item in comments"
+							  v-if="item.parentid === -1"
+							  class="item"
+							  v-bind:key="item.id"
+							  v-bind:model="item">
+			</ccomment-comment>
+		</ul>
+
+					<pagination v-if="pagination.last_page > 1" :pagination="pagination" :callback="loadData" :options="paginationOptions"></pagination>
+		
+					<ccomment-form></ccomment-form>
+		
+			<div class="row-fluid small muted ccomment-powered">
+		<p class="text-center">
+			Comments fornecido por <a href='https://compojoom.com' rel='nofollow' target='_blank'>CComment</a>		</p>
+	</div>
+	</div>
+
+	<script type="text/javascript">
+		window.compojoom = compojoom = window.compojoom || {};
+		compojoom.ccomment = {
+			user: {"loggedin":false,"avatar":"http:\/\/backup\/portal\/media\/com_comment\/images\/noavatar.png"},
+			item: {"contentid":12,"component":"com_content","count":0},
+			config: {"comments_per_page":0,"sort":0,"tree":0,"use_name":0,"tree_depth":5,"form_position":0,"voting":1,"copyright":1,"pagination_position":0,"avatars":0,"gravatar":1,"support_ubb":1,"support_emoticons":0,"support_picture":0,"name_required":0,"email_required":0,"baseUrl":"http:\/\/backup\/portal\/","langCode":null,"file_upload":{"url":"http:\/\/backup\/portal\/index.php?option=com_comment&amp;task=multimedia.doIt","formControl":"jform","fieldName":"picture","maxNumberOfFiles":3,"fileTypes":null,"maxSize":null,"component":"com_comment","imageSize":{"x":"2400","y":"1800"}}}		};
+	</script>
+
+<script data-inline type="text/javascript" src="../../media/com_comment/cache/8e12eb270706cd6b2c8483104bf89b54.min.js"></script>
+			<div class="article-footer-wrap">
+			<div class="article-footer-top">
+									<div class="helix-social-share">
+		<div class="helix-social-share-icon">
+			<ul>
+				
+				<li>
+					<div class="facebook" data-toggle="tooltip" data-placement="top" title="Share On Facebook">
+
+						<a class="facebook" onClick="window.open('http://www.facebook.com/sharer.php?u=http://backup/portal/basicos/css/ainda-css.html','Facebook','width=600,height=300,left='+(screen.availWidth/2-300)+',top='+(screen.availHeight/2-150)+''); return false;" href="http://www.facebook.com/sharer.php?u=http://backup/portal/basicos/css/ainda-css.html">
+
+							<i class="fa fa-facebook"></i>
+						</a>
+
+					</div>
+				</li>
+				<li>
+					<div class="twitter"  data-toggle="tooltip" data-placement="top" title="Share On Twitter">
+						
+						<a class="twitter" onClick="window.open('http://twitter.com/share?url=http://backup/portal/basicos/css/ainda-css.html&amp;text=Ainda%20CSS','Twitter share','width=600,height=300,left='+(screen.availWidth/2-300)+',top='+(screen.availHeight/2-150)+''); return false;" href="http://twitter.com/share?url=http://backup/portal/basicos/css/ainda-css.html&amp;text=Ainda%20CSS">
+							<i class="fa fa-twitter"></i>
+						</a>
+
+					</div>
+				</li>
+				<li>
+					<div class="google-plus">
+						<a class="gplus" data-toggle="tooltip" data-placement="top" title="Share On Google Plus" onClick="window.open('https://plus.google.com/share?url=http://backup/portal/basicos/css/ainda-css.html','Google plus','width=585,height=666,left='+(screen.availWidth/2-292)+',top='+(screen.availHeight/2-333)+''); return false;" href="https://plus.google.com/share?url=http://backup/portal/basicos/css/ainda-css.html" >
+						<i class="fa fa-google-plus"></i></a>
+					</div>
+				</li>
+				
+				<li>
+					<div class="linkedin">
+						<a class="linkedin" data-toggle="tooltip" data-placement="top" title="Share On Linkedin" onClick="window.open('http://www.linkedin.com/shareArticle?mini=true&url=http://backup/portal/basicos/css/ainda-css.html','Linkedin','width=585,height=666,left='+(screen.availWidth/2-292)+',top='+(screen.availHeight/2-333)+''); return false;" href="http://www.linkedin.com/shareArticle?mini=true&url=http://backup/portal/basicos/css/ainda-css.html" >
+							
+						<i class="fa fa-linkedin-square"></i></a>
+					</div>
+				</li>
+			</ul>
+		</div>		
+	</div> <!-- /.helix-social-share -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			</div>
+					</div>
+	
+</article>
+</div></div><div id="sp-right" class="col-sm-3 col-md-3"><div class="sp-column class2"><div class="sp-module pop"><h3 class="sp-module-title">Populares</h3><div class="sp-module-content"><ul class="mostreadpop mod-list">
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="http://backup/portal/mobile/phaser/atualizar-o-node-js.html" itemprop="url">
+			<span itemprop="name">
+				Atualizar o Node.JS			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../../joomla-3/dicas/melhorando-a-velocidade-do-site.html" itemprop="url">
+			<span itemprop="name">
+				Melhorando a velocidade do site			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="http://backup/portal/basicos/css/boas-vindas.html" itemprop="url">
+			<span itemprop="name">
+				Boas Vindas!			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../../joomla-3/instalacao.html" itemprop="url">
+			<span itemprop="name">
+				Instalação do Joomla			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../../blog/diversos/e-possivel-viver-sem-o-google.html" itemprop="url">
+			<span itemprop="name">
+				É possível viver sem o Google?			</span>
+		</a>
+	</li>
+</ul>
+</div></div><div class="sp-module "><h3 class="sp-module-title">Novo Testamento</h3><div class="sp-module-content">Mas, se é de Deus, não podereis desfazê-la; para que não aconteça serdes também achados combatendo contra Deus.
+
+<br>(At, 5:39) 
+</div></div><div class="sp-module "><h3 class="sp-module-title">Rotas no Mapa do Google</h3><div class="sp-module-content"><a href="https://www.google.com/maps/dir///@-3.7294526,-38.5422647,15z" target="_blank">Abrir o Mapa</a>
+</div></div></div></div></div></div></section><footer id="sp-footer"><div class="container"><div class="row"><div id="sp-footer1" class="col-sm-12 col-md-12"><div class="sp-column "><span class="sp-copyright">© 2015 Ribamar FS. All Rights Reserved. Designed By JoomShaper</span></div></div></div></div></footer>            </div> <!-- /.body-innerwrapper -->
+        </div> <!-- /.body-innerwrapper -->
+
+        <!-- Off Canvas Menu -->
+        <div class="offcanvas-menu">
+            <a href="ainda-css.html#" class="close-offcanvas" aria-label="Close"><i class="fa fa-remove" aria-hidden="true" title="HELIX_CLOSE_MENU"></i></a>
+            <div class="offcanvas-inner">
+                                  <div class="sp-module _menu"><h3 class="sp-module-title">Menu Principal</h3><div class="sp-module-content"><ul class="nav menu">
+<li class="item-101"><a href="../../index.html" > Início</a></li><li class="item-107  active deeper parent"><a href="../../basicos.html" > Básicos</a><span class="offcanvas-menu-toggler collapsed" data-toggle="collapse" data-target="#collapse-menu-107"><i class="open-icon fa fa-angle-down"></i><i class="close-icon fa fa-angle-up"></i></span><ul class="collapse" id="collapse-menu-107"><li class="item-112"><a href="../html.html" > HTML</a></li><li class="item-113"><a href="../javascript.html" > JavaScript</a></li><li class="item-114  current active"><a href="../css.html" > CSS</a></li><li class="item-116"><a href="../jquery.html" > jQuery</a></li><li class="item-117"><a href="../bootstrap.html" > Bootstrap</a></li><li class="item-118"><a href="../php.html" > PHP</a></li><li class="item-119"><a href="../phpoo.html" > PHPOO</a></li><li class="item-120"><a href="../pdo.html" > PDO</a></li><li class="item-157"><a href="../ferramentas.html" > Ferramentas</a></li><li class="item-287"><a href="../outros.html" > Outros</a></li></ul></li><li class="item-108  deeper parent"><a href="../../servidores.html" > Servidores</a><span class="offcanvas-menu-toggler collapsed" data-toggle="collapse" data-target="#collapse-menu-108"><i class="open-icon fa fa-angle-down"></i><i class="close-icon fa fa-angle-up"></i></span><ul class="collapse" id="collapse-menu-108"><li class="item-121"><a href="../../servidores/desktop.html" > Desktop</a></li><li class="item-122"><a href="../../servidores/ubuntu-server.html" > Ubuntu Server</a></li><li class="item-123"><a href="../../servidores/shell-scripts.html" > Shell Scripts</a></li><li class="item-124"><a href="../../servidores/servidor-web.html" > Servidor Web</a></li><li class="item-156"><a href="../../servidores/servidor-sgbd.html" > Servidor SGBD</a></li><li class="item-193  deeper parent"><a href="../../servidores/postgresql.html" > PostgreSQL</a><span class="offcanvas-menu-toggler collapsed" data-toggle="collapse" data-target="#collapse-menu-193"><i class="open-icon fa fa-angle-down"></i><i class="close-icon fa fa-angle-up"></i></span><ul class="collapse" id="collapse-menu-193"><li class="item-232"><a href="../../servidores/postgresql/introducao-ao-postgresql.html" > Introdução</a></li><li class="item-233"><a href="../../servidores/postgresql/projeto.html" > Projeto</a></li><li class="item-234"><a href="../../servidores/postgresql/dimensionamento.html" > Dimensionamento</a></li></ul></li></ul></li><li class="item-148  deeper parent"><a href="../../joomla-3.html" > Joomla 3</a><span class="offcanvas-menu-toggler collapsed" data-toggle="collapse" data-target="#collapse-menu-148"><i class="open-icon fa fa-angle-down"></i><i class="close-icon fa fa-angle-up"></i></span><ul class="collapse" id="collapse-menu-148"><li class="item-149"><a href="../../joomla-3/introducao.html" > Introdução</a></li><li class="item-231"><a href="../../joomla-3/seguranca.html" > Segurança</a></li><li class="item-199"><a href="../../joomla-3/instalacao.html" > Instalação do Joomla</a></li><li class="item-152"><a href="../../joomla-3/administracao.html" > Administração</a></li><li class="item-153"><a href="../../joomla-3/extensoes.html" > Extensões</a></li><li class="item-154"><a href="../../joomla-3/loja-simples.html" > Loja Simples</a></li><li class="item-155"><a href="../../joomla-3/dicas.html" > Dicas</a></li></ul></li><li class="item-310  divider deeper parent"><a class="separator ">Frameworks</a>
+<span class="offcanvas-menu-toggler collapsed" data-toggle="collapse" data-target="#collapse-menu-310"><i class="open-icon fa fa-angle-down"></i><i class="close-icon fa fa-angle-up"></i></span><ul class="collapse" id="collapse-menu-310"><li class="item-138  deeper parent"><a href="../../frameworks/cakephp-3.html" > CakePHP 3</a><span class="offcanvas-menu-toggler collapsed" data-toggle="collapse" data-target="#collapse-menu-138"><i class="open-icon fa fa-angle-down"></i><i class="close-icon fa fa-angle-up"></i></span><ul class="collapse" id="collapse-menu-138"><li class="item-139"><a href="../../frameworks/cakephp-3/introducao.html" > Introdução</a></li><li class="item-140"><a href="../../frameworks/cakephp-3/instalacao.html" > Instalação</a></li><li class="item-172"><a href="../../frameworks/cakephp-3/configuracoes.html" > Configurações</a></li><li class="item-141"><a href="../../frameworks/cakephp-3/convencoes.html" > Convenções</a></li><li class="item-142"><a href="../../frameworks/cakephp-3/tutoriais.html" > Tutoriais</a></li><li class="item-144"><a href="../../frameworks/cakephp-3/dicas.html" > Dicas</a></li><li class="item-145"><a href="../../frameworks/cakephp-3/seguranca.html" > Segurança</a></li><li class="item-147"><a href="../../frameworks/cakephp-3/mvc-no-cakephp-3.html" > MVC no CakePHP 3</a></li></ul></li><li class="item-171  deeper parent"><a href="../../frameworks/laravel-5.html" > Laravel 5</a><span class="offcanvas-menu-toggler collapsed" data-toggle="collapse" data-target="#collapse-menu-171"><i class="open-icon fa fa-angle-down"></i><i class="close-icon fa fa-angle-up"></i></span><ul class="collapse" id="collapse-menu-171"><li class="item-173"><a href="../../frameworks/laravel-5/introducao.html" > Introdução</a></li><li class="item-174"><a href="../../frameworks/laravel-5/instalacao.html" > Instalação</a></li><li class="item-175"><a href="../../frameworks/laravel-5/configuracoes.html" > Configurações</a></li><li class="item-176"><a href="../../frameworks/laravel-5/routes.html" > Routes</a></li><li class="item-178"><a href="../../frameworks/laravel-5/dicas.html" > Dicas</a></li><li class="item-177"><a href="../../frameworks/laravel-5/tutoriais.html" > Tutoriais</a></li></ul></li></ul></li><li class="item-158  deeper parent"><a href="../../mobile.html" > Mobile</a><span class="offcanvas-menu-toggler collapsed" data-toggle="collapse" data-target="#collapse-menu-158"><i class="open-icon fa fa-angle-down"></i><i class="close-icon fa fa-angle-up"></i></span><ul class="collapse" id="collapse-menu-158"><li class="item-179"><a href="../../mobile/introducao.html" > Introdução</a></li><li class="item-180"><a href="../../mobile/ambiente.html" > Ambiente</a></li><li class="item-188"><a href="../../mobile/phaser.html" > Phaser</a></li><li class="item-187"><a href="../../mobile/monaca.html" > Monaca</a></li><li class="item-181"><a href="../../mobile/phonegap.html" > PhoneGap</a></li><li class="item-182"><a href="../../mobile/app-inventor.html" > App Inventor</a></li><li class="item-159"><a href="../../mobile/unity-3d.html" > Unity 3D</a></li><li class="item-160"><a href="../../mobile/intel-xdk.html" > Intel XDK</a></li><li class="item-161"><a href="../../mobile/outros.html" > Outros</a></li><li class="item-163"><a href="../../mobile/dicas.html" > Dicas</a></li></ul></li><li class="item-168  deeper parent"><a href="../../blog.html" > Blog</a><span class="offcanvas-menu-toggler collapsed" data-toggle="collapse" data-target="#collapse-menu-168"><i class="open-icon fa fa-angle-down"></i><i class="close-icon fa fa-angle-up"></i></span><ul class="collapse" id="collapse-menu-168"><li class="item-196"><a href="../../blog/reflexoes.html" > Reflexões</a></li><li class="item-197"><a href="../../blog/saude.html" > Saúde</a></li><li class="item-238"><a href="../../blog/diversos.html" > Diversos</a></li><li class="item-271"><a href="../../blog/estudos.html" > Estudos</a></li></ul></li><li class="item-215  deeper parent"><a href="../../curriculo.html" > Sobre</a><span class="offcanvas-menu-toggler collapsed" data-toggle="collapse" data-target="#collapse-menu-215"><i class="open-icon fa fa-angle-down"></i><i class="close-icon fa fa-angle-up"></i></span><ul class="collapse" id="collapse-menu-215"><li class="item-167">		<a href="https://github.com/ribafs?tab=repositories" rel="noopener noreferrer" target="_blank" > Projetos</a></li><li class="item-164"><a href="../../curriculo/livros.html" > Livros</a></li><li class="item-257"><a href="../../curriculo/curriculo.html" > Currículo</a></li><li class="item-110"><a href="../../curriculo/contato.html" > Contato</a></li><li class="item-251"><a href="../../curriculo/mapa-do-site.html" > Mapa</a></li></ul></li></ul>
+</div></div>
+                            </div> <!-- /.offcanvas-inner -->
+        </div> <!-- /.offcanvas-menu -->
+
+        
+        
+        
+        <!-- Preloader -->
+        
+
+        <!-- Go to top -->
+                    <a href="javascript:void(0)" class="scrollup" aria-label="Go To Top">&nbsp;</a>
+        
+    </body>
+</html>

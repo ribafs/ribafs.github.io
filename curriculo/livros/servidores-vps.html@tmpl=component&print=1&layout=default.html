@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br" dir="ltr">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <base href="" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Ribamar FS" />
+	<meta name="robots" content="noindex, nofollow" />
+	<meta name="description" content="Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros." />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>Servidores VPS - RibaFS Portal</title>
+	<link href="http://ribafs.org/portal/curriculo/livros/servidores-vps.html?tmpl=component&amp;print=1&amp;layout=default" rel="canonical" />
+	<link href="../../templates/shaper_helix3/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../../favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<script src="../../media/jui/js/jquery.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../media/jui/js/jquery-noconflict.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../media/jui/js/jquery-migrate.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="http://backup/portal/media/system/js/caption.js?d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script type="text/javascript">
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+	</script>
+	<meta property="og:url" content="http://backup/portal/curriculo/livros/servidores-vps.html" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Servidores VPS" />
+	<meta property="og:description" content="Servidores VPS Muita informação sobre o uso de servidores VPS. Meus testes foram com a Digital Ocean e a Vultr. Testei as principais distribuições Linux ma..." />
+
+   	<link rel="stylesheet" href="../../media/jui/css/bootstrap.min.css" type="text/css" />
+	<link rel="stylesheet" href="../../templates/shaper_helix3/css/frontend-edit.css" type="text/css" />
+    <link rel="stylesheet" href="../../templates/shaper_helix3/css/template.css" type="text/css" />
+</head>
+<body class="contentpane">
+	<div id="system-message-container">
+	</div>
+
+	
+
+<article class="item item-page" itemscope itemtype="http://schema.org/Article">
+	<meta itemprop="inLanguage" content="pt-BR" />
+	
+	
+
+	<div class="entry-header">
+		<span class="post-format"><i class="fa fa-thumb-tack"></i></span>
+		
+					<h2 itemprop="name">
+									Servidores VPS							</h2>
+												</div>
+
+						<div id="pop-print" class="btn hidden-print">
+				<a href="servidores-vps.html#" onclick="window.print();return false;">			<span class="icon-print" aria-hidden="true"></span>
+		Imprimir	</a>			</div>
+				
+	
+	
+				
+	
+			<div itemprop="articleBody">
+		<p>Servidores VPS</p>
+<p>Muita informação sobre o uso de servidores VPS. Meus testes foram com a Digital Ocean e a Vultr.</p>
+<p>Testei as principais distribuições Linux mais o FreeBSD, do qual gostei muito e cheguei a usar no meu site.</p>
+<p> – Cuidados Básicos    5<br />1.1 - Alguns comandos do Linux, do FreeBSD e do OpenBSD    5<br />1.2 - Crecar ISO    17<br />1.3 - Compactar e Descompactar Arquivos no Terminal do Linux    17<br />1.4 – Crontab    20<br />1.5 - Procurar string s sobrescrever com outra em arquivo    27<br />1.6 - Dica sobre a linguagem C:    28<br />1.7 - DNS Gratuito de CloudFlare    29<br />1.8 – Corrigir Erros de Locales    29<br />1.9 - Procurando Arquivos pelo Terminal do UNIX com find e locate    30<br />1.10 - Formatar pendrive    32<br />1.11 - Criar um link simbólico    33<br />1.12 - Editor de textos para o terminal/modo texto no Unix    33<br />1.13 - Setando Permissões para o Servidor web    35<br />1.14 – Configurações de Rede pela linha de comando    36<br />1.15 – Usando o RSync    46<br />2 – Desktop    47<br />2.1 – Batchs ou Arquivos de Lote    48<br />2.2 - Recuperação do Grub 2    51<br />2.3 – Ajustar Relógio em Dualboot    51<br />2.4 – Proteção de Roteador WiFi    51<br />2.5 – SSH em Banda Larga ADSL    52<br />2.6 - Upgrade do Debian    52<br />2.7 – Upgrade Ubuntu    52<br />2.8 - Configurar Hora em Servidor Debian e derivados    54<br />2.9 - Ajustar o hostname    54<br />2.10 - Para limpar o cache da RAM    54<br />2.11 - MySQL    55<br />2.12 – Adicionar partição de Swap ao Linux    62<br />2.13 – Clamav    62<br />3 – Hospedagem tipo VPS    63<br />3.1 - Hospedagem na Digital Ocean    63<br />3.1.1 – Snapshot    90<br />3.1.2 – DNS na Digital Ocean    92<br />3.2 – Servidores VPS na Vultr    94<br />3.2.1 - Restauração de Snapshot na Vultr    100<br />3.2.2 – DNS na Vultr    101<br />4 – Melhorando a Segurança de um VPS com CentOS 7    105<br />4.0. Cuidados Iniciais    105<br />4.1. Habilitação e Configurar firewall com ufw    108<br />4.2. Secure shared memory no fstab    108<br />4.3. Reforçar a segurança do SSH    108<br />4.4. Reforçar a segurança da rede configurando o sysctl    110<br />4.5. Prevenir IP Spoofing    111<br />4.6. Reforçar a segurança do PHP    111<br />4.8. Instalar e Configurar ModSecurity e ModEvasive    112<br />4.9. Scannear logs e banir hosts suspeitos    112<br />4.10. Detectar Intrusões – PSAD    114<br />4.11. Checar por RootKits – RKHunter e CHKRootKit    114<br />4.12 Varrendo portas abertas com Nmap    115<br />4.13. Instalar e configurar o Apparmor    115<br />4.14. Auditar segurança do sistema com Tiger e Tripwire    116<br />4.15. Atualizar a disribuição    117<br />4.16. Usar Senhas Fortes    117<br />4.17. Melhorando a segurança de sites com Joomla    117<br />4.18. Melhorar a segurança no Desktop    118<br />4.19. Melhorando a Segurança do MySQL    119<br />4.20. Melhorando a segurança com Lynis    119<br />4.21. Cuidados Extras    121<br />5 - Monitorando um servidor Linux Ubuntu 16.04    122<br />5.1 - Varrendo portas abertas com Nmap    123<br />5.2 - Auditar segurança do sistema com Tiger e Tripwire    127<br />6 – Segurança em Servidores Linux    129<br />6.1 - Atualizar automaticamente somente as atualizações de segurança    130<br />6.2 – Remover serviços que não estão em uso    130<br />6.3 – Senhas Fortes    130<br />6.4 – Ferramentas    131<br />6.5 – Desempenho do Servidor    132<br />6.6 – Criptografia    134<br />6.6 - Melhorar a segurança da memória compartilhada    136<br />6.7 – Firewall    136<br />6.7.1 – IPTables    136<br />6.7.2 – ufw    142<br />6.8 – Logs    144<br />6.9 – Apache    145<br />6.10 – PHP    151<br />6.11 - Melhorando a Segurança do MySQL/MariaDB    153<br />6.12 – Reforçando a Segurança do Joomla    154<br />6.13 – SELinux    163<br />6.14 – Rede    184<br />6.15 - Mantendo Servidores web e de bancos de dados seguros    188<br />6.16 – SSH    189<br />6.17 – AppArmor    198<br />6.18 – Bastille    199<br />6.19 – fail2ban    200<br />6.20 - RKHunter e CHKRootKit    201<br />6.21 - Detectar Intrusões com PSAD    202<br />6.22 - Advanced Intrusion Detection Environment (AIDE)    202<br />6.23 - Usando DenyHosts    203<br />6.24 - Melhorando a segurança com Lynis    204<br />7 – Ferramentas    209<br />7.1 – Backup    209<br />7.3 - Soluções para Administração Web de Servidor    216<br />Cockpit    217<br />7.4 – Testes de Stress para Servidor Web    219<br />8 – Shell Scripts    226<br />9 – Servidores    235<br />9.1 – CentOS EMP    235<br />9.2 – CentOS LAMP    248<br />9.3 – Debian com LEMP    266<br />9.4 – Fedora    278<br />9.5 – OpenBSD    289<br />9.6 – Ubuntu com LAMP    316<br />9.7 – Ubuntu com LEMP    330<br />9.8 – FreeBSD    340</p>
+<p> </p>
+<p><a title="https://github.com/ribafs/livros/raw/master/ServidoresVPS.pdf" href="https://github.com/ribafs/livros/raw/master/ServidoresVPS.pdf">Download</a></p>
+<p> </p> 	</div>
+
+	
+	
+				
+	
+	
+	
+</article>
+
+</body>
+</html>

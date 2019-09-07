@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br" dir="ltr">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <base href="" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Ribamar FS" />
+	<meta name="robots" content="noindex, nofollow" />
+	<meta name="description" content="Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros." />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>Criando executável para Jogo web - RibaFS Portal</title>
+	<link href="http://ribafs.org/portal/mobile/phaser/criando-executavel-para-jogo-web.html?tmpl=component&amp;print=1&amp;layout=default" rel="canonical" />
+	<link href="../../templates/shaper_helix3/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../../favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<script src="../../media/jui/js/jquery.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../media/jui/js/jquery-noconflict.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../media/jui/js/jquery-migrate.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="http://backup/portal/media/system/js/caption.js?d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script type="text/javascript">
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+	</script>
+	<meta property="og:url" content="http://backup/portal/mobile/phaser/criando-executavel-para-jogo-web.html" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Criando executável para Jogo web" />
+	<meta property="og:description" content="Criando executável para Jogo web usando o NWJS Ou para qualquer aplicativo/site html. Talvez não seja algo tão necessário mas, pode ser útil em alguma situ..." />
+
+   	<link rel="stylesheet" href="../../media/jui/css/bootstrap.min.css" type="text/css" />
+	<link rel="stylesheet" href="../../templates/shaper_helix3/css/frontend-edit.css" type="text/css" />
+    <link rel="stylesheet" href="../../templates/shaper_helix3/css/template.css" type="text/css" />
+</head>
+<body class="contentpane">
+	<div id="system-message-container">
+	</div>
+
+	
+
+<article class="item item-page" itemscope itemtype="http://schema.org/Article">
+	<meta itemprop="inLanguage" content="pt-BR" />
+	
+	
+
+	<div class="entry-header">
+		<span class="post-format"><i class="fa fa-thumb-tack"></i></span>
+		
+					<h2 itemprop="name">
+									Criando executável para Jogo web							</h2>
+												</div>
+
+						<div id="pop-print" class="btn hidden-print">
+				<a href="criando-executavel-para-jogo-web.html#" onclick="window.print();return false;">			<span class="icon-print" aria-hidden="true"></span>
+		Imprimir	</a>			</div>
+				
+	
+	
+				
+	
+			<div itemprop="articleBody">
+		<h4 style="text-align: justify;">Criando executável para Jogo web usando o NWJS</h4>
+
+<p style="text-align: justify;">Ou para qualquer aplicativo/site html.<br />Talvez não seja algo tão necessário mas, pode ser útil em alguma situação.</p>
+
+<p style="text-align: justify;">Para criar um executável para um jogo web, para que rode independente de navegador, uma boa alternativa é o <br />NWJS ( <a href="http://nwjs.io">http://nwjs.io</a> ).<br /><br />Ele é basicamente uma versão simplificada do navegador Google Crome que abre um arquivo html.<br /><br />Ele é baseado no Chromium e no Node JS. A versão do node para rodar o NWJS 0.24 indicada é a 8.21. Se precisar <strong>atualizar o node</strong> veja o artigo<br /><a href="atualizar-o-node-js.html">http://ribafs.org/portal/mobile/phaser/atualizar-o-node-js</a> <br /><br /><strong>Download</strong><br /><a href="http://nwjs.io">http://nwjs.io</a> <br /><br />Podemos usar a versão normal ou a SDK (o SDK tem mais recursos).<br />Faça o download da normal, que é menor e tem tudo o que precisaremos para criar o standalone do jogo<br /><br /><strong>Empacotando o jogo/aplicativo juntamente com o nw</strong><br /><br />- Criar um diretório no seu diretório home:<br />/meus_desktops<br />- Dentro deste diretório crie um diretório para um jogo e outro para o NW<br />/meus_desktops<br />    /meu_jogo (todo o código do jogo)<br />    /nw (aqui descompacte o NWJS)   <br />- Acessar pelo terminal/prompt o /meus_desktops/meu_jogo<br />- Executar:<br />  npm init (criará interativamente o package.json). O nome do pacote deve ser tudo em minúsculas e o arquivo inicial o index.html.<br />Para rodar a aplicação com o NW são requeridos apenas main e name.<br />O main deve chamar o index.html do jogo.<br />- Compactar todos os arquivos da pasta meu_jogo, sem a pasta: meu_jogo.zip<br />- Renomear meu_jogo.zip para meu_jogo.nw<br />- Concatenar o executável nw com o meu_jogo.nw:<br /><br /><strong>No Linux</strong><br />cat nw ../meu_jogo.nw &gt; meu_jogo &amp;&amp; chmod +x meu_jogo<br /><br /><strong>No Windows</strong><br />copy /b nw.exe+meu_jogo.nw meu_jogo.exe <br /><br />Com isso criamos o arquivo meu_jogo no diretório do nw.<br /><br />Agora para <strong>executar o jogo</strong>, ainda no diretório nw, basta executar:<br />./meu_jogo<br /><br />Ou<br />meu_jogo.exe<br /><br />Precisamos ficar no diretório do nw para rodar o executável, pois ele precisa de acesso aos seus arquivos/libs.<br /><br />Dica: se na pasta do jogo tiver um package.json, remova o package.json da pasta do nw.<br /><br /><br /><strong>Referências</strong><br /><br /><a href="http://koobazaur.com/gamedev/streamlining-standalone-web-game-development-environment-phaser-nwjs/">http://koobazaur.com/gamedev/streamlining-standalone-web-game-development-environment-phaser-nwjs/</a> <br /><a href="https://code.tutsplus.com/tutorials/introduction-to-html5-desktop-apps-with-node-webkit--net-36296">https://code.tutsplus.com/tutorials/introduction-to-html5-desktop-apps-with-node-webkit--net-36296</a> <br /><a href="https://www.sitepoint.com/cross-platform-desktop-app-nw-js/">https://www.sitepoint.com/cross-platform-desktop-app-nw-js/</a><br /><a href="https://github.com/nwjs/nw.js/wiki/how-to-package-and-distribute-your-apps">https://github.com/nwjs/nw.js/wiki/how-to-package-and-distribute-your-apps</a> <br /><a href="http://thejackalofjavascript.com/getting-started-with-node-webkit-apps/">http://thejackalofjavascript.com/getting-started-with-node-webkit-apps/</a></p> 	</div>
+
+	
+	
+				
+	
+	
+	
+</article>
+
+</body>
+</html>

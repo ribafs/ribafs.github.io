@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br" dir="ltr">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <base href="" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Ribamar FS" />
+	<meta name="robots" content="noindex, nofollow" />
+	<meta name="description" content="Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros." />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>8.6- Behaviors - RibaFS Portal</title>
+	<link href="http://ribafs.org/portal/curriculo/livros/cakephp/8-6-behaviors.html?tmpl=component&amp;print=1&amp;layout=default" rel="canonical" />
+	<link href="../../../templates/shaper_helix3/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../../../favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="http://backup/portal/media/plg_content_prismsyntaxhighlighter/css/prism-okaidia.css" rel="stylesheet" type="text/css" />
+	<link href="http://backup/portal/media/plg_content_prismsyntaxhighlighter/css/prism-linenumbers.css" rel="stylesheet" type="text/css" />
+	<script src="http://backup/portal/media/plg_content_prismsyntaxhighlighter/js/prism-tinymce.js" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery-noconflict.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery-migrate.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="http://backup/portal/media/system/js/caption.js?d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script type="text/javascript">
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+	</script>
+	<meta property="og:url" content="http://backup/portal/curriculo/livros/cakephp/8-6-behaviors.html" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="8.6- Behaviors" />
+	<meta property="og:description" content="8.6 – Behaviors Seja muito bom, que eles não vão ter como ignorar você. Steve Martin Criar um aplicativo para controle de receitas e despesas pessoais no C..." />
+
+   	<link rel="stylesheet" href="../../../media/jui/css/bootstrap.min.css" type="text/css" />
+	<link rel="stylesheet" href="../../../templates/shaper_helix3/css/frontend-edit.css" type="text/css" />
+    <link rel="stylesheet" href="../../../templates/shaper_helix3/css/template.css" type="text/css" />
+</head>
+<body class="contentpane">
+	<div id="system-message-container">
+	</div>
+
+	
+
+<article class="item item-page" itemscope itemtype="http://schema.org/Article">
+	<meta itemprop="inLanguage" content="pt-BR" />
+	
+	
+
+	<div class="entry-header">
+		<span class="post-format"><i class="fa fa-thumb-tack"></i></span>
+		
+					<h2 itemprop="name">
+									8.6- Behaviors							</h2>
+												</div>
+
+						<div id="pop-print" class="btn hidden-print">
+				<a href="8-6-behaviors.html#" onclick="window.print();return false;">			<span class="icon-print" aria-hidden="true"></span>
+		Imprimir	</a>			</div>
+				
+	
+	
+				
+	
+			<div itemprop="articleBody">
+		<h3>8.6 – Behaviors</h3>
+<p style="margin-bottom: 0cm; line-height: 100%;" align="right"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><i><b>Seja muito bom, que eles não vão ter como ignorar você.</b></i></span></span></p>
+<p style="margin-bottom: 0cm; font-style: normal; font-weight: normal; line-height: 100%;" align="right"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;">Steve Martin</span></span></p>
+<p align="left">Criar um aplicativo para controle de receitas e despesas pessoais no CakePHP 3</p>
+<p align="left">usando dois behaviors, um para somar as despesas de um mês e outro para somar as receitas de um mês.</p>
+<p align="left"> </p>
+<p align="left"><strong>Criar o banco financas</strong></p>
+<p align="left">Importar o script do capítulo 15.3</p>
+<p align="left"> </p>
+<p align="left">Criar o aplicativo padrão usando o composer na pasta financas</p>
+<p align="left"> </p>
+<p align="left"><strong>Configurar o banco em config/app.php</strong></p>
+<p align="left">Configurar a rota default em config/routes.php para Despesas/index</p>
+<p align="left"> </p>
+<p align="left"><strong>Gerar o código com o bake</strong></p>
+<p align="left">bin/cake bake all despesas</p>
+<p align="left">bin/cake bake all receitas</p>
+<p align="left"> </p>
+<p align="left"><strong>Criar os dois behaviors:</strong></p>
+<p align="left">bin/cake bake behavior Despesas</p>
+<p align="left">bin/cake bake behavior Receitas</p>
+<p align="left"> </p>
+<p align="left"><strong>Editar o src/ModelBehavior/Despesas e deixar assim:</strong></p>
+<pre class="language-php"><code>&lt;?php
+namespace App\Model\Behavior;
+
+use Cake\ORM\Behavior;
+use Cake\ORM\Table;
+use Cake\ORM\TableRegistry;
+
+class DespesasBehavior extends Behavior
+{
+    protected $_defaultConfig = [];
+
+	public function despesasMes($mes){
+
+		$despesas = TableRegistry::get('Despesas')-&gt;find();
+		$res = $despesas-&gt;select(['total_sum' =&gt;$despesas-&gt;func()-&gt;sum('Despesas.valor')])-&gt;where(['Despesas.mes' =&gt; $mes])-&gt;first();
+		$total = $res-&gt;total_sum;
+		return $total;
+	}
+}</code></pre>
+<p style="margin-bottom: 0cm; font-style: normal; font-weight: normal; line-height: 100%;" align="left"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;">Agora edite o behavior Receitas e deixe assim:</span></span></p>
+<pre class="language-php"><code>&lt;?php
+namespace App\Model\Behavior;
+
+use Cake\ORM\Behavior;
+use Cake\ORM\Table;
+use Cake\ORM\TableRegistry;
+
+class ReceitasBehavior extends Behavior
+{
+    protected $_defaultConfig = [];
+
+	public function receitaMes($mes){
+		$receitas = TableRegistry::get('Receitas')-&gt;find();
+		$res = $receitas-&gt;select(['total_sum' =&gt;$receitas-&gt;func()-&gt;sum('Receitas.valor')])-&gt;where(['Receitas.mes' =&gt; $mes])
+		-&gt;first(); //perform the sum operation 
+		$total = $res-&gt;total_sum;
+		return $total;
+	}
+}</code></pre>
+<p align="left">Edite o src/Model/Table/DespesasTable.php e adicione logo abaixo do behavior Timestamp:</p>
+<p align="left">$this-&gt;addBehavior('Despesas');</p>
+<p align="left">Também no ReceitasTable.php:</p>
+<p align="left">$this-&gt;addBehavior('Receitas');</p>
+<p align="left">Customizar o controller src/Controller/DespesasController.php, adicionando ao início do arquivo:</p>
+<pre class="language-php"><code>use Cake\ORM\TableRegistry;
+
+No início da classe:
+
+	public function despesasMes()
+	{
+		$mes = $this-&gt;request-&gt;data('mes');
+		$despesas = TableRegistry::get('Despesas');
+		$total = $despesas-&gt;despesasMes($mes);
+		$this-&gt;set('total',$total); 
+		$this-&gt;set('mes',$mes);
+	}
+
+	public function saldoMes()
+	{
+		$mes = $this-&gt;request-&gt;data('mes');
+		$this-&gt;LoadModel('Receitas');// Como não é o model relacionado com este controller, precisamos usar LoadModel para carregá-lo
+		$receitas = $this-&gt;Receitas-&gt;receitaMes($mes);
+
+		$despesas = TableRegistry::get('Despesas');
+		$total = $despesas-&gt;despesasMes($mes);
+
+		$saldo = $receitas - $total;
+		$this-&gt;set('saldo',$saldo); 
+		$this-&gt;set('mes',$mes);
+	}
+</code></pre>
+<p align="left"> </p>
+<pre class="language-php"><code>Adicionar ao src/Template/Despesas:
+
+despesas_mes.ctp
+
+&lt;?php ?&gt;
+&lt;nav class="large-3 medium-4 columns" id="actions-sidebar"&gt;
+    &lt;ul class="side-nav"&gt;
+    &lt;h3&gt;&lt;?= __('Despesas') ?&gt;&lt;/h3&gt;
+&lt;?php
+print '&lt;b&gt;Mês: &lt;/b&gt;'.$mes. '&lt;br&gt;&lt;b&gt;Total: &lt;/b&gt;'. $total;
+?&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;li&gt;&lt;?= $this-&gt;Html-&gt;link(__('Voltar'), ['action' =&gt; 'index']) ?&gt;&lt;/li&gt;
+
+&lt;/nav&gt;
+
+saldo_mes.ctp
+
+&lt;?php ?&gt;
+&lt;nav class="large-3 medium-4 columns" id="actions-sidebar"&gt;
+    &lt;ul class="side-nav"&gt;
+    &lt;h3&gt;&lt;?= __('Despesas') ?&gt;&lt;/h3&gt;
+&lt;?php
+print '&lt;b&gt;Mês: &lt;/b&gt;'.$mes. '&lt;br&gt;&lt;b&gt;Saldol: &lt;/b&gt;'. $saldo;
+?&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;li&gt;&lt;?= $this-&gt;Html-&gt;link(__('Voltar'), ['action' =&gt; 'index']) ?&gt;&lt;/li&gt;
+&lt;/nav&gt;
+
+Altere o index.ctp, adicionando ao início:
+
+...
+&lt;nav class="large-3 medium-4 columns" id="actions-sidebar"&gt;
+    &lt;ul class="side-nav"&gt;
+        &lt;li class="heading"&gt;&lt;?= __('Actions') ?&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;?= $this-&gt;Html-&gt;link(__('New Despesa'), ['action' =&gt; 'add']) ?&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;?= $this-&gt;Html-&gt;link(__('List Receitas'), ['controller' =&gt; 'Receitas', 'action' =&gt; 'index']) ?&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;?= $this-&gt;Html-&gt;link(__('New Receita'), ['controller' =&gt; 'Receitas', 'action' =&gt; 'add']) ?&gt;&lt;/li&gt;
+
+        &lt;li&gt;&lt;b&gt;Despesas de um mês&lt;/b&gt;
+        &lt;?php
+           echo $this-&gt;Form-&gt;create("Despesas",['url'=&gt;'/despesas/despesas_mes']);
+           echo $this-&gt;Form-&gt;input('mes');
+           echo $this-&gt;Form-&gt;button('Submit');
+           echo $this-&gt;Form-&gt;end();
+        ?&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;b&gt;Saldo de um mês&lt;/b&gt;
+        &lt;?php
+           echo $this-&gt;Form-&gt;create("Saldo",['url'=&gt;'/despesas/saldo_mes']);
+           echo $this-&gt;Form-&gt;input('mes');
+           echo $this-&gt;Form-&gt;button('Submit');
+           echo $this-&gt;Form-&gt;end();
+        ?&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;
+...</code></pre>
+<p align="left">Chame pelo navegador:</p>
+<p align="left">http://localhost/financas</p>
+<p align="left"> </p>
+<p align="left">Use o pequeno form da esquerda para cálculo das Despesas de um mês. Informe o mês '05/2017'</p>
+<p align="left">Observe que o campo mẽs é do tipo string, com o formato mes/ano.</p>
+<p align="left"> </p>
+<p align="left">Também teste o Saldo de um mês.</p>
+<p align="left"> </p>
+<p align="left">Quando temos um model table com muitos métodos podemos criar behaviors para modular mais o código e mantê-lo mais organizado e de fácil manutenção.</p>
+<p align="left"> </p>
+<p align="left"><strong>Behavior Timestamp</strong></p>
+<p align="left">O behavior Timestamp que irá preencher automaticamente os campos created e modified da nossa tabela.</p>
+<p align="left"> </p>
+<p align="left"><strong>Mais detalhes:</strong></p>
+<p align="left"><a href="https://book.cakephp.org/3.0/pt/orm/behaviors.html">https://book.cakephp.org/3.0/pt/orm/behaviors.html</a></p>
+<p align="left"><a href="https://book.cakephp.org/3.0/en/orm/behaviors.html">https://book.cakephp.org/3.0/en/orm/behaviors.html</a></p> 	</div>
+
+	
+	
+				
+	
+	
+	
+</article>
+
+</body>
+</html>

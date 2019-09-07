@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br" dir="ltr">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <base href="" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Ribamar FS" />
+	<meta name="robots" content="noindex, nofollow" />
+	<meta name="description" content="Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros." />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>13.7 - Aplicativo com uma área restrita - RibaFS Portal</title>
+	<link href="http://ribafs.org/portal/curriculo/livros/cakephp/13-7-aplicativo-com-uma-area-restrita.html?tmpl=component&amp;print=1&amp;layout=default" rel="canonical" />
+	<link href="../../../templates/shaper_helix3/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../../../favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="http://backup/portal/media/plg_content_prismsyntaxhighlighter/css/prism-okaidia.css" rel="stylesheet" type="text/css" />
+	<link href="http://backup/portal/media/plg_content_prismsyntaxhighlighter/css/prism-linenumbers.css" rel="stylesheet" type="text/css" />
+	<script src="http://backup/portal/media/plg_content_prismsyntaxhighlighter/js/prism-tinymce.js" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery-noconflict.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery-migrate.min.js@d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script src="http://backup/portal/media/system/js/caption.js?d40d24664a167cb951f5efaf872c4327" type="text/javascript"></script>
+	<script type="text/javascript">
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+	</script>
+	<meta property="og:url" content="http://backup/portal/curriculo/livros/cakephp/13-7-aplicativo-com-uma-area-restrita.html" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="13.7 - Aplicativo com uma área restrita" />
+	<meta property="og:description" content="13.7 - Aplicativo com uma área restrita/administrativa Daqui a vinte anos, você não vai se arrepender das coisas que fez, mas das que deixou de fazer. Por..." />
+
+   	<link rel="stylesheet" href="../../../media/jui/css/bootstrap.min.css" type="text/css" />
+	<link rel="stylesheet" href="../../../templates/shaper_helix3/css/frontend-edit.css" type="text/css" />
+    <link rel="stylesheet" href="../../../templates/shaper_helix3/css/template.css" type="text/css" />
+</head>
+<body class="contentpane">
+	<div id="system-message-container">
+	</div>
+
+	
+
+<article class="item item-page" itemscope itemtype="http://schema.org/Article">
+	<meta itemprop="inLanguage" content="pt-BR" />
+	
+	
+
+	<div class="entry-header">
+		<span class="post-format"><i class="fa fa-thumb-tack"></i></span>
+		
+					<h2 itemprop="name">
+									13.7 - Aplicativo com uma área restrita							</h2>
+												</div>
+
+						<div id="pop-print" class="btn hidden-print">
+				<a href="13-7-aplicativo-com-uma-area-restrita.html#" onclick="window.print();return false;">			<span class="icon-print" aria-hidden="true"></span>
+		Imprimir	</a>			</div>
+				
+	
+	
+				
+	
+			<div itemprop="articleBody">
+		<h3>13.7 - Aplicativo com uma área restrita/administrativa</h3>
+<p> </p>
+<p style="text-align: right;"><em><strong>Daqui a vinte anos, você não vai se arrepender das coisas que fez, mas das que deixou de fazer. Por isso, veleje longe do seu porto seguro. Pegue os ventos. Explore. Sonhe.</strong> <strong>Descubra.</strong></em> (Mark Twain)</p>
+<p><br /><strong>Criar um aplicativo com uma área restrita/administrativa para o CakePHP 3</strong><br /><br /><strong>Adaptado do vídeo abaixo:</strong><br /><br /><a href="https://www.youtube.com/watch?v=eWu6r5aO1Jc&amp;index=6&amp;list=PL83b6tjXNFHe-OVRROawG3YdIN_-Kbc6j" target="_blank" rel="noopener noreferrer">https://www.youtube.com/watch?v=eWu6r5aO1Jc&amp;index=6&amp;list=PL83b6tjXNFHe-OVRROawG3YdIN_-Kbc6j </a> <br /><br />Criar um aplicativo chamado admin_area.<br /><br />Banco admin_area</p>
+<pre class="language-php"><code>CREATE TABLE `customers` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(55) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `birthday` date DEFAULT NULL,
+  `phone` varchar(14) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `observation` text COLLATE utf8mb4_unicode_ci,
+  `created` datetime DEFAULT NULL,
+  `modified` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+);
+
+INSERT INTO `customers` (`id`, `name`, `birthday`, `phone`, `observation`, `created`, `modified`) VALUES
+(1,	'Brennan G. Wilcox',	'2016-04-15',	'(851) 190-1314',	'ante. Maecenas mi felis, adipiscing',	NULL,	NULL),
+(2,	'Chase Summers',	'2016-08-27',	'(846) 297-4733',	'Sed molestie. Sed id risus',	NULL,	NULL),
+(3,	'Sonia L. Mckay',	'2015-12-02',	'(131) 453-1690',	'fermentum vel, mauris. Integer sem',	NULL,	NULL),
+(4,	'Isadora L. Bowers',	'2015-10-24',	'(939) 798-4625',	'consequat, lectus sit amet luctus',	NULL,	NULL),
+(5,	'Sophia Cochran',	'2017-06-15',	'(811) 687-0491',	'Aliquam tincidunt, nunc ac mattis',	NULL,	NULL),
+(6,	'Maxwell T. Burton',	'2016-01-12',	'(147) 962-3265',	'at arcu. Vestibulum ante ipsum',	NULL,	NULL),
+(7,	'Desiree Y. Henry',	'2017-07-21',	'(148) 711-3747',	'vitae dolor. Donec fringilla. Donec',	NULL,	NULL),
+(8,	'Asher Key',	'2015-11-07',	'(355) 668-5871',	'a, aliquet vel, vulputate eu,',	NULL,	NULL),
+(9,	'Tyler Castro',	'2016-08-31',	'(567) 793-5061',	'nec tempus mauris erat eget',	NULL,	NULL),
+(10,	'Rudyard Weber',	'2015-10-26',	'(445) 457-4552',	'Morbi vehicula. Pellentesque tincidunt tempus',	NULL,	NULL),
+(11,	'Allen Austin',	'2016-04-15',	'(758) 867-2179',	'ipsum. Phasellus vitae mauris sit',	NULL,	NULL),
+(12,	'Octavius Cooper',	'2015-10-13',	'(101) 625-3985',	'ipsum non arcu. Vivamus sit',	NULL,	NULL),
+(13,	'Dustin M. Oneill',	'2016-04-24',	'(276) 722-0976',	'magnis dis parturient montes, nascetur',	NULL,	NULL),
+(14,	'Giacomo K. Horton',	'2016-07-03',	'(773) 532-7468',	'neque. Sed eget lacus. Mauris',	NULL,	NULL),
+(15,	'Signe T. Weaver',	'2016-06-17',	'(210) 895-3664',	'dui nec urna suscipit nonummy.',	NULL,	NULL),
+(16,	'Avram O. Delaney',	'2016-08-05',	'(609) 552-7572',	'Donec luctus aliquet odio. Etiam',	NULL,	NULL),
+(17,	'Cara Parker',	'2016-07-24',	'(854) 169-4797',	'ornare lectus justo eu arcu.',	NULL,	NULL),
+(18,	'Chelsea Mcclain',	'2016-08-06',	'(363) 636-1560',	'mollis lectus pede et risus.',	NULL,	NULL),
+(19,	'Wesley Garner',	'2016-06-11',	'(578) 231-2389',	'Fusce feugiat. Lorem ipsum dolor',	NULL,	NULL),
+(20,	'Irene P. Arnold',	'2016-02-12',	'(253) 631-9830',	'accumsan laoreet ipsum. Curabitur consequat,',	NULL,	NULL),
+(21,	'Austin S. Wall',	'2016-01-21',	'(225) 694-9511',	'Sed eget lacus. Mauris non',	NULL,	NULL);
+
+DROP TABLE IF EXISTS `groups`;
+CREATE TABLE `groups` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created` datetime DEFAULT NULL,
+  `modified` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+INSERT INTO `groups` (`id`, `name`, `created`, `modified`) VALUES
+(1,	'Supers',	'2016-08-30 21:15:01',	'2016-08-30 21:15:01'),
+(2,	'Admins',	'2016-08-30 21:15:01',	'2016-08-30 21:15:01'),
+(3,	'Managers',	'2016-08-30 21:15:01',	'2016-08-30 21:15:01'),
+(4,	'Users',	'2016-08-30 21:15:01',	'2016-08-30 21:15:01');
+
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(55) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `group_id` int(11) NOT NULL,
+  `created` datetime DEFAULT NULL,
+  `modified` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `username` (`username`),
+  KEY `group_id` (`group_id`),
+  CONSTRAINT `users_ibfk_1` FOREIGN KEY (`group_id`) REFERENCES `groups` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+
+INSERT INTO `users` (`id`, `username`, `password`, `group_id`, `created`, `modified`) VALUES
+(1,	'super',	'$2y$10$zlIAsTubGNqvhn3pS76jN.QeF6msHGYGcTIJ7KgzS757vDsioA3xa',	1,	'2016-09-15 15:57:16',	'2019-06-12 19:03:49'),
+(2, 'admin', '$2y$10$f26.qAgF5Jnl7b3zIdRlQuKTBkrxM2d1xtrLlIee0EKULfSKgejqm', 2, '2016-09-15 15:57:16',	'2019-06-12 19:03:49'),
+(3, 'manager', '$2y$10$fx0/o/XU3WPO5.nnP7cnCeSuFsFjxCMkk72DciLqABzHp50cOFnre', 3, '2016-09-15 15:57:16',	'2019-06-12 19:03:49');</code></pre>
+<p><strong>Três usuários usando o hash bcrypt:</strong><br /><br />Login - super<br />Senha - abc123S@<br /><br />Login - admin<br />Senha - abc123A@<br /><br />Login - manager<br />Senha - abc123M@<br /><br /><br /><strong>Configurar o banco em config/app.php</strong><br /><br />Configurar a rota default em config/routes.php para Customers/index<br /><br /><strong>Gerar o código com o bake</strong><br /><br />bin/cake bake all customers<br />bin/cake bake model Users<br />bin/cake bake model Groups<br /><br />bin/cake bake controller Users --prefix admin<br />bin/cake bake template Users --prefix admin<br /><br />bin/cake bake controller Groups --prefix admin<br />bin/cake bake template Groups --prefix admin<br /><br /><strong>Adicionar ao webroot/css/style.css</strong><br /><br />.emlinha{<br />    display: inline;<br />    padding: 10px;<br />    text-align: center;<br />}<br />li a{<br />    color: #fff;<br />}<br /><br /><br /><strong>Crie um arquivo src/Template/Element/menu.ctp contendo:</strong><br /><br />&lt;div&gt;<br />    &lt;ul&gt;<br />        &lt;li class="emlinha"&gt;&lt;?= $this-&gt;Html-&gt;link(__('Customers'), '/customers/index') ?&gt;&lt;/li&gt;<br />        &lt;li class="emlinha"&gt;&lt;?= $this-&gt;Html-&gt;link(__('Groups'), '/admin/groups/index') ?&gt;&lt;/li&gt;<br />        &lt;li class="emlinha"&gt;&lt;?= $this-&gt;Html-&gt;link(__('Users'), '/admin/users/index') ?&gt;&lt;/li&gt;<br />        &lt;li class="emlinha"&gt;&lt;?= $this-&gt;Html-&gt;link(__('Login'), '/admin/users/login') ?&gt;&lt;/li&gt;<br />        &lt;li class="emlinha"&gt;&lt;?= $this-&gt;Html-&gt;link(__('Sair'), '/admin/users/logout') ?&gt;&lt;/li&gt;<br />    &lt;/ul&gt;<br />&lt;/div&gt;<br /><br /><br /><strong>Edite o src/Template/Layout/default.ctp</strong><br /><br />E sobrescreva o código entre<br />&lt;nav&gt;<br />e<br />&lt;/nav&gt;<br /><br />Com este abaixo, logo abaixo de &lt;body&gt;:</p>
+<pre class="language-php"><code>    &lt;nav class="top-bar expanded" data-topbar role="navigation"&gt;
+&lt;?php
+    if($loguser){
+?&gt;
+        &lt;h2 align="center"&gt;&lt;?= $titulo ?&gt;&lt;?php echo $this-&gt;element('menu') ?&gt;&lt;/h2&gt;
+        &lt;div align="center"&gt;&lt;?= $this-&gt;fetch('title') ?&gt;&lt;/div&gt;
+        &lt;div class="right"&gt;Logado como: &lt;strong&gt;&lt;?=__($loguser) ?&gt;&lt;/strong&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/div&gt; 
+&lt;?php
+    }else{
+        echo '&lt;h3 class="titulo" align="center"&gt;Acesso ao Sistema&lt;/h3&gt;';
+    }
+?&gt;
+    &lt;/nav&gt;</code></pre>
+<p>Somente customers poderá ser acessado livremente, groups e users serão restritos<br /><br /><strong>Criar a rota admin em config/routes.php</strong><br /><br />Router::prefix('admin', function ($routes) {<br />    $routes-&gt;fallbacks(DashedRoute::class);<br />});<br /><br /><strong>Obs.:</strong><br />Veja que na pasta src/Controller/Admin os controllers tem o namespace para Admin<br /><br />namespace App\Controller\Admin;<br /><br /><strong>Adicionar os actions login e logout para src/Controller/Admin/UsersController.php:</strong></p>
+<pre class="language-php"><code>    public function login()
+    {
+        if ($this-&gt;request-&gt;is('post')) {
+            $user = $this-&gt;Auth-&gt;identify();
+            if ($user) {
+                $this-&gt;Auth-&gt;setUser($user);
+                return $this-&gt;redirect($this-&gt;Auth-&gt;redirectUrl());
+            }
+            $this-&gt;Flash-&gt;error(__('Usuário ou senha ínvalido, tente novamente'));
+        }
+    }
+
+    public function logout()
+    {
+        return $this-&gt;redirect($this-&gt;Auth-&gt;logout());
+    }
+</code></pre>
+<p>Adicionar o login.ctp para src/Template/Admin/Users:</p>
+<pre class="language-php"><code>&lt;div class="users form"&gt;
+&lt;?= $this-&gt;Flash-&gt;render('auth') ?&gt;
+&lt;?= $this-&gt;Form-&gt;create() ?&gt;
+    &lt;fieldset&gt;
+        &lt;legend&gt;&lt;?= __('Por favor informe seu usuário e senha') ?&gt;&lt;/legend&gt;
+        &lt;?= $this-&gt;Form-&gt;input('username', ['autofocus' =&gt; true]) ?&gt;
+        &lt;?= $this-&gt;Form-&gt;input('password') ?&gt;
+    &lt;/fieldset&gt;
+&lt;?= $this-&gt;Form-&gt;button(__('Login')); ?&gt;
+&lt;?= $this-&gt;Form-&gt;end() ?&gt;
+&lt;/div&gt;</code></pre>
+<p><strong>Para acessar customers:</strong><br />http://localhost/admin_area<br /><br />Ainda não podemos acessar users e groups e o acesso integral de customers é permitido.<br /><br /><strong>Implementar a Auenticação</strong><br />Para controlar o acesso ao aplicativo<br /><br /><strong>Adicionar suporte para bcrypt ao login:</strong><br /><br />Adicionar ao início do src/Model/Entity/User.php:<br /><br />use Cake\Auth\DefaultPasswordHasher;<br /><br />Ao final:<br /><br />    protected function _setPassword($password)<br />    {<br />        if (strlen($password) &gt; 0) {<br />            return (new DefaultPasswordHasher)-&gt;hash($password);<br />        }<br />    }<br /><br /><br /><strong>Implementar a autenticação</strong><br /><br />Adicione ao initialize() do AppController, logo abaixo do carregamento do componente Flash::</p>
+<pre class="language-php"><code>        $this-&gt;loadComponent('Auth', [
+            'authorize' =&gt; ['Controller'],
+            'logoutRedirect' =&gt; [
+                'controller' =&gt; 'Users',
+                'action' =&gt; 'login',
+                'home'
+            ],
+            //'unauthorizedRedirect' =&gt; $this-&gt;referer()
+		    'unauthorizedRedirect' =&gt; [
+		    'controller' =&gt; 'Users',
+		    'action' =&gt; 'login',
+		    'prefix' =&gt; false
+	       ],
+	        'authError' =&gt; 'Você não tem permissão para acessar esta área!',
+                  'flash' =&gt; [
+                      'element' =&gt; 'error'
+           ]
+        ]);
+
+        $this-&gt;set('titulo', 'Aplicativo para área Admin Restrita');	   
+		$user = $this-&gt;request-&gt;getSession()-&gt;read('Auth.User');
+		$loguser = $user['username'];
+		$this-&gt;set('loguser',$loguser);
+</code></pre>
+<p><strong>Restringindo acesso com o Authorization através do callback isAuthorized().</strong><br /><br />Agora que os usuários podem se conectar, nós vamos querer limitar os bookmarks que podem ver para aqueles que fizeram. Nós vamos fazer isso usando um adaptador de ‘autorização’. Sendo os nossos requisitos bastante simples, podemos escrever um código em nossa BookmarksController. Mas antes de fazer isso, vamos querer dizer ao AuthComponent como nossa aplicação vai autorizar ações. Em seu AppController adicione o seguinte:<br /><br />Ao final, abaixo do initialize():</p>
+<pre class="language-php"><code>    public function isAuthorized($user = null)
+    {
+        // Any registered user can access public functions
+        if (!$this-&gt;request-&gt;getParam('prefix')) {
+            return true;
+        }
+
+        // Only admins can access admin functions
+        if ($this-&gt;request-&gt;getParam('prefix') === 'admin') {
+            return (bool)($user['group_id'] === 1 || $user['group_id'] === 2);
+        }
+
+        // Default deny
+        return false;
+    }
+</code></pre>
+<p>Observe que os usuários dos grupos 1 (super) e 2 (admin), têm direito a acessar tudo. Aqui podemos customizar mais este comportamento. Mas caso precise de algo mais flexível recomendo o uso de um dos plugins sugeridos ao final.<br /><br /><strong>Abaixo do isAuthorized() adicione:</strong><br /><br />    public function beforeFilter(Event $event)<br />    {<br />        $this-&gt;Auth-&gt;allow(['customers'=&gt;'index', 'customers'=&gt;'view']);<br />        // Negar acesso para todos os actions do controller Customers para usuários comuns<br />        //$this-&gt;Auth-&gt;deny('customers');<br />    }<br /><br /><strong>Também podemos negar acesso:</strong><br />Obs.: Não se aplica para os usuários dos grupos 1 e 2, que podem tudo e já foram previamente autorizados.<br /><br />As regras abaixo aplicam-se somente para os usuários dos grupos 3 em diante.</p>
+<pre class="language-php"><code>// Negar acesso a qualquer parte do aplicativo:
+$this-&gt;Auth-&gt;deny();
+
+// Negar apenas para o action add
+$this-&gt;Auth-&gt;deny('add');
+
+// Negar para um grupo de actions
+$this-&gt;Auth-&gt;deny(['add', 'edit']);
+
+// Negar para um controller
+$this-&gt;Auth-&gt;deny('customers');</code></pre>
+<p>Observe que são públicos apenas os actions index e view do controller Customers.</p>
+<p><br />Isto indica a que estamos garantindo acesso completo em todos os controllers:<br />        $this-&gt;Auth-&gt;allow(['index', 'view']);<br /><br /><strong>Podemos controlar o acesso por este método acima.</strong><br /><br />Para que um controller permita o acesso completo adicione ao seu início:<br /><br />use Cake\Event\Event;<br /><br />public function beforeFilter(Event $event)<br />{<br />    $this-&gt;Auth-&gt;allow();<br />}<br /><br /><br /><strong>Testar o acesso para áreas restritas:</strong><br /><br />http://localhost/admin_area/admin/users/add<br /><br />ou<br /><br />http://localhost/admin_area/customers/add<br /><br /><strong>Veja que ele pede o controller Users no src. Então lhe daremos:</strong><br /><br />E crie o src/Controller/UsersController.php com apenas:<br /><br />&lt;?php<br />namespace App\Controller;<br />use App\Controller\AppController;<br /><br />class UsersController extends AppController<br />{<br /><br />    public function login()<br />    {<br />        return $this-&gt;redirect('/admin/users/login');<br />    }<br />}<br /><br /><strong>Agora experimente acessar</strong><br /><br />http://localhost/admin_area/customers/add<br /><br /><strong>Será redirecionado para o login.</strong><br /><br />Acesse com os logins citados no início. Veja que super e admin têm acesso completo e manager tem acesso somente a customers.<br /><br /><strong>Sugestão de Plugins</strong><br /><br />Para um maior controle e mais recursos use um dos plugins abaixo:<br /><br /><strong>Acl da equipe do Cake, via terminal/prompt:</strong><br /><a href="https://github.com/cakephp/acl" target="_blank" rel="noopener noreferrer">https://github.com/cakephp/acl</a>  <br />Um ótimo exemplo de uso<br /><a href="https://github.com/mattmemmesheimer/cakephp-3-acl-example" target="_blank" rel="noopener noreferrer">https://github.com/mattmemmesheimer/cakephp-3-acl-example</a> <br /><br /><strong>Plugim com administração via interface web</strong><br /><a href="https://github.com/ribafs/admin-br" target="_blank" rel="noopener noreferrer">https://github.com/ribafs/admin-br</a> <br /><br /><strong>Mais detalhes em:</strong></p>
+<p><br /><a href="https://book.cakephp.org/3.0/en/controllers/components/authentication.html">https://book.cakephp.org/3.0/en/controllers/components/authentication.html</a>  <br /><a href="https://book.cakephp.org/3.0/en/tutorials-and-examples/cms/authentication.html">https://book.cakephp.org/3.0/en/tutorials-and-examples/cms/authentication.html</a>  <br /><a href="https://book.cakephp.org/3.0/pt/tutorials-and-examples/blog-auth-example/auth.html">https://book.cakephp.org/3.0/pt/tutorials-and-examples/blog-auth-example/auth.html</a> </p> 	</div>
+
+	
+	
+				
+	
+	
+	
+</article>
+
+</body>
+</html>

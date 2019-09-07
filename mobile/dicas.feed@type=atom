@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="Joomla! - Open Source Content Management" -->
+<feed xmlns="http://www.w3.org/2005/Atom"  xml:lang="pt-br">
+	<title type="text">Dicas - RibaFS Portal</title>
+	<subtitle type="text">Servidores linux, Programação web (PHP, Joomla, CakePHP, Laravel), Programação Mobile (Phaser, PhoneGap, Monaca, Unity, etc) entre outros.</subtitle>
+	<link rel="alternate" type="text/html" href="http://backup"/>
+	<id>http://backup/portal/mobile/dicas.feed</id>
+	<updated>2019-09-07T19:04:36-03:00</updated>
+	<author>
+		<name>RibaFS Portal</name>
+	</author>
+	<generator uri="https://www.joomla.org">Joomla! - Open Source Content Management</generator>
+	<link rel="self" type="application/atom+xml" href="http://backup/portal/mobile/dicas.feed?type=atom"/>
+	<entry>
+		<title>Mobile - Dicas</title>
+		<link rel="alternate" type="text/html" href="http://backup/portal/mobile/dicas/mobile-dicas.html"/>
+		<published>2017-07-12T10:22:18-03:00</published>
+		<updated>2017-07-12T10:22:18-03:00</updated>
+		<id>http://backup/portal/mobile/dicas/mobile-dicas.html</id>
+		<author>
+			<name>Ribamar FS</name>
+		</author>
+		<summary type="html">&lt;p&gt;&lt;strong&gt;Dicas para Programação Mobile em Geral&lt;/strong&gt;&lt;/p&gt;
+
+
+&lt;p&gt;PrimeUI - uma coleção de ricos widgets em JavaScript baseados no jQuery UI&lt;br /&gt;&lt;a href=&quot;https://www.primefaces.org/primeui/&quot;&gt;https://www.primefaces.org/primeui/&lt;/a&gt;&lt;/p&gt;
+
+
+&lt;p&gt; &lt;strong&gt;Debug para Javascript&lt;/strong&gt;&lt;br /&gt;&lt;a href=&quot;https://sourceforge.net/projects/xunbug/&quot;&gt;https://sourceforge.net/projects/xunbug/&lt;/a&gt;&lt;/p&gt;
+
+
+&lt;p&gt; &lt;strong&gt;Criação de Aplicativos/Jogos Mobile sem Código&lt;/strong&gt;&lt;br /&gt;&lt;a href=&quot;http://fabricadeaplicativos.com.br/&quot;&gt;http://fabricadeaplicativos.com.br/&lt;/a&gt;&lt;/p&gt;
+
+
+&lt;p&gt;&lt;a href=&quot;https://www.dropsource.com/&quot;&gt;https://www.dropsource.com/&lt;/a&gt;&lt;/p&gt;
+
+
+&lt;p&gt;&lt;a href=&quot;https://www.andromo.com/&quot;&gt;https://www.andromo.com/&lt;/a&gt;&lt;/p&gt;
+
+
+&lt;p&gt;&lt;strong&gt;Tutoriais sobre criação de Apps e Jogos na Mozilla&lt;/strong&gt;&lt;br /&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Games/Index&quot;&gt;https://developer.mozilla.org/en-US/docs/Games/Index&lt;/a&gt;&lt;/p&gt;
+
+
+&lt;p&gt;&lt;strong&gt;Exemplos do Phaser&lt;/strong&gt;&lt;br /&gt;&lt;a href=&quot;http://jojoee.github.io/phaser-examples/games/&quot;&gt;http://jojoee.github.io/phaser-examples/games/&lt;/a&gt;&lt;/p&gt;
+
+
+&lt;p&gt;&lt;strong&gt;10 Open Source HTML 5 Games&lt;/strong&gt;&lt;br /&gt;&lt;a href=&quot;https://superdevresources.com/open-source-html5-games/&quot;&gt;https://superdevresources.com/open-source-html5-games/&lt;/a&gt;&lt;/p&gt;
+
+
+&lt;p&gt;&lt;strong&gt;Make a Mario-Style Platformer with the Phaser Editor&lt;/strong&gt;&lt;br /&gt;&lt;a href=&quot;https://gamedevacademy.org/make-a-mario-style-platformer-with-the-phaser-editor/&quot;&gt;https://gamedevacademy.org/make-a-mario-style-platformer-with-the-phaser-editor/&lt;/a&gt;&lt;br /&gt;Fontes - &lt;a href=&quot;https://github.com/boniatillo-com/PhaserEditor_Tutorial_Platformer_1&quot;&gt;https://github.com/boniatillo-com/PhaserEditor_Tutorial_Platformer_1&lt;/a&gt; &lt;/p&gt;
+
+
+&lt;p&gt;&lt;strong&gt;30 Amazing Games Made Only With HTML5&lt;/strong&gt;&lt;br /&gt;&lt;a href=&quot;https://tutorialzine.com/2015/02/30-amazing-games-made-only-with-html5&quot;&gt;https://tutorialzine.com/2015/02/30-amazing-games-made-only-with-html5&lt;/a&gt;&lt;/p&gt;
+
+
+&lt;p&gt;&lt;strong&gt;Sons e Múdicas para Jogos&lt;/strong&gt;&lt;br /&gt;&lt;a href=&quot;https://www.playonloop.com/&quot;&gt;https://www.playonloop.com/&lt;br /&gt;&lt;/a&gt;&lt;a href=&quot;https://freesound.org/browse/&quot;&gt;https://freesound.org/browse/&lt;/a&gt;&lt;/p&gt;
+
+
+&lt;p&gt;&lt;strong&gt;Sprites Royalty Free para Jogos&lt;/strong&gt;&lt;br /&gt;&lt;a href=&quot;https://opengameart.org/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;https://opengameart.org/&lt;/a&gt;&lt;a title=&quot;https://opengameart.org/content/2d-complete-characters&quot; href=&quot;https://opengameart.org/content/2d-complete-characters&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;https://opengameart.org/content/2d-complete-characters&lt;/a&gt;&lt;br /&gt;&lt;a title=&quot;http://www.gameart2d.com/&quot; href=&quot;http://www.gameart2d.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;http://www.gameart2d.com/&lt;/a&gt;&lt;br /&gt;&lt;a title=&quot;http://www.gameart2d.com/freebies.html&quot; href=&quot;http://www.gameart2d.com/freebies.html&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;http://www.gameart2d.com/freebies.html&lt;/a&gt;&lt;br /&gt;&lt;a title=&quot;http://www.pixelprospector.com/the-big-list-of-royalty-free-graphics/&quot; href=&quot;http://www.pixelprospector.com/the-big-list-of-royalty-free-graphics/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;http://www.pixelprospector.com/the-big-list-of-royalty-free-graphics/&lt;/a&gt;&lt;br /&gt;&lt;a title=&quot;https://gameartpartners.com/&quot; href=&quot;https://gameartpartners.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;https://gameartpartners.com/&lt;br /&gt;&lt;/a&gt;&lt;a href=&quot;http://kenney.nl/assets&quot;&gt;http://kenney.nl/assets&lt;/a&gt;&lt;/p&gt;
+
+
+&lt;p&gt; &lt;/p&gt;</summary>
+		<content type="html">&lt;p&gt;&lt;strong&gt;Dicas para Programação Mobile em Geral&lt;/strong&gt;&lt;/p&gt;
+
+
+&lt;p&gt;PrimeUI - uma coleção de ricos widgets em JavaScript baseados no jQuery UI&lt;br /&gt;&lt;a href=&quot;https://www.primefaces.org/primeui/&quot;&gt;https://www.primefaces.org/primeui/&lt;/a&gt;&lt;/p&gt;
+
+
+&lt;p&gt; &lt;strong&gt;Debug para Javascript&lt;/strong&gt;&lt;br /&gt;&lt;a href=&quot;https://sourceforge.net/projects/xunbug/&quot;&gt;https://sourceforge.net/projects/xunbug/&lt;/a&gt;&lt;/p&gt;
+
+
+&lt;p&gt; &lt;strong&gt;Criação de Aplicativos/Jogos Mobile sem Código&lt;/strong&gt;&lt;br /&gt;&lt;a href=&quot;http://fabricadeaplicativos.com.br/&quot;&gt;http://fabricadeaplicativos.com.br/&lt;/a&gt;&lt;/p&gt;
+
+
+&lt;p&gt;&lt;a href=&quot;https://www.dropsource.com/&quot;&gt;https://www.dropsource.com/&lt;/a&gt;&lt;/p&gt;
+
+
+&lt;p&gt;&lt;a href=&quot;https://www.andromo.com/&quot;&gt;https://www.andromo.com/&lt;/a&gt;&lt;/p&gt;
+
+
+&lt;p&gt;&lt;strong&gt;Tutoriais sobre criação de Apps e Jogos na Mozilla&lt;/strong&gt;&lt;br /&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Games/Index&quot;&gt;https://developer.mozilla.org/en-US/docs/Games/Index&lt;/a&gt;&lt;/p&gt;
+
+
+&lt;p&gt;&lt;strong&gt;Exemplos do Phaser&lt;/strong&gt;&lt;br /&gt;&lt;a href=&quot;http://jojoee.github.io/phaser-examples/games/&quot;&gt;http://jojoee.github.io/phaser-examples/games/&lt;/a&gt;&lt;/p&gt;
+
+
+&lt;p&gt;&lt;strong&gt;10 Open Source HTML 5 Games&lt;/strong&gt;&lt;br /&gt;&lt;a href=&quot;https://superdevresources.com/open-source-html5-games/&quot;&gt;https://superdevresources.com/open-source-html5-games/&lt;/a&gt;&lt;/p&gt;
+
+
+&lt;p&gt;&lt;strong&gt;Make a Mario-Style Platformer with the Phaser Editor&lt;/strong&gt;&lt;br /&gt;&lt;a href=&quot;https://gamedevacademy.org/make-a-mario-style-platformer-with-the-phaser-editor/&quot;&gt;https://gamedevacademy.org/make-a-mario-style-platformer-with-the-phaser-editor/&lt;/a&gt;&lt;br /&gt;Fontes - &lt;a href=&quot;https://github.com/boniatillo-com/PhaserEditor_Tutorial_Platformer_1&quot;&gt;https://github.com/boniatillo-com/PhaserEditor_Tutorial_Platformer_1&lt;/a&gt; &lt;/p&gt;
+
+
+&lt;p&gt;&lt;strong&gt;30 Amazing Games Made Only With HTML5&lt;/strong&gt;&lt;br /&gt;&lt;a href=&quot;https://tutorialzine.com/2015/02/30-amazing-games-made-only-with-html5&quot;&gt;https://tutorialzine.com/2015/02/30-amazing-games-made-only-with-html5&lt;/a&gt;&lt;/p&gt;
+
+
+&lt;p&gt;&lt;strong&gt;Sons e Múdicas para Jogos&lt;/strong&gt;&lt;br /&gt;&lt;a href=&quot;https://www.playonloop.com/&quot;&gt;https://www.playonloop.com/&lt;br /&gt;&lt;/a&gt;&lt;a href=&quot;https://freesound.org/browse/&quot;&gt;https://freesound.org/browse/&lt;/a&gt;&lt;/p&gt;
+
+
+&lt;p&gt;&lt;strong&gt;Sprites Royalty Free para Jogos&lt;/strong&gt;&lt;br /&gt;&lt;a href=&quot;https://opengameart.org/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;https://opengameart.org/&lt;/a&gt;&lt;a title=&quot;https://opengameart.org/content/2d-complete-characters&quot; href=&quot;https://opengameart.org/content/2d-complete-characters&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;https://opengameart.org/content/2d-complete-characters&lt;/a&gt;&lt;br /&gt;&lt;a title=&quot;http://www.gameart2d.com/&quot; href=&quot;http://www.gameart2d.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;http://www.gameart2d.com/&lt;/a&gt;&lt;br /&gt;&lt;a title=&quot;http://www.gameart2d.com/freebies.html&quot; href=&quot;http://www.gameart2d.com/freebies.html&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;http://www.gameart2d.com/freebies.html&lt;/a&gt;&lt;br /&gt;&lt;a title=&quot;http://www.pixelprospector.com/the-big-list-of-royalty-free-graphics/&quot; href=&quot;http://www.pixelprospector.com/the-big-list-of-royalty-free-graphics/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;http://www.pixelprospector.com/the-big-list-of-royalty-free-graphics/&lt;/a&gt;&lt;br /&gt;&lt;a title=&quot;https://gameartpartners.com/&quot; href=&quot;https://gameartpartners.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;https://gameartpartners.com/&lt;br /&gt;&lt;/a&gt;&lt;a href=&quot;http://kenney.nl/assets&quot;&gt;http://kenney.nl/assets&lt;/a&gt;&lt;/p&gt;
+
+
+&lt;p&gt; &lt;/p&gt;</content>
+		<category term="Dicas" />
+	</entry>
+	<entry>
+		<title>Editores de Código</title>
+		<link rel="alternate" type="text/html" href="http://backup/portal/mobile/dicas/editores-de-codigo.html"/>
+		<published>2017-07-12T10:22:18-03:00</published>
+		<updated>2017-07-12T10:22:18-03:00</updated>
+		<id>http://backup/portal/mobile/dicas/editores-de-codigo.html</id>
+		<author>
+			<name>Ribamar FS</name>
+		</author>
+		<summary type="html">&lt;p&gt;&lt;strong&gt;Bons Editores para Programação Mobile&lt;/strong&gt;&lt;/p&gt;
+
+
+&lt;p&gt;Praticamente qualquer editor pode ser usado para programar para mobile. Devemos tomar apenas um cuidado, o de usar um que suporte codificação de caracteres UNICODE, ou UTF-8.&lt;/p&gt;
+
+
+&lt;p&gt; &lt;/p&gt;
+
+
+&lt;p&gt;&lt;strong&gt;Simples&lt;/strong&gt;&lt;/p&gt;
+
+
+&lt;p&gt;gedit e similares no Linux&lt;/p&gt;
+
+
+&lt;p&gt;Notepad++ no Windows - &lt;a href=&quot;https://notepad-plus-plus.org/&quot;&gt;https://notepad-plus-plus.org/&lt;/a&gt;&lt;/p&gt;
+
+
+&lt;p&gt; &lt;/p&gt;
+
+
+&lt;p&gt;&lt;strong&gt;Mais recursos, mas também free:&lt;/strong&gt;&lt;/p&gt;
+
+
+&lt;p&gt;VSCode - &lt;a href=&quot;https://code.visualstudio.com/&quot;&gt;https://code.visualstudio.com/&lt;/a&gt;&lt;/p&gt;
+
+
+&lt;p&gt;Atom - &lt;a href=&quot;https://atom.io/&quot;&gt;https://atom.io/&lt;/a&gt;&lt;/p&gt;
+
+
+&lt;p&gt; &lt;/p&gt;</summary>
+		<content type="html">&lt;p&gt;&lt;strong&gt;Bons Editores para Programação Mobile&lt;/strong&gt;&lt;/p&gt;
+
+
+&lt;p&gt;Praticamente qualquer editor pode ser usado para programar para mobile. Devemos tomar apenas um cuidado, o de usar um que suporte codificação de caracteres UNICODE, ou UTF-8.&lt;/p&gt;
+
+
+&lt;p&gt; &lt;/p&gt;
+
+
+&lt;p&gt;&lt;strong&gt;Simples&lt;/strong&gt;&lt;/p&gt;
+
+
+&lt;p&gt;gedit e similares no Linux&lt;/p&gt;
+
+
+&lt;p&gt;Notepad++ no Windows - &lt;a href=&quot;https://notepad-plus-plus.org/&quot;&gt;https://notepad-plus-plus.org/&lt;/a&gt;&lt;/p&gt;
+
+
+&lt;p&gt; &lt;/p&gt;
+
+
+&lt;p&gt;&lt;strong&gt;Mais recursos, mas também free:&lt;/strong&gt;&lt;/p&gt;
+
+
+&lt;p&gt;VSCode - &lt;a href=&quot;https://code.visualstudio.com/&quot;&gt;https://code.visualstudio.com/&lt;/a&gt;&lt;/p&gt;
+
+
+&lt;p&gt;Atom - &lt;a href=&quot;https://atom.io/&quot;&gt;https://atom.io/&lt;/a&gt;&lt;/p&gt;
+
+
+&lt;p&gt; &lt;/p&gt;</content>
+		<category term="Dicas" />
+	</entry>
+</feed>
