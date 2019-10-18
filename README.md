@@ -4,7 +4,7 @@
 
 Este era o site https://ribafs.org que usava o CMS Joomla.
 
-Foi exportado do Joomla para site estático usando o wget com as opções abaixo:
+Foi exportado do Joomla para site estático. Criar wget.sh com o código abaixo:
 
 ```bash
 wget \
