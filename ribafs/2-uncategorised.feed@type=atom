@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- generator="Joomla! - Open Source Content Management" -->
 <feed xmlns="http://www.w3.org/2005/Atom"  xml:lang="pt-br">
-	<title type="text">Início - RibaFS Portal</title>
+	<title type="text">Início - RibaFS</title>
 	<subtitle type="text">Conteúdo sobre programação web com PHP e Servidores</subtitle>
 	<link rel="alternate" type="text/html" href="http://backup"/>
 	<id>http://backup/ribafs/2-uncategorised.feed</id>
-	<updated>2021-04-18T11:04:59+00:00</updated>
+	<updated>2021-04-18T11:43:07+00:00</updated>
 	<author>
 		<name>RibaFS Portal</name>
 	</author>
