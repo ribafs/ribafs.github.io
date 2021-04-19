@@ -5,7 +5,7 @@
 		<title>Início - RibaFS</title>
 		<description><![CDATA[Conteúdo sobre programação web com PHP e Servidores]]></description>
 		<link>http://backup/ribafs/2-uncategorised.html</link>
-		<lastBuildDate>Mon, 19 Apr 2021 00:57:56 +0000</lastBuildDate>
+		<lastBuildDate>Mon, 19 Apr 2021 09:09:13 +0000</lastBuildDate>
 		<generator>Joomla! - Open Source Content Management</generator>
 		<atom:link rel="self" type="application/rss+xml" href="http://backup/ribafs/2-uncategorised.feed?type=rss"/>
 		<language>pt-br</language>
@@ -14,7 +14,7 @@
 			<link>http://backup/ribafs/</link>
 			<guid isPermaLink="true">http://backup/ribafs/</guid>
 			<description><![CDATA[<h3>Seja sinceramente bem vindo(a)!</h3>
-<p> Aqui temos conteúdo sobre programação web com PHP e cia e também sobre servidores.</p>]]></description>
+<p>Este site abriga conteúdo sobre programação web com PHP e cia e também sobre servidores.</p>]]></description>
 			<category>Genérica</category>
 			<pubDate>Mon, 12 Apr 2021 03:51:16 +0000</pubDate>
 		</item>

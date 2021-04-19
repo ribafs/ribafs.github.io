@@ -5,7 +5,7 @@
 	<subtitle type="text">Conteúdo sobre programação web com PHP e Servidores</subtitle>
 	<link rel="alternate" type="text/html" href="http://backup"/>
 	<id>http://backup/ribafs/2-uncategorised.feed</id>
-	<updated>2021-04-19T00:57:57+00:00</updated>
+	<updated>2021-04-19T09:09:13+00:00</updated>
 	<author>
 		<name>RibaFS Portal</name>
 	</author>
@@ -21,9 +21,9 @@
 			<name>Super User</name>
 		</author>
 		<summary type="html">&lt;h3&gt;Seja sinceramente bem vindo(a)!&lt;/h3&gt;
-&lt;p&gt; Aqui temos conteúdo sobre programação web com PHP e cia e também sobre servidores.&lt;/p&gt;</summary>
+&lt;p&gt;Este site abriga conteúdo sobre programação web com PHP e cia e também sobre servidores.&lt;/p&gt;</summary>
 		<content type="html">&lt;h3&gt;Seja sinceramente bem vindo(a)!&lt;/h3&gt;
-&lt;p&gt; Aqui temos conteúdo sobre programação web com PHP e cia e também sobre servidores.&lt;/p&gt;</content>
+&lt;p&gt;Este site abriga conteúdo sobre programação web com PHP e cia e também sobre servidores.&lt;/p&gt;</content>
 		<category term="Genérica" />
 	</entry>
 </feed>
