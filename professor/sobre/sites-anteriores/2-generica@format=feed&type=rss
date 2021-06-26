@@ -5,7 +5,7 @@
 		<title>Sites anteriores</title>
 		<description><![CDATA[Frontend, backend, ferramentas, segurança, servidores, etc]]></description>
 		<link>http://backup/professor/sobre/sites-anteriores/2-generica</link>
-		<lastBuildDate>Sat, 26 Jun 2021 02:45:46 +0000</lastBuildDate>
+		<lastBuildDate>Sat, 26 Jun 2021 14:00:24 +0000</lastBuildDate>
 		<generator>Joomla! - Open Source Content Management</generator>
 		<atom:link rel="self" type="application/rss+xml" href="http://backup/professor/sobre/sites-anteriores/2-generica?format=feed&amp;type=rss"/>
 		<language>pt-br</language>
@@ -17,14 +17,6 @@
 <h3>Alguns aplicativos online</h3>
 <p>Entre os encontrados no repositório professor</p>
 <p>- <a href="http://backup/professor/apps/360" target="_blank" rel="noopener noreferrer">360 graus com JS</a> - Arraste com o mouse</p>
-<p>- <a href="http://backup/professor/apps/Calendario/" target="_blank" rel="noopener noreferrer">Calendário</a></p>
-<p>- Captchas</p>
-<p>    - <a href="http://backup/professor/apps/Captchas/captcha_simples" target="_blank" rel="noopener noreferrer">Captcha Simples</a></p>
-<p>    - <a href="http://backup/professor/apps/Captchas/captcha_simples2" target="_blank" rel="noopener noreferrer">Captcha Simples 2</a></p>
-<p>- Demos</p>
-<p>    - <a href="http://backup/professor/apps/demos/admin-br" target="_blank" rel="noopener noreferrer">admin-br</a> - Aplicativo com demo do plugin que implementa controle de acesso em aplicativos CakePHP 3</p>
-<p>    - laravel-acl - Aplicativo com demo do pacore laravel-acl que implementa controle de acesso em aplicativos Laravel</p>
-<p>- <a href="http://backup/professor/apps/Extenso" target="_blank" rel="noopener noreferrer">Extenso</a> - Escrever números por exenso com PHP</p>
 <p>- <a href="http://backup/professor/apps/Joguinhos" target="_blank" rel="noopener noreferrer">Joguinhos em Javascript</a></p>
 <p>- Quizes em JS</p>
 <p>    - <a href="http://backup/professor/apps/Quizes/um" target="_blank" rel="noopener noreferrer">Um</a></p>

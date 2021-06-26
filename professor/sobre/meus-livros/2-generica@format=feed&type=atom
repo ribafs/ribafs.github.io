@@ -5,7 +5,7 @@
 	<subtitle type="text">Frontend, backend, ferramentas, segurança, servidores, etc</subtitle>
 	<link rel="alternate" type="text/html" href="http://backup"/>
 	<id>http://backup/professor/sobre/meus-livros/2-generica</id>
-	<updated>2021-06-26T02:45:49+00:00</updated>
+	<updated>2021-06-26T14:00:28+00:00</updated>
 	<author>
 		<name>PHP & Cia</name>
 	</author>
@@ -24,14 +24,6 @@
 &lt;h3&gt;Alguns aplicativos online&lt;/h3&gt;
 &lt;p&gt;Entre os encontrados no repositório professor&lt;/p&gt;
 &lt;p&gt;- &lt;a href=&quot;http://backup/professor/apps/360&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;360 graus com JS&lt;/a&gt; - Arraste com o mouse&lt;/p&gt;
-&lt;p&gt;- &lt;a href=&quot;http://backup/professor/apps/Calendario/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Calendário&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;- Captchas&lt;/p&gt;
-&lt;p&gt;    - &lt;a href=&quot;http://backup/professor/apps/Captchas/captcha_simples&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Captcha Simples&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;    - &lt;a href=&quot;http://backup/professor/apps/Captchas/captcha_simples2&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Captcha Simples 2&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;- Demos&lt;/p&gt;
-&lt;p&gt;    - &lt;a href=&quot;http://backup/professor/apps/demos/admin-br&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;admin-br&lt;/a&gt; - Aplicativo com demo do plugin que implementa controle de acesso em aplicativos CakePHP 3&lt;/p&gt;
-&lt;p&gt;    - laravel-acl - Aplicativo com demo do pacore laravel-acl que implementa controle de acesso em aplicativos Laravel&lt;/p&gt;
-&lt;p&gt;- &lt;a href=&quot;http://backup/professor/apps/Extenso&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Extenso&lt;/a&gt; - Escrever números por exenso com PHP&lt;/p&gt;
 &lt;p&gt;- &lt;a href=&quot;http://backup/professor/apps/Joguinhos&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Joguinhos em Javascript&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;- Quizes em JS&lt;/p&gt;
 &lt;p&gt;    - &lt;a href=&quot;http://backup/professor/apps/Quizes/um&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Um&lt;/a&gt;&lt;/p&gt;
@@ -56,14 +48,6 @@
 &lt;h3&gt;Alguns aplicativos online&lt;/h3&gt;
 &lt;p&gt;Entre os encontrados no repositório professor&lt;/p&gt;
 &lt;p&gt;- &lt;a href=&quot;http://backup/professor/apps/360&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;360 graus com JS&lt;/a&gt; - Arraste com o mouse&lt;/p&gt;
-&lt;p&gt;- &lt;a href=&quot;http://backup/professor/apps/Calendario/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Calendário&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;- Captchas&lt;/p&gt;
-&lt;p&gt;    - &lt;a href=&quot;http://backup/professor/apps/Captchas/captcha_simples&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Captcha Simples&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;    - &lt;a href=&quot;http://backup/professor/apps/Captchas/captcha_simples2&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Captcha Simples 2&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;- Demos&lt;/p&gt;
-&lt;p&gt;    - &lt;a href=&quot;http://backup/professor/apps/demos/admin-br&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;admin-br&lt;/a&gt; - Aplicativo com demo do plugin que implementa controle de acesso em aplicativos CakePHP 3&lt;/p&gt;
-&lt;p&gt;    - laravel-acl - Aplicativo com demo do pacore laravel-acl que implementa controle de acesso em aplicativos Laravel&lt;/p&gt;
-&lt;p&gt;- &lt;a href=&quot;http://backup/professor/apps/Extenso&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Extenso&lt;/a&gt; - Escrever números por exenso com PHP&lt;/p&gt;
 &lt;p&gt;- &lt;a href=&quot;http://backup/professor/apps/Joguinhos&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Joguinhos em Javascript&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;- Quizes em JS&lt;/p&gt;
 &lt;p&gt;    - &lt;a href=&quot;http://backup/professor/apps/Quizes/um&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Um&lt;/a&gt;&lt;/p&gt;
