@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="Joomla! - Open Source Content Management" -->
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Alguns Repositórios</title>
+		<description><![CDATA[Frontend, backend, ferramentas, segurança, servidores, etc]]></description>
+		<link>http://localhost/professor/sobre/alguns-repositorios/2-generica</link>
+		<lastBuildDate>Sat, 26 Jun 2021 18:30:10 +0000</lastBuildDate>
+		<generator>Joomla! - Open Source Content Management</generator>
+		<atom:link rel="self" type="application/rss+xml" href="http://localhost/professor/sobre/alguns-repositorios/2-generica?format=feed&amp;type=rss"/>
+		<language>pt-br</language>
+		<item>
+			<title>Aplicativos Online</title>
+			<link>http://localhost/professor/sobre/apps-online</link>
+			<guid isPermaLink="true">http://localhost/professor/sobre/apps-online</guid>
+			<description><![CDATA[<hr />
+<h3>Alguns aplicativos online</h3>
+<p>Entre os encontrados no repositório professor</p>
+<p>- <a href="http://localhost/professor/apps/360" target="_blank" rel="noopener noreferrer">360 graus com JS</a> - Arraste com o mouse</p>
+<p>- <a href="http://localhost/professor/apps/Joguinhos" target="_blank" rel="noopener noreferrer">Joguinhos em Javascript</a></p>
+<p>- Quizes em JS</p>
+<p>    - <a href="http://localhost/professor/apps/Quizes/um" target="_blank" rel="noopener noreferrer">Um</a></p>
+<p>    - <a href="http://localhost/professor/apps/Quizes/dois" target="_blank" rel="noopener noreferrer">Dois</a></p>
+<p>    - <a href="http://localhost/professor/apps/Quizes/tres" target="_blank" rel="noopener noreferrer">Três</a></p>
+<p>    - <a href="http://localhost/professor/apps/Quizes/quatro.html" target="_blank" rel="noopener noreferrer">Quatro</a></p>
+<p>- Selects em HTML</p>
+<p>    - <a href="http://localhost/professor/apps/Selects/ano.html" target="_blank" rel="noopener noreferrer">ano</a></p>
+<p>    - <a href="http://localhost/professor/apps/Selects/dia.html" target="_blank" rel="noopener noreferrer">dia</a></p>
+<p>    - <a href="http://localhost/professor/apps/Selects/mes.html" target="_blank" rel="noopener noreferrer">mês</a></p>
+<p>    - <a href="http://localhost/professor/apps/Selects/estado.html" target="_blank" rel="noopener noreferrer">estados</a></p>
+<p>     - <a href="http://localhost/professor/apps/Selects/pais.html" target="_blank" rel="noopener noreferrer">países</a></p>
+<p>- <a href="http://localhost/professor/apps/SocialIcons" target="_blank" rel="noopener noreferrer">SocialIcons</a></p>
+<p>- <a href="http://localhost/professor/apps/telaLogin" target="_blank" rel="noopener noreferrer">Bonita tela de login</a></p>
+<p>- <a href="http://localhost/professor/apps/Utilitarios" target="_blank" rel="noopener noreferrer">Utilitários em Javascript</a></p>
+<p>- <a href="http://localhost/professor/apps/natal-css.html" target="_blank" rel="noopener noreferrer">Natal em CSS</a></p>
+<p>- <a href="http://localhost/professor/apps/setas_css.html" target="_blank" rel="noopener noreferrer">Setas com CSS</a></p>
+<p> </p>
+<p> </p>
+<p> </p>]]></description>
+			<category>Genérica</category>
+			<pubDate>Fri, 25 Jun 2021 16:23:37 +0000</pubDate>
+		</item>
+		<item>
+			<title>Cuidando bem da sua Saúde</title>
+			<link>http://localhost/professor/sobre/alguns-repositorios/2-generica/23-cuidando-bem-da-sua-saude</link>
+			<guid isPermaLink="true">http://localhost/professor/sobre/alguns-repositorios/2-generica/23-cuidando-bem-da-sua-saude</guid>
+			<description><![CDATA[<div class="col-md-6">
+<h3 class="text-center">Cuidando bem da Saúde</h3>
+<br />
+<div class="text-left">
+<p>Como atualmente existe muita informação divulgada sobre saúde e como saúde é algo realmente importante, saí a busca de boas informações para que possam me ajudar a viver melhor.</p>
+<p>É bom lembrar que a quantidade de informações existentes hoje é absurda, portanto requer de quem procura muito critério e senso crítico na busca. Procurei usar bem ambos e elaborei um pequneo e-book organizado por assunto e com índice e páginas numeradas e estou oferecendo como PDF.</p>
+<p> </p>
+<a title="CuidandoBemdaSaude.pdf" href="http://localhost/professor/livros/CuidandoBemdaSaude.pdf">Download</a></div>
+</div>]]></description>
+			<category>Genérica</category>
+			<pubDate>Fri, 25 Jun 2021 02:04:45 +0000</pubDate>
+		</item>
+		<item>
+			<title>SGBD PostgreSQL</title>
+			<link>http://localhost/professor/sobre/alguns-repositorios/2-generica/22-sgbd-postgresql</link>
+			<guid isPermaLink="true">http://localhost/professor/sobre/alguns-repositorios/2-generica/22-sgbd-postgresql</guid>
+			<description><![CDATA[<div class="col-md-6">
+<h3 class="text-center">SGBD PostgreSQL</h3>
+<br />
+<div class="text-left">
+<p>Quase 1000 páginas. Em sua maioria material da comunidade. Material que selecionei por vários anos.<br /> <br /> 1 - Conceitos Importantes no PostgreSQL    6<br /> Introdução ao PostgreSQL    7<br /> 1.1 - Resumo da História do PostgreSQL    7<br /> 1.2 - Características Avançadas do PostgreSQL    8<br /> 1.3 - Limites atuais do PostgreSQL    9<br /> 1.4 - Licença    9<br /> 1.5 - Quem oferece Suporte ao PostgreSQL no Brasil e quem o usa    9<br /> 2 - Database FAQs    11<br /> 3 - Um panorama das novidades previstas para o PostgreSQL 10    41<br /> Novidades sobre o Postgresql    42<br /> Replicação em cascata    47<br /> Novos tipos de dados    48<br /> Index-only scans    48<br /> Novo utilitário: “pg_receivexlog”    49<br /> Melhorias na contrib “pg_stat_statements”    50<br /> Background Checkpointer    50<br /> Melhor escalabilidade vertical    51<br /> 4 - Projeto, Administração e Programação    54<br /> Dimensionamento de Hardware    72<br /> 5 - Ferramentas    80<br /> Expressões Regulares para uso em Modelagem de Bancos de Dados    103<br /> 6 - Instalação do PostgreSQL 8.3 no Windows    113<br /> Instalação do PostgreSQL no Linux    125<br /> Definições    126<br /> Entendendo as constraints e a integridade referencial    132<br /> Funções com Data e Hora    141<br /> 7 - Relacionamentos entre tabelas    142<br /> Entendendo a Herança de tabelas    146<br /> 8 - Tipos de Dados no PostgreSQL    150<br /> 9 - Agrupando Registros    160<br /> 10 - EXPRESSÃO CASE    161<br /> CASTS - Conversão explícita de tipos    163<br /> 11 - Trabalhando com Conjuntos de Dados    163<br /> 12 - Trabalhando com SQL    165<br /> 13 - Utilizando SQL para selecionar, filtrar e agrupar registros    180<br /> DDL - Linguagem de Definição de Dados    181<br /> DCL - Linguagem de Controle de Dados    182<br /> DTL - Linguagem de Transação de Dados    182<br /> DQL - Linguagem de Consulta de Dados    183<br /> Cláusula DISTINCT    189<br /> 14 - Desvendando o SELECT    195<br /> 15 - Entendendo e Utilizando sub-consultas    197<br /> 16 - Reuso de Código: Utilizando Funções    205<br /> 17 - Consultanto dados em múltiplas tabelas    220<br /> Cláusula JOIN    223<br /> 18 - Visões (views)    231<br /> 19 - Junção entre tabelas no PostgreSQL - Daniel Oslei    237<br /> 20 - Transações    241<br /> Isolamento serializável versus verdadeira serialidade    247<br /> Trabalhando com Nulos    251<br /> Utilizando Operadores    263<br /> 21 - Catálogo do Sistema    285<br /> 22 - Tipos Geométricos    315<br /> 23 - Polígonos    316<br /> Chapter: Geometric Data Types    320<br /> Using Geometric Data Types    321<br /> Figure 16.12. Dynamic polygons.    326<br /> 24 - PostgreSQL Dicas    335<br /> COALESCE: Trate decisões envolvendo campos nulos!    335<br /> explain.depesz: Encontre a Causa da Lentidão em suas Consultas!    337<br /> Simples e Útil: Visões Materializadas no PostgreSQL!    337<br /> Beltrano: Base de Dados em Português para o PostgreSQL    339<br /> Faça Você Mesmo: Diagramas de Classe com as Tabelas do Catálogo do PostgreSQL    340<br /> Você REALMENTE Sabe Lidar com Valores Nulos no PostgreSQL?    348<br /> Formatação de Data e Hora com as funções TO_CHAR e TO_DATE    354<br /> DtSQL: Ferramenta Front-End para Banco de Dados    357<br /> Edição de SQL e Funções no PSQL    362<br /> Produza Sequências Com a Função Generate_Series()!    364<br /> Visão Geral da Arquitetura do PostgreSQL!    369<br /> PGTUNE: Otimize a configuração do PostgreSQL!    369<br /> Range Types: Novo recurso do Postgresql 9.2!    372<br /> Tratamento de Parâmetros de Funções com Pl/PgSQL    377<br /> Desenvolva suas Aplicações de Bancos Postgres com Wavemaker    381<br /> Unlogged Tables: Funcionalidade para Aumento de Desempenho!    385<br /> 25 - PostgreSQL Cheat Sheet    393<br /> 26 - Prepared Statements    393<br /> 27 - Exercícios    395<br /> Entendendo e Trabalhando com Clusters    395<br /> Esquemas    397<br /> Otimizador de Consultas    400<br /> Restaurando um Template1 Corrrompido usando o Template0    402<br /> 28 - Exemplo de Modelagem de Banco de Dados    403<br /> 29 - Normalização de uma tabela de CEP sem mesmo chave primária.    404<br /> Modelagem do Banco de Dados Pessoa    408<br /> 30 - Segurança    418<br /> Segurança de Dados    418<br /> Inundação    419<br /> Desafios da Segurança de Informação    436<br /> 31 - Linguagens do Lado do Servidor    443<br /> Funções no PostgreSQL:    443<br /> RETURN NEXT    506<br /> EXIT    509<br /> WHILE    510<br />  FOR (variação inteira)    511<br /> Laço através do resultado da consulta    511<br /> Captura de erros    515<br /> Declaração de variável cursor    517<br /> Abertura de cursor    518<br />  OPEN FOR SELECT    518<br /> OPEN FOR EXECUTE    518<br /> Abertura de cursor ligado    518<br /> Utilização de cursores    519<br /> FETCH    519<br /> CLOSE    519<br /> Retornar cursor    520<br /> Validação de CPF com Pl/ PgSQL    540<br /> 32 - Gatilhos    542<br /> 33 - Rules    570<br /> Triggers (Gatilhos)    574<br /> RULES    579<br /> 34 - Exemplos de Funções em SQL no PostgreSQL    582<br /> 35 - Expressões Regulares para uso em Modelagem de Bancos de Dados    616<br /> 36 - Tipos e Domínios    625<br /> 37 - Fases de um Projeto de Banco de Dados    628<br /> 38 - Ferramentas    632<br /> Validação e Geração de IE em JavaScript    632<br /> Links Úteis para Modelagem    632<br /> 39 - Modelagem de Bancos de Dados    634<br /> 40 - Modelando um Banco Pessoa    640<br /> Integridade Referencial    659<br /> Algumas Demonstrações sobre Normalização    662<br /> Normalizando Tabelas com Leandro Dutra    664<br /> Modelo Relacional segundo C. J. Date    665<br /> Fases de um Projeto de Banco de Dados    666<br /> Tipos e Domínios    668<br /> 41 - Melhorando a Performance do PostgreSQL    670<br /> Cinco Princípios de Hardware para Configurar o seu Servidor PostgreSQL    676<br /> Conexão    678<br /> Memória    678<br /> Disco e WAL    680<br /> Planejador de Consultas    680<br /> Logging    681<br /> Autovacuum e você    681<br /> Usando o Vacuum e Analyze    703<br /> 42 - Gerenciando Bancos de Dados no PostgreSQL    708<br /> 43 - Administrando o PostgreSQL pela linha de comando (psql)    715<br /> 44 - Administração com o cliente web Adminer    717<br /> 45 - Instalação do PostgreSQL através dos Fontes    718<br /> Contribs    725<br /> Instalando PostgreSQL no Slackware Linux    728<br /> Instalação do PostgreSQL no CentOS    730<br /> Instalação do PostgreSQL no OpenBSD    732<br /> Testes de regressão    732<br /> 46 - Backup lógico e físico do postgresql    739<br /> Sintaxe dos comandos para backup    767<br /> Criar banco limpo, tendo como base o template0:    774<br /> Script para backup do PostgreSQL    775<br /> Usando o Comando Copy    776<br /> Migração de um banco de dados no 8.3 para o PostgreSQL 9.5    777<br /> IMPORTAR SCRIPTS TIPO CSV E SQL PARA O POSTGRESQL    781<br /> 47 - Configurações do PostgreSQL    783<br /> 48 - Entendendo e trabalhando com CLUSTERS no PostgreSQL    803<br /> 49 - Trabalhando com Esquemas no PostgreSQL    812<br />  Schemas ou Databases?    818<br /> 50 - Manutenção do PostgreSQL    821<br /> Tudo que você sempre quis saber sobre discos em servidores PostgreSQL e tinha vergonha de perguntar    825<br /> RAID    825<br /> Discos    828<br /> Controladoras de discos    830<br /> Tipos de arquivos    831<br /> Particionamento    835<br /> Como distribuir as partições nos discos existentes    836<br /> Discos no PostgreSQL    837<br /> 51 - Monitorando as Atividades do Servidor do PostgreSQL    840<br /> Explain    864<br /> Ver as estatísticas coletadas    866<br /> Características de um bom hardware para servidor    869<br /> 52 - TableSpaces    870<br /> Trabalhando com Tablespace no PostgreSQL    877<br /> 53 - Criação de grupos de usuários no PostgreSQL 9.6.3    883<br /> Exemplo de Uso de Usuários e Privilégios    898<br /> 54 - Conectividade    901<br /> Openoffice2 Base    914<br /> 55 - Informações Introdutórias sobre Redes de Computadores    916<br /> Referência rápida de máscara de redes    919<br /> Endereços reservados para uso em uma rede Privada    920<br /> <br /> <a title="SGBDPostgreSQL.pdf" href="http://localhost/professor/livros/SGBDPostgreSQL.pdf">Download</a></p>
+</div>
+</div>]]></description>
+			<category>Genérica</category>
+			<pubDate>Fri, 25 Jun 2021 02:03:03 +0000</pubDate>
+		</item>
+		<item>
+			<title>Servidores web tipo VPS</title>
+			<link>http://localhost/professor/sobre/alguns-repositorios/2-generica/21-servidores-web-tipo-vps</link>
+			<guid isPermaLink="true">http://localhost/professor/sobre/alguns-repositorios/2-generica/21-servidores-web-tipo-vps</guid>
+			<description><![CDATA[<div class="col-md-6">
+<h3 class="text-center">Servidores web Linux tipo VPS</h3>
+<br />
+<div class="text-left">
+<p>Agora com nova capa generosamente criada pelo amigo Haroldo Barbosa e também um prefácio de sua autoria (muito agradecido meu caro Haroldo).</p>
+<p>Relatando a minha recente experiência com servidores web do tipo VPS. Onde mostro detalhadamente como instalar e administrar seu servidor web do tipo VPS nas nuvens.<br /> <br /> Neste livro uso um servidor Linux Ubuntu 12.04 em VPS destinado a abrigar um servidor web com Apache, PHP e MySQL, como também mostrando a instalação de uma boa solução de e-mail com webmail e outros bons recursos. O grande foco do livro ficou na segurança do servidor, que acabou ganhando, merecidamente, a maior atenção.<br /> <br /> Se quiser uma maior segurança e flexibilidade para cuidar do seu site recomendo usar uma hospedagem do tipo VPS ou de um servidor dedicado. É mais trabalhoso mas nos oferece muito mais controle e flexibilidade.<br /> <br /> Como não existe segurança perfeita procurei mostrar como instalar e configurar muitos e bons recursos de segurança que venham a minimizar problemas deste tipo. Elementos ativos que barram ações suspeitas, outros que nos avisam por e-mail sobre prováveis problemas, formas de monitorar automaticamente e manualmente o servidor e fechando com a instalação e configuração do mod_secutiry que cuida de forma ativa da segurança das aplicações web.<br /> <br /> A segurança requer uma atitude proativa, zelosa e com disposição para estudar e trabalhar em prol do site/servidor. Procurei mostrar que essa atitude é muito importante para garantir a segurança do servidor. Não esqueça de atualizar o servidor e de realizar backups completos e regulares.<br /> <br /> Segue o índice resumido para dar uma ideia do conteúdo<br /> <br /> 1.0 - Roteiro de Migração de Site para outra Hospedagem 9<br /> 2.0 - Ajustes Iniciais 13<br /> 2.9 - DNS 19<br /> 3.0 - Instalação do iRedMail 41<br /> 4.0 - Melhorando a Segurança do Servidor 63<br /> 5.0 - Configurar Apache e PHP 91<br /> 6.0 - Criação dos Bancos 97<br /> 7.0 - Instalar sites e aplicativos, descompactando no /var/www 101<br /> 8.0 - Monitorando o servidor 103<br /> 9.0 – Alguns Comandos Úteis no Linux 115<br /> 10.0 - Testando o Servidor 125<br /> 11.0 - Ferramentas Úteis 140<br /> 12.0 - Dicas Extras 145<br /> 13.0 - Servidor de Testes de Segurança 163<br /> 14.0 - Referências 165<br /> <br /> Caso queira um exemplar impresso<br /> <a href="https://www.clubedeautores.com.br/book/161198--Servidor_Web_com_foco_em_VPS">Encomende aqui com o Clube de Autores</a></p>
+<a title="servidorweb_vps.pdf" href="http://localhost/professor/livros/servidorweb_vps.pdf">Download</a></div>
+</div>]]></description>
+			<category>Genérica</category>
+			<pubDate>Fri, 25 Jun 2021 02:00:59 +0000</pubDate>
+		</item>
+		<item>
+			<title>Servidores VPS</title>
+			<link>http://localhost/professor/sobre/alguns-repositorios/2-generica/20-servidores-vps</link>
+			<guid isPermaLink="true">http://localhost/professor/sobre/alguns-repositorios/2-generica/20-servidores-vps</guid>
+			<description><![CDATA[<div class="col-md-6">
+<h3 class="text-center">Servidores VPS</h3>
+<br />
+<div class="text-left">
+<p>Muita informação sobre o uso de servidores VPS. Meus testes foram com a Digital Ocean e a Vultr.</p>
+<p>Testei as principais distribuições Linux mais o FreeBSD, do qual gostei muito e cheguei a usar em meu site.</p>
+<p>1.0 - Cuidados Básicos    5<br /> 1.1 - Alguns comandos do Linux, do FreeBSD e do OpenBSD    5<br /> 1.2 - Crecar ISO    17<br /> 1.3 - Compactar e Descompactar Arquivos no Terminal do Linux    17<br /> 1.4 – Crontab    20<br /> 1.5 - Procurar string s sobrescrever com outra em arquivo    27<br /> 1.6 - Dica sobre a linguagem C:    28<br /> 1.7 - DNS Gratuito de CloudFlare    29<br /> 1.8 – Corrigir Erros de Locales    29<br /> 1.9 - Procurando Arquivos pelo Terminal do UNIX com find e locate    30<br /> 1.10 - Formatar pendrive    32<br /> 1.11 - Criar um link simbólico    33<br /> 1.12 - Editor de textos para o terminal/modo texto no Unix    33<br /> 1.13 - Setando Permissões para o Servidor web    35<br /> 1.14 – Configurações de Rede pela linha de comando    36<br /> 1.15 – Usando o RSync    46<br /> 2 – Desktop    47<br /> 2.1 – Batchs ou Arquivos de Lote    48<br /> 2.2 - Recuperação do Grub 2    51<br /> 2.3 – Ajustar Relógio em Dualboot    51<br /> 2.4 – Proteção de Roteador WiFi    51<br /> 2.5 – SSH em Banda Larga ADSL    52<br /> 2.6 - Upgrade do Debian    52<br /> 2.7 – Upgrade Ubuntu    52<br /> 2.8 - Configurar Hora em Servidor Debian e derivados    54<br /> 2.9 - Ajustar o hostname    54<br /> 2.10 - Para limpar o cache da RAM    54<br /> 2.11 - MySQL    55<br /> 2.12 – Adicionar partição de Swap ao Linux    62<br /> 2.13 – Clamav    62<br /> 3 – Hospedagem tipo VPS    63<br /> 3.1 - Hospedagem na Digital Ocean    63<br /> 3.1.1 – Snapshot    90<br /> 3.1.2 – DNS na Digital Ocean    92<br /> 3.2 – Servidores VPS na Vultr    94<br /> 3.2.1 - Restauração de Snapshot na Vultr    100<br /> 3.2.2 – DNS na Vultr    101<br /> 4 – Melhorando a Segurança de um VPS com CentOS 7    105<br /> 4.0. Cuidados Iniciais    105<br /> 4.1. Habilitação e Configurar firewall com ufw    108<br /> 4.2. Secure shared memory no fstab    108<br /> 4.3. Reforçar a segurança do SSH    108<br /> 4.4. Reforçar a segurança da rede configurando o sysctl    110<br /> 4.5. Prevenir IP Spoofing    111<br /> 4.6. Reforçar a segurança do PHP    111<br /> 4.8. Instalar e Configurar ModSecurity e ModEvasive    112<br /> 4.9. Scannear logs e banir hosts suspeitos    112<br /> 4.10. Detectar Intrusões – PSAD    114<br /> 4.11. Checar por RootKits – RKHunter e CHKRootKit    114<br /> 4.12 Varrendo portas abertas com Nmap    115<br /> 4.13. Instalar e configurar o Apparmor    115<br /> 4.14. Auditar segurança do sistema com Tiger e Tripwire    116<br /> 4.15. Atualizar a disribuição    117<br /> 4.16. Usar Senhas Fortes    117<br /> 4.17. Melhorando a segurança de sites com Joomla    117<br /> 4.18. Melhorar a segurança no Desktop    118<br /> 4.19. Melhorando a Segurança do MySQL    119<br /> 4.20. Melhorando a segurança com Lynis    119<br /> 4.21. Cuidados Extras    121<br /> 5 - Monitorando um servidor Linux Ubuntu 16.04    122<br /> 5.1 - Varrendo portas abertas com Nmap    123<br /> 5.2 - Auditar segurança do sistema com Tiger e Tripwire    127<br /> 6 – Segurança em Servidores Linux    129<br /> 6.1 - Atualizar automaticamente somente as atualizações de segurança    130<br /> 6.2 – Remover serviços que não estão em uso    130<br /> 6.3 – Senhas Fortes    130<br /> 6.4 – Ferramentas    131<br /> 6.5 – Desempenho do Servidor    132<br /> 6.6 – Criptografia    134<br /> 6.6 - Melhorar a segurança da memória compartilhada    136<br /> 6.7 – Firewall    136<br /> 6.7.1 – IPTables    136<br /> 6.7.2 – ufw    142<br /> 6.8 – Logs    144<br /> 6.9 – Apache    145<br /> 6.10 – PHP    151<br /> 6.11 - Melhorando a Segurança do MySQL/MariaDB    153<br /> 6.12 – Reforçando a Segurança do Joomla    154<br /> 6.13 – SELinux    163<br /> 6.14 – Rede    184<br /> 6.15 - Mantendo Servidores web e de bancos de dados seguros    188<br /> 6.16 – SSH    189<br /> 6.17 – AppArmor    198<br /> 6.18 – Bastille    199<br /> 6.19 – fail2ban    200<br /> 6.20 - RKHunter e CHKRootKit    201<br /> 6.21 - Detectar Intrusões com PSAD    202<br /> 6.22 - Advanced Intrusion Detection Environment (AIDE)    202<br /> 6.23 - Usando DenyHosts    203<br /> 6.24 - Melhorando a segurança com Lynis    204<br /> 7 – Ferramentas    209<br /> 7.1 – Backup    209<br /> 7.3 - Soluções para Administração Web de Servidor    216<br /> Cockpit    217<br /> 7.4 – Testes de Stress para Servidor Web    219<br /> 8 – Shell Scripts    226<br /> 9 – Servidores    235<br /> 9.1 – CentOS EMP    235<br /> 9.2 – CentOS LAMP    248<br /> 9.3 – Debian com LEMP    266<br /> 9.4 – Fedora    278<br /> 9.5 – OpenBSD    289<br /> 9.6 – Ubuntu com LAMP    316<br /> 9.7 – Ubuntu com LEMP    330<br /> 9.8 – FreeBSD    340</p>
+<a title="ServidoresVPS.pdf" href="http://localhost/professor/livros/ServidoresVPS.pdf">Download</a></div>
+</div>]]></description>
+			<category>Genérica</category>
+			<pubDate>Fri, 25 Jun 2021 01:59:25 +0000</pubDate>
+		</item>
+		<item>
+			<title>Administração de Servidores Linux</title>
+			<link>http://localhost/professor/sobre/alguns-repositorios/2-generica/19-administracao-de-servidores-linux</link>
+			<guid isPermaLink="true">http://localhost/professor/sobre/alguns-repositorios/2-generica/19-administracao-de-servidores-linux</guid>
+			<description><![CDATA[<section class="bg-white">
+<h3 class="text-center">Administração de Servidores Linux</h3>
+<div class="text-left">
+<div class="row">
+<div class="col-md-3"> </div>
+<div class="col-md-6">
+<div class="text-left">
+<p>Passo-a-passo</p>
+<p>Para pequenas empresas</p>
+<p>Um dos meus maiores objetivos quando procuro repassar algo é o de simplificar ao máximo para conseguir o maior êxito possível.</p>
+<p>Com este livro não foi diferente.<br /> Apenas repasso os passos de como realizei cada tarefa, de forma a simplificar o entendimento. Caso precise de conhecimento teórico precisará procurá-lo em outra fonte, pois aqui concentro-me muito na prática. Não quero com isso dizer que o trabalho de administrador de servidores é uma tarefa trivial. De forma alguma. A meu ver é um trabalho que somente pode ser desempenhado por alguém que goste muito de desafios e que não esmoreça na primeira dificuldade. Para alguém que tem "sangue no olho".</p>
+<p>No site da editora Bookess</p>
+<p>http://www.bookess.com/read/12167-administracao-de-servidores-linux/</p>
+<p>Quem se interessar apenas pelo formato PDF, me manda um e-mail (ribafs @ gmail.com) que envio os dados.</p>
+<p>Custa R$ 20,00 (vinte reais).</p>
+<p>- Scripts citados no livro</p>
+<p>- Vídeo-captura da configuração do Zentyal</p>
+<p> </p>
+<a title="servidoreslinux.pdf" href="http://localhost/professor/livros/servidoreslinux.pdf">Download</a></div>
+</div>
+</div>
+</div>
+</section>]]></description>
+			<category>Genérica</category>
+			<pubDate>Fri, 25 Jun 2021 01:57:26 +0000</pubDate>
+		</item>
+		<item>
+			<title>Programação web com PHP</title>
+			<link>http://localhost/professor/sobre/alguns-repositorios/2-generica/18-programacao-web-com-php</link>
+			<guid isPermaLink="true">http://localhost/professor/sobre/alguns-repositorios/2-generica/18-programacao-web-com-php</guid>
+			<description><![CDATA[<h3>Programação Web com PHP e MySQL</h3>
+<p><br />(mas com vários outros: CSS, XML, JavaScript, etc)</p>
+<p><a title="ProgramacaoWeb.pdf" href="http://localhost/professor/livros/ProgramacaoWeb.pdf">Download</a></p>
+<p> </p>]]></description>
+			<category>Genérica</category>
+			<pubDate>Fri, 25 Jun 2021 01:55:12 +0000</pubDate>
+		</item>
+		<item>
+			<title>Programação para o CMS Joomla</title>
+			<link>http://localhost/professor/sobre/alguns-repositorios/2-generica/17-programacao-para-o-cms-joomla</link>
+			<guid isPermaLink="true">http://localhost/professor/sobre/alguns-repositorios/2-generica/17-programacao-para-o-cms-joomla</guid>
+			<description><![CDATA[<div class="col-md-6">
+<h3 class="text-center">Joomla 3 - Programação<br /><br /></h3>
+<div class="text-left">
+<p>Programação para o Joomla 3. A maior parte é material da comunidade.</p>
+<p>Esclarecimentos    4<br /> Agradecimentos    4<br /> Público Alvo    5<br /> 1 – Introdução    6<br /> Novidades sobre o Joomla    7<br /> SEO e SEF    9<br /> Ambiente de Programação Local    11<br /> 2 – Projeto    12<br /> 4 – Criação de Algumas extensões    13<br /> 4.1 - Criação de Extensões do tipo Olá Mundo    14<br /> 4.2 - Criando um módulo simples para o Joomla 3    18<br /> 4.3 - Componente com a Bíblia em 3 idiomas    21<br /> 4.4 – Módulo da Bíblia para o Novo Testamento    25<br /> 4.5 - Criação do Componente SimpleBackup    29<br /> 4.6 – Pensamento do Dia    37<br /> 4.7 - Criando um package para o Joomla    39<br /> 5 - Templates    40<br /> 5.1 – Dicas sobre a construção de Templates    40<br /> 5.2 - Exemplo simples de Template para o Site    46<br /> 5.3 - Criação de Template Funcional para o Joomla 3    47<br /> Como chamar artigos pelo ID    72<br /> Blanks    73<br /> 6 - Constantes da Biblioteca do Joomla    74<br /> 7 - Usuários na Programação    76<br /> 7.1 – ACL – Access Control List    80<br /> 8 - Bancos de Dados    81<br /> 8.1 - Tabelas nativas de um Joomla 3.8.1 recém instalado    89<br /> 8.2 - CRUD    92<br /> 9 - Trabalhando com Arquivos no Joomla 3    99<br /> 10 - Dicas de PHP e de Joomla    102<br /> 10.1 - Remover arquivo pela extensão    103<br /> 10.2 - Remover diretório recursivamente    104<br /> 10.3 - Descompactar arquivo zip    104<br /> 10.4 - Compactar Pasta    105<br /> 10.5 - Override    107<br /> 10.6 - Sufixo de Classe de Módulo    107<br /> 11 - Criadores de Aplicativos    110<br /> 11.1 - Fabrik    110<br /> 11.2 - Seblod    121<br /> 12 - Geradores de Componentes do tipo MVC    122<br /> 13 – Downloads no GitHub    128<br /> 14 - Como criar quickstart para Joomla 3    129<br /> 15 - Ferramentas    130<br /> 16 - Atualizar um site com Joomla 2.5 para o 3.8.1    134<br /> Diretório Cache    135<br /> 17 - Referências    137</p>
+<a title="JoomlaProgramacao.pdf" href="http://localhost/professor/livros/JoomlaProgramacao.pdf">Download</a></div>
+</div>]]></description>
+			<category>Genérica</category>
+			<pubDate>Fri, 25 Jun 2021 01:53:16 +0000</pubDate>
+		</item>
+		<item>
+			<title>Servidores de e-mail para VPS</title>
+			<link>http://localhost/professor/sobre/alguns-repositorios/2-generica/16-servidores-de-e-mail-para-vps</link>
+			<guid isPermaLink="true">http://localhost/professor/sobre/alguns-repositorios/2-generica/16-servidores-de-e-mail-para-vps</guid>
+			<description><![CDATA[<div class="col-md-6">
+<h3 class="text-center">Servidores de e-mail para VPS</h3>
+<div class="text-left">
+<p>Servidor Web e Servidor de E-mail para VPS (Mostra em passos simples como instalar e configurar o servidor e os serviços).</p>
+<p><b>Objetivo do E-book</b>O objetivo é instalar um servidor que abrigue alguns sites, aplicativos e arquivos protegidos e também ofereça uma solução de e-mail simples com webmail juntamente com a configuração do DNS através do painel de administração. Também aborda como criar subdomínios, proteger pastas com senha e adicionar outros domínios ao mesmo servidor.</p>
+<pre>Sumário
+Prefácio.1
+Introdução......1
+1) Criar uma conta na hospedagem 5
+2) Nova Hospedagem do domínio ...5
+3) Criação da máquina virtual..5
+4) Configuração do DNS no painel administrativo da Hospedagem..7
+4.1) Migração do Domínio...7
+4.2) Exemplo de DNS no DigitalOcean ......9
+Zone File..10
+4.3) Exemplo de DNS no registro.br.15
+4.4) Exemplo de DNS no Amazon AWS....17
+5) Ajustes Iniciais........18
+5.1) Criação de um novo usuário para administrar o servidor e acessar via SSH ........18
+5.2) Mudar o fuso horário..19
+5.3) Criar uma partição de swap .....19
+6) Instalação do iRedMail como solução para e-mail. ......20
+6.1) Configurações Iniciais20
+6.2) Configuração DNS para SPF....20
+6.3) Configurar hostname..23
+6.4) Configurar hosts...23
+6.5) Instalação........23
+6.6) Desinstalação..30
+6.7) Dicas.30
+6.7.1) iRedMail...30
+6.7.2) Roteiro de Migração de Site para outra Hospedagem .35
+6.7.3) Testando sintaxes de configuração de Alguns Serviços ....36
+7) Instalação de Módulos do Apache, Extensões do PHP e Outros37
+7.1) MySQL....37
+7.2) PostgreSQL.....38
+7.3) Extensões do PHP.....40
+7.4) Habilitar Módulos do Apache.....40
+7.5) Permitir .htaccess 40
+8) Gerenciar donos e permissões do documentRoot (/var/www) ....42
+Criar Script para Facilitar o Trabalho43
+9) Criar Snapshot do servidor atual44
+10) Instalar os sites, aplicativos .....46
+10.1) Configurações....46
+11) Proteger alguns diretórios com senha pelo Apache ...48
+Bom tutorial sobre SSL no Apache 48
+12) Subdomínios e Domínios adicionais para um único servidor ...50
+Adicionar um Subdomínio .50
+12.1) Criar o Virtual Host no Apache50
+12.2) Adicionar o registro CNAME no DNS....50
+Adicionar um Novo Domínio ao mesmo Servidor/droplet...51
+12.3) Criar o Virtual Host no Apache51
+12.4) Adicionar o novo domínio ao DNS no painel........52
+13) Instalar o webmin .54
+14) Criar novo Snapshot..56
+20) Apêndices....58
+20.1) VPS.5820.2) Informações Impportantes sobre o iRedMail.......59
+20.3) Links úteis sobre Ununtu, VPS e cia64
+20.3) Dicas Extras..68
+20.3.1-Exportar livro de endereços do Gamail para ser importado no RoundCube...68
+20.3.2 -Trabalhando com o Painel Administrativo do DigitalOcean ...68
+20.3.3 - Resumo de comandos mais usados no Linux ..70
+20.3.4 - DigitalOcean Preços 73
+20.3.5 - Informações sobre DNS..73
+20.3.6 - Firewall Básico com UFW .......77
+20.3.7 - Solução de e-mail Zimbra........81
+20.3.8 - Instalando servidor e serviços no Amazon AWS .......85
+20.3.9 - Dicas para promover seu site..91
+20.3.10 – Testando desempenho de grandes servidores........94
+20.3.11 – Varrendo uma rede.94
+20.3.12 - Requisitos de Alguns CMS e Frameworks .....95
+20.3.13 - Codificação de Caracteres ....97
+20.3.14 - Gerenciamento de Usuários e Permissões.....98
+20.3.15 - Instalação e Configurações do Tomcat7....98
+20.3.16 - Acessar servidor através do Nautilus99
+</pre>
+<a title="email_vps.pdf" href="http://localhost/professor/livros/email_vps.pdf">Download</a></div>
+</div>]]></description>
+			<category>Genérica</category>
+			<pubDate>Fri, 25 Jun 2021 01:51:25 +0000</pubDate>
+		</item>
+		<item>
+			<title>Desenvolvimento Web</title>
+			<link>http://localhost/professor/sobre/alguns-repositorios/2-generica/15-desenvolvimento-web</link>
+			<guid isPermaLink="true">http://localhost/professor/sobre/alguns-repositorios/2-generica/15-desenvolvimento-web</guid>
+			<description><![CDATA[<div class="col-md-6">
+<h3 class="text-center">Desenvolvimento Web</h3>
+<div class="text-left">
+<p>Introdução..2<br /> Introdução aos Servidores3<br /> 1 - Introdução aos Servidores web e SGBD....3<br /> 1.1 - Remover um serviço do Windows......3<br /> 1.2 - Quebrar senha do Windows com o Hiren Boot3<br /> 1.3 - Captura de Tela no Mint..3<br /> 1.4 - Gravador de Imagem em Pendrive no Linux Mint3<br /> 1.5 - Desativando Hibernação no Windows 8+.4<br /> 1.6 - Permissões no Diretório Web Linux...4<br /> 1.7 - Conectar ao Nemo ou Nautilus......5<br /> 1.8 - Instalar pacotes do Servidor Web..5<br /> 1.9 - Virtual Host no ubuntu....6<br /> 1.10 - VirtualHost no Xampp...8<br /> 2 – Introdução ao PostgreSQL...10<br /> 2.1 - Usuários e Privilégios....13<br /> 3 - Introdução ao HTML14<br /> 4 - Introdução do JavaScript21<br /> 5 - Introdução ao CSS.....23<br /> 6 - Introdução ao XML...26<br /> 7 - Introdução ao jQuery.28<br /> 8 - Introdução do Bootstrap.29<br /> 9 - Ambiente de Desenvolvimento....30<br /> 10 - Introdução ao PHP..31<br /> 11 - Introdução ao PHP Orientado a Objetos40<br /> 12 - Introdução ao PDO..42<br /> 13 - Introdução ao MySQL..44<br /> 14 - CMS Joomla.....49<br /> 14.1 - Instalação do CMS Joomla 3.6.5....49<br /> 14.2 - Gerenciando Template para Joomla com Gantry.....52<br /> 14.3 - Gerenciamento de Conteúdo do Joomla 3.6.5.....61<br /> 14.4 - Administração do Joomla 3.6.5......68<br /> 15 - Framework CakePHP 373<br /> 15.1 - Convenções no CakePHP 373<br /> 15.2 - Instalação do CakePHP 3...77<br /> 15.3 - Usando o Plugin cake-control-br do CakePHP 3.....82<br /> 15.4 - Arquivos em Geral do CakePHP 3.85<br /> 15.5 - Gerando Código com Bake no CakePHP 3..86<br /> 15.6 - Dicas..92<br /> 15.7 - Projeto com GitHub e Packagist.....96<br /> 15.8 - Implementação de busca no CakePHP 3....104<br /> 15.9 – MVC no CakePHP 3.106<br /> 15.10 - Form Helper.119<br /> 15.11 - Um Resumo da codificicação do CakePHP..128<br /> 15.12 - Comunicação entre Model, Controller e View.....137<br /> 15.13 - Customizar paginação....138<br /> 15.14 - Acesso a Banco de Dados......139<br /> 15.15 - Usando displayField()....140</p>
+<a title="DesenvolvimentoWeb_A4.pdf" href="http://localhost/professor/livros/DesenvolvimentoWeb_A4.pdf">Download</a></div>
+</div>]]></description>
+			<category>Genérica</category>
+			<pubDate>Fri, 25 Jun 2021 01:49:47 +0000</pubDate>
+		</item>
+	</channel>
+</rss>
