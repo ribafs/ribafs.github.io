@@ -23,7 +23,7 @@ wget \
 wget.sh site
 
 ou
-wget.sh http://ribafs.org/portal
+wget.sh http://ribafs.me/portal
 ```
 
 Agora, estando hospedado aqui no GitHub, pode ser baixado completamente e funciona em qualquer pasta do disco. Basta fazer o download deste repositório:

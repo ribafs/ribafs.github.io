@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        CakePHP: the rapid development php framework:
+        Users    </title>
+    <link href="admin-br/favicon.ico" type="image/x-icon" rel="icon"/><link href="admin-br/favicon.ico" type="image/x-icon" rel="shortcut icon"/>
+    <link rel="stylesheet" href="admin-br/admin_br/css/bootstrap.min.css"/>    <script src="admin-br/admin_br/js/jquery.min.js"></script>    <script src="admin-br/admin_br/js/bootstrap.min.js"></script>    
+    <link rel="stylesheet" href="admin-br/admin_br/css/custom.css"/>    
+
+    
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('[data-toggle="popover"]').popover();   
+        });
+    </script>
+
+</head>
+<body>
+    <header role="banner" class="navbar navbar-inverse">
+        <div class="container">
+<h3 class="titulo" align="center">Acesso ao Sistema</h3>        <br>
+                    </div>
+    </header>
+    <div class="container">
+        <div id="content" class="row">
+                        <div class="users form" align="center">
+<div class="form-group">
+    <form method="post" accept-charset="utf-8" action="admin-br.html"><div style="display:none;"><input type="hidden" name="_method" value="POST"/></div>    <fieldset>
+        <legend>Favor entrar com seu login e senha</legend>
+        <div class="input text"><label for="username">Login</label><input type="text" name="username" class="col4 form-control" autofocus="autofocus" id="username"/></div>        <div class="input password"><label for="password">Senha</label><input type="password" name="password" class="col4 form-control" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&amp;])[A-Za-z\d@$!%*?&amp;]{8,}$" minlenght="8" title="Favor digitar uma senha com pelo menos 8 dígitos, sendo pelo menos 1 algarismo, um minúsculo, um maiúsculo e um símbolo" id="password"/></div>    </fieldset>
+    <button type="submit">Acessar</button>    </form></div>
+</div>
+        </div>
+    </div>
+</body>
+</html>
