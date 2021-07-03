@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="pt-br" dir="ltr">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+          <link rel="icon" href="../../../templates/shaper_helixultimate/images/favicon.ico" />
+      <!-- Apple Touch Icon (reuse 192px icon.png) -->
+      <link rel="apple-touch-icon" href="../../../../phpecia.html">
+
+    
+    <base href="" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Ribamar FS" />
+	<meta name="robots" content="noindex, nofollow" />
+	<meta name="description" content="Frontend, backend, ferramentas, segurança, servidores, etc" />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>Criando Aplicativos e Plugins em CakePHP</title>
+	<link href="../../../templates/shaper_helixultimate/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<script src="../../../media/jui/js/jquery.min.js@3087c65a706ead1ce01bd9e703881259" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery-noconflict.js@3087c65a706ead1ce01bd9e703881259" type="text/javascript"></script>
+	<script src="../../../media/jui/js/jquery-migrate.min.js@3087c65a706ead1ce01bd9e703881259" type="text/javascript"></script>
+	<script src="../../../media/system/js/caption.js@3087c65a706ead1ce01bd9e703881259" type="text/javascript"></script>
+	<script type="text/javascript">
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+	</script>
+
+
+                    <link href="../../../templates/shaper_helixultimate/css/bootstrap.min.css" rel="stylesheet">
+                <link rel="stylesheet" href="../../../templates/shaper_helixultimate/css/template.css" type="text/css" />
+        
+  </head>
+
+  <body class="contentpane com-content view-article layout-default task-none">
+    <div class="article-details " itemscope itemtype="https://schema.org/Article">
+	<meta itemprop="inLanguage" content="pt-BR">
+	
+					
+	
+		
+		<div class="article-header">
+					<h1 itemprop="headline">
+				Criando Aplicativos e Plugins em CakePHP			</h1>
+								
+		
+	</div>
+		<div class="article-can-edit d-flex flex-wrap justify-content-between">
+				</div>
+			<div class="article-info">
+
+	
+					<span class="createdby" itemprop="author" itemscope itemtype="https://schema.org/Person" title="Escrito por Ribamar FS">
+				<span itemprop="name">Ribamar FS</span>	</span>
+		
+		
+					<span class="category-name" title="Categoria: Genérica">
+			<a href="../2-generica.html">Genérica</a>
+	</span>
+		
+		
+					<span class="published" title="Publicado: 24 Junho 2021">
+	<time datetime="2021-06-24T22:44:00+00:00" itemprop="datePublished">
+		24 Junho 2021	</time>
+</span>
+				
+		
+	
+			
+		
+					<span class="hits">
+	<span class="fa fa-eye-o" aria-hidden="true"></span>
+	<meta itemprop="interactionCount" content="UserPageVisits:50">
+	Acessos: 50</span>
+			</div>
+	
+		
+			
+		
+		
+	
+	<div itemprop="articleBody">
+		<div class="col-md-6">
+<h3 class="text-center">Criando Aplicativos e Extensões para o CakePHP 3</h3>
+<div class="text-left"><b>Conteúdo:</b> <br /><br /> 0 - Apresentação<br /> 1 - Introdução 11<br /> 2 – MVC no CakePHP 15<br /> 3 - Convenções sobre Configurações 19<br /> 4 – Instalação e pré-requisitos do CakePHP 3 25<br /> 5 - Gerando CRUD com Bake e muito mais 35<br /> 5.1 - Tutorial de uso dos templates do bake no CakePHP 3 41<br /> 6 – Segurança 51<br /> 7 – Debug e Erros 53<br /> 8 – Detalhes sobre Models 55<br /> 8.1 – Validações 57<br /> 8.2 - O básico sobre o ORM 65<br /> 8.3 - Retornando dados do banco 71<br /> 8.4 - Table Objects 73<br /> 8.5 - Query Builder 79<br /> 8.6 – Behaviors 81<br /> 9 – Detalhes sobre Views 85<br /> 9.1 - Element 91<br /> 9.2 – Layout 93<br /> 9.3 – Helper 95<br /> 9.3.1 – formHelper 99<br /> 9.3.2 – htmlHelper 109<br /> 9.3.3 – TimeHelper 117<br /> 9.3.4 - flashHelper e Flash Component 123<br /> 10 – Detalhes sobre Controllers 125<br /> 10.1 - Componentes 129<br /> 11 – Plugins 133<br /> 11.1 - Criação de Plugin para o CakePHP 3 135<br /> 11.2 - Plugin DebugKit 141<br /> 11.3 - Criação do plugin cake-acl-br 143<br /> 12 - Dicas de CakePHP 3 153<br /> 13 - Aplicativos de Exemplo 159<br /> 13.2 – Blog 161<br /> 13.3 – Aplicativo com Bootstrap 163<br /> 13.4 – Aplicativo via Código 167<br /> 13.5 - Aplicativo Finanças Pessoais 171<br /> 13.6 – Aplicativo usando o Plugin admin-br 177<br /> 13.7 - Aplicativo com uma área restrita/administrativa 179<br /> 13.8 – Autenticação e Autorização Simples 189<br /> 14 – Trabalhando com o Código do CakePHP 3 195<br /> 14.1 - Repassando Informações Entre Controllers 201<br /> 14.2 - Conhecendo o CSS default do CakePHP 3 205<br /> 14.3 - Trabalhando com session no CakePHP 211<br /> 14.4 - Comunicação entre Model e Controller 215<br /> 15 - Migrations 217<br /> 15.1 - Migrate 219<br /> 15.2 - Seed - inserindo registros nas tabelas 223<br /> 15.3 - Exemplos de uso da Faker 225<br /> 15.4 - Resumindo 229<br /> 16 – Ambiente de Desenvolvimento 231<br /> 17 - Referências 233<br /> 18 – Algo sobre o novo CakePHP 4 237<br /> 19 – Conclusão 239<br /> 20 – Apêndice A - Dicas sobre o Composer 243<br /> Caso queira o formato impresso por reembolso: - Na editora em formato digital (PDF ou EPUB) ou no formato impresso, abaixo:<br /> <br /><a href="https://www.clubedeautores.com.br/livro/criando-aplicativos-e-extensoes-para-o-cakephp">Criando Aplicativos e Extensoes para o CakePHP 3</a><br /> <br /> <a title="CakePHPCodigoFonte.zip" href="../../../livros/CakePHPCodigoFonte.zip">Download do Código Fonte</a> <br /><br /> <a title="cakephp3appext.pdf" href="../../../livros/cakephp3appext.pdf">Download</a></div>
+</div> 	</div>
+
+	
+	
+						<div id="pop-print">
+				<a href="12-criando-aplicativos-e-plugins-em-cakephp.html#" onclick="window.print();return false;"><span class="btn btn-outline-secondary btn-sm">
+	<span class="fa fa-print" aria-hidden="true"></span>
+	Imprimir</span>
+</a>			</div>
+			
+				
+		
+	
+
+	
+	</div>
+
+
+  </body>
+</html>
