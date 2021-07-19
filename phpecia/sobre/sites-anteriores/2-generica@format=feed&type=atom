@@ -5,12 +5,29 @@
 	<subtitle type="text">Frontend, backend, ferramentas, segurança, servidores, etc</subtitle>
 	<link rel="alternate" type="text/html" href="http://localhost"/>
 	<id>http://localhost/phpecia/sobre/sites-anteriores/2-generica</id>
-	<updated>2021-07-09T00:23:05+00:00</updated>
+	<updated>2021-07-19T07:43:17+00:00</updated>
 	<author>
 		<name>PHP & Cia</name>
 	</author>
 	<generator uri="https://www.joomla.org">Joomla! - Open Source Content Management</generator>
 	<link rel="self" type="application/atom+xml" href="http://localhost/phpecia/sobre/sites-anteriores/2-generica?format=feed&amp;type=atom"/>
+	<entry>
+		<title>Grupos</title>
+		<link rel="alternate" type="text/html" href="http://localhost/phpecia/sobre/grupos"/>
+		<published>2021-07-19T10:33:01+00:00</published>
+		<updated>2021-07-19T10:33:01+00:00</updated>
+		<id>http://localhost/phpecia/sobre/grupos</id>
+		<author>
+			<name>Ribamar FS</name>
+		</author>
+		<summary type="html">&lt;h3&gt;Meu ciclo de amizade atual&lt;br /&gt;(por área)&lt;/h3&gt;
+&lt;p&gt;&lt;br /&gt;&lt;strong&gt;Linux&lt;/strong&gt;&lt;br /&gt;Debian Brasil&lt;br /&gt;Linux Mint Brasil&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Design &amp;amp; cia&lt;/strong&gt;&lt;br /&gt;Design gráfico Angola (Seja criativo) ilustrações&lt;br /&gt;Designer Gráfico&lt;br /&gt;UI/UX designers (en) **&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Frontend&lt;/strong&gt;&lt;br /&gt;HTML/CSS Ajuda&lt;br /&gt;Web Design Brasil&lt;br /&gt;FrontEnd Brasil - A RESISTENCIA&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Backend&lt;/strong&gt;&lt;br /&gt;PHP Brasil&lt;br /&gt;PHP com Rapadura&lt;br /&gt;Joomla! Brasil&lt;br /&gt;Joomla (en)&lt;br /&gt;Laravel Brasil&lt;br /&gt;CakePHP Brasil&lt;br /&gt;Clube dos Programadores (*)&lt;br /&gt;Docker – Brasil&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Servidores &amp;amp; cia&lt;/strong&gt;&lt;br /&gt;Redes e Servidores Linux&lt;br /&gt;Shell Linux BR&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Despertar da consciência&lt;/strong&gt;&lt;br /&gt;Prepare for Change Brasil&lt;br /&gt;LA VERDAD TE HACE LIBRE&lt;br /&gt;DESPERTAR DA CONSCIÊNCIA&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Pessoais&lt;/strong&gt;&lt;br /&gt;Facebook (Família EF e amigos)&lt;br /&gt;Instagram&lt;br /&gt;Twitter&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Em torno de 635 mil pessoas&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;* Este não é apenas sobre backend, mas mas sobre programação em geral e de qualquer linguagem&lt;br /&gt;&lt;br /&gt;** Grupo gigante, com 202.6 mil integrantes&lt;/p&gt;</summary>
+		<content type="html">&lt;h3&gt;Meu ciclo de amizade atual&lt;br /&gt;(por área)&lt;/h3&gt;
+&lt;p&gt;&lt;br /&gt;&lt;strong&gt;Linux&lt;/strong&gt;&lt;br /&gt;Debian Brasil&lt;br /&gt;Linux Mint Brasil&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Design &amp;amp; cia&lt;/strong&gt;&lt;br /&gt;Design gráfico Angola (Seja criativo) ilustrações&lt;br /&gt;Designer Gráfico&lt;br /&gt;UI/UX designers (en) **&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Frontend&lt;/strong&gt;&lt;br /&gt;HTML/CSS Ajuda&lt;br /&gt;Web Design Brasil&lt;br /&gt;FrontEnd Brasil - A RESISTENCIA&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Backend&lt;/strong&gt;&lt;br /&gt;PHP Brasil&lt;br /&gt;PHP com Rapadura&lt;br /&gt;Joomla! Brasil&lt;br /&gt;Joomla (en)&lt;br /&gt;Laravel Brasil&lt;br /&gt;CakePHP Brasil&lt;br /&gt;Clube dos Programadores (*)&lt;br /&gt;Docker – Brasil&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Servidores &amp;amp; cia&lt;/strong&gt;&lt;br /&gt;Redes e Servidores Linux&lt;br /&gt;Shell Linux BR&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Despertar da consciência&lt;/strong&gt;&lt;br /&gt;Prepare for Change Brasil&lt;br /&gt;LA VERDAD TE HACE LIBRE&lt;br /&gt;DESPERTAR DA CONSCIÊNCIA&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Pessoais&lt;/strong&gt;&lt;br /&gt;Facebook (Família EF e amigos)&lt;br /&gt;Instagram&lt;br /&gt;Twitter&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Em torno de 635 mil pessoas&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;* Este não é apenas sobre backend, mas mas sobre programação em geral e de qualquer linguagem&lt;br /&gt;&lt;br /&gt;** Grupo gigante, com 202.6 mil integrantes&lt;/p&gt;</content>
+		<category term="Genérica" />
+	</entry>
 	<entry>
 		<title>Aplicativos Online</title>
 		<link rel="alternate" type="text/html" href="http://localhost/phpecia/sobre/apps-online"/>
@@ -443,29 +460,6 @@ Adicionar um Novo Domínio ao mesmo Servidor/droplet...51
 20.3.16 - Acessar servidor através do Nautilus99
 &lt;/pre&gt;
 &lt;a title=&quot;email_vps.pdf&quot; href=&quot;http://localhost/phpecia/livros/email_vps.pdf&quot;&gt;Download&lt;/a&gt;&lt;/div&gt;
-&lt;/div&gt;</content>
-		<category term="Genérica" />
-	</entry>
-	<entry>
-		<title>Desenvolvimento Web</title>
-		<link rel="alternate" type="text/html" href="http://localhost/phpecia/sobre/sites-anteriores/2-generica/15-desenvolvimento-web"/>
-		<published>2021-06-25T01:49:47+00:00</published>
-		<updated>2021-06-25T01:49:47+00:00</updated>
-		<id>http://localhost/phpecia/sobre/sites-anteriores/2-generica/15-desenvolvimento-web</id>
-		<author>
-			<name>Ribamar FS</name>
-		</author>
-		<summary type="html">&lt;div class=&quot;col-md-6&quot;&gt;
-&lt;h3 class=&quot;text-center&quot;&gt;Desenvolvimento Web&lt;/h3&gt;
-&lt;div class=&quot;text-left&quot;&gt;
-&lt;p&gt;Introdução..2&lt;br /&gt; Introdução aos Servidores3&lt;br /&gt; 1 - Introdução aos Servidores web e SGBD....3&lt;br /&gt; 1.1 - Remover um serviço do Windows......3&lt;br /&gt; 1.2 - Quebrar senha do Windows com o Hiren Boot3&lt;br /&gt; 1.3 - Captura de Tela no Mint..3&lt;br /&gt; 1.4 - Gravador de Imagem em Pendrive no Linux Mint3&lt;br /&gt; 1.5 - Desativando Hibernação no Windows 8+.4&lt;br /&gt; 1.6 - Permissões no Diretório Web Linux...4&lt;br /&gt; 1.7 - Conectar ao Nemo ou Nautilus......5&lt;br /&gt; 1.8 - Instalar pacotes do Servidor Web..5&lt;br /&gt; 1.9 - Virtual Host no ubuntu....6&lt;br /&gt; 1.10 - VirtualHost no Xampp...8&lt;br /&gt; 2 – Introdução ao PostgreSQL...10&lt;br /&gt; 2.1 - Usuários e Privilégios....13&lt;br /&gt; 3 - Introdução ao HTML14&lt;br /&gt; 4 - Introdução do JavaScript21&lt;br /&gt; 5 - Introdução ao CSS.....23&lt;br /&gt; 6 - Introdução ao XML...26&lt;br /&gt; 7 - Introdução ao jQuery.28&lt;br /&gt; 8 - Introdução do Bootstrap.29&lt;br /&gt; 9 - Ambiente de Desenvolvimento....30&lt;br /&gt; 10 - Introdução ao PHP..31&lt;br /&gt; 11 - Introdução ao PHP Orientado a Objetos40&lt;br /&gt; 12 - Introdução ao PDO..42&lt;br /&gt; 13 - Introdução ao MySQL..44&lt;br /&gt; 14 - CMS Joomla.....49&lt;br /&gt; 14.1 - Instalação do CMS Joomla 3.6.5....49&lt;br /&gt; 14.2 - Gerenciando Template para Joomla com Gantry.....52&lt;br /&gt; 14.3 - Gerenciamento de Conteúdo do Joomla 3.6.5.....61&lt;br /&gt; 14.4 - Administração do Joomla 3.6.5......68&lt;br /&gt; 15 - Framework CakePHP 373&lt;br /&gt; 15.1 - Convenções no CakePHP 373&lt;br /&gt; 15.2 - Instalação do CakePHP 3...77&lt;br /&gt; 15.3 - Usando o Plugin cake-control-br do CakePHP 3.....82&lt;br /&gt; 15.4 - Arquivos em Geral do CakePHP 3.85&lt;br /&gt; 15.5 - Gerando Código com Bake no CakePHP 3..86&lt;br /&gt; 15.6 - Dicas..92&lt;br /&gt; 15.7 - Projeto com GitHub e Packagist.....96&lt;br /&gt; 15.8 - Implementação de busca no CakePHP 3....104&lt;br /&gt; 15.9 – MVC no CakePHP 3.106&lt;br /&gt; 15.10 - Form Helper.119&lt;br /&gt; 15.11 - Um Resumo da codificicação do CakePHP..128&lt;br /&gt; 15.12 - Comunicação entre Model, Controller e View.....137&lt;br /&gt; 15.13 - Customizar paginação....138&lt;br /&gt; 15.14 - Acesso a Banco de Dados......139&lt;br /&gt; 15.15 - Usando displayField()....140&lt;/p&gt;
-&lt;a title=&quot;DesenvolvimentoWeb_A4.pdf&quot; href=&quot;http://localhost/phpecia/livros/DesenvolvimentoWeb_A4.pdf&quot;&gt;Download&lt;/a&gt;&lt;/div&gt;
-&lt;/div&gt;</summary>
-		<content type="html">&lt;div class=&quot;col-md-6&quot;&gt;
-&lt;h3 class=&quot;text-center&quot;&gt;Desenvolvimento Web&lt;/h3&gt;
-&lt;div class=&quot;text-left&quot;&gt;
-&lt;p&gt;Introdução..2&lt;br /&gt; Introdução aos Servidores3&lt;br /&gt; 1 - Introdução aos Servidores web e SGBD....3&lt;br /&gt; 1.1 - Remover um serviço do Windows......3&lt;br /&gt; 1.2 - Quebrar senha do Windows com o Hiren Boot3&lt;br /&gt; 1.3 - Captura de Tela no Mint..3&lt;br /&gt; 1.4 - Gravador de Imagem em Pendrive no Linux Mint3&lt;br /&gt; 1.5 - Desativando Hibernação no Windows 8+.4&lt;br /&gt; 1.6 - Permissões no Diretório Web Linux...4&lt;br /&gt; 1.7 - Conectar ao Nemo ou Nautilus......5&lt;br /&gt; 1.8 - Instalar pacotes do Servidor Web..5&lt;br /&gt; 1.9 - Virtual Host no ubuntu....6&lt;br /&gt; 1.10 - VirtualHost no Xampp...8&lt;br /&gt; 2 – Introdução ao PostgreSQL...10&lt;br /&gt; 2.1 - Usuários e Privilégios....13&lt;br /&gt; 3 - Introdução ao HTML14&lt;br /&gt; 4 - Introdução do JavaScript21&lt;br /&gt; 5 - Introdução ao CSS.....23&lt;br /&gt; 6 - Introdução ao XML...26&lt;br /&gt; 7 - Introdução ao jQuery.28&lt;br /&gt; 8 - Introdução do Bootstrap.29&lt;br /&gt; 9 - Ambiente de Desenvolvimento....30&lt;br /&gt; 10 - Introdução ao PHP..31&lt;br /&gt; 11 - Introdução ao PHP Orientado a Objetos40&lt;br /&gt; 12 - Introdução ao PDO..42&lt;br /&gt; 13 - Introdução ao MySQL..44&lt;br /&gt; 14 - CMS Joomla.....49&lt;br /&gt; 14.1 - Instalação do CMS Joomla 3.6.5....49&lt;br /&gt; 14.2 - Gerenciando Template para Joomla com Gantry.....52&lt;br /&gt; 14.3 - Gerenciamento de Conteúdo do Joomla 3.6.5.....61&lt;br /&gt; 14.4 - Administração do Joomla 3.6.5......68&lt;br /&gt; 15 - Framework CakePHP 373&lt;br /&gt; 15.1 - Convenções no CakePHP 373&lt;br /&gt; 15.2 - Instalação do CakePHP 3...77&lt;br /&gt; 15.3 - Usando o Plugin cake-control-br do CakePHP 3.....82&lt;br /&gt; 15.4 - Arquivos em Geral do CakePHP 3.85&lt;br /&gt; 15.5 - Gerando Código com Bake no CakePHP 3..86&lt;br /&gt; 15.6 - Dicas..92&lt;br /&gt; 15.7 - Projeto com GitHub e Packagist.....96&lt;br /&gt; 15.8 - Implementação de busca no CakePHP 3....104&lt;br /&gt; 15.9 – MVC no CakePHP 3.106&lt;br /&gt; 15.10 - Form Helper.119&lt;br /&gt; 15.11 - Um Resumo da codificicação do CakePHP..128&lt;br /&gt; 15.12 - Comunicação entre Model, Controller e View.....137&lt;br /&gt; 15.13 - Customizar paginação....138&lt;br /&gt; 15.14 - Acesso a Banco de Dados......139&lt;br /&gt; 15.15 - Usando displayField()....140&lt;/p&gt;
-&lt;a title=&quot;DesenvolvimentoWeb_A4.pdf&quot; href=&quot;http://localhost/phpecia/livros/DesenvolvimentoWeb_A4.pdf&quot;&gt;Download&lt;/a&gt;&lt;/div&gt;
 &lt;/div&gt;</content>
 		<category term="Genérica" />
 	</entry>

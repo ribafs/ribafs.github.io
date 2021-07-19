@@ -5,10 +5,20 @@
 		<title>Início</title>
 		<description><![CDATA[Frontend, backend, ferramentas, segurança, servidores, etc]]></description>
 		<link>http://localhost/phpecia/2-generica</link>
-		<lastBuildDate>Fri, 09 Jul 2021 00:22:49 +0000</lastBuildDate>
+		<lastBuildDate>Mon, 19 Jul 2021 07:43:12 +0000</lastBuildDate>
 		<generator>Joomla! - Open Source Content Management</generator>
 		<atom:link rel="self" type="application/rss+xml" href="http://localhost/phpecia/2-generica?format=feed&amp;type=rss"/>
 		<language>pt-br</language>
+		<item>
+			<title>Grupos</title>
+			<link>http://localhost/phpecia/sobre/grupos</link>
+			<guid isPermaLink="true">http://localhost/phpecia/sobre/grupos</guid>
+			<description><![CDATA[<h3>Meu ciclo de amizade atual<br />(por área)</h3>
+<p><br /><strong>Linux</strong><br />Debian Brasil<br />Linux Mint Brasil<br /><br /><strong>Design &amp; cia</strong><br />Design gráfico Angola (Seja criativo) ilustrações<br />Designer Gráfico<br />UI/UX designers (en) **<br /><br /><strong>Frontend</strong><br />HTML/CSS Ajuda<br />Web Design Brasil<br />FrontEnd Brasil - A RESISTENCIA<br /><br /><strong>Backend</strong><br />PHP Brasil<br />PHP com Rapadura<br />Joomla! Brasil<br />Joomla (en)<br />Laravel Brasil<br />CakePHP Brasil<br />Clube dos Programadores (*)<br />Docker – Brasil<br /><br /><strong>Servidores &amp; cia</strong><br />Redes e Servidores Linux<br />Shell Linux BR<br /><br /><strong>Despertar da consciência</strong><br />Prepare for Change Brasil<br />LA VERDAD TE HACE LIBRE<br />DESPERTAR DA CONSCIÊNCIA<br /><br /><strong>Pessoais</strong><br />Facebook (Família EF e amigos)<br />Instagram<br />Twitter<br /><br /><strong>Em torno de 635 mil pessoas</strong></p>
+<p>* Este não é apenas sobre backend, mas mas sobre programação em geral e de qualquer linguagem<br /><br />** Grupo gigante, com 202.6 mil integrantes</p>]]></description>
+			<category>Genérica</category>
+			<pubDate>Mon, 19 Jul 2021 10:33:01 +0000</pubDate>
+		</item>
 		<item>
 			<title>Aplicativos Online</title>
 			<link>http://localhost/phpecia/sobre/apps-online</link>
@@ -239,19 +249,6 @@ Adicionar um Novo Domínio ao mesmo Servidor/droplet...51
 </div>]]></description>
 			<category>Genérica</category>
 			<pubDate>Fri, 25 Jun 2021 01:51:25 +0000</pubDate>
-		</item>
-		<item>
-			<title>Desenvolvimento Web</title>
-			<link>http://localhost/phpecia/2-generica/15-desenvolvimento-web</link>
-			<guid isPermaLink="true">http://localhost/phpecia/2-generica/15-desenvolvimento-web</guid>
-			<description><![CDATA[<div class="col-md-6">
-<h3 class="text-center">Desenvolvimento Web</h3>
-<div class="text-left">
-<p>Introdução..2<br /> Introdução aos Servidores3<br /> 1 - Introdução aos Servidores web e SGBD....3<br /> 1.1 - Remover um serviço do Windows......3<br /> 1.2 - Quebrar senha do Windows com o Hiren Boot3<br /> 1.3 - Captura de Tela no Mint..3<br /> 1.4 - Gravador de Imagem em Pendrive no Linux Mint3<br /> 1.5 - Desativando Hibernação no Windows 8+.4<br /> 1.6 - Permissões no Diretório Web Linux...4<br /> 1.7 - Conectar ao Nemo ou Nautilus......5<br /> 1.8 - Instalar pacotes do Servidor Web..5<br /> 1.9 - Virtual Host no ubuntu....6<br /> 1.10 - VirtualHost no Xampp...8<br /> 2 – Introdução ao PostgreSQL...10<br /> 2.1 - Usuários e Privilégios....13<br /> 3 - Introdução ao HTML14<br /> 4 - Introdução do JavaScript21<br /> 5 - Introdução ao CSS.....23<br /> 6 - Introdução ao XML...26<br /> 7 - Introdução ao jQuery.28<br /> 8 - Introdução do Bootstrap.29<br /> 9 - Ambiente de Desenvolvimento....30<br /> 10 - Introdução ao PHP..31<br /> 11 - Introdução ao PHP Orientado a Objetos40<br /> 12 - Introdução ao PDO..42<br /> 13 - Introdução ao MySQL..44<br /> 14 - CMS Joomla.....49<br /> 14.1 - Instalação do CMS Joomla 3.6.5....49<br /> 14.2 - Gerenciando Template para Joomla com Gantry.....52<br /> 14.3 - Gerenciamento de Conteúdo do Joomla 3.6.5.....61<br /> 14.4 - Administração do Joomla 3.6.5......68<br /> 15 - Framework CakePHP 373<br /> 15.1 - Convenções no CakePHP 373<br /> 15.2 - Instalação do CakePHP 3...77<br /> 15.3 - Usando o Plugin cake-control-br do CakePHP 3.....82<br /> 15.4 - Arquivos em Geral do CakePHP 3.85<br /> 15.5 - Gerando Código com Bake no CakePHP 3..86<br /> 15.6 - Dicas..92<br /> 15.7 - Projeto com GitHub e Packagist.....96<br /> 15.8 - Implementação de busca no CakePHP 3....104<br /> 15.9 – MVC no CakePHP 3.106<br /> 15.10 - Form Helper.119<br /> 15.11 - Um Resumo da codificicação do CakePHP..128<br /> 15.12 - Comunicação entre Model, Controller e View.....137<br /> 15.13 - Customizar paginação....138<br /> 15.14 - Acesso a Banco de Dados......139<br /> 15.15 - Usando displayField()....140</p>
-<a title="DesenvolvimentoWeb_A4.pdf" href="http://localhost/phpecia/livros/DesenvolvimentoWeb_A4.pdf">Download</a></div>
-</div>]]></description>
-			<category>Genérica</category>
-			<pubDate>Fri, 25 Jun 2021 01:49:47 +0000</pubDate>
 		</item>
 	</channel>
 </rss>

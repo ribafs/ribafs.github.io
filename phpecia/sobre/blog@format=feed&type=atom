@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- generator="Joomla! - Open Source Content Management" -->
 <feed xmlns="http://www.w3.org/2005/Atom"  xml:lang="pt-br">
-	<title type="text">Blog</title>
+	<title type="text">Blog (em construção)</title>
 	<subtitle type="text">Frontend, backend, ferramentas, segurança, servidores, etc</subtitle>
 	<link rel="alternate" type="text/html" href="http://localhost"/>
 	<id>http://localhost/phpecia/sobre/blog</id>
-	<updated>2021-07-09T00:22:47+00:00</updated>
+	<updated>2021-07-19T07:43:10+00:00</updated>
 	<author>
 		<name>PHP & Cia</name>
 	</author>
