@@ -23,6 +23,8 @@
 <a href="../../down/livros/servidoreslinux.pdf" target="_blank" rel="noopener">Servidores Linux (primeiro)</a><br>
 <a href="../../down/livros/servidoresvps.pdf" target="_blank" rel="noopener">Servidores tipo VPS</a><br>
 <a href="../../down/livros/servidorweb_vps.pdf" target="_blank" rel="noopener">Servidor Web tipo VPS</a><br>
-<a href="../../down/livros/sgbdostgresql.pdf" target="_blank" rel="noopener">SGBD PostgreSQL</a></p>
+<a href="../../down/livros/sgbdostgresql.pdf" target="_blank" rel="noopener">SGBD PostgreSQL</a><br>
+<a href="https://raw.githubusercontent.com/ribafs/phpoo-livro/main/phpoo.pdf" target="_blank" rel="noopener">Introdução ao PHPOO usando MVC com rotas</a>
+</p>
 
 
