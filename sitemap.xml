@@ -116,11 +116,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://ribafs.github.io/editor/</loc>
-         <lastmod>2022-08-30</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://ribafs.github.io/ferramentas/mkdocs/</loc>
          <lastmod>2022-08-30</lastmod>
          <changefreq>daily</changefreq>

@@ -34,7 +34,7 @@ plugins:
         indexing: full
 
 nav:
-#    - Início: index.md
+    - Início: index.md
     - Front-end:
         - HTML:
             - Introdução: frontend/html/index.md
