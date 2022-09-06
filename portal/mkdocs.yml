@@ -119,6 +119,8 @@ nav:
         - Livros free: sobre/livros.md
         - Sites anteriores: sobre/sites.md
         - Contato: sobre/contato.md
+        
+    - Comentários: comments.md
 
-    - Mapa do site: mapa.md
+#    - Mapa do site: mapa.md
 
