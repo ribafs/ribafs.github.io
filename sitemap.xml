@@ -2,207 +2,207 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://ribafs.github.io/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ribafs.github.io/comments/</loc>
-         <lastmod>2022-09-06</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://ribafs.github.io/mapa/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ribafs.github.io/backend/ajax/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ribafs.github.io/backend/ambiente/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ribafs.github.io/backend/ambiente/linux/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ribafs.github.io/backend/ambiente/windows/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ribafs.github.io/backend/api/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ribafs.github.io/backend/cms/afternoom/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ribafs.github.io/backend/cms/joomla/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ribafs.github.io/backend/framework/ci/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ribafs.github.io/backend/framework/laravel/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ribafs.github.io/backend/pdo/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ribafs.github.io/backend/php/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ribafs.github.io/backend/phpoo/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ribafs.github.io/backend/phpoo/mvc/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ribafs.github.io/backend/phpoo/mvc/fw-zero/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://ribafs.github.io/backend/phpoo/mvc/php-router/</loc>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ribafs.github.io/backend/sgbd/mysql/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ribafs.github.io/backend/sgbd/postgres/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ribafs.github.io/backend/sgbd/sqlite/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ribafs.github.io/devops/docker/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ribafs.github.io/devops/git/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ribafs.github.io/devops/github/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ribafs.github.io/devops/heroku/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ribafs.github.io/ferramentas/mkdocs/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ribafs.github.io/frontend/bs/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ribafs.github.io/frontend/css/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ribafs.github.io/frontend/html/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ribafs.github.io/frontend/html/tags/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ribafs.github.io/frontend/indexeddb/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ribafs.github.io/frontend/js/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ribafs.github.io/frontend/localstorage/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ribafs.github.io/frontend/react/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ribafs.github.io/frontend/websql/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ribafs.github.io/linux/linuxwindows/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ribafs.github.io/linux/desktop/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ribafs.github.io/linux/scripts/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ribafs.github.io/sobre/contato/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ribafs.github.io/sobre/curriculo/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ribafs.github.io/sobre/livros/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ribafs.github.io/sobre/sites/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
