@@ -65,8 +65,8 @@ nav:
         #    - Introdução: backend/ajax/index.md
         #- API: 
         #    - Introdução: backend/api/index.md
-        #- PHP: 
-        #    - Introdução: backend/php/index.md
+        - PHP: 
+            - Expressões Regulares: backend/php/regex.md
         #- PDO: 
         #    - Introdução: backend/pdo/index.md
         - PHP-OO: 
