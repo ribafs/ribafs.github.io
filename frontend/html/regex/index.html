@@ -7,9 +7,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <meta name="author" content="Ribamar FS">
-        <link rel="canonical" href="https://ribafs.github.io/backend/phpoo/mvc/">
+        <link rel="canonical" href="https://ribafs.github.io/frontend/html/regex/">
         <link rel="shortcut icon" href="../../../img/favicon.ico">
-        <title>Introdução - RibaFS Portal</title>
+        <title>Regex em HTML 5 - RibaFS Portal</title>
         <link href="../../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../../css/base.css" rel="stylesheet">
@@ -40,7 +40,7 @@
                             <li class="navitem">
                                 <a href="../../.." class="nav-link">Início</a>
                             </li>
-                            <li class="dropdown">
+                            <li class="dropdown active">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Front-end <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
@@ -49,7 +49,7 @@
     <ul class="dropdown-menu">
             
 <li>
-    <a href="../../../frontend/html/regex/" class="dropdown-item">Regex em HTML 5</a>
+    <a href="./" class="dropdown-item active">Regex em HTML 5</a>
 </li>
     </ul>
   </li>
@@ -59,7 +59,7 @@
     <ul class="dropdown-menu">
             
 <li>
-    <a href="../../../frontend/js/" class="dropdown-item">Introdução</a>
+    <a href="../../js/" class="dropdown-item">Introdução</a>
 </li>
             
 <li>
@@ -67,13 +67,13 @@
 </li>
             
 <li>
-    <a href="../../../frontend/js/reduce/" class="dropdown-item">Método Reduce</a>
+    <a href="../../js/reduce/" class="dropdown-item">Método Reduce</a>
 </li>
     </ul>
   </li>
                                 </ul>
                             </li>
-                            <li class="dropdown active">
+                            <li class="dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Back-end <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
@@ -82,7 +82,7 @@
     <ul class="dropdown-menu">
             
 <li>
-    <a href="../../php/regex/" class="dropdown-item">Expressões Regulares</a>
+    <a href="../../../backend/php/regex/" class="dropdown-item">Expressões Regulares</a>
 </li>
     </ul>
   </li>
@@ -92,7 +92,7 @@
     <ul class="dropdown-menu">
             
 <li>
-    <a href="../" class="dropdown-item">Introdução</a>
+    <a href="../../../backend/phpoo/" class="dropdown-item">Introdução</a>
 </li>
             
   <li class="dropdown-submenu">
@@ -100,15 +100,15 @@
     <ul class="dropdown-menu">
             
 <li>
-    <a href="./" class="dropdown-item active">Introdução</a>
+    <a href="../../../backend/phpoo/mvc/" class="dropdown-item">Introdução</a>
 </li>
             
 <li>
-    <a href="fw-zero/" class="dropdown-item">Framework do zero</a>
+    <a href="../../../backend/phpoo/mvc/fw-zero/" class="dropdown-item">Framework do zero</a>
 </li>
             
 <li>
-    <a href="php-router/" class="dropdown-item">Rotas simples</a>
+    <a href="../../../backend/phpoo/mvc/php-router/" class="dropdown-item">Rotas simples</a>
 </li>
     </ul>
   </li>
@@ -188,7 +188,7 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a href="https://github.com/ribafs/ribafs-portal/edit/master/docs/backend/phpoo/mvc/index.md" class="nav-link"><i class="fa fa-github"></i> Edit on GitHub</a>
+                                <a href="https://github.com/ribafs/ribafs-portal/edit/master/docs/frontend/html/regex.md" class="nav-link"><i class="fa fa-github"></i> Edit on GitHub</a>
                             </li>
                     </ul>
                 </div>
@@ -208,16 +208,99 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#aguarde" class="nav-link">Aguarde ...</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
         </ul>
     </div>
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="aguarde">Aguarde ...</h1></div>
+<h3 id="introducao-as-expressoes-regulares-em-html-5">Introdução às Expressões Regulares em HTML 5</h3>
+<p>São geralmente usadas para validar formulários no HTML 5</p>
+<p>Nos campos do tipo:
+- text
+- email
+- number
+- url
+- tel</p>
+<h3 id="exemplos">Exemplos</h3>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;uname&quot;</span> <span class="na">pattern</span><span class="o">=</span><span class="s">&quot;[a-zA-Z0-9]+&quot;</span> <span class="na">minlength</span><span class="o">=</span><span class="s">&quot;4&quot;</span> <span class="na">maxlength</span><span class="o">=</span><span class="s">&quot;10&quot;</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;email&quot;</span> <span class="na">pattern</span><span class="o">=</span><span class="s">&quot;.+@tutsplus\.com|.+@envato\.com&quot;</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">form</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;name&quot;</span><span class="p">&gt;</span>Name: *<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;name&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;name&quot;</span> <span class="na">pattern</span><span class="o">=</span><span class="s">&quot;[a-zA-Z]+&quot;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&quot;Monty&quot;</span> <span class="na">required</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;name&quot;</span><span class="p">&gt;</span>Company Email Address: *<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;email&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;email&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;email&quot;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&quot;joe@company.com&quot;</span> <span class="na">pattern</span><span class="o">=</span><span class="s">&quot;.+@company\.com&quot;</span> <span class="na">required</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;name&quot;</span><span class="p">&gt;</span>Age: <span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;number&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;age&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;age&quot;</span> <span class="na">min</span><span class="o">=</span><span class="s">&quot;10&quot;</span> <span class="na">max</span><span class="o">=</span><span class="s">&quot;80&quot;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&quot;30&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;name&quot;</span><span class="p">&gt;</span>Favorite Tuts+ Website: *<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;url&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;website&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;website&quot;</span> <span class="na">pattern</span><span class="o">=</span><span class="s">&quot;https://.*\.tutsplus\.com&quot;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&quot;https://code.tutsplus.com&quot;</span> <span class="na">required</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+</code></pre></div>
+
+<h3 id="expressoes-usadas-frequentemente">Expressões usadas frequentemente</h3>
+<div class="highlight"><pre><span></span><code>[a-zA-Z0-9-_]{4, 24}
+
+[a-zA-Z][a-zA-Z0-9-_]{4,24}
+</code></pre></div>
+
+<h3 id="validando-numeros-de-telefone">Validando números de telefone</h3>
+<div class="highlight"><pre><span></span><code>\(?(\d{3})\)?[-\.\s]?(\d{3})[-\.\s]?(\d{4})
+</code></pre></div>
+
+<h3 id="validando-e-mail">Validando e-mail</h3>
+<div class="highlight"><pre><span></span><code>(\w\.?)+@[\w\.-]+\.\w{2,4}
+</code></pre></div>
+
+<h3 id="validando-url">Validando URL</h3>
+<div class="highlight"><pre><span></span><code>[(http(s)?):\/\/(www\.)?\w-/=#%<span class="err">&amp;</span>\.\?]{2,}\.[a-z]{2,}([\w-/=#%<span class="err">&amp;</span>\.\?]*)
+</code></pre></div>
+
+<h3 id="validando-codigo-de-pais-com-3-letras">Validando código de país com 3 letras</h3>
+<div class="highlight"><pre><span></span><code>[A-Za-z]{3}
+</code></pre></div>
+
+<h3 id="validando-cpf">Validando CPF</h3>
+<p>CSS para deixar as letras digitadas em vermelho com fundo róseo (invalid) quando não atenderem ao padrão solicitado e pretas com fundo branco quando atenderem</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+    <span class="nt">input</span><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="s2">&quot;text&quot;</span><span class="o">]</span> <span class="p">{</span> <span class="k">background-color</span><span class="p">:</span> <span class="kc">white</span><span class="p">;</span> <span class="k">color</span><span class="p">:</span> <span class="kc">black</span><span class="p">;</span> <span class="p">}</span>
+    <span class="nt">input</span><span class="p">:</span><span class="nd">invalid</span>      <span class="p">{</span> <span class="k">background-color</span><span class="p">:</span> <span class="mh">#fcc</span> <span class="p">;</span> <span class="k">color</span><span class="p">:</span> <span class="kc">red</span><span class="p">;</span> <span class="p">}</span>
+<span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">form</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;cadastro1&quot;</span><span class="p">&gt;</span>
+   CPF:
+   <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;cpf&quot;</span> <span class="na">pattern</span><span class="o">=</span><span class="s">&quot;\d{3}\.\d{3}\.\d{3}-\d{2}&quot;</span><span class="p">&gt;</span>
+   <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;submit&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+</code></pre></div>
+
+<p>Ao digitar um CPF inválido, o input deve ficar com fundo e letra vermelhos. Ao tentar enviar o CPF inválido:<br>
+- O formulário não deve ser enviado<br>
+- Deve aparecer uma mensagem de erro padrão, perto do input<br>
+- Na mensagem de erro também deve aparecer o conteúdo de title</p>
+<h3 id="dicas-do-aurelio">Dicas do Aurélio</h3>
+<ul>
+<li><a href="https://aurelio.net/regex/html5/">https://aurelio.net/regex/html5/</a></li>
+</ul>
+<h3 id="referencias">Referências</h3>
+<ul>
+<li><a href="https://code.tutsplus.com/tutorials/a-simple-regex-cheat-sheet--cms-31278">https://code.tutsplus.com/tutorials/a-simple-regex-cheat-sheet--cms-31278</a></li>
+<li><a href="https://code.tutsplus.com/tutorials/form-input-validation-using-only-html5-and-regex--cms-33095">https://code.tutsplus.com/tutorials/form-input-validation-using-only-html5-and-regex--cms-33095</a></li>
+<li><a href="https://www.w3schools.com/tags/att_input_pattern.asp">https://www.w3schools.com/tags/att_input_pattern.asp</a></li>
+<li><a href="https://aurelio.net/regex/html5/">https://aurelio.net/regex/html5/</a></li>
+</ul></div>
             </div>
         </div>
 

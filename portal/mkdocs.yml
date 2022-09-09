@@ -36,9 +36,9 @@ plugins:
 nav:
     - Início: index.md
     - Front-end:
-        #- HTML:
+        - HTML:
         #    - Introdução: frontend/html/index.md
-        #    - TAGs: frontend/html/tags.md
+            - Regex em HTML 5: frontend/html/regex.md
         #- CSS:
         #    - Introdução: frontend/css/index.md
         - JavaScript:
