@@ -95,7 +95,7 @@ nav:
         #        - Introdução: backend/framework/ci/index.md
 
     - DevOps:
-        - Introdução: devops/index.md
+        - .htaccess: devops/htaccess.md
         #- Git: 
         #    - Introdução: devops/git/index.md
         #- GitHub: 

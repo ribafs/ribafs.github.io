@@ -16,9 +16,10 @@
         </div>
         <div class="offset-lg-1 mt-2 logo text-center">
             <p><strong>Últimas atualizações (09/09/2022):</strong></p>
-            <p>Back-end - PHP - Expressões regulares</p>
-            <p>Front-end - Javascript - Método reduce</p>
-            <p>Front-end - HTML 5 - Regex em HTML 5</p>
+            <p>Back-end - PHP - Expressões regulares<br>
+            Front-end - Javascript - Método reduce<br>
+            Front-end - HTML 5 - Regex em HTML 5<br>
+            DevOps - .htaccess</p>            
         </div>
     </div>
 
