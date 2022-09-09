@@ -14,6 +14,12 @@
         <div class="col-lg-12 mt-5 pe-5 logo" style="margin-left: -100px">
             <p><strong>Este site contém pouco conteúdo ainda. Criei para abrigar aqui muita coisa que estudo e descubro.</strong></p>
         </div>
+        <div class="offset-lg-1 mt-5 logo text-center">
+            <p><strong>Últimas atualizações (09/09/2022):</strong></p>
+            <p>Back-end - PHP - Expressões regulares</p>
+            <p>Front-end - Javascript - Método reduce</p>
+            <p>Front-end - HTML 5 - Regex em HTML 5</p>
+        </div>
     </div>
 
     <div class="row">

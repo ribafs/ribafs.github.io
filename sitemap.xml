@@ -51,11 +51,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://ribafs.github.io/frontend/js/</loc>
-         <lastmod>2022-09-09</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://ribafs.github.io/frontend/js/reduce/</loc>
          <lastmod>2022-09-09</lastmod>
          <changefreq>daily</changefreq>

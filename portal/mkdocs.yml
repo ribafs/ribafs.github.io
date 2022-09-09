@@ -42,7 +42,7 @@ nav:
         #- CSS:
         #    - Introdução: frontend/css/index.md
         - JavaScript:
-            - Introdução: frontend/js/index.md
+        #    - Introdução: frontend/js/index.md
             - Muito conteúdo: https://ribafs.github.io/javascript
             - Método Reduce : frontend/js/reduce.md
         #- Bootstrap:
