@@ -1,8 +1,8 @@
-# Diferenças entre Linux e Windows
+### Diferenças entre Linux e Windows
 
-## Algumas das diferenças que tenho percebido
+#### Algumas das diferenças que tenho percebido
 
-<h3>Com foco em programação web</h3>
+#### Com foco em programação web
 
 <p><strong>É relativo</strong>. Sei que esta experiência de sistema operacional tem algo de relativo, do background pessoal de cada um, mas vou relatar aqui a minha experiência. Faço isso porque me incomoda ver tanta gente usando o windows quando, pela minha experiência, poderia estar trabalhando com mais conforto e satisfação no Linux.</p>
 

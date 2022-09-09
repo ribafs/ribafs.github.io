@@ -11,6 +11,12 @@
     </div>
 
     <div class="row">
+        <div class="col-lg-12 mt-5 pe-5 logo" style="margin-left: -100px">
+            <p><strong>Este site contém pouco conteúdo ainda. Criei para abrigar aqui muita coisa que estudo e descubro.</strong></p>
+        </div>
+    </div>
+
+    <div class="row">
         <p class="footer col-lg-12 mb-0" style="padding-right: 150px"><i>Ribamar FS - 2022</i></p>
     </div>
 </div>
