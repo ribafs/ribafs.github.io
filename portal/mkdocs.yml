@@ -37,8 +37,14 @@ nav:
     - Início: index.md
     - Front-end:
         - HTML:
-        #    - Introdução: frontend/html/index.md
-            - Regex em HTML 5: frontend/html/regex.md
+        #    - Introdução: frontend/html/index.md        
+            - HTML 5:
+                - Dicas: frontend/html/html5/dicas.md
+                - Inputs e atributos: frontend/html/html5/inputs.md
+                - CSS3 para o HTML 5: frontend/html/html5/css.md
+                - Tags semânticas: frontend/html/html5/semanticas.md
+                - Validação: frontend/html/html5/pattern-validation/dist/index.html
+                - Regex: frontend/html/html5/regex.md
         #- CSS:
         #    - Introdução: frontend/css/index.md
         - JavaScript:
@@ -71,9 +77,9 @@ nav:
         #- PDO: 
         #    - Introdução: backend/pdo/index.md
         - PHP-OO: 
-            - Introdução: backend/phpoo/index.md
+            #- Introdução: backend/phpoo/index.md
             - MVC: 
-                - Introdução: backend/phpoo/mvc/index.md
+                #- Introdução: backend/phpoo/mvc/index.md
                 - Framework do zero: backend/phpoo/mvc/fw-zero.md
                 - Rotas simples: backend/phpoo/mvc/php-router.md                
         #- SGBD: 

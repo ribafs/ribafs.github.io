@@ -7,9 +7,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <meta name="author" content="Ribamar FS">
-        <link rel="canonical" href="https://ribafs.github.io/backend/phpoo/mvc/php-router/">
+        <link rel="canonical" href="https://ribafs.github.io/frontend/html/html5/css/">
         <link rel="shortcut icon" href="../../../../img/favicon.ico">
-        <title>Rotas simples - RibaFS Portal</title>
+        <title>CSS3 para o HTML 5 - RibaFS Portal</title>
         <link href="../../../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../../../css/base.css" rel="stylesheet">
@@ -40,7 +40,7 @@
                             <li class="navitem">
                                 <a href="../../../.." class="nav-link">Início</a>
                             </li>
-                            <li class="dropdown">
+                            <li class="dropdown active">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Front-end <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
@@ -53,27 +53,27 @@
     <ul class="dropdown-menu">
             
 <li>
-    <a href="../../../../frontend/html/html5/dicas/" class="dropdown-item">Dicas</a>
+    <a href="../dicas/" class="dropdown-item">Dicas</a>
 </li>
             
 <li>
-    <a href="../../../../frontend/html/html5/inputs/" class="dropdown-item">Inputs e atributos</a>
+    <a href="../inputs/" class="dropdown-item">Inputs e atributos</a>
 </li>
             
 <li>
-    <a href="../../../../frontend/html/html5/css/" class="dropdown-item">CSS3 para o HTML 5</a>
+    <a href="./" class="dropdown-item active">CSS3 para o HTML 5</a>
 </li>
             
 <li>
-    <a href="../../../../frontend/html/html5/semanticas/" class="dropdown-item">Tags semânticas</a>
+    <a href="../semanticas/" class="dropdown-item">Tags semânticas</a>
 </li>
             
 <li>
-    <a href="../../../../frontend/html/html5/pattern-validation/dist/" class="dropdown-item">Validação</a>
+    <a href="../pattern-validation/dist/" class="dropdown-item">Validação</a>
 </li>
             
 <li>
-    <a href="../../../../frontend/html/html5/regex/" class="dropdown-item">Regex</a>
+    <a href="../regex/" class="dropdown-item">Regex</a>
 </li>
     </ul>
   </li>
@@ -89,13 +89,13 @@
 </li>
             
 <li>
-    <a href="../../../../frontend/js/reduce/" class="dropdown-item">Método Reduce</a>
+    <a href="../../../js/reduce/" class="dropdown-item">Método Reduce</a>
 </li>
     </ul>
   </li>
                                 </ul>
                             </li>
-                            <li class="dropdown active">
+                            <li class="dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Back-end <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
@@ -104,11 +104,11 @@
     <ul class="dropdown-menu">
             
 <li>
-    <a href="../../../php/regex/" class="dropdown-item">Expressões Regulares</a>
+    <a href="../../../../backend/php/regex/" class="dropdown-item">Expressões Regulares</a>
 </li>
             
 <li>
-    <a href="../../../php/url/" class="dropdown-item">Trabalhando com URL</a>
+    <a href="../../../../backend/php/url/" class="dropdown-item">Trabalhando com URL</a>
 </li>
     </ul>
   </li>
@@ -122,11 +122,11 @@
     <ul class="dropdown-menu">
             
 <li>
-    <a href="../fw-zero/" class="dropdown-item">Framework do zero</a>
+    <a href="../../../../backend/phpoo/mvc/fw-zero/" class="dropdown-item">Framework do zero</a>
 </li>
             
 <li>
-    <a href="./" class="dropdown-item active">Rotas simples</a>
+    <a href="../../../../backend/phpoo/mvc/php-router/" class="dropdown-item">Rotas simples</a>
 </li>
     </ul>
   </li>
@@ -206,7 +206,7 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a href="https://github.com/ribafs/ribafs-portal/edit/master/docs/backend/phpoo/mvc/php-router.md" class="nav-link"><i class="fa fa-github"></i> Edit on GitHub</a>
+                                <a href="https://github.com/ribafs/ribafs-portal/edit/master/docs/frontend/html/html5/css.md" class="nav-link"><i class="fa fa-github"></i> Edit on GitHub</a>
                             </li>
                     </ul>
                 </div>
@@ -226,7 +226,7 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="2"><a href="#sistema-de-rotas-simples" class="nav-link">Sistema de rotas simples</a>
+            <li class="nav-item" data-level="2"><a href="#css3-no-html5" class="nav-link">CSS3 no HTML5</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -235,37 +235,224 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h2 id="sistema-de-rotas-simples">Sistema de rotas simples</h2>
-<h4 id="para-aplicativo-php-com-mvc">Para aplicativo PHP com MVC</h4>
-<p><a href="https://github.com/ribafs/php-router">https://github.com/ribafs/php-router</a></p>
-<p>O sistema de rotas mais simples que conheço usado em aplicativos PHP com MVC.</p>
-<p>Pesquisei e estudei uma boa quantidade de projetos em PHP com rotas para MVC, que fossem simples, na busca do Github</p>
-<p><a href="https://github.com/search">https://github.com/search</a></p>
-<p>Como já relatei, a minha intenção era não somente usar, mas principalmente entender e poder explicar. Como não sou um expert em PHP, principalmente em MVC e rotas, precisava encontrar um projeto simples.</p>
-<p>Eu especificava nas buscas que queria algo simple. Mas isso me reforça a ideia de que simplicidade é algo bem relativo, pois a maioria retornava algo que ao meu ver não era simples. Simples para alguém que tem um forte domínio sobre um assunto é algo bem diferente para alguém que está iniciando no assunto.</p>
-<h4 id="qual-a-melhor-linguagem-de-programacao">Qual a melhor linguagem de programação?</h4>
-<h5 id="a-melhor-linguagem-e-aquela-que-voce-tem-maior-dominio">A melhor linguagem é aquela que você tem maior domínio</h5>
-<p>Em termos práticos é isso mesmo.</p>
-<p>Então baixei, instalei e estudei vários projetos. Uma ideia que concordo eu vi reforçada, a de que não existe a melhor linguagem de programação em termos absolutos e para qualquer projeto, a melhor linguagem de programação que existe é aquela que você tem maior domínio. Trazendo para as rotas, depois de estudar vários projetos, acabei customizando uma classe de rota de um aplicativo que conheço e tenho customizado algumas vezes:</p>
-<p><a href="https://github.com/panique/mini3">https://github.com/panique/mini3</a></p>
-<h4 id="reinventar-a-rota-pode-ser-importante">Reinventar a rota pode ser importante</h4>
-<p>Eu quero aproveitar e comentar algo aqui sobre "reinventar a roda". Reinventar a roda pode ser algo útil por alguns motivos:</p>
-<ul>
-<li>Se eu estiver precisando de uma roda diferente de todas as que conheço</li>
-<li>Se eu quizer aprender como se cria uma roda</li>
-<li>Se eu quizer ensinar como se cria uma roda</li>
-</ul>
-<h4 id="muitos-andam-sobrecarregados-de-trabalho">Muitos andam sobrecarregados de trabalho</h4>
-<p>Minha opinião: acredito que não deveríamos concordar com "em time que genha não se mexe" nem fugir de customizações para otimização. Este comportamento denuncia que estamos sobrecarregados de trabalho e queremos apenas concluir o que temos para fazer. Então nosso trabalho não melhora, não evolui, não é otimizado. Acho compreensível, mas acho importante refatorar, otimizar, melhorar, simplificar, etc.</p>
-<p>Falando diretamente, fiquei contente em ter encontrado um aplicativo em PHP usando MVC com rotas, que eu tenha conseguido entender e customizar. Como é algo diferente do habitual e em especial as rotas são em geral mais complexas, vejo a dificuldade de alguns colegas iniciantes sobre este assunto, eu acabo de efetuar uma refatoração do aplicativo que criei para o livro de PHPOO, tornando-o mais simples e fácil de entender e coloquei no repositório, seção atualizacoes:</p>
-<p><a href="https://github.com/ribafs/phpoo-livro">https://github.com/ribafs/phpoo-livro</a></p>
-<h4 id="rotas-automaticas">Rotas automáticas</h4>
-<p>Quanto à classe Router, que no mini3 chama-se Application, é a peça de código mais trabalhosa de entender, por isso andei procurando alternativa. Acontece que a customisei várias vezes e acabei conhecendo-a melhor. Isso me levou a criar uma versão bem mais simples. A classe original é automática, ou seja, se eu adicionar mais um CRUD ao aplicativo ele será suportado sem qualquer alteração na classe. A que está neste aplicativo</p>
-<p><a href="https://github.com/ribafs/phpoo-livro/tree/main/atualizacoes/php-router2">https://github.com/ribafs/phpoo-livro/tree/main/atualizacoes/php-router2</a></p>
-<h4 id="sistema-de-rotas-simples_1">Sistema de rotas simples</h4>
-<p>Já a classe simples que criei, não, ela é meio manual, pois cada CRUD adicionado precisará de uma nova seção de código para comtemplá-lo. Como me deu trabalho de encontrar algo parecido eu criei um repositório exclusivo para este projeto de rotas, onde uso praticamente o mesmo aplicativo do livro, mas refatorado, simplificado e usando as rotas simplificadas:</p>
-<p><a href="https://github.com/ribafs/php-router">https://github.com/ribafs/php-router</a></p>
-<p>Inclusive com um forum de discussão no repositório caso queira trocar ideias</p></div>
+<h2 id="css3-no-html5">CSS3 no HTML5</h2>
+<p>CSS3 vem com pseudo-classes úteis que nos permitem estilizar qualquer campo de formulário dependendo de seu estado. Essas classes são as seguintes:</p>
+<pre class="highlight"><code class="language-html">    :valid
+    :invalid
+    :required
+    :optional
+    :in-range
+    :out-of-range
+    :read-only
+    :read-write
+</code></pre>
+
+<h3 id="alguns-exemplos">Alguns exemplos:</h3>
+<pre class="highlight"><code class="language-css">input:required{
+  border:1px solid blue;
+}
+</code></pre>
+
+<pre class="highlight"><code class="language-css">input:required:invalid, input:focus:invalid { 
+  background: red;
+}
+input:required:valid { 
+  background: blue;
+}
+</code></pre>
+
+<pre class="highlight"><code class="language-css">input:invalid {
+  border: 2px solid red;
+}
+
+input:valid {
+  border: 2px solid green;
+}
+</code></pre>
+
+<pre class="highlight"><code class="language-css">input:invalid {
+  border: 2px dashed red;
+}
+
+input:valid {
+  border: 2px solid green;
+}
+</code></pre>
+
+<pre class="highlight"><code class="language-css">input:valid,
+input:in-range {
+    background:hsl(120, 50%, 90%);
+    border-color:hsl(120, 50%, 50%);
+}
+
+input:invalid,
+input:out-of-range {
+    border-color:hsl(0, 50%, 50%);
+    background:hsl(0, 50%, 90%);
+}
+</code></pre>
+
+<pre class="highlight"><code class="language-css">body {
+    font-family: Helvetica, Arial;
+    font-size:12px;
+}
+h1 {
+    font-size:200%;
+}
+legend {
+    padding:0 5px;
+    text-align:right;
+}
+fieldset &gt; div {
+    margin:10px 0;
+}
+fieldset &gt; legend + div {
+    margin-top:0;
+}
+fieldset &gt; div:last-child {
+    margin-bottom:0;
+}
+label {
+    display:inline-block;
+    width:100px;
+}
+input {
+    width:200px;
+}
+input[type=&quot;number&quot;] {
+    width:30px;
+}
+div &gt; input[type=&quot;submit&quot;] {
+    background: #ccc;
+    border:1px solid #999;
+    width:auto;
+}
+input:required {
+    background:hsl(180, 50%, 90%);
+    border:1px solid #999;
+}
+input:optional {
+    background:hsl(300, 50%, 90%);
+    border:1px dotted hsl(180, 50%, 90%);
+}
+input:valid,
+input:in-range {
+    background:hsl(120, 50%, 90%);
+    border-color:hsl(120, 50%, 50%);
+}
+
+input:invalid,
+input:out-of-range {
+    border-color:hsl(0, 50%, 50%);
+    background:hsl(0, 50%, 90%);
+}
+input:focus + .help {
+    display:inline-block;
+}
+div.submit {
+    margin-left:100px;
+}
+</code></pre>
+
+<pre class="highlight"><code class="language-css">/* This is just to make the example nicer */
+body {
+  font: 1em sans-serif;
+  padding: 0;
+  margin : 0;
+}
+
+form {
+  max-width: 200px;
+}
+
+p * {
+  display: block;
+}
+
+input[type=email]{
+  -webkit-appearance: none;
+
+  width: 100%;
+  border: 1px solid #333;
+  margin: 0;
+
+  font-family: inherit;
+  font-size: 90%;
+
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* This is our style for the invalid fields */
+input:invalid{
+  border-color: #900;
+  background-color: #FDD;
+}
+
+input:focus:invalid {
+  outline: none;
+}
+
+/* This is the style of our error messages */
+.error {
+  width  : 100%;
+  padding: 0;
+
+  font-size: 80%;
+  color: white;
+  background-color: #900;
+  border-radius: 0 0 5px 5px;
+
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.error.active {
+  padding: 0.3em;
+}  
+</code></pre>
+
+<pre class="highlight"><code class="language-html">&lt;form action=&quot;somefile.php&quot;&gt;
+    &lt;input
+        type=&quot;text&quot;
+        name=&quot;username&quot;
+        placeholder=&quot;Username&quot;
+        pattern=&quot;[a-z]{1,15}&quot;
+        id=&quot;username&quot;&gt;
+&lt;/form&gt;
+</code></pre>
+
+<pre class="highlight"><code class="language-html">&lt;style type=&quot;text/css&quot;&gt;
+  input:required:invalid, input:focus:invalid {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAeVJREFUeNqkU01oE1EQ/mazSTdRmqSxLVSJVKU9RYoHD8WfHr16kh5EFA8eSy6hXrwUPBSKZ6E9V1CU4tGf0DZWDEQrGkhprRDbCvlpavan3ezu+LLSUnADLZnHwHvzmJlvvpkhZkY7IqFNaTuAfPhhP/8Uo87SGSaDsP27hgYM/lUpy6lHdqsAtM+BPfvqKp3ufYKwcgmWCug6oKmrrG3PoaqngWjdd/922hOBs5C/jJA6x7AiUt8VYVUAVQXXShfIqCYRMZO8/N1N+B8H1sOUwivpSUSVCJ2MAjtVwBAIdv+AQkHQqbOgc+fBvorjyQENDcch16/BtkQdAlC4E6jrYHGgGU18Io3gmhzJuwub6/fQJYNi/YBpCifhbDaAPXFvCBVxXbvfbNGFeN8DkjogWAd8DljV3KRutcEAeHMN/HXZ4p9bhncJHCyhNx52R0Kv/XNuQvYBnM+CP7xddXL5KaJw0TMAF8qjnMvegeK/SLHubhpKDKIrJDlvXoMX3y9xcSMZyBQ+tpyk5hzsa2Ns7LGdfWdbL6fZvHn92d7dgROH/730YBLtiZmEdGPkFnhX4kxmjVe2xgPfCtrRd6GHRtEh9zsL8xVe+pwSzj+OtwvletZZ/wLeKD71L+ZeHHWZ/gowABkp7AwwnEjFAAAAAElFTkSuQmCC);
+    background-position: right top;
+    background-repeat: no-repeat;
+    -moz-box-shadow: none;
+  }
+  input:required:valid {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAepJREFUeNrEk79PFEEUx9/uDDd7v/AAQQnEQokmJCRGwc7/QeM/YGVxsZJQYI/EhCChICYmUJigNBSGzobQaI5SaYRw6imne0d2D/bYmZ3dGd+YQKEHYiyc5GUyb3Y+77vfeWNpreFfhvXfAWAAJtbKi7dff1rWK9vPHx3mThP2Iaipk5EzTg8Qmru38H7izmkFHAF4WH1R52654PR0Oamzj2dKxYt/Bbg1OPZuY3d9aU82VGem/5LtnJscLxWzfzRxaWNqWJP0XUadIbSzu5DuvUJpzq7sfYBKsP1GJeLB+PWpt8cCXm4+2+zLXx4guKiLXWA2Nc5ChOuacMEPv20FkT+dIawyenVi5VcAbcigWzXLeNiDRCdwId0LFm5IUMBIBgrp8wOEsFlfeCGm23/zoBZWn9a4C314A1nCoM1OAVccuGyCkPs/P+pIdVIOkG9pIh6YlyqCrwhRKD3GygK9PUBImIQQxRi4b2O+JcCLg8+e8NZiLVEygwCrWpYF0jQJziYU/ho2TUuCPTn8hHcQNuZy1/94sAMOzQHDeqaij7Cd8Dt8CatGhX3iWxgtFW/m29pnUjR7TSQcRCIAVW1FSr6KAVYdi+5Pj8yunviYHq7f72po3Y9dbi7CxzDO1+duzCXH9cEPAQYAhJELY/AqBtwAAAAASUVORK5CYII=);
+    background-position: right top;
+    background-repeat: no-repeat;
+  }
+
+&lt;/style&gt;
+</code></pre>
+
+<pre class="highlight"><code class="language-css">body {
+    font-family: 'Myriad-Pro', 'myriad', helvetica, arial, sans-serif;
+    text-align: center;
+}
+input { font-size: 14px; font-weight: bold;  }
+
+input[type=range]:before { content: attr(min); padding-right: 5px; }
+input[type=range]:after { content: attr(max); padding-left: 5px;}
+
+output {
+    display: block;
+    font-size: 5.5em;
+    font-weight: bold;
+}
+</code></pre></div>
             </div>
         </div>
 
