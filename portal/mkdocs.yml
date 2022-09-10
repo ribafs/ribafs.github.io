@@ -36,15 +36,15 @@ plugins:
 nav:
     - Início: index.md
     - Front-end:
-        - HTML:
+        #- HTML:
         #    - Introdução: frontend/html/index.md        
-            - HTML 5:
-                - Dicas: frontend/html/html5/dicas.md
-                - Inputs e atributos: frontend/html/html5/inputs.md
-                - CSS3 para o HTML 5: frontend/html/html5/css.md
-                - Tags semânticas: frontend/html/html5/semanticas.md
-                - Validação: frontend/html/html5/pattern-validation/dist/index.html
-                - Regex: frontend/html/html5/regex.md
+        - HTML 5:
+            - Dicas: frontend/html/html5/dicas.md
+            - Inputs e atributos: frontend/html/html5/inputs.md
+            - CSS3 para o HTML 5: frontend/html/html5/css.md
+            - Tags semânticas: frontend/html/html5/semanticas.md
+            - Validação: frontend/html/html5/pattern-validation/dist/index.html
+            - Regex: frontend/html/html5/regex.md
         #- CSS:
         #    - Introdução: frontend/css/index.md
         - JavaScript:
