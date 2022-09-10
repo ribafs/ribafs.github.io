@@ -102,7 +102,8 @@ nav:
         #        - Introdução: backend/framework/ci/index.md
 
     - DevOps:
-        - .htaccess: devops/htaccess.md
+        - Apache:
+            .htaccess: devops/apache/htaccess.md
         #- Git: 
         #    - Introdução: devops/git/index.md
         #- GitHub: 
