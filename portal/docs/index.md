@@ -15,12 +15,10 @@
             <p><strong>Este site contém pouco conteúdo ainda. Criei para abrigar aqui muita coisa que estudo e descubro.</strong></p>
         </div>
         <div class="offset-lg-1 mt-2 logo text-center">
-            <p><strong>Últimas atualizações (09/09/2022):</strong></p>
-            <p>Back-end > PHP > Expressões regulares<br>
-            Front-end > Javascript > Método reduce<br>
-            Front-end > HTML 5 > Regex em HTML 5<br>
-            DevOps > .htaccess<br>
-            Back-end > PHP > URL com PHP</p>            
+            <p><strong>Últimas atualizações (10/09/2022):</strong></p>
+            <p>Back-end > PHP<br>
+            Front-end > HTML > HTML 5<br>
+            DevOps</p>
         </div>
     </div>
 
