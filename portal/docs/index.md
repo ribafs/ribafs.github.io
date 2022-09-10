@@ -16,7 +16,7 @@
         <div class="offset-lg-1 mt-2 logo text-center">
             <p><strong>Últimas atualizações (10/09/2022):</strong></p>
             <p>Back-end > PHP<br>
-            Front-end > HTML > HTML 5<br>
+            Front-end > HTML 5<br>
             DevOps</p>
         </div>
     </div>
