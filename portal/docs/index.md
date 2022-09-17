@@ -14,7 +14,7 @@
             <p><strong>Este site contém pouco conteúdo ainda. Criei para abrigar aqui muita coisa que estudo e descubro.</strong></p>
         </div>
         <div class="offset-lg-1 mt-2 logo text-center">
-            <p><strong>Últimas atualizações (10/09/2022):</strong></p>
+            <p><strong>Últimas atualizações (17/09/2022):</strong></p>
             <p>Back-end > PHP<br>
             Front-end > HTML 5<br>
             DevOps</p>
