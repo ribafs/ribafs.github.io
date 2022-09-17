@@ -2,7 +2,7 @@
 
 <p><strong>Este abaixo foi criado com Joomla</strong> e exportado para HTML estático com o wget e hospedado no Github</p>
 
-<p><a href="https://ribafs.github.io/phpecia.html" target="_blank" rel="noopener">https://ribafs.github.io/phpecia.html</a><br>
+<p><a href="https://ribafs.github.io/portal" target="_blank" rel="noopener">https://ribafs.github.io/portal</a><br>
 <br>
 </p>
 

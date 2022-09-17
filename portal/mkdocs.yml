@@ -4,7 +4,7 @@ site_description: Portal do Ribamar FS
 site_author: Ribamar FS
 site_dir: site/
 
-repo_url: https://github.com/ribafs//ribafs-portal
+repo_url: https://github.com/ribafs//ribafs.github.io
 
 docs_dir: docs/
 
@@ -74,6 +74,7 @@ nav:
         - PHP: 
             - Expressões Regulares: backend/php/regex.md
             - Trabalhando com URL: backend/php/url.md            
+            - Valor default em select: backend/php/select-default-value.md
         #- PDO: 
         #    - Introdução: backend/pdo/index.md
         - PHP-OO: 
@@ -103,7 +104,7 @@ nav:
 
     - DevOps:
         - Apache:
-            .htaccess: devops/apache/htaccess.md
+            - .htaccess: devops/apache/htaccess.md
         #- Git: 
         #    - Introdução: devops/git/index.md
         #- GitHub: 

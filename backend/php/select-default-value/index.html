@@ -5,29 +5,29 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Portal do Ribamar FS">
+        
         <meta name="author" content="Ribamar FS">
-        <link rel="canonical" href="https://ribafs.github.io/">
-        <link rel="shortcut icon" href="img/favicon.ico">
-        <title>RibaFS Portal</title>
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-        <link href="css/font-awesome.min.css" rel="stylesheet">
-        <link href="css/base.css" rel="stylesheet">
+        <link rel="canonical" href="https://ribafs.github.io/backend/php/select-default-value/">
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>Valor default em select - RibaFS Portal</title>
+        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/rainbow.min.css">
-        <link href="assets/css/extra.css" rel="stylesheet">
+        <link href="../../../assets/css/extra.css" rel="stylesheet">
 
-        <script src="js/jquery-1.10.2.min.js" defer></script>
-        <script src="js/bootstrap.min.js" defer></script>
+        <script src="../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../js/bootstrap.min.js" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/php.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/html.min.js"></script>
         <script>hljs.initHighlightingOnLoad();</script> 
     </head>
 
-    <body class="homepage">
+    <body>
         <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
             <div class="container">
-                <a class="navbar-brand" href=".">RibaFS Portal</a>
+                <a class="navbar-brand" href="../../..">RibaFS Portal</a>
                 <!-- Expander button -->
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
                     <span class="navbar-toggler-icon"></span>
@@ -37,8 +37,8 @@
                 <div id="navbar-collapse" class="navbar-collapse collapse">
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
-                            <li class="navitem active">
-                                <a href="." class="nav-link">Início</a>
+                            <li class="navitem">
+                                <a href="../../.." class="nav-link">Início</a>
                             </li>
                             <li class="dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Front-end <b class="caret"></b></a>
@@ -49,27 +49,27 @@
     <ul class="dropdown-menu">
             
 <li>
-    <a href="frontend/html/html5/dicas/" class="dropdown-item">Dicas</a>
+    <a href="../../../frontend/html/html5/dicas/" class="dropdown-item">Dicas</a>
 </li>
             
 <li>
-    <a href="frontend/html/html5/inputs/" class="dropdown-item">Inputs e atributos</a>
+    <a href="../../../frontend/html/html5/inputs/" class="dropdown-item">Inputs e atributos</a>
 </li>
             
 <li>
-    <a href="frontend/html/html5/css/" class="dropdown-item">CSS3 para o HTML 5</a>
+    <a href="../../../frontend/html/html5/css/" class="dropdown-item">CSS3 para o HTML 5</a>
 </li>
             
 <li>
-    <a href="frontend/html/html5/semanticas/" class="dropdown-item">Tags semânticas</a>
+    <a href="../../../frontend/html/html5/semanticas/" class="dropdown-item">Tags semânticas</a>
 </li>
             
 <li>
-    <a href="frontend/html/html5/pattern-validation/dist/" class="dropdown-item">Validação</a>
+    <a href="../../../frontend/html/html5/pattern-validation/dist/" class="dropdown-item">Validação</a>
 </li>
             
 <li>
-    <a href="frontend/html/html5/regex/" class="dropdown-item">Regex</a>
+    <a href="../../../frontend/html/html5/regex/" class="dropdown-item">Regex</a>
 </li>
     </ul>
   </li>
@@ -83,13 +83,13 @@
 </li>
             
 <li>
-    <a href="frontend/js/reduce/" class="dropdown-item">Método Reduce</a>
+    <a href="../../../frontend/js/reduce/" class="dropdown-item">Método Reduce</a>
 </li>
     </ul>
   </li>
                                 </ul>
                             </li>
-                            <li class="dropdown">
+                            <li class="dropdown active">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Back-end <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
@@ -98,15 +98,15 @@
     <ul class="dropdown-menu">
             
 <li>
-    <a href="backend/php/regex/" class="dropdown-item">Expressões Regulares</a>
+    <a href="../regex/" class="dropdown-item">Expressões Regulares</a>
 </li>
             
 <li>
-    <a href="backend/php/url/" class="dropdown-item">Trabalhando com URL</a>
+    <a href="../url/" class="dropdown-item">Trabalhando com URL</a>
 </li>
             
 <li>
-    <a href="backend/php/select-default-value/" class="dropdown-item">Valor default em select</a>
+    <a href="./" class="dropdown-item active">Valor default em select</a>
 </li>
     </ul>
   </li>
@@ -120,11 +120,11 @@
     <ul class="dropdown-menu">
             
 <li>
-    <a href="backend/phpoo/mvc/fw-zero/" class="dropdown-item">Framework do zero</a>
+    <a href="../../phpoo/mvc/fw-zero/" class="dropdown-item">Framework do zero</a>
 </li>
             
 <li>
-    <a href="backend/phpoo/mvc/php-router/" class="dropdown-item">Rotas simples</a>
+    <a href="../../phpoo/mvc/php-router/" class="dropdown-item">Rotas simples</a>
 </li>
     </ul>
   </li>
@@ -141,7 +141,7 @@
     <ul class="dropdown-menu">
             
 <li>
-    <a href="devops/apache/htaccess/" class="dropdown-item">.htaccess</a>
+    <a href="../../../devops/apache/htaccess/" class="dropdown-item">.htaccess</a>
 </li>
     </ul>
   </li>
@@ -152,11 +152,11 @@
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="linux/" class="dropdown-item">Introdução</a>
+    <a href="../../../linux/" class="dropdown-item">Introdução</a>
 </li>
                                     
 <li>
-    <a href="linux/linuxwindows/" class="dropdown-item">Diferenças Linux x Windows</a>
+    <a href="../../../linux/linuxwindows/" class="dropdown-item">Diferenças Linux x Windows</a>
 </li>
                                 </ul>
                             </li>
@@ -165,7 +165,7 @@
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="ferramentas/" class="dropdown-item">Introdução</a>
+    <a href="../../../ferramentas/" class="dropdown-item">Introdução</a>
 </li>
                                     
 <li>
@@ -178,7 +178,7 @@
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="sobre/curriculo/" class="dropdown-item">Currículo</a>
+    <a href="../../../sobre/curriculo/" class="dropdown-item">Currículo</a>
 </li>
                                     
 <li>
@@ -186,20 +186,20 @@
 </li>
                                     
 <li>
-    <a href="sobre/livros/" class="dropdown-item">Livros free</a>
+    <a href="../../../sobre/livros/" class="dropdown-item">Livros free</a>
 </li>
                                     
 <li>
-    <a href="sobre/sites/" class="dropdown-item">Sites anteriores</a>
+    <a href="../../../sobre/sites/" class="dropdown-item">Sites anteriores</a>
 </li>
                                     
 <li>
-    <a href="sobre/contato/" class="dropdown-item">Contato</a>
+    <a href="../../../sobre/contato/" class="dropdown-item">Contato</a>
 </li>
                                 </ul>
                             </li>
                             <li class="navitem">
-                                <a href="comments/" class="nav-link">Comentários</a>
+                                <a href="../../../comments/" class="nav-link">Comentários</a>
                             </li>
                         </ul>
 
@@ -210,7 +210,7 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a href="https://github.com/ribafs/ribafs.github.io/edit/master/docs/index.md" class="nav-link"><i class="fa fa-github"></i> Edit on GitHub</a>
+                                <a href="https://github.com/ribafs/ribafs.github.io/edit/master/docs/backend/php/select-default-value.md" class="nav-link"><i class="fa fa-github"></i> Edit on GitHub</a>
                             </li>
                     </ul>
                 </div>
@@ -229,38 +229,90 @@
     
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="2"><a href="#valor-default-em-select" class="nav-link">Valor default em select</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#edit-do-controller" class="nav-link">Edit do Controller</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#a-view-edit" class="nav-link">A view edit</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
         </ul>
     </div>
 </div></div>
                     <div class="col-md-9" role="main">
 
-<div class="container">
-    <h1 class="display-6 fonts"> Seja bem vindo(a)</h1>
+<h2 id="valor-default-em-select">Valor default em select</h2>
+<p>Tenho um pequeno CRUD com PHP e MVC, MySQL e Bootstrap. Quero clicar no link edit do index e o form edit abrir com o select já com o valor default vindo do banco.</p>
+<h3 id="tabela">Tabela</h3>
+<p>Eu tenho uma tabela simples</p>
+<pre class="highlight"><code class="language-sql">create table articles(
+    id int primary key auto_increment,
+    title varchar(50) not null,
+    body text not null,
+    category enum('health', 'reflections','education') default 'reflections'
+);  
+</code></pre>
 
-    <h3 class="mt-3 ms-5 fonts" style="margin-left: 50px"> ao site do Ribamar</h3>
+<h2 id="edit-do-controller">Edit do Controller</h2>
+<pre class="highlight"><code class="language-php">    public function edit($field_id)
+    {
+        if (isset($field_id)) {
+            $Article = new Article('articles');
+            $fetch = $Article-&gt;fetch($field_id);
 
-    <div class="row">
-        <div class="offset-sm-2 col-lg-10 logo pe-5">
-            <img src="assets/img/logo.png" class="img-fluid mt-3" width="20%">
-        </div>
-    </div>
+            if ($fetch === false) {
+                $error = new \Core\ErrorController();
+                $error-&gt;index();
+            } else {
+                require_once APP . 'views/templates/header.php';
+                require_once APP . 'views/templates/menu.php';                        
+                require_once APP . 'views/articles/edit.php';
+                require_once APP . 'views/templates/footer.php';
+            }
+        } else {
+            header('location: ' . URL . 'article/index');
+        }
+    }
+</code></pre>
 
-    <div class="row">
-        <div class="col-lg-12 mt-5 pe-5 logo" style="margin-left: -100px">
-            <p><strong>Este site contém pouco conteúdo ainda. Criei para abrigar aqui muita coisa que estudo e descubro.</strong></p>
-        </div>
-        <div class="offset-lg-1 mt-2 logo text-center">
-            <p><strong>Últimas atualizações (10/09/2022):</strong></p>
-            <p>Back-end > PHP<br>
-            Front-end > HTML 5<br>
-            DevOps</p>
-        </div>
-    </div>
+<h2 id="a-view-edit">A view edit</h2>
+<p>No form edit eu preciso que, quando clicar num registro do index, ele já trazer o valor do campo property do select preenchido como default. Como o select é fixo e criado com o campo tipo enum do MySQL, eu apenas trago o valor no option selected, os demais options continuam fixos e disponíveis no select do form edit. 
+Depois irei criar uma versão que tem um campo tipo varchar na tabela e usa um select dinâmico criado com o PHP e populando os options dinamicamente.</p>
+<pre class="highlight"><code class="language-html">...
+        &lt;form action=&quot;&lt;?php echo URL; ?&gt;article/update&quot; method=&quot;POST&quot;&gt;   
+        &lt;table class=&quot;table table-hover table-stripped&quot;&gt;
+            &lt;tr&gt;&lt;td&gt;&lt;label&gt;Title&lt;/label&gt;&lt;/td&gt;&lt;/tr&gt;
+            &lt;tr&gt;&lt;td&gt;&lt;input class=&quot;form-control&quot; type=&quot;text&quot; name=&quot;title&quot; value=&quot;&lt;?php echo htmlspecialchars($fetch-&gt;title, ENT_QUOTES, 'UTF-8'); ?&gt;&quot; required autofocus/&gt;&lt;/td&gt;&lt;/tr&gt;
+            &lt;tr&gt;&lt;td&gt;&lt;label&gt;Category&lt;/label&gt;
+                &lt;select class=&quot;form-select&quot; name=&quot;category&quot; aria-label=&quot;Default select category&quot;&gt;
+                  &lt;option selected&gt;&lt;?=htmlspecialchars($fetch-&gt;category, ENT_QUOTES, 'UTF-8')?&gt;&lt;/option&gt;
+                  &lt;option value=&quot;health&quot;&gt;Health&lt;/option&gt;
+                  &lt;option value=&quot;reflections&quot;&gt;Reflections&lt;/option&gt;
+                  &lt;option value=&quot;education&quot;&gt;Education&lt;/option&gt;
+                &lt;/select&gt;&lt;/td&gt;&lt;/tr&gt;
+            &lt;tr&gt;&lt;td&gt;&lt;label&gt;Body&lt;/label&gt;&lt;/td&gt;&lt;/tr&gt;
+            &lt;tr&gt;&lt;td&gt;&lt;textarea cols=&quot;10&quot; rows=&quot;5&quot; class=&quot;form-control&quot; name=&quot;body&quot; required /&gt;&lt;?php echo htmlspecialchars($fetch-&gt;body, ENT_QUOTES, 'UTF-8'); ?&gt;&lt;/textarea&gt;&lt;/tr&gt;
+            &lt;input type=&quot;hidden&quot; name=&quot;field_id&quot; value=&quot;&lt;?=htmlspecialchars($fetch-&gt;id, ENT_QUOTES, 'UTF-8')?&gt;&quot; /&gt;
+            &lt;tr&gt;&lt;td class=&quot;text-center&quot;&gt;&lt;input type=&quot;submit&quot; name=&quot;submit_update_article&quot; value=&quot;Update Article&quot; class=&quot;btn btn-primary btn-sm&quot;/&gt;&lt;/td&gt;&lt;/tr&gt;
+        &lt;/table&gt;
+        &lt;/form&gt;
+...
+</code></pre>
 
-    <div class="row">
-        <p class="footer col-lg-12 mb-0" style="padding-right: 150px"><i>Ribamar FS - 2022</i></p>
-    </div>
-</div></div>
+<p>Veja como fica</p>
+<p><img alt="" src="../../../assets/img/select-dafault-value.png" /></p>
+<p>Ao clicar no select Category, ele abre com os options health, refletions e education.</p>
+<h4 id="micro-framework-ribafs">Micro Framework RibaFS</h4>
+<p>Este código é parte de um pequeno blog que estou criando com um pequeno framework PHP, MVC e Rotas que estou criando. Logo estarei divulgando e sua finalidade é criar aplicativos, blogs e sites usando uma estrutura MVC com rotas.</p>
+<p>Até ...</p></div>
             </div>
         </div>
 
@@ -269,11 +321,11 @@
             <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
         <script>
-            var base_url = ".",
+            var base_url = "../../..",
                 shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
-        <script src="js/base.js" defer></script>
-        <script src="search/main.js" defer></script>
+        <script src="../../../js/base.js" defer></script>
+        <script src="../../../search/main.js" defer></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
@@ -338,8 +390,3 @@
 
     </body>
 </html>
-
-<!--
-MkDocs version : 1.3.1
-Build Date UTC : 2022-09-17 18:55:22.428471+00:00
--->
