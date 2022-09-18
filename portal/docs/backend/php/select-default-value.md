@@ -69,6 +69,30 @@ Veja como fica
 
 Ao clicar no select Category, ele abre com os options health, refletions e education.
 
+### Nova versão
+
+Depois de uma sugestão do colega Eduardo Romão no grupo PHP Brasil eu fui dar uma olhada no código e acabei criando um select cujos options vem de um array e não mais diretamente no HTML. Assim eu verifico cada option com um foreach e comparo com o valor que veio do banco. Casos ejam iguais eu removo o option do array e não mostro no select. Veja:
+
+```php
+            <tr><td><label>Category</label>
+<?php
+$options = ['health', 'reflections', 'education'];
+?>
+                <select class="form-select" name="category" aria-label="Default select category">
+                  <option selected><?=htmlspecialchars($fetch->category, ENT_QUOTES, 'UTF-8')?></option>
+                  <?php
+                    foreach($options as $key => $option){
+                        if($option == $fetch->category){
+                            // Remover o option do array, caso seja igual ao valor que vem do banco
+                            unset($options[$key]);
+                        }else{
+                            print "<option value=\"$option\">$option</option>";
+                        }
+                    } 
+                    ?>
+                </select></td></tr>
+```
+
 #### Micro Framework RibaFS
 
 Este código é parte de um pequeno blog que estou criando com um pequeno framework PHP, MVC e Rotas que estou criando. Logo estarei divulgando e sua finalidade é criar aplicativos, blogs e sites usando uma estrutura MVC com rotas.
