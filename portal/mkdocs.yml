@@ -75,6 +75,7 @@ nav:
             - Expressões Regulares: backend/php/regex.md
             - Trabalhando com URL: backend/php/url.md            
             - Valor default em select: backend/php/select-default-value.md
+            - Brincando com arrays múltiplos: backend/php/arrays-multiplos.md
         #- PDO: 
         #    - Introdução: backend/pdo/index.md
         - PHP-OO: 
