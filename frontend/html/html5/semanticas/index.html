@@ -108,6 +108,14 @@
 <li>
     <a href="../../../../backend/php/select-default-value/" class="dropdown-item">Valor default em select</a>
 </li>
+            
+<li>
+    <a href="../../../../backend/php/url/" class="dropdown-item">Trabalhando com URL</a>
+</li>
+            
+<li>
+    <a href="../../../../backend/php/arrays-multiplos/" class="dropdown-item">Brincando com arrays múltiplos</a>
+</li>
     </ul>
   </li>
                                     
@@ -243,95 +251,95 @@
 <p>As tags semâmticas não tem qualquer função na página vista pelo usuário, como o br, o h1, img, etc. Elas tem a função de organizar o código apenas para que seja melhor entendido pelo programador. Com elas deixamos o layout do código mais organizado e intuitivo.</p>
 <p>Estas tags foram introduzidas pelo HTML 5. Antes todo o layout era criado se usando div, mas hoje podemos usar as tags semânticas.</p>
 <p>Os elementos semânticos adicionados ao HTML5 foram:</p>
-<pre class="highlight"><code class="language-html">    &lt;article&gt;
-    &lt;aside&gt;
-    &lt;details&gt;
-    &lt;figcaption&gt;
-    &lt;figure&gt;
-    &lt;footer&gt;
-    &lt;header&gt;
-    &lt;main&gt;
-    &lt;mark&gt;
-    &lt;nav&gt;
-    &lt;section&gt;
-    &lt;summary&gt;
-    &lt;time&gt;
-</code></pre>
+<div class="highlight"><pre><span></span><code>    <span class="p">&lt;</span><span class="nt">article</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">aside</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">details</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">figcaption</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">figure</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">footer</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">header</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">main</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">mark</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">nav</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">section</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">summary</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">time</span><span class="p">&gt;</span>
+</code></pre></div>
 
 <p><img alt="" src="../../../../assets/img/semanticas.jpeg" /></p>
 <p>Elementos como <code>&lt;header&gt;, &lt;nav&gt;, &lt;section&gt;, &lt;article&gt;, &lt;aside&gt; e &lt;footer&gt;</code> funcionam mais ou menos como elementos <code>&lt;div&gt;</code>. Eles agrupam outros elementos juntos em seções de uma página. Uma tag  <code>&lt;div&gt;</code> poderia conter qualquer tipo de informação. Contudo, é fácil identificar que tipo de informação seria incluída em uma tag semântica como <code>&lt;header&gt;</code>.</p>
 <p>Um exemplo de uma interface com elementos semânticos da w3schools
 Por que usar elementos semânticos?</p>
 <p>Para ver os benefícios dos elementos semânticos, aqui temos dois trechos de código em HTML. Esse primeiro bloco de código utiliza elementos semânticos:</p>
-<pre class="highlight"><code class="language-html">&lt;header&gt;&lt;/header&gt;
-&lt;section&gt;
-    &lt;article&gt;
-        &lt;figure&gt;
-            &lt;img&gt;
-            &lt;figcaption&gt;&lt;/figcaption&gt;
-        &lt;/figure&gt;
-    &lt;/article&gt;
-&lt;/section&gt;
-&lt;footer&gt;&lt;/footer&gt;
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">header</span><span class="p">&gt;&lt;/</span><span class="nt">header</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">section</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">article</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">figure</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">img</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">figcaption</span><span class="p">&gt;&lt;/</span><span class="nt">figcaption</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">figure</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">article</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">section</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">footer</span><span class="p">&gt;&lt;/</span><span class="nt">footer</span><span class="p">&gt;</span>
+</code></pre></div>
 
 <p>Enquanto esse segundo bloco de código usa elementos não semânticos:</p>
-<pre class="highlight"><code class="language-html">&lt;div id=&quot;header&quot;&gt;&lt;/div&gt;
-&lt;div class=&quot;section&quot;&gt;
-    &lt;div class=&quot;article&quot;&gt;
-        &lt;div class=&quot;figure&quot;&gt;
-            &lt;img&gt;
-            &lt;div class=&quot;figcaption&quot;&gt;&lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&quot;footer&quot;&gt;&lt;/div&gt;
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;header&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;section&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;article&quot;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;figure&quot;</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">img</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;figcaption&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;footer&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div>
 
 <p>O primeiro é muito mais fácil de ler. Essa, provavelmente, é a primeira coisa que você notará quando for ler o primeiro trecho de código, que está usando elementos semânticos. Esse é um exemplo pequeno. Porém, como programador, você lerá centenas ou milhares de linhas de código. Quanto mais fácil for ler e entender o código, mais fácil será seu trabalho.</p>
 <p>Ele tem maior acessibilidade. Você não é o único que acha que elementos semânticos são mais fáceis de entender. Os algoritmos de indexação em sites de busca e as tecnologias assistivas (como leitores de tela para usuários com deficiência visual) também entenderão melhor o contexto e conteúdo do seu website, entregando uma melhor experiência para os usuários.</p>
 <h3 id="grande-exemplo">Grande exemplo</h3>
-<pre class="highlight"><code class="language-html">&lt;body&gt;
-     &lt;header&gt;
-         &lt;h1&gt;Cursos de programação&lt;/h1&gt;
-     &lt;/header&gt;
-     &lt;main&gt;
-         &lt;nav&gt;
-             &lt;ul&gt;
-                 &lt;li&gt;&lt;a href=”#”&gt;pagina 1&lt;/a&gt;Início&lt;/li&gt;
-                 &lt;li&gt;&lt;a href=”#”&gt;pagina 2&lt;/a&gt;Item 1&lt;/li&gt;
-                 &lt;li&gt;&lt;a href=”#”&gt;pagina 3&lt;/a&gt;Item 2&lt;/li&gt;
-                 &lt;li&gt;&lt;a href=”#”&gt;pagina 4&lt;/a&gt;Item 3&lt;/li&gt;
-             &lt;/ul&gt;
-        &lt;/nav&gt;
-         &lt;section&gt;
-             &lt;h2&gt;Java&lt;/h2&gt;
-             &lt;article&gt;
-                 &lt;h3&gt;Curso de JavaServer Faces&lt;/h3&gt;
-                 &lt;p&gt;Neste curso você aprenderá a desenvolver aplicações com JSF.&lt;/p&gt;
-             &lt;/article&gt;
-             &lt;article&gt;
-                 &lt;h3&gt;Curso de Spring&lt;/h3&gt;
-                 &lt;p&gt;Neste curso você aprenderá utilizar o framework Spring.&lt;/p&gt;
-             &lt;/article&gt;
-         &lt;/section&gt;
-         &lt;section&gt;
-             &lt;h2&gt;PHP&lt;/h2&gt;
-             &lt;article&gt;
-                 &lt;h3&gt;Curso básico de PHP&lt;/h3&gt;
-                 &lt;p&gt;Conheça a linguagem de programação PHP.&lt;/p&gt;
-             &lt;/article&gt;
-             &lt;article&gt;
-                 &lt;h3&gt;Curso de PDO&lt;/h3&gt;
-                 &lt;p&gt;Aprenda a acessar bancos de dados com PHP Data Objects.&lt;/p&gt;
-             &lt;/article&gt;
-         &lt;/section&gt;
-     &lt;/main&gt;
-     &lt;footer&gt;
-         &lt;p&gt;MinhaEmpresa.com.br. Todos os direitos reservados.&lt;/p&gt;
-     &lt;/footer&gt;
-&lt;/body&gt;
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+     <span class="p">&lt;</span><span class="nt">header</span><span class="p">&gt;</span>
+         <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Cursos de programação<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+     <span class="p">&lt;/</span><span class="nt">header</span><span class="p">&gt;</span>
+     <span class="p">&lt;</span><span class="nt">main</span><span class="p">&gt;</span>
+         <span class="p">&lt;</span><span class="nt">nav</span><span class="p">&gt;</span>
+             <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+                 <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">”#”</span><span class="p">&gt;</span>pagina 1<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>Início<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+                 <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">”#”</span><span class="p">&gt;</span>pagina 2<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>Item 1<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+                 <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">”#”</span><span class="p">&gt;</span>pagina 3<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>Item 2<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+                 <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">”#”</span><span class="p">&gt;</span>pagina 4<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>Item 3<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+             <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">nav</span><span class="p">&gt;</span>
+         <span class="p">&lt;</span><span class="nt">section</span><span class="p">&gt;</span>
+             <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Java<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+             <span class="p">&lt;</span><span class="nt">article</span><span class="p">&gt;</span>
+                 <span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>Curso de JavaServer Faces<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+                 <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Neste curso você aprenderá a desenvolver aplicações com JSF.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+             <span class="p">&lt;/</span><span class="nt">article</span><span class="p">&gt;</span>
+             <span class="p">&lt;</span><span class="nt">article</span><span class="p">&gt;</span>
+                 <span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>Curso de Spring<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+                 <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Neste curso você aprenderá utilizar o framework Spring.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+             <span class="p">&lt;/</span><span class="nt">article</span><span class="p">&gt;</span>
+         <span class="p">&lt;/</span><span class="nt">section</span><span class="p">&gt;</span>
+         <span class="p">&lt;</span><span class="nt">section</span><span class="p">&gt;</span>
+             <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>PHP<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+             <span class="p">&lt;</span><span class="nt">article</span><span class="p">&gt;</span>
+                 <span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>Curso básico de PHP<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+                 <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Conheça a linguagem de programação PHP.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+             <span class="p">&lt;/</span><span class="nt">article</span><span class="p">&gt;</span>
+             <span class="p">&lt;</span><span class="nt">article</span><span class="p">&gt;</span>
+                 <span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>Curso de PDO<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+                 <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Aprenda a acessar bancos de dados com PHP Data Objects.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+             <span class="p">&lt;/</span><span class="nt">article</span><span class="p">&gt;</span>
+         <span class="p">&lt;/</span><span class="nt">section</span><span class="p">&gt;</span>
+     <span class="p">&lt;/</span><span class="nt">main</span><span class="p">&gt;</span>
+     <span class="p">&lt;</span><span class="nt">footer</span><span class="p">&gt;</span>
+         <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>MinhaEmpresa.com.br. Todos os direitos reservados.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+     <span class="p">&lt;/</span><span class="nt">footer</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</code></pre></div>
 
 <h3 id="algumas-referencias">Algumas Referências</h3>
 <ul>
