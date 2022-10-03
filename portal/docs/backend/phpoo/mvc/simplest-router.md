@@ -2,7 +2,7 @@
 
 Meu segundo ou terceiro projeto com "simplest"/o mais simples. Isso não é somente para chamar a atenção (não gosto dos click bytes), é por conta de que este, de fato, é o sistema de rotas para PHP mais simples que conheço.
 
-Como pesquisei e estudei muito diversos sistemas de rota e tutoriais e um colega relatou que o sistema criado anteriormente não era intuitivo (e tem razão). Veja o caso do framework mini3 ([https://github.com/panique/mini3](https://github.com/panique/mini3)), o que mais me deu trabalho para entender e customizar foi a classe de rotas. Então novas pesquisas e novos testes. Até que me deparei com este projeto:
+Como pesquisei, estudei e testei muitos sistemas de rota para PHP e um colega relatou que o sistema de rotas criado para o ribafs/php-router não era intuitivo (e tem razão). Veja o caso do framework mini3 ([https://github.com/panique/mini3](https://github.com/panique/mini3)), o que mais me deu trabalho para entender e customizar foi a classe de rotas. E foi a mais simples que encontrei. Então novas pesquisas e novos testes. Até que me deparei com este projeto:
 
 [https://github.com/Izamzawi/blog-php-mvc](https://github.com/Izamzawi/blog-php-mvc)
 
