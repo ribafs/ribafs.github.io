@@ -83,7 +83,8 @@ nav:
             - MVC: 
                 #- Introdução: backend/phpoo/mvc/index.md
                 - Framework do zero: backend/phpoo/mvc/fw-zero.md
-                - Rotas simples: backend/phpoo/mvc/php-router.md                
+                - Rotas simples: backend/phpoo/mvc/php-router.md
+                - Simplest Router: backend/phpoo/mvc/simplest-router.md
         #- SGBD: 
         #    - Introdução: backend/php/index.md
         #    - MySQL: 

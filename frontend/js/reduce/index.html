@@ -110,10 +110,6 @@
 </li>
             
 <li>
-    <a href="../../../backend/php/url/" class="dropdown-item">Trabalhando com URL</a>
-</li>
-            
-<li>
     <a href="../../../backend/php/arrays-multiplos/" class="dropdown-item">Brincando com arrays múltiplos</a>
 </li>
     </ul>
@@ -133,6 +129,10 @@
             
 <li>
     <a href="../../../backend/phpoo/mvc/php-router/" class="dropdown-item">Rotas simples</a>
+</li>
+            
+<li>
+    <a href="../../../backend/phpoo/mvc/simplest-router/" class="dropdown-item">Simplest Router</a>
 </li>
     </ul>
   </li>
@@ -251,182 +251,182 @@
 <p>Método do Javascript que busca reduzir todo um array para um único elemento. Ele iterará por cada elemento dessa lista com o objetivo de ao final gerar um único valor de qualquer tipo.</p>
 <h3 id="sintaxe">Sintaxe</h3>
 <h4 id="es5-e-ainteriores">ES5 e ainteriores</h4>
-<div class="highlight"><pre><span></span><code><span class="kd">const</span> <span class="nx">novoValor</span> <span class="o">=</span> <span class="nx">arrayBase</span><span class="p">.</span><span class="nx">reduce</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">acumulador</span><span class="p">,</span> <span class="nx">valorAtual</span><span class="p">,</span> <span class="nx">indice</span><span class="p">,</span> <span class="nx">array</span><span class="p">)</span> <span class="p">{</span>
-<span class="c1">// Faça algo com o acumulador e valueAtual (indice, array, e valorInicial são opcionais)</span>
-<span class="p">},</span> <span class="nx">valorInicial</span><span class="p">);</span>
-</code></pre></div>
+<pre class="highlight"><code class="language-js">const novoValor = arrayBase.reduce(function(acumulador, valorAtual, indice, array) {
+// Faça algo com o acumulador e valueAtual (indice, array, e valorInicial são opcionais)
+}, valorInicial);
+</code></pre>
 
 <h4 id="es6">ES6</h4>
-<div class="highlight"><pre><span></span><code><span class="kd">const</span> <span class="nx">novoValor</span> <span class="o">=</span> <span class="nx">arrayBase</span><span class="p">.</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">acumulador</span><span class="p">,</span> <span class="nx">valorAtual</span><span class="p">,</span> <span class="nx">indice</span><span class="p">,</span> <span class="nx">array</span><span class="p">)</span> <span class="p">=&gt;</span>
-<span class="c1">// Faça algo com o acumulador e valueAtual (indice, array, e valorInicial são opcionais), valorInicial);</span>
-</code></pre></div>
+<pre class="highlight"><code class="language-js">const novoValor = arrayBase.reduce((acumulador, valorAtual, indice, array) =&gt;
+// Faça algo com o acumulador e valueAtual (indice, array, e valorInicial são opcionais), valorInicial);
+</code></pre>
 
 <p>Com ES5 se usa function (callback) e chaves {} e com ES6 somente usa-se =&gt;</p>
 <h3 id="descricao">Descrição</h3>
 <p>O método reduce() executa a função de callback uma vez para cada elemento presente no array, excluindo furos (valores indefinidos), recebendo quatro argumentos.</p>
 <h4 id="somandoiterando-sem-reduce-com-for">Somando/iterando sem reduce (com for)</h4>
-<div class="highlight"><pre><span></span><code><span class="kd">let</span> <span class="nx">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1</span><span class="p">,</span> <span class="mf">2</span><span class="p">,</span> <span class="mf">3</span><span class="p">];</span>
+<pre class="highlight"><code class="language-js">let numbers = [1, 2, 3];
 
-<span class="kd">let</span> <span class="nx">sum</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
-<span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">numbers</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">sum</span> <span class="o">+=</span> <span class="nx">numbers</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
-<span class="p">}</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">sum</span><span class="p">);</span>
-</code></pre></div>
+let sum = 0;
+for (let i = 0; i &lt; numbers.length; i++) {
+    sum += numbers[i];
+}
+console.log(sum);
+</code></pre>
 
 <h3 id="exemplo-usando-o-es5">Exemplo usando o ES5</h3>
-<div class="highlight"><pre><span></span><code><span class="kd">const</span> <span class="nx">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="mf">2</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="mf">4</span><span class="p">,</span><span class="mf">5</span><span class="p">]</span>
-<span class="kd">const</span> <span class="nx">sum</span> <span class="o">=</span> <span class="nx">numbers</span><span class="p">.</span><span class="nx">reduce</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">accumulator</span><span class="p">,</span> <span class="nx">initialValue</span><span class="p">){</span>
-  <span class="k">return</span> <span class="nx">accumulator</span> <span class="o">+</span> <span class="nx">initialValue</span>
-<span class="p">},</span><span class="mf">0</span><span class="p">)</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">sum</span><span class="p">)</span>
-</code></pre></div>
+<pre class="highlight"><code class="language-js">const numbers = [1,2,3,4,5]
+const sum = numbers.reduce(function(accumulator, initialValue){
+  return accumulator + initialValue
+},0)
+console.log(sum)
+</code></pre>
 
 <h3 id="exemplos-usando-es6">Exemplos usando ES6</h3>
-<div class="highlight"><pre><span></span><code><span class="kd">const</span> <span class="nx">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="nx">item</span><span class="p">,</span><span class="nx">item</span><span class="p">,</span><span class="nx">item</span><span class="p">,</span><span class="nx">item</span><span class="p">,</span><span class="nx">item</span><span class="p">]</span>
-<span class="kd">const</span> <span class="nx">sum</span> <span class="o">=</span> <span class="nx">numbers</span><span class="p">.</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">accumulator</span><span class="p">,</span> <span class="nx">item</span><span class="p">)=&gt;(</span><span class="nx">accumulator</span> <span class="o">+</span> <span class="nx">item</span><span class="p">),</span><span class="mf">0</span><span class="p">)</span>
-</code></pre></div>
+<pre class="highlight"><code class="language-js">const numbers = [item,item,item,item,item]
+const sum = numbers.reduce((accumulator, item)=&gt;(accumulator + item),0)
+</code></pre>
 
 <h3 id="exemplo-simples-com-array-de-numeros">Exemplo simples com array de números</h3>
-<div class="highlight"><pre><span></span><code><span class="nx">valores</span> <span class="o">=</span> <span class="p">[</span><span class="mf">10</span><span class="p">,</span> <span class="mf">20</span><span class="p">,</span> <span class="mf">30</span><span class="p">,</span> <span class="mf">40</span><span class="p">,</span> <span class="mf">50</span><span class="p">]</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">valores</span><span class="p">.</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">somatorio</span><span class="p">,</span> <span class="nx">atual</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">somatorio</span> <span class="o">+</span> <span class="nx">atual</span><span class="p">,</span> <span class="nx">vrInicial</span><span class="p">))</span>
-</code></pre></div>
+<pre class="highlight"><code class="language-js">valores = [10, 20, 30, 40, 50]
+console.log(valores.reduce((somatorio, atual) =&gt; somatorio + atual, vrInicial))
+</code></pre>
 
 <h4 id="outro">Outro</h4>
-<div class="highlight"><pre><span></span><code><span class="kd">const</span> <span class="nx">numeros</span> <span class="o">=</span> <span class="p">[</span><span class="mf">10</span><span class="p">,</span> <span class="mf">20</span><span class="p">,</span> <span class="mf">70</span><span class="p">,</span> <span class="mf">100</span><span class="p">];</span>
+<pre class="highlight"><code class="language-js">const numeros = [10, 20, 70, 100];
 
-<span class="kd">const</span> <span class="nx">soma</span> <span class="o">=</span> <span class="nx">numeros</span><span class="p">.</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">total</span><span class="p">,</span> <span class="nx">atual</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">total</span> <span class="o">+</span> <span class="nx">atual</span><span class="p">);</span> 
+const soma = numeros.reduce((total, atual) =&gt; total + atual); 
 
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">soma</span><span class="p">)</span>
-</code></pre></div>
+console.log(soma)
+</code></pre>
 
 <h4 id="outro-exemplo">Outro exemplo</h4>
 <p>Valor inicial = 0</p>
-<div class="highlight"><pre><span></span><code><span class="kd">let</span> <span class="nx">numeros</span> <span class="o">=</span> <span class="p">[</span><span class="mf">3</span><span class="p">,</span> <span class="mf">7</span><span class="p">,</span> <span class="mf">5</span><span class="p">,</span> <span class="mf">10</span><span class="p">];</span>
-<span class="kd">let</span> <span class="nx">total</span> <span class="o">=</span> <span class="nx">numeros</span><span class="p">.</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">acumulador</span><span class="p">,</span> <span class="nx">numero</span><span class="p">,</span> <span class="nx">indice</span><span class="p">,</span> <span class="nx">original</span><span class="p">)</span> <span class="p">=&gt;</span> 
-<span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">info</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="nx">acumulador</span><span class="si">}</span><span class="sb"> total até o momento`</span><span class="p">);</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="nx">numero</span> <span class="si">}</span><span class="sb"> valor atual`</span><span class="p">);</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="nx">indice</span><span class="si">}</span><span class="sb"> indice atual`</span><span class="p">);</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="nx">original</span><span class="si">}</span><span class="sb"> array original`</span><span class="p">);</span>
-    <span class="k">return</span> <span class="nx">acumulador</span> <span class="o">+=</span> <span class="nx">numero</span><span class="p">;</span>
-<span class="p">},</span> <span class="mf">0</span><span class="p">)</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">warn</span><span class="p">(</span><span class="s1">&#39;acaboooou&#39;</span><span class="p">);</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">total</span><span class="p">)</span>
-</code></pre></div>
+<pre class="highlight"><code class="language-js">let numeros = [3, 7, 5, 10];
+let total = numeros.reduce((acumulador, numero, indice, original) =&gt; 
+{
+    console.info(`${acumulador} total até o momento`);
+    console.log(`${numero } valor atual`);
+    console.log(`${indice} indice atual`);
+    console.log(`${original} array original`);
+    return acumulador += numero;
+}, 0)
+console.warn('acaboooou');
+console.log(total)
+</code></pre>
 
 <h4 id="exemplo-de-uso-com-objetos">Exemplo de uso com objetos</h4>
 <h4 id="para-es5-e-anteriores">Para ES5 e anteriores</h4>
-<div class="highlight"><pre><span></span><code><span class="kd">var</span> <span class="nx">valores</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="p">{</span><span class="nx">valor</span><span class="o">:</span> <span class="mf">1</span><span class="p">},</span>
-    <span class="p">{</span><span class="nx">valor</span><span class="o">:</span> <span class="mf">2</span><span class="p">},</span>
-    <span class="p">{</span><span class="nx">valor</span><span class="o">:</span> <span class="mf">7</span><span class="p">},</span>
-    <span class="p">{</span><span class="nx">valor</span><span class="o">:</span> <span class="mf">5</span><span class="p">},</span>
-    <span class="p">{</span><span class="nx">valor</span><span class="o">:</span> <span class="mf">5</span><span class="p">}</span>
-<span class="p">];</span>
-<span class="kd">var</span> <span class="nx">resultado</span> <span class="o">=</span> <span class="nx">valores</span><span class="p">.</span><span class="nx">reduce</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">soma</span><span class="p">,</span> <span class="nx">atual</span><span class="p">)</span> <span class="p">{</span>
-  <span class="k">return</span> <span class="nx">soma</span> <span class="o">+</span> <span class="nx">atual</span><span class="p">.</span><span class="nx">valor</span><span class="p">;</span>
-<span class="p">},</span> <span class="mf">0</span><span class="p">)</span>
+<pre class="highlight"><code class="language-js">var valores = [
+    {valor: 1},
+    {valor: 2},
+    {valor: 7},
+    {valor: 5},
+    {valor: 5}
+];
+var resultado = valores.reduce(function(soma, atual) {
+  return soma + atual.valor;
+}, 0)
 
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">resultado</span><span class="p">);</span>
-</code></pre></div>
+console.log(resultado);
+</code></pre>
 
 <h4 id="com-es6">Com ES6</h4>
-<div class="highlight"><pre><span></span><code><span class="kd">const</span> <span class="nx">valores</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="p">{</span><span class="nx">valor</span><span class="o">:</span> <span class="mf">3</span><span class="p">},</span>
-    <span class="p">{</span><span class="nx">valor</span><span class="o">:</span> <span class="mf">7</span><span class="p">},</span>
-    <span class="p">{</span><span class="nx">valor</span><span class="o">:</span> <span class="mf">5</span><span class="p">},</span>
-    <span class="p">{</span><span class="nx">valor</span><span class="o">:</span> <span class="mf">5</span><span class="p">}</span>
-<span class="p">];</span>
-<span class="kd">let</span> <span class="nx">resultado</span> <span class="o">=</span> <span class="nx">valores</span><span class="p">.</span><span class="nx">reduce</span><span class="p">(</span>
-    <span class="p">(</span><span class="nx">soma</span><span class="p">,</span> <span class="nx">atual</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">soma</span> <span class="o">+</span> <span class="nx">atual</span><span class="p">.</span><span class="nx">valor</span><span class="p">,</span> <span class="mf">0</span>
-<span class="p">);</span>
+<pre class="highlight"><code class="language-js">const valores = [
+    {valor: 3},
+    {valor: 7},
+    {valor: 5},
+    {valor: 5}
+];
+let resultado = valores.reduce(
+    (soma, atual) =&gt; soma + atual.valor, 0
+);
 
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;A soma vale: &#39;</span> <span class="o">+</span> <span class="nx">resultado</span><span class="p">);</span>
-<span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;A soma vale: &#39;</span> <span class="o">+</span> <span class="nx">resultado</span><span class="p">)</span>
-</code></pre></div>
+console.log('A soma vale: ' + resultado);
+alert('A soma vale: ' + resultado)
+</code></pre>
 
 <h4 id="outro-exemplo_1">Outro exemplo</h4>
-<div class="highlight"><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="p">.</span><span class="nx">repeat</span><span class="p">(</span><span class="mf">50</span><span class="p">))</span>
+<pre class="highlight"><code class="language-js">console.log('-'.repeat(50))
 
-<span class="kd">let</span> <span class="nx">loja</span> <span class="o">=</span> <span class="p">[</span>
-  <span class="p">{</span>
-    <span class="nx">product</span><span class="o">:</span> <span class="s1">&#39;Celular&#39;</span><span class="p">,</span>
-    <span class="nx">qty</span><span class="o">:</span> <span class="mf">1</span><span class="p">,</span>
-    <span class="nx">price</span><span class="o">:</span> <span class="mf">500</span><span class="p">,</span>
-  <span class="p">},</span>
-  <span class="p">{</span>
-    <span class="nx">product</span><span class="o">:</span> <span class="s1">&#39;Mouse&#39;</span><span class="p">,</span>
-    <span class="nx">qty</span><span class="o">:</span> <span class="mf">1</span><span class="p">,</span>
-    <span class="nx">price</span><span class="o">:</span> <span class="mf">10</span><span class="p">,</span>
-  <span class="p">},</span>
-  <span class="p">{</span>
-    <span class="nx">product</span><span class="o">:</span> <span class="s1">&#39;Pendrive&#39;</span><span class="p">,</span>
-    <span class="nx">qty</span><span class="o">:</span> <span class="mf">2</span><span class="p">,</span>
-    <span class="nx">price</span><span class="o">:</span> <span class="mf">20</span><span class="p">,</span>
-  <span class="p">},</span>
-<span class="p">];</span>
+let loja = [
+  {
+    product: 'Celular',
+    qty: 1,
+    price: 500,
+  },
+  {
+    product: 'Mouse',
+    qty: 1,
+    price: 10,
+  },
+  {
+    product: 'Pendrive',
+    qty: 2,
+    price: 20,
+  },
+];
 
-<span class="kd">let</span> <span class="nx">total</span> <span class="o">=</span> <span class="nx">loja</span><span class="p">.</span><span class="nx">reduce</span><span class="p">(</span>
-    <span class="p">(</span><span class="nx">acumulado</span><span class="p">,</span> <span class="nx">atual</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">acumulado</span> <span class="o">+</span> <span class="nx">atual</span><span class="p">.</span><span class="nx">price</span><span class="p">,</span> <span class="mf">0</span>
-<span class="p">);</span>
+let total = loja.reduce(
+    (acumulado, atual) =&gt; acumulado + atual.price, 0
+);
 
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">total</span><span class="p">)</span>
-</code></pre></div>
+console.log(total)
+</code></pre>
 
 <h4 id="outro-exemplo-com-es6">Outro exemplo com ES6</h4>
-<div class="highlight"><pre><span></span><code><span class="kd">let</span> <span class="nx">person</span> <span class="o">=</span><span class="p">[</span>
-    <span class="p">{</span><span class="nx">name</span><span class="o">:</span><span class="s2">&quot;Karen&quot;</span><span class="p">,</span> <span class="nx">age</span><span class="o">:</span><span class="mf">20</span><span class="p">,</span> <span class="nx">hobby</span><span class="o">:</span><span class="s2">&quot;dancing&quot;</span><span class="p">},</span>
-    <span class="p">{</span><span class="nx">name</span><span class="o">:</span><span class="s2">&quot;John Doe&quot;</span><span class="p">,</span> <span class="nx">age</span><span class="o">:</span><span class="mf">30</span><span class="p">,</span> <span class="nx">hobby</span><span class="o">:</span><span class="s2">&quot;riding&quot;</span><span class="p">},</span>
-    <span class="p">{</span><span class="nx">name</span><span class="o">:</span><span class="s2">&quot;Nikita&quot;</span><span class="p">,</span> <span class="nx">age</span><span class="o">:</span><span class="mf">10</span><span class="p">,</span> <span class="nx">hobby</span><span class="o">:</span><span class="s2">&quot;drawing&quot;</span><span class="p">},</span>
-    <span class="p">{</span><span class="nx">name</span><span class="o">:</span><span class="s2">&quot;Jane&quot;</span><span class="p">,</span> <span class="nx">age</span><span class="o">:</span><span class="mf">20</span><span class="p">,</span> <span class="nx">hobby</span><span class="o">:</span><span class="s2">&quot;swimming&quot;</span><span class="p">},</span>
-    <span class="p">{</span><span class="nx">name</span><span class="o">:</span><span class="s2">&quot;Benn&quot;</span><span class="p">,</span> <span class="nx">age</span><span class="o">:</span><span class="mf">20</span><span class="p">,</span> <span class="nx">hobby</span><span class="o">:</span><span class="s2">&quot;travelling&quot;</span><span class="p">},</span>
-<span class="p">]</span>
-<span class="kd">const</span> <span class="nx">sum</span> <span class="o">=</span> <span class="nx">person</span><span class="p">.</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">accumulator</span><span class="p">,</span> <span class="nx">arrayItem</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-   <span class="k">return</span> <span class="nx">accumulator</span> <span class="o">+</span> <span class="nx">arrayItem</span><span class="p">.</span><span class="nx">age</span>
-<span class="p">},</span><span class="mf">0</span><span class="p">)</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">sum</span><span class="p">)</span><span class="c1">//Result: 100</span>
+<pre class="highlight"><code class="language-js">let person =[
+    {name:&quot;Karen&quot;, age:20, hobby:&quot;dancing&quot;},
+    {name:&quot;John Doe&quot;, age:30, hobby:&quot;riding&quot;},
+    {name:&quot;Nikita&quot;, age:10, hobby:&quot;drawing&quot;},
+    {name:&quot;Jane&quot;, age:20, hobby:&quot;swimming&quot;},
+    {name:&quot;Benn&quot;, age:20, hobby:&quot;travelling&quot;},
+]
+const sum = person.reduce((accumulator, arrayItem) =&gt; {
+   return accumulator + arrayItem.age
+},0)
+console.log(sum)//Result: 100
 
-<span class="kd">let</span> <span class="nx">pessoa</span> <span class="o">=</span><span class="p">[</span>
-    <span class="p">{</span><span class="nx">nome</span><span class="o">:</span><span class="s2">&quot;João&quot;</span><span class="p">,</span> <span class="nx">idade</span><span class="o">:</span><span class="mf">20</span><span class="p">,</span> <span class="nx">peso</span><span class="o">:</span><span class="mf">60</span><span class="p">},</span>
-    <span class="p">{</span><span class="nx">nome</span><span class="o">:</span><span class="s2">&quot;Pedro&quot;</span><span class="p">,</span> <span class="nx">idade</span><span class="o">:</span><span class="mf">30</span><span class="p">,</span> <span class="nx">peso</span><span class="o">:</span><span class="mf">70</span><span class="p">},</span>
-    <span class="p">{</span><span class="nx">nome</span><span class="o">:</span><span class="s2">&quot;Raimundo&quot;</span><span class="p">,</span> <span class="nx">idade</span><span class="o">:</span><span class="mf">10</span><span class="p">,</span> <span class="nx">peso</span><span class="o">:</span><span class="mf">30</span><span class="p">},</span>
-    <span class="p">{</span><span class="nx">nome</span><span class="o">:</span><span class="s2">&quot;Francisco&quot;</span><span class="p">,</span> <span class="nx">idade</span><span class="o">:</span><span class="mf">20</span><span class="p">,</span> <span class="nx">peso</span><span class="o">:</span><span class="mf">80</span><span class="p">},</span>
-    <span class="p">{</span><span class="nx">nome</span><span class="o">:</span><span class="s2">&quot;Benn&quot;</span><span class="p">,</span> <span class="nx">idade</span><span class="o">:</span><span class="mf">20</span><span class="p">,</span> <span class="nx">peso</span><span class="o">:</span><span class="mf">60</span><span class="p">},</span>
-<span class="p">]</span>
-<span class="kd">const</span> <span class="nx">somaIdades</span> <span class="o">=</span> <span class="nx">pessoa</span><span class="p">.</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">acumulador</span><span class="p">,</span> <span class="nx">atual</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-   <span class="k">return</span> <span class="nx">acumulador</span> <span class="o">+</span> <span class="nx">atual</span><span class="p">.</span><span class="nx">idade</span>
-<span class="p">},</span><span class="mf">0</span><span class="p">)</span>
+let pessoa =[
+    {nome:&quot;João&quot;, idade:20, peso:60},
+    {nome:&quot;Pedro&quot;, idade:30, peso:70},
+    {nome:&quot;Raimundo&quot;, idade:10, peso:30},
+    {nome:&quot;Francisco&quot;, idade:20, peso:80},
+    {nome:&quot;Benn&quot;, idade:20, peso:60},
+]
+const somaIdades = pessoa.reduce((acumulador, atual) =&gt; {
+   return acumulador + atual.idade
+},0)
 
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Soma das idades: &#39;</span><span class="o">+</span><span class="nx">somaIdades</span><span class="p">)</span><span class="c1">//Result: 100</span>
+console.log('Soma das idades: '+somaIdades)//Result: 100
 
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="p">.</span><span class="nx">repeat</span><span class="p">(</span><span class="mf">50</span><span class="p">))</span>
-<span class="kd">const</span> <span class="nx">somaPesos</span> <span class="o">=</span> <span class="nx">pessoa</span><span class="p">.</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">acumulador</span><span class="p">,</span> <span class="nx">atual</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-   <span class="k">return</span> <span class="nx">acumulador</span> <span class="o">+</span> <span class="nx">atual</span><span class="p">.</span><span class="nx">peso</span>
-<span class="p">},</span><span class="mf">0</span><span class="p">)</span>
+console.log('-'.repeat(50))
+const somaPesos = pessoa.reduce((acumulador, atual) =&gt; {
+   return acumulador + atual.peso
+},0)
 
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Soma dos pesos: &#39;</span><span class="o">+</span><span class="nx">somaPesos</span><span class="p">)</span>
-</code></pre></div>
+console.log('Soma dos pesos: '+somaPesos)
+</code></pre>
 
 <h3 id="exemplo-de-uso-do-reduce-com-strings">Exemplo de uso do reduce com strings</h3>
-<div class="highlight"><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="p">.</span><span class="nx">repeat</span><span class="p">(</span><span class="mf">50</span><span class="p">))</span>
+<pre class="highlight"><code class="language-js">console.log('-'.repeat(50))
 
-<span class="kd">var</span> <span class="nx">autores</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Miguel&quot;</span><span class="p">,</span> <span class="s2">&quot;João&quot;</span><span class="p">,</span> <span class="s2">&quot;Pedro&quot;</span><span class="p">,</span> <span class="s2">&quot;Manoel&quot;</span><span class="p">,</span> <span class="s2">&quot;Ribamar&quot;</span><span class="p">]</span>
-<span class="kd">var</span> <span class="nx">resultado</span> <span class="o">=</span> <span class="nx">autores</span><span class="p">.</span><span class="nx">reduce</span><span class="p">(</span> <span class="p">(</span><span class="nx">anterior</span><span class="p">,</span> <span class="nx">atual</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">anterior</span> <span class="o">+</span><span class="s1">&#39;, &#39;</span><span class="o">+</span> <span class="nx">atual</span> <span class="p">)</span>
+var autores = [&quot;Miguel&quot;, &quot;João&quot;, &quot;Pedro&quot;, &quot;Manoel&quot;, &quot;Ribamar&quot;]
+var resultado = autores.reduce( (anterior, atual) =&gt; anterior +', '+ atual )
 
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">resultado</span><span class="p">)</span>
-</code></pre></div>
+console.log(resultado)
+</code></pre>
 
 <h4 id="outro-exemplo_2">Outro exemplo</h4>
-<div class="highlight"><pre><span></span><code><span class="kd">const</span> <span class="nx">strings</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;cem&#39;</span><span class="p">,</span> <span class="s1">&#39;duzentos&#39;</span><span class="p">,</span> <span class="s1">&#39;oitocentos&#39;</span><span class="p">];</span>
-<span class="kd">const</span> <span class="nx">numberString</span> <span class="o">=</span> <span class="nx">strings</span><span class="p">.</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">acc</span><span class="p">,</span> <span class="nx">curr</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-  <span class="k">return</span> <span class="nx">acc</span> <span class="o">+</span> <span class="s1">&#39;, &#39;</span> <span class="o">+</span> <span class="nx">curr</span><span class="p">;</span>
-<span class="p">});</span>
+<pre class="highlight"><code class="language-js">const strings = ['cem', 'duzentos', 'oitocentos'];
+const numberString = strings.reduce((acc, curr) =&gt; {
+  return acc + ', ' + curr;
+});
 
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">numberString</span><span class="p">);</span> <span class="c1">// &quot;cem, duzentos, oitocentos&quot;</span>
+console.log(numberString); // &quot;cem, duzentos, oitocentos&quot;
 
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="ow">typeof</span> <span class="nx">myString</span><span class="p">);</span>
-</code></pre></div>
+console.log(typeof myString);
+</code></pre>
 
 <h3 id="referencias">Referências</h3>
 <p><a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce">https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce</a></p>
