@@ -34,7 +34,7 @@ Caso você esteja procurando um sistema de rotas bem simples e queira dar uma ol
 
 Além de realmente simples de entender (ao meu ver), ele também tem bons recursos:
 
-Versões som suporte para
+Versões com suporte para
 
 - PHP 8.1
 - PHP 7.4
