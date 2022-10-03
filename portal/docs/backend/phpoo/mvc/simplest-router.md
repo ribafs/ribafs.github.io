@@ -65,6 +65,7 @@ Ela vai ser redirecionado para a pasta en-US do repositório.
 
 Estou criando um micro framework que usa o ribafs/simplest-router, para melhor exemplificar seu uso.
 
-02 de outubro de 2022
+------------------------------------------
+Última atualização - 03 de outubro de 2022
 
 
