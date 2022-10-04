@@ -123,7 +123,7 @@ nav:
         - Diferenças Linux x Windows: linux/linuxwindows.md
 
     - Ferramentas:
-        - Hosting Free: ferramentas/hosting-free.md
+        - Hospedagem Grátis: ferramentas/hosting-free.md
         #- HTML Live: ferramentas/html-live/index.html
         - MkDocs: https://github.com/ribafs/mkdocs-ribafs             
     - Sobre: 
