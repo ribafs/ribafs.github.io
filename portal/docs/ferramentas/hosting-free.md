@@ -78,7 +78,7 @@ Veja alguns recursos do painel de controle.
 
 ### Dúvidas?
 
-Deixe um comentário.
+Deixe um comentário [https://ribafs.github.io/comments/](https://ribafs.github.io/comments/)
 
 --------------------
 Criado em 04/10/2022
