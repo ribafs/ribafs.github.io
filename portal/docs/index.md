@@ -1,10 +1,10 @@
 <div class="container">
-    <h1 class="display-6 fonts"> Seja bem vindo(a)</h1>
+    <h1 class="display-6 fonts mb-3"> Seja bem vindo(a)</h1>
 
-    <h3 class="mt-3 ms-5 fonts" style="margin-left: 50px"> ao site do Ribamar</h3>
+    <h3 class="ms-5 fonts mb-5" style="margin-left: 50px">Ao site do Ribamar</h3>
 
     <div class="row">
-        <div class="offset-sm-2 col-lg-10 logo pe-5">
+        <div class="offset-sm-2 col-lg-10 logo pe-5 mt-5">
             <img src="assets/img/logo.png" class="img-fluid mt-3" width="20%">
         </div>
     </div>
