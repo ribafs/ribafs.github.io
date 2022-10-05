@@ -75,6 +75,18 @@ Veja alguns recursos do painel de controle.
 
 <img src="../../assets/img/hostingfree/freehostia2.png">
 
+## Criar arquivo
+
+Não criar no www, mas sim na pasta com nome do domínio. Exemplo:
+
+Criar o arquivo index.php
+
+<img src="../../assets/img/hostingfree/arquivo.png">
+
+Acima selecione seu domínio
+
+<img src="../../assets/img/hostingfree/arquivos.png">
+
 
 ### Dúvidas?
 
