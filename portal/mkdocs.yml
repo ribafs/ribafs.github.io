@@ -100,8 +100,8 @@ nav:
         #    - Afternoom: 
         #        - Introdução: backend/cms/afternoom/index.md
         #- Framework:
-        #    - Laravel: 
-        #        - Introdução: backend/framework/laravel/index.md
+            - Laravel: 
+                - Gerador de CRUD e API para Laravel 9: backend/framework/laravel/gerador-laravel.md
         #    - Codeigniter: 
         #        - Introdução: backend/framework/ci/index.md
 
