@@ -1,0 +1,58 @@
+html {
+		box-sizing: border-box;
+	}
+
+	*,
+	*:before,
+	*:after {
+			box-sizing: inherit;
+	}
+
+	body {
+		font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+		background-color: #ECEFF1;
+	}
+	form {
+		max-width: 300px;
+		margin-top: 60px;
+		margin-right: auto;
+		margin-left: auto;
+		text-align: left;
+		position: relative;
+		padding-top: 80px;
+	}
+	label,
+	input {
+			display: block;
+	}
+	label {
+		font-size: 12px;
+		text-transform: uppercase;
+		color: #B0BEC5;
+		margin-bottom: 10px;
+	}
+	input {
+			width: 100%;
+			padding: 10px;
+			outline: 0;
+			border: 2px solid #B0BEC5;
+	}
+	input.invalid {
+			border-color: #DD2C00;
+	}
+
+	#notify {
+		margin-top: 5px;
+		padding: 10px;
+		font-size: 12px;
+		width: 100%;
+		color: #fff;
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+	}
+	#notify.error {
+		background-color: #DD2C00;
+	}
