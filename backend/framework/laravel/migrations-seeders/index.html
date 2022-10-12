@@ -152,11 +152,15 @@
     <ul class="dropdown-menu">
             
 <li>
-    <a href="../gerador-laravel/" class="dropdown-item">Gerador de CRUD e API para Laravel 9</a>
+    <a href="../gerador-laravel/" class="dropdown-item">Gerador de API CRUD para Laravel 9</a>
 </li>
             
 <li>
     <a href="./" class="dropdown-item active">Migrations e Seeders no Laravel 9</a>
+</li>
+            
+<li>
+    <a href="../crud-generator/" class="dropdown-item">Gerador de CRUDs no Laravel 9</a>
 </li>
     </ul>
   </li>
@@ -266,32 +270,13 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#migrations-and-seeders-on-laravel-9" class="nav-link">Migrations and Seeders on Laravel 9</a>
-              <ul class="nav flex-column">
-            <li class="nav-item" data-level="2"><a href="#create-a-migration" class="nav-link">Create a migration</a>
+            <li class="nav-item" data-level="2"><a href="#migrations-and-seeders-on-laravel-9" class="nav-link">Migrations and Seeders on Laravel 9</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#create-table" class="nav-link">Create table</a>
+            
+            <li class="nav-item" data-level="2"><a href="#create-seeder" class="nav-link">$ Create seeder</a>
               <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#create-seeder" class="nav-link">Create seeder</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#databaseseeder" class="nav-link">DatabaseSeeder</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#populate-table" class="nav-link">Populate table</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#try" class="nav-link">Try</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
               </ul>
             </li>
         </ul>
@@ -299,8 +284,15 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="migrations-and-seeders-on-laravel-9">Migrations and Seeders on Laravel 9</h1>
-<h2 id="create-a-migration">Create a migration</h2>
+<h2 id="migrations-and-seeders-on-laravel-9">Migrations and Seeders on Laravel 9</h2>
+<p>I really like using migrations and seeders, as it has great advantages over creating it by hand and also makes it compatible with the various supported DBMSs. Also facilitates the creation of fake data to try application. Good for testing as it is code. </p>
+<p>See this, being able to export the current bank with all the records:</p>
+<p><a href="https://github.com/ribafs/iseed">https://github.com/ribafs/iseed</a>
+<a href="https://github.com/ribafs/DbExporter">https://github.com/ribafs/DbExporter</a>
+<a href="https://github.com/ribafs/Replibyte-seed">https://github.com/ribafs/Replibyte-seed</a></p>
+<h3 id="create-or-access-your-application">Create or access your application</h3>
+<p>cd application</p>
+<h3 id="create-a-migration">Create a migration</h3>
 <p>php artisan make:migration create_customers_table</p>
 <p>Edit and update</p>
 <p>database/migrations/2022_10_12_100303_create_customers_table.php</p>
@@ -329,9 +321,9 @@ class CreateCustomersTable extends Migration
 }
 </code></pre>
 
-<h2 id="create-table">Create table</h2>
+<h3 id="create-table">Create table</h3>
 <p>php artisan migrate</p>
-<h2 id="create-seeder">Create seeder</h2>
+<h2 id="create-seeder">$ Create seeder</h2>
 <p>php artisan make:seeder CustomersSeeder</p>
 <p>Change database/seeders/CustomersSeeder.php to</p>
 <pre class="highlight"><code class="language-php">&lt;?php
@@ -359,7 +351,7 @@ class CustomersSeeder extends Seeder
 }
 </code></pre>
 
-<h2 id="databaseseeder">DatabaseSeeder</h2>
+<h3 id="databaseseeder">DatabaseSeeder</h3>
 <p>Edit database/seeds/DatabaseSeeder.php </p>
 <pre class="highlight"><code class="language-php">class DatabaseSeeder extends Seeder
 {
@@ -370,14 +362,43 @@ class CustomersSeeder extends Seeder
 }
 </code></pre>
 
-<h2 id="populate-table">Populate table</h2>
+<h3 id="populate-table">Populate table</h3>
 <p>php artisan db:seed --class=CustomersSeeder</p>
 <p>Create 10 registers</p>
 <p>Or:</p>
 <p>php artisan migrate:fresh --seed</p>
-<h2 id="try">Try</h2>
+<h3 id="try">Try</h3>
 <p>php artisan serve</p>
-<p>http://127.0.0.1:8000/customers/</p></div>
+<p>http://127.0.0.1:8000/customers/</p>
+<p>Levei este pequeno tutorial para o grupo PHP Brasil e acabei fazendo um rápida pesquisa pela diferença entre factory e seeder.</p>
+<h3 id="factories-e-seeders">Factories e Seeders</h3>
+<p>Tradução livre de posts no Stackoverflow e no tutorial https://devnote.in/difference-between-factory-and-seeders-in-laravel/</p>
+<p>Por que usamos factory e seeders em Laravel?</p>
+<p>factory e seeders são usados ​​para gerar dados falsos ou de teste. Quando você usa Factory e Seeders, não precisa adicionar dados manualmente ao seu banco de dados.
+seeders </p>
+<h3 id="o-que-sao-seeders">O que são seeders?</h3>
+<p>seeder é uma classe. O Seeder é usado para criar dados falsos ou de teste usando o nome da tabela.</p>
+<h3 id="o-que-e-factory">O que é factory?</h3>
+<p>A factory é uma função auxiliar. A factory é usada para criar dados falsos ou de teste usando o modelo. Uma factory também é um objeto global. A factory usa uma classe Faker para gerar dados fictícios. A factory também pode gerar dados de relacionamento com o modelo que o seeder não pode fazer.</p>
+<h3 id="prefiro-ver-seeders-e-factorys-de-outra-perspectiva">Prefiro ver seeders e factorys de outra perspectiva.</h3>
+<p>Como mencionado por outros, as factorys de modelos são usadas para fins de teste e preenchimento de seu banco de dados com uma enorme quantidade de dados falsos. Isso pode ser usado para teste de unidade e teste de desempenho do seu sistema.</p>
+<p>Por outro lado, as Classes seederas são usadas para inserir dados que são cruciais e importantes para o sistema operar. Algo como o superadministrador, funções básicas/permissões de funções no sistema, países, cidades e outros dados que podem não vir de CRUDs</p>
+<p>Eu pesquisei para sua pergunta e encontrei algo simples como abaixo.</p>
+<p>factory e seeder são usados ​​para gerar dados de teste para o aplicativo.</p>
+<p>Factory: Ao usar as factorys, você pode criar facilmente dados de teste para seu aplicativo laravel com base em Model. Na factory estamos usando outra classe como Faker para gerar dados falsos facilmente.</p>
+<p>Na factory também podemos gerar dados relacionados ao relacionamento enquanto no db seeder não podemos.
+´´´php
+factory(App\User::class, 50)-&gt;create()-&gt;each(function ($user) {
+        $user-&gt;posts()-&gt;save(factory(App\Post::class)-&gt;make());
+});
+´´´</p>
+<p>seeder: Ao usar o seeder, você pode criar dados de teste com base no nome da sua tabela. Como abaixo.</p>
+<p>Você pode conferir aqui para mais informações:</p>
+<p>https://laravel.com/docs/9.x/seeding#using-model-factories</p>
+<p>https://laravel.com/docs/9.x/database-testing#writing-factories</p>
+<p>seeder de banco de dados é usado para preencher tabelas com dados.</p>
+<p>As factorys de modelos são um local centralizado conveniente para definir como seus modelos devem ser preenchidos com dados falsos.</p>
+<p>Na classe seeder, você aproveitaria as factorys de modelos, e as factorys de modelos provavelmente usarão outra biblioteca para gerar dados falsos aleatórios, como phpfaker/faker.</p></div>
             </div>
         </div>
 

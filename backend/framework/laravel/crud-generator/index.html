@@ -7,9 +7,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <meta name="author" content="Ribamar FS">
-        <link rel="canonical" href="https://ribafs.github.io/backend/framework/laravel/gerador-laravel/">
+        <link rel="canonical" href="https://ribafs.github.io/backend/framework/laravel/crud-generator/">
         <link rel="shortcut icon" href="../../../../img/favicon.ico">
-        <title>Gerador de CRUD e API para Laravel 9 - RibaFS Portal</title>
+        <title>Gerador de CRUDs no Laravel 9 - RibaFS Portal</title>
         <link href="../../../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../../../css/base.css" rel="stylesheet">
@@ -152,7 +152,7 @@
     <ul class="dropdown-menu">
             
 <li>
-    <a href="./" class="dropdown-item active">Gerador de CRUD e API para Laravel 9</a>
+    <a href="../gerador-laravel/" class="dropdown-item">Gerador de API CRUD para Laravel 9</a>
 </li>
             
 <li>
@@ -160,7 +160,7 @@
 </li>
             
 <li>
-    <a href="../crud-generator/" class="dropdown-item">Gerador de CRUDs no Laravel 9</a>
+    <a href="./" class="dropdown-item active">Gerador de CRUDs no Laravel 9</a>
 </li>
     </ul>
   </li>
@@ -250,7 +250,7 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a href="https://github.com/ribafs/ribafs.github.io/edit/master/docs/backend/framework/laravel/gerador-laravel.md" class="nav-link"><i class="fa fa-github"></i> Edit on GitHub</a>
+                                <a href="https://github.com/ribafs/ribafs.github.io/edit/master/docs/backend/framework/laravel/crud-generator.md" class="nav-link"><i class="fa fa-github"></i> Edit on GitHub</a>
                             </li>
                     </ul>
                 </div>
@@ -270,7 +270,17 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="2"><a href="#gerador-de-crud-e-api-para-laravel-9" class="nav-link">Gerador de CRUD e API para Laravel 9</a>
+            <li class="nav-item" data-level="2"><a href="#criando-dois-cruds-com-o-gerador-e-laravel-9" class="nav-link">Criando dois CRUDs com o gerador e laravel 9</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#usando-o-tinker" class="nav-link">Usando o tinker</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#mudar" class="nav-link">Mudar</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -279,15 +289,222 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h2 id="gerador-de-crud-e-api-para-laravel-9">Gerador de CRUD e API para Laravel 9</h2>
-<p>De forma bem simples, portanto me parece que não é indicado para quem está iniciando o aprendizado de APIs e sim para quem já sabe. Antes aprender para somente depois usar assim sem precisar conhecer.</p>
-<p>Dá para perceber a importância das APIs em nossos dias. Praticamente tudo que é aplicativo para celular está acessando uma API em um servidor. E me parece que ainda vai se intensificar o seu uso. Então resolvi estudar.</p>
-<p>Então me lembrei de um gerador de CRUD e API para laravel que eu já havia usado e até criei um fork e traduzi. Mas apenas havia usado a parte de cRUD e não a de API. Quando fui testar vi que o autor não havia atualizado para a versão 9 do laravel. Então fiz um novo fork e atualizei o código.</p>
-<p>Aproveitei e fiz um pequeno tutorial de uso da API gerada com o Insomnia.</p>
-<p>Depois fui procurar uma solução para consumir a API criada através do Javascript, alias, do jQuery. A solução está aqui:</p>
-<p><a href="../api.html">api.html</a></p>
-<p>Fiz o fork e publiquei no packagist para que colegas possam instalar via composer. O resultado está aqui:</p>
-<p><a href="https://github.com/ribafs/crud-generator-appzcoder">https://github.com/ribafs/crud-generator-appzcoder</a></p></div>
+<h2 id="criando-dois-cruds-com-o-gerador-e-laravel-9">Criando dois CRUDs com o gerador e laravel 9</h2>
+<p>Usando o ribafs/crud-generator-appzcoder</p>
+<p><a href="https://github.com/ribafs/crud-generator-appzcoder">https://github.com/ribafs/crud-generator-appzcoder</a></p>
+<h3 id="instalando-o-laravel-9">Instalando o laravel 9</h3>
+<pre class="highlight"><code class="language-bash">composer create-project laravel/laravel blog
+</code></pre>
+
+<p>cd blog</p>
+<p>Criarei dois CRUDs, usando as tabelas posts e coments relacionadas em comments pelo post_id.</p>
+<p>posts tem o campo name</p>
+<p>comments tem post_id e body</p>
+<h3 id="instalar-o-gerador">Instalar o gerador</h3>
+<p>composer require ribafs/crud-generator-appzcoder</p>
+<h3 id="publicar">Publicar</h3>
+<pre class="highlight"><code class="language-php">php artisan vendor:publish --provider=&quot;Appzcoder\CrudGenerator\CrudGeneratorServiceProvider&quot;
+</code></pre>
+
+<h3 id="criar-o-crud-posts">Criar o CRUD posts</h3>
+<pre class="highlight"><code class="language-php">php artisan crud:generate Posts --fields='name#string;' --view-path= --controller-namespace=App\\Http\\Controllers --route-group= --form-helper=html
+</code></pre>
+
+<h3 id="criar-o-crud-comments">Criar o CRUD comments</h3>
+<pre class="highlight"><code class="language-php">php artisan crud:generate Comments --fields='body#text; post_id#integer;' --view-path= --controller-namespace=App\\Http\\Controllers --route-group= --form-helper=html 
+</code></pre>
+
+<h3 id="edite-a-migration-gerada-para-posts-e-deixe-assim">Edite a migration gerada para posts e deixe assim:</h3>
+<pre class="highlight"><code class="language-php">&lt;?php
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+class CreatePostsTable extends Migration
+{
+    public function up()
+    {
+        Schema::create('posts', function (Blueprint $table) {
+            $table-&gt;id();
+            $table-&gt;string('name')-&gt;notNullable();
+            $table-&gt;timestamp('created_at')-&gt;default(DB::raw('CURRENT_TIMESTAMP'));
+            $table-&gt;timestamp('updated_at')-&gt;default(DB::raw('CURRENT_TIMESTAMP'));
+        });
+    }
+
+    public function down()
+    {
+        Schema::drop('posts');
+    }
+}
+</code></pre>
+
+<h3 id="edite-a-migration-comments-gerada-e-deixe-assim">Edite a migration comments gerada e deixe assim:</h3>
+<pre class="highlight"><code class="language-php">&lt;?php
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+class CreateCommentsTable extends Migration
+{
+    public function up()
+    {
+        Schema::create('comments', function (Blueprint $table) {
+            $table-&gt;id();
+            $table-&gt;text(&quot;body&quot;);
+            $table-&gt;foreignId('post_id')-&gt;constrained('posts');
+            $table-&gt;timestamp('created_at')-&gt;default(DB::raw('CURRENT_TIMESTAMP'));
+            $table-&gt;timestamp('updated_at')-&gt;default(DB::raw('CURRENT_TIMESTAMP'));
+        });
+    }
+
+    public function down()
+    {
+        Schema::drop('comments');
+    }
+}
+</code></pre>
+
+<h3 id="edite-o-appmodelspostphp-e-deixe-assim">Edite o app/Models/Post.php e deixe assim:</h3>
+<pre class="highlight"><code class="language-php">&lt;?php
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class Post extends Model
+{
+    use HasFactory;
+
+    protected $fillable = ['name'];
+
+    public function comments()
+    {
+        return $this-&gt;hasMany(Comment::class);
+    }
+}
+</code></pre>
+
+<h3 id="edite-o-model-comment-e-deixe-assim">Edite o model Comment e deixe assim:</h3>
+<pre class="highlight"><code class="language-php">&lt;?php
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class Comment extends Model
+{
+    use HasFactory;
+
+    protected $fillable = ['body', 'post_id'];
+
+    public function post()
+    {
+        return $this-&gt;belongsTo(Post::class);
+    }
+}
+</code></pre>
+
+<h3 id="adicione-ao-inicio-do-commentcontroller">Adicione ao início do CommentController</h3>
+<p>Logo acima de: use App\Models\Comment;</p>
+<p>use App\Models\Post;</p>
+<h3 id="instalar-o-faker">Instalar o faker</h3>
+<pre class="highlight"><code class="language-php">composer require fakerphp/faker
+</code></pre>
+
+<h3 id="criar-a-classe-factory-postfactory">Criar a classe factory PostFactory</h3>
+<pre class="highlight"><code class="language-php">php artisan make:factory PostFactory --model=Post
+</code></pre>
+
+<p>Edite database/factories/PostFactory.php e deixar assim:</p>
+<pre class="highlight"><code class="language-php">&lt;?php
+namespace Database\Factories;
+
+use App\Models\Post;
+use Illuminate\Database\Eloquent\Factories\Factory;
+
+class PostFactory extends Factory
+{
+    protected $model = Post::class;
+
+    public function definition()
+    {
+        return [
+            'name' =&gt; fake()-&gt;name(),
+        ];
+    }
+}
+</code></pre>
+
+<h3 id="criar-a-classe-factory-commentfactory">Criar a classe factory CommentFactory</h3>
+<p>php artisan make:factory CommentFactory --model=Comment</p>
+<p>Edite database/factories/CommentFactory.php e deixar assim:</p>
+<pre class="highlight"><code class="language-php">&lt;?php
+namespace Database\Factories;
+
+use Illuminate\Database\Eloquent\Factories\Factory;
+use App\Models\Comment;
+
+class CommentFactory extends Factory
+{
+    public function definition()
+    {
+        return [            
+            'body' =&gt; fake()-&gt;text(),
+            'post_id' =&gt; fake()-&gt;numberBetween($min = 1, $max = 100)
+        ];
+    }
+}
+</code></pre>
+
+<h3 id="criar-banco-e-configurar-no-env">Criar banco e configurar no .env</h3>
+<h3 id="executar-todas-as-migrations-e-os-seeders">Executar todas as migrations e os seeders</h3>
+<pre class="highlight"><code class="language-php">php artisan migrate:fresh --seed
+</code></pre>
+
+<h2 id="usando-o-tinker">Usando o tinker</h2>
+<p>Podemos criar os registros, ao invés de usar um seeder usando o tinker, assim:</p>
+<pre class="highlight"><code class="language-php">php artisan tinker
+
+App\Models\Post::factory()-&gt;count(100)-&gt;create();
+
+App\Models\Comment::factory()-&gt;count(100)-&gt;create()
+</code></pre>
+
+<p>Ctrl+C</p>
+<h3 id="testando">Testando</h3>
+<pre class="highlight"><code class="language-php">php artisan serve
+</code></pre>
+
+<p>http://127.0.0.1:8000/posts</p>
+<h2 id="mudar">Mudar</h2>
+<p>resources/views/admin/sidebar.blade.php</p>
+<pre class="highlight"><code class="language-html">&lt;div class=&quot;col-md-3&quot;&gt;
+    &lt;div class=&quot;card&quot;&gt;
+        &lt;div class=&quot;card-header&quot;&gt;
+            Sidebar
+        &lt;/div&gt;
+
+        &lt;div class=&quot;card-body&quot;&gt;
+            &lt;ul class=&quot;nav flex-column&quot;&gt;
+                &lt;li class=&quot;nav-item&quot;&gt;
+                    &lt;a class=&quot;nav-link active&quot; href=&quot;{{ url('/posts') }}&quot;&gt;
+                        Posts
+                    &lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li class=&quot;nav-item&quot;&gt;
+                    &lt;a class=&quot;nav-link&quot; href=&quot;{{ url('/comments') }}&quot;&gt;
+                        Comments
+                    &lt;/a&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt; 
+</code></pre>
+
+<h3 id="referencias">Referências</h3>
+<p>https://www.nicesnippets.com/blog/how-to-create-a-one-to-many-relationship-in-laravel-9</p></div>
             </div>
         </div>
 

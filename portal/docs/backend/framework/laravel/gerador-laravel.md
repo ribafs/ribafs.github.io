@@ -17,3 +17,6 @@ Fiz o fork e publiquei no packagist para que colegas possam instalar via compose
 [https://github.com/ribafs/crud-generator-appzcoder](https://github.com/ribafs/crud-generator-appzcoder)
 
 
+### Exemplo de criação de dois CRUDs relackionados
+
+
