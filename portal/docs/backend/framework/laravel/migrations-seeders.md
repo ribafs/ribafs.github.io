@@ -1,5 +1,9 @@
 # Migrations and Seeders on Laravel 9
 
+## Create or access your application
+
+cd application
+
 ## Create a migration
 
 php artisan make:migration create_customers_table

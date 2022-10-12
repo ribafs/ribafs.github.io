@@ -1,0 +1,649 @@
+<!-- Ocultar os botões next e previous -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="Ribamar FS">
+        <link rel="canonical" href="https://ribafs.github.io/backend/php/url/">
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>Trabalhando com URL - RibaFS Portal</title>
+        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/rainbow.min.css">
+        <link href="../../../assets/css/extra.css" rel="stylesheet">
+
+        <script src="../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/php.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/html.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../..">RibaFS Portal</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../../.." class="nav-link">Início</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Front-end <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">HTML 5</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../frontend/html/html5/dicas/" class="dropdown-item">Dicas</a>
+</li>
+            
+<li>
+    <a href="../../../frontend/html/html5/inputs/" class="dropdown-item">Inputs e atributos</a>
+</li>
+            
+<li>
+    <a href="../../../frontend/html/html5/css/" class="dropdown-item">CSS3 para o HTML 5</a>
+</li>
+            
+<li>
+    <a href="../../../frontend/html/html5/semanticas/" class="dropdown-item">Tags semânticas</a>
+</li>
+            
+<li>
+    <a href="../../../frontend/html/html5/pattern-validation/dist/" class="dropdown-item">Validação</a>
+</li>
+            
+<li>
+    <a href="../../../frontend/html/html5/regex/" class="dropdown-item">Regex</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">JavaScript</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="https://ribafs.github.io/javascript" class="dropdown-item">Muito conteúdo</a>
+</li>
+            
+<li>
+    <a href="../../../frontend/js/reduce/" class="dropdown-item">Método Reduce</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Back-end <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">PHP</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../regex/" class="dropdown-item">Expressões Regulares</a>
+</li>
+            
+<li>
+    <a href="./" class="dropdown-item active">Trabalhando com URL</a>
+</li>
+            
+<li>
+    <a href="../select-default-value/" class="dropdown-item">Valor default em select</a>
+</li>
+            
+<li>
+    <a href="../arrays-multiplos/" class="dropdown-item">Brincando com arrays múltiplos</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">PHP-OO</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">MVC</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../phpoo/mvc/fw-zero/" class="dropdown-item">Framework do zero</a>
+</li>
+            
+<li>
+    <a href="../../phpoo/mvc/php-router/" class="dropdown-item">Rotas simples</a>
+</li>
+            
+<li>
+    <a href="../../phpoo/mvc/simplest-router/" class="dropdown-item">Simplest Router</a>
+</li>
+            
+<li>
+    <a href="../../phpoo/mvc/micro-framework/" class="dropdown-item">Micro Framework</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Framework</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Laravel</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../framework/laravel/gerador-laravel/" class="dropdown-item">Gerador de CRUD e API para Laravel 9</a>
+</li>
+            
+<li>
+    <a href="../../framework/laravel/migrations-seeders/" class="dropdown-item">Migrations e Seeders no Laravel 9</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">DevOps <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Apache</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../devops/apache/htaccess/" class="dropdown-item">.htaccess</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Linux <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../linux/" class="dropdown-item">Introdução</a>
+</li>
+                                    
+<li>
+    <a href="../../../linux/linuxwindows/" class="dropdown-item">Diferenças Linux x Windows</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Ferramentas <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../ferramentas/hosting-free/" class="dropdown-item">Hospedagem Grátis</a>
+</li>
+                                    
+<li>
+    <a href="https://github.com/ribafs/mkdocs-ribafs" class="dropdown-item">MkDocs</a>
+</li>
+                                    
+<li>
+    <a href="https://github.com/ribafs/gratuitos" class="dropdown-item">Recursos Gratuitos</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Sobre <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../sobre/curriculo/" class="dropdown-item">Currículo</a>
+</li>
+                                    
+<li>
+    <a href="https://github.com/ribafs/alguns-repos" class="dropdown-item">Repositórios</a>
+</li>
+                                    
+<li>
+    <a href="../../../sobre/livros/" class="dropdown-item">Livros free</a>
+</li>
+                                    
+<li>
+    <a href="../../../sobre/sites/" class="dropdown-item">Sites anteriores</a>
+</li>
+                                    
+<li>
+    <a href="../../../sobre/contato/" class="dropdown-item">Contato</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../../comments/" class="nav-link">Comentários</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a href="https://github.com/ribafs/ribafs.github.io/edit/master/docs/backend/php/url.md" class="nav-link"><i class="fa fa-github"></i> Edit on GitHub</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="2"><a href="#introducao-ao-uso-de-url-com-php" class="nav-link">Introdução ao uso de URL com PHP</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h2 id="introducao-ao-uso-de-url-com-php">Introdução ao uso de URL com PHP</h2>
+<p>Em qualquer linguagem de programação para a web que seja como o PHP, sempre que um usuário inserir uma URL específica no navegador, essa solicitação será passada para o servidor de nomes de domínio específico. Em seguida, o servidor de domínio retornará um endereço IP atribuído e prosseguirá para o servidor de hospedagem que hospeda um blog/site/aplicativo. Em seguida, um navegador solicita uma página do servidor web com a ajuda do endereço IP que é realmente especificado pelo servidor de nomes de domínio. Em seguida, esse servidor Web retornará a página para um endereço IP que está realmente especificado pelo navegador que está solicitando a página. Essa página que apareceu no navegador pode conter muitas outras URLs que podem conter muitas páginas do servidor, muitas imagens, etc. A URL pode ser qualquer coisa como www.educba.com ou qualquer outra coisa parecida.</p>
+<h3 id="funcoes-do-php-que-lidam-com-url">Funções do PHP que lidam com URL</h3>
+<ul>
+<li>base64_decode — Decodifica dados codificados com MIME base64</li>
+<li>base64_encode — Codifica dados com MIME base64</li>
+<li>get_headers — Retorna todos os cabeçalhos enviados pelo servidor em resposta a uma requisição HTTP</li>
+<li>get_meta_tags — Extrai as informações das tag meta de um arquivo e retorna como uma matriz</li>
+<li>http_build_query — Gera a string de consulta (query) em formato URL</li>
+<li>parse_url — Interpreta uma URL e retorna os seus componentes</li>
+<li>rawurldecode — Decodifica uma URL</li>
+<li>rawurlencode — Codifica uma URL de acordo com RFC 3986</li>
+<li>urldecode — Decodifica uma URL codificada</li>
+<li>urlencode — Codifica uma URL</li>
+</ul>
+<p><a href="https://www.php.net/manual/pt_BR/ref.url.php">https://www.php.net/manual/pt_BR/ref.url.php</a></p>
+<h3 id="parse_url">parse_url()</h3>
+<p>Interpreta uma URL e retorna os seus componentes</p>
+<h4 id="exemplos">Exemplos</h4>
+<pre class="highlight"><code class="language-php">&lt;?php
+$url = 'http://username:password@hostname:9090/path?arg=value#anchor';
+
+var_dump(parse_url($url));
+var_dump(parse_url($url, PHP_URL_SCHEME));
+var_dump(parse_url($url, PHP_URL_USER));
+var_dump(parse_url($url, PHP_URL_PASS));
+var_dump(parse_url($url, PHP_URL_HOST));
+var_dump(parse_url($url, PHP_URL_PORT));
+var_dump(parse_url($url, PHP_URL_PATH));
+var_dump(parse_url($url, PHP_URL_QUERY));
+var_dump(parse_url($url, PHP_URL_FRAGMENT));
+</code></pre>
+
+<p>O exemplo acima irá imprimir:</p>
+<pre class="highlight"><code class="language-php">array(8) {
+  [&quot;scheme&quot;]=&gt;
+  string(4) &quot;http&quot;
+  [&quot;host&quot;]=&gt;
+  string(8) &quot;hostname&quot;
+  [&quot;port&quot;]=&gt;
+  int(9090)
+  [&quot;user&quot;]=&gt;
+  string(8) &quot;username&quot;
+  [&quot;pass&quot;]=&gt;
+  string(8) &quot;password&quot;
+  [&quot;path&quot;]=&gt;
+  string(5) &quot;/path&quot;
+  [&quot;query&quot;]=&gt;
+  string(9) &quot;arg=value&quot;
+  [&quot;fragment&quot;]=&gt;
+  string(6) &quot;anchor&quot;
+}
+string(4) &quot;http&quot;
+string(8) &quot;username&quot;
+string(8) &quot;password&quot;
+string(8) &quot;hostname&quot;
+int(9090)
+string(5) &quot;/path&quot;
+string(9) &quot;arg=value&quot;
+string(6) &quot;anchor&quot;
+
+&lt;?php
+$url = '//www.example.com/path?googleguy=googley';
+
+// Prior to 5.4.7 this would show the path as &quot;//www.example.com/path&quot;
+var_dump(parse_url($url));
+
+
+//O exemplo acima irá imprimir:
+
+array(3) {
+  [&quot;host&quot;]=&gt;
+  string(15) &quot;www.example.com&quot;
+  [&quot;path&quot;]=&gt;
+  string(5) &quot;/path&quot;
+  [&quot;query&quot;]=&gt;
+  string(17) &quot;googleguy=googley&quot;
+}
+</code></pre>
+
+<h3 id="funcoes-auxiliares">Funções auxiliares</h3>
+<h4 id="array_chunk">array_chunk()</h4>
+<p>Divide um array em pedaços</p>
+<h4 id="exemplo">Exemplo</h4>
+<pre class="highlight"><code class="language-php">&lt;?php
+$input_array = array('a', 'b', 'c', 'd', 'e');
+print_r(array_chunk($input_array, 2));
+print_r(array_chunk($input_array, 2, true));
+</code></pre>
+
+<p>O exemplo acima irá imprimir:</p>
+<pre class="highlight"><code class="language-php">Array
+(
+    [0] =&gt; Array
+        (
+            [0] =&gt; a
+            [1] =&gt; b
+        )
+
+    [1] =&gt; Array
+        (
+            [0] =&gt; c
+            [1] =&gt; d
+        )
+
+    [2] =&gt; Array
+        (
+            [0] =&gt; e
+        )
+
+)
+Array
+(
+    [0] =&gt; Array
+        (
+            [0] =&gt; a
+            [1] =&gt; b
+        )
+
+    [1] =&gt; Array
+        (
+            [2] =&gt; c
+            [3] =&gt; d
+        )
+
+    [2] =&gt; Array
+        (
+            [4] =&gt; e
+        )
+
+)
+</code></pre>
+
+<h3 id="array_slice">array_slice()</h3>
+<p>Extrai uma parcela de um array</p>
+<h4 id="exemplos_1">Exemplos</h4>
+<pre class="highlight"><code class="language-php">&lt;?php
+$input = array(&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;, &quot;e&quot;);
+
+$output = array_slice($input, 2);      // retorna &quot;c&quot;, &quot;d&quot;, e &quot;e&quot;
+$output = array_slice($input, -2, 1);  // retorna &quot;d&quot;
+$output = array_slice($input, 0, 3);   // retorna &quot;a&quot;, &quot;b&quot;, e &quot;c&quot;
+
+// Obverse as diferenças nas chaves retornadas
+print_r(array_slice($input, 2, -1));
+print_r(array_slice($input, 2, -1, true));
+</code></pre>
+
+<p>O exemplo acima irá imprimir:</p>
+<pre class="highlight"><code class="language-php">Array
+(
+    [0] =&gt; c
+    [1] =&gt; d
+)
+Array
+(
+    [2] =&gt; c
+    [3] =&gt; d
+)
+</code></pre>
+
+<pre class="highlight"><code class="language-php">&lt;?php
+$input = array(1 =&gt; &quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;, &quot;e&quot;);
+print_r(array_slice($input, 1, 2));
+</code></pre>
+
+<p>O exemplo acima irá imprimir:</p>
+<pre class="highlight"><code class="language-php">Array
+(
+    [0] =&gt; b
+    [1] =&gt; c
+)
+</code></pre>
+
+<p>Exemplo #3 array_slice() com chaves mistas</p>
+<pre class="highlight"><code class="language-php">&lt;?php
+$ar = array('a'=&gt;'apple', 'b'=&gt;'banana', '42'=&gt;'pear', 'd'=&gt;'orange');
+print_r(array_slice($ar, 0, 3));
+print_r(array_slice($ar, 0, 3, true));
+</code></pre>
+
+<p>O exemplo acima irá imprimir:</p>
+<pre class="highlight"><code class="language-php">Array
+(
+    [a] =&gt; apple
+    [b] =&gt; banana
+    [0] =&gt; pear
+)
+Array
+(
+    [a] =&gt; apple
+    [b] =&gt; banana
+    [42] =&gt; pear
+)
+</code></pre>
+
+<h3 id="str_split">str_split()</h3>
+<p>Converte uma string para um array</p>
+<h4 id="exemplos_2">Exemplos</h4>
+<pre class="highlight"><code class="language-php">&lt;?php
+
+$str = &quot;Hello Friend&quot;;
+
+$arr1 = str_split($str);
+$arr2 = str_split($str, 3);
+
+print_r($arr1);
+print_r($arr2);
+</code></pre>
+
+<p>O exemplo acima irá imprimir:</p>
+<pre class="highlight"><code class="language-php">Array
+(
+    [0] =&gt; H
+    [1] =&gt; e
+    [2] =&gt; l
+    [3] =&gt; l
+    [4] =&gt; o
+    [5] =&gt;
+    [6] =&gt; F
+    [7] =&gt; r
+    [8] =&gt; i
+    [9] =&gt; e
+    [10] =&gt; n
+    [11] =&gt; d
+)
+
+Array
+(
+    [0] =&gt; Hel
+    [1] =&gt; lo 
+    [2] =&gt; Fri
+    [3] =&gt; end
+)
+</code></pre>
+
+<h3 id="array_search">array_search()</h3>
+<p>Procura por um valor em um array e retorna sua chave correspondente caso seja encontrado</p>
+<h4 id="exemplo_1">Exemplo</h4>
+<pre class="highlight"><code class="language-php">&lt;?php
+$array = array(0 =&gt; 'blue', 1 =&gt; 'red', 2 =&gt; 'green', 3 =&gt; 'red');
+
+$key = array_search('green', $array); // $key = 2;
+$key = array_search('red', $array);   // $key = 1;
+</code></pre>
+
+<h3 id="_get">$_GET</h3>
+<p>Variáveis HTTP GET</p>
+<p>Um array associativo de variáveis passadas para o script atual via os parâmetros da URL (também conhecidos como query string). Note que o array não é preenchido apenas para solicitações GET, mas também para todas requisições com uma query string. </p>
+<h3 id="exemplo_2">Exemplo</h3>
+<p>index.html</p>
+<p><a href="teste.php?nome=Ribamar">Teste</a></p>
+<p>teste.php</p>
+<pre class="highlight"><code class="language-php">&lt;?php
+if(isset($_GET['nome'])){
+    echo 'Olá ' . htmlspecialchars($_GET[&quot;nome&quot;]) . '!';
+}
+</code></pre>
+
+<h3 id="desvantagens-do-metodo-get">Desvantagens do método GET</h3>
+<p>Como alguns dados que serão enviados pelo método GET da linguagem PHP serão exibidos na URL, só será possível marcar a página que está com os valores de consulta específicos da string. O método GET ajudará as solicitações de métodos específicos que podem ser armazenadas em cache e as solicitações do método Get permanecem no histórico do nosso navegador. As solicitações do método Get podem/serão marcadas.</p>
+<p>O método POST não envia as variáveis pela URL e assim é mais seguro.</p>
+<p>https://www.educba.com/php-get-method/</p>
+<h3 id="exemplos_3">Exemplos</h3>
+<pre class="highlight"><code class="language-php">&lt;?php
+$uri = $_SERVER['REQUEST_URI'];
+echo $uri; // Outputs: URI
+
+$protocol = ((!empty($_SERVER['HTTPS']) &amp;&amp; $_SERVER['HTTPS'] != 'off') || $_SERVER['SERVER_PORT'] == 443) ? &quot;https://&quot; : &quot;http://&quot;;
+
+$url = $protocol . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+echo $url; // Outputs: Full URL
+
+$query = $_SERVER['QUERY_STRING'];
+echo $query; // Outputs: Query String
+</code></pre>
+
+<p><a href="https://zetcode.com/php/curl/">https://zetcode.com/php/curl/</a></p>
+<h3 id="metodo-spliturl-da-classe-router">Método splitUrl() da classe Router</h3>
+<pre class="highlight"><code>  // Verificar se a url foi setada
+  if (isset($_GET['url'])) {
+      // dividir a URL em partes
+      $url = trim($_GET['url'], '/'); // A origem deste url é o public/.htaccess
+      $url = filter_var($url, FILTER_SANITIZE_URL); // Filtrar a url de caracteres estranhos a uma url
+      $url = explode('/', $url); // Criar um array com as aprtes da url: controller/action/params
+
+      $this-&gt;urlController = isset($url[0]) ? $url[0] : null; // Criando a $this-&gt;urlController com $url[0]
+      $this-&gt;urlAction = isset($url[1]) ? $url[1] : null; // Criando a $this-&gt;urlAction com $url[1]
+
+      unset($url[0], $url[1]);// Limpar $url[0] e $url[1]
+      $this-&gt;urlParams = array_values($url); // Criando a $this-&gt;urlParams com array_values($url)
+  }
+</code></pre>
+
+<p><a href="https://github.com/ribafs/php-router/blob/main/Core/Router.php">https://github.com/ribafs/php-router/blob/main/Core/Router.php</a></p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js" defer></script>
+        <script src="../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
