@@ -153,7 +153,7 @@ Na factory também podemos gerar dados relacionados ao relacionamento enquanto n
 factory(App\User::class, 50)->create()->each(function ($user) {
         $user->posts()->save(factory(App\Post::class)->make());
 });
-´´´php
+´´´
 
 seeder: Ao usar o seeder, você pode criar dados de teste com base no nome da sua tabela. Como abaixo.
 

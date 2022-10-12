@@ -387,7 +387,7 @@ seeders </p>
 factory(App\User::class, 50)-&gt;create()-&gt;each(function ($user) {
         $user-&gt;posts()-&gt;save(factory(App\Post::class)-&gt;make());
 });
-´´´php</p>
+´´´</p>
 <p>seeder: Ao usar o seeder, você pode criar dados de teste com base no nome da sua tabela. Como abaixo.</p>
 <p>Você pode conferir aqui para mais informações:</p>
 <p>https://laravel.com/docs/9.x/seeding#using-model-factories</p>
