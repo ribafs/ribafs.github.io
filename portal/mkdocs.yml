@@ -102,6 +102,7 @@ nav:
         - Framework:
             - Laravel: 
                 - Gerador de CRUD e API para Laravel 9: backend/framework/laravel/gerador-laravel.md
+                - Migrations e Seeders no Laravel 9: backend/framework/laravel/migrations-seeders.md
         #    - Codeigniter: 
         #        - Introdução: backend/framework/ci/index.md
 
