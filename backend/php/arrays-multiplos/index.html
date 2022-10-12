@@ -199,6 +199,10 @@
 <li>
     <a href="https://github.com/ribafs/mkdocs-ribafs" class="dropdown-item">MkDocs</a>
 </li>
+                                    
+<li>
+    <a href="https://github.com/ribafs/gratuitos" class="dropdown-item">Recursos Gratuitos</a>
+</li>
                                 </ul>
                             </li>
                             <li class="dropdown">
@@ -271,8 +275,8 @@
 <p>Quer ver algo que me enrolava todo? Arrays múltiplos!</p>
 <p>Como faço paga pegar alguns dos seus elementos de um array múltiplo?</p>
 <h3 id="exemplo-para-diversao-e-aprendizado">Exemplo para  diversão e aprendizado:</h3>
-<div class="highlight"><pre><span></span><code><span class="x">Array ( [joao] =&gt; Array ( [nota-provas] =&gt; Array ( [0] =&gt; 4 [1] =&gt; 5 [2] =&gt; 6 ) [nota-final] =&gt; 5 ) [maria] =&gt; Array ( [nota-provas] =&gt; Array ( [0] =&gt; 7 [1] =&gt; 5 [2] =&gt; 6 ) [nota-final] =&gt; 6 ) [omar] =&gt; Array ( [nota-provas] =&gt; Array ( [0] =&gt; 4 [1] =&gt; 5 [2] =&gt; 3 ) [nota-final] =&gt; 4 ) )</span>
-</code></pre></div>
+<pre class="highlight"><code class="language-php">Array ( [joao] =&gt; Array ( [nota-provas] =&gt; Array ( [0] =&gt; 4 [1] =&gt; 5 [2] =&gt; 6 ) [nota-final] =&gt; 5 ) [maria] =&gt; Array ( [nota-provas] =&gt; Array ( [0] =&gt; 7 [1] =&gt; 5 [2] =&gt; 6 ) [nota-final] =&gt; 6 ) [omar] =&gt; Array ( [nota-provas] =&gt; Array ( [0] =&gt; 4 [1] =&gt; 5 [2] =&gt; 3 ) [nota-final] =&gt; 4 ) )
+</code></pre>
 
 <p>Exemplificando preciso pegar o valor de:</p>
 <ul>
@@ -283,53 +287,53 @@
 <p>Precisamos fazer a moda do Jack Estripador, vamos por partes.</p>
 <p>Veja que temos a palavra chave array 3 vezes, portando temos o array externo com dois arrays internos. Este array pode ser escrito de forma a torná-lo mais comprensível assim:</p>
 <h3 id="deixando-mais-legivel">Deixando mais legível</h3>
-<div class="highlight"><pre><span></span><code><span class="x">$notas = array(</span>
-<span class="x">    &#39;joao&#39; =&gt; array(</span>
-<span class="x">        &#39;nota-provas&#39; =&gt; array(4, 5, 6),</span>
-<span class="x">        &#39;nota-final&#39; =&gt; 5</span>
-<span class="x">    ),</span>
-<span class="x">    &#39;maria&#39; =&gt; array(</span>
-<span class="x">        &#39;nota-provas&#39; =&gt; array(7, 5, 6),</span>
-<span class="x">        &#39;nota-final&#39; =&gt; 6</span>
-<span class="x">    ),</span>
-<span class="x">    &#39;omar&#39; =&gt; array(</span>
-<span class="x">        &#39;nota-provas&#39; =&gt; array(4, 5, 3),</span>
-<span class="x">        &#39;nota-final&#39; =&gt; 4</span>
-<span class="x">    )</span>
-<span class="x">);</span>
-</code></pre></div>
+<pre class="highlight"><code class="language-php">$notas = array(
+    'joao' =&gt; array(
+        'nota-provas' =&gt; array(4, 5, 6),
+        'nota-final' =&gt; 5
+    ),
+    'maria' =&gt; array(
+        'nota-provas' =&gt; array(7, 5, 6),
+        'nota-final' =&gt; 6
+    ),
+    'omar' =&gt; array(
+        'nota-provas' =&gt; array(4, 5, 3),
+        'nota-final' =&gt; 4
+    )
+);
+</code></pre>
 
 <p>Depois disso fica mais simples pegar as partes. Precisamos usar uma fun ção de debug como a var_dump() ou a print_r()</p>
-<div class="highlight"><pre><span></span><code><span class="x">Capturar o array completo:</span>
-<span class="x">print_r($notas);</span>
+<pre class="highlight"><code class="language-php">Capturar o array completo:
+print_r($notas);
 
-<span class="x">Capturar a nota-final do joao</span>
-<span class="x">print_r($notas[&#39;joao&#39;][&#39;nota-final&#39;]);</span>
+Capturar a nota-final do joao
+print_r($notas['joao']['nota-final']);
 
-<span class="x">Pegar as nota-provas da maria</span>
-<span class="x">print_r($notas[&#39;maria&#39;][&#39;nota-provas&#39;]);</span>
+Pegar as nota-provas da maria
+print_r($notas['maria']['nota-provas']);
 
-<span class="x">Nota da segunda prova da maria</span>
-<span class="x">print_r($notas[&#39;maria&#39;][&#39;nota-provas&#39;][1]);</span>
-</code></pre></div>
+Nota da segunda prova da maria
+print_r($notas['maria']['nota-provas'][1]);
+</code></pre>
 
 <h3 id="escrevendo-o-array-sem-a-palavra-chave-array">Escrevendo o array sem a palavra chave array</h3>
 <p>Esta sintaxe é aceita somente nas versões 7 e superior (se tiver umam informação mais precisa, favor comentar)</p>
-<div class="highlight"><pre><span></span><code><span class="x">$notas = [</span>
-<span class="x">    &#39;joao&#39; =&gt; [</span>
-<span class="x">        &#39;nota-provas&#39; =&gt; [4, 5, 6],</span>
-<span class="x">        &#39;nota-final&#39; =&gt; 5</span>
-<span class="x">    ],</span>
-<span class="x">    &#39;maria&#39; =&gt; [</span>
-<span class="x">        &#39;nota-provas&#39; =&gt; [7, 5, 6],</span>
-<span class="x">        &#39;nota-final&#39; =&gt; 6</span>
-<span class="x">    ],</span>
-<span class="x">    &#39;omar&#39; =&gt; [</span>
-<span class="x">        &#39;nota-provas&#39; =&gt; [4, 5, 3],</span>
-<span class="x">        &#39;nota-final&#39; =&gt; 4</span>
-<span class="x">    ]</span>
-<span class="x">];</span>
-</code></pre></div>
+<pre class="highlight"><code class="language-php">$notas = [
+    'joao' =&gt; [
+        'nota-provas' =&gt; [4, 5, 6],
+        'nota-final' =&gt; 5
+    ],
+    'maria' =&gt; [
+        'nota-provas' =&gt; [7, 5, 6],
+        'nota-final' =&gt; 6
+    ],
+    'omar' =&gt; [
+        'nota-provas' =&gt; [4, 5, 3],
+        'nota-final' =&gt; 4
+    ]
+];
+</code></pre>
 
 <p>Veja que para isso trocamos "array(" por "[" e ")" por "]".</p>
 <p>Caso tenha alguma observação a fazer ou uma sugestão  para deixar mais claro, por favor clique acima em Comentários e compartilhe conosco.

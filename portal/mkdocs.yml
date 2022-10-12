@@ -126,7 +126,8 @@ nav:
     - Ferramentas:
         - Hospedagem Grátis: ferramentas/hosting-free.md
         #- HTML Live: ferramentas/html-live/index.html
-        - MkDocs: https://github.com/ribafs/mkdocs-ribafs             
+        - MkDocs: https://github.com/ribafs/mkdocs-ribafs
+        - Recursos Gratuitos: https://github.com/ribafs/gratuitos
     - Sobre: 
         - Currículo: sobre/curriculo.md
         - Repositórios: https://github.com/ribafs/alguns-repos
