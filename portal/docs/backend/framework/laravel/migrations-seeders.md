@@ -1,6 +1,12 @@
 # Migrations and Seeders on Laravel 9
 
-I really like using migrations and seeders, as it has great advantages over creating it by hand and also makes it compatible with the various supported DBMSs. Also facilitates the creation of fake data to try application.
+I really like using migrations and seeders, as it has great advantages over creating it by hand and also makes it compatible with the various supported DBMSs. Also facilitates the creation of fake data to try application. Good for testing as it is code. 
+
+See this, being able to export the current bank with all the records:
+
+[https://github.com/ribafs/iseed](https://github.com/ribafs/iseed)
+[https://github.com/ribafs/DbExporter](https://github.com/ribafs/DbExporter)
+[https://github.com/ribafs/Replibyte-seed](https://github.com/ribafs/Replibyte-seed)
 
 ## Create or access your application
 
