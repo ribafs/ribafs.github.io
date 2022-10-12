@@ -1,5 +1,7 @@
 # Migrations and Seeders on Laravel 9
 
+I really like using migrations and seeders, as it has great advantages over creating it by hand and also makes it compatible with the various supported DBMSs. Also facilitates the creation of fake data to try application.
+
 ## Create or access your application
 
 cd application
