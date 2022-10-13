@@ -322,70 +322,70 @@ Uma expressão regular pode ser um único caractere ou um padrão mais complicad
 <p>Os colchetes que cercam um padrão de caracteres são chamados de classe de caracteres, por exemplo: [abc]. Uma classe de caracteres sempre corresponde a um único caractere de uma lista de caracteres especificados, o que significa que a expressão [abc] corresponde apenas ao caractere a, b ou c.</p>
 <p>As classes de caracteres negados também podem ser definidas para corresponder a qualquer caractere, exceto aqueles contidos entre colchetes. Uma classe de caractere negada é definida colocando um símbolo de acento circunflexo (^) imediatamente após o colchete de abertura, como este [^abc].</p>
 <p>Você também pode definir um intervalo de caracteres usando o caractere hífen (-) dentro de uma classe de caracteres, como [0-9]. Vejamos alguns exemplos de classes de personagens:</p>
-<pre class="highlight"><code class="language-bash">RegExp      O que faz
+<div class="highlight"><pre><span></span><code>RegExp      O que faz
 
-[abc]       Corresponde a qualquer um dos caracteres a, b ou c.
-[^abc]      Corresponde a qualquer caractere diferente de a, b ou c.
-[a-z]       Corresponde a qualquer caractere de a minúsculo a z minúsculo.
-[A-Z]       Corresponde a qualquer caractere de a maiúsculo a z maiúsculo.
-[a-Z]       Corresponde a qualquer caractere de a minúsculo a Z maiúsculo.
-[0-9]       Corresponde a um único dígito entre 0 e 9.
-[a-z0-9]    Corresponde a um único caractere entre aez ou entre 0 e 9.
-</code></pre>
+<span class="o">[</span>abc<span class="o">]</span>       Corresponde a qualquer um dos caracteres a, b ou c.
+<span class="o">[</span>^abc<span class="o">]</span>      Corresponde a qualquer caractere diferente de a, b ou c.
+<span class="o">[</span>a-z<span class="o">]</span>       Corresponde a qualquer caractere de a minúsculo a z minúsculo.
+<span class="o">[</span>A-Z<span class="o">]</span>       Corresponde a qualquer caractere de a maiúsculo a z maiúsculo.
+<span class="o">[</span>a-Z<span class="o">]</span>       Corresponde a qualquer caractere de a minúsculo a Z maiúsculo.
+<span class="o">[</span><span class="m">0</span>-9<span class="o">]</span>       Corresponde a um único dígito entre <span class="m">0</span> e <span class="m">9</span>.
+<span class="o">[</span>a-z0-9<span class="o">]</span>    Corresponde a um único caractere entre aez ou entre <span class="m">0</span> e <span class="m">9</span>.
+</code></pre></div>
 
 <h3 id="exemplos">Exemplos</h3>
 <p>O exemplo a seguir mostrará como descobrir se um padrão existe ou não em uma string usando a expressão regular e a função PHP preg_match():</p>
-<pre class="highlight"><code class="language-php">&lt;?php
-$pattern = &quot;/ca[kf]e/&quot;;
-$text = &quot;Ele está comendo cake no cafe.&quot;;
-if(preg_match($pattern, $text)){
-    echo &quot;Encontrado cake!&quot;;
-} else{
-    echo &quot;Match not found.&quot;;
-}
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
+<span class="nv">$pattern</span> <span class="o">=</span> <span class="s2">&quot;/ca[kf]e/&quot;</span><span class="p">;</span>
+<span class="nv">$text</span> <span class="o">=</span> <span class="s2">&quot;Ele está comendo cake no cafe.&quot;</span><span class="p">;</span>
+<span class="k">if</span><span class="p">(</span><span class="nb">preg_match</span><span class="p">(</span><span class="nv">$pattern</span><span class="p">,</span> <span class="nv">$text</span><span class="p">)){</span>
+    <span class="k">echo</span> <span class="s2">&quot;Encontrado cake!&quot;</span><span class="p">;</span>
+<span class="p">}</span> <span class="k">else</span><span class="p">{</span>
+    <span class="k">echo</span> <span class="s2">&quot;Match not found.&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
 
 <h3 id="tambem-podemos-usar-a-funcao-preg_match_all">Também podemos usar a função preg_match_all()</h3>
-<pre class="highlight"><code class="language-php">&lt;?php
-$pattern = &quot;/ca[kf]e/&quot;;
-$text = &quot;Ele está comendo cake bo cafe.&quot;;
-$matches = preg_match_all($pattern, $text, $array);
-echo $matches . &quot; encontrados: cake e cafe.&quot;;
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
+<span class="nv">$pattern</span> <span class="o">=</span> <span class="s2">&quot;/ca[kf]e/&quot;</span><span class="p">;</span>
+<span class="nv">$text</span> <span class="o">=</span> <span class="s2">&quot;Ele está comendo cake bo cafe.&quot;</span><span class="p">;</span>
+<span class="nv">$matches</span> <span class="o">=</span> <span class="nb">preg_match_all</span><span class="p">(</span><span class="nv">$pattern</span><span class="p">,</span> <span class="nv">$text</span><span class="p">,</span> <span class="nv">$array</span><span class="p">);</span>
+<span class="k">echo</span> <span class="nv">$matches</span> <span class="o">.</span> <span class="s2">&quot; encontrados: cake e cafe.&quot;</span><span class="p">;</span>
+</code></pre></div>
 
 <h3 id="classes-de-caracteres-predefinidas">Classes de caracteres predefinidas</h3>
 <p>Algumas classes de caracteres, como dígitos, letras e espaços em branco, são usadas com tanta frequência que existem nomes de atalho para elas. A tabela a seguir lista essas classes de caracteres predefinidas:</p>
-<pre class="highlight"><code class="language-php">Atalho  O que faz
+<div class="highlight"><pre><span></span><code><span class="x">Atalho  O que faz</span>
 
-.       Corresponde a qualquer caractere único, exceto nova linha \n.
-\d      corresponde a qualquer caractere de dígito. Igual a [0-9]
-\D      Corresponde a qualquer caractere que não seja dígito. O mesmo que [^0-9]
-\s      Corresponde a qualquer caractere de espaço em branco (espaço, tabulação, nova linha ou caractere de retorno de carro). O mesmo que [ \t\n\r]
-\S      Corresponde a qualquer caractere que não seja espaço em branco. O mesmo que [^ \t\n\r]
-\w      Corresponde a qualquer caractere de palavra (definido como a a z, A a Z, 0 a 9 e o sublinhado). Igual a [a-zA-Z_0-9]
-\W      Corresponde a qualquer caractere que não seja palavra. O mesmo que [^a-zA-Z_0-9]
-</code></pre>
+<span class="x">.       Corresponde a qualquer caractere único, exceto nova linha \n.</span>
+<span class="x">\d      corresponde a qualquer caractere de dígito. Igual a [0-9]</span>
+<span class="x">\D      Corresponde a qualquer caractere que não seja dígito. O mesmo que [^0-9]</span>
+<span class="x">\s      Corresponde a qualquer caractere de espaço em branco (espaço, tabulação, nova linha ou caractere de retorno de carro). O mesmo que [ \t\n\r]</span>
+<span class="x">\S      Corresponde a qualquer caractere que não seja espaço em branco. O mesmo que [^ \t\n\r]</span>
+<span class="x">\w      Corresponde a qualquer caractere de palavra (definido como a a z, A a Z, 0 a 9 e o sublinhado). Igual a [a-zA-Z_0-9]</span>
+<span class="x">\W      Corresponde a qualquer caractere que não seja palavra. O mesmo que [^a-zA-Z_0-9]</span>
+</code></pre></div>
 
 <h3 id="exemplos_1">Exemplos</h3>
-<pre class="highlight"><code class="language-php">&lt;?php
-$str = &quot;Visit W3Schools&quot;;
-$pattern = &quot;/w3schools/i&quot;;
-echo preg_match($pattern, $str); // Outputs 1
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
+<span class="nv">$str</span> <span class="o">=</span> <span class="s2">&quot;Visit W3Schools&quot;</span><span class="p">;</span>
+<span class="nv">$pattern</span> <span class="o">=</span> <span class="s2">&quot;/w3schools/i&quot;</span><span class="p">;</span>
+<span class="k">echo</span> <span class="nb">preg_match</span><span class="p">(</span><span class="nv">$pattern</span><span class="p">,</span> <span class="nv">$str</span><span class="p">);</span> <span class="c1">// Outputs 1</span>
 
-&lt;?php
-$str = &quot;The rain in SPAIN falls mainly on the plains.&quot;;
-$pattern = &quot;/ain/i&quot;;
-echo preg_match_all($pattern, $str); // Outputs 4
-</code></pre>
+<span class="o">&lt;?</span><span class="nx">php</span>
+<span class="nv">$str</span> <span class="o">=</span> <span class="s2">&quot;The rain in SPAIN falls mainly on the plains.&quot;</span><span class="p">;</span>
+<span class="nv">$pattern</span> <span class="o">=</span> <span class="s2">&quot;/ain/i&quot;</span><span class="p">;</span>
+<span class="k">echo</span> <span class="nb">preg_match_all</span><span class="p">(</span><span class="nv">$pattern</span><span class="p">,</span> <span class="nv">$str</span><span class="p">);</span> <span class="c1">// Outputs 4</span>
+</code></pre></div>
 
 <h3 id="usando-a-funcao-preg_replace">Usando a função preg_replace()</h3>
 <p>A função preg_replace() substituirá todas as correspondências do padrão em uma string por uma substring.</p>
 <h2 id="3-exemplos">3 Exemplos</h2>
-<pre class="highlight"><code class="language-php">&lt;?php
-$str = &quot;Visit Microsoft!&quot;;
-$pattern = &quot;/microsoft/i&quot;;
-echo preg_replace($pattern, &quot;W3Schools&quot;, $str); // Outputs &quot;Visit W3Schools!&quot;
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
+<span class="nv">$str</span> <span class="o">=</span> <span class="s2">&quot;Visit Microsoft!&quot;</span><span class="p">;</span>
+<span class="nv">$pattern</span> <span class="o">=</span> <span class="s2">&quot;/microsoft/i&quot;</span><span class="p">;</span>
+<span class="k">echo</span> <span class="nb">preg_replace</span><span class="p">(</span><span class="nv">$pattern</span><span class="p">,</span> <span class="s2">&quot;W3Schools&quot;</span><span class="p">,</span> <span class="nv">$str</span><span class="p">);</span> <span class="c1">// Outputs &quot;Visit W3Schools!&quot;</span>
+</code></pre></div>
 
 <h3 id="modificadores-de-expressoes-regulares">Modificadores de expressões regulares</h3>
 <p>i - executa busca case-insensitiva</p>
@@ -393,56 +393,56 @@ echo preg_replace($pattern, &quot;W3Schools&quot;, $str); // Outputs &quot;Visit
 <p>u - Permite a correspondência correta de padrões codificados em UTF-8</p>
 <h3 id="quantificadores">Quantificadores</h3>
 <p>Quantificador   Descrição</p>
-<pre class="highlight"><code class="language-php">n+              Corresponde a qualquer string que contenha pelo menos um n
-n*              Corresponde a qualquer string que contenha zero ou mais ocorrências de n
-n?              Corresponde a qualquer string que contenha zero ou uma ocorrência de n
-n{x}            Corresponde a qualquer string que contenha uma sequência de X n's
-n{x,y}          Corresponde a qualquer string que contenha uma sequência de X a Y n's
-n{x,}           Corresponde a qualquer string que contenha uma sequência de pelo menos X n's
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="x">n+              Corresponde a qualquer string que contenha pelo menos um n</span>
+<span class="x">n*              Corresponde a qualquer string que contenha zero ou mais ocorrências de n</span>
+<span class="x">n?              Corresponde a qualquer string que contenha zero ou uma ocorrência de n</span>
+<span class="x">n{x}            Corresponde a qualquer string que contenha uma sequência de X n&#39;s</span>
+<span class="x">n{x,y}          Corresponde a qualquer string que contenha uma sequência de X a Y n&#39;s</span>
+<span class="x">n{x,}           Corresponde a qualquer string que contenha uma sequência de pelo menos X n&#39;s</span>
+</code></pre></div>
 
 <h3 id="exemplos_2">Exemplos</h3>
-<pre class="highlight"><code class="language-php">&lt;?php
-$str = &quot;Apples and bananas.&quot;;
-$pattern = &quot;/ba(na){2}/i&quot;;
-echo preg_match($pattern, $str); // Outputs 1
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
+<span class="nv">$str</span> <span class="o">=</span> <span class="s2">&quot;Apples and bananas.&quot;</span><span class="p">;</span>
+<span class="nv">$pattern</span> <span class="o">=</span> <span class="s2">&quot;/ba(na){2}/i&quot;</span><span class="p">;</span>
+<span class="k">echo</span> <span class="nb">preg_match</span><span class="p">(</span><span class="nv">$pattern</span><span class="p">,</span> <span class="nv">$str</span><span class="p">);</span> <span class="c1">// Outputs 1</span>
 
-&lt;?php
-$str = &quot;Apples and bananas and bananas.&quot;;
-$pattern = &quot;/ba(na){2}/i&quot;;
-echo preg_match($pattern, $str); // Outputs 1
+<span class="o">&lt;?</span><span class="nx">php</span>
+<span class="nv">$str</span> <span class="o">=</span> <span class="s2">&quot;Apples and bananas and bananas.&quot;</span><span class="p">;</span>
+<span class="nv">$pattern</span> <span class="o">=</span> <span class="s2">&quot;/ba(na){2}/i&quot;</span><span class="p">;</span>
+<span class="k">echo</span> <span class="nb">preg_match</span><span class="p">(</span><span class="nv">$pattern</span><span class="p">,</span> <span class="nv">$str</span><span class="p">);</span> <span class="c1">// Outputs 1</span>
 
-&lt;?php
-$str = &quot;Apples and bananas and bananas.&quot;;
-$pattern = &quot;/ba(na){2}/i&quot;;
-echo preg_match_all($pattern, $str); // Outputs 2
-</code></pre>
+<span class="o">&lt;?</span><span class="nx">php</span>
+<span class="nv">$str</span> <span class="o">=</span> <span class="s2">&quot;Apples and bananas and bananas.&quot;</span><span class="p">;</span>
+<span class="nv">$pattern</span> <span class="o">=</span> <span class="s2">&quot;/ba(na){2}/i&quot;</span><span class="p">;</span>
+<span class="k">echo</span> <span class="nb">preg_match_all</span><span class="p">(</span><span class="nv">$pattern</span><span class="p">,</span> <span class="nv">$str</span><span class="p">);</span> <span class="c1">// Outputs 2</span>
+</code></pre></div>
 
 <h3 id="procurar-por-uma-palavra-exatamente">Procurar por uma palavra exatamente</h3>
 <p>Para isso usamos o caractere que indica início e o caractere que indica final da string:</p>
-<pre class="highlight"><code class="language-php">echo preg_match(&quot;/^mother$/&quot;, &quot;motherland&quot;); // 0
+<div class="highlight"><pre><span></span><code><span class="x">echo preg_match(&quot;/^mother$/&quot;, &quot;motherland&quot;); // 0</span>
 
-echo preg_match(&quot;/^mother$/&quot;, &quot;Who is your mother?&quot;); // 0
+<span class="x">echo preg_match(&quot;/^mother$/&quot;, &quot;Who is your mother?&quot;); // 0</span>
 
-echo preg_match(&quot;/^mother$/&quot;, &quot;mother&quot;); // 1
-</code></pre>
+<span class="x">echo preg_match(&quot;/^mother$/&quot;, &quot;mother&quot;); // 1</span>
+</code></pre></div>
 
 <h3 id="operador-ou">Operador ou |</h3>
 <p>Exemplo</p>
-<pre class="highlight"><code class="language-php">&lt;?php
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
 
-$names = [ &quot;Jane&quot;, &quot;Thomas&quot;, &quot;Robert&quot;, &quot;Lucy&quot;, &quot;Beky&quot;, &quot;John&quot;, &quot;Peter&quot;, &quot;Andy&quot; ];
+<span class="nv">$names</span> <span class="o">=</span> <span class="p">[</span> <span class="s2">&quot;Jane&quot;</span><span class="p">,</span> <span class="s2">&quot;Thomas&quot;</span><span class="p">,</span> <span class="s2">&quot;Robert&quot;</span><span class="p">,</span> <span class="s2">&quot;Lucy&quot;</span><span class="p">,</span> <span class="s2">&quot;Beky&quot;</span><span class="p">,</span> <span class="s2">&quot;John&quot;</span><span class="p">,</span> <span class="s2">&quot;Peter&quot;</span><span class="p">,</span> <span class="s2">&quot;Andy&quot;</span> <span class="p">];</span>
 
-$pattern = &quot;/Jane|Beky|Robert/&quot;;
+<span class="nv">$pattern</span> <span class="o">=</span> <span class="s2">&quot;/Jane|Beky|Robert/&quot;</span><span class="p">;</span>
 
-foreach ($names as $name) {
-    if (preg_match($pattern, $name)) {
-        echo &quot;$name is my friend\n&lt;br&gt;&quot;;
-    } else {
-        echo &quot;$name is not my friend\n&lt;br&gt;&quot;;
-    }
-}
-</code></pre>
+<span class="k">foreach</span> <span class="p">(</span><span class="nv">$names</span> <span class="k">as</span> <span class="nv">$name</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nb">preg_match</span><span class="p">(</span><span class="nv">$pattern</span><span class="p">,</span> <span class="nv">$name</span><span class="p">))</span> <span class="p">{</span>
+        <span class="k">echo</span> <span class="s2">&quot;</span><span class="si">$name</span><span class="s2"> is my friend</span><span class="se">\n</span><span class="s2">&lt;br&gt;&quot;</span><span class="p">;</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="k">echo</span> <span class="s2">&quot;</span><span class="si">$name</span><span class="s2"> is not my friend</span><span class="se">\n</span><span class="s2">&lt;br&gt;&quot;</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
 
 <h3 id="testador-de-expressoes-regulares-online">Testador de expressões regulares online</h3>
 <p>https://regex101.com/</p>

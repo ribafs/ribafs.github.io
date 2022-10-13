@@ -298,232 +298,232 @@
 <h3 id="parse_url">parse_url()</h3>
 <p>Interpreta uma URL e retorna os seus componentes</p>
 <h4 id="exemplos">Exemplos</h4>
-<pre class="highlight"><code class="language-php">&lt;?php
-$url = 'http://username:password@hostname:9090/path?arg=value#anchor';
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
+<span class="nv">$url</span> <span class="o">=</span> <span class="s1">&#39;http://username:password@hostname:9090/path?arg=value#anchor&#39;</span><span class="p">;</span>
 
-var_dump(parse_url($url));
-var_dump(parse_url($url, PHP_URL_SCHEME));
-var_dump(parse_url($url, PHP_URL_USER));
-var_dump(parse_url($url, PHP_URL_PASS));
-var_dump(parse_url($url, PHP_URL_HOST));
-var_dump(parse_url($url, PHP_URL_PORT));
-var_dump(parse_url($url, PHP_URL_PATH));
-var_dump(parse_url($url, PHP_URL_QUERY));
-var_dump(parse_url($url, PHP_URL_FRAGMENT));
-</code></pre>
+<span class="nb">var_dump</span><span class="p">(</span><span class="nb">parse_url</span><span class="p">(</span><span class="nv">$url</span><span class="p">));</span>
+<span class="nb">var_dump</span><span class="p">(</span><span class="nb">parse_url</span><span class="p">(</span><span class="nv">$url</span><span class="p">,</span> <span class="nx">PHP_URL_SCHEME</span><span class="p">));</span>
+<span class="nb">var_dump</span><span class="p">(</span><span class="nb">parse_url</span><span class="p">(</span><span class="nv">$url</span><span class="p">,</span> <span class="nx">PHP_URL_USER</span><span class="p">));</span>
+<span class="nb">var_dump</span><span class="p">(</span><span class="nb">parse_url</span><span class="p">(</span><span class="nv">$url</span><span class="p">,</span> <span class="nx">PHP_URL_PASS</span><span class="p">));</span>
+<span class="nb">var_dump</span><span class="p">(</span><span class="nb">parse_url</span><span class="p">(</span><span class="nv">$url</span><span class="p">,</span> <span class="nx">PHP_URL_HOST</span><span class="p">));</span>
+<span class="nb">var_dump</span><span class="p">(</span><span class="nb">parse_url</span><span class="p">(</span><span class="nv">$url</span><span class="p">,</span> <span class="nx">PHP_URL_PORT</span><span class="p">));</span>
+<span class="nb">var_dump</span><span class="p">(</span><span class="nb">parse_url</span><span class="p">(</span><span class="nv">$url</span><span class="p">,</span> <span class="nx">PHP_URL_PATH</span><span class="p">));</span>
+<span class="nb">var_dump</span><span class="p">(</span><span class="nb">parse_url</span><span class="p">(</span><span class="nv">$url</span><span class="p">,</span> <span class="nx">PHP_URL_QUERY</span><span class="p">));</span>
+<span class="nb">var_dump</span><span class="p">(</span><span class="nb">parse_url</span><span class="p">(</span><span class="nv">$url</span><span class="p">,</span> <span class="nx">PHP_URL_FRAGMENT</span><span class="p">));</span>
+</code></pre></div>
 
 <p>O exemplo acima irá imprimir:</p>
-<pre class="highlight"><code class="language-php">array(8) {
-  [&quot;scheme&quot;]=&gt;
-  string(4) &quot;http&quot;
-  [&quot;host&quot;]=&gt;
-  string(8) &quot;hostname&quot;
-  [&quot;port&quot;]=&gt;
-  int(9090)
-  [&quot;user&quot;]=&gt;
-  string(8) &quot;username&quot;
-  [&quot;pass&quot;]=&gt;
-  string(8) &quot;password&quot;
-  [&quot;path&quot;]=&gt;
-  string(5) &quot;/path&quot;
-  [&quot;query&quot;]=&gt;
-  string(9) &quot;arg=value&quot;
-  [&quot;fragment&quot;]=&gt;
-  string(6) &quot;anchor&quot;
-}
-string(4) &quot;http&quot;
-string(8) &quot;username&quot;
-string(8) &quot;password&quot;
-string(8) &quot;hostname&quot;
-int(9090)
-string(5) &quot;/path&quot;
-string(9) &quot;arg=value&quot;
-string(6) &quot;anchor&quot;
+<div class="highlight"><pre><span></span><code><span class="x">array(8) {</span>
+<span class="x">  [&quot;scheme&quot;]=&gt;</span>
+<span class="x">  string(4) &quot;http&quot;</span>
+<span class="x">  [&quot;host&quot;]=&gt;</span>
+<span class="x">  string(8) &quot;hostname&quot;</span>
+<span class="x">  [&quot;port&quot;]=&gt;</span>
+<span class="x">  int(9090)</span>
+<span class="x">  [&quot;user&quot;]=&gt;</span>
+<span class="x">  string(8) &quot;username&quot;</span>
+<span class="x">  [&quot;pass&quot;]=&gt;</span>
+<span class="x">  string(8) &quot;password&quot;</span>
+<span class="x">  [&quot;path&quot;]=&gt;</span>
+<span class="x">  string(5) &quot;/path&quot;</span>
+<span class="x">  [&quot;query&quot;]=&gt;</span>
+<span class="x">  string(9) &quot;arg=value&quot;</span>
+<span class="x">  [&quot;fragment&quot;]=&gt;</span>
+<span class="x">  string(6) &quot;anchor&quot;</span>
+<span class="x">}</span>
+<span class="x">string(4) &quot;http&quot;</span>
+<span class="x">string(8) &quot;username&quot;</span>
+<span class="x">string(8) &quot;password&quot;</span>
+<span class="x">string(8) &quot;hostname&quot;</span>
+<span class="x">int(9090)</span>
+<span class="x">string(5) &quot;/path&quot;</span>
+<span class="x">string(9) &quot;arg=value&quot;</span>
+<span class="x">string(6) &quot;anchor&quot;</span>
 
-&lt;?php
-$url = '//www.example.com/path?googleguy=googley';
+<span class="cp">&lt;?php</span>
+<span class="nv">$url</span> <span class="o">=</span> <span class="s1">&#39;//www.example.com/path?googleguy=googley&#39;</span><span class="p">;</span>
 
-// Prior to 5.4.7 this would show the path as &quot;//www.example.com/path&quot;
-var_dump(parse_url($url));
+<span class="c1">// Prior to 5.4.7 this would show the path as &quot;//www.example.com/path&quot;</span>
+<span class="nb">var_dump</span><span class="p">(</span><span class="nb">parse_url</span><span class="p">(</span><span class="nv">$url</span><span class="p">));</span>
 
 
-//O exemplo acima irá imprimir:
+<span class="c1">//O exemplo acima irá imprimir:</span>
 
-array(3) {
-  [&quot;host&quot;]=&gt;
-  string(15) &quot;www.example.com&quot;
-  [&quot;path&quot;]=&gt;
-  string(5) &quot;/path&quot;
-  [&quot;query&quot;]=&gt;
-  string(17) &quot;googleguy=googley&quot;
-}
-</code></pre>
+<span class="k">array</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="p">{</span>
+  <span class="p">[</span><span class="s2">&quot;host&quot;</span><span class="p">]</span><span class="o">=&gt;</span>
+  <span class="nx">string</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span> <span class="s2">&quot;www.example.com&quot;</span>
+  <span class="p">[</span><span class="s2">&quot;path&quot;</span><span class="p">]</span><span class="o">=&gt;</span>
+  <span class="nx">string</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="s2">&quot;/path&quot;</span>
+  <span class="p">[</span><span class="s2">&quot;query&quot;</span><span class="p">]</span><span class="o">=&gt;</span>
+  <span class="nx">string</span><span class="p">(</span><span class="mi">17</span><span class="p">)</span> <span class="s2">&quot;googleguy=googley&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
 
 <h3 id="funcoes-auxiliares">Funções auxiliares</h3>
 <h4 id="array_chunk">array_chunk()</h4>
 <p>Divide um array em pedaços</p>
 <h4 id="exemplo">Exemplo</h4>
-<pre class="highlight"><code class="language-php">&lt;?php
-$input_array = array('a', 'b', 'c', 'd', 'e');
-print_r(array_chunk($input_array, 2));
-print_r(array_chunk($input_array, 2, true));
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
+<span class="nv">$input_array</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">);</span>
+<span class="nb">print_r</span><span class="p">(</span><span class="nb">array_chunk</span><span class="p">(</span><span class="nv">$input_array</span><span class="p">,</span> <span class="mi">2</span><span class="p">));</span>
+<span class="nb">print_r</span><span class="p">(</span><span class="nb">array_chunk</span><span class="p">(</span><span class="nv">$input_array</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="k">true</span><span class="p">));</span>
+</code></pre></div>
 
 <p>O exemplo acima irá imprimir:</p>
-<pre class="highlight"><code class="language-php">Array
-(
-    [0] =&gt; Array
-        (
-            [0] =&gt; a
-            [1] =&gt; b
-        )
+<div class="highlight"><pre><span></span><code><span class="x">Array</span>
+<span class="x">(</span>
+<span class="x">    [0] =&gt; Array</span>
+<span class="x">        (</span>
+<span class="x">            [0] =&gt; a</span>
+<span class="x">            [1] =&gt; b</span>
+<span class="x">        )</span>
 
-    [1] =&gt; Array
-        (
-            [0] =&gt; c
-            [1] =&gt; d
-        )
+<span class="x">    [1] =&gt; Array</span>
+<span class="x">        (</span>
+<span class="x">            [0] =&gt; c</span>
+<span class="x">            [1] =&gt; d</span>
+<span class="x">        )</span>
 
-    [2] =&gt; Array
-        (
-            [0] =&gt; e
-        )
+<span class="x">    [2] =&gt; Array</span>
+<span class="x">        (</span>
+<span class="x">            [0] =&gt; e</span>
+<span class="x">        )</span>
 
-)
-Array
-(
-    [0] =&gt; Array
-        (
-            [0] =&gt; a
-            [1] =&gt; b
-        )
+<span class="x">)</span>
+<span class="x">Array</span>
+<span class="x">(</span>
+<span class="x">    [0] =&gt; Array</span>
+<span class="x">        (</span>
+<span class="x">            [0] =&gt; a</span>
+<span class="x">            [1] =&gt; b</span>
+<span class="x">        )</span>
 
-    [1] =&gt; Array
-        (
-            [2] =&gt; c
-            [3] =&gt; d
-        )
+<span class="x">    [1] =&gt; Array</span>
+<span class="x">        (</span>
+<span class="x">            [2] =&gt; c</span>
+<span class="x">            [3] =&gt; d</span>
+<span class="x">        )</span>
 
-    [2] =&gt; Array
-        (
-            [4] =&gt; e
-        )
+<span class="x">    [2] =&gt; Array</span>
+<span class="x">        (</span>
+<span class="x">            [4] =&gt; e</span>
+<span class="x">        )</span>
 
-)
-</code></pre>
+<span class="x">)</span>
+</code></pre></div>
 
 <h3 id="array_slice">array_slice()</h3>
 <p>Extrai uma parcela de um array</p>
 <h4 id="exemplos_1">Exemplos</h4>
-<pre class="highlight"><code class="language-php">&lt;?php
-$input = array(&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;, &quot;e&quot;);
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
+<span class="nv">$input</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">,</span> <span class="s2">&quot;d&quot;</span><span class="p">,</span> <span class="s2">&quot;e&quot;</span><span class="p">);</span>
 
-$output = array_slice($input, 2);      // retorna &quot;c&quot;, &quot;d&quot;, e &quot;e&quot;
-$output = array_slice($input, -2, 1);  // retorna &quot;d&quot;
-$output = array_slice($input, 0, 3);   // retorna &quot;a&quot;, &quot;b&quot;, e &quot;c&quot;
+<span class="nv">$output</span> <span class="o">=</span> <span class="nb">array_slice</span><span class="p">(</span><span class="nv">$input</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span>      <span class="c1">// retorna &quot;c&quot;, &quot;d&quot;, e &quot;e&quot;</span>
+<span class="nv">$output</span> <span class="o">=</span> <span class="nb">array_slice</span><span class="p">(</span><span class="nv">$input</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>  <span class="c1">// retorna &quot;d&quot;</span>
+<span class="nv">$output</span> <span class="o">=</span> <span class="nb">array_slice</span><span class="p">(</span><span class="nv">$input</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span>   <span class="c1">// retorna &quot;a&quot;, &quot;b&quot;, e &quot;c&quot;</span>
 
-// Obverse as diferenças nas chaves retornadas
-print_r(array_slice($input, 2, -1));
-print_r(array_slice($input, 2, -1, true));
-</code></pre>
-
-<p>O exemplo acima irá imprimir:</p>
-<pre class="highlight"><code class="language-php">Array
-(
-    [0] =&gt; c
-    [1] =&gt; d
-)
-Array
-(
-    [2] =&gt; c
-    [3] =&gt; d
-)
-</code></pre>
-
-<pre class="highlight"><code class="language-php">&lt;?php
-$input = array(1 =&gt; &quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;, &quot;e&quot;);
-print_r(array_slice($input, 1, 2));
-</code></pre>
+<span class="c1">// Obverse as diferenças nas chaves retornadas</span>
+<span class="nb">print_r</span><span class="p">(</span><span class="nb">array_slice</span><span class="p">(</span><span class="nv">$input</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">));</span>
+<span class="nb">print_r</span><span class="p">(</span><span class="nb">array_slice</span><span class="p">(</span><span class="nv">$input</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="k">true</span><span class="p">));</span>
+</code></pre></div>
 
 <p>O exemplo acima irá imprimir:</p>
-<pre class="highlight"><code class="language-php">Array
-(
-    [0] =&gt; b
-    [1] =&gt; c
-)
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="x">Array</span>
+<span class="x">(</span>
+<span class="x">    [0] =&gt; c</span>
+<span class="x">    [1] =&gt; d</span>
+<span class="x">)</span>
+<span class="x">Array</span>
+<span class="x">(</span>
+<span class="x">    [2] =&gt; c</span>
+<span class="x">    [3] =&gt; d</span>
+<span class="x">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
+<span class="nv">$input</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span><span class="mi">1</span> <span class="o">=&gt;</span> <span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">,</span> <span class="s2">&quot;d&quot;</span><span class="p">,</span> <span class="s2">&quot;e&quot;</span><span class="p">);</span>
+<span class="nb">print_r</span><span class="p">(</span><span class="nb">array_slice</span><span class="p">(</span><span class="nv">$input</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">));</span>
+</code></pre></div>
+
+<p>O exemplo acima irá imprimir:</p>
+<div class="highlight"><pre><span></span><code><span class="x">Array</span>
+<span class="x">(</span>
+<span class="x">    [0] =&gt; b</span>
+<span class="x">    [1] =&gt; c</span>
+<span class="x">)</span>
+</code></pre></div>
 
 <p>Exemplo #3 array_slice() com chaves mistas</p>
-<pre class="highlight"><code class="language-php">&lt;?php
-$ar = array('a'=&gt;'apple', 'b'=&gt;'banana', '42'=&gt;'pear', 'd'=&gt;'orange');
-print_r(array_slice($ar, 0, 3));
-print_r(array_slice($ar, 0, 3, true));
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
+<span class="nv">$ar</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="o">=&gt;</span><span class="s1">&#39;apple&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="o">=&gt;</span><span class="s1">&#39;banana&#39;</span><span class="p">,</span> <span class="s1">&#39;42&#39;</span><span class="o">=&gt;</span><span class="s1">&#39;pear&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="o">=&gt;</span><span class="s1">&#39;orange&#39;</span><span class="p">);</span>
+<span class="nb">print_r</span><span class="p">(</span><span class="nb">array_slice</span><span class="p">(</span><span class="nv">$ar</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">));</span>
+<span class="nb">print_r</span><span class="p">(</span><span class="nb">array_slice</span><span class="p">(</span><span class="nv">$ar</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="k">true</span><span class="p">));</span>
+</code></pre></div>
 
 <p>O exemplo acima irá imprimir:</p>
-<pre class="highlight"><code class="language-php">Array
-(
-    [a] =&gt; apple
-    [b] =&gt; banana
-    [0] =&gt; pear
-)
-Array
-(
-    [a] =&gt; apple
-    [b] =&gt; banana
-    [42] =&gt; pear
-)
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="x">Array</span>
+<span class="x">(</span>
+<span class="x">    [a] =&gt; apple</span>
+<span class="x">    [b] =&gt; banana</span>
+<span class="x">    [0] =&gt; pear</span>
+<span class="x">)</span>
+<span class="x">Array</span>
+<span class="x">(</span>
+<span class="x">    [a] =&gt; apple</span>
+<span class="x">    [b] =&gt; banana</span>
+<span class="x">    [42] =&gt; pear</span>
+<span class="x">)</span>
+</code></pre></div>
 
 <h3 id="str_split">str_split()</h3>
 <p>Converte uma string para um array</p>
 <h4 id="exemplos_2">Exemplos</h4>
-<pre class="highlight"><code class="language-php">&lt;?php
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
 
-$str = &quot;Hello Friend&quot;;
+<span class="nv">$str</span> <span class="o">=</span> <span class="s2">&quot;Hello Friend&quot;</span><span class="p">;</span>
 
-$arr1 = str_split($str);
-$arr2 = str_split($str, 3);
+<span class="nv">$arr1</span> <span class="o">=</span> <span class="nb">str_split</span><span class="p">(</span><span class="nv">$str</span><span class="p">);</span>
+<span class="nv">$arr2</span> <span class="o">=</span> <span class="nb">str_split</span><span class="p">(</span><span class="nv">$str</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span>
 
-print_r($arr1);
-print_r($arr2);
-</code></pre>
+<span class="nb">print_r</span><span class="p">(</span><span class="nv">$arr1</span><span class="p">);</span>
+<span class="nb">print_r</span><span class="p">(</span><span class="nv">$arr2</span><span class="p">);</span>
+</code></pre></div>
 
 <p>O exemplo acima irá imprimir:</p>
-<pre class="highlight"><code class="language-php">Array
-(
-    [0] =&gt; H
-    [1] =&gt; e
-    [2] =&gt; l
-    [3] =&gt; l
-    [4] =&gt; o
-    [5] =&gt;
-    [6] =&gt; F
-    [7] =&gt; r
-    [8] =&gt; i
-    [9] =&gt; e
-    [10] =&gt; n
-    [11] =&gt; d
-)
+<div class="highlight"><pre><span></span><code><span class="x">Array</span>
+<span class="x">(</span>
+<span class="x">    [0] =&gt; H</span>
+<span class="x">    [1] =&gt; e</span>
+<span class="x">    [2] =&gt; l</span>
+<span class="x">    [3] =&gt; l</span>
+<span class="x">    [4] =&gt; o</span>
+<span class="x">    [5] =&gt;</span>
+<span class="x">    [6] =&gt; F</span>
+<span class="x">    [7] =&gt; r</span>
+<span class="x">    [8] =&gt; i</span>
+<span class="x">    [9] =&gt; e</span>
+<span class="x">    [10] =&gt; n</span>
+<span class="x">    [11] =&gt; d</span>
+<span class="x">)</span>
 
-Array
-(
-    [0] =&gt; Hel
-    [1] =&gt; lo 
-    [2] =&gt; Fri
-    [3] =&gt; end
-)
-</code></pre>
+<span class="x">Array</span>
+<span class="x">(</span>
+<span class="x">    [0] =&gt; Hel</span>
+<span class="x">    [1] =&gt; lo </span>
+<span class="x">    [2] =&gt; Fri</span>
+<span class="x">    [3] =&gt; end</span>
+<span class="x">)</span>
+</code></pre></div>
 
 <h3 id="array_search">array_search()</h3>
 <p>Procura por um valor em um array e retorna sua chave correspondente caso seja encontrado</p>
 <h4 id="exemplo_1">Exemplo</h4>
-<pre class="highlight"><code class="language-php">&lt;?php
-$array = array(0 =&gt; 'blue', 1 =&gt; 'red', 2 =&gt; 'green', 3 =&gt; 'red');
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
+<span class="nv">$array</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span><span class="mi">0</span> <span class="o">=&gt;</span> <span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="mi">1</span> <span class="o">=&gt;</span> <span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="mi">2</span> <span class="o">=&gt;</span> <span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="mi">3</span> <span class="o">=&gt;</span> <span class="s1">&#39;red&#39;</span><span class="p">);</span>
 
-$key = array_search('green', $array); // $key = 2;
-$key = array_search('red', $array);   // $key = 1;
-</code></pre>
+<span class="nv">$key</span> <span class="o">=</span> <span class="nb">array_search</span><span class="p">(</span><span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="nv">$array</span><span class="p">);</span> <span class="c1">// $key = 2;</span>
+<span class="nv">$key</span> <span class="o">=</span> <span class="nb">array_search</span><span class="p">(</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="nv">$array</span><span class="p">);</span>   <span class="c1">// $key = 1;</span>
+</code></pre></div>
 
 <h3 id="_get">$_GET</h3>
 <p>Variáveis HTTP GET</p>
@@ -532,46 +532,46 @@ $key = array_search('red', $array);   // $key = 1;
 <p>index.html</p>
 <p><a href="teste.php?nome=Ribamar">Teste</a></p>
 <p>teste.php</p>
-<pre class="highlight"><code class="language-php">&lt;?php
-if(isset($_GET['nome'])){
-    echo 'Olá ' . htmlspecialchars($_GET[&quot;nome&quot;]) . '!';
-}
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
+<span class="k">if</span><span class="p">(</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$_GET</span><span class="p">[</span><span class="s1">&#39;nome&#39;</span><span class="p">])){</span>
+    <span class="k">echo</span> <span class="s1">&#39;Olá &#39;</span> <span class="o">.</span> <span class="nb">htmlspecialchars</span><span class="p">(</span><span class="nv">$_GET</span><span class="p">[</span><span class="s2">&quot;nome&quot;</span><span class="p">])</span> <span class="o">.</span> <span class="s1">&#39;!&#39;</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
 
 <h3 id="desvantagens-do-metodo-get">Desvantagens do método GET</h3>
 <p>Como alguns dados que serão enviados pelo método GET da linguagem PHP serão exibidos na URL, só será possível marcar a página que está com os valores de consulta específicos da string. O método GET ajudará as solicitações de métodos específicos que podem ser armazenadas em cache e as solicitações do método Get permanecem no histórico do nosso navegador. As solicitações do método Get podem/serão marcadas.</p>
 <p>O método POST não envia as variáveis pela URL e assim é mais seguro.</p>
 <p>https://www.educba.com/php-get-method/</p>
 <h3 id="exemplos_3">Exemplos</h3>
-<pre class="highlight"><code class="language-php">&lt;?php
-$uri = $_SERVER['REQUEST_URI'];
-echo $uri; // Outputs: URI
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
+<span class="nv">$uri</span> <span class="o">=</span> <span class="nv">$_SERVER</span><span class="p">[</span><span class="s1">&#39;REQUEST_URI&#39;</span><span class="p">];</span>
+<span class="k">echo</span> <span class="nv">$uri</span><span class="p">;</span> <span class="c1">// Outputs: URI</span>
 
-$protocol = ((!empty($_SERVER['HTTPS']) &amp;&amp; $_SERVER['HTTPS'] != 'off') || $_SERVER['SERVER_PORT'] == 443) ? &quot;https://&quot; : &quot;http://&quot;;
+<span class="nv">$protocol</span> <span class="o">=</span> <span class="p">((</span><span class="o">!</span><span class="k">empty</span><span class="p">(</span><span class="nv">$_SERVER</span><span class="p">[</span><span class="s1">&#39;HTTPS&#39;</span><span class="p">])</span> <span class="o">&amp;&amp;</span> <span class="nv">$_SERVER</span><span class="p">[</span><span class="s1">&#39;HTTPS&#39;</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">&#39;off&#39;</span><span class="p">)</span> <span class="o">||</span> <span class="nv">$_SERVER</span><span class="p">[</span><span class="s1">&#39;SERVER_PORT&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">443</span><span class="p">)</span> <span class="o">?</span> <span class="s2">&quot;https://&quot;</span> <span class="o">:</span> <span class="s2">&quot;http://&quot;</span><span class="p">;</span>
 
-$url = $protocol . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
-echo $url; // Outputs: Full URL
+<span class="nv">$url</span> <span class="o">=</span> <span class="nv">$protocol</span> <span class="o">.</span> <span class="nv">$_SERVER</span><span class="p">[</span><span class="s1">&#39;HTTP_HOST&#39;</span><span class="p">]</span> <span class="o">.</span> <span class="nv">$_SERVER</span><span class="p">[</span><span class="s1">&#39;REQUEST_URI&#39;</span><span class="p">];</span>
+<span class="k">echo</span> <span class="nv">$url</span><span class="p">;</span> <span class="c1">// Outputs: Full URL</span>
 
-$query = $_SERVER['QUERY_STRING'];
-echo $query; // Outputs: Query String
-</code></pre>
+<span class="nv">$query</span> <span class="o">=</span> <span class="nv">$_SERVER</span><span class="p">[</span><span class="s1">&#39;QUERY_STRING&#39;</span><span class="p">];</span>
+<span class="k">echo</span> <span class="nv">$query</span><span class="p">;</span> <span class="c1">// Outputs: Query String</span>
+</code></pre></div>
 
 <p><a href="https://zetcode.com/php/curl/">https://zetcode.com/php/curl/</a></p>
 <h3 id="metodo-spliturl-da-classe-router">Método splitUrl() da classe Router</h3>
-<pre class="highlight"><code>  // Verificar se a url foi setada
-  if (isset($_GET['url'])) {
-      // dividir a URL em partes
-      $url = trim($_GET['url'], '/'); // A origem deste url é o public/.htaccess
-      $url = filter_var($url, FILTER_SANITIZE_URL); // Filtrar a url de caracteres estranhos a uma url
-      $url = explode('/', $url); // Criar um array com as aprtes da url: controller/action/params
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="o">//</span><span class="w"> </span><span class="n">Verificar</span><span class="w"> </span><span class="n">se</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">url</span><span class="w"> </span><span class="n">foi</span><span class="w"> </span><span class="n">setada</span><span class="w"></span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">isset</span><span class="p">(</span><span class="o">$</span><span class="n">_GET</span><span class="p">[</span><span class="s1">&#39;url&#39;</span><span class="p">]))</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="o">//</span><span class="w"> </span><span class="n">dividir</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">URL</span><span class="w"> </span><span class="n">em</span><span class="w"> </span><span class="n">partes</span><span class="w"></span>
+<span class="w">      </span><span class="o">$</span><span class="n">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">trim</span><span class="p">(</span><span class="o">$</span><span class="n">_GET</span><span class="p">[</span><span class="s1">&#39;url&#39;</span><span class="p">],</span><span class="w"> </span><span class="s1">&#39;/&#39;</span><span class="p">);</span><span class="w"> </span><span class="o">//</span><span class="w"> </span><span class="n">A</span><span class="w"> </span><span class="n">origem</span><span class="w"> </span><span class="n">deste</span><span class="w"> </span><span class="n">url</span><span class="w"> </span><span class="err">é</span><span class="w"> </span><span class="n">o</span><span class="w"> </span><span class="n">public</span><span class="o">/.</span><span class="n">htaccess</span><span class="w"></span>
+<span class="w">      </span><span class="o">$</span><span class="n">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">filter_var</span><span class="p">(</span><span class="o">$</span><span class="n">url</span><span class="p">,</span><span class="w"> </span><span class="n">FILTER_SANITIZE_URL</span><span class="p">);</span><span class="w"> </span><span class="o">//</span><span class="w"> </span><span class="n">Filtrar</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">url</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">caracteres</span><span class="w"> </span><span class="n">estranhos</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">uma</span><span class="w"> </span><span class="n">url</span><span class="w"></span>
+<span class="w">      </span><span class="o">$</span><span class="n">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">explode</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">,</span><span class="w"> </span><span class="o">$</span><span class="n">url</span><span class="p">);</span><span class="w"> </span><span class="o">//</span><span class="w"> </span><span class="n">Criar</span><span class="w"> </span><span class="n">um</span><span class="w"> </span><span class="n">array</span><span class="w"> </span><span class="n">com</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">aprtes</span><span class="w"> </span><span class="n">da</span><span class="w"> </span><span class="n">url</span><span class="p">:</span><span class="w"> </span><span class="n">controller</span><span class="o">/</span><span class="n">action</span><span class="o">/</span><span class="n">params</span><span class="w"></span>
 
-      $this-&gt;urlController = isset($url[0]) ? $url[0] : null; // Criando a $this-&gt;urlController com $url[0]
-      $this-&gt;urlAction = isset($url[1]) ? $url[1] : null; // Criando a $this-&gt;urlAction com $url[1]
+<span class="w">      </span><span class="o">$</span><span class="n">this</span><span class="o">-&gt;</span><span class="n">urlController</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">isset</span><span class="p">(</span><span class="o">$</span><span class="n">url</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="w"> </span><span class="err">?</span><span class="w"> </span><span class="o">$</span><span class="n">url</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="nb nb-Type">null</span><span class="p">;</span><span class="w"> </span><span class="o">//</span><span class="w"> </span><span class="n">Criando</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">$</span><span class="n">this</span><span class="o">-&gt;</span><span class="n">urlController</span><span class="w"> </span><span class="n">com</span><span class="w"> </span><span class="o">$</span><span class="n">url</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"></span>
+<span class="w">      </span><span class="o">$</span><span class="n">this</span><span class="o">-&gt;</span><span class="n">urlAction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">isset</span><span class="p">(</span><span class="o">$</span><span class="n">url</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span><span class="w"> </span><span class="err">?</span><span class="w"> </span><span class="o">$</span><span class="n">url</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="nb nb-Type">null</span><span class="p">;</span><span class="w"> </span><span class="o">//</span><span class="w"> </span><span class="n">Criando</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">$</span><span class="n">this</span><span class="o">-&gt;</span><span class="n">urlAction</span><span class="w"> </span><span class="n">com</span><span class="w"> </span><span class="o">$</span><span class="n">url</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"></span>
 
-      unset($url[0], $url[1]);// Limpar $url[0] e $url[1]
-      $this-&gt;urlParams = array_values($url); // Criando a $this-&gt;urlParams com array_values($url)
-  }
-</code></pre>
+<span class="w">      </span><span class="n">unset</span><span class="p">(</span><span class="o">$</span><span class="n">url</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="w"> </span><span class="o">$</span><span class="n">url</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span><span class="o">//</span><span class="w"> </span><span class="n">Limpar</span><span class="w"> </span><span class="o">$</span><span class="n">url</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="n">e</span><span class="w"> </span><span class="o">$</span><span class="n">url</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"></span>
+<span class="w">      </span><span class="o">$</span><span class="n">this</span><span class="o">-&gt;</span><span class="n">urlParams</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">array_values</span><span class="p">(</span><span class="o">$</span><span class="n">url</span><span class="p">);</span><span class="w"> </span><span class="o">//</span><span class="w"> </span><span class="n">Criando</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">$</span><span class="n">this</span><span class="o">-&gt;</span><span class="n">urlParams</span><span class="w"> </span><span class="n">com</span><span class="w"> </span><span class="n">array_values</span><span class="p">(</span><span class="o">$</span><span class="n">url</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+</code></pre></div>
 
 <p><a href="https://github.com/ribafs/php-router/blob/main/Core/Router.php">https://github.com/ribafs/php-router/blob/main/Core/Router.php</a></p></div>
             </div>

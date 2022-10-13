@@ -246,6 +246,17 @@ resources/views/admin/sidebar.blade.php
 </div> 
 ```
 
+### Pacotes úteis
+
+- [https://github.com/ribafs/laravel-migrations-generator](https://github.com/ribafs/laravel-migrations-generator)
+- [https://github.com/ribafs/laravel-migration-generator](https://github.com/ribafs/laravel-migration-generator)
+- [https://github.com/ribafs/migrations-generator](https://github.com/ribafs/migrations-generator)
+
+- [https://github.com/ribafs/Replibyte-seed](https://github.com/ribafs/Replibyte-seed)
+- [https://github.com/ribafs/iseed](https://github.com/ribafs/iseed)
+- [https://github.com/ribafs/DbExporter](https://github.com/ribafs/DbExporter)
+
+
 ### Referências
 
 https://www.nicesnippets.com/blog/how-to-create-a-one-to-many-relationship-in-laravel-9
