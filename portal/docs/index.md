@@ -19,7 +19,7 @@
               </div>
             </div>
         </div>
-        <div class="col-md-3 ms-1">
+        <div class="col-md-3">
             <div class="card" style="width: 18rem;">
               <div class="card-body">
                 <h5 class="card-title">Gerador de API</h5>
@@ -28,7 +28,7 @@
               </div>
             </div>
         </div>
-        <div class="col-md-3 ms-1">
+        <div class="col-md-3">
             <div class="card" style="width: 18rem;">
               <div class="card-body">
                 <h5 class="card-title">Migrations</h5>
