@@ -13,6 +13,15 @@
         <div class="col-md-3">
             <div class="card" style="width: 18rem;">
               <div class="card-body">
+                <h5 class="card-title">Error Handler</h5>
+                <p class="card-text">Tratamento erros no Laravel 9</p>
+                <a href="backend/framework/laravel/error-handler/" class="btn btn-primary">Acessar</a>
+              </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card" style="width: 18rem;">
+              <div class="card-body">
                 <h5 class="card-title">Gerador de CRUDs</h5>
                 <p class="card-text">Gerador de CRUDs - Laravel 9</p>
                 <a href="backend/framework/laravel/crud-generator/" class="btn btn-primary">Acessar</a>
@@ -34,15 +43,6 @@
                 <h5 class="card-title">Migrations</h5>
                 <p class="card-text">Migrations para Laravel 9</p>
                 <a href="backend/framework/laravel/migrations-seeders/" class="btn btn-primary">Acessar</a>
-              </div>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="card" style="width: 18rem;">
-              <div class="card-body">
-                <h5 class="card-title">Micro Framework</h5>
-                <p class="card-text">Micro Framework PHP</p>
-                <a href="backend/phpoo/mvc/micro-framework/" class="btn btn-primary">Acessar</a>
               </div>
             </div>
         </div>

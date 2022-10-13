@@ -166,6 +166,10 @@
 <li>
     <a href="../crud-generator-en/" class="dropdown-item">Crud Generator on Laravel 9 (english)</a>
 </li>
+            
+<li>
+    <a href="../error-handler/" class="dropdown-item">Tratamento de exceções no Laravel 9</a>
+</li>
     </ul>
   </li>
     </ul>
@@ -280,11 +284,6 @@
             </li>
             
             <li class="nav-item" data-level="2"><a href="#usando-o-tinker" class="nav-link">Usando o tinker</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            
-            <li class="nav-item" data-level="2"><a href="#mudar" class="nav-link">Mudar</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -477,7 +476,54 @@
 </code></pre></div>
 
 <p>http://127.0.0.1:8000/posts</p>
-<h2 id="mudar">Mudar</h2>
+<p>Acesse</p>
+<p>http://127.0.0.1:8000/comments</p>
+<p>E adicione um comentário com user_id que não existe, exemplo 150.</p>
+<p>Verá o erro</p>
+<div class="highlight"><pre><span></span><code><span class="x">Illuminate \ Database \ QueryException</span>
+<span class="x">PHP 8.1.2</span>
+<span class="x">9.35.1</span>
+<span class="x">SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`laravel`.`comments`, CONSTRAINT `comments_post_id_foreign` FOREIGN KEY (`post_id`) REFERENCES `posts` (`id`))</span>
+
+<span class="x">insert into `comments` (`body`, `post_id`, `updated_at`, `created_at`) values (teste, 150, 2022-10-13 21:31:40, 2022-10-13 21:31:40)</span>
+</code></pre></div>
+
+<p>Não é boa ideia mandar uma mensagem destas para um usuário usando o sistema em produção.</p>
+<p>Para melhorar precisamos tomar duas pvovidências: capturar e tratar o erro no controller CommentController e adicionar uma mensagem na view comments/index</p>
+<h3 id="no-controller">No controller</h3>
+<p>Adicionamos ao início</p>
+<p>use Exception;</p>
+<p>Mudamos o método store() para:</p>
+<div class="highlight"><pre><span></span><code><span class="x">    public function store(Request $request)</span>
+<span class="x">    {       </span>
+<span class="x">          $requestData = $request-&gt;all();</span>
+
+<span class="x">          try {</span>
+<span class="x">               Comment::create($requestData);</span>
+<span class="x">               return redirect(&#39;comments&#39;)-&gt;with(&#39;flash_message&#39;, &#39;Comments created!&#39;);</span>
+<span class="x">          } catch (Exception $e) {</span>
+<span class="x">              if($e-&gt;getCode() == 23000){</span>
+<span class="x">                  return redirect(&#39;comments&#39;)-&gt;with(&#39;danger_message&#39;, &#39;Este post_id não existe!&#39;);</span>
+<span class="x">              }</span>
+<span class="x">         }</span>
+<span class="x">    }</span>
+</code></pre></div>
+
+<p>Adicionamos para a view comments/index.blade.php, logo abaixo do Add New</p>
+<div class="highlight"><pre><span></span><code><span class="x">@if ($message = Session::get(&#39;danger_message&#39;))</span>
+<span class="x">    &lt;div class=&quot;alert alert-danger&quot;&gt;</span>
+<span class="x">        &lt;p&gt;{{ $message }}&lt;/p&gt;</span>
+<span class="x">    &lt;/div&gt;</span>
+<span class="x">@endif</span>
+<span class="x">@if ($message = Session::get(&#39;flash_message&#39;))</span>
+<span class="x">    &lt;div class=&quot;alert alert-success&quot;&gt;</span>
+<span class="x">        &lt;p&gt;{{ $message }}&lt;/p&gt;</span>
+<span class="x">    &lt;/div&gt;</span>
+<span class="x">@endif</span>
+</code></pre></div>
+
+<p>Assim, quando o usuário cadastrar um comentário corretamente receberá uma mensagem com fundo verde. E quando tentar cadastrar um comentário com um post_id que não existe ele será avisado com uma mensagem em fundo vermelho.</p>
+<h3 id="mudar">Mudar</h3>
 <p>resources/views/admin/sidebar.blade.php</p>
 <div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;col-md-3&quot;</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;card&quot;</span><span class="p">&gt;</span>
@@ -517,7 +563,8 @@
 <li><a href="https://github.com/ribafs/DbExporter">https://github.com/ribafs/DbExporter</a></li>
 </ul>
 <h3 id="referencias">Referências</h3>
-<p>https://www.nicesnippets.com/blog/how-to-create-a-one-to-many-relationship-in-laravel-9</p></div>
+<p>https://www.nicesnippets.com/blog/how-to-create-a-one-to-many-relationship-in-laravel-9
+https://www.itsolutionstuff.com/post/laravel-9-exception-handling-example-tutorialexample.html</p></div>
             </div>
         </div>
 

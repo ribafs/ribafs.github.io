@@ -21,6 +21,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://ribafs.github.io/backend/framework/laravel/error-handler/</loc>
+         <lastmod>2022-10-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://ribafs.github.io/backend/framework/laravel/gerador-laravel/</loc>
          <lastmod>2022-10-13</lastmod>
          <changefreq>daily</changefreq>
