@@ -19,6 +19,9 @@ p {
     .logo {
         left: -20px;
     }
+    .cards {
+        margin-left: -300px;
+    }
 }
 
 .footer {

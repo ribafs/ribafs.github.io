@@ -9,7 +9,7 @@
         </div>
     </div>
 
-    <div class="row mt-2">
+    <div class="row mt-2 cards">
         <div class="col-md-4 me-2">
             <div class="card" style="width: 18rem;">
               <div class="card-body">

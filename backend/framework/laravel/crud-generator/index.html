@@ -297,8 +297,8 @@
 <p>Usando o ribafs/crud-generator-appzcoder</p>
 <p><a href="https://github.com/ribafs/crud-generator-appzcoder">https://github.com/ribafs/crud-generator-appzcoder</a></p>
 <h3 id="instalando-o-laravel-9">Instalando o laravel 9</h3>
-<pre class="highlight"><code class="language-bash">composer create-project laravel/laravel blog
-</code></pre>
+<div class="highlight"><pre><span></span><code>composer create-project laravel/laravel blog
+</code></pre></div>
 
 <p>cd blog</p>
 <p>Criarei dois CRUDs, usando as tabelas posts e coments relacionadas em comments pelo post_id.</p>
@@ -307,201 +307,201 @@
 <h3 id="instalar-o-gerador">Instalar o gerador</h3>
 <p>composer require ribafs/crud-generator-appzcoder</p>
 <h3 id="publicar">Publicar</h3>
-<pre class="highlight"><code class="language-php">php artisan vendor:publish --provider=&quot;Appzcoder\CrudGenerator\CrudGeneratorServiceProvider&quot;
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="x">php artisan vendor:publish --provider=&quot;Appzcoder\CrudGenerator\CrudGeneratorServiceProvider&quot;</span>
+</code></pre></div>
 
 <h3 id="criar-o-crud-posts">Criar o CRUD posts</h3>
-<pre class="highlight"><code class="language-php">php artisan crud:generate Posts --fields='name#string;' --view-path= --controller-namespace=App\\Http\\Controllers --route-group= --form-helper=html
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="x">php artisan crud:generate Posts --fields=&#39;name#string;&#39; --view-path= --controller-namespace=App\\Http\\Controllers --route-group= --form-helper=html</span>
+</code></pre></div>
 
 <h3 id="criar-o-crud-comments">Criar o CRUD comments</h3>
-<pre class="highlight"><code class="language-php">php artisan crud:generate Comments --fields='body#text; post_id#integer;' --view-path= --controller-namespace=App\\Http\\Controllers --route-group= --form-helper=html 
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="x">php artisan crud:generate Comments --fields=&#39;body#text; post_id#integer;&#39; --view-path= --controller-namespace=App\\Http\\Controllers --route-group= --form-helper=html </span>
+</code></pre></div>
 
 <h3 id="edite-a-migration-gerada-para-posts-e-deixe-assim">Edite a migration gerada para posts e deixe assim:</h3>
-<pre class="highlight"><code class="language-php">&lt;?php
-use Illuminate\Database\Migrations\Migration;
-use Illuminate\Database\Schema\Blueprint;
-use Illuminate\Support\Facades\Schema;
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
+<span class="k">use</span> <span class="nx">Illuminate\Database\Migrations\Migration</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Illuminate\Database\Schema\Blueprint</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Illuminate\Support\Facades\Schema</span><span class="p">;</span>
 
-class CreatePostsTable extends Migration
-{
-    public function up()
-    {
-        Schema::create('posts', function (Blueprint $table) {
-            $table-&gt;id();
-            $table-&gt;string('name')-&gt;notNullable();
-            $table-&gt;timestamp('created_at')-&gt;default(DB::raw('CURRENT_TIMESTAMP'));
-            $table-&gt;timestamp('updated_at')-&gt;default(DB::raw('CURRENT_TIMESTAMP'));
-        });
-    }
+<span class="k">class</span> <span class="nc">CreatePostsTable</span> <span class="k">extends</span> <span class="nx">Migration</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">up</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="nx">Schema</span><span class="o">::</span><span class="na">create</span><span class="p">(</span><span class="s1">&#39;posts&#39;</span><span class="p">,</span> <span class="k">function</span> <span class="p">(</span><span class="nx">Blueprint</span> <span class="nv">$table</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nv">$table</span><span class="o">-&gt;</span><span class="na">id</span><span class="p">();</span>
+            <span class="nv">$table</span><span class="o">-&gt;</span><span class="na">string</span><span class="p">(</span><span class="s1">&#39;name&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">notNullable</span><span class="p">();</span>
+            <span class="nv">$table</span><span class="o">-&gt;</span><span class="na">timestamp</span><span class="p">(</span><span class="s1">&#39;created_at&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">default</span><span class="p">(</span><span class="nx">DB</span><span class="o">::</span><span class="na">raw</span><span class="p">(</span><span class="s1">&#39;CURRENT_TIMESTAMP&#39;</span><span class="p">));</span>
+            <span class="nv">$table</span><span class="o">-&gt;</span><span class="na">timestamp</span><span class="p">(</span><span class="s1">&#39;updated_at&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">default</span><span class="p">(</span><span class="nx">DB</span><span class="o">::</span><span class="na">raw</span><span class="p">(</span><span class="s1">&#39;CURRENT_TIMESTAMP&#39;</span><span class="p">));</span>
+        <span class="p">});</span>
+    <span class="p">}</span>
 
-    public function down()
-    {
-        Schema::drop('posts');
-    }
-}
-</code></pre>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">down</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="nx">Schema</span><span class="o">::</span><span class="na">drop</span><span class="p">(</span><span class="s1">&#39;posts&#39;</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
 
 <h3 id="edite-a-migration-comments-gerada-e-deixe-assim">Edite a migration comments gerada e deixe assim:</h3>
-<pre class="highlight"><code class="language-php">&lt;?php
-use Illuminate\Database\Migrations\Migration;
-use Illuminate\Database\Schema\Blueprint;
-use Illuminate\Support\Facades\Schema;
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
+<span class="k">use</span> <span class="nx">Illuminate\Database\Migrations\Migration</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Illuminate\Database\Schema\Blueprint</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Illuminate\Support\Facades\Schema</span><span class="p">;</span>
 
-class CreateCommentsTable extends Migration
-{
-    public function up()
-    {
-        Schema::create('comments', function (Blueprint $table) {
-            $table-&gt;id();
-            $table-&gt;text(&quot;body&quot;);
-            $table-&gt;foreignId('post_id')-&gt;constrained('posts');
-            $table-&gt;timestamp('created_at')-&gt;default(DB::raw('CURRENT_TIMESTAMP'));
-            $table-&gt;timestamp('updated_at')-&gt;default(DB::raw('CURRENT_TIMESTAMP'));
-        });
-    }
+<span class="k">class</span> <span class="nc">CreateCommentsTable</span> <span class="k">extends</span> <span class="nx">Migration</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">up</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="nx">Schema</span><span class="o">::</span><span class="na">create</span><span class="p">(</span><span class="s1">&#39;comments&#39;</span><span class="p">,</span> <span class="k">function</span> <span class="p">(</span><span class="nx">Blueprint</span> <span class="nv">$table</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nv">$table</span><span class="o">-&gt;</span><span class="na">id</span><span class="p">();</span>
+            <span class="nv">$table</span><span class="o">-&gt;</span><span class="na">text</span><span class="p">(</span><span class="s2">&quot;body&quot;</span><span class="p">);</span>
+            <span class="nv">$table</span><span class="o">-&gt;</span><span class="na">foreignId</span><span class="p">(</span><span class="s1">&#39;post_id&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">constrained</span><span class="p">(</span><span class="s1">&#39;posts&#39;</span><span class="p">);</span>
+            <span class="nv">$table</span><span class="o">-&gt;</span><span class="na">timestamp</span><span class="p">(</span><span class="s1">&#39;created_at&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">default</span><span class="p">(</span><span class="nx">DB</span><span class="o">::</span><span class="na">raw</span><span class="p">(</span><span class="s1">&#39;CURRENT_TIMESTAMP&#39;</span><span class="p">));</span>
+            <span class="nv">$table</span><span class="o">-&gt;</span><span class="na">timestamp</span><span class="p">(</span><span class="s1">&#39;updated_at&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">default</span><span class="p">(</span><span class="nx">DB</span><span class="o">::</span><span class="na">raw</span><span class="p">(</span><span class="s1">&#39;CURRENT_TIMESTAMP&#39;</span><span class="p">));</span>
+        <span class="p">});</span>
+    <span class="p">}</span>
 
-    public function down()
-    {
-        Schema::drop('comments');
-    }
-}
-</code></pre>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">down</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="nx">Schema</span><span class="o">::</span><span class="na">drop</span><span class="p">(</span><span class="s1">&#39;comments&#39;</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
 
 <h3 id="edite-o-appmodelspostphp-e-deixe-assim">Edite o app/Models/Post.php e deixe assim:</h3>
-<pre class="highlight"><code class="language-php">&lt;?php
-namespace App\Models;
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
+<span class="k">namespace</span> <span class="nx">App\Models</span><span class="p">;</span>
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
+<span class="k">use</span> <span class="nx">Illuminate\Database\Eloquent\Factories\HasFactory</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Illuminate\Database\Eloquent\Model</span><span class="p">;</span>
 
-class Post extends Model
-{
-    use HasFactory;
+<span class="k">class</span> <span class="nc">Post</span> <span class="k">extends</span> <span class="nx">Model</span>
+<span class="p">{</span>
+    <span class="k">use</span> <span class="nx">HasFactory</span><span class="p">;</span>
 
-    protected $fillable = ['name'];
+    <span class="k">protected</span> <span class="nv">$fillable</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">];</span>
 
-    public function comments()
-    {
-        return $this-&gt;hasMany(Comment::class);
-    }
-}
-</code></pre>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">comments</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">hasMany</span><span class="p">(</span><span class="nx">Comment</span><span class="o">::</span><span class="na">class</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
 
 <h3 id="edite-o-model-comment-e-deixe-assim">Edite o model Comment e deixe assim:</h3>
-<pre class="highlight"><code class="language-php">&lt;?php
-namespace App\Models;
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
+<span class="k">namespace</span> <span class="nx">App\Models</span><span class="p">;</span>
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
+<span class="k">use</span> <span class="nx">Illuminate\Database\Eloquent\Factories\HasFactory</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Illuminate\Database\Eloquent\Model</span><span class="p">;</span>
 
-class Comment extends Model
-{
-    use HasFactory;
+<span class="k">class</span> <span class="nc">Comment</span> <span class="k">extends</span> <span class="nx">Model</span>
+<span class="p">{</span>
+    <span class="k">use</span> <span class="nx">HasFactory</span><span class="p">;</span>
 
-    protected $fillable = ['body', 'post_id'];
+    <span class="k">protected</span> <span class="nv">$fillable</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;body&#39;</span><span class="p">,</span> <span class="s1">&#39;post_id&#39;</span><span class="p">];</span>
 
-    public function post()
-    {
-        return $this-&gt;belongsTo(Post::class);
-    }
-}
-</code></pre>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">post</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">belongsTo</span><span class="p">(</span><span class="nx">Post</span><span class="o">::</span><span class="na">class</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
 
 <h3 id="adicione-ao-inicio-do-commentcontroller">Adicione ao início do CommentController</h3>
 <p>Logo acima de: use App\Models\Comment;</p>
 <p>use App\Models\Post;</p>
 <h3 id="criar-a-classe-factory-postfactory">Criar a classe factory PostFactory</h3>
-<pre class="highlight"><code class="language-php">php artisan make:factory PostFactory --model=Post
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="x">php artisan make:factory PostFactory --model=Post</span>
+</code></pre></div>
 
 <p>Edite database/factories/PostFactory.php e deixar assim:</p>
-<pre class="highlight"><code class="language-php">&lt;?php
-namespace Database\Factories;
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
+<span class="k">namespace</span> <span class="nx">Database\Factories</span><span class="p">;</span>
 
-use App\Models\Post;
-use Illuminate\Database\Eloquent\Factories\Factory;
+<span class="k">use</span> <span class="nx">App\Models\Post</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Illuminate\Database\Eloquent\Factories\Factory</span><span class="p">;</span>
 
-class PostFactory extends Factory
-{
-    protected $model = Post::class;
+<span class="k">class</span> <span class="nc">PostFactory</span> <span class="k">extends</span> <span class="nx">Factory</span>
+<span class="p">{</span>
+    <span class="k">protected</span> <span class="nv">$model</span> <span class="o">=</span> <span class="nx">Post</span><span class="o">::</span><span class="na">class</span><span class="p">;</span>
 
-    public function definition()
-    {
-        return [
-            'name' =&gt; fake()-&gt;name(),
-        ];
-    }
-}
-</code></pre>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">definition</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="p">[</span>
+            <span class="s1">&#39;name&#39;</span> <span class="o">=&gt;</span> <span class="nx">fake</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">name</span><span class="p">(),</span>
+        <span class="p">];</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
 
 <h3 id="criar-a-classe-factory-commentfactory">Criar a classe factory CommentFactory</h3>
 <p>php artisan make:factory CommentFactory --model=Comment</p>
 <p>Edite database/factories/CommentFactory.php e deixar assim:</p>
-<pre class="highlight"><code class="language-php">&lt;?php
-namespace Database\Factories;
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
+<span class="k">namespace</span> <span class="nx">Database\Factories</span><span class="p">;</span>
 
-use Illuminate\Database\Eloquent\Factories\Factory;
-use App\Models\Comment;
+<span class="k">use</span> <span class="nx">Illuminate\Database\Eloquent\Factories\Factory</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">App\Models\Comment</span><span class="p">;</span>
 
-class CommentFactory extends Factory
-{
-    public function definition()
-    {
-        return [            
-            'body' =&gt; fake()-&gt;text(),
-            'post_id' =&gt; fake()-&gt;numberBetween($min = 1, $max = 100)
-        ];
-    }
-}
-</code></pre>
+<span class="k">class</span> <span class="nc">CommentFactory</span> <span class="k">extends</span> <span class="nx">Factory</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">definition</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="p">[</span>            
+            <span class="s1">&#39;body&#39;</span> <span class="o">=&gt;</span> <span class="nx">fake</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">text</span><span class="p">(),</span>
+            <span class="s1">&#39;post_id&#39;</span> <span class="o">=&gt;</span> <span class="nx">fake</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">numberBetween</span><span class="p">(</span><span class="nv">$min</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="nv">$max</span> <span class="o">=</span> <span class="mi">100</span><span class="p">)</span>
+        <span class="p">];</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
 
 <h3 id="criar-banco-e-configurar-no-env">Criar banco e configurar no .env</h3>
 <h3 id="executar-todas-as-migrations-e-os-seeders">Executar todas as migrations e os seeders</h3>
-<pre class="highlight"><code class="language-php">php artisan migrate:fresh --seed
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="x">php artisan migrate:fresh --seed</span>
+</code></pre></div>
 
 <h2 id="usando-o-tinker">Usando o tinker</h2>
 <p>Podemos criar os registros, ao invés de usar um seeder usando o tinker, assim:</p>
-<pre class="highlight"><code class="language-php">php artisan tinker
+<div class="highlight"><pre><span></span><code><span class="x">php artisan tinker</span>
 
-App\Models\Post::factory()-&gt;count(100)-&gt;create();
+<span class="x">App\Models\Post::factory()-&gt;count(100)-&gt;create();</span>
 
-App\Models\Comment::factory()-&gt;count(100)-&gt;create()
-</code></pre>
+<span class="x">App\Models\Comment::factory()-&gt;count(100)-&gt;create()</span>
+</code></pre></div>
 
 <p>Ctrl+C</p>
 <h3 id="testando">Testando</h3>
-<pre class="highlight"><code class="language-php">php artisan serve
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="x">php artisan serve</span>
+</code></pre></div>
 
 <p>http://127.0.0.1:8000/posts</p>
 <h2 id="mudar">Mudar</h2>
 <p>resources/views/admin/sidebar.blade.php</p>
-<pre class="highlight"><code class="language-html">&lt;div class=&quot;col-md-3&quot;&gt;
-    &lt;div class=&quot;card&quot;&gt;
-        &lt;div class=&quot;card-header&quot;&gt;
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;col-md-3&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;card&quot;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;card-header&quot;</span><span class="p">&gt;</span>
             Sidebar
-        &lt;/div&gt;
+        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 
-        &lt;div class=&quot;card-body&quot;&gt;
-            &lt;ul class=&quot;nav flex-column&quot;&gt;
-                &lt;li class=&quot;nav-item&quot;&gt;
-                    &lt;a class=&quot;nav-link active&quot; href=&quot;{{ url('/posts') }}&quot;&gt;
+        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;card-body&quot;</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">ul</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;nav flex-column&quot;</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;nav-item&quot;</span><span class="p">&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;nav-link active&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;{{ url(&#39;/posts&#39;) }}&quot;</span><span class="p">&gt;</span>
                         Posts
-                    &lt;/a&gt;
-                &lt;/li&gt;
-                &lt;li class=&quot;nav-item&quot;&gt;
-                    &lt;a class=&quot;nav-link&quot; href=&quot;{{ url('/comments') }}&quot;&gt;
+                    <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+                <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;nav-item&quot;</span><span class="p">&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;nav-link&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;{{ url(&#39;/comments&#39;) }}&quot;</span><span class="p">&gt;</span>
                         Comments
-                    &lt;/a&gt;
-                &lt;/li&gt;
-            &lt;/ul&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt; 
-</code></pre>
+                    <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+                <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span> 
+</code></pre></div>
 
 <h3 id="pacotes-uteis">Pacotes úteis</h3>
 <ul>

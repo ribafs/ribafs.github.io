@@ -300,71 +300,71 @@
 <p>php artisan make:migration create_customers_table</p>
 <p>Edit and update</p>
 <p>database/migrations/2022_10_12_100303_create_customers_table.php</p>
-<pre class="highlight"><code class="language-php">&lt;?php
-use Illuminate\Database\Migrations\Migration;
-use Illuminate\Database\Schema\Blueprint;
-use Illuminate\Support\Facades\Schema;
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
+<span class="k">use</span> <span class="nx">Illuminate\Database\Migrations\Migration</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Illuminate\Database\Schema\Blueprint</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Illuminate\Support\Facades\Schema</span><span class="p">;</span>
 
-class CreateCustomersTable extends Migration
-{
-    public function up()
-    {
-        Schema::create('customers', function (Blueprint $table) {
-            $table-&gt;increments('id');
-            $table-&gt;string('name')-&gt;notNullable();
-            $table-&gt;text('email')-&gt;nullable();
-            $table-&gt;timestamp('created_at')-&gt;default(DB::raw('CURRENT_TIMESTAMP'));
-            $table-&gt;timestamp('updated_at')-&gt;default(DB::raw('CURRENT_TIMESTAMP'));
-        });
-    }
+<span class="k">class</span> <span class="nc">CreateCustomersTable</span> <span class="k">extends</span> <span class="nx">Migration</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">up</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="nx">Schema</span><span class="o">::</span><span class="na">create</span><span class="p">(</span><span class="s1">&#39;customers&#39;</span><span class="p">,</span> <span class="k">function</span> <span class="p">(</span><span class="nx">Blueprint</span> <span class="nv">$table</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nv">$table</span><span class="o">-&gt;</span><span class="na">increments</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">);</span>
+            <span class="nv">$table</span><span class="o">-&gt;</span><span class="na">string</span><span class="p">(</span><span class="s1">&#39;name&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">notNullable</span><span class="p">();</span>
+            <span class="nv">$table</span><span class="o">-&gt;</span><span class="na">text</span><span class="p">(</span><span class="s1">&#39;email&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">nullable</span><span class="p">();</span>
+            <span class="nv">$table</span><span class="o">-&gt;</span><span class="na">timestamp</span><span class="p">(</span><span class="s1">&#39;created_at&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">default</span><span class="p">(</span><span class="nx">DB</span><span class="o">::</span><span class="na">raw</span><span class="p">(</span><span class="s1">&#39;CURRENT_TIMESTAMP&#39;</span><span class="p">));</span>
+            <span class="nv">$table</span><span class="o">-&gt;</span><span class="na">timestamp</span><span class="p">(</span><span class="s1">&#39;updated_at&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">default</span><span class="p">(</span><span class="nx">DB</span><span class="o">::</span><span class="na">raw</span><span class="p">(</span><span class="s1">&#39;CURRENT_TIMESTAMP&#39;</span><span class="p">));</span>
+        <span class="p">});</span>
+    <span class="p">}</span>
 
-    public function down()
-    {
-        Schema::drop('customers');
-    }
-}
-</code></pre>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">down</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="nx">Schema</span><span class="o">::</span><span class="na">drop</span><span class="p">(</span><span class="s1">&#39;customers&#39;</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
 
 <h3 id="create-table">Create table</h3>
 <p>php artisan migrate</p>
 <h2 id="create-seeder">$ Create seeder</h2>
 <p>php artisan make:seeder CustomersSeeder</p>
 <p>Change database/seeders/CustomersSeeder.php to</p>
-<pre class="highlight"><code class="language-php">&lt;?php
-namespace Database\Seeders;
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
+<span class="k">namespace</span> <span class="nx">Database\Seeders</span><span class="p">;</span>
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
-use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Str;
+<span class="k">use</span> <span class="nx">Illuminate\Database\Console\Seeds\WithoutModelEvents</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Illuminate\Database\Seeder</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Illuminate\Support\Facades\DB</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Illuminate\Support\Facades\Hash</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Illuminate\Support\Str</span><span class="p">;</span>
 
-class CustomersSeeder extends Seeder
-{
-    public function run()
-    {
-          for($count=0;$count&lt;10;$count++){
-            DB::table('customers')-&gt;insert([
-                'name' =&gt; Str::random(15),
-                'email' =&gt; Str::random(10).'@gmail.com',
-                'updated_at' =&gt; date(&quot;Y-m-d H:i:s&quot;),
-                'created_at' =&gt; date(&quot;Y-m-d H:i:s&quot;)                
-            ]);
-        }
-    }
-}
-</code></pre>
+<span class="k">class</span> <span class="nc">CustomersSeeder</span> <span class="k">extends</span> <span class="nx">Seeder</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">run</span><span class="p">()</span>
+    <span class="p">{</span>
+          <span class="k">for</span><span class="p">(</span><span class="nv">$count</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="nv">$count</span><span class="o">&lt;</span><span class="mi">10</span><span class="p">;</span><span class="nv">$count</span><span class="o">++</span><span class="p">){</span>
+            <span class="nx">DB</span><span class="o">::</span><span class="na">table</span><span class="p">(</span><span class="s1">&#39;customers&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">insert</span><span class="p">([</span>
+                <span class="s1">&#39;name&#39;</span> <span class="o">=&gt;</span> <span class="nx">Str</span><span class="o">::</span><span class="na">random</span><span class="p">(</span><span class="mi">15</span><span class="p">),</span>
+                <span class="s1">&#39;email&#39;</span> <span class="o">=&gt;</span> <span class="nx">Str</span><span class="o">::</span><span class="na">random</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="s1">&#39;@gmail.com&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;updated_at&#39;</span> <span class="o">=&gt;</span> <span class="nb">date</span><span class="p">(</span><span class="s2">&quot;Y-m-d H:i:s&quot;</span><span class="p">),</span>
+                <span class="s1">&#39;created_at&#39;</span> <span class="o">=&gt;</span> <span class="nb">date</span><span class="p">(</span><span class="s2">&quot;Y-m-d H:i:s&quot;</span><span class="p">)</span>                
+            <span class="p">]);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
 
 <h3 id="databaseseeder">DatabaseSeeder</h3>
 <p>Edit database/seeds/DatabaseSeeder.php </p>
-<pre class="highlight"><code class="language-php">class DatabaseSeeder extends Seeder
-{
-    public function run()
-    {
-        $this-&gt;call(CustomersSeeder::class);
-    }
-}
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="x">class DatabaseSeeder extends Seeder</span>
+<span class="x">{</span>
+<span class="x">    public function run()</span>
+<span class="x">    {</span>
+<span class="x">        $this-&gt;call(CustomersSeeder::class);</span>
+<span class="x">    }</span>
+<span class="x">}</span>
+</code></pre></div>
 
 <h3 id="populate-table">Populate table</h3>
 <p>php artisan db:seed --class=CustomersSeeder</p>
