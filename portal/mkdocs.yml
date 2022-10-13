@@ -104,6 +104,7 @@ nav:
                 - Gerador de API CRUD para Laravel 9: backend/framework/laravel/gerador-laravel.md
                 - Migrations e Seeders no Laravel 9: backend/framework/laravel/migrations-seeders.md
                 - Gerador de CRUDs no Laravel 9: backend/framework/laravel/crud-generator.md
+                - Crud Generator on Laravel 9 (english): backend/framework/laravel/crud-generator-en.md
         #    - Codeigniter: 
         #        - Introdução: backend/framework/ci/index.md
 

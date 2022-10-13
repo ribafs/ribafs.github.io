@@ -1,39 +1,39 @@
-## Criando dois CRUDs com o gerador e laravel 9
+## Creating two CRUDs with the generator and laravel 9
 
-Usando o ribafs/crud-generator-appzcoder
+Using the package ribafs/crud-generator-appzcoder
 
 [https://github.com/ribafs/crud-generator-appzcoder](https://github.com/ribafs/crud-generator-appzcoder)
 
-### Instalando o laravel 9
+### Installing the laravel 9
 ```bash
 composer create-project laravel/laravel blog
 ```
 cd blog
 
-Criarei dois CRUDs, usando as tabelas posts e coments relacionadas em comments pelo post_id.
+Create two CRUDs, using the posts and comments tables related in comments by post_id.
 
-posts tem o campo name
+posts have field name
 
-comments tem post_id e body
+comments have post_id and body
 
-### Instalar o gerador
+### Installation of the gerador
 
 composer require ribafs/crud-generator-appzcoder
 
-### Publicar
+### Publish
 ```php
 php artisan vendor:publish --provider="Appzcoder\CrudGenerator\CrudGeneratorServiceProvider"
 ```
-### Criar o CRUD posts
+### Create CRUD posts
 ```php
 php artisan crud:generate Posts --fields='name#string;' --view-path= --controller-namespace=App\\Http\\Controllers --route-group= --form-helper=html
 ```
-### Criar o CRUD comments
+### Create CRUD comments
 ```php
 php artisan crud:generate Comments --fields='body#text; post_id#integer;' --view-path= --controller-namespace=App\\Http\\Controllers --route-group= --form-helper=html 
 ```
 
-### Edite a migration gerada para posts e deixe assim:
+### Edit the generated migration for posts and leave it like this:
 
 ```php
 <?php
@@ -60,7 +60,7 @@ class CreatePostsTable extends Migration
 }
 ```
 
-### Edite a migration comments gerada e deixe assim:
+### Edit the generated migration comments and leave it like this:
 
 ```php
 <?php
@@ -88,7 +88,7 @@ class CreateCommentsTable extends Migration
 }
 ```
 
-### Edite o app/Models/Post.php e deixe assim:
+### Edit the app/Models/Post.php:
 
 ```php
 <?php
@@ -110,7 +110,7 @@ class Post extends Model
 }
 ```
 
-### Edite o model Comment e deixe assim:
+### Edit the model Comment:
 
 ```php
 <?php
@@ -132,18 +132,18 @@ class Comment extends Model
 }
 ```
 
-### Adicione ao início do CommentController
+### Add to the beginning of CommentController
 
-Logo acima de: use App\Models\Comment;
+Just above: use App\Models\Comment;
 
 use App\Models\Post;
 
 
-### Criar a classe factory PostFactory
+### Create the classe factory PostFactory
 ```php
 php artisan make:factory PostFactory --model=Post
 ```
-Edite database/factories/PostFactory.php e deixar assim:
+Edit database/factories/PostFactory.php:
 
 ```php
 <?php
@@ -165,11 +165,11 @@ class PostFactory extends Factory
 }
 ```
 
-### Criar a classe factory CommentFactory
+### Create the classe factory CommentFactory
 
 php artisan make:factory CommentFactory --model=Comment
 
-Edite database/factories/CommentFactory.php e deixar assim:
+Edit database/factories/CommentFactory.php:
 
 ```php
 <?php
@@ -190,15 +190,16 @@ class CommentFactory extends Factory
 }
 ```
 
-### Criar banco e configurar no .env
+### Create database and configure on .env
 
-### Executar todas as migrations e os seeders
+### Execute all migrations and seeders
 ```php
 php artisan migrate:fresh --seed
 ```
-## Usando o tinker
+## Using the tinker
 
-Podemos criar os registros, ao invés de usar um seeder usando o tinker, assim:
+We can create the records, instead of using a seeder using tinker, like this:
+
 ```php
 php artisan tinker
 
@@ -208,15 +209,16 @@ App\Models\Comment::factory()->count(100)->create()
 ```
 Ctrl+C
 
-### Testando
+### Try
 ```php
 php artisan serve
 ```
 http://127.0.0.1:8000/posts
 
-## Mudar
+## Change
 
 resources/views/admin/sidebar.blade.php
+
 ```html
 <div class="col-md-3">
     <div class="card">
@@ -242,7 +244,7 @@ resources/views/admin/sidebar.blade.php
 </div> 
 ```
 
-### Pacotes úteis
+### Useful packages
 
 - [https://github.com/ribafs/laravel-migrations-generator](https://github.com/ribafs/laravel-migrations-generator)
 - [https://github.com/ribafs/laravel-migration-generator](https://github.com/ribafs/laravel-migration-generator)
@@ -253,6 +255,6 @@ resources/views/admin/sidebar.blade.php
 - [https://github.com/ribafs/DbExporter](https://github.com/ribafs/DbExporter)
 
 
-### Referências
+### References
 
 https://www.nicesnippets.com/blog/how-to-create-a-one-to-many-relationship-in-laravel-9
