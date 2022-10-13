@@ -30,7 +30,7 @@ p {
 }
 
 footer{display: none}
-
+/* Ocultar sidebar */
 .bs-sidebar{
     display: none;
 }
