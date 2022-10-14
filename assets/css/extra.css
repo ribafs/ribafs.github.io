@@ -24,6 +24,12 @@ p {
     }
 }
 
+.cards {
+    text-align:center;
+    position:fixed;
+    bottom:50px;
+}
+
 .footer {
     text-align:center;
     position:fixed;
