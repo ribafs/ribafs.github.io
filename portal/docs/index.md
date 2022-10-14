@@ -22,15 +22,6 @@
         <div class="col-md-3">
             <div class="card" style="width: 18rem;">
               <div class="card-body">
-                <h5 class="card-title">Error Handler</h5>
-                <p class="card-text">Tratamento erros no Laravel 9</p>
-                <a href="backend/framework/laravel/error-handler/" class="btn btn-primary">Acessar</a>
-              </div>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="card" style="width: 18rem;">
-              <div class="card-body">
                 <h5 class="card-title">Gerador de CRUDs</h5>
                 <p class="card-text">Gerador de CRUDs - Laravel 9</p>
                 <a href="backend/framework/laravel/crud-generator/" class="btn btn-primary">Acessar</a>
