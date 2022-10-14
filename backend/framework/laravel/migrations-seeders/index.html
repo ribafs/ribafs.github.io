@@ -394,12 +394,12 @@ seeders </p>
 <p>Eu pesquisei para sua pergunta e encontrei algo simples como abaixo.</p>
 <p>factory e seeder são usados ​​para gerar dados de teste para o aplicativo.</p>
 <p>Factory: Ao usar as factorys, você pode criar facilmente dados de teste para seu aplicativo laravel com base em Model. Na factory estamos usando outra classe como Faker para gerar dados falsos facilmente.</p>
-<p>Na factory também podemos gerar dados relacionados ao relacionamento enquanto no db seeder não podemos.
-´´´php
-factory(App\User::class, 50)-&gt;create()-&gt;each(function ($user) {
-        $user-&gt;posts()-&gt;save(factory(App\Post::class)-&gt;make());
-});
-´´´</p>
+<p>Na factory também podemos gerar dados relacionados ao relacionamento enquanto no db seeder não podemos.</p>
+<div class="highlight"><pre><span></span><code><span class="x">factory(App\User::class, 50)-&gt;create()-&gt;each(function ($user) {</span>
+<span class="x">        $user-&gt;posts()-&gt;save(factory(App\Post::class)-&gt;make());</span>
+<span class="x">});</span>
+</code></pre></div>
+
 <p>seeder: Ao usar o seeder, você pode criar dados de teste com base no nome da sua tabela. Como abaixo.</p>
 <p>Você pode conferir aqui para mais informações:</p>
 <p>https://laravel.com/docs/9.x/seeding#using-model-factories</p>
