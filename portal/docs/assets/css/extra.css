@@ -24,6 +24,11 @@ p {
     }
 }
 
+.lasts {
+    position:fixed;
+    bottom:220px;
+}
+
 .cards {
     text-align:center;
     position:fixed;

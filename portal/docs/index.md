@@ -9,6 +9,10 @@
         </div>
     </div>
 
+    <div class="row lasts">
+        <h4 class="ms-5 fonts mb-2" style="margin-left: 120px;">Últimos 4 artigos</h4>
+    </div>
+
     <div class="row cards">
         <div class="col-md-3">
             <div class="card" style="width: 18rem;">
