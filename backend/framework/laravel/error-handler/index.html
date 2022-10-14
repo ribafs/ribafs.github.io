@@ -321,7 +321,7 @@
 <span class="x">               return redirect(&#39;comments&#39;)-&gt;with(&#39;flash_message&#39;, &#39;Comments created!&#39;);</span>
 <span class="x">          } catch (Exception $e) {</span>
 <span class="x">              if($e-&gt;getCode() == 23000){</span>
-<span class="x">                  return redirect(&#39;comments&#39;)-&gt;with(&#39;danger_message&#39;, &#39;Este post_id não existe!&#39;);</span>
+<span class="x">                  return redirect(&#39;comments&#39;)-&gt;with(&#39;danger_message&#39;, &#39;Post não encontrado!&#39;);</span>
 <span class="x">              }</span>
 <span class="x">         }</span>
 <span class="x">    }</span>
