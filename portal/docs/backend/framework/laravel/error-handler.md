@@ -48,7 +48,7 @@ Mudamos o método store() para:
                return redirect('comments')->with('flash_message', 'Comments created!');
           } catch (Exception $e) {
               if($e->getCode() == 23000){
-                  return redirect('comments')->with('danger_message', 'Este post_id não existe!');
+                  return redirect('comments')->with('danger_message', 'Post não encontrado!');
               }
          }
     }
