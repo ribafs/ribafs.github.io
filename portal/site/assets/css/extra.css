@@ -1,0 +1,54 @@
+p {
+  font-family: "Arial", Times, serif;
+  font-size: 18px;
+}
+
+.fonts{
+    color: #598cbf;
+}
+
+@media only screen and (max-width: 478px) {
+    .logo {
+        left: 130px;
+    }
+    .footer{
+        padding-left: 100px
+    }
+}
+@media only screen and (min-width: 478px) {
+    .logo {
+        left: -20px;
+    }
+    .cards {
+        margin-left: -350px;
+    }
+}
+
+.lasts {
+    position:fixed;
+    bottom:220px;
+}
+
+.cards {
+    text-align:center;
+    position:fixed;
+    bottom:50px;
+}
+
+.footer {
+    text-align:center;
+    position:fixed;
+    left: 0%;
+    bottom:0px;
+    background-color: #264f77;
+}
+
+footer{display: none}
+/* Ocultar sidebar */
+.bs-sidebar{
+    display: none;
+}
+
+h1, h2, h3, h4{
+	color: #179b06;
+}
