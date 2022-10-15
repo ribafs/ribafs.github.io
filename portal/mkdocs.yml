@@ -132,6 +132,7 @@ nav:
         #- HTML Live: ferramentas/html-live/index.html
         - MkDocs: https://github.com/ribafs/mkdocs-ribafs
         - Recursos Gratuitos: https://github.com/ribafs/gratuitos
+        - Live Chat: ferramentas/live-chat.md
     - Sobre: 
         - Currículo: sobre/curriculo.md
         - Repositórios: https://github.com/ribafs/alguns-repos
