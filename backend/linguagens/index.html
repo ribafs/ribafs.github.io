@@ -1,0 +1,449 @@
+<!-- Ocultar os botões next e previous -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="Ribamar FS">
+        <link rel="canonical" href="https://ribafs.github.io/backend/linguagens/">
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Linguagens - RibaFS Portal</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/rainbow.min.css">
+        <link href="../../assets/css/extra.css" rel="stylesheet">
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/php.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/html.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">RibaFS Portal</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../.." class="nav-link">Início</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Front-end <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">HTML 5</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../frontend/html/html5/dicas/" class="dropdown-item">Dicas</a>
+</li>
+            
+<li>
+    <a href="../../frontend/html/html5/inputs/" class="dropdown-item">Inputs e atributos</a>
+</li>
+            
+<li>
+    <a href="../../frontend/html/html5/css/" class="dropdown-item">CSS3 para o HTML 5</a>
+</li>
+            
+<li>
+    <a href="../../frontend/html/html5/semanticas/" class="dropdown-item">Tags semânticas</a>
+</li>
+            
+<li>
+    <a href="../../frontend/html/html5/pattern-validation/dist/" class="dropdown-item">Validação</a>
+</li>
+            
+<li>
+    <a href="../../frontend/html/html5/regex/" class="dropdown-item">Regex</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">JavaScript</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="https://ribafs.github.io/javascript" class="dropdown-item">Muito conteúdo</a>
+</li>
+            
+<li>
+    <a href="../../frontend/js/reduce/" class="dropdown-item">Método Reduce</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Back-end <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="./" class="dropdown-item active">Linguagens</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">PHP</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../php/regex/" class="dropdown-item">Expressões Regulares</a>
+</li>
+            
+<li>
+    <a href="../php/url/" class="dropdown-item">Trabalhando com URL</a>
+</li>
+            
+<li>
+    <a href="../php/select-default-value/" class="dropdown-item">Valor default em select</a>
+</li>
+            
+<li>
+    <a href="../php/arrays-multiplos/" class="dropdown-item">Brincando com arrays múltiplos</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">PHP-OO</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">MVC</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../phpoo/mvc/fw-zero/" class="dropdown-item">Framework do zero</a>
+</li>
+            
+<li>
+    <a href="../phpoo/mvc/php-router/" class="dropdown-item">Rotas simples</a>
+</li>
+            
+<li>
+    <a href="../phpoo/mvc/simplest-router/" class="dropdown-item">Simplest Router</a>
+</li>
+            
+<li>
+    <a href="../phpoo/mvc/micro-framework/" class="dropdown-item">Micro Framework</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Framework</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Laravel</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../framework/laravel/gerador-laravel/" class="dropdown-item">Gerador de API CRUD para Laravel 9</a>
+</li>
+            
+<li>
+    <a href="../framework/laravel/migrations-seeders/" class="dropdown-item">Migrations e Seeders no Laravel 9</a>
+</li>
+            
+<li>
+    <a href="../framework/laravel/crud-generator/" class="dropdown-item">Gerador de CRUDs no Laravel 9</a>
+</li>
+            
+<li>
+    <a href="../framework/laravel/crud-generator-en/" class="dropdown-item">Crud Generator on Laravel 9 (english)</a>
+</li>
+            
+<li>
+    <a href="../framework/laravel/error-handler/" class="dropdown-item">Tratamento de exceções no Laravel 9</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">DevOps <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Apache</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../devops/apache/htaccess/" class="dropdown-item">.htaccess</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Linux <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../linux/" class="dropdown-item">Introdução</a>
+</li>
+                                    
+<li>
+    <a href="../../linux/linuxwindows/" class="dropdown-item">Diferenças Linux x Windows</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Ferramentas <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../ferramentas/hosting-free/" class="dropdown-item">Hospedagem Grátis</a>
+</li>
+                                    
+<li>
+    <a href="https://github.com/ribafs/mkdocs-ribafs" class="dropdown-item">MkDocs</a>
+</li>
+                                    
+<li>
+    <a href="https://github.com/ribafs/gratuitos" class="dropdown-item">Recursos Gratuitos</a>
+</li>
+                                    
+<li>
+    <a href="../../ferramentas/live-chat/" class="dropdown-item">Live Chat</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Sobre <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../sobre/curriculo/" class="dropdown-item">Currículo</a>
+</li>
+                                    
+<li>
+    <a href="https://github.com/ribafs/alguns-repos" class="dropdown-item">Repositórios</a>
+</li>
+                                    
+<li>
+    <a href="../../sobre/livros/" class="dropdown-item">Livros free</a>
+</li>
+                                    
+<li>
+    <a href="../../sobre/sites/" class="dropdown-item">Sites anteriores</a>
+</li>
+                                    
+<li>
+    <a href="../../sobre/contato/" class="dropdown-item">Contato</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../comments/" class="nav-link">Comentários</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a href="https://github.com/ribafs/ribafs.github.io/edit/master/docs/backend/linguagens.md" class="nav-link"><i class="fa fa-github"></i> Edit on GitHub</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="2"><a href="#linguagens-de-programacao" class="nav-link">Linguagens de programação</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h2 id="linguagens-de-programacao">Linguagens de programação</h2>
+<h3 id="a-primeira-linguagem-de-programacao">A primeira linguagem de programação</h3>
+<p>Sabia que a primeira linguagem de programação foi inventada há muito tempo, em 1843? Ada Lovelace inventou o primeiro algoritmo de máquina de sempre para uma máquina de computação precoce que ela escreveu em um pedaço de papel porque não existiam computadores na época! As linguagens de programação percorreram obviamente um longo caminho desde então, mas para entender a história das linguagens de programação, é preciso primeiro reconhecer a sua origem.</p>
+<p><a href="https://devskiller.com/pt/historia-da-programacao-idiomas/">https://devskiller.com/pt/historia-da-programacao-idiomas/</a></p>
+<h3 id="os-anos-1940">Os anos 1940</h3>
+<div class="highlight"><pre><span></span><code><span class="mf">1943</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">Plankalkül</span><span class="w"></span>
+<span class="mf">1943</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">ENIAC</span><span class="w"> </span><span class="n">coding</span><span class="w"> </span><span class="kr">sys</span><span class="n">tem</span><span class="w"></span>
+<span class="mf">1949</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">C</span><span class="o">-</span><span class="mf">10</span><span class="w"></span>
+</code></pre></div>
+
+<h3 id="de-50-a-60">De 50 a 60</h3>
+<div class="highlight"><pre><span></span><code><span class="mf">1951</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">Regional</span><span class="w"> </span><span class="n">Assembly</span><span class="w"> </span><span class="n">Language</span><span class="w"></span>
+<span class="mf">1952</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">Autocode</span><span class="w"></span>
+<span class="mf">1954</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="kr">FOR</span><span class="n">TRAN</span><span class="w"></span>
+<span class="mf">1955</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">FLOW</span><span class="o">-</span><span class="n">MATIC</span><span class="w"> </span><span class="p">(</span><span class="n">antecessor</span><span class="w"> </span><span class="n">do</span><span class="w"> </span><span class="n">COBOL</span><span class="p">)</span><span class="w"></span>
+<span class="mf">1957</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">COMTRAN</span><span class="w"> </span><span class="p">(</span><span class="n">antecessor</span><span class="w"> </span><span class="n">do</span><span class="w"> </span><span class="n">COBOL</span><span class="p">)</span><span class="w"></span>
+<span class="mf">1958</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">LISP</span><span class="w"></span>
+<span class="mf">1958</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">ALGOL</span><span class="w"> </span><span class="mf">58</span><span class="w"></span>
+<span class="mf">1959</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">FACT</span><span class="w"> </span><span class="p">(</span><span class="n">antecessor</span><span class="w"> </span><span class="n">do</span><span class="w"> </span><span class="n">COBOL</span><span class="p">)</span><span class="w"></span>
+<span class="mf">1959</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">COBOL</span><span class="w"></span>
+<span class="mf">1962</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">APL</span><span class="w"></span>
+<span class="mf">1962</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">Simula</span><span class="w"></span>
+<span class="mf">1964</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">BASIC</span><span class="w"></span>
+<span class="mf">1964</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">PL</span><span class="o">/</span><span class="n">I</span><span class="w"></span>
+</code></pre></div>
+
+<h3 id="70-a-80">70 a 80</h3>
+<div class="highlight"><pre><span></span><code><span class="mf">1970</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">Pascal</span><span class="w"></span>
+<span class="mf">1970</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="kr">For</span><span class="n">th</span><span class="w"></span>
+<span class="mf">1972</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">C</span><span class="w"></span>
+<span class="mf">1972</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">Smalltalk</span><span class="w"></span>
+<span class="mf">1972</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">Prolog</span><span class="w"></span>
+<span class="mf">1973</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">ML</span><span class="w"></span>
+<span class="mf">1978</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">SQL</span><span class="w"> </span><span class="p">(</span><span class="n">inicialmente</span><span class="w"> </span><span class="n">apenas</span><span class="w"> </span><span class="n">uma</span><span class="w"> </span><span class="n">linguagem</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">consulta</span><span class="p">,</span><span class="w"> </span><span class="n">mais</span><span class="w"> </span><span class="n">tarde</span><span class="w"> </span><span class="n">estendido</span><span class="w"> </span><span class="n">com</span><span class="w"> </span><span class="n">construções</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">programação</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+
+<h3 id="decada-de-80">Década de 80</h3>
+<div class="highlight"><pre><span></span><code><span class="mf">1983</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">Ada</span><span class="w"></span>
+<span class="mf">1983</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">C</span><span class="o">++</span><span class="w"></span>
+<span class="mf">1984</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">MATLAB</span><span class="w"></span>
+<span class="mf">1985</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">Eiffel</span><span class="w"></span>
+<span class="mf">1986</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">Objective</span><span class="o">-</span><span class="n">C</span><span class="w"></span>
+<span class="mf">1987</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">Perl</span><span class="w"></span>
+<span class="mf">1989</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">FL</span><span class="w"> </span><span class="p">(</span><span class="n">Backus</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+
+<h3 id="decada-de-90">Década de 90</h3>
+<div class="highlight"><pre><span></span><code><span class="mf">1990</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">Haskell</span><span class="w"></span>
+<span class="mf">1991</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">Python</span><span class="w"></span>
+<span class="mf">1991</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">Java</span><span class="w"></span>
+<span class="mf">1993</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">R</span><span class="w"></span>
+<span class="mf">1993</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">Lua</span><span class="w"></span>
+<span class="mf">1994</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">ANSI</span><span class="w"> </span><span class="n">Common</span><span class="w"> </span><span class="n">Lisp</span><span class="w"></span>
+<span class="mf">1995</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">Delphi</span><span class="w"> </span><span class="p">(</span><span class="n">Object</span><span class="w"> </span><span class="n">Pascal</span><span class="p">)</span><span class="w"></span>
+<span class="mf">1995</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">JavaScript</span><span class="w"></span>
+<span class="mf">1995</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">PHP</span><span class="w"></span>
+<span class="mf">1995</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">Ruby</span><span class="w"></span>
+</code></pre></div>
+
+<h3 id="dias-atuais">Dias atuais</h3>
+<div class="highlight"><pre><span></span><code><span class="mf">2000</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">C</span><span class="err">#</span><span class="w"></span>
+<span class="mf">2000</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">ActionScript</span><span class="w"></span>
+<span class="mf">2002</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">Scratch</span><span class="w"></span>
+<span class="mf">2008</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">JavaFX</span><span class="w"> </span><span class="n">Script</span><span class="w"></span>
+<span class="mf">2006</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">PowerShell</span><span class="w"></span>
+<span class="mf">2009</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="kr">Go</span><span class="w"></span>
+<span class="mf">2012</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">Julia</span><span class="w"></span>
+<span class="mf">2012</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">TypeScript</span><span class="w"></span>
+<span class="mf">2014</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">Swift</span><span class="w"></span>
+<span class="mf">2014</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">Hack</span><span class="w"></span>
+<span class="mf">2017</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">Q</span><span class="err">#</span><span class="w"></span>
+</code></pre></div>
+
+<h3 id="fonte">Fonte</h3>
+<p><a href="https://pt.wikipedia.org/wiki/Hist%C3%B3ria_das_linguagens_de_programa%C3%A7%C3%A3o">https://pt.wikipedia.org/wiki/Hist%C3%B3ria_das_linguagens_de_programa%C3%A7%C3%A3o</a></p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

@@ -63,6 +63,7 @@ nav:
         #    - Introdução: frontend/websql/index.md
 
     - Back-end:
+        - Linguagens: backend/linguagens.md
         #- Ambiente: 
         #    - Introdução: backend/ambiente/index.md
         #    - Windows: backend/ambiente/windows/index.md
