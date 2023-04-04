@@ -246,6 +246,10 @@
 </li>
                                     
 <li>
+    <a href="../../../sobre/livrosc/" class="dropdown-item">Livros</a>
+</li>
+                                    
+<li>
     <a href="../../../sobre/sites/" class="dropdown-item">Sites anteriores</a>
 </li>
                                     
@@ -299,181 +303,181 @@
 <p>Método do Javascript que busca reduzir todo um array para um único elemento. Ele iterará por cada elemento dessa lista com o objetivo de ao final gerar um único valor de qualquer tipo.</p>
 <h3 id="sintaxe">Sintaxe</h3>
 <h4 id="es5-e-ainteriores">ES5 e ainteriores</h4>
-<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">novoValor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">arrayBase</span><span class="p">.</span><span class="nx">reduce</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">acumulador</span><span class="p">,</span><span class="w"> </span><span class="nx">valorAtual</span><span class="p">,</span><span class="w"> </span><span class="nx">indice</span><span class="p">,</span><span class="w"> </span><span class="nx">array</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="c1">// Faça algo com o acumulador e valueAtual (indice, array, e valorInicial são opcionais)</span><span class="w"></span>
-<span class="p">},</span><span class="w"> </span><span class="nx">valorInicial</span><span class="p">);</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span> <span class="nx">novoValor</span> <span class="o">=</span> <span class="nx">arrayBase</span><span class="p">.</span><span class="nx">reduce</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">acumulador</span><span class="p">,</span> <span class="nx">valorAtual</span><span class="p">,</span> <span class="nx">indice</span><span class="p">,</span> <span class="nx">array</span><span class="p">)</span> <span class="p">{</span>
+<span class="c1">// Faça algo com o acumulador e valueAtual (indice, array, e valorInicial são opcionais)</span>
+<span class="p">},</span> <span class="nx">valorInicial</span><span class="p">);</span>
 </code></pre></div>
 
 <h4 id="es6">ES6</h4>
-<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">novoValor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">arrayBase</span><span class="p">.</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">acumulador</span><span class="p">,</span><span class="w"> </span><span class="nx">valorAtual</span><span class="p">,</span><span class="w"> </span><span class="nx">indice</span><span class="p">,</span><span class="w"> </span><span class="nx">array</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"></span>
-<span class="c1">// Faça algo com o acumulador e valueAtual (indice, array, e valorInicial são opcionais), valorInicial);</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span> <span class="nx">novoValor</span> <span class="o">=</span> <span class="nx">arrayBase</span><span class="p">.</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">acumulador</span><span class="p">,</span> <span class="nx">valorAtual</span><span class="p">,</span> <span class="nx">indice</span><span class="p">,</span> <span class="nx">array</span><span class="p">)</span> <span class="p">=&gt;</span>
+<span class="c1">// Faça algo com o acumulador e valueAtual (indice, array, e valorInicial são opcionais), valorInicial);</span>
 </code></pre></div>
 
 <p>Com ES5 se usa function (callback) e chaves {} e com ES6 somente usa-se =&gt;</p>
 <h3 id="descricao">Descrição</h3>
 <p>O método reduce() executa a função de callback uma vez para cada elemento presente no array, excluindo furos (valores indefinidos), recebendo quatro argumentos.</p>
 <h4 id="somandoiterando-sem-reduce-com-for">Somando/iterando sem reduce (com for)</h4>
-<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">numbers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">];</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span> <span class="nx">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1</span><span class="p">,</span> <span class="mf">2</span><span class="p">,</span> <span class="mf">3</span><span class="p">];</span>
 
-<span class="kd">let</span><span class="w"> </span><span class="nx">sum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"></span>
-<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nx">numbers</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nx">sum</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="nx">numbers</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">sum</span><span class="p">);</span><span class="w"></span>
+<span class="kd">let</span> <span class="nx">sum</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
+<span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">numbers</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">sum</span> <span class="o">+=</span> <span class="nx">numbers</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
+<span class="p">}</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">sum</span><span class="p">);</span>
 </code></pre></div>
 
 <h3 id="exemplo-usando-o-es5">Exemplo usando o ES5</h3>
-<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">numbers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="mf">2</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="mf">4</span><span class="p">,</span><span class="mf">5</span><span class="p">]</span><span class="w"></span>
-<span class="kd">const</span><span class="w"> </span><span class="nx">sum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">numbers</span><span class="p">.</span><span class="nx">reduce</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">accumulator</span><span class="p">,</span><span class="w"> </span><span class="nx">initialValue</span><span class="p">){</span><span class="w"></span>
-<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">accumulator</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">initialValue</span><span class="w"></span>
-<span class="p">},</span><span class="mf">0</span><span class="p">)</span><span class="w"></span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">sum</span><span class="p">)</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span> <span class="nx">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="mf">2</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="mf">4</span><span class="p">,</span><span class="mf">5</span><span class="p">]</span>
+<span class="kd">const</span> <span class="nx">sum</span> <span class="o">=</span> <span class="nx">numbers</span><span class="p">.</span><span class="nx">reduce</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">accumulator</span><span class="p">,</span> <span class="nx">initialValue</span><span class="p">){</span>
+  <span class="k">return</span> <span class="nx">accumulator</span> <span class="o">+</span> <span class="nx">initialValue</span>
+<span class="p">},</span><span class="mf">0</span><span class="p">)</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">sum</span><span class="p">)</span>
 </code></pre></div>
 
 <h3 id="exemplos-usando-es6">Exemplos usando ES6</h3>
-<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">numbers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="nx">item</span><span class="p">,</span><span class="nx">item</span><span class="p">,</span><span class="nx">item</span><span class="p">,</span><span class="nx">item</span><span class="p">,</span><span class="nx">item</span><span class="p">]</span><span class="w"></span>
-<span class="kd">const</span><span class="w"> </span><span class="nx">sum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">numbers</span><span class="p">.</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">accumulator</span><span class="p">,</span><span class="w"> </span><span class="nx">item</span><span class="p">)=&gt;(</span><span class="nx">accumulator</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">item</span><span class="p">),</span><span class="mf">0</span><span class="p">)</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span> <span class="nx">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="nx">item</span><span class="p">,</span><span class="nx">item</span><span class="p">,</span><span class="nx">item</span><span class="p">,</span><span class="nx">item</span><span class="p">,</span><span class="nx">item</span><span class="p">]</span>
+<span class="kd">const</span> <span class="nx">sum</span> <span class="o">=</span> <span class="nx">numbers</span><span class="p">.</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">accumulator</span><span class="p">,</span> <span class="nx">item</span><span class="p">)=&gt;(</span><span class="nx">accumulator</span> <span class="o">+</span> <span class="nx">item</span><span class="p">),</span><span class="mf">0</span><span class="p">)</span>
 </code></pre></div>
 
 <h3 id="exemplo-simples-com-array-de-numeros">Exemplo simples com array de números</h3>
-<div class="highlight"><pre><span></span><code><span class="nx">valores</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="mf">20</span><span class="p">,</span><span class="w"> </span><span class="mf">30</span><span class="p">,</span><span class="w"> </span><span class="mf">40</span><span class="p">,</span><span class="w"> </span><span class="mf">50</span><span class="p">]</span><span class="w"></span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">valores</span><span class="p">.</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">somatorio</span><span class="p">,</span><span class="w"> </span><span class="nx">atual</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">somatorio</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">atual</span><span class="p">,</span><span class="w"> </span><span class="nx">vrInicial</span><span class="p">))</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="nx">valores</span> <span class="o">=</span> <span class="p">[</span><span class="mf">10</span><span class="p">,</span> <span class="mf">20</span><span class="p">,</span> <span class="mf">30</span><span class="p">,</span> <span class="mf">40</span><span class="p">,</span> <span class="mf">50</span><span class="p">]</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">valores</span><span class="p">.</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">somatorio</span><span class="p">,</span> <span class="nx">atual</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">somatorio</span> <span class="o">+</span> <span class="nx">atual</span><span class="p">,</span> <span class="nx">vrInicial</span><span class="p">))</span>
 </code></pre></div>
 
 <h4 id="outro">Outro</h4>
-<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">numeros</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="mf">20</span><span class="p">,</span><span class="w"> </span><span class="mf">70</span><span class="p">,</span><span class="w"> </span><span class="mf">100</span><span class="p">];</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span> <span class="nx">numeros</span> <span class="o">=</span> <span class="p">[</span><span class="mf">10</span><span class="p">,</span> <span class="mf">20</span><span class="p">,</span> <span class="mf">70</span><span class="p">,</span> <span class="mf">100</span><span class="p">];</span>
 
-<span class="kd">const</span><span class="w"> </span><span class="nx">soma</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">numeros</span><span class="p">.</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">total</span><span class="p">,</span><span class="w"> </span><span class="nx">atual</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">total</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">atual</span><span class="p">);</span><span class="w"> </span>
+<span class="kd">const</span> <span class="nx">soma</span> <span class="o">=</span> <span class="nx">numeros</span><span class="p">.</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">total</span><span class="p">,</span> <span class="nx">atual</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">total</span> <span class="o">+</span> <span class="nx">atual</span><span class="p">);</span> 
 
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">soma</span><span class="p">)</span><span class="w"></span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">soma</span><span class="p">)</span>
 </code></pre></div>
 
 <h4 id="outro-exemplo">Outro exemplo</h4>
 <p>Valor inicial = 0</p>
-<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">numeros</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">3</span><span class="p">,</span><span class="w"> </span><span class="mf">7</span><span class="p">,</span><span class="w"> </span><span class="mf">5</span><span class="p">,</span><span class="w"> </span><span class="mf">10</span><span class="p">];</span><span class="w"></span>
-<span class="kd">let</span><span class="w"> </span><span class="nx">total</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">numeros</span><span class="p">.</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">acumulador</span><span class="p">,</span><span class="w"> </span><span class="nx">numero</span><span class="p">,</span><span class="w"> </span><span class="nx">indice</span><span class="p">,</span><span class="w"> </span><span class="nx">original</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span>
-<span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">info</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="nx">acumulador</span><span class="si">}</span><span class="sb"> total até o momento`</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="nx">numero</span><span class="w"> </span><span class="si">}</span><span class="sb"> valor atual`</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="nx">indice</span><span class="si">}</span><span class="sb"> indice atual`</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="nx">original</span><span class="si">}</span><span class="sb"> array original`</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">acumulador</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="nx">numero</span><span class="p">;</span><span class="w"></span>
-<span class="p">},</span><span class="w"> </span><span class="mf">0</span><span class="p">)</span><span class="w"></span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">warn</span><span class="p">(</span><span class="s1">&#39;acaboooou&#39;</span><span class="p">);</span><span class="w"></span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">total</span><span class="p">)</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span> <span class="nx">numeros</span> <span class="o">=</span> <span class="p">[</span><span class="mf">3</span><span class="p">,</span> <span class="mf">7</span><span class="p">,</span> <span class="mf">5</span><span class="p">,</span> <span class="mf">10</span><span class="p">];</span>
+<span class="kd">let</span> <span class="nx">total</span> <span class="o">=</span> <span class="nx">numeros</span><span class="p">.</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">acumulador</span><span class="p">,</span> <span class="nx">numero</span><span class="p">,</span> <span class="nx">indice</span><span class="p">,</span> <span class="nx">original</span><span class="p">)</span> <span class="p">=&gt;</span> 
+<span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">info</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="nx">acumulador</span><span class="si">}</span><span class="sb"> total até o momento`</span><span class="p">);</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="nx">numero</span> <span class="si">}</span><span class="sb"> valor atual`</span><span class="p">);</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="nx">indice</span><span class="si">}</span><span class="sb"> indice atual`</span><span class="p">);</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="nx">original</span><span class="si">}</span><span class="sb"> array original`</span><span class="p">);</span>
+    <span class="k">return</span> <span class="nx">acumulador</span> <span class="o">+=</span> <span class="nx">numero</span><span class="p">;</span>
+<span class="p">},</span> <span class="mf">0</span><span class="p">)</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">warn</span><span class="p">(</span><span class="s1">&#39;acaboooou&#39;</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">total</span><span class="p">)</span>
 </code></pre></div>
 
 <h4 id="exemplo-de-uso-com-objetos">Exemplo de uso com objetos</h4>
 <h4 id="para-es5-e-anteriores">Para ES5 e anteriores</h4>
-<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">valores</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
-<span class="w">    </span><span class="p">{</span><span class="nx">valor</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">},</span><span class="w"></span>
-<span class="w">    </span><span class="p">{</span><span class="nx">valor</span><span class="o">:</span><span class="w"> </span><span class="mf">2</span><span class="p">},</span><span class="w"></span>
-<span class="w">    </span><span class="p">{</span><span class="nx">valor</span><span class="o">:</span><span class="w"> </span><span class="mf">7</span><span class="p">},</span><span class="w"></span>
-<span class="w">    </span><span class="p">{</span><span class="nx">valor</span><span class="o">:</span><span class="w"> </span><span class="mf">5</span><span class="p">},</span><span class="w"></span>
-<span class="w">    </span><span class="p">{</span><span class="nx">valor</span><span class="o">:</span><span class="w"> </span><span class="mf">5</span><span class="p">}</span><span class="w"></span>
-<span class="p">];</span><span class="w"></span>
-<span class="kd">var</span><span class="w"> </span><span class="nx">resultado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">valores</span><span class="p">.</span><span class="nx">reduce</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">soma</span><span class="p">,</span><span class="w"> </span><span class="nx">atual</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">soma</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">atual</span><span class="p">.</span><span class="nx">valor</span><span class="p">;</span><span class="w"></span>
-<span class="p">},</span><span class="w"> </span><span class="mf">0</span><span class="p">)</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span> <span class="nx">valores</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">{</span><span class="nx">valor</span><span class="o">:</span> <span class="mf">1</span><span class="p">},</span>
+    <span class="p">{</span><span class="nx">valor</span><span class="o">:</span> <span class="mf">2</span><span class="p">},</span>
+    <span class="p">{</span><span class="nx">valor</span><span class="o">:</span> <span class="mf">7</span><span class="p">},</span>
+    <span class="p">{</span><span class="nx">valor</span><span class="o">:</span> <span class="mf">5</span><span class="p">},</span>
+    <span class="p">{</span><span class="nx">valor</span><span class="o">:</span> <span class="mf">5</span><span class="p">}</span>
+<span class="p">];</span>
+<span class="kd">var</span> <span class="nx">resultado</span> <span class="o">=</span> <span class="nx">valores</span><span class="p">.</span><span class="nx">reduce</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">soma</span><span class="p">,</span> <span class="nx">atual</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">soma</span> <span class="o">+</span> <span class="nx">atual</span><span class="p">.</span><span class="nx">valor</span><span class="p">;</span>
+<span class="p">},</span> <span class="mf">0</span><span class="p">)</span>
 
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">resultado</span><span class="p">);</span><span class="w"></span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">resultado</span><span class="p">);</span>
 </code></pre></div>
 
 <h4 id="com-es6">Com ES6</h4>
-<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">valores</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
-<span class="w">    </span><span class="p">{</span><span class="nx">valor</span><span class="o">:</span><span class="w"> </span><span class="mf">3</span><span class="p">},</span><span class="w"></span>
-<span class="w">    </span><span class="p">{</span><span class="nx">valor</span><span class="o">:</span><span class="w"> </span><span class="mf">7</span><span class="p">},</span><span class="w"></span>
-<span class="w">    </span><span class="p">{</span><span class="nx">valor</span><span class="o">:</span><span class="w"> </span><span class="mf">5</span><span class="p">},</span><span class="w"></span>
-<span class="w">    </span><span class="p">{</span><span class="nx">valor</span><span class="o">:</span><span class="w"> </span><span class="mf">5</span><span class="p">}</span><span class="w"></span>
-<span class="p">];</span><span class="w"></span>
-<span class="kd">let</span><span class="w"> </span><span class="nx">resultado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">valores</span><span class="p">.</span><span class="nx">reduce</span><span class="p">(</span><span class="w"></span>
-<span class="w">    </span><span class="p">(</span><span class="nx">soma</span><span class="p">,</span><span class="w"> </span><span class="nx">atual</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">soma</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">atual</span><span class="p">.</span><span class="nx">valor</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="w"></span>
-<span class="p">);</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span> <span class="nx">valores</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">{</span><span class="nx">valor</span><span class="o">:</span> <span class="mf">3</span><span class="p">},</span>
+    <span class="p">{</span><span class="nx">valor</span><span class="o">:</span> <span class="mf">7</span><span class="p">},</span>
+    <span class="p">{</span><span class="nx">valor</span><span class="o">:</span> <span class="mf">5</span><span class="p">},</span>
+    <span class="p">{</span><span class="nx">valor</span><span class="o">:</span> <span class="mf">5</span><span class="p">}</span>
+<span class="p">];</span>
+<span class="kd">let</span> <span class="nx">resultado</span> <span class="o">=</span> <span class="nx">valores</span><span class="p">.</span><span class="nx">reduce</span><span class="p">(</span>
+    <span class="p">(</span><span class="nx">soma</span><span class="p">,</span> <span class="nx">atual</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">soma</span> <span class="o">+</span> <span class="nx">atual</span><span class="p">.</span><span class="nx">valor</span><span class="p">,</span> <span class="mf">0</span>
+<span class="p">);</span>
 
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;A soma vale: &#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">resultado</span><span class="p">);</span><span class="w"></span>
-<span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;A soma vale: &#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">resultado</span><span class="p">)</span><span class="w"></span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;A soma vale: &#39;</span> <span class="o">+</span> <span class="nx">resultado</span><span class="p">);</span>
+<span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;A soma vale: &#39;</span> <span class="o">+</span> <span class="nx">resultado</span><span class="p">)</span>
 </code></pre></div>
 
 <h4 id="outro-exemplo_1">Outro exemplo</h4>
-<div class="highlight"><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="p">.</span><span class="nx">repeat</span><span class="p">(</span><span class="mf">50</span><span class="p">))</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="p">.</span><span class="nx">repeat</span><span class="p">(</span><span class="mf">50</span><span class="p">))</span>
 
-<span class="kd">let</span><span class="w"> </span><span class="nx">loja</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
-<span class="w">  </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nx">product</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Celular&#39;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nx">qty</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nx">price</span><span class="o">:</span><span class="w"> </span><span class="mf">500</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="p">},</span><span class="w"></span>
-<span class="w">  </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nx">product</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Mouse&#39;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nx">qty</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nx">price</span><span class="o">:</span><span class="w"> </span><span class="mf">10</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="p">},</span><span class="w"></span>
-<span class="w">  </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nx">product</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Pendrive&#39;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nx">qty</span><span class="o">:</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nx">price</span><span class="o">:</span><span class="w"> </span><span class="mf">20</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="p">},</span><span class="w"></span>
-<span class="p">];</span><span class="w"></span>
+<span class="kd">let</span> <span class="nx">loja</span> <span class="o">=</span> <span class="p">[</span>
+  <span class="p">{</span>
+    <span class="nx">product</span><span class="o">:</span> <span class="s1">&#39;Celular&#39;</span><span class="p">,</span>
+    <span class="nx">qty</span><span class="o">:</span> <span class="mf">1</span><span class="p">,</span>
+    <span class="nx">price</span><span class="o">:</span> <span class="mf">500</span><span class="p">,</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+    <span class="nx">product</span><span class="o">:</span> <span class="s1">&#39;Mouse&#39;</span><span class="p">,</span>
+    <span class="nx">qty</span><span class="o">:</span> <span class="mf">1</span><span class="p">,</span>
+    <span class="nx">price</span><span class="o">:</span> <span class="mf">10</span><span class="p">,</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+    <span class="nx">product</span><span class="o">:</span> <span class="s1">&#39;Pendrive&#39;</span><span class="p">,</span>
+    <span class="nx">qty</span><span class="o">:</span> <span class="mf">2</span><span class="p">,</span>
+    <span class="nx">price</span><span class="o">:</span> <span class="mf">20</span><span class="p">,</span>
+  <span class="p">},</span>
+<span class="p">];</span>
 
-<span class="kd">let</span><span class="w"> </span><span class="nx">total</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">loja</span><span class="p">.</span><span class="nx">reduce</span><span class="p">(</span><span class="w"></span>
-<span class="w">    </span><span class="p">(</span><span class="nx">acumulado</span><span class="p">,</span><span class="w"> </span><span class="nx">atual</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">acumulado</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">atual</span><span class="p">.</span><span class="nx">price</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="w"></span>
-<span class="p">);</span><span class="w"></span>
+<span class="kd">let</span> <span class="nx">total</span> <span class="o">=</span> <span class="nx">loja</span><span class="p">.</span><span class="nx">reduce</span><span class="p">(</span>
+    <span class="p">(</span><span class="nx">acumulado</span><span class="p">,</span> <span class="nx">atual</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">acumulado</span> <span class="o">+</span> <span class="nx">atual</span><span class="p">.</span><span class="nx">price</span><span class="p">,</span> <span class="mf">0</span>
+<span class="p">);</span>
 
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">total</span><span class="p">)</span><span class="w"></span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">total</span><span class="p">)</span>
 </code></pre></div>
 
 <h4 id="outro-exemplo-com-es6">Outro exemplo com ES6</h4>
-<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">person</span><span class="w"> </span><span class="o">=</span><span class="p">[</span><span class="w"></span>
-<span class="w">    </span><span class="p">{</span><span class="nx">name</span><span class="o">:</span><span class="s2">&quot;Karen&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">age</span><span class="o">:</span><span class="mf">20</span><span class="p">,</span><span class="w"> </span><span class="nx">hobby</span><span class="o">:</span><span class="s2">&quot;dancing&quot;</span><span class="p">},</span><span class="w"></span>
-<span class="w">    </span><span class="p">{</span><span class="nx">name</span><span class="o">:</span><span class="s2">&quot;John Doe&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">age</span><span class="o">:</span><span class="mf">30</span><span class="p">,</span><span class="w"> </span><span class="nx">hobby</span><span class="o">:</span><span class="s2">&quot;riding&quot;</span><span class="p">},</span><span class="w"></span>
-<span class="w">    </span><span class="p">{</span><span class="nx">name</span><span class="o">:</span><span class="s2">&quot;Nikita&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">age</span><span class="o">:</span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="nx">hobby</span><span class="o">:</span><span class="s2">&quot;drawing&quot;</span><span class="p">},</span><span class="w"></span>
-<span class="w">    </span><span class="p">{</span><span class="nx">name</span><span class="o">:</span><span class="s2">&quot;Jane&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">age</span><span class="o">:</span><span class="mf">20</span><span class="p">,</span><span class="w"> </span><span class="nx">hobby</span><span class="o">:</span><span class="s2">&quot;swimming&quot;</span><span class="p">},</span><span class="w"></span>
-<span class="w">    </span><span class="p">{</span><span class="nx">name</span><span class="o">:</span><span class="s2">&quot;Benn&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">age</span><span class="o">:</span><span class="mf">20</span><span class="p">,</span><span class="w"> </span><span class="nx">hobby</span><span class="o">:</span><span class="s2">&quot;travelling&quot;</span><span class="p">},</span><span class="w"></span>
-<span class="p">]</span><span class="w"></span>
-<span class="kd">const</span><span class="w"> </span><span class="nx">sum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">person</span><span class="p">.</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">accumulator</span><span class="p">,</span><span class="w"> </span><span class="nx">arrayItem</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">   </span><span class="k">return</span><span class="w"> </span><span class="nx">accumulator</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">arrayItem</span><span class="p">.</span><span class="nx">age</span><span class="w"></span>
-<span class="p">},</span><span class="mf">0</span><span class="p">)</span><span class="w"></span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">sum</span><span class="p">)</span><span class="c1">//Result: 100</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span> <span class="nx">person</span> <span class="o">=</span><span class="p">[</span>
+    <span class="p">{</span><span class="nx">name</span><span class="o">:</span><span class="s2">&quot;Karen&quot;</span><span class="p">,</span> <span class="nx">age</span><span class="o">:</span><span class="mf">20</span><span class="p">,</span> <span class="nx">hobby</span><span class="o">:</span><span class="s2">&quot;dancing&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="nx">name</span><span class="o">:</span><span class="s2">&quot;John Doe&quot;</span><span class="p">,</span> <span class="nx">age</span><span class="o">:</span><span class="mf">30</span><span class="p">,</span> <span class="nx">hobby</span><span class="o">:</span><span class="s2">&quot;riding&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="nx">name</span><span class="o">:</span><span class="s2">&quot;Nikita&quot;</span><span class="p">,</span> <span class="nx">age</span><span class="o">:</span><span class="mf">10</span><span class="p">,</span> <span class="nx">hobby</span><span class="o">:</span><span class="s2">&quot;drawing&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="nx">name</span><span class="o">:</span><span class="s2">&quot;Jane&quot;</span><span class="p">,</span> <span class="nx">age</span><span class="o">:</span><span class="mf">20</span><span class="p">,</span> <span class="nx">hobby</span><span class="o">:</span><span class="s2">&quot;swimming&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="nx">name</span><span class="o">:</span><span class="s2">&quot;Benn&quot;</span><span class="p">,</span> <span class="nx">age</span><span class="o">:</span><span class="mf">20</span><span class="p">,</span> <span class="nx">hobby</span><span class="o">:</span><span class="s2">&quot;travelling&quot;</span><span class="p">},</span>
+<span class="p">]</span>
+<span class="kd">const</span> <span class="nx">sum</span> <span class="o">=</span> <span class="nx">person</span><span class="p">.</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">accumulator</span><span class="p">,</span> <span class="nx">arrayItem</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+   <span class="k">return</span> <span class="nx">accumulator</span> <span class="o">+</span> <span class="nx">arrayItem</span><span class="p">.</span><span class="nx">age</span>
+<span class="p">},</span><span class="mf">0</span><span class="p">)</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">sum</span><span class="p">)</span><span class="c1">//Result: 100</span>
 
-<span class="kd">let</span><span class="w"> </span><span class="nx">pessoa</span><span class="w"> </span><span class="o">=</span><span class="p">[</span><span class="w"></span>
-<span class="w">    </span><span class="p">{</span><span class="nx">nome</span><span class="o">:</span><span class="s2">&quot;João&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">idade</span><span class="o">:</span><span class="mf">20</span><span class="p">,</span><span class="w"> </span><span class="nx">peso</span><span class="o">:</span><span class="mf">60</span><span class="p">},</span><span class="w"></span>
-<span class="w">    </span><span class="p">{</span><span class="nx">nome</span><span class="o">:</span><span class="s2">&quot;Pedro&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">idade</span><span class="o">:</span><span class="mf">30</span><span class="p">,</span><span class="w"> </span><span class="nx">peso</span><span class="o">:</span><span class="mf">70</span><span class="p">},</span><span class="w"></span>
-<span class="w">    </span><span class="p">{</span><span class="nx">nome</span><span class="o">:</span><span class="s2">&quot;Raimundo&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">idade</span><span class="o">:</span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="nx">peso</span><span class="o">:</span><span class="mf">30</span><span class="p">},</span><span class="w"></span>
-<span class="w">    </span><span class="p">{</span><span class="nx">nome</span><span class="o">:</span><span class="s2">&quot;Francisco&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">idade</span><span class="o">:</span><span class="mf">20</span><span class="p">,</span><span class="w"> </span><span class="nx">peso</span><span class="o">:</span><span class="mf">80</span><span class="p">},</span><span class="w"></span>
-<span class="w">    </span><span class="p">{</span><span class="nx">nome</span><span class="o">:</span><span class="s2">&quot;Benn&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">idade</span><span class="o">:</span><span class="mf">20</span><span class="p">,</span><span class="w"> </span><span class="nx">peso</span><span class="o">:</span><span class="mf">60</span><span class="p">},</span><span class="w"></span>
-<span class="p">]</span><span class="w"></span>
-<span class="kd">const</span><span class="w"> </span><span class="nx">somaIdades</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">pessoa</span><span class="p">.</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">acumulador</span><span class="p">,</span><span class="w"> </span><span class="nx">atual</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">   </span><span class="k">return</span><span class="w"> </span><span class="nx">acumulador</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">atual</span><span class="p">.</span><span class="nx">idade</span><span class="w"></span>
-<span class="p">},</span><span class="mf">0</span><span class="p">)</span><span class="w"></span>
+<span class="kd">let</span> <span class="nx">pessoa</span> <span class="o">=</span><span class="p">[</span>
+    <span class="p">{</span><span class="nx">nome</span><span class="o">:</span><span class="s2">&quot;João&quot;</span><span class="p">,</span> <span class="nx">idade</span><span class="o">:</span><span class="mf">20</span><span class="p">,</span> <span class="nx">peso</span><span class="o">:</span><span class="mf">60</span><span class="p">},</span>
+    <span class="p">{</span><span class="nx">nome</span><span class="o">:</span><span class="s2">&quot;Pedro&quot;</span><span class="p">,</span> <span class="nx">idade</span><span class="o">:</span><span class="mf">30</span><span class="p">,</span> <span class="nx">peso</span><span class="o">:</span><span class="mf">70</span><span class="p">},</span>
+    <span class="p">{</span><span class="nx">nome</span><span class="o">:</span><span class="s2">&quot;Raimundo&quot;</span><span class="p">,</span> <span class="nx">idade</span><span class="o">:</span><span class="mf">10</span><span class="p">,</span> <span class="nx">peso</span><span class="o">:</span><span class="mf">30</span><span class="p">},</span>
+    <span class="p">{</span><span class="nx">nome</span><span class="o">:</span><span class="s2">&quot;Francisco&quot;</span><span class="p">,</span> <span class="nx">idade</span><span class="o">:</span><span class="mf">20</span><span class="p">,</span> <span class="nx">peso</span><span class="o">:</span><span class="mf">80</span><span class="p">},</span>
+    <span class="p">{</span><span class="nx">nome</span><span class="o">:</span><span class="s2">&quot;Benn&quot;</span><span class="p">,</span> <span class="nx">idade</span><span class="o">:</span><span class="mf">20</span><span class="p">,</span> <span class="nx">peso</span><span class="o">:</span><span class="mf">60</span><span class="p">},</span>
+<span class="p">]</span>
+<span class="kd">const</span> <span class="nx">somaIdades</span> <span class="o">=</span> <span class="nx">pessoa</span><span class="p">.</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">acumulador</span><span class="p">,</span> <span class="nx">atual</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+   <span class="k">return</span> <span class="nx">acumulador</span> <span class="o">+</span> <span class="nx">atual</span><span class="p">.</span><span class="nx">idade</span>
+<span class="p">},</span><span class="mf">0</span><span class="p">)</span>
 
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Soma das idades: &#39;</span><span class="o">+</span><span class="nx">somaIdades</span><span class="p">)</span><span class="c1">//Result: 100</span><span class="w"></span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Soma das idades: &#39;</span><span class="o">+</span><span class="nx">somaIdades</span><span class="p">)</span><span class="c1">//Result: 100</span>
 
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="p">.</span><span class="nx">repeat</span><span class="p">(</span><span class="mf">50</span><span class="p">))</span><span class="w"></span>
-<span class="kd">const</span><span class="w"> </span><span class="nx">somaPesos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">pessoa</span><span class="p">.</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">acumulador</span><span class="p">,</span><span class="w"> </span><span class="nx">atual</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">   </span><span class="k">return</span><span class="w"> </span><span class="nx">acumulador</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">atual</span><span class="p">.</span><span class="nx">peso</span><span class="w"></span>
-<span class="p">},</span><span class="mf">0</span><span class="p">)</span><span class="w"></span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="p">.</span><span class="nx">repeat</span><span class="p">(</span><span class="mf">50</span><span class="p">))</span>
+<span class="kd">const</span> <span class="nx">somaPesos</span> <span class="o">=</span> <span class="nx">pessoa</span><span class="p">.</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">acumulador</span><span class="p">,</span> <span class="nx">atual</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+   <span class="k">return</span> <span class="nx">acumulador</span> <span class="o">+</span> <span class="nx">atual</span><span class="p">.</span><span class="nx">peso</span>
+<span class="p">},</span><span class="mf">0</span><span class="p">)</span>
 
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Soma dos pesos: &#39;</span><span class="o">+</span><span class="nx">somaPesos</span><span class="p">)</span><span class="w"></span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Soma dos pesos: &#39;</span><span class="o">+</span><span class="nx">somaPesos</span><span class="p">)</span>
 </code></pre></div>
 
 <h3 id="exemplo-de-uso-do-reduce-com-strings">Exemplo de uso do reduce com strings</h3>
-<div class="highlight"><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="p">.</span><span class="nx">repeat</span><span class="p">(</span><span class="mf">50</span><span class="p">))</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="p">.</span><span class="nx">repeat</span><span class="p">(</span><span class="mf">50</span><span class="p">))</span>
 
-<span class="kd">var</span><span class="w"> </span><span class="nx">autores</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;Miguel&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;João&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Pedro&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Manoel&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Ribamar&quot;</span><span class="p">]</span><span class="w"></span>
-<span class="kd">var</span><span class="w"> </span><span class="nx">resultado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">autores</span><span class="p">.</span><span class="nx">reduce</span><span class="p">(</span><span class="w"> </span><span class="p">(</span><span class="nx">anterior</span><span class="p">,</span><span class="w"> </span><span class="nx">atual</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">anterior</span><span class="w"> </span><span class="o">+</span><span class="s1">&#39;, &#39;</span><span class="o">+</span><span class="w"> </span><span class="nx">atual</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
+<span class="kd">var</span> <span class="nx">autores</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Miguel&quot;</span><span class="p">,</span> <span class="s2">&quot;João&quot;</span><span class="p">,</span> <span class="s2">&quot;Pedro&quot;</span><span class="p">,</span> <span class="s2">&quot;Manoel&quot;</span><span class="p">,</span> <span class="s2">&quot;Ribamar&quot;</span><span class="p">]</span>
+<span class="kd">var</span> <span class="nx">resultado</span> <span class="o">=</span> <span class="nx">autores</span><span class="p">.</span><span class="nx">reduce</span><span class="p">(</span> <span class="p">(</span><span class="nx">anterior</span><span class="p">,</span> <span class="nx">atual</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">anterior</span> <span class="o">+</span><span class="s1">&#39;, &#39;</span><span class="o">+</span> <span class="nx">atual</span> <span class="p">)</span>
 
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">resultado</span><span class="p">)</span><span class="w"></span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">resultado</span><span class="p">)</span>
 </code></pre></div>
 
 <h4 id="outro-exemplo_2">Outro exemplo</h4>
-<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">strings</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;cem&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;duzentos&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;oitocentos&#39;</span><span class="p">];</span><span class="w"></span>
-<span class="kd">const</span><span class="w"> </span><span class="nx">numberString</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">strings</span><span class="p">.</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">acc</span><span class="p">,</span><span class="w"> </span><span class="nx">curr</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">acc</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;, &#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">curr</span><span class="p">;</span><span class="w"></span>
-<span class="p">});</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span> <span class="nx">strings</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;cem&#39;</span><span class="p">,</span> <span class="s1">&#39;duzentos&#39;</span><span class="p">,</span> <span class="s1">&#39;oitocentos&#39;</span><span class="p">];</span>
+<span class="kd">const</span> <span class="nx">numberString</span> <span class="o">=</span> <span class="nx">strings</span><span class="p">.</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">acc</span><span class="p">,</span> <span class="nx">curr</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">acc</span> <span class="o">+</span> <span class="s1">&#39;, &#39;</span> <span class="o">+</span> <span class="nx">curr</span><span class="p">;</span>
+<span class="p">});</span>
 
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">numberString</span><span class="p">);</span><span class="w"> </span><span class="c1">// &quot;cem, duzentos, oitocentos&quot;</span><span class="w"></span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">numberString</span><span class="p">);</span> <span class="c1">// &quot;cem, duzentos, oitocentos&quot;</span>
 
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="ow">typeof</span><span class="w"> </span><span class="nx">myString</span><span class="p">);</span><span class="w"></span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="ow">typeof</span> <span class="nx">myString</span><span class="p">);</span>
 </code></pre></div>
 
 <h3 id="referencias">Referências</h3>

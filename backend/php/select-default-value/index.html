@@ -246,6 +246,10 @@
 </li>
                                     
 <li>
+    <a href="../../../sobre/livrosc/" class="dropdown-item">Livros</a>
+</li>
+                                    
+<li>
     <a href="../../../sobre/sites/" class="dropdown-item">Sites anteriores</a>
 </li>
                                     
@@ -380,11 +384,11 @@ Depois irei criar uma versão que tem um campo tipo varchar na tabela e usa um s
                             <span class="c1">// Remover o option do array, caso seja igual ao valor que vem do banco</span>
                             <span class="nb">unset</span><span class="p">(</span><span class="nv">$options</span><span class="p">[</span><span class="nv">$key</span><span class="p">]);</span>
                         <span class="p">}</span><span class="k">else</span><span class="p">{</span>
-                            <span class="k">print</span> <span class="s2">&quot;&lt;option value=</span><span class="se">\&quot;</span><span class="si">$option</span><span class="se">\&quot;</span><span class="s2">&gt;</span><span class="si">$option</span><span class="s2">&lt;/option&gt;&quot;</span><span class="p">;</span>
-                        <span class="p">}</span>
-                    <span class="p">}</span> 
-                    <span class="cp">?&gt;</span><span class="x"></span>
-<span class="x">                &lt;/select&gt;&lt;/td&gt;&lt;/tr&gt;</span>
+                            <span class="k">print</span> <span class="s2">&quot;&lt;option value=</span><span class="se">\&quot;</span><span class="si">$option\</span><span class="s2">&quot;</span><span class="o">&gt;</span><span class="nv">$option</span><span class="o">&lt;/</span><span class="nx">option</span><span class="o">&gt;</span><span class="s2">&quot;;</span>
+<span class="s2">                        }</span>
+<span class="s2">                    } </span>
+<span class="s2">                    ?&gt;</span>
+<span class="s2">                &lt;/select&gt;&lt;/td&gt;&lt;/tr&gt;</span>
 </code></pre></div>
 
 <h4 id="micro-framework-ribafs">Micro Framework RibaFS</h4>
