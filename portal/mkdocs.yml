@@ -86,7 +86,7 @@ nav:
         - Introdução: linux/index.md
         - Diferenças Linux x Windows: linux/linuxwindows.md
     - Reflexões:
-        - Iniciante X Versões: versoes.md
+        - Iniciante X Versões: reflexoes/versoes.md
 
     - Ferramentas:
         - Hospedagem Grátis: ferramentas/hosting-free.md
