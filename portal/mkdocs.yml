@@ -51,27 +51,8 @@ nav:
         #    - Introdução: frontend/js/index.md
             - Muito conteúdo: https://ribafs.github.io/javascript
             - Método Reduce : frontend/js/reduce.md
-        #- Bootstrap:
-        #    - Introdução: frontend/bs/index.md
-        #- React:
-        #    - Introdução: frontend/react/index.md
-        #- LocalStorage:
-        #    - Introdução: frontend/localstorage/index.md
-        #- IndexedDb:
-        #    - Introdução: frontend/indexeddb/index.md
-        #- WebSQL:
-        #    - Introdução: frontend/websql/index.md
-
     - Back-end:
         - Linguagens: backend/linguagens.md
-        #- Ambiente: 
-        #    - Introdução: backend/ambiente/index.md
-        #    - Windows: backend/ambiente/windows/index.md
-        #    - Linux: backend/ambiente/linux/index.md
-        #- AJAX: 
-        #    - Introdução: backend/ajax/index.md
-        #- API: 
-        #    - Introdução: backend/api/index.md
         - PHP: 
             - Expressões Regulares: backend/php/regex.md
             - Trabalhando com URL: backend/php/url.md            
@@ -87,19 +68,6 @@ nav:
                 - Rotas simples: backend/phpoo/mvc/php-router.md
                 - Simplest Router: backend/phpoo/mvc/simplest-router.md
                 - Micro Framework: backend/phpoo/mvc/micro-framework.md
-        #- SGBD: 
-        #    - Introdução: backend/php/index.md
-        #    - MySQL: 
-        #        - Introdução: backend/sgbd/mysql/index.md
-        #    - PostgreSQL: 
-        #        - Introdução: backend/sgbd/postgres/index.md
-        #    - SQLite: 
-        #        - Introdução: backend/sgbd/sqlite/index.md
-        #- CMS:
-        #    - Joomla: 
-        #        - Introdução: backend/cms/joomla/index.md
-        #    - Afternoom: 
-        #        - Introdução: backend/cms/afternoom/index.md
         - Framework:
             - Laravel: 
                 - Gerador de API CRUD para Laravel 9: backend/framework/laravel/gerador-laravel.md
@@ -113,20 +81,12 @@ nav:
     - DevOps:
         - Apache:
             - .htaccess: devops/apache/htaccess.md
-        #- Git: 
-        #    - Introdução: devops/git/index.md
-        #- GitHub: 
-        #    - Introdução: devops/github/index.md
-        #- Docker: 
-        #    - Introdução: devops/docker/index.md
 
     - Linux:
         - Introdução: linux/index.md
-        #- Desktop: 
-        #    - Introdução: linux/desktop/index.md
-        #- Scripts: 
-        #    - Introdução: linux/scripts/index.md
         - Diferenças Linux x Windows: linux/linuxwindows.md
+    - Reflexões:
+        - Iniciante X Versões: versoes.md
 
     - Ferramentas:
         - Hospedagem Grátis: ferramentas/hosting-free.md
