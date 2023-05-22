@@ -1,7 +1,7 @@
 # Ribamar FS
 
 <p>E-mail – <a href="mailto:ribafs@gmail.com">ribafs@gmail.com</a>&nbsp;<br>
-Site – <a href="https://ribamar.net.br/" target="_blank" rel="noopener">https://ribamar.net.br</a>&nbsp; <br>
+Site – <a href="http://ribamar.net.br/" target="_blank" rel="noopener">http://ribamar.net.br</a>&nbsp; <br>
 Github – <a href="https://github.com/ribafs" target="_blank" rel="noopener">https://github.com/ribafs <br>
 </a></p>
 
@@ -94,15 +94,6 @@ Principais Habilidades</strong></p>
 <p>- Git, Github e Packagist<br>
 - Virtualbox e Vagrant<br>
 - Heroku</p>
-
-<p><br>
-<strong>Alguns sites criados</strong></p>
-
-<p>Primeiro – <a href="https://ribafs.github.io/primeiro-site/">https://ribafs.github.io/primeiro-site/</a>&nbsp; - em 17/12/1998<br>
-Um dos primeiros – <a href="https://ribafs.github.io/ribafsindex">https://ribafs.github.io/ribafsindex</a>&nbsp;&nbsp; em 14/05/2000<br>
-Site anterior – <a href="https://ribafs.github.io/portal">https://ribafs.github.io/portal</a>&nbsp;&nbsp; <br>
-Site atual (este site, criado com Joomla 4, está apenas iniciando) – <a href="http://ribamar.net.br">http://ribamar.net.br</a>&nbsp; <br>
-Entre outros</p>
 
 <p><br>
 <strong>Idiomas</strong></p>
